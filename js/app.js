@@ -1382,6 +1382,7 @@
   /* ——— NAV ——— */
   const TAB_VIEWS = [
     "today",
+    "topics",
     "days",
     "pass",
     "always",
@@ -1394,10 +1395,10 @@
     "feedback",
     "more",
   ];
-  /** Simple chrome: Today · تدرب · Notes · Progress · Feedback */
-  const SIMPLE_PRIMARY = ["today", "practice", "notes", "focus", "progress", "feedback"];
+  /** Simple chrome: Today · Topics · تدرب · Notes · Progress · Feedback */
+  const SIMPLE_PRIMARY = ["today", "topics", "practice", "notes", "focus", "progress", "feedback"];
   /** Public source repo (docs only — feedback does NOT open GitHub). */
-  const REPO_URL = "https://github.com/xxxova2/sdle-study-path";
+  const REPO_URL = "https://github.com/kemos-labs/sdle-study-path";
   /** External ChatGPT custom GPT — academic tutor only (not SCFHS, not clinical care). */
   const SDLEGPT_URL = "https://chatgpt.com/g/g-ytJW9hxum-sdlegpt";
 
@@ -1521,7 +1522,8 @@
     applyChromeMode();
     if (isSimpleMode()) {
       nav.innerHTML = `
-        <button type="button" data-view="today" title="Today’s lesson">Today</button>
+        <button type="button" data-view="today" title="Today's lesson">Today</button>
+        <button type="button" data-view="topics" title="Micro-lessons by topic">Topics</button>
         <button type="button" data-view="practice" title="MCQs · Flashcards · Mock">تدرب</button>
         <button type="button" data-view="notes" title="Review all notes">Notes</button>
         <button type="button" data-view="focus" title="Focus exam-recall packs">Focus</button>
@@ -1737,6 +1739,8 @@
     else if (state.view === "focus") renderFocus();
     else if (state.view === "progress") renderProgress();
     else if (state.view === "feedback") renderFeedback();
+    else if (state.view === "topics") renderTopics();
+    else if (state.view === "micro-lesson") renderMicroLesson();
     else if (state.view === "more") renderMore();
     else if (state.view === "quiz") renderQuizUI();
     else if (state.view === "cards") renderCardsUI();
