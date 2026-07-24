@@ -31,7 +31,7 @@ def norm_stem(s: str) -> str:
 
 def load_bank():
     text = QUESTIONS.read_text(encoding="utf-8")
-    m = re.search(r"w\.QUESTION_BANK\s*=\s*(\[.*\])\s*;", text, re.S)
+    m = re.search(r"(?:w\.\s*)?(?:const\s+)?QUESTION_BANK\s*=\s*(\[.*\])\s*;", text, re.S)
     if not m:
         raise SystemExit("parse fail")
     return json.loads(m.group(1))
@@ -128,6 +128,20 @@ def main() -> int:
     except Exception as e:
         lesson_out = str(e)
 
+    # G-VERIFIED — every usable question has book_verified=true
+    no_book_verify = []
+    for q in usable:
+        if not q.get("book_verified"):
+            no_book_verify.append(q.get("id"))
+
+    # G-CITE — every usable question's explanation has a book citation
+    no_citation = []
+    for q in usable:
+        exp = str(q.get("explanation") or "")
+        has_cite = "Book-Verified:" in exp or "📖" in exp or "[Book:" in exp
+        if not has_cite:
+            no_citation.append(q.get("id"))
+
     gates = {
         "G-DUP": {"ok": dup_extras == 0, "norm_stem_extras": dup_extras},
         "G-READ": {
@@ -154,6 +168,19 @@ def main() -> int:
         },
         "G-LESSON": {"ok": lesson_ok},
         "G-BOOKS": {"ok": books_ok, "pdf_count": len(pdfs)},
+        "G-VERIFIED": {
+            "ok": len(no_book_verify) == 0,
+            "verified_count": len(usable) - len(no_book_verify),
+            "usable_count": len(usable),
+            "unverified_count": len(no_book_verify),
+            "unverified_sample": no_book_verify[:20],
+        },
+        "G-CITE": {
+            "ok": len(no_citation) == 0,
+            "cited_count": len(usable) - len(no_citation),
+            "uncited_count": len(no_citation),
+            "uncited_sample": no_citation[:20],
+        },
     }
     all_ok = all(g["ok"] for g in gates.values())
     report = {

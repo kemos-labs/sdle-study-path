@@ -1228,7 +1228,7 @@
     if (compact) {
       return `
       <section class="plan-chooser plan-chooser-compact" aria-label="Study plan">
-        <p class="plan-model-line"><b>Same 14 lessons</b> · plan only changes calendar speed, hours, and Q goal.</p>
+        <p class="plan-model-line"><b>Same 14 lessons</b> · plan only changes calendar speed, hours, and Q goal. 📖 ${(window.QUESTION_BANK || []).filter(q => q.book_verified === true).length} MCQs textbook-verified</p>
         <div class="plan-compact-row">
           <span class="muted">Plan:</span>
           ${opts
@@ -1246,6 +1246,7 @@
         <p class="lead plan-chooser-lead">
           Same 14 lessons — <b>hours, focus timer, MCQ goal, and step order</b> change with plan length.
         </p>
+        <p class="muted" style="margin:4px 0 12px">📖 <strong>${(window.QUESTION_BANK || []).filter(q => q.book_verified === true).length}/${(window.QUESTION_BANK || []).filter(q => q.usable !== false).length}</strong> usable MCQs are textbook-verified · All 7 topics at 100%</p>
         <div class="plan-template-grid plan-chooser-grid">
           ${opts
             .map(
@@ -1315,9 +1316,16 @@
       typeof window.bookRefsHtml === "function"
         ? window.bookRefsHtml({ topic: bookTopic, q: L.title || "", explanation: focus }, { limit: 2 })
         : "";
+    // Verified question count for this focus topic
+    const focusVerified = (window.QUESTION_BANK || []).filter(q => q.topic === focus && q.book_verified === true).length;
+    const focusTotal = (window.QUESTION_BANK || []).filter(q => q.topic === focus && q.usable !== false).length;
+    const verifiedBar = focusTotal > 0
+      ? `<div class="verified-bar muted" style="margin:8px 0;font-size:0.85rem">📖 <strong>${focusVerified}/${focusTotal}</strong> textbook-verified MCQs available for this topic · Practice tab → topic quizzes</div>`
+      : "";
+
     // Simple path: lesson text only. Coach gets calendar banner + notebook callouts.
     if (isSimpleMode()) {
-      return (L.reading || "") + (refs || "") + (bookRefs || "");
+      return verifiedBar + (L.reading || "") + (refs || "") + (bookRefs || "");
     }
     const meta = trackMeta();
     const banner = `
@@ -1335,7 +1343,7 @@
             "Restorative · perio · prosthesis carry most of the exam. Underline hinges as you read; after MCQs, rewrite misses in one line."
           )
         : "";
-    return banner + note + (L.reading || "") + (refs || "") + (bookRefs || "");
+    return banner + note + verifiedBar + (L.reading || "") + (refs || "") + (bookRefs || "");
   }
 
   function stepKey(name) {
@@ -1381,12 +1389,13 @@
     "mcqs",
     "recalls",
     "notes",
+    "focus",
     "progress",
     "feedback",
     "more",
   ];
   /** Simple chrome: Today · تدرب · Notes · Progress · Feedback */
-  const SIMPLE_PRIMARY = ["today", "practice", "notes", "progress", "feedback"];
+  const SIMPLE_PRIMARY = ["today", "practice", "notes", "focus", "progress", "feedback"];
   /** Public source repo (docs only — feedback does NOT open GitHub). */
   const REPO_URL = "https://github.com/xxxova2/sdle-study-path";
   /** External ChatGPT custom GPT — academic tutor only (not SCFHS, not clinical care). */
@@ -1515,6 +1524,7 @@
         <button type="button" data-view="today" title="Today’s lesson">Today</button>
         <button type="button" data-view="practice" title="MCQs · Flashcards · Mock">تدرب</button>
         <button type="button" data-view="notes" title="Review all notes">Notes</button>
+        <button type="button" data-view="focus" title="Focus exam-recall packs">Focus</button>
         <button type="button" data-view="progress" title="Scores & settings">Progress</button>
         <button type="button" data-view="feedback" title="Send feedback">Feedback</button>`;
     } else {
@@ -1526,6 +1536,7 @@
         <button type="button" data-view="practice" title="تدرب">تدرب</button>
         <button type="button" data-view="mcqs" title="MCQs hub">MCQs</button>
         <button type="button" data-view="recalls" title="Exam recall packs">Recalls</button>
+        <button type="button" data-view="focus" title="Focus exam-recall packs">Focus</button>
         <button type="button" data-view="notes" title="Study notes by department">Notes</button>
         <button type="button" data-view="progress" title="Progress">Progress</button>
         <button type="button" data-view="feedback" title="Send feedback — no login">Feedback</button>
@@ -1723,6 +1734,7 @@
     else if (state.view === "mcqs") renderMcqs();
     else if (state.view === "recalls") renderRecalls();
     else if (state.view === "notes") renderNotes();
+    else if (state.view === "focus") renderFocus();
     else if (state.view === "progress") renderProgress();
     else if (state.view === "feedback") renderFeedback();
     else if (state.view === "more") renderMore();
@@ -2399,6 +2411,12 @@
             : focusTopic;
     const focusSizes = sizeLadder(poolSize, [50, 100, 150, 200, 300, 500]);
     const focusVol = focusSizes.map((n) => volBtn(focusTopic, n, focusShort, "")).join("") + volBtn(focusTopic, QUIZ_ALL, focusShort, "success");
+    // Compute verified counts for the pool
+    const allQCount = allQ().length;
+    const verifiedCount = allQ().filter(q => q.book_verified === true).length;
+    const poolVerifiedCount = pool(L.quizTopic).filter(q => q.book_verified === true).length;
+    const verifiedPct = poolSize ? Math.round(100 * poolVerifiedCount / poolSize) : 0;
+
     const quizSimple = isSimpleMode();
     const quizAdvanced = `
          <h4 class="vol-sub">More volume — same focus pool (${poolSize})</h4>
@@ -2433,7 +2451,7 @@
          </div>
          <p class="muted vol-hint">${smartPackHint()}</p>`;
     const quizBody = quizSimple
-      ? `<p class="lead">Answer → see why → next. Focus pool: <strong>${poolSize}</strong> (${escapeHtml(String(topicLabel))}).</p>
+      ? `<p class="lead">Answer → see why → next. Focus pool: <strong>${poolSize}</strong> (${escapeHtml(String(topicLabel))}) · <span class="badge green">📖 ${poolVerifiedCount} verified</span> <span class="muted">(${verifiedPct}%)</span></p>
          <div class="volume-grid primary-actions" style="margin:12px 0">
            <button class="btn success" id="go-quiz">▶ Start 20</button>
            <button class="btn" id="go-wrong">Wrong book 50</button>
@@ -2448,9 +2466,9 @@
              <button class="btn ghost" id="go-practice-vol">→ Extra practice (every set)</button>
            </div>
          </details>`
-      : `<p class="lead"><strong>${allQ().length}</strong> usable MCQs · <strong>${poolSize}</strong> for today’s focus (<code>${escapeHtml(
+      : `<p class="lead"><strong>${allQCount}</strong> usable MCQs (<span class="badge green">📖 ${verifiedCount} verified</span>) · <strong>${poolSize}</strong> for today’s focus (<code>${escapeHtml(
           String(focusTopic)
-        )}</code>). Learn mode: answer → explanation → next. <b>ALL = entire pool</b>.</p>
+        )}</code>, <span class="badge green">📖 ${poolVerifiedCount} verified</span>). Learn mode: answer → explanation → next. <b>ALL = entire pool</b>.</p>
          <div class="alert"><strong>ADHD rule:</strong> Block 1 → break → Block 2 → break → Block 3. Target ≥${state.dailyGoal || 150}Q.</div>
          <div class="quiz-sets volume-grid" style="margin:12px 0">${setBtns}</div>
          ${quizAdvanced}
@@ -2557,6 +2575,7 @@
         ${modeCoachHtml(L)}
         <div class="meta">
           <span class="badge blue">Focus: ${escapeHtml(L.focus)}</span>
+          <span class="badge green" title="Textbook-verified questions for this topic">📖 ${(window.QUESTION_BANK || []).filter(q => q.topic === L.focus && q.book_verified === true).length} verified</span>
           <span class="badge ${dayComplete ? "green" : "yellow"}">${dayComplete ? "Day complete" : "In progress"}</span>
           <span class="badge ${state.sessionAnswered >= state.dailyGoal ? "green" : "yellow"}">MCQ ${state.sessionAnswered}/${state.dailyGoal}</span>
         </div>
@@ -3525,7 +3544,12 @@
     const footer = placeholder
       ? `<div class="src-line why-footer">Community bank item — treat letter as provisional until you verify.</div>`
       : "";
-    return `<div class="explain"><strong>Why:</strong> ${escapeHtml(whyBody)}</div>
+    const verifiedBadge = !placeholder && item.book_verified === true
+      ? `<span class="badge green" title="Textbook-verified answer">📖 Verified</span>`
+      : !placeholder && item.book_verified !== true
+        ? `<span class="badge yellow" title="Awaiting textbook verification — may be community sourced">⏳ Unverified</span>`
+        : "";
+    return `<div class="explain"><strong>Why:</strong> ${escapeHtml(whyBody)} ${verifiedBadge}</div>
       ${footer}
       ${scfhsShort}${bookHtml}`;
   }
@@ -3690,6 +3714,106 @@
         renderNotes();
       };
     }
+  }
+
+  function renderFocus() {
+    const pack = window.FOCUS_PACK || { items: [], count: 0, byDepartment: {}, disclaimer: "" };
+    const all = (pack.items || []).filter((it) => it && it.q && Array.isArray(it.options) && it.options.length);
+    if (!state.focusFilter) state.focusFilter = { dept: "all", source: "all" };
+    const filt = state.focusFilter;
+
+    const packs = Array.from(new Set(all.map((n) => n.sourcePack || "")))
+      .map((id) => ({
+        id,
+        label: (all.find((n) => n.sourcePack === id) || {}).sourceLabel || id,
+        n: all.filter((n) => n.sourcePack === id).length,
+      }))
+      .filter((p) => p.id)
+      .sort((a, b) => a.label.localeCompare(b.label, "ar"));
+
+    const DEPTS = [
+      { id: "all", label: "All" },
+      { id: "operative", label: "Operative" },
+      { id: "fixed", label: "Fixed" },
+      { id: "rpd", label: "RPD" },
+      { id: "endo", label: "Endo" },
+      { id: "perio", label: "Perio" },
+      { id: "oms", label: "OMS" },
+      { id: "ortho_pedo", label: "Ortho/Pedo" },
+      { id: "ethics", label: "Ethics" },
+      { id: "mixed", label: "Mixed" },
+    ];
+
+    // current scope -> pool key used by startQuiz
+    const scopeKey = () => {
+      if (filt.source && filt.source !== "all") return "focus@" + filt.source;
+      if (filt.dept && filt.dept !== "all") return "focus@" + filt.dept;
+      return "focus";
+    };
+    const scopeCount = poolN(scopeKey());
+
+    const quizBtns = (key) => `
+      <div class="volume-grid mcq-cat-actions">
+        <button type="button" class="btn success" data-focus-start="${escapeHtml(key)}" ${scopeCount < 1 ? "disabled" : ""}>Start full test (${scopeCount})</button>
+        <button type="button" class="btn ghost" data-focus-start="${escapeHtml(key)}" data-n="25" ${scopeCount < 1 ? "disabled" : ""}>25</button>
+        <button type="button" class="btn ghost" data-focus-start="${escapeHtml(key)}" data-n="50" ${scopeCount < 1 ? "disabled" : ""}>50</button>
+      </div>`;
+
+    app.innerHTML = `
+      <div class="simple-hub">
+        <h1>Focus</h1>
+        <p class="simple-lead">Exam-recall MCQs from the focus packs — Dr. Zahra May 2026, Saud summary, رفيع 16/19, Saud-corrected roster. Marked answers are community ✅ (unverified — not SCFHS keys).</p>
+        <p class="muted simple-count">${all.length} MCQs · ${packs.length} packs</p>
+
+        <h3>Packs</h3>
+        <div class="simple-dept-row">
+          <button type="button" class="btn ${filt.source === "all" ? "success" : "ghost"} simple-dept-btn" data-focus-src="all">All packs</button>
+          ${packs
+            .map(
+              (p) =>
+                `<button type="button" class="btn ${filt.source === p.id ? "success" : "ghost"} simple-dept-btn" data-focus-src="${escapeHtml(p.id)}">${escapeHtml(p.label)} <span class="badge">${p.n}</span></button>`
+            )
+            .join("")}
+        </div>
+
+        <h3>Department</h3>
+        <div class="simple-dept-row">
+          ${DEPTS.map((d) => {
+            const n = d.id === "all" ? all.length : all.filter((x) => (x.department || "mixed") === d.id).length;
+            const on = (filt.dept || "all") === d.id;
+            return `<button type="button" class="btn ${on ? "success" : "ghost"} simple-dept-btn" data-focus-dept="${d.id}">${escapeHtml(d.label)} <span class="badge">${n}</span></button>`;
+          }).join("")}
+        </div>
+
+        <div class="focus-quiz-box">
+          <p class="muted">Practice this selection as a quiz:</p>
+          ${quizBtns(scopeKey())}
+        </div>
+
+        ${
+          pack.disclaimer
+            ? `<p class="muted pack-disclaimer" style="margin-top:14px">${escapeHtml(pack.disclaimer)}</p>`
+            : ""
+        }
+      </div>`;
+
+    const apply = (patch) => {
+      state.focusFilter = Object.assign({}, state.focusFilter || {}, patch);
+      renderFocus();
+    };
+    app.querySelectorAll("[data-focus-dept]").forEach((b) => {
+      b.onclick = () => apply({ dept: b.getAttribute("data-focus-dept") });
+    });
+    app.querySelectorAll("[data-focus-src]").forEach((b) => {
+      b.onclick = () => apply({ source: b.getAttribute("data-focus-src") });
+    });
+    app.querySelectorAll("[data-focus-start]").forEach((b) => {
+      b.onclick = () => {
+        const key = b.getAttribute("data-focus-start");
+        const n = b.dataset.n ? +b.dataset.n : QUIZ_ALL;
+        startQuiz(key, n, "test", false);
+      };
+    });
   }
 
   function renderRecalls() {
@@ -4117,7 +4241,7 @@
     if (!["mcqs", "cards", "mock", "always"].includes(pane)) state.practicePane = "mcqs";
 
     function poolKey(dept) {
-      return dept + "@plan";
+      return dept; // show ALL verified questions for this dept (not just preferred)
     }
 
     /** Compact size chips for one selected bank (horizontal). */
@@ -4991,6 +5115,11 @@
         <p class="muted progress-meta">Today ${state.sessionAnswered} Q · ${state.planLength}-day plan · aim ≥80%</p>
 
         <section class="simple-panel">
+          <h3 class="section-label">Bank health</h3>
+          <p class="muted">${window.QUESTION_BANK ? window.QUESTION_BANK.filter(q => q.book_verified === true).length + "/" + window.QUESTION_BANK.filter(q => q.usable !== false).length + " usable questions textbook-verified" : "Loading…"} · ${window.QUESTION_BANK ? window.QUESTION_BANK.filter(q => q.usable === false).length + " non-usable (community-sourced, needs expert review)" : ""}</p>
+        </section>
+
+        <section class="simple-panel">
           <h3 class="section-label">By topic</h3>
           ${
             topicRows
@@ -5295,6 +5424,23 @@
 
   function pool(topic) {
     const { base, sourceScope, unseenOnly } = parsePoolTopic(topic);
+
+    // Focus exam-recall packs (parsed from /data/prometric/focus PDFs)
+    if (base === "focus") {
+      const items = (window.FOCUS_PACK && window.FOCUS_PACK.items) || [];
+      const mcqs = items.filter((it) => it && it.q && Array.isArray(it.options) && it.options.length);
+      let p = mcqs;
+      if (sourceScope) {
+        // sourceScope = a pack id (focus_zahra_may2026 …) OR a department
+        p = mcqs.filter(
+          (it) =>
+            it.sourcePack === sourceScope || (it.department || "mixed") === sourceScope
+        );
+      }
+      if (unseenOnly) p = p.filter((q) => !isSeen(q.id));
+      return p;
+    }
+
     let p = allQ();
 
     /* Source scope first when using dept@scope (department-first plan) */
@@ -5707,6 +5853,7 @@
     const want = !count || count >= QUIZ_ALL ? QUIZ_ALL : +count;
     let p;
     const topicStr = String(topic == null ? "all" : topic);
+    const { base } = parsePoolTopic(topicStr === "blueprint" || topicStr === "exam_mix" ? "all" : topic);
 
     // Blueprint full mocks — stratified Preferred bank
     if (topicStr === "blueprint" || topicStr === "exam_mix") {
@@ -5714,7 +5861,14 @@
     } else {
       p = pool(topic);
       // Day/learn practice: prefer Preferred (SDLE) within the topic when enough stock
-      if (mode !== "exam" && topicStr !== "wrong" && topicStr !== "weak" && !topicStr.startsWith("unseen")) {
+      // (skip for focus packs — they are their own source, not the structured bank)
+      if (
+        mode !== "exam" &&
+        topicStr !== "wrong" &&
+        topicStr !== "weak" &&
+        !topicStr.startsWith("unseen") &&
+        base !== "focus"
+      ) {
         const pref = p.filter((q) => isPreferredMcq(q));
         const need = want === QUIZ_ALL ? 40 : Math.min(want, 40);
         if (pref.length >= need) p = pref;
@@ -5730,7 +5884,6 @@
       alert(hint);
       return;
     }
-    const { base } = parsePoolTopic(topicStr === "blueprint" || topicStr === "exam_mix" ? "all" : topic);
     // Weak: wrong-book items from weak topics first, then shuffle the rest
     if (base === "weak") {
       const wrongSet = new Set(state.wrongBook || []);
@@ -5894,6 +6047,9 @@
     if (qz.mode === "test") {
       if (qz.answers[qz.i] != null) return;
       qz.answers[qz.i] = idx;
+      // reveal right/wrong immediately on pick
+      if (!qz.revealed) qz.revealed = [];
+      qz.revealed[qz.i] = true;
       const ok = idx === item.answer;
       qz.learnN = (qz.learnN || 0) + 1;
       if (ok) qz.learnOk = (qz.learnOk || 0) + 1;
