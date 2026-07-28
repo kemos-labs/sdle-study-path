@@ -1390,13 +1390,13 @@
     "mcqs",
     "recalls",
     "notes",
-    "focus",
+    "marjune",
     "progress",
     "feedback",
     "more",
   ];
   /** Simple chrome: Today · Topics · تدرب · Notes · Progress · Feedback */
-  const SIMPLE_PRIMARY = ["today", "topics", "practice", "notes", "focus", "progress", "feedback"];
+  const SIMPLE_PRIMARY = ["today", "topics", "practice", "notes", "marjune", "progress", "feedback"];
   /** Public source repo (docs only — feedback does NOT open GitHub). */
   const REPO_URL = "https://github.com/kemos-labs/sdle-study-path";
   /** External ChatGPT custom GPT — academic tutor only (not SCFHS, not clinical care). */
@@ -1526,7 +1526,7 @@
         <button type="button" data-view="topics" title="Micro-lessons by topic">Topics</button>
         <button type="button" data-view="practice" title="MCQs · Flashcards · Mock">تدرب</button>
         <button type="button" data-view="notes" title="Review all notes">Notes</button>
-        <button type="button" data-view="focus" title="Focus exam-recall packs">Focus</button>
+        <button type="button" data-view="marjune" title="6 PDF Plan — جميع المواد">6 PDF Plan</button>
         <button type="button" data-view="progress" title="Scores & settings">Progress</button>
         <button type="button" data-view="feedback" title="Send feedback">Feedback</button>`;
     } else {
@@ -1538,7 +1538,7 @@
         <button type="button" data-view="practice" title="تدرب">تدرب</button>
         <button type="button" data-view="mcqs" title="MCQs hub">MCQs</button>
         <button type="button" data-view="recalls" title="Exam recall packs">Recalls</button>
-        <button type="button" data-view="focus" title="Focus exam-recall packs">Focus</button>
+        <button type="button" data-view="marjune" title="6 PDF Plan — جميع المواد">6 PDF Plan</button>
         <button type="button" data-view="notes" title="Study notes by department">Notes</button>
         <button type="button" data-view="progress" title="Progress">Progress</button>
         <button type="button" data-view="feedback" title="Send feedback — no login">Feedback</button>
@@ -1576,6 +1576,8 @@
     { id: "always_src", label: "Free points", pool: "always_src", primary: true },
     { id: "saud_delta", label: "Saud delta", pool: "saud_delta", primary: true },
     { id: "rafi", label: "رفيع ALL parts", pool: "rafi", primary: false },
+    { id: "rafi_1619", label: "رفيع مقام 16 & 19", pool: "rafi_1619", primary: true },
+    { id: "abtal", label: "Mar–June 2026 أبطال", pool: "abtal", primary: true },
     { id: "wrong", label: "Wrong book", pool: "wrong", primary: true },
   ];
 
@@ -1723,7 +1725,7 @@
   function render() {
     updateTop();
     /* New user: always ask prep time (Arabic) before any other screen */
-    if (!hasChosenPlan() && state.view !== "quiz" && state.view !== "cards") {
+    if (!hasChosenPlan() && state.view !== "quiz" && state.view !== "cards" && state.view !== "marjune") {
       state.view = "today";
       renderToday();
       return;
@@ -1736,7 +1738,7 @@
     else if (state.view === "mcqs") renderMcqs();
     else if (state.view === "recalls") renderRecalls();
     else if (state.view === "notes") renderNotes();
-    else if (state.view === "focus") renderFocus();
+    else if (state.view === "marjune") renderMarJune();
     else if (state.view === "progress") renderProgress();
     else if (state.view === "feedback") renderFeedback();
     else if (state.view === "topics") renderTopics();
@@ -1744,6 +1746,11 @@
     else if (state.view === "more") renderMore();
     else if (state.view === "quiz") renderQuizUI();
     else if (state.view === "cards") renderCardsUI();
+    else {
+      // Fallback for unknown view (e.g. removed tabs from prior sessions)
+      state.view = "today";
+      renderToday();
+    }
   }
 
   /** Secondary destinations — tree of only what you need (not a button dump). */
@@ -1759,6 +1766,7 @@
             <button type="button" class="btn ghost more-link" data-go="pass">Pass plan</button>
             <button type="button" class="btn ghost more-link" data-go="always">Free points list</button>
             <button type="button" class="btn ghost more-link" data-go="recalls">Recalls (أبطال + رفيع/سعود)</button>
+            <button type="button" class="btn ghost more-link" data-go="marjune">📚 6 PDF Plan — جميع المواد</button>
             <button type="button" class="btn ghost more-link" data-go="notes">Notes by department</button>
           </div>
         </details>
@@ -3720,104 +3728,193 @@
     }
   }
 
-  function renderFocus() {
-    const pack = window.FOCUS_PACK || { items: [], count: 0, byDepartment: {}, disclaimer: "" };
-    const all = (pack.items || []).filter((it) => it && it.q && Array.isArray(it.options) && it.options.length);
-    if (!state.focusFilter) state.focusFilter = { dept: "all", source: "all" };
-    const filt = state.focusFilter;
-
-    const packs = Array.from(new Set(all.map((n) => n.sourcePack || "")))
-      .map((id) => ({
-        id,
-        label: (all.find((n) => n.sourcePack === id) || {}).sourceLabel || id,
-        n: all.filter((n) => n.sourcePack === id).length,
-      }))
-      .filter((p) => p.id)
-      .sort((a, b) => a.label.localeCompare(b.label, "ar"));
+  /**
+   * Tab: 6 PDF Plan — جميع المواد
+   * One unified dashboard: 7-day Plan + MCQs by Department + Lessons + Flashcards + Quizzes
+   * All from the verified 6-PDF bank (Mar–June + Rafi 16/19 + Saud + Stream).
+   */
+  function renderMarJune() {
+    const totalAll6 = poolN("complete");
+    const totalCards = ensureFlashcards().length;
 
     const DEPTS = [
-      { id: "all", label: "All" },
-      { id: "operative", label: "Operative" },
-      { id: "fixed", label: "Fixed" },
+      { id: "oms", label: "Oral Surgery & Medicine" },
+      { id: "restorative", label: "Restorative" },
+      { id: "endo", label: "Endodontics" },
+      { id: "perio", label: "Periodontics" },
+      { id: "ortho_pedo", label: "Ortho / Pedo" },
+      { id: "ethics", label: "Ethics & IC" },
+      { id: "fixed", label: "Fixed Prosth" },
+      { id: "implant", label: "Implant" },
       { id: "rpd", label: "RPD" },
-      { id: "endo", label: "Endo" },
-      { id: "perio", label: "Perio" },
-      { id: "oms", label: "OMS" },
-      { id: "ortho_pedo", label: "Ortho/Pedo" },
-      { id: "ethics", label: "Ethics" },
-      { id: "mixed", label: "Mixed" },
     ];
 
-    // current scope -> pool key used by startQuiz
-    const scopeKey = () => {
-      if (filt.source && filt.source !== "all") return "focus@" + filt.source;
-      if (filt.dept && filt.dept !== "all") return "focus@" + filt.dept;
-      return "focus";
-    };
-    const scopeCount = poolN(scopeKey());
+    if (!state._planMj) state._planMj = "day1";
+    const day = state._planMj || "day1";
 
-    const quizBtns = (key) => `
-      <div class="volume-grid mcq-cat-actions">
-        <button type="button" class="btn success" data-focus-start="${escapeHtml(key)}" ${scopeCount < 1 ? "disabled" : ""}>Start full test (${scopeCount})</button>
-        <button type="button" class="btn ghost" data-focus-start="${escapeHtml(key)}" data-n="25" ${scopeCount < 1 ? "disabled" : ""}>25</button>
-        <button type="button" class="btn ghost" data-focus-start="${escapeHtml(key)}" data-n="50" ${scopeCount < 1 ? "disabled" : ""}>50</button>
-      </div>`;
+    const deptCounts = {};
+    DEPTS.forEach(d => { deptCounts[d.id] = poolN(d.id + "@complete"); });
+
+    const dayPlans = [
+      { id: "day1", label: "OMS", topics: "oms", goal: 100, title: "Oral Surgery & Medicine", desc: "IAN block, LA, biopsy, odontogenic infections, fractures, MRONJ, dry socket" },
+      { id: "day2", label: "Resto", topics: "restorative", goal: 100, title: "Restorative Dentistry", desc: "Composite, amalgam, bonding, dentin/pulp protection, bleaching, matrix systems" },
+      { id: "day3", label: "Endo", topics: "endo", goal: 100, title: "Endodontics", desc: "Pulpitis diagnosis, access cavities, irrigation, obturation, VRF" },
+      { id: "day4", label: "Perio", topics: "perio", goal: 100, title: "Periodontics", desc: "AAP 2017 classification, probing, SRP, GTR, mucogingival surgery" },
+      { id: "day5", label: "Ortho", topics: "ortho_pedo", goal: 100, title: "Ortho / Pedo", desc: "Malocclusion, space maintainers, expansion, pediatric trauma" },
+      { id: "day6", label: "Ethics+", topics: "ethics,fixed,implant,rpd", goal: 100, title: "Ethics / Fixed / Implant / RPD", desc: "Ethics principles, consent, crowns, bridges, implants, RPD design" },
+      { id: "day7", label: "Review", topics: "all", goal: 150, title: "Mixed Review + Revision", desc: "Full 6-PDF mixed pool + revision of weak areas from days 1–6" },
+    ];
+
+    const plan = dayPlans.find(d => d.id === day) || dayPlans[0];
+    const poolKey = plan.topics === "all" ? "complete" : plan.topics + "@complete";
+    const dayPoolCount = poolN(poolKey);
 
     app.innerHTML = `
       <div class="simple-hub">
-        <h1>Focus</h1>
-        <p class="simple-lead">Exam-recall MCQs from the focus packs — Dr. Zahra May 2026, Saud summary, رفيع 16/19, Saud-corrected roster. Marked answers are community ✅ (unverified — not SCFHS keys).</p>
-        <p class="muted simple-count">${all.length} MCQs · ${packs.length} packs</p>
-
-        <h3>Packs</h3>
-        <div class="simple-dept-row">
-          <button type="button" class="btn ${filt.source === "all" ? "success" : "ghost"} simple-dept-btn" data-focus-src="all">All packs</button>
-          ${packs
-            .map(
-              (p) =>
-                `<button type="button" class="btn ${filt.source === p.id ? "success" : "ghost"} simple-dept-btn" data-focus-src="${escapeHtml(p.id)}">${escapeHtml(p.label)} <span class="badge">${p.n}</span></button>`
-            )
-            .join("")}
+        <!-- HEADER ROW -->
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+          <h1 style="margin:0;font-size:1.4rem">📚 6 PDF Plan</h1>
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="color:var(--accent2);font-weight:600">${totalAll6} MCQs</span>
+            <span class="muted">🃏 ${totalCards}</span>
+          </div>
         </div>
 
-        <h3>Department</h3>
-        <div class="simple-dept-row">
-          ${DEPTS.map((d) => {
-            const n = d.id === "all" ? all.length : all.filter((x) => (x.department || "mixed") === d.id).length;
-            const on = (filt.dept || "all") === d.id;
-            return `<button type="button" class="btn ${on ? "success" : "ghost"} simple-dept-btn" data-focus-dept="${d.id}">${escapeHtml(d.label)} <span class="badge">${n}</span></button>`;
+        <!-- SOURCE PILLS -->
+        <div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px">
+          <span class="badge green" style="font-size:0.7rem">Mar–June</span>
+          <span class="badge blue" style="font-size:0.7rem">Rafi 16</span>
+          <span class="badge" style="font-size:0.7rem;background:var(--bg3);color:var(--muted)">Rafi 19</span>
+          <span class="badge yellow" style="font-size:0.7rem">تلخيص سعود</span>
+          <span class="badge" style="font-size:0.7rem;background:var(--bg3);color:var(--accent)">SDLE Stream</span>
+        </div>
+
+        <hr style="margin:12px 0;border-color:var(--border)">
+
+        <!-- DAY PILLS -->
+        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:12px">
+          ${dayPlans.map(p => {
+            const active = day === p.id;
+            return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-plan-day="${p.id}" style="padding:4px 12px;font-size:0.8rem">${escapeHtml(p.label)}</button>`;
           }).join("")}
         </div>
 
-        <div class="focus-quiz-box">
-          <p class="muted">Practice this selection as a quiz:</p>
-          ${quizBtns(scopeKey())}
+        <!-- ACTIVE DAY CARD -->
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:16px">
+          <div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:8px">
+            <div>
+              <strong style="font-size:1.05rem;color:var(--accent)">Day ${plan.id.replace('day','')} — ${escapeHtml(plan.title)}</strong>
+              <div class="muted" style="font-size:0.85rem;margin-top:4px">${escapeHtml(plan.desc)}</div>
+            </div>
+            <span style="color:var(--accent2);font-weight:500;font-size:0.85rem">${dayPoolCount} Qs</span>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+            <button type="button" class="btn success" id="qz-${day}-goal">▶ Start ${plan.goal} Qs</button>
+            <button type="button" class="btn" id="qz-${day}-all">All ${dayPoolCount}</button>
+            <button type="button" class="btn ghost" id="qz-${day}-50">50 Rev</button>
+            <button type="button" class="btn ghost" id="plan-flash-today">🃏 Cards</button>
+          </div>
         </div>
 
-        ${
-          pack.disclaimer
-            ? `<p class="muted pack-disclaimer" style="margin-top:14px">${escapeHtml(pack.disclaimer)}</p>`
-            : ""
-        }
+        <!-- 7-DAY OVERVIEW (collapsible) -->
+        <details style="margin-bottom:16px;font-size:0.85rem">
+          <summary style="cursor:pointer;font-weight:600;color:var(--muted)">📋 7-day overview</summary>
+          <table class="simple-table" style="width:100%;margin-top:8px">
+            <thead><tr><th>#</th><th>Topic</th><th>Qs</th><th>Goal</th></tr></thead>
+            <tbody>
+              ${dayPlans.map(p => {
+                const cnt = p.topics === "all" ? totalAll6 : poolN(p.topics + "@complete");
+                const active = day === p.id;
+                return `<tr style="${active ? 'background:var(--bg3);border-left:3px solid var(--accent)' : ''}">
+                  <td>${p.id.replace('day','')}</td>
+                  <td>${escapeHtml(p.title)}</td>
+                  <td>${cnt}</td>
+                  <td>${p.goal}</td>
+                </tr>`;
+              }).join("")}
+            </tbody>
+          </table>
+        </details>
+
+        <hr style="margin:12px 0;border-color:var(--border)">
+
+        <!-- DEPARTMENTS -->
+        <h2 style="font-size:1rem;margin-bottom:2px;color:var(--text)">📊 Departments</h2>
+        <p class="muted" style="font-size:0.8rem;margin-bottom:8px">${totalAll6} MCQs from all 6 PDFs</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px">
+          ${DEPTS.map(d => {
+            const n = deptCounts[d.id] || 0;
+            return `
+              <div data-dept-quiz="${d.id}" data-n="${n}" style="display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:8px 12px;cursor:pointer">
+                <span style="font-size:0.85rem;color:var(--text)">${escapeHtml(d.label)}</span>
+                <span style="display:flex;align-items:center;gap:6px">
+                  <span style="color:var(--accent2);font-weight:500;font-size:0.8rem">${n}</span>
+                  <span style="color:var(--accent);font-size:0.9rem">▶</span>
+                </span>
+              </div>`;
+          }).join("")}
+          <!-- All PDFs row -->
+          <div data-dept-quiz="all" data-n="${totalAll6}" style="display:flex;align-items:center;justify-content:space-between;background:var(--bg3);border:2px solid var(--accent);border-radius:var(--radius);padding:8px 12px;cursor:pointer">
+            <span style="font-size:0.85rem;font-weight:600;color:var(--accent)">🎯 All 6 PDFs mixed</span>
+            <span style="display:flex;align-items:center;gap:6px">
+              <span style="color:var(--accent);font-weight:500;font-size:0.8rem">${totalAll6}</span>
+              <span style="color:var(--accent);font-size:0.9rem">▶</span>
+            </span>
+          </div>
+        </div>
+
+        <hr style="margin:12px 0;border-color:var(--border)">
+
+        <!-- QUICK ACTIONS -->
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button type="button" class="btn success" id="qa-mixed-50">🎲 Mixed 50</button>
+          <button type="button" class="btn" id="qa-mixed-100">🎲 Mixed 100</button>
+          <button type="button" class="btn" id="qa-flash-all">🃏 All Cards</button>
+          <button type="button" class="btn ghost" id="qa-wrong">📕 Wrong Book</button>
+          <button type="button" class="btn ghost" id="qa-weak">🔴 Weak Areas</button>
+          <button type="button" class="btn ghost" id="plan-lesson-today">📘 Today's Lesson</button>
+          <button type="button" class="btn ghost" id="plan-notes-all">📝 All Notes</button>
+        </div>
+
+        <!-- FOOTER -->
+        <p class="muted" style="margin-top:16px;font-size:0.7rem;border-top:1px solid var(--border);padding-top:10px">
+          Sources: أبطال Mar–June 2026 · رفيع المقام 16 · رفيع المقام 19 · تلخيص سعود 2025 · ملف سعود مصحّح · SDLE May 2026 (Stream).<br>
+          Community answers — not official SCFHS keys.
+        </p>
       </div>`;
 
-    const apply = (patch) => {
-      state.focusFilter = Object.assign({}, state.focusFilter || {}, patch);
-      renderFocus();
+    // === BIND EVENTS ===
+
+    // Day navigation pills
+    app.querySelectorAll("[data-plan-day]").forEach(b => {
+      b.onclick = () => { state._planMj = b.dataset.planDay; renderMarJune(); };
+    });
+
+    // Day quiz buttons
+    const setQuiz = (id, topic, n) => {
+      const el = document.getElementById(id);
+      if (el) el.onclick = () => startQuiz(topic, n, "learn", false);
     };
-    app.querySelectorAll("[data-focus-dept]").forEach((b) => {
-      b.onclick = () => apply({ dept: b.getAttribute("data-focus-dept") });
+    setQuiz(`qz-${day}-goal`, poolKey, plan.goal);
+    setQuiz(`qz-${day}-all`, poolKey, dayPoolCount);
+    setQuiz(`qz-${day}-50`, poolKey, 50);
+
+    // Department rows → start quiz with @complete pool
+    app.querySelectorAll("[data-dept-quiz]").forEach(b => {
+      const dept = b.dataset.deptQuiz;
+      const n = b.dataset.n ? +b.dataset.n : 50;
+      b.onclick = () => startQuiz(dept + "@complete", n, "learn", false);
     });
-    app.querySelectorAll("[data-focus-src]").forEach((b) => {
-      b.onclick = () => apply({ source: b.getAttribute("data-focus-src") });
-    });
-    app.querySelectorAll("[data-focus-start]").forEach((b) => {
-      b.onclick = () => {
-        const key = b.getAttribute("data-focus-start");
-        const n = b.dataset.n ? +b.dataset.n : QUIZ_ALL;
-        startQuiz(key, n, "test", false);
-      };
-    });
+
+    const byId = id => document.getElementById(id);
+    if (byId("plan-flash-today")) byId("plan-flash-today").onclick = () => openCards("always");
+    if (byId("qa-flash-all")) byId("qa-flash-all").onclick = () => openCards("always");
+    if (byId("plan-lesson-today")) byId("plan-lesson-today").onclick = () => { state.view = "today"; render(); };
+    if (byId("plan-notes-all")) byId("plan-notes-all").onclick = () => { state.view = "notes"; render(); };
+    if (byId("qa-mixed-50")) byId("qa-mixed-50").onclick = () => startQuiz("complete", 50, "learn", false);
+    if (byId("qa-mixed-100")) byId("qa-mixed-100").onclick = () => startQuiz("complete", 100, "learn", false);
+    if (byId("qa-wrong")) byId("qa-wrong").onclick = () => startQuiz("wrong", QUIZ_ALL, "learn", false);
+    if (byId("qa-weak")) byId("qa-weak").onclick = () => startQuiz("weak", QUIZ_ALL, "learn", false);
   }
 
   function renderRecalls() {
@@ -4021,7 +4118,7 @@
           })
           .join("")}
       </div>
-      <p class="muted" style="margin-top:16px">Source: local أبطال PDFs (Sep/Oct/Dec–Feb/Mar–June) + تلخيص سعود (new vs رفيع 16/19). Full رفيع 16/19 books are not mirrored in-app — only the Saud delta is.</p>
+      <p class="muted" style="margin-top:16px">Source: local أبطال PDFs + تلخيص سعود + رفيع مقام 16/19 + ملف سعود مصحّح + SDLE May 2026. Full رفيع books not mirrored in-app. Use the <a href="#" data-go="marjune" class="link">6 PDF Plan tab</a> for the unified study plan.</p>
     `;
     app.querySelectorAll("[data-open-pack]").forEach((el) => {
       el.onclick = (e) => {
@@ -4123,6 +4220,9 @@
       rafi_second: "رفيع 7·5·10·9·1·3",
       rafi: "رفيع ALL",
       rafi_plan: "رفيع plan parts",
+      rafi_1619: "رفيع مقام 16 & 19",
+      marjune: "Mar–June 2026 أبطال الدجيتال",
+      complete: "6-PDF Plan (Mar–June + Rafi 16/19 + Saud + Stream)",
       plan: "Plan banks",
       saud_delta: "Saud delta",
       wrong: "Wrong book",
@@ -5228,6 +5328,20 @@
     return s === "abtal" || id.startsWith("ab2") || id.startsWith("abtal");
   }
 
+  /**
+   * 6-PDF comprehensive source: Mar–June (abtal), Rafi 16/19, Saud, Stream.
+   */
+  function isCompleteSource(q) {
+    if (isAbtalSource(q)) return true;
+    const src = String((q && q.source) || "");
+    return (
+      src === "rafi_16" ||
+      src === "rafi_19" ||
+      src === "saud_delta" ||
+      src === "stream_july2026"
+    );
+  }
+
   function rafiPartNum(q) {
     const s = String((q && q.source) || "");
     const id = String((q && q.id) || "");
@@ -5422,28 +5536,17 @@
     if (scope === "rafi") {
       return String((q && q.source) || "").startsWith("rafi_") || String((q && q.id) || "").startsWith("rafi_");
     }
+    if (scope === "rafi_1619") {
+      const src = String((q && q.source) || "");
+      return src === "rafi_16" || src === "rafi_19";
+    }
+    if (scope === "complete") return isCompleteSource(q);
     if (scope === "archive") return !isPreferredMcq(q);
     return true;
   }
 
   function pool(topic) {
     const { base, sourceScope, unseenOnly } = parsePoolTopic(topic);
-
-    // Focus exam-recall packs (parsed from /data/prometric/focus PDFs)
-    if (base === "focus") {
-      const items = (window.FOCUS_PACK && window.FOCUS_PACK.items) || [];
-      const mcqs = items.filter((it) => it && it.q && Array.isArray(it.options) && it.options.length);
-      let p = mcqs;
-      if (sourceScope) {
-        // sourceScope = a pack id (focus_zahra_may2026 …) OR a department
-        p = mcqs.filter(
-          (it) =>
-            it.sourcePack === sourceScope || (it.department || "mixed") === sourceScope
-        );
-      }
-      if (unseenOnly) p = p.filter((q) => !isSeen(q.id));
-      return p;
-    }
 
     let p = allQ();
 
@@ -5485,6 +5588,13 @@
       });
     else if (base === "rafi")
       p = p.filter((q) => String(q.source || "").startsWith("rafi_") || String(q.id || "").startsWith("rafi_"));
+    else if (base === "rafi_1619")
+      p = p.filter((q) => {
+        const src = String(q.source || "");
+        return src === "rafi_16" || src === "rafi_19";
+      });
+    else if (base === "complete")
+      p = p.filter((q) => isCompleteSource(q));
     else if (base === "stream")
       p = p.filter((q) => String(q.source || "").startsWith("stream"));
     else if (base === "weak") {
@@ -5596,6 +5706,9 @@
       rafi_core: poolN("rafi_core"),
       rafi_second: poolN("rafi_second"),
       rafi: poolN("rafi"),
+      rafi_1619: poolN("rafi_1619"),
+      marjune: poolN("abtal"),
+      complete: poolN("complete"),
       stream: poolN("stream"),
       restorative: poolN("restorative"),
       operative: poolN("operative"),
@@ -5870,8 +5983,7 @@
         mode !== "exam" &&
         topicStr !== "wrong" &&
         topicStr !== "weak" &&
-        !topicStr.startsWith("unseen") &&
-        base !== "focus"
+        !topicStr.startsWith("unseen")
       ) {
         const pref = p.filter((q) => isPreferredMcq(q));
         const need = want === QUIZ_ALL ? 40 : Math.min(want, 40);
