@@ -4077,6 +4077,58 @@
    * One unified dashboard: 7-day Plan + MCQs by Department + Lessons + Flashcards + Quizzes + Recall Flash Notes.
    * All from the verified 6-PDF bank (Mar–June + Rafi 16/19 + Saud + Stream).
    */
+  function runFlashNotesAudit() {
+    const panel = document.getElementById("fn-audit-panel");
+    if (!panel || !window.FLASH_NOTES) return;
+    panel.style.display = "block";
+    panel.innerHTML = '<span style="color:var(--accent)">⏳ Running audit...</span>';
+
+    setTimeout(() => {
+      const FN = window.FLASH_NOTES;
+      const byDept = FN.byDept || {};
+      let total = 0, verified = 0, ref = 0, unknown = 0, missingFields = 0, dupes = 0, noRef = 0, noIdx = 0;
+      const idSet = new Set();
+      const deptRows = [];
+      for (const [dept, items] of Object.entries(byDept)) {
+        let dv = 0, dr = 0, du = 0;
+        for (const it of items) {
+          total++;
+          const mk = it.marker || "unknown";
+          if (mk === "verified") { verified++; dv++; if (!("answerIdx" in it)) noIdx++; }
+          else if (mk === "ref") { ref++; dr++; if (!it.ref) noRef++; }
+          else { unknown++; du++; }
+          if (!it.id || !it.stem) missingFields++;
+          if (idSet.has(it.id)) dupes++;
+          idSet.add(it.id);
+        }
+        const pct = total > 0 ? Math.round((dv + dr) / (dv + dr + du) * 100) : 0;
+        const icon = pct >= 80 ? "🟢" : pct >= 50 ? "🟡" : "🔴";
+        deptRows.push(\`<tr style="font-size:0.68rem"><td style="padding:2px 6px">\${icon} \${dept}</td><td style="text-align:right;padding:2px 6px">\${dv}✅</td><td style="text-align:right;padding:2px 6px">\${dr}📝</td><td style="text-align:right;padding:2px 6px">\${du}❓</td><td style="text-align:right;padding:2px 6px;font-weight:600">\${pct}%</td></tr>\`);
+      }
+      const overall = total > 0 ? Math.round((verified + ref) / total * 100) : 0;
+      const issues = [];
+      if (missingFields > 0) issues.push(\`❌ \${missingFields} items missing id/stem\`);
+      if (dupes > 0) issues.push(\`❌ \${dupes} duplicate IDs\`);
+      if (noRef > 0) issues.push(\`❌ \${noRef} ref items missing ref text\`);
+      if (noIdx > 0) issues.push(\`⚠️ \${noIdx} verified MCQs missing answerIdx\`);
+      const statusLine = issues.length === 0
+        ? \`<span style="color:#1b7a3d;font-weight:600">✅ CLEAN — \${overall}% resolved (\${verified} verified + \${ref} ref + \${unknown} unknown)</span>\`
+        : \`<span style="color:#e63946;font-weight:600">❌ \${issues.length} issue(s) found</span>\`;
+      panel.innerHTML = \`
+        <table style="width:100%;border-collapse:collapse;margin-bottom:6px">
+          <thead><tr style="border-bottom:1px solid var(--border);color:var(--text)"><th style="text-align:left;padding:2px 6px">Department</th><th style="text-align:right;padding:2px 6px">✅</th><th style="text-align:right;padding:2px 6px">📝</th><th style="text-align:right;padding:2px 6px">❓</th><th style="text-align:right;padding:2px 6px">Resolved</th></tr></thead>
+          <tbody>\${deptRows.join("")}</tbody>
+        </table>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:4px;padding-top:6px;border-top:1px solid var(--border)">
+          \${statusLine}
+          <button type="button" class="btn sm ghost" id="fn-audit-close" style="padding:2px 8px;font-size:0.65rem;margin-left:auto">✕ Close</button>
+        </div>
+      \`;
+      const closeBtn = document.getElementById("fn-audit-close");
+      if (closeBtn) closeBtn.onclick = () => { panel.style.display = "none"; };
+    }, 80);
+  }
+
   function renderMarJune() {
     const totalAll6 = poolN("complete");
     const totalCards = ensureFlashcards().length;
@@ -4311,12 +4363,16 @@
           }).join("")}
         </div>
         <!-- verification stats bar -->
-        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px;padding:6px 10px;background:var(--bg1);border-radius:var(--radius);font-size:0.72rem;color:var(--muted)">
-          <span>✅ <b style="color:#1b7a3d">${FN.markerStats?.verified || 0}</b> marked</span>
-          <span>📝 <b style="color:#e6a817">${FN.markerStats?.ref || 0}</b> referenced</span>
+        <div id="fn-stats-bar" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px;padding:8px 12px;background:var(--bg1);border-radius:var(--radius);font-size:0.72rem;color:var(--muted);border:1px solid var(--border)">
+          <span style="font-weight:600;color:var(--text)">📊 Audit:</span>
+          <span>✅ <b style="color:#1b7a3d">${FN.markerStats?.verified || 0}</b> verified (MCQ+✅)</span>
+          <span>📝 <b style="color:#e6a817">${FN.markerStats?.ref || 0}</b> referenced (Q&A)</span>
           <span>❓ <b style="color:#e63946">${FN.markerStats?.unknown || 0}</b> unknown</span>
-          <span style="flex:1;text-align:right">${FN.total > 0 ? Math.round((((FN.markerStats?.verified||0)+(FN.markerStats?.ref||0))/FN.total)*100) : 0}% resolved</span>
+          <span style="flex:1;text-align:right;font-weight:600;color:var(--text)">${FN.total > 0 ? Math.round((((FN.markerStats?.verified||0)+(FN.markerStats?.ref||0))/FN.total)*100) : 0}% resolved</span>
+          <button type="button" class="btn sm ghost" id="fn-audit-btn" style="padding:2px 8px;font-size:0.65rem" title="Run full data integrity audit">🔍 Audit</button>
         </div>
+        <!-- audit results panel (hidden by default) -->
+        <div id="fn-audit-panel" style="display:none;margin-bottom:10px;padding:10px 12px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);font-size:0.72rem;color:var(--muted)"></div>
 
         <!-- source file filter chips (from the 8 PDF sources) -->
         <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px">${sourceChipsHtml}</div>
@@ -4391,6 +4447,10 @@
     if (byId("qa-mixed-100")) byId("qa-mixed-100").onclick = () => startQuiz("complete", 100, "learn", false);
     if (byId("qa-wrong")) byId("qa-wrong").onclick = () => { state.view = "wrong-dept"; render(); };
     if (byId("qa-weak")) byId("qa-weak").onclick = () => startQuiz("weak", QUIZ_ALL, "learn", false);
+
+    // Flash Notes audit button
+    const auditBtn = document.getElementById("fn-audit-btn");
+    if (auditBtn) auditBtn.onclick = runFlashNotesAudit;
 
     // Flash Notes: department chips + source chips + study widget controls
     app.querySelectorAll("[data-fn-dept]").forEach(b => {
