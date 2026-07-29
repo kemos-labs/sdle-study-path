@@ -983,6 +983,59 @@
       /* ignore */
     }
 
+    /* Phase 4 — per-department decks from Flash Notes recalls + TOPICS key points */
+    try {
+      const FN = window.FLASH_NOTES || { byDept: {} };
+      const V = (window.FLASH_NOTES_VERDICTS || {}).lookup || {};
+      let fnAdded = 0, kpAdded = 0;
+      const FN_CAP = 2500, KP_CAP = 800;
+      // (a) Flash Notes recall cards — front=stem, back=marked answer + verdict
+      Object.keys(FN.byDept || {}).forEach((dept) => {
+        const list = FN.byDept[dept] || [];
+        for (let i = 0; i < list.length && fnAdded < FN_CAP; i++) {
+          const it = list[i];
+          if (!it || !it.stem) continue;
+          const id = "fn_" + it.id;
+          if (ids.has(id)) continue;
+          // back: marked answer option text, else marker note
+          let back = "";
+          if (it.answerLetter && it.options) {
+            const opt = it.options.find((o) => o.startsWith((it.answerLetter || "_") + "."));
+            back = opt ? opt : (it.answerLetter + " (marked)");
+          } else if (it.raw) {
+            back = it.raw.slice(0, 200);
+          } else {
+            back = "no marked answer — recall stem only";
+          }
+          const vd = V[it.id];
+          if (vd) back += "  [" + (vd.verdict === "supported" ? "book-supported" : vd.verdict) + "]";
+          const front = it.stem.slice(0, 280) + (it.needsImage ? " 🖼" : "");
+          cards.push({ id, deck: dept, front, back, src: "flashnotes" });
+          ids.add(id); fnAdded++;
+        }
+      });
+      // (b) TOPICS key-point cards — front=key point, back=topic title + dept
+      (window.TOPICS || []).forEach((t) => {
+        if (!t || !t.keyPoints) return;
+        for (let i = 0; i < t.keyPoints.length && kpAdded < KP_CAP; i++) {
+          const kp = String(t.keyPoints[i] || "").trim();
+          if (kp.length < 6) continue;
+          const id = "kp_" + t.id + "_" + i;
+          if (ids.has(id)) continue;
+          cards.push({
+            id, deck: t.dept,
+            front: kp,
+            back: (t.title || "") + "  [" + (t.dept || "") + "]",
+            src: "topic_keypoint",
+          });
+          ids.add(id); kpAdded++;
+        }
+      });
+      window.__FLASHCARDS_META = window.__FLASHCARDS_META || {};
+      window.__FLASHCARDS_META.fromFlashNotes = fnAdded;
+      window.__FLASHCARDS_META.fromKeyPoints = kpAdded;
+    } catch (_) { /* ignore enrichment errors */ }
+
     window.FLASHCARDS = cards;
     window.__FLASHCARDS_ENRICHED = true;
     window.__FLASHCARDS_META = {
@@ -1004,6 +1057,10 @@
     if (d === "wrong") return cards.filter((c) => c.deck === "wrong");
     if (d === "abtal_notes") return cards.filter((c) => c.src === "abtal_note");
     if (d === "always") return cards.filter((c) => c.deck === "always");
+    // Phase 4: department decks (flashnotes + keypoints + any with this deck).
+    // A deck is "department" if some card carries it as deck (flashnotes/keypoints set deck=dept).
+    const deptCards = cards.filter((c) => c.deck === d);
+    if (deptCards.length) return cards.filter((c) => c.deck === d || c.deck === "always");
     // Day 9 uses pedo; include ortho cards too
     if (d === "pedo" || d === "ortho" || d === "ortho_pedo") {
       return cards.filter((c) => ["pedo", "ortho", "ortho_pedo", "always"].includes(c.deck));
@@ -1526,7 +1583,7 @@
         <button type="button" data-view="topics" title="Micro-lessons by topic">Topics</button>
         <button type="button" data-view="practice" title="MCQs · Flashcards · Mock">تدرب</button>
         <button type="button" data-view="notes" title="Review all notes">Notes</button>
-        <button type="button" data-view="marjune" title="6 PDF Plan — جميع المواد">6 PDF Plan</button>
+        <button type="button" data-view="marjune" title="Flash Notes — جميع المواد">Flash Notes</button>
         <button type="button" data-view="progress" title="Scores & settings">Progress</button>
         <button type="button" data-view="feedback" title="Send feedback">Feedback</button>`;
     } else {
@@ -1538,7 +1595,7 @@
         <button type="button" data-view="practice" title="تدرب">تدرب</button>
         <button type="button" data-view="mcqs" title="MCQs hub">MCQs</button>
         <button type="button" data-view="recalls" title="Exam recall packs">Recalls</button>
-        <button type="button" data-view="marjune" title="6 PDF Plan — جميع المواد">6 PDF Plan</button>
+        <button type="button" data-view="marjune" title="Flash Notes — جميع المواد">Flash Notes</button>
         <button type="button" data-view="notes" title="Study notes by department">Notes</button>
         <button type="button" data-view="progress" title="Progress">Progress</button>
         <button type="button" data-view="feedback" title="Send feedback — no login">Feedback</button>
@@ -1725,7 +1782,7 @@
   function render() {
     updateTop();
     /* New user: always ask prep time (Arabic) before any other screen */
-    if (!hasChosenPlan() && state.view !== "quiz" && state.view !== "cards" && state.view !== "marjune") {
+    if (!hasChosenPlan() && state.view !== "quiz" && state.view !== "cards" && state.view !== "marjune" && state.view !== "topics" && state.view !== "micro-lesson" && state.view !== "wrong-dept") {
       state.view = "today";
       renderToday();
       return;
@@ -1743,6 +1800,7 @@
     else if (state.view === "feedback") renderFeedback();
     else if (state.view === "topics") renderTopics();
     else if (state.view === "micro-lesson") renderMicroLesson();
+    else if (state.view === "wrong-dept") renderWrongByDept();
     else if (state.view === "more") renderMore();
     else if (state.view === "quiz") renderQuizUI();
     else if (state.view === "cards") renderCardsUI();
@@ -1766,7 +1824,7 @@
             <button type="button" class="btn ghost more-link" data-go="pass">Pass plan</button>
             <button type="button" class="btn ghost more-link" data-go="always">Free points list</button>
             <button type="button" class="btn ghost more-link" data-go="recalls">Recalls (أبطال + رفيع/سعود)</button>
-            <button type="button" class="btn ghost more-link" data-go="marjune">📚 6 PDF Plan — جميع المواد</button>
+            <button type="button" class="btn ghost more-link" data-go="marjune">📚 Flash Notes — جميع المواد</button>
             <button type="button" class="btn ghost more-link" data-go="notes">Notes by department</button>
           </div>
         </details>
@@ -1819,6 +1877,291 @@
     $("#more-export") && ($("#more-export").onclick = exportFullProgress);
     bindImportProgress($("#more-import"));
   }
+
+  /* =====================================================================
+   * TTS AUTO-READER (Web Speech API) — lets students listen to any lesson.
+   * Falls back gracefully if speechSynthesis unsupported.
+   * ===================================================================== */
+  const tts = {
+    supported: typeof window !== "undefined" && typeof window.speechSynthesis !== "undefined",
+    utter: null,
+    text: "",
+    rate: 0.95,
+    speaking: false,
+    paused: false,
+  };
+  function ttsStop() {
+    if (!tts.supported) return;
+    try { window.speechSynthesis.cancel(); } catch (e) {}
+    tts.speaking = false; tts.paused = false;
+    document.querySelectorAll(".tts-btn.listen").forEach(b => { b.textContent = "🔊 Listen"; b.classList.remove("playing"); });
+  }
+  function ttsSpeak(text, btnId) {
+    if (!tts.supported) { alert("Text-to-speech is not supported in this browser."); return; }
+    ttsStop();
+    const u = new SpeechSynthesisUtterance(text);
+    u.rate = tts.rate; u.pitch = 1; u.lang = "en-US";
+    u.onend = () => { tts.speaking = false; tts.paused = false;
+      document.querySelectorAll(".tts-btn.listen").forEach(b => { b.textContent = "🔊 Listen"; b.classList.remove("playing"); });
+    };
+    tts.utter = u; tts.text = text; tts.speaking = true; tts.paused = false;
+    window.speechSynthesis.speak(u);
+    document.querySelectorAll(".tts-btn.listen").forEach(b => { b.textContent = "⏸ Pause"; b.classList.add("playing"); });
+  }
+  function ttsToggle() {
+    if (!tts.supported || !tts.speaking) return;
+    if (tts.paused) { window.speechSynthesis.resume(); tts.paused = false;
+      document.querySelectorAll(".tts-btn.listen").forEach(b => b.textContent = "⏸ Pause");
+    } else { window.speechSynthesis.pause(); tts.paused = true;
+      document.querySelectorAll(".tts-btn.listen").forEach(b => b.textContent = "▶ Resume");
+    }
+  }
+  function ttsBarHTML(label) {
+    if (!tts.supported) return '<p class="muted" style="font-size:0.75rem">🔊 Auto-reader unavailable in this browser.</p>';
+    return `<div class="tts-bar" role="group" aria-label="Listen to ${escapeHtml(label||'lesson')}" style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;padding:6px 8px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);margin:8px 0">
+      <button type="button" class="btn sm ghost tts-btn listen" id="tts-listen">🔊 Listen</button>
+      <button type="button" class="btn sm ghost tts-btn" id="tts-stop" title="Stop">⏹ Stop</button>
+      <label class="muted" style="font-size:0.72rem">Speed
+        <select id="tts-rate" style="margin-left:4px">
+          ${[0.8,0.9,1,1.1,1.25,1.5].map(r=>`<option value="${r}" ${r===tts.rate?"selected":""}>${r}×</option>`).join("")}
+        </select>
+      </label>
+    </div>`;
+  }
+  function bindTTS(getText) {
+    if (!tts.supported) return;
+    const listen = $("#tts-listen"), stop = $("#tts-stop"), rate = $("#tts-rate");
+    if (listen) listen.onclick = () => {
+      if (tts.speaking) { ttsToggle(); return; }
+      const txt = typeof getText === "function" ? getText() : (getText || "");
+      if (txt && txt.trim()) ttsSpeak(txt.trim(), "tts-listen");
+    };
+    if (stop) stop.onclick = ttsStop;
+    if (rate) rate.onchange = () => { tts.rate = +rate.value || 1; };
+  }
+
+  /* =====================================================================
+   * TOPICS HUB — department-organized lessons (Phase 2 core)
+   * Replaces the previously-undefined renderTopics/renderMicroLesson stubs.
+   * ===================================================================== */
+  const DEPT_META = [
+    { id: "restorative", label: "Operative / Restorative", weight: 40, book: "Sturdevant 5e", ar: "المترمم" },
+    { id: "perio",       label: "Periodontics",            weight: 18, book: "Carranza 2018", ar: "اللثة" },
+    { id: "endo",        label: "Endodontics",              weight: 17, book: "Cohen's 2016", ar: "اللبية" },
+    { id: "oms",         label: "Oral Med / Surgery / Med-compromised", weight: 15, book: "Contemporary OMS 7e", ar: "الجراحة والطب" },
+    { id: "ortho_pedo",  label: "Ortho / Paediatric",      weight: 10, book: "Contemporary Ortho 5e · McDonald 10e", ar: "التقويم والأطفال" },
+    { id: "fixed",       label: "Fixed Prosthodontics",    weight: 0,  book: "Contemporary Fixed Prosth 4e", ar: "التعويضات الثابتة" },
+    { id: "rpd",         label: "Removable Prosthodontics", weight: 0,  book: "McCracken RPD", ar: "التعويضات المتحركة" },
+    { id: "implant",     label: "Implantology",           weight: 0,  book: "Misch", ar: "الزراعة" },
+    { id: "ethics",      label: "Ethics · IC · Local Anesthesia", weight: 0, book: "TD Professionalism · Malamed LA 6e", ar: "الأخلاق والتحكم بالعدوى" },
+    { id: "diagnostics", label: "Diagnostics / Radiology / Pathology", weight: 0, book: "Oral pathology & radiology", ar: "التشخيص", quizPool: "oms" },
+  ];
+
+  function renderTopics() {
+    const TOPICS = (window.TOPICS || []);
+    const BY_DEPT = window.TOPICS_BY_DEPT || {};
+    const FN = (window.FLASH_NOTES) || { byDept: {} };
+    const QB = (window.QUESTION_BANK || []);
+    const fnCount = d => (FN.byDept[d] || []).length;
+    const verifiedCount = d => { try { const dm = DEPT_META.find(x => x.id === d) || {}; return pool(dm.quizPool || d).filter(q => q.book_verified === true).length; } catch (e) { return 0; } };
+    const topicCount = d => (BY_DEPT[d] || []).length;
+    const open = state.topicDept || (DEPT_META.find(d => (BY_DEPT[d.id]||[]).length) || {}).id || null;
+
+    const cards = DEPT_META.map(dm => {
+      const tN = topicCount(dm.id), vN = verifiedCount(dm.id), fN = fnCount(dm.id);
+      const w = dm.weight ? `<span class="badge yellow" style="font-size:0.62rem">~${dm.weight}% exam</span>` : '';
+      return `<details class="dept-card" data-dept="${dm.id}" ${open===dm.id?'open':''} style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);margin:6px 0;padding:0">
+        <summary style="cursor:pointer;padding:10px 12px;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
+          <span>${escapeHtml(dm.label)} <span class="muted" style="font-size:0.74rem;font-weight:400">· ${escapeHtml(dm.ar)} · ${escapeHtml(dm.book)}</span></span>
+          <span style="display:flex;gap:4px;align-items:center">
+            ${w}
+            <span class="badge green" style="font-size:0.62rem" title="Lessons">📘 ${tN}</span>
+            <span class="badge blue" style="font-size:0.62rem" title="Textbook-verified MCQs">📖 ${vN}</span>
+            <span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--accent2)" title="Recall flash notes">🗒️ ${fN}</span>
+          </span>
+        </summary>
+        <div style="padding:6px 12px 12px;border-top:1px solid var(--border)">
+          ${(BY_DEPT[dm.id]||[]).map(t => `<button type="button" class="btn sm ghost" data-topic-id="${escapeHtml(t.id)}" style="display:block;width:100%;text-align:left;margin:3px 0;font-size:0.85rem">📘 ${escapeHtml(t.title)} <span class="muted" style="font-size:0.7rem">· ~${t.estMinutes||20}min · 📖 ${t.verifiedCount||0}</span></button>`).join("") || '<p class="muted" style="font-size:0.8rem">No lessons yet for this department (Phase 2 authoring pending).</p>'}
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px">
+            <button type="button" class="btn sm" data-drill="${dm.id}">▶ Drill ${vN} verified MCQs</button>
+            <button type="button" class="btn sm ghost" data-cards="${dm.id}">🃏 Cards</button>
+            <button type="button" class="btn sm ghost" data-fn-go="${dm.id}">🗒️ Flash Notes</button>
+          </div>
+        </div>
+      </details>`;
+    }).join("");
+
+    app.innerHTML = `
+      <div class="simple-hub">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+          <h1 style="margin:0;font-size:1.3rem">📘 Lessons by Department</h1>
+          <span class="muted" style="font-size:0.78rem">${TOPICS.length} lessons · blueprint-weighted</span>
+        </div>
+        <p class="muted" style="font-size:0.8rem;margin:6px 0 10px">Each department shows its lessons, textbook-verified MCQ count, and recall flash notes. Weights ≈ published SDLE applicant guide (restorative ≈ 40%, perio 18%, endo 17%, oms 15%, ortho/pedo 10%). Tap a lesson to read it — or use the 🔊 auto-reader.</p>
+        ${tts.supported ? '<p class="muted" style="font-size:0.74rem">💡 Tip: open any lesson and press 🔊 Listen to hear it read aloud.</p>' : ''}
+        <details open style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);margin:6px 0 10px;padding:8px 12px">
+          <summary style="cursor:pointer;font-weight:600">🎯 Blueprint study allocation (≈ exam weights)</summary>
+          <p class="muted" style="font-size:0.76rem;margin:6px 0 4px">Split your study time roughly by exam weight. Restorative dominates (~40%) — never under-prepare it. Use verified MCQ counts to balance recall drills.</p>
+          <table class="simple-table" style="width:100%;font-size:0.78rem">
+            <thead><tr><th>Dept</th><th>~Exam %</th><th>Lessons</th><th>Verified Qs</th><th>For 30h plan</th></tr></thead>
+            <tbody>
+              ${DEPT_META.filter(d => d.weight).map(d => {
+                const hrs = Math.round(d.weight * 0.30 * 10) / 10;
+                return `<tr><td>${escapeHtml(d.label)}</td><td>~${d.weight}%</td><td>${topicCount(d.id)}</td><td>${verifiedCount(d.id)}</td><td>~${hrs}h</td></tr>`;
+              }).join("")}
+            </tbody>
+          </table>
+        </details>
+        ${cards}
+      </div>`;
+
+    app.querySelectorAll("[data-topic-id]").forEach(b => b.onclick = () => { state.topicId = b.dataset.topicId; state.view = "micro-lesson"; render(); });
+    app.querySelectorAll("details.dept-card").forEach(d => d.addEventListener("toggle", () => { state.topicDept = d.open ? d.dataset.dept : null; }));
+    app.querySelectorAll("[data-drill]").forEach(b => { const dm2 = DEPT_META.find(x => x.id === b.dataset.drill) || {}; const dp = dm2.quizPool || b.dataset.drill; b.onclick = () => startQuiz(dp + "@complete", Math.min(50, verifiedCount(b.dataset.drill)||50), "learn", false); });
+    app.querySelectorAll("[data-cards]").forEach(b => b.onclick = () => openCards(b.dataset.cards));
+    app.querySelectorAll("[data-fn-go]").forEach(b => b.onclick = () => { state.view = "marjune"; state._fnDept = b.dataset.fnGo; render(); });
+  }
+
+  function renderMicroLesson() {
+    const TOPICS = (window.TOPICS || []);
+    const T = TOPICS.find(x => x.id === state.topicId) || TOPICS[0];
+    if (!T) { state.view = "topics"; render(); return; }
+    const dm = DEPT_META.find(d => d.id === T.dept) || {};
+    const FN = (window.FLASH_NOTES) || { byDept: {} };
+    const drillPool = T.quizPool || (dm.quizPool || T.dept);
+    let vN = 0;
+    try { vN = pool(drillPool).filter(q => q.book_verified === true).length; } catch (e) { vN = 0; }
+    const fN = (FN.byDept[T.dept] || []).length;
+    const kpHtml = (T.keyPoints && T.keyPoints.length)
+      ? `<h3>Key points</h3><ul>${T.keyPoints.map(k => `<li>${escapeHtml(k)}</li>`).join("")}</ul>` : '';
+    const fnList = (FN.byDept[T.dept] || []).slice(0, 5).map(it =>
+      `<li style="font-size:0.82rem;margin:3px 0">${it.answerLetter ? '<b style="color:var(--accent)">'+escapeHtml(it.answerLetter)+'.</b> ' : '● '}${escapeHtml(it.stem).slice(0,140)}${it.needsImage?' 🖼️':''} <span class="muted" style="font-size:0.68rem">[${escapeHtml(it.marker)}]</span></li>`
+    ).join("");
+    // build the readable text for TTS (summary + key points)
+    const readText = `${T.title}. ${T.summary || ""} ${(T.keyPoints||[]).map((k,i)=>"Key point "+(i+1)+": "+k).join(". ")}`;
+
+    app.innerHTML = `
+      <div class="simple-hub">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:4px">
+          <button type="button" class="btn sm ghost" id="ml-back">← Departments</button>
+          <span class="muted" style="font-size:0.76rem">${escapeHtml(dm.label||T.dept)}${dm.weight?' · ~'+dm.weight+'% exam':''}</span>
+        </div>
+        <h1 style="margin:0 0 4px;font-size:1.3rem">📘 ${escapeHtml(T.title)}</h1>
+        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:6px">
+          <span class="badge blue" style="font-size:0.66rem">${escapeHtml(T.dept)}</span>
+          <span class="badge green" style="font-size:0.66rem" title="Textbook-verified MCQs for ${escapeHtml(drillPool)}">📖 ${vN} verified</span>
+          <span class="badge" style="font-size:0.66rem;background:var(--bg3);color:var(--accent2)" title="Recall flash notes">🗒️ ${fN} recalls</span>
+          ${T.estMinutes?`<span class="badge yellow" style="font-size:0.66rem">~${T.estMinutes} min</span>`:''}
+        </div>
+        ${ttsBarHTML(T.title)}
+        <div class="reading" id="ml-reading" style="background:var(--bg1);border:1px solid var(--border);border-radius:var(--radius);padding:12px">
+          <p>${escapeHtml(T.summary || "(no summary)")}</p>
+          ${kpHtml}
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin:12px 0">
+          <button type="button" class="btn success" id="ml-drill">▶ Drill ${Math.min(50,vN||50)} verified MCQs</button>
+          <button type="button" class="btn" id="ml-drill-all">All ${vN}</button>
+          <button type="button" class="btn ghost" id="ml-cards">🃏 Cards</button>
+          <button type="button" class="btn ghost" id="ml-fn">🗒️ ${fN} Flash Notes</button>
+        </div>
+        ${fnList ? `<details style="margin-top:8px"><summary style="cursor:pointer;font-weight:600;color:var(--muted)">🗒️ Recent recalls in ${escapeHtml(T.dept)} (${fN} total)</summary><ul style="margin:8px 0 0 18px">${fnList}</ul></details>` : ''}
+        <p class="muted" style="font-size:0.72rem;margin-top:14px;border-top:1px solid var(--border);padding-top:8px">Book: ${escapeHtml(dm.book||'—')}. Verified answers live in the MCQs tab. Recall stems are community-sourced leads, not official keys.</p>
+      </div>`;
+
+    $("#ml-back") && ($("#ml-back").onclick = () => { state.view = "topics"; render(); });
+    $("#ml-drill") && ($("#ml-drill").onclick = () => startQuiz(drillPool + "@complete", Math.min(50, vN||50), "learn", false));
+    $("#ml-drill-all") && ($("#ml-drill-all").onclick = () => startQuiz(drillPool + "@complete", vN || QUIZ_ALL, "learn", false));
+    $("#ml-cards") && ($("#ml-cards").onclick = () => openCards(T.dept));
+    $("#ml-fn") && ($("#ml-fn").onclick = () => { state.view = "marjune"; state._fnDept = T.dept; render(); });
+    bindTTS(() => readText);
+  }
+
+  /* =====================================================================
+   * WRONG BOOK BY DEPARTMENT (Phase 5)
+   * Groups misses by department, shows the book citation for each, and drills per dept.
+   * ===================================================================== */
+  function renderWrongByDept() {
+    const bank = window.QUESTION_BANK || [];
+    const byId = new Map(bank.map((q) => [q.id, q]));
+    const ids = (state.wrongBook || []).slice().reverse(); // newest first
+    const items = ids.map((id) => byId.get(id)).filter(Boolean);
+    const total = ids.length;
+    const byDept = {};
+    items.forEach((q) => {
+      const d = q.department || q.topic || "misc";
+      (byDept[d] = byDept[d] || []).push(q);
+    });
+    const deptOrder = DEPT_META.map((d) => d.id).filter((d) => byDept[d]);
+    Object.keys(byDept).forEach((d) => { if (!deptOrder.includes(d)) deptOrder.push(d); });
+    const DEPT_LABEL = Object.fromEntries(DEPT_META.map((d) => [d.id, d.label]));
+
+    if (!total) {
+      app.innerHTML = `
+        <div class="simple-hub">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+            <h1 style="margin:0;font-size:1.3rem">📕 Wrong Book by Department</h1>
+            <button type="button" class="btn sm ghost" id="wb-back">← Back</button>
+          </div>
+          <p class="muted" style="margin-top:10px">Your wrong book is empty. Answer MCQs and any miss lands here, grouped by department, with the book citation for each. <b>Clear these before new volume</b> — they are your free points.</p>
+        </div>`;
+      $("#wb-back") && ($("#wb-back").onclick = () => history.back());
+      return;
+    }
+
+    const cards = deptOrder.map((d) => {
+      const list = byDept[d] || [];
+      const drills = list.slice(0, 50).map((q) => {
+        const ans = (q.options && q.answer != null && q.options[q.answer] != null) ? String(q.options[q.answer]) : "(no text)";
+        const ref = q.book_support ? `<details style="margin:4px 0"><summary class="muted" style="font-size:0.74rem;cursor:pointer">📖 book support</summary><p style="font-size:0.72rem;margin:2px 0 0 12px;color:var(--accent)">${escapeHtml(String(q.book_support)).slice(0,300)}</p></details>` : '';
+        return `<li style="font-size:0.8rem;margin:4px 0;border-bottom:1px dashed var(--border);padding-bottom:4px">
+          <b style="color:var(--accent)">✓ ${escapeHtml(ans).slice(0,90)}</b> · ${escapeHtml(String(q.q||'').slice(0,150))}
+          ${ref}
+        </li>`;
+      }).join("");
+      return `<details class="dept-card" data-dept="${d}" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);margin:6px 0;padding:0">
+        <summary style="cursor:pointer;padding:10px 12px;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:8px">
+          <span>${escapeHtml(DEPT_LABEL[d] || d)} <span class="muted" style="font-size:0.74rem;font-weight:400">· ${escapeHtml(d)}</span></span>
+          <span style="display:flex;gap:6px;align-items:center">
+            <span class="badge" style="font-size:0.66rem;background:#e63946;color:#fff">${list.length} miss${list.length>1?'es':''}</span>
+            <button type="button" class="btn sm" data-wb-drill="${d}">▶ Drill ${Math.min(50, list.length)}</button>
+          </span>
+        </summary>
+        <div style="padding:6px 12px 12px;border-top:1px solid var(--border)">
+          <ul style="margin:6px 0 0 18px">${drills}</ul>
+        </div>
+      </details>`;
+    }).join("");
+
+    app.innerHTML = `
+      <div class="simple-hub">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+          <h1 style="margin:0;font-size:1.3rem">📕 Wrong Book by Department</h1>
+          <div style="display:flex;gap:6px;align-items:center">
+            <span class="badge" style="background:#e63946;color:#fff">${total} open</span>
+            <button type="button" class="btn sm ghost" id="wb-back">← Back</button>
+          </div>
+        </div>
+        <p class="muted" style="font-size:0.8rem;margin:6px 0 10px">Your misses grouped by department. Each shows the <b>correct answer</b> + the <b>book citation</b> so you learn why. Drill a department's misses, or run all. <b>Target ≤40 total or &lt;15% of answered.</b></p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+          <button type="button" class="btn success" id="wb-all">▶ Drill all ${total}</button>
+          <button type="button" class="btn ghost" id="wb-clear" title="Clear wrong book after review">🗑 Clear all</button>
+        </div>
+        ${cards}
+      </div>`;
+
+    $("#wb-back") && ($("#wb-back").onclick = () => history.back());
+    $("#wb-all") && ($("#wb-all").onclick = () => startQuiz("wrong", QUIZ_ALL, "learn", false));
+    $("#wb-clear") && ($("#wb-clear").onclick = () => { if (confirm("Clear the whole wrong book? Only do this after review.")) { state.wrongBook = []; save(); renderWrongByDept(); } });
+    app.querySelectorAll("[data-wb-drill]").forEach((b) => {
+      b.onclick = () => {
+        const d = b.dataset.wbDrill;
+        const ids = (byDept[d] || []).map((q) => q.id);
+        state._wrongDeptIds = ids; // used by quiz if supported, else fallback
+        startQuiz("wrong", QUIZ_ALL, "learn", false);
+      };
+    });
+  }
+
 
   function dayPickerBar() {
     const m = maxDay();
@@ -2283,7 +2626,7 @@
 
     // 1 Read — full educational HTML preserved; coach meta optional
     const readBody = simple
-      ? `<div class="reading">
+      ? `${ttsBarHTML(L.title || "today's lesson")}<div class="reading">
            ${readingWithRefs(L)}
            ${deepChecklistHtml(L)}
          </div>`
@@ -2293,7 +2636,7 @@
            <div><b>Time:</b> ${escapeHtml(L.hours)} total day · reading block first</div>
            <div><b>Goal:</b> <span style="color:var(--accent2)">${escapeHtml(L.goal)}</span></div>
          </div>
-         <div class="reading">
+         ${ttsBarHTML(L.title || "today's lesson")}<div class="reading">
            ${readingWithRefs(L)}
            ${deepChecklistHtml(L)}
          </div>`;
@@ -2644,6 +2987,9 @@
 
     bindDayPicker();
     bindPlanChooser();
+
+    // Phase 6 — TTS auto-reader on the daily Today lesson
+    bindTTS(() => { const el = app.querySelector(".reading"); return el ? el.textContent.replace(/\s+/g, " ").trim().slice(0, 12000) : ""; });
 
     const goalSel = $("#daily-goal-sel");
     if (goalSel)
@@ -3729,8 +4075,8 @@
   }
 
   /**
-   * Tab: 6 PDF Plan — جميع المواد
-   * One unified dashboard: 7-day Plan + MCQs by Department + Lessons + Flashcards + Quizzes
+   * Tab: Flash Notes — جميع المواد
+   * One unified dashboard: 7-day Plan + MCQs by Department + Lessons + Flashcards + Quizzes + Recall Flash Notes.
    * All from the verified 6-PDF bank (Mar–June + Rafi 16/19 + Saud + Stream).
    */
   function renderMarJune() {
@@ -3755,6 +4101,57 @@
     const deptCounts = {};
     DEPTS.forEach(d => { deptCounts[d.id] = poolN(d.id + "@complete"); });
 
+    // ---- Flash Notes (recall stems from the 6 PDFs, parsed by build_flash_notes.py) ----
+    const FN = (window.FLASH_NOTES) || { byDept: {}, total: 0, markerStats: {}, sources: [], markerLegend: {} };
+    const FN_DEPTS = DEPTS.filter(d => (FN.byDept[d.id] || []).length);
+    if (!state._fnDept || !(FN.byDept[state._fnDept] || []).length) {
+      state._fnDept = FN_DEPTS[0] ? FN_DEPTS[0].id : "oms";
+    }
+    const fnDept = state._fnDept;
+    const fnList = (FN.byDept[fnDept] || []).slice(0, 200); // cap render for perf
+    const fnMarkerBadge = (m) => ({
+      verified: '<span class="badge green" style="font-size:0.62rem">✅ marked</span>',
+      given:    '<span class="badge blue" style="font-size:0.62rem">🟢 given</span>',
+      ref:      '<span class="badge yellow" style="font-size:0.62rem">🟡 ref</span>',
+      unsure:   '<span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--muted)">🔁 unsure</span>',
+      unknown:  '<span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--muted)">● none</span>'
+    }[m] || '<span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--muted)">?</span>');
+    const fnVerdict = (id) => {
+      const V = (window.FLASH_NOTES_VERDICTS || {}).lookup || {};
+      const v = V[id];
+      if (!v) return { badge: '', ev: '' };
+      if (v.verdict === 'supported') return { badge: '<span class="badge green" style="font-size:0.6rem" title="Book citation candidate — confirm it endorses the answer">📖 book-supported</span>', ev: v.evidence };
+      if (v.verdict === 'conflict')  return { badge: '<span class="badge" style="font-size:0.6rem;background:var(--bg3);color:#e63946">⚠ conflict</span>', ev: v.evidence };
+      return { badge: '<span class="badge" style="font-size:0.6rem;background:var(--bg3);color:var(--muted)" title="No strong book line found — verify manually">🔍 needs review</span>', ev: '' };
+    };
+    const fnInlineAns = (it) => {
+      // extract the ✅-marked answer phrase from the stem/raw for inline-answer items
+      const s = (it.raw || it.stem || "");
+      // prefer an explicit option-letter line ending in a marker: "a. Some text ✅"
+      let m = s.match(/\b([a-z])[).]\s*([^\n?]*?)[✅🟢🟡✳🔵]/i);
+      if (m) return m[2].replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim().slice(0, 80);
+      // else the phrase immediately preceding a marker
+      m = s.match(/([^\n?]{2,80}?[✅🟢🟡✳])/);
+      if (m) return m[1].replace(/[✅🟢🟡✳🔵🔁●]/g, "").replace(/^[a-z][).]\s*/i, "").trim().slice(0, 80);
+      return "";
+    };
+    const fnCardHtml = fnList.map((it, i) => {
+      const inlineAns = !it.answerLetter ? fnInlineAns(it) : "";
+      const ans = it.answerLetter ? `<span style="color:var(--accent);font-weight:600">${escapeHtml(it.answerLetter)}</span>` : (inlineAns ? `<span style="color:var(--accent);font-weight:600">✅ ${escapeHtml(inlineAns)}</span>` : '<span class="muted" style="font-size:0.7rem">no marked answer</span>');
+      const img = it.needsImage ? ' <span class="badge" style="font-size:0.6rem;background:var(--bg3);color:var(--accent2)">🖼 image</span>' : '';
+      const vd = fnVerdict(it.id);
+      const opts = (it.options || []).map(o => `<li>${escapeHtml(o)}</li>`).join("");
+      return `<details class="fn-card" data-fn-idx="${i}" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:6px 10px;margin:4px 0">
+        <summary style="cursor:pointer;font-size:0.82rem;line-height:1.3">${fnMarkerBadge(it.marker)} ${ans} ${vd.badge} ${escapeHtml(it.stem).slice(0,150)}${img}</summary>
+        <div style="margin-top:6px;font-size:0.78rem">
+          ${opts ? `<ul style="margin:4px 0 4px 18px">${opts}</ul>` : ''}
+          ${it.raw ? `<p class="muted" style="font-size:0.72rem;margin:4px 0;border-top:1px dashed var(--border);padding-top:4px">${escapeHtml(it.raw).slice(0,240)}</p>` : ''}
+          ${vd.ev ? `<p style="font-size:0.72rem;margin:4px 0;border-top:1px dashed var(--border);padding-top:4px;color:var(--accent)"><b>Book evidence:</b> ${escapeHtml(vd.ev).slice(0,260)}</p>` : ''}
+          <p class="muted" style="font-size:0.68rem">from: ${escapeHtml((it.sources||[]).join(", ")||"?")} · id ${escapeHtml(it.id)}</p>
+        </div>
+      </details>`;
+    }).join("");
+
     const dayPlans = [
       { id: "day1", label: "OMS", topics: "oms", goal: 100, title: "Oral Surgery & Medicine", desc: "IAN block, LA, biopsy, odontogenic infections, fractures, MRONJ, dry socket" },
       { id: "day2", label: "Resto", topics: "restorative", goal: 100, title: "Restorative Dentistry", desc: "Composite, amalgam, bonding, dentin/pulp protection, bleaching, matrix systems" },
@@ -3773,21 +4170,15 @@
       <div class="simple-hub">
         <!-- HEADER ROW -->
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
-          <h1 style="margin:0;font-size:1.4rem">📚 6 PDF Plan</h1>
+          <h1 style="margin:0;font-size:1.4rem">📚 Flash Notes <span style="font-size:0.8rem;color:var(--muted);font-weight:400">النوطات السريعة</span></h1>
           <div style="display:flex;align-items:center;gap:12px">
             <span style="color:var(--accent2);font-weight:600">${totalAll6} MCQs</span>
             <span class="muted">🃏 ${totalCards}</span>
           </div>
         </div>
 
-        <!-- SOURCE PILLS -->
-        <div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px">
-          <span class="badge green" style="font-size:0.7rem">Mar–June</span>
-          <span class="badge blue" style="font-size:0.7rem">Rafi 16</span>
-          <span class="badge" style="font-size:0.7rem;background:var(--bg3);color:var(--muted)">Rafi 19</span>
-          <span class="badge yellow" style="font-size:0.7rem">تلخيص سعود</span>
-          <span class="badge" style="font-size:0.7rem;background:var(--bg3);color:var(--accent)">SDLE Stream</span>
-        </div>
+        <!-- SOURCE PILLS (dynamic from FLASH_NOTES.sources) -->
+        <div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px" id="fn-source-pills"></div>
 
         <hr style="margin:12px 0;border-color:var(--border)">
 
@@ -3876,10 +4267,33 @@
           <button type="button" class="btn ghost" id="plan-notes-all">📝 All Notes</button>
         </div>
 
+        <!-- FLASH NOTES (RECALL STEMS FROM THE 6 PDFs) -->
+        <hr style="margin:12px 0;border-color:var(--border)">
+        <h2 style="font-size:1rem;margin-bottom:2px;color:var(--text)">🗒️ Flash Notes <span class="muted" style="font-size:0.72rem">— recall stems from the 6 PDFs</span></h2>
+        <p class="muted" style="font-size:0.78rem;margin-bottom:6px">${FN.total || 0} recall items parsed & deduped from the 8 community PDFs. Answers are community marks (✅/🟢/🟡) — <b>not</b> official. Each card with a structured answer now carries a <b>📖 book-supported</b> / <b>🔍 needs review</b> badge from the automated Phase-3 textbook check (${(window.FLASH_NOTES_VERDICTS||{}).stats ? `supported ${(window.FLASH_NOTES_VERDICTS).stats.supported} · needs review ${(window.FLASH_NOTES_VERDICTS).stats.needs_review}` : 'pending'}). Graded quizzes use only book_verified MCQs.</p>
+        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px">
+          ${FN_DEPTS.map(d => {
+            const n = (FN.byDept[d.id] || []).length;
+            const active = fnDept === d.id;
+            return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-fn-dept="${d.id}" style="padding:3px 10px;font-size:0.74rem">${escapeHtml(d.label)} <span class="muted" style="font-size:0.66rem">${n}</span></button>`;
+          }).join("")}
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;flex-wrap:wrap;gap:6px">
+          <span class="muted" style="font-size:0.74rem">Showing ${fnList.length} of ${(FN.byDept[fnDept]||[]).length} · ${escapeHtml(fnDept)}</span>
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            <button type="button" class="btn sm" id="fn-drill">▶ Drill verified ${fnDept} MCQs</button>
+            <button type="button" class="btn sm ghost" id="fn-lesson">📘 ${escapeHtml(fnDept)} lesson</button>
+            <button type="button" class="btn sm ghost" id="fn-cards">🃏 Cards</button>
+          </div>
+        </div>
+        <div id="fn-list" style="max-height:520px;overflow:auto;border:1px solid var(--border);border-radius:var(--radius);padding:6px;background:var(--bg1)">
+          ${fnCardHtml || '<p class="muted" style="padding:12px;font-size:0.8rem">No recall items for this department.</p>'}
+        </div>
+
         <!-- FOOTER -->
         <p class="muted" style="margin-top:16px;font-size:0.7rem;border-top:1px solid var(--border);padding-top:10px">
           Sources: أبطال Mar–June 2026 · رفيع المقام 16 · رفيع المقام 19 · تلخيص سعود 2025 · ملف سعود مصحّح · SDLE May 2026 (Stream).<br>
-          Community answers — not official SCFHS keys.
+          Community answers — not official SCFHS keys. Book-verified answers live in the MCQs tab.
         </p>
       </div>`;
 
@@ -3889,6 +4303,20 @@
     app.querySelectorAll("[data-plan-day]").forEach(b => {
       b.onclick = () => { state._planMj = b.dataset.planDay; renderMarJune(); };
     });
+
+    // Dynamic source pills (recent adds highlighted)
+    const pillsHost = document.getElementById("fn-source-pills");
+    if (pillsHost && (window.FLASH_NOTES || {}).sources) {
+      const colors = ["green", "blue", "", "yellow", "", "", "green", "yellow"];
+      pillsHost.innerHTML = window.FLASH_NOTES.sources.map((s, i) => {
+        const cls = s.recent ? "badge" : ("badge " + (colors[i % colors.length] || "")).trim();
+        const style = s.recent
+          ? "font-size:0.68rem;background:var(--accent);color:#fff"
+          : "font-size:0.68rem";
+        const tag = s.recent ? ' ✨ recent' : '';
+        return `<span class="${cls}" style="${style}" title="${escapeHtml(s.file)}">${escapeHtml(s.label)}${tag}</span>`;
+      }).join("");
+    }
 
     // Day quiz buttons
     const setQuiz = (id, topic, n) => {
@@ -3913,8 +4341,19 @@
     if (byId("plan-notes-all")) byId("plan-notes-all").onclick = () => { state.view = "notes"; render(); };
     if (byId("qa-mixed-50")) byId("qa-mixed-50").onclick = () => startQuiz("complete", 50, "learn", false);
     if (byId("qa-mixed-100")) byId("qa-mixed-100").onclick = () => startQuiz("complete", 100, "learn", false);
-    if (byId("qa-wrong")) byId("qa-wrong").onclick = () => startQuiz("wrong", QUIZ_ALL, "learn", false);
+    if (byId("qa-wrong")) byId("qa-wrong").onclick = () => { state.view = "wrong-dept"; render(); };
     if (byId("qa-weak")) byId("qa-weak").onclick = () => startQuiz("weak", QUIZ_ALL, "learn", false);
+
+    // Flash Notes department chips + actions
+    app.querySelectorAll("[data-fn-dept]").forEach(b => {
+      b.onclick = () => { state._fnDept = b.dataset.fnDept; renderMarJune(); };
+    });
+    const fnDrill = document.getElementById("fn-drill");
+    if (fnDrill) fnDrill.onclick = () => startQuiz(fnDept + "@complete", 50, "learn", false);
+    const fnLesson = document.getElementById("fn-lesson");
+    if (fnLesson) fnLesson.onclick = () => { state.view = "topics"; render(); };
+    const fnCards = document.getElementById("fn-cards");
+    if (fnCards) fnCards.onclick = () => openCards(fnDept);
   }
 
   function renderRecalls() {
@@ -4118,7 +4557,7 @@
           })
           .join("")}
       </div>
-      <p class="muted" style="margin-top:16px">Source: local أبطال PDFs + تلخيص سعود + رفيع مقام 16/19 + ملف سعود مصحّح + SDLE May 2026. Full رفيع books not mirrored in-app. Use the <a href="#" data-go="marjune" class="link">6 PDF Plan tab</a> for the unified study plan.</p>
+      <p class="muted" style="margin-top:16px">Source: local أبطال PDFs + تلخيص سعود + رفيع مقام 16/19 + ملف سعود مصحّح + SDLE May 2026. Full رفيع books not mirrored in-app. Use the <a href="#" data-go="marjune" class="link">Flash Notes tab</a> for the unified study plan.</p>
     `;
     app.querySelectorAll("[data-open-pack]").forEach((el) => {
       el.onclick = (e) => {
@@ -4221,8 +4660,8 @@
       rafi: "رفيع ALL",
       rafi_plan: "رفيع plan parts",
       rafi_1619: "رفيع مقام 16 & 19",
-      marjune: "Mar–June 2026 أبطال الدجيتال",
-      complete: "6-PDF Plan (Mar–June + Rafi 16/19 + Saud + Stream)",
+      marjune: "Flash Notes (النوطات السريعة)",
+      complete: "Flash Notes (Mar–June + Rafi 16/19 + Saud + Stream)",
       plan: "Plan banks",
       saud_delta: "Saud delta",
       wrong: "Wrong book",
@@ -6430,6 +6869,10 @@
       "oms",
       "ortho_pedo",
       "ethics",
+      "fixed",
+      "rpd",
+      "implant",
+      "diagnostics",
       "wrong",
       "unknown",
       "all",
@@ -6443,6 +6886,10 @@
       oms: "OMS",
       ortho_pedo: "Ortho/Pedo",
       ethics: "Ethics",
+      fixed: "Fixed Prosth",
+      rpd: "Removable (RPD)",
+      implant: "Implant",
+      diagnostics: "Diagnostics",
       wrong: "Wrong book",
       unknown: "Unknown",
       all: "All",

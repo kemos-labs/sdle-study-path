@@ -726,6 +726,298 @@
       practiceFilter: "ethics@plan",
       readingAnchor: "Emergencies"
     },
+
+    // =============================
+    // FIXED PROSTHODONTICS (1,673 verified) — Contemporary Fixed Prosthodontics 4e
+    // =============================
+    {
+      id: "fixed-finishlines",
+      dept: "fixed",
+      day: 6,
+      section: "A",
+      title: "Finish Lines, Tooth Reduction & Ferrule",
+      summary: `Choose the finish line by material: chamfer for cast metal crowns and the lingual of PFM; shoulder (± bevel) for all-ceramic; heavy chamfer/feather for full metal. A good finish line is smooth, continuous, clearly defined, and follows gingival contour for accurate marginal adaptation. Reduction: cast metal crown ~1.0 mm functional cusp, 0.5 mm axial/chamfer; PFM metal coping 0.3–0.5 mm (base metal can be 0.3 mm) + porcelain veneer 0.8–1.2 mm. A ferrule (≥1.5–2 mm of intact tooth structure above the margin) resists vertical fracture of endodontically treated teeth and is the single most important factor for survival of a post-retained crown.`,
+      keyPoints: [
+        "Cast metal crown → chamfer margin; all-ceramic → shoulder ± bevel",
+        "PFM: metal coping 0.3–0.5 mm, porcelain 0.8–1.2 mm, total axial 1.0–1.5 mm",
+        "Functional cusp clearance ~1.5 mm, non-functional ~1.0 mm",
+        "Ferrule ≥1.5–2 mm of parallel axial tooth structure prevents fracture",
+        "Finish line must be smooth, continuous, well-defined",
+        "Subgingival margin only when needed for caries/ferrule/esthetics — keep supragingival when possible",
+        "Clinical crown measured from free gingival margin to incisal/occlusal edge"
+      ],
+      estMinutes: 30,
+      verifiedCount: 450,
+      practiceFilter: "fixed@plan",
+      readingAnchor: "Finish lines & ferrule"
+    },
+    {
+      id: "fixed-pfm-ceramic",
+      dept: "fixed",
+      day: 6,
+      section: "B",
+      title: "PFM & All-Ceramic Restorations",
+      summary: `A PFM (metal-ceramic) crown is a complete-coverage metal coping veneered with fused porcelain — there is no fixed "percentage of metal." Metal coping gives strength + fit; porcelain gives esthetics. Opaque porcelain masks the dark metal. All-ceramic crowns (zirconia, lithium disilicate) are more esthetic and biocompatible but need greater reduction and sharp shoulder margins. Zirconia is high-strength (monolithic for posteriors); lithium disilicate for anteriors/veneers. Ceramic must have adequate thickness or it fractures. Bonding to dentin via adhesive resin is critical for glass ceramics.`,
+      keyPoints: [
+        "PFM = metal coping (0.3–0.5 mm) + porcelain veneer (0.8–1.2 mm)",
+        "Opaque layer masks metal substructure",
+        "All-ceramic needs shoulder margin + ≥1.2–1.5 mm reduction",
+        "Zirconia = high strength (posteriors); lithium disilicate = esthetic (anteriors)",
+        "Etchable glass ceramics are resin-bonded; zirconia is not etchable",
+        "Monolithic zirconia avoids chipping vs layered ceramic",
+        "Porcelain fracture/chipping is a common PFM late complication"
+      ],
+      estMinutes: 25,
+      verifiedCount: 400,
+      practiceFilter: "fixed@plan",
+      readingAnchor: "PFM & ceramics"
+    },
+    {
+      id: "fixed-post-core",
+      dept: "fixed",
+      day: 6,
+      section: "C",
+      title: "Post & Core for Endodontically Treated Teeth",
+      summary: `Posts do NOT reinforce teeth — they retain the core and risk root fracture. Indicated only when insufficient coronal tooth structure remains. Post length = equal to the height of the anatomic crown OR two-thirds the root length, leaving ≥5 mm apical gutta-percha (absolute minimum 3 mm). Prefabricated metal/fiber posts are faster; cast metal post-and-core is custom for badly broken-down teeth. Fiber posts are more fracture-friendly (failures re-restorable) vs rigid metal posts (catastrophic vertical root fracture). Preserve a ferrule. Maxillary lateral incisors, mandibular incisors, and premolars are high-risk for VRF with posts.`,
+      keyPoints: [
+        "Post length = crown height or 2/3 root, leave ≥5 mm apical GP",
+        "Posts retain the core — they do NOT reinforce the root",
+        "Fiber post = re-restorable failure; rigid metal = catastrophic VRF",
+        "Ferrule is the key survival factor, not the post",
+        "Avoid posts when ≥2 mm circumferential ferrule exists",
+        "Mandibular incisors + premolars = highest VRF risk",
+        "Custom cast post for badly broken-down multi-rooted? — usually prefabricated in single canals"
+      ],
+      estMinutes: 25,
+      verifiedCount: 350,
+      practiceFilter: "fixed@plan",
+      readingAnchor: "Post & core"
+    },
+    {
+      id: "fixed-cements-provisional",
+      dept: "fixed",
+      day: 6,
+      section: "D",
+      title: "Cements, Provisionals & Impression",
+      summary: `Definitive cements: zinc phosphate (mechanical retention, most pulp-irritating — free phosphoric acid), glass-ionomer (fluoride release, chemical bond), resin-modified GIC, resin cements (adhesive, for ceramics/zirconia). Choose by retention needs and material. Provisionals protect pulp, maintain position/occlusion, and test esthetics/occlusion. Impression: reversible hydrocolloid, addition silicone (polyvinyl siloxane — most stable), polyether (best for moisture/wet field, hydrophilic). Retraction cord vs double-cord/gingi-traction for subgingival margins. Die spacer for cement gap.`,
+      keyPoints: [
+        "Zinc phosphate = most irritating to pulp (free phosphoric acid)",
+        "GIC = fluoride + chemical adhesion; RMGIC = compromise",
+        "Resin cement for ceramic/zirconia (adhesive bond)",
+        "PVS (addition silicone) = most dimensionally stable",
+        "Polyether = hydrophilic, good in moist field",
+        "Provisional must seal + maintain occlusion + protect pulp",
+        "Two-cord technique for subgingival margins; single cord otherwise"
+      ],
+      estMinutes: 25,
+      verifiedCount: 470,
+      practiceFilter: "fixed@plan",
+      readingAnchor: "Cements & provisionals"
+    },
+
+    // =============================
+    // REMOVABLE PROSTHODONTICS (1,410 verified) — McCracken RPD
+    // =============================
+    {
+      id: "rpd-kennedy",
+      dept: "rpd",
+      day: 7,
+      section: "A",
+      title: "Kennedy Classification & Applegate Rules",
+      summary: `Kennedy classifies partial edentulism by the position of the most posterior edentulous area: Class I = bilateral distal extension (free-end), Class II = unilateral distal extension, Class III = tooth-bounded posterior edentulous space (saddle on both sides), Class IV = single anterior edentulous space crossing the midline. Applegate's rules govern how to apply it (e.g., 3rd molars excluded if missing/abutment; no modifications for Class IV; most posterior area determines class; modifications numbered after). Modification spaces = additional edentulous areas beyond the main class. Class I/II are the most tested because they are the hardest to design (tissue-supported distal extension).`,
+      keyPoints: [
+        "Class I = bilateral distal extension; Class II = unilateral; Class III = tooth-bounded; Class IV = anterior cross-midline",
+        "Most posterior edentulous area decides the class",
+        "Class IV takes no modifications",
+        "Applegate: 3rd molars usually excluded; count modification spaces after the class",
+        "Class I/II = distal-extension → need indirect retention + stress-breaking",
+        "Class III = tooth-bounded → simpler, tooth-supported",
+        "Modification = any additional edentulous area"
+      ],
+      estMinutes: 25,
+      verifiedCount: 400,
+      practiceFilter: "rpd@plan",
+      readingAnchor: "Kennedy"
+    },
+    {
+      id: "rpd-components",
+      dept: "rpd",
+      day: 7,
+      section: "B",
+      title: "RPD Components — Rest, Clasp, Connector, Base",
+      summary: `An RPD = major connector + minor connector + direct retainer (clasp) + indirect retainer + rest + denture base + artificial teeth. The rest transmits functional forces along the long axis of the abutment and prevents clasp/seat migration — occlusal rest seat on occlusal, cingulum rest on lingual, incisal rest. Direct retainer (clasp) resists dislodgement: cast circumferential (Akers) clasp vs RPI/RPA (distal-extension, stress-breaking) vs wrought-wire (more flexible). Major connector: mandibular lingual bar (most common) vs lingual plate; maxillary palatal strap/major connector. Denture base supports teeth over the ridge.`,
+      keyPoints: [
+        "Rest transmits force along tooth long axis → rest seat on prepared rest",
+        "Direct retainer = clasp; indirect retainer prevents distal-extension rotation",
+        "RPI (rest-proximal plate-I-bar) = stress-broken for Kennedy I/II",
+        "Lingual bar = most common mandibular major connector (clears floor of mouth)",
+        "Lingual plate when floor of mouth is high",
+        "Akers clasp = cast circumferential, two occlusal rests, for tooth-bounded",
+        "Wrought-wire clasp = more flexible, less stress to abutment"
+      ],
+      estMinutes: 30,
+      verifiedCount: 450,
+      practiceFilter: "rpd@plan",
+      readingAnchor: "RPD components"
+    },
+    {
+      id: "rpd-survey-design",
+      dept: "rpd",
+      day: 7,
+      section: "C",
+      title: "Surveyor, Path of Insertion & Clasp Design",
+      summary: `The dental surveyor locates the height of contour (survey line) on abutment teeth — separating undercut above (retentive) from below (non-retentive). Path of insertion/removal is chosen by tilting the cast; clasp arms engage undercuts below the survey line to resist dislodgement. A carbon marker draw can vary if the cast angulation is wrong, the carbon touches the side, or the tip is worn. Retentive undercut ≈ 0.01 inch (0.25 mm) for cast clasps. Surveying is essential to plan clasps, rests, guide planes, and a single path of insertion. FPD vs RPD: RPD needs surveyed guide planes.`,
+      keyPoints: [
+        "Survey line separates retentive undercuts above from non-retentive below",
+        "Retentive clasp tip engages undercut below survey line (~0.01 inch)",
+        "Path of insertion = controlled tilt to give common guide planes",
+        "Carbon line varies with: poor carbon quality, wrong cast angulation, carbon touching sides, worn tip",
+        "Guide planes = parallel axial walls for stability",
+        "Reciprocation: clasp arm opposed by a reciprocal arm to avoid tooth torque",
+        "Undercut gauge (0.010/0.020/0.030 inch) for retentive clasps"
+      ],
+      estMinutes: 25,
+      verifiedCount: 560,
+      practiceFilter: "rpd@plan",
+      readingAnchor: "Surveyor & design"
+    },
+
+    // =============================
+    // IMPLANTOLOGY (156 verified) — Contemporary OMS / Misch / Carranza implant
+    // =============================
+    {
+      id: "implant-biology",
+      dept: "implant",
+      day: 8,
+      section: "A",
+      title: "Osseointegration, Healing & Stages",
+      summary: `Osseointegration = direct structural and functional connection between living bone and the implant surface (Brånemark). Two-stage: implant placed, cover screw, submerged healing (~3–4 months mandible, 4–6 months maxilla), then uncover + abutment + prosthesis. One-stage: non-submerged healing with healing abutment exposed. Immediate loading only when primary stability + low forces (often anterior single unit). Bone quality (Lekholm-Zarb): Type I–IV; D1–D4 (dense cortical best for stability, poor in D4 posterior maxilla). Implant surfaces: turned/machined (early), roughened SLA/anodized (current, faster integration).`,
+      keyPoints: [
+        "Osseointegration = direct bone-to-implant contact (Brånemark)",
+        "Healing: ~3–4 months mandible, 4–6 months maxilla",
+        "Two-stage = submerged; one-stage = exposed healing abutment",
+        "Immediate loading needs excellent primary stability + low force",
+        "Bone density: D1 best, D4 (posterior maxilla) worst",
+        "Roughened surface (SLA/anodized) integrates faster than machined",
+        "Failure early = lack of integration; late = peri-implantitis/overload"
+      ],
+      estMinutes: 25,
+      verifiedCount: 50,
+      practiceFilter: "implant@plan",
+      readingAnchor: "Osseointegration"
+    },
+    {
+      id: "implant-prosthodontics",
+      dept: "implant",
+      day: 8,
+      section: "B",
+      title: "Implant Distance Rules & Loading Protocols",
+      summary: `Spacing rules: ≥3 mm between two adjacent implants; ≥1.5–2 mm between an implant and an adjacent natural tooth; ≥2 mm (some say 3 mm) from implant platform to the alveolar bone crest (to preserve the peri-implant soft-tissue/crestal bone and prevent chronic gingival inflammation). Implant should be placed ~3–4 mm apical to the cementoenamel junction of adjacent teeth for a natural emergence profile. Loading protocols: conventional (after full healing), early (6–8 weeks), immediate (same-day provisional, selected cases). Screw-retained vs cement-retained: screw-retained is retrievable and avoids cementitis, preferred posterior.`,
+      keyPoints: [
+        "≥3 mm implant-to-implant; ≥1.5–2 mm implant-to-tooth",
+        "≥2 mm platform-to-crest (some sources 3 mm) preserves crestal bone",
+        "Place ~3–4 mm apical to adjacent CEJ for emergence profile",
+        "Conventional vs early vs immediate loading",
+        "Screw-retained preferred posterior (retrievable, no cementitis)",
+        "Cement-retained risks residual subgingival cement → peri-implantitis",
+        "Platform-switching reduces crestal bone loss"
+      ],
+      estMinutes: 25,
+      verifiedCount: 60,
+      practiceFilter: "implant@plan",
+      readingAnchor: "Distances & loading"
+    },
+    {
+      id: "implant-complications",
+      dept: "implant",
+      day: 8,
+      section: "C",
+      title: "Peri-implantitis, Failure & MRONJ",
+      summary: `Peri-implant mucositis = reversible inflammation of soft tissue around implant (bleeding on probing, no bone loss). Peri-implantitis = progressive bone loss with probing depth >5 mm + bleeding/pus; treat by debridement, antiseptics, sometimes surgical regenerative/resective. Implant failure early = mobility + lack of integration; late = peri-implantitis from plaque/overload/smoking/diabetes. Risk factors: smoking (major), uncontrolled diabetes, periodontitis history, poor plaque control. MRONJ: anti-resorptive (bisphosphonates) / anti-angiogenic drugs → exposed necrotic jawbone >8 weeks; avoid implant placement in patients on IV bisphosphonates; drug holiday controversial.`,
+      keyPoints: [
+        "Mucositis = reversible (no bone loss); peri-implantitis = bone loss",
+        "Peri-implantitis: PD >5 mm + BOP/pus + radiographic bone loss",
+        "Smoking = strongest modifiable risk factor for failure",
+        "Early failure = failed osseointegration; late = peri-implantitis",
+        "MRONJ: exposed necrotic bone >8 weeks on anti-resorptives",
+        "Avoid implants in IV bisphosphonate patients",
+        "Cementitis from retained subgingival cement → mimic peri-implantitis"
+      ],
+      estMinutes: 25,
+      verifiedCount: 46,
+      practiceFilter: "implant@plan",
+      readingAnchor: "Complications"
+    },
+
+    // =============================
+    // DIAGNOSTICS / RADIOLOGY / PATHOLOGY (concepts mainly within oms/mixed)
+    // =============================
+    {
+      id: "diag-radiography",
+      dept: "diagnostics",
+      day: 9,
+      section: "A",
+      title: "Radiographic Techniques — Paralleling, Bisecting, SLOB, CBCT",
+      summary: `Paralleling technique (long-cone) is the standard: film/sensor parallel to the long axis of the tooth, beam at 90°, minimizes distortion and is reproducible — best for periapicals. Bisecting-angle technique: film against tooth, beam perpendicular to the bisector of the tooth-film angle — more distortion, used when paralleling is impossible (shallow palate, gagging). SLOB rule (Same Lingual Opposite Buccal): object seen to move in the SAME direction as the tube shift is lingual; opposite direction is buccal/labial. CBCT: 3D, for impactions, implants, fractures, endo, pathology — higher dose than 2D. Bitewings for interproximal caries & crestal bone; panoramic for screening but distorted.`,
+      keyPoints: [
+        "Paralleling = standard, least distortion, most reproducible",
+        "Bisecting = backup when paralleling impossible",
+        "SLOB: same-direction movement = lingual; opposite = buccal",
+        "CBCT for 3D: implants, impactions, fractures, pathology",
+        "Bitewings = interproximal caries + crestal bone height",
+        "Panoramic = screening, magnified/distorted, not for caries",
+        "Focal spot-to-skin distance affects magnification (longer = less)"
+      ],
+      estMinutes: 25,
+      verifiedCount: 5,
+      practiceFilter: "oms@plan",
+      readingAnchor: "Radiography",
+      quizPool: "oms"
+    },
+    {
+      id: "diag-oral-pathology",
+      dept: "diagnostics",
+      day: 9,
+      section: "B",
+      title: "Radiolucent vs Radiopaque Lesions — Key Diagnoses",
+      summary: `Periapical radiolucency = non-vital tooth (endodontic origin); must test vitality. Common radiolucent jaw lesions: periapical granuloma/cyst, radicular cyst, dentigerous cyst (crown of impacted tooth), odontogenic keratocyst (recurrent, basal cell nevus syndrome), ameloblastoma (soap-bubble, posterior mandible), simple bone cyst. Radiopaque: condensing osteitis (sclerotic bone around tooth apex, low-grade periapical infection), cementoblastoma (mass at root apex, fused to root), odontoma, tori/exostoses, fibrous dysplasia (ground-glass), Paget (cotton-wool, elevated ALP). Cotton-wool = Paget; ground-glass = fibrous dysplasia; soap-bubble = ameloblastoma/OKC.`,
+      keyPoints: [
+        "Periapical radiolucency → always test vitality (endodontic until proven otherwise)",
+        "Dentigerous cyst surrounds the crown of an impacted tooth",
+        "Odontogenic keratocyst = recurrent, basal cell nevus syndrome (multiple OKCs)",
+        "Ameloblastoma = soap-bubble, posterior mandible, multilocular",
+        "Condensing osteitis = sclerotic apex from low-grade infection",
+        "Cotton-wool = Paget (↑ALP); ground-glass = fibrous dysplysis",
+        "Cementoblastoma fused to root apex vs cementoma"
+      ],
+      estMinutes: 30,
+      verifiedCount: 5,
+      practiceFilter: "oms@plan",
+      readingAnchor: "Oral pathology",
+      quizPool: "oms"
+    },
+    {
+      id: "diag-interpretation",
+      dept: "diagnostics",
+      day: 9,
+      section: "C",
+      title: "Interpreting Radiographs & Common Artifacts",
+      summary: `Systematic reading: identify the image type and field, evaluate teeth + supporting structures (lamina dura, PDL, bone pattern), check for caries/restorations/periodontal/periapical findings. Loss of lamina dura + widened PDL = early periapical pathosis. A step in the occlusal radiograph may indicate caries depth (radiography underestimates caries depth). Artifacts: cone-cut (blank edge), elongation (beam too vertical), foreshortening (beam too horizontal), overlapping (horizontal angulation wrong), motion blur. PSP/digital sensors reduce dose vs film. ALARA — keep exposures as low as reasonably achievable; collimation, lead apron, thyroid collar.`,
+      keyPoints: [
+        "Radiography underestimates true caries depth",
+        "Widened PDL + lost lamina dura = early periapical disease",
+        "Elongation = too vertical; foreshortening = too horizontal",
+        "Cone-cut = blank edge from missed alignment",
+        "Motion blur vs sharp = patient/sensor movement",
+        "ALARA: collimation, lead apron, thyroid collar",
+        "Digital sensors (PSP/cmos) cut dose vs D/E-speed film"
+      ],
+      estMinutes: 20,
+      verifiedCount: 3,
+      practiceFilter: "oms@plan",
+      readingAnchor: "Radiograph interpretation",
+      quizPool: "oms"
+    },
   ];
 
   // Mock days (no reading content but reference existing lessons)
