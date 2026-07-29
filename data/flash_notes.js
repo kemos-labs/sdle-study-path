@@ -14,9 +14,9 @@ window.FLASH_NOTES = {
     "July_2026": 163
   },
   "markerStats": {
-    "verified": 1834,
-    "unknown": 0,
-    "ref": 2142
+    "verified": 1837,
+    "ref": 2139,
+    "unknown": 0
   },
   "byDept": {
     "restorative": [
@@ -27821,9 +27821,9 @@ window.FLASH_NOTES = {
         "options": [
           "A. scaler"
         ],
-        "answerLetter": null,
-        "answerIdx": null,
-        "marker": "ref",
+        "answerLetter": "A",
+        "answerIdx": 0,
+        "marker": "verified",
         "needsImage": true,
         "raw": "A periodon.st is performing a scaling procedure. Which of the following instruments is the operator using (see image)? A . scaler B .chisel C.curette D .bone le  ةرﻮﺼﻟا فﻮﺸﻧ مزﻻ  ✳ ✳",
         "dept": "perio",
@@ -61898,7 +61898,7 @@ window.FLASH_NOTES = {
         ],
         "answerLetter": "B",
         "answerIdx": 1,
-        "marker": "ref",
+        "marker": "verified",
         "needsImage": true,
         "raw": "Which of the following is the most appropriate posi.on for the radiographer(doctor) without a shield, in case of obtaining an intraoral radiograph for a dental pa.ent? A . 1 meter away and behind the x-ray source B. 2meter away and behind the x ray source ✳ ✳ C. 1 meter away and in front of the x-ray source D. 2 meter away and in front of the x-ray source",
         "dept": "oms",
@@ -65364,7 +65364,7 @@ window.FLASH_NOTES = {
         ],
         "answerLetter": null,
         "answerIdx": null,
-        "marker": "ref",
+        "marker": "verified",
         "needsImage": true,
         "raw": "A 35-year-old woman visited the dental clinic complaining of mul.ple episodes of discomfort and swellings at site of dental implants that are restored 8 months ago, a peri-apical radiograph was requested (see image) Which of the following is the most appropriate diagnosis based on the clinical presenta.on? A .cracked crown B. Peri-implantitis C.peri-implantmucositis D implant overloading ✳ ✳  ةرﻮﺼﻟا ﺐﺴﺣ ع **Peri implantitis, include soft tissue inflamation and bone resorption  Peri implant mucusitis, inflamation that confined only to soft tissue around implant without bone resorption resorptio",
         "dept": "diagnostics",
