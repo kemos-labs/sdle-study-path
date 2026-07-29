@@ -9,6 +9,11 @@ data/raw/
 data/generated/playwright_review/
 data/generated/_charcount.json
 data/generated/_run_count.sh
+data/generated/
+
+# Audit / temp files
+audit_*.json
+*.bak
 
 # Optional local deploy copy (repo root already is the app)
 dist/

@@ -1445,7 +1445,6 @@
     "always",
     "practice",
     "mcqs",
-    "recalls",
     "notes",
     "marjune",
     "progress",
@@ -1594,7 +1593,6 @@
         <button type="button" data-view="always" title="Always-comes free points">Always</button>
         <button type="button" data-view="practice" title="تدرب">تدرب</button>
         <button type="button" data-view="mcqs" title="MCQs hub">MCQs</button>
-        <button type="button" data-view="recalls" title="Exam recall packs">Recalls</button>
         <button type="button" data-view="marjune" title="Flash Notes — جميع المواد">Flash Notes</button>
         <button type="button" data-view="notes" title="Study notes by department">Notes</button>
         <button type="button" data-view="progress" title="Progress">Progress</button>
@@ -1642,7 +1640,7 @@
     let navView = TAB_VIEWS.includes(view) ? view : "today";
     if (isSimpleMode() && !SIMPLE_PRIMARY.includes(navView)) {
       /* secondary screens: highlight closest primary tab */
-      if (navView === "mcqs" || navView === "recalls" || navView === "always" || navView === "cards" || navView === "quiz")
+      if (navView === "mcqs" || navView === "always" || navView === "cards" || navView === "quiz")
         navView = "practice";
       else if (navView === "more") navView = "progress";
       else if (navView === "days" || navView === "pass") navView = "today";
@@ -1823,7 +1821,7 @@
             <button type="button" class="btn ghost more-link" data-go="days">All days</button>
             <button type="button" class="btn ghost more-link" data-go="pass">Pass plan</button>
             <button type="button" class="btn ghost more-link" data-go="always">Free points list</button>
-            <button type="button" class="btn ghost more-link" data-go="recalls">Recalls (أبطال + رفيع/سعود)</button>
+            <button type="button" class="btn ghost more-link" data-go="marjune">📚 Flash Notes — جميع المواد</button>
             <button type="button" class="btn ghost more-link" data-go="marjune">📚 Flash Notes — جميع المواد</button>
             <button type="button" class="btn ghost more-link" data-go="notes">Notes by department</button>
           </div>
@@ -4265,6 +4263,7 @@
               <div data-dept-quiz="${d.id}" data-n="${n}" style="display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:8px 12px;cursor:pointer">
                 <span style="font-size:0.85rem;color:var(--text)">${escapeHtml(d.label)}</span>
                 <span style="display:flex;align-items:center;gap:6px">
+                  <button type="button" class="btn sm ghost" data-fn-cards="${d.id}" style="padding:1px 6px;font-size:0.7rem;cursor:pointer" title="Flashcards for ${escapeHtml(d.label)}">🃏</button>
                   <span style="color:var(--accent2);font-weight:500;font-size:0.8rem">${n}</span>
                   <span style="color:var(--accent);font-size:0.9rem">▶</span>
                 </span>
@@ -4364,6 +4363,10 @@
       const dept = b.dataset.deptQuiz;
       const n = b.dataset.n ? +b.dataset.n : 50;
       b.onclick = () => startQuiz(dept + "@complete", n, "learn", false);
+    });
+    // Flashcard buttons in department grid → open cards for that dept
+    app.querySelectorAll("[data-fn-cards]").forEach(b => {
+      b.onclick = (e) => { e.stopPropagation(); openCards(b.dataset.fnCards); };
     });
 
     const byId = id => document.getElementById(id);

@@ -113800,8 +113800,8 @@
       "7.5",
       "10"
     ],
-    "answer": 1,
-    "explanation": "Buckley’s formocresol is an acidic formaldehyde–cresol preparation; among listed values, pH near ~5.1 is the best match to the mildly acidic character of the medicament rather than alkaline pH 7.5–10. [Book: Formocresol chemistry (pediatric endo references): acidic formaldehyde-cresol solution used in pulpotomy.]",
+    "answer": 3,
+    "explanation": "Cohen's Pathways of the Pulp (2016), Chapter 19 'Managing Iatrogenic Endodontic Events', explicitly lists commonly used endodontic medicaments with their pH: Formocresol pH 12.45 +/- 0.02 (alkaline), sodium hypochlorite pH 11-12, calcium hydroxide pH 10-14, MTA pH ~11.7. Buckley's formocresol (formaldehyde 19% + tricresol 35% + glycerin 15% + water 31%) is therefore alkaline, not acidic. Among the listed options (4.2, 5.1, 7.5, 10), the correct/most-alkaline value is 10. [CORRECTED 2026-07-22 by textbook verification: previous bank answer 5.1 (acidic) was wrong; official textbook states pH 12.45.][Book: Cohen's Pathways of the Pulp 2016 — Ch.19 medicament pH table.]",
     "source": "rafi_04",
     "sourcePack": "rafi_04",
     "department": "endo",
@@ -113811,7 +113811,7 @@
     "truth_confidence": "high",
     "truth_wave": "grok_book:shard_03/batch_0001",
     "read_audit": true,
-    "book_support": "Formocresol chemistry (pediatric endo references): acidic formaldehyde-cresol solution used in pulpotomy.",
+    "book_support": "Cohen's Pathways of the Pulp 2016 Ch.19: Formocresol pH 12.45 +/- 0.02 (alkaline medicament).",
     "truth_judge": "grok_book",
     "audit_confidence": "low",
     "book_verified": true

@@ -48,6 +48,7 @@ SOURCES = [
     ("Saud_Masahhah",  None, "sectioned"),  # mojibake name, resolved below
     ("June_July2023",  REF / "focus_new"  / "June_July2023_abtal.md", "table"),
     ("GoldenFile2",    REF / "focus_new"  / "Golden_File_2_2021.md", "numbered"),
+    ("July_2026",      REF / "focus_new"  / "July_2026_abtal.md", "numbered"),
 ]
 
 # resolve the mojibake-named "Saud corrected" file: the one focus .md not claimed
@@ -123,7 +124,7 @@ SECTION_HEADERS = {
     "medically compromised": "oms", "Diagnostics": "diagnostics", "Radiology": "diagnostics",
 }
 
-LETTER = {"A": 0, "B": 1, "C": 2, "D": 3, "E": 4}
+LETTER = {"A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "a": 0, "b": 1, "c": 2, "d": 3, "e": 4}
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -178,7 +179,7 @@ def needs_image(stem: str, raw: str) -> bool:
 def extract_options(block: str) -> list[tuple[str, str]]:
     opts = []
     # inline: "A. x B. y C. z D. w" (allow ✅✅ trailing)
-    found = re.findall(r"([A-E])\s*[\.:\)]\s+([^A-E\n]*?)(?=\s+[A-E]\s*[\.:\)]|$)", block)
+    found = re.findall(r"([A-Ea-e])\s*[\.:\)]\s+([^A-Ea-e\n]*?)(?=\s+[A-Ea-e]\s*[\.:\)]|$)", block)
     if len(found) >= 2:
         for letter, txt in found:
             txt = txt.strip()
@@ -186,7 +187,7 @@ def extract_options(block: str) -> list[tuple[str, str]]:
                 opts.append((letter, txt))
         return opts
     # line-based
-    for m in re.finditer(r"(?im)^\s*([A-E])\s*[\.:\)]\s+(.+)$", block):
+    for m in re.finditer(r"(?im)^\s*([A-Ea-e])\s*[\.:\)]\s+(.+)$", block):
         opts.append((m.group(1), m.group(2).strip()))
     return opts
 
@@ -194,18 +195,18 @@ def find_marked_answer(opts: list[tuple[str, str]], block: str) -> tuple[str | N
     for letter, txt in opts:
         if "✅✅" in txt or "✅" in txt or "🟢" in txt or "🟡" in txt or "✳" in txt:
             return letter, LETTER.get(letter, -1)
-    for m in re.finditer(r"([A-E])\s*[\.:\)]\s+([^\n]*?[✅🟢🟡✳][^\n]*)", block):
+    for m in re.finditer(r"([A-Ea-e])\s*[\.:\)]\s+([^\n]*?[✅🟢🟡✳][^\n]*)", block):
         return m.group(1), LETTER.get(m.group(1), -1)
     return None, None
 
 def split_stem_opts(body: str) -> tuple[str, str]:
     """Split a chunk body into stem text + options block by first inline option marker."""
     # find first occurrence of " A. " / " A) " / " A: " as a word
-    m = re.search(r"(\s|^)([A-E])\s*[\.:\)]\s+", body)
+    m = re.search(r"(\s|^)([A-Ea-e])\s*[\.:\)]\s+", body)
     if m:
         return body[:m.start()].strip(), body[m.start():].strip()
     # also check line-based option on its own line
-    m2 = re.search(r"(?m)^\s*([A-E])\s*[\.:\)]\s+", body)
+    m2 = re.search(r"(?m)^\s*([A-Ea-e])\s*[\.:\)]\s+", body)
     if m2:
         return body[:m2.start()].strip(), body[m2.start():].strip()
     return body.strip(), ""
@@ -378,7 +379,7 @@ def main():
         markers[it["marker"]] = markers.get(it["marker"], 0) + 1
 
     payload = {
-        "generated": "2026-07-29",
+        "generated": "2026-07-30",
         "total": len(deduped),
         "perSource": per_source,
         "markerStats": markers,
@@ -394,6 +395,7 @@ def main():
             {"id": "Saud_Masahhah",  "label": "ملف سعود مصحّح",                "file": "focus/<saud masahhah>.md", "recent": False},
             {"id": "June_July2023",  "label": "June–July 2023 (أبطال الدجيتال) — recent add", "file": "focus_new/June_July2023_abtal.md", "recent": True},
             {"id": "GoldenFile2",    "label": "الملف الذهبي ٢ (yes we can 2021) — recent add", "file": "focus_new/Golden_File_2_2021.md", "recent": True},
+            {"id": "July_2026",      "label": "July 2026 (أبطال الدجيتال) — recent add", "file": "focus_new/July_2026_abtal.md", "recent": True},
         ],
         "markerLegend": {
             "verified": "✅ / ✅✅ community-marked correct (still needs Phase-3 book check)",
