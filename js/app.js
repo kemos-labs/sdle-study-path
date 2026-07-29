@@ -4301,8 +4301,21 @@
           ${FN_DEPTS.map(d => {
             const n = (FN.byDept[d.id] || []).length;
             const active = fnDept === d.id;
-            return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-fn-dept="${d.id}" style="padding:3px 10px;font-size:0.74rem">${escapeHtml(d.label)} <span class="muted" style="font-size:0.66rem">${n}</span></button>`;
+            const deptItems = FN.byDept[d.id] || [];
+            const deptVer = deptItems.filter(i => i.marker === 'verified').length;
+            const deptRef = deptItems.filter(i => i.marker === 'ref').length;
+            const deptUnk = deptItems.filter(i => i.marker === 'unknown').length;
+            const pct = n > 0 ? Math.round((deptVer + deptRef) / n * 100) : 0;
+            const dotColor = pct >= 80 ? '#1b7a3d' : (pct >= 50 ? '#e6a817' : '#e63946');
+            return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-fn-dept="${d.id}" style="padding:3px 10px;font-size:0.74rem"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:${dotColor};margin-right:4px"></span>${escapeHtml(d.label)} <span class="muted" style="font-size:0.66rem">${n}</span></button>`;
           }).join("")}
+        </div>
+        <!-- verification stats bar -->
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px;padding:6px 10px;background:var(--bg1);border-radius:var(--radius);font-size:0.72rem;color:var(--muted)">
+          <span>✅ <b style="color:#1b7a3d">${FN.markerStats?.verified || 0}</b> marked</span>
+          <span>📝 <b style="color:#e6a817">${FN.markerStats?.ref || 0}</b> referenced</span>
+          <span>❓ <b style="color:#e63946">${FN.markerStats?.unknown || 0}</b> unknown</span>
+          <span style="flex:1;text-align:right">${FN.total > 0 ? Math.round((((FN.markerStats?.verified||0)+(FN.markerStats?.ref||0))/FN.total)*100) : 0}% resolved</span>
         </div>
 
         <!-- source file filter chips (from the 8 PDF sources) -->
