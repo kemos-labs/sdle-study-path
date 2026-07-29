@@ -1,0 +1,717 @@
+[
+  {
+    "id": "fn_restorative_0026",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_restorative_0031",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_restorative_0167",
+    "answerLetter": "c",
+    "from_raw": true
+  },
+  {
+    "id": "fn_restorative_0221",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_restorative_0169",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_restorative_0180",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_restorative_0476",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_restorative_0418",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_restorative_0475",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_restorative_0482",
+    "answerLetter": "c"
+  },
+  {
+    "id": "fn_restorative_0484",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_restorative_0483",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_endo_0009",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_restorative_0485",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_restorative_0486",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_endo_0433",
+    "answerLetter": "d",
+    "from_raw": true
+  },
+  {
+    "id": "fn_endo_0129",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_endo_0434",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_endo_0439",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_endo_0437",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_endo_0436",
+    "answerLetter": "b",
+    "from_raw": true
+  },
+  {
+    "id": "fn_endo_0446",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_endo_0445",
+    "answerLetter": "c",
+    "from_raw": true
+  },
+  {
+    "id": "fn_endo_0442",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_endo_0496",
+    "answerLetter": "b",
+    "from_raw": true
+  },
+  {
+    "id": "fn_endo_0448",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_endo_0523",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_endo_0539",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_endo_0525",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_endo_0524",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_perio_0111",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_perio_0176",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_perio_0125",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_perio_0235",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_perio_0224",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_perio_0238",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_perio_0264",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_perio_0631",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_perio_0245",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_perio_0648",
+    "answerLetter": "b",
+    "from_raw": true
+  },
+  {
+    "id": "fn_perio_0668",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_perio_0649",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_perio_0681",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_fixed_0161",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_perio_0680",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_fixed_0165",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_fixed_0166",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_fixed_0167",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_fixed_0170",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_rpd_0002",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_fixed_0180",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_rpd_0014",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_rpd_0067",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_rpd_0020",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_implant_0008",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_implant_0122",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_implant_0082",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_implant_0161",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_implant_0126",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_implant_0153",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_implant_0177",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_implant_0168",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_implant_0164",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_implant_0185",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_implant_0188",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_implant_0181",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_implant_0192",
+    "answerLetter": "c",
+    "from_raw": true
+  },
+  {
+    "id": "fn_implant_0191",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_implant_0359",
+    "answerLetter": "c",
+    "from_raw": true
+  },
+  {
+    "id": "fn_ortho_pedo_0070",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_implant_0439",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_implant_0479",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_ortho_pedo_0088",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_ortho_pedo_0084",
+    "answerLetter": "d",
+    "from_raw": true
+  },
+  {
+    "id": "fn_ortho_pedo_0237",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_ortho_pedo_0456",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_ortho_pedo_0454",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_ortho_pedo_0460",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_ortho_pedo_0466",
+    "answerLetter": "c",
+    "from_raw": true
+  },
+  {
+    "id": "fn_ortho_pedo_0465",
+    "answerLetter": "d",
+    "from_raw": true
+  },
+  {
+    "id": "fn_ortho_pedo_0468",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0025",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0100",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0009",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0111",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0118",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0112",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0157",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0151",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0146",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0238",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0324",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0399",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0484",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0418",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0481",
+    "answerLetter": "c",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0521",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0531",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0551",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0583",
+    "answerLetter": "b"
+  },
+  {
+    "id": "fn_oms_0552",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0579",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0589",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0612",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0592",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0648",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0636",
+    "answerLetter": "d"
+  },
+  {
+    "id": "fn_oms_0688",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0702",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0701",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0703",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0707",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0708",
+    "answerLetter": "b",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0724",
+    "answerLetter": "d",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0731",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0727",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0734",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0752",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0754",
+    "answerLetter": "d",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0773",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0777",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0779",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0778",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0780",
+    "answerLetter": "c",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0781",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0783",
+    "answerLetter": "b",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0785",
+    "answerLetter": "c"
+  },
+  {
+    "id": "fn_oms_0784",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0786",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0790",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0791",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0787",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0794",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0793",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0792",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0798",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0796",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0797",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0800",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0799",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0801",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0802",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0804",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0803",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_oms_0805",
+    "answerLetter": "c",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0847",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0846",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0857",
+    "answerLetter": "c",
+    "from_raw": true
+  },
+  {
+    "id": "fn_oms_0855",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_ethics_0019",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_ethics_0065",
+    "answerLetter": "d",
+    "from_raw": true
+  },
+  {
+    "id": "fn_ethics_0075",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_ethics_0072",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_diagnostics_0061",
+    "answerLetter": "e",
+    "from_raw": true
+  },
+  {
+    "id": "fn_diagnostics_0006",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_ethics_0076",
+    "answerLetter": "a"
+  },
+  {
+    "id": "fn_diagnostics_0076",
+    "answerLetter": "a",
+    "from_raw": true
+  },
+  {
+    "id": "fn_diagnostics_0063",
+    "answerLetter": "a"
+  }
+]
