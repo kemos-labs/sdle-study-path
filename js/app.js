@@ -4108,7 +4108,24 @@
       state._fnDept = FN_DEPTS[0] ? FN_DEPTS[0].id : "oms";
     }
     const fnDept = state._fnDept;
-    const fnList = (FN.byDept[fnDept] || []).slice(0, 200); // cap render for perf
+    // source filter (optional — filters by source label)
+    const fnSrc = state._fnStudySource || "";
+    let fnListRaw = FN.byDept[fnDept] || [];
+    if (fnSrc) {
+      fnListRaw = fnListRaw.filter(it => (it.sources || []).some(s => s.label === fnSrc || s.file === fnSrc));
+    }
+    const fnList = fnListRaw.slice(0, 200);
+    if (!state._fnStudyIdx || state._fnStudyIdx >= fnList.length) state._fnStudyIdx = 0;
+    const fnTotal = fnList.length;
+    const fnCurr = fnList[state._fnStudyIdx] || null;
+    // source filter chips (from the 8 PDF sources)
+    const fnSourcesList = (window.FLASH_NOTES || {}).sources || [];
+    const sourceChipsHtml = `<button type="button" class="btn sm ${!fnSrc ? 'success' : 'ghost'}" data-fn-src="" style="padding:3px 9px;font-size:0.7rem">All sources</button>`
+      + fnSourcesList.map(s => {
+        const active = fnSrc === (s.file || s.label);
+        const tag = s.recent ? ' ✨' : '';
+        return `<button type="button" class="btn sm ${active ? 'success' : 'ghost'}" data-fn-src="${escapeHtml(s.file)}" style="padding:3px 9px;font-size:0.7rem">${escapeHtml(s.label)}${tag}</button>`;
+      }).join("");
     const fnMarkerBadge = (m) => ({
       verified: '<span class="badge green" style="font-size:0.62rem">✅ marked</span>',
       given:    '<span class="badge blue" style="font-size:0.62rem">🟢 given</span>',
@@ -4135,42 +4152,31 @@
       if (m) return m[1].replace(/[✅🟢🟡✳🔵🔁●]/g, "").replace(/^[a-z][).]\s*/i, "").trim().slice(0, 80);
       return "";
     };
-    const fnCardHtml = fnList.map((it, i) => {
+    const fnStudyCard = (it) => {
+      if (!it) return '<div class="fn-empty" style="padding:40px 0;text-align:center;color:var(--muted);font-size:0.85rem">No card at this position.</div>';
       const vd = fnVerdict(it.id);
       const cleanStem = (it.stem || "").replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim();
       const q = escapeHtml(cleanStem).slice(0, 260);
-      // determine the marked answer text (letter+option, or inline)
-      let ansLetter = it.answerLetter;
-      let ansText = "";
+      let ansLetter = it.answerLetter, ansText = "";
       if (it.options && ansLetter) {
         const opt = it.options.find(o => o.startsWith(ansLetter + ".") || o.startsWith(ansLetter.toLowerCase() + "."));
         ansText = opt ? opt.replace(/^[a-z][).]\s*/i, "").replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim() : "";
-      } else if (!ansLetter) {
-        ansText = fnInlineAns(it);
-      }
+      } else if (!ansLetter) { ansText = fnInlineAns(it); }
+      const optsHtml = (it.options||[]).length
+        ? `<ul class="fn-opts" style="list-style:none;margin:8px 0;padding:0;display:flex;flex-direction:column;gap:4px">${(it.options||[]).map(o=>{const isA=o.startsWith((ansLetter||"_")+".")||o.startsWith((ansLetter||"_").toLowerCase()+".");return `<li style="padding:6px 10px;border-radius:6px;background:var(--bg1);border:1px solid var(--border);font-size:0.82rem${isA?';background:rgba(27,122,61,.14);border-color:#1b7a3d;font-weight:600':''}">${escapeHtml(o)}${isA?' ✓':''}</li>`;}).join("")}</ul>` : "";
+      const ansLine = (ansLetter||ansText)
+        ? `<p style="margin:8px 0 4px;color:var(--text);font-size:0.95rem"><b style="color:var(--muted);font-size:0.72rem;text-transform:uppercase;letter-spacing:.04em">Answer</b> ${ansLetter?`<span style="display:inline-block;min-width:1.4em;padding:1px 7px;margin:0 4px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;text-align:center;font-size:0.8rem">${escapeHtml(ansLetter)}</span>`:''}${ansText?`<span style="color:var(--accent);font-weight:600">${escapeHtml(ansText)}</span>`:''}</p>`
+        : '<p class="muted" style="margin:8px 0 4px;font-size:0.8rem;color:var(--muted)">no marked answer</p>';
+      const evHtml = vd.ev ? `<p style="margin:8px 0 0;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;font-size:0.82rem;color:var(--text)"><b style="color:var(--accent)">📖 Why (book):</b> ${escapeHtml(vd.ev).slice(0,320)}</p>` : '';
+      const srcHtml = (it.sources||[]).length ? `<p style="margin:6px 0 0;font-size:0.7rem;color:var(--muted)">from: ${escapeHtml((it.sources||[]).join(", "))}</p>` : '';
       const imgFlag = it.needsImage ? ' <span class="badge" style="font-size:0.58rem;background:var(--bg3);color:var(--accent2)">🖼 image</span>' : '';
-      const optsHtml = (it.options || []).length
-        ? `<ul class="fn-opts">${(it.options || []).map(o => {
-            const isA = o.startsWith((ansLetter || "_") + ".") || o.startsWith((ansLetter || "_").toLowerCase() + ".");
-            return `<li class="${isA ? 'fn-ans' : ''}">${escapeHtml(o)}</li>`;
-          }).join("")}</ul>`
-        : "";
-      const ansLine = (ansLetter || ansText)
-        ? `<p class="fn-card__a"><b>Answer</b> ${ansLetter ? `<span class="fn-letter">${escapeHtml(ansLetter)}</span>` : ''}${ansText ? `<span class="fn-atext">${escapeHtml(ansText)}</span>` : ''}</p>`
-        : '<p class="muted fn-card__a"><b>Answer</b> <span class="muted">no marked answer — see stem</span></p>';
-      return `<details class="fn-card" data-fn-idx="${i}">
-        <summary class="fn-card__q">
-          <span class="fn-card__stem">${q}${imgFlag}</span>
-          <span class="fn-card__status">${vd.badge}</span>
-        </summary>
-        <div class="fn-card__body">
-          ${ansLine}
-          ${optsHtml}
-          ${vd.ev ? `<p class="fn-card__ev"><b>📖 Why (book):</b> ${escapeHtml(vd.ev).slice(0, 320)}</p>` : ''}
-          ${(it.sources || []).length ? `<p class="fn-card__src">from: ${escapeHtml((it.sources || []).join(", "))}</p>` : ''}
-        </div>
-      </details>`;
-    }).join("");
+      const marker = fnMarkerBadge(it.marker);
+      return `<div class="fn-study-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;min-height:150px">
+        <div class="fn-study-q" style="font-size:1.05rem;line-height:1.6;color:var(--text)">${q}${imgFlag}</div>
+        <div class="fn-study-body" style="display:none;margin-top:10px;padding-top:10px;border-top:1px dashed var(--border)">${ansLine}${optsHtml}${evHtml}${srcHtml}</div>
+        <div style="margin-top:10px;font-size:0.72rem;color:var(--muted)">${marker} ${vd.badge}</div>
+      </div>`;
+    };
 
     const dayPlans = [
       { id: "day1", label: "OMS", topics: "oms", goal: 100, title: "Oral Surgery & Medicine", desc: "IAN block, LA, biopsy, odontogenic infections, fractures, MRONJ, dry socket" },
@@ -4187,7 +4193,7 @@
     const dayPoolCount = poolN(poolKey);
 
     app.innerHTML = `
-      <div class="simple-hub fn-section">
+      <div class="simple-hub">
         <!-- HEADER ROW -->
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
           <h1 style="margin:0;font-size:1.4rem">📚 Flash Notes <span style="font-size:0.8rem;color:var(--muted);font-weight:400">النوطات السريعة</span></h1>
@@ -4200,131 +4206,121 @@
         <!-- SOURCE PILLS (dynamic from FLASH_NOTES.sources) -->
         <div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px" id="fn-source-pills"></div>
 
-        <!-- ============ HERO: READING SECTION ============ -->
-        <h2 style="font-size:1.1rem;margin:14px 0 2px;color:var(--text)">🗒️ Read the recall notes</h2>
-        <p class="fn-intro">${FN.total || 0} community recall items, deduped from 8 PDFs. Pick a department, then tap any card to see the <b>answer</b> and the <b>📖 book evidence</b> that supports it. <span class="muted">Answers are student marks (✅/🟢/🟡) — only the 📖 badge means a textbook line was found.</span></p>
+        <hr style="margin:12px 0;border-color:var(--border)">
 
-        <!-- dept filter chips -->
-        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:6px">
-          ${FN_DEPTS.map(d => {
-            const n = (FN.byDept[d.id] || []).length;
-            const active = fnDept === d.id;
-            return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-fn-dept="${d.id}" style="padding:4px 11px;font-size:0.78rem">${escapeHtml(d.label)} <span class="muted" style="font-size:0.66rem">${n}</span></button>`;
+        <!-- DAY PILLS -->
+        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:12px">
+          ${dayPlans.map(p => {
+            const active = day === p.id;
+            return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-plan-day="${p.id}" style="padding:4px 12px;font-size:0.8rem">${escapeHtml(p.label)}</button>`;
           }).join("")}
         </div>
 
-        <div class="fn-legend">
-          <span class="badge green" style="font-size:0.58rem">📖 book-supported</span>
-          <span class="badge" style="font-size:0.58rem;background:var(--bg3);color:var(--muted)">🔍 needs review</span>
-          <span class="badge" style="font-size:0.58rem;background:var(--bg3);color:var(--accent2)">🖼 image card</span>
-          <span>community answers · not official SCFHS keys</span>
-        </div>
-
-        <!-- toolbar: search + expand/collapse + drill/lesson/cards -->
-        <div class="fn-toolbar">
-          <div class="fn-toolbar__left">
-            <input class="fn-search" id="fn-search" type="search" placeholder="🔍 Filter notes by keyword…" autocomplete="off">
-            <button type="button" class="btn sm ghost" id="fn-expand-all">Expand all</button>
-            <button type="button" class="btn sm ghost" id="fn-collapse-all">Collapse</button>
+        <!-- ACTIVE DAY CARD -->
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:16px">
+          <div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:8px">
+            <div>
+              <strong style="font-size:1.05rem;color:var(--accent)">Day ${plan.id.replace('day','')} — ${escapeHtml(plan.title)}</strong>
+              <div class="muted" style="font-size:0.85rem;margin-top:4px">${escapeHtml(plan.desc)}</div>
+            </div>
+            <span style="color:var(--accent2);font-weight:500;font-size:0.85rem">${dayPoolCount} Qs</span>
           </div>
-          <div class="fn-toolbar__right">
-            <span class="muted" id="fn-count" style="font-size:0.74rem">Showing ${fnList.length} of ${(FN.byDept[fnDept]||[]).length} · ${escapeHtml(fnDept)}</span>
-            <button type="button" class="btn sm" id="fn-drill">▶ Drill verified ${escapeHtml(fnDept)} MCQs</button>
-            <button type="button" class="btn sm ghost" id="fn-lesson">📘 ${escapeHtml(fnDept)} lesson</button>
-            <button type="button" class="btn sm ghost" id="fn-cards">🃏 Cards</button>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+            <button type="button" class="btn success" id="qz-${day}-goal">▶ Start ${plan.goal} Qs</button>
+            <button type="button" class="btn" id="qz-${day}-all">All ${dayPoolCount}</button>
+            <button type="button" class="btn ghost" id="qz-${day}-50">50 Rev</button>
+            <button type="button" class="btn ghost" id="plan-flash-today">🃏 Cards</button>
           </div>
         </div>
 
-        <!-- the reading list (spacious, no cramped box) -->
-        <div id="fn-list" class="fn-list">
-          ${fnCardHtml || '<p class="fn-empty">No recall items for this department.</p>'}
-        </div>
-
-        <!-- ============ CRAM & QUIZ TOOLS (collapsed) ============ -->
-        <details class="fn-collapsible">
-          <summary>🎯 Cram &amp; quiz tools — day plan, departments, quick drills</summary>
-          <div>
-            <!-- DAY PILLS -->
-            <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:12px;margin-top:6px">
+        <!-- 7-DAY OVERVIEW (collapsible) -->
+        <details style="margin-bottom:16px;font-size:0.85rem">
+          <summary style="cursor:pointer;font-weight:600;color:var(--muted)">📋 7-day overview</summary>
+          <table class="simple-table" style="width:100%;margin-top:8px">
+            <thead><tr><th>#</th><th>Topic</th><th>Qs</th><th>Goal</th></tr></thead>
+            <tbody>
               ${dayPlans.map(p => {
+                const cnt = p.topics === "all" ? totalAll6 : poolN(p.topics + "@complete");
                 const active = day === p.id;
-                return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-plan-day="${p.id}" style="padding:4px 12px;font-size:0.8rem">${escapeHtml(p.label)}</button>`;
+                return `<tr style="${active ? 'background:var(--bg3);border-left:3px solid var(--accent)' : ''}">
+                  <td>${p.id.replace('day','')}</td>
+                  <td>${escapeHtml(p.title)}</td>
+                  <td>${cnt}</td>
+                  <td>${p.goal}</td>
+                </tr>`;
               }).join("")}
-            </div>
+            </tbody>
+          </table>
+        </details>
 
-            <!-- ACTIVE DAY CARD -->
-            <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:16px">
-              <div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:8px">
-                <div>
-                  <strong style="font-size:1.05rem;color:var(--accent)">Day ${plan.id.replace('day','')} — ${escapeHtml(plan.title)}</strong>
-                  <div class="muted" style="font-size:0.85rem;margin-top:4px">${escapeHtml(plan.desc)}</div>
-                </div>
-                <span style="color:var(--accent2);font-weight:500;font-size:0.85rem">${dayPoolCount} Qs</span>
-              </div>
-              <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
-                <button type="button" class="btn success" id="qz-${day}-goal">▶ Start ${plan.goal} Qs</button>
-                <button type="button" class="btn" id="qz-${day}-all">All ${dayPoolCount}</button>
-                <button type="button" class="btn ghost" id="qz-${day}-50">50 Rev</button>
-                <button type="button" class="btn ghost" id="plan-flash-today">🃏 Cards</button>
-              </div>
-            </div>
+        <hr style="margin:12px 0;border-color:var(--border)">
 
-            <!-- 7-DAY OVERVIEW (collapsible) -->
-            <details style="margin-bottom:16px;font-size:0.85rem">
-              <summary style="cursor:pointer;font-weight:600;color:var(--muted)">📋 7-day overview</summary>
-              <table class="simple-table" style="width:100%;margin-top:8px">
-                <thead><tr><th>#</th><th>Topic</th><th>Qs</th><th>Goal</th></tr></thead>
-                <tbody>
-                  ${dayPlans.map(p => {
-                    const cnt = p.topics === "all" ? totalAll6 : poolN(p.topics + "@complete");
-                    const active = day === p.id;
-                    return `<tr style="${active ? 'background:var(--bg3);border-left:3px solid var(--accent)' : ''}">
-                      <td>${p.id.replace('day','')}</td>
-                      <td>${escapeHtml(p.title)}</td>
-                      <td>${cnt}</td>
-                      <td>${p.goal}</td>
-                    </tr>`;
-                  }).join("")}
-                </tbody>
-              </table>
-            </details>
-
-            <h2 style="font-size:1rem;margin-bottom:2px;color:var(--text)">📊 Departments</h2>
-            <p class="muted" style="font-size:0.8rem;margin-bottom:8px">${totalAll6} MCQs from all 6 PDFs</p>
-            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px">
-              ${DEPTS.map(d => {
-                const n = deptCounts[d.id] || 0;
-                return `
-                  <div data-dept-quiz="${d.id}" data-n="${n}" style="display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:8px 12px;cursor:pointer">
-                    <span style="font-size:0.85rem;color:var(--text)">${escapeHtml(d.label)}</span>
-                    <span style="display:flex;align-items:center;gap:6px">
-                      <span style="color:var(--accent2);font-weight:500;font-size:0.8rem">${n}</span>
-                      <span style="color:var(--accent);font-size:0.9rem">▶</span>
-                    </span>
-                  </div>`;
-              }).join("")}
-              <!-- All PDFs row -->
-              <div data-dept-quiz="all" data-n="${totalAll6}" style="display:flex;align-items:center;justify-content:space-between;background:var(--bg3);border:2px solid var(--accent);border-radius:var(--radius);padding:8px 12px;cursor:pointer">
-                <span style="font-size:0.85rem;font-weight:600;color:var(--accent)">🎯 All 6 PDFs mixed</span>
+        <!-- DEPARTMENTS -->
+        <h2 style="font-size:1rem;margin-bottom:2px;color:var(--text)">📊 Departments</h2>
+        <p class="muted" style="font-size:0.8rem;margin-bottom:8px">${totalAll6} MCQs from all 6 PDFs</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px">
+          ${DEPTS.map(d => {
+            const n = deptCounts[d.id] || 0;
+            return `
+              <div data-dept-quiz="${d.id}" data-n="${n}" style="display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:8px 12px;cursor:pointer">
+                <span style="font-size:0.85rem;color:var(--text)">${escapeHtml(d.label)}</span>
                 <span style="display:flex;align-items:center;gap:6px">
-                  <span style="color:var(--accent);font-weight:500;font-size:0.8rem">${totalAll6}</span>
+                  <span style="color:var(--accent2);font-weight:500;font-size:0.8rem">${n}</span>
                   <span style="color:var(--accent);font-size:0.9rem">▶</span>
                 </span>
-              </div>
-            </div>
-
-            <!-- QUICK ACTIONS -->
-            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
-              <button type="button" class="btn success" id="qa-mixed-50">🎲 Mixed 50</button>
-              <button type="button" class="btn" id="qa-mixed-100">🎲 Mixed 100</button>
-              <button type="button" class="btn" id="qa-flash-all">🃏 All Cards</button>
-              <button type="button" class="btn ghost" id="qa-wrong">📕 Wrong Book</button>
-              <button type="button" class="btn ghost" id="qa-weak">🔴 Weak Areas</button>
-              <button type="button" class="btn ghost" id="plan-lesson-today">📘 Today's Lesson</button>
-              <button type="button" class="btn ghost" id="plan-notes-all">📝 All Notes</button>
-            </div>
+              </div>`;
+          }).join("")}
+          <!-- All PDFs row -->
+          <div data-dept-quiz="all" data-n="${totalAll6}" style="display:flex;align-items:center;justify-content:space-between;background:var(--bg3);border:2px solid var(--accent);border-radius:var(--radius);padding:8px 12px;cursor:pointer">
+            <span style="font-size:0.85rem;font-weight:600;color:var(--accent)">🎯 All 6 PDFs mixed</span>
+            <span style="display:flex;align-items:center;gap:6px">
+              <span style="color:var(--accent);font-weight:500;font-size:0.8rem">${totalAll6}</span>
+              <span style="color:var(--accent);font-size:0.9rem">▶</span>
+            </span>
           </div>
-        </details>
+        </div>
+
+        <hr style="margin:12px 0;border-color:var(--border)">
+
+        <!-- QUICK ACTIONS -->
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button type="button" class="btn success" id="qa-mixed-50">🎲 Mixed 50</button>
+          <button type="button" class="btn" id="qa-mixed-100">🎲 Mixed 100</button>
+          <button type="button" class="btn" id="qa-flash-all">🃏 All Cards</button>
+          <button type="button" class="btn ghost" id="qa-wrong">📕 Wrong Book</button>
+          <button type="button" class="btn ghost" id="qa-weak">🔴 Weak Areas</button>
+          <button type="button" class="btn ghost" id="plan-lesson-today">📘 Today's Lesson</button>
+          <button type="button" class="btn ghost" id="plan-notes-all">📝 All Notes</button>
+        </div>
+
+        <!-- FLASH NOTES — single-card study deck (one at a time) -->
+        <hr style="margin:12px 0;border-color:var(--border)">
+        <h2 style="font-size:1rem;margin-bottom:2px;color:var(--text)">🗒️ Recall study deck <span class="muted" style="font-size:0.72rem">— ${fnTotal} items · community answers (not official)</span></h2>
+
+        <!-- dept filter chips -->
+        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:4px">
+          ${FN_DEPTS.map(d => {
+            const n = (FN.byDept[d.id] || []).length;
+            const active = fnDept === d.id;
+            return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-fn-dept="${d.id}" style="padding:3px 10px;font-size:0.74rem">${escapeHtml(d.label)} <span class="muted" style="font-size:0.66rem">${n}</span></button>`;
+          }).join("")}
+        </div>
+
+        <!-- source file filter chips (from the 8 PDF sources) -->
+        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px">${sourceChipsHtml}</div>
+
+        <!-- study widget: one card at a time with next/back/reveal -->
+        <div id="fn-study-widget" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;min-height:200px">
+          ${fnStudyCard(fnCurr)}
+          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px;padding-top:12px;border-top:1px solid var(--border)">
+            <button type="button" class="btn sm ghost" id="fn-prev" ${state._fnStudyIdx <= 0 ? 'disabled' : ''}>← Back</button>
+            <span style="font-size:0.82rem;color:var(--muted)" id="fn-counter">${state._fnStudyIdx+1} / ${fnTotal}</span>
+            <button type="button" class="btn sm ghost" id="fn-next" ${state._fnStudyIdx+1 >= fnTotal ? 'disabled' : ''}>Next →</button>
+            <button type="button" class="btn success sm" id="fn-reveal">🔍 Reveal answer</button>
+            <button type="button" class="btn sm ghost" id="fn-study-tts">🔊 Listen</button>
+            <button type="button" class="btn sm ghost" id="fn-study-stop" style="display:none">⏹ Stop</button>
+          </div>
+        </div>
 
         <!-- FOOTER -->
         <p class="muted" style="margin-top:16px;font-size:0.7rem;border-top:1px solid var(--border);padding-top:10px">
@@ -4380,43 +4376,54 @@
     if (byId("qa-wrong")) byId("qa-wrong").onclick = () => { state.view = "wrong-dept"; render(); };
     if (byId("qa-weak")) byId("qa-weak").onclick = () => startQuiz("weak", QUIZ_ALL, "learn", false);
 
-    // Flash Notes department chips + actions
+    // Flash Notes: department chips + source chips + study widget controls
     app.querySelectorAll("[data-fn-dept]").forEach(b => {
-      b.onclick = () => { state._fnDept = b.dataset.fnDept; renderMarJune(); };
+      b.onclick = () => { state._fnDept = b.dataset.fnDept; state._fnStudySource = ""; state._fnStudyIdx = 0; renderMarJune(); };
     });
-    const fnDrill = document.getElementById("fn-drill");
-    if (fnDrill) fnDrill.onclick = () => startQuiz(fnDept + "@complete", 50, "learn", false);
-    const fnLesson = document.getElementById("fn-lesson");
-    if (fnLesson) fnLesson.onclick = () => { state.view = "topics"; render(); };
-    const fnCards = document.getElementById("fn-cards");
-    if (fnCards) fnCards.onclick = () => openCards(fnDept);
-
-    // ---- Reading helpers: keyword filter + expand/collapse all ----
-    const fnListEl = document.getElementById("fn-list");
-    const fnCountEl = document.getElementById("fn-count");
-    const fnSearch = document.getElementById("fn-search");
-    if (fnSearch) {
-      let t;
-      fnSearch.oninput = () => {
-        clearTimeout(t);
-        t = setTimeout(() => {
-          const q = fnSearch.value.trim().toLowerCase();
-          const cards = fnListEl ? fnListEl.querySelectorAll(".fn-card") : [];
-          let shown = 0;
-          cards.forEach(c => {
-            const text = (c.textContent || "").toLowerCase();
-            const hit = !q || text.includes(q);
-            c.style.display = hit ? "" : "none";
-            if (hit) shown++;
-          });
-          if (fnCountEl) fnCountEl.textContent = `Showing ${shown} of ${(FN.byDept[fnDept]||[]).length} · ${fnDept}${q ? ` (filtered)` : ""}`;
-        }, 120);
+    app.querySelectorAll("[data-fn-src]").forEach(b => {
+      b.onclick = () => { state._fnStudySource = b.dataset.fnSrc; state._fnStudyIdx = 0; renderMarJune(); };
+    });
+    // Study widget: reveal answer
+    const revealBtn = document.getElementById("fn-reveal");
+    if (revealBtn) revealBtn.onclick = () => {
+      const body = document.querySelector(".fn-study-body");
+      if (body) {
+        body.style.display = "block";
+        revealBtn.textContent = "🔍 Answer shown";
+        revealBtn.disabled = true;
+      }
+    };
+    // Study widget: prev/next
+    const goStudy = (delta) => {
+      if (!fnTotal) return;
+      state._fnStudyIdx = Math.max(0, Math.min(fnTotal - 1, (state._fnStudyIdx || 0) + delta));
+      renderMarJune();
+    };
+    const prevBtn = document.getElementById("fn-prev");
+    if (prevBtn) prevBtn.onclick = () => goStudy(-1);
+    const nextBtn = document.getElementById("fn-next");
+    if (nextBtn) nextBtn.onclick = () => goStudy(+1);
+    // Study widget: TTS for the current card
+    const ttsBtn = document.getElementById("fn-study-tts");
+    const stopBtn = document.getElementById("fn-study-stop");
+    if (ttsBtn && stopBtn) {
+      ttsBtn.onclick = () => {
+        if (!fnCurr) return;
+        const qText = (fnCurr.stem || "").replace(/[✅🟢🟡✳🔵🔁●]/g,"").trim();
+        let aText = "";
+        if (fnCurr.answerLetter && fnCurr.options) {
+          const o = fnCurr.options.find(oo=>oo.startsWith(fnCurr.answerLetter+".")||oo.startsWith(fnCurr.answerLetter.toLowerCase()+"."));
+          aText = o ? o.replace(/^[a-z][).]\s*/i,"").replace(/[✅🟢🟡✳🔵🔁●]/g,"").trim() : "";
+        } else if (!fnCurr.answerLetter) {
+          aText = fnInlineAns(fnCurr);
+        }
+        const fullText = "Question: " + qText + ". Answer: " + aText;
+        ttsSpeak(fullText);
+        ttsBtn.textContent = "🔊 Playing…";
+        stopBtn.style.display = "";
       };
+      stopBtn.onclick = () => { ttsStop(); ttsBtn.textContent = "🔊 Listen"; stopBtn.style.display = "none"; };
     }
-    const fnExp = document.getElementById("fn-expand-all");
-    if (fnExp) fnExp.onclick = () => { (fnListEl ? fnListEl.querySelectorAll(".fn-card") : []).forEach(c => { if (c.style.display !== "none") c.open = true; }); };
-    const fnCol = document.getElementById("fn-collapse-all");
-    if (fnCol) fnCol.onclick = () => { (fnListEl ? fnListEl.querySelectorAll(".fn-card") : []).forEach(c => c.open = false); };
   }
 
   function renderRecalls() {
