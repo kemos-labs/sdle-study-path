@@ -4136,18 +4136,38 @@
       return "";
     };
     const fnCardHtml = fnList.map((it, i) => {
-      const inlineAns = !it.answerLetter ? fnInlineAns(it) : "";
-      const ans = it.answerLetter ? `<span style="color:var(--accent);font-weight:600">${escapeHtml(it.answerLetter)}</span>` : (inlineAns ? `<span style="color:var(--accent);font-weight:600">✅ ${escapeHtml(inlineAns)}</span>` : '<span class="muted" style="font-size:0.7rem">no marked answer</span>');
-      const img = it.needsImage ? ' <span class="badge" style="font-size:0.6rem;background:var(--bg3);color:var(--accent2)">🖼 image</span>' : '';
       const vd = fnVerdict(it.id);
-      const opts = (it.options || []).map(o => `<li>${escapeHtml(o)}</li>`).join("");
-      return `<details class="fn-card" data-fn-idx="${i}" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:6px 10px;margin:4px 0">
-        <summary style="cursor:pointer;font-size:0.82rem;line-height:1.3">${fnMarkerBadge(it.marker)} ${ans} ${vd.badge} ${escapeHtml(it.stem).slice(0,150)}${img}</summary>
-        <div style="margin-top:6px;font-size:0.78rem">
-          ${opts ? `<ul style="margin:4px 0 4px 18px">${opts}</ul>` : ''}
-          ${it.raw ? `<p class="muted" style="font-size:0.72rem;margin:4px 0;border-top:1px dashed var(--border);padding-top:4px">${escapeHtml(it.raw).slice(0,240)}</p>` : ''}
-          ${vd.ev ? `<p style="font-size:0.72rem;margin:4px 0;border-top:1px dashed var(--border);padding-top:4px;color:var(--accent)"><b>Book evidence:</b> ${escapeHtml(vd.ev).slice(0,260)}</p>` : ''}
-          <p class="muted" style="font-size:0.68rem">from: ${escapeHtml((it.sources||[]).join(", ")||"?")} · id ${escapeHtml(it.id)}</p>
+      const cleanStem = (it.stem || "").replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim();
+      const q = escapeHtml(cleanStem).slice(0, 260);
+      // determine the marked answer text (letter+option, or inline)
+      let ansLetter = it.answerLetter;
+      let ansText = "";
+      if (it.options && ansLetter) {
+        const opt = it.options.find(o => o.startsWith(ansLetter + ".") || o.startsWith(ansLetter.toLowerCase() + "."));
+        ansText = opt ? opt.replace(/^[a-z][).]\s*/i, "").replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim() : "";
+      } else if (!ansLetter) {
+        ansText = fnInlineAns(it);
+      }
+      const imgFlag = it.needsImage ? ' <span class="badge" style="font-size:0.58rem;background:var(--bg3);color:var(--accent2)">🖼 image</span>' : '';
+      const optsHtml = (it.options || []).length
+        ? `<ul class="fn-opts">${(it.options || []).map(o => {
+            const isA = o.startsWith((ansLetter || "_") + ".") || o.startsWith((ansLetter || "_").toLowerCase() + ".");
+            return `<li class="${isA ? 'fn-ans' : ''}">${escapeHtml(o)}</li>`;
+          }).join("")}</ul>`
+        : "";
+      const ansLine = (ansLetter || ansText)
+        ? `<p class="fn-card__a"><b>Answer</b> ${ansLetter ? `<span class="fn-letter">${escapeHtml(ansLetter)}</span>` : ''}${ansText ? `<span class="fn-atext">${escapeHtml(ansText)}</span>` : ''}</p>`
+        : '<p class="muted fn-card__a"><b>Answer</b> <span class="muted">no marked answer — see stem</span></p>';
+      return `<details class="fn-card" data-fn-idx="${i}">
+        <summary class="fn-card__q">
+          <span class="fn-card__stem">${q}${imgFlag}</span>
+          <span class="fn-card__status">${vd.badge}</span>
+        </summary>
+        <div class="fn-card__body">
+          ${ansLine}
+          ${optsHtml}
+          ${vd.ev ? `<p class="fn-card__ev"><b>📖 Why (book):</b> ${escapeHtml(vd.ev).slice(0, 320)}</p>` : ''}
+          ${(it.sources || []).length ? `<p class="fn-card__src">from: ${escapeHtml((it.sources || []).join(", "))}</p>` : ''}
         </div>
       </details>`;
     }).join("");
@@ -4167,7 +4187,7 @@
     const dayPoolCount = poolN(poolKey);
 
     app.innerHTML = `
-      <div class="simple-hub">
+      <div class="simple-hub fn-section">
         <!-- HEADER ROW -->
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
           <h1 style="margin:0;font-size:1.4rem">📚 Flash Notes <span style="font-size:0.8rem;color:var(--muted);font-weight:400">النوطات السريعة</span></h1>
@@ -4180,115 +4200,131 @@
         <!-- SOURCE PILLS (dynamic from FLASH_NOTES.sources) -->
         <div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px" id="fn-source-pills"></div>
 
-        <hr style="margin:12px 0;border-color:var(--border)">
+        <!-- ============ HERO: READING SECTION ============ -->
+        <h2 style="font-size:1.1rem;margin:14px 0 2px;color:var(--text)">🗒️ Read the recall notes</h2>
+        <p class="fn-intro">${FN.total || 0} community recall items, deduped from 8 PDFs. Pick a department, then tap any card to see the <b>answer</b> and the <b>📖 book evidence</b> that supports it. <span class="muted">Answers are student marks (✅/🟢/🟡) — only the 📖 badge means a textbook line was found.</span></p>
 
-        <!-- DAY PILLS -->
-        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:12px">
-          ${dayPlans.map(p => {
-            const active = day === p.id;
-            return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-plan-day="${p.id}" style="padding:4px 12px;font-size:0.8rem">${escapeHtml(p.label)}</button>`;
-          }).join("")}
-        </div>
-
-        <!-- ACTIVE DAY CARD -->
-        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:16px">
-          <div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:8px">
-            <div>
-              <strong style="font-size:1.05rem;color:var(--accent)">Day ${plan.id.replace('day','')} — ${escapeHtml(plan.title)}</strong>
-              <div class="muted" style="font-size:0.85rem;margin-top:4px">${escapeHtml(plan.desc)}</div>
-            </div>
-            <span style="color:var(--accent2);font-weight:500;font-size:0.85rem">${dayPoolCount} Qs</span>
-          </div>
-          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
-            <button type="button" class="btn success" id="qz-${day}-goal">▶ Start ${plan.goal} Qs</button>
-            <button type="button" class="btn" id="qz-${day}-all">All ${dayPoolCount}</button>
-            <button type="button" class="btn ghost" id="qz-${day}-50">50 Rev</button>
-            <button type="button" class="btn ghost" id="plan-flash-today">🃏 Cards</button>
-          </div>
-        </div>
-
-        <!-- 7-DAY OVERVIEW (collapsible) -->
-        <details style="margin-bottom:16px;font-size:0.85rem">
-          <summary style="cursor:pointer;font-weight:600;color:var(--muted)">📋 7-day overview</summary>
-          <table class="simple-table" style="width:100%;margin-top:8px">
-            <thead><tr><th>#</th><th>Topic</th><th>Qs</th><th>Goal</th></tr></thead>
-            <tbody>
-              ${dayPlans.map(p => {
-                const cnt = p.topics === "all" ? totalAll6 : poolN(p.topics + "@complete");
-                const active = day === p.id;
-                return `<tr style="${active ? 'background:var(--bg3);border-left:3px solid var(--accent)' : ''}">
-                  <td>${p.id.replace('day','')}</td>
-                  <td>${escapeHtml(p.title)}</td>
-                  <td>${cnt}</td>
-                  <td>${p.goal}</td>
-                </tr>`;
-              }).join("")}
-            </tbody>
-          </table>
-        </details>
-
-        <hr style="margin:12px 0;border-color:var(--border)">
-
-        <!-- DEPARTMENTS -->
-        <h2 style="font-size:1rem;margin-bottom:2px;color:var(--text)">📊 Departments</h2>
-        <p class="muted" style="font-size:0.8rem;margin-bottom:8px">${totalAll6} MCQs from all 6 PDFs</p>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px">
-          ${DEPTS.map(d => {
-            const n = deptCounts[d.id] || 0;
-            return `
-              <div data-dept-quiz="${d.id}" data-n="${n}" style="display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:8px 12px;cursor:pointer">
-                <span style="font-size:0.85rem;color:var(--text)">${escapeHtml(d.label)}</span>
-                <span style="display:flex;align-items:center;gap:6px">
-                  <span style="color:var(--accent2);font-weight:500;font-size:0.8rem">${n}</span>
-                  <span style="color:var(--accent);font-size:0.9rem">▶</span>
-                </span>
-              </div>`;
-          }).join("")}
-          <!-- All PDFs row -->
-          <div data-dept-quiz="all" data-n="${totalAll6}" style="display:flex;align-items:center;justify-content:space-between;background:var(--bg3);border:2px solid var(--accent);border-radius:var(--radius);padding:8px 12px;cursor:pointer">
-            <span style="font-size:0.85rem;font-weight:600;color:var(--accent)">🎯 All 6 PDFs mixed</span>
-            <span style="display:flex;align-items:center;gap:6px">
-              <span style="color:var(--accent);font-weight:500;font-size:0.8rem">${totalAll6}</span>
-              <span style="color:var(--accent);font-size:0.9rem">▶</span>
-            </span>
-          </div>
-        </div>
-
-        <hr style="margin:12px 0;border-color:var(--border)">
-
-        <!-- QUICK ACTIONS -->
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <button type="button" class="btn success" id="qa-mixed-50">🎲 Mixed 50</button>
-          <button type="button" class="btn" id="qa-mixed-100">🎲 Mixed 100</button>
-          <button type="button" class="btn" id="qa-flash-all">🃏 All Cards</button>
-          <button type="button" class="btn ghost" id="qa-wrong">📕 Wrong Book</button>
-          <button type="button" class="btn ghost" id="qa-weak">🔴 Weak Areas</button>
-          <button type="button" class="btn ghost" id="plan-lesson-today">📘 Today's Lesson</button>
-          <button type="button" class="btn ghost" id="plan-notes-all">📝 All Notes</button>
-        </div>
-
-        <!-- FLASH NOTES (RECALL STEMS FROM THE 6 PDFs) -->
-        <hr style="margin:12px 0;border-color:var(--border)">
-        <h2 style="font-size:1rem;margin-bottom:2px;color:var(--text)">🗒️ Flash Notes <span class="muted" style="font-size:0.72rem">— recall stems from the 6 PDFs</span></h2>
-        <p class="muted" style="font-size:0.78rem;margin-bottom:6px">${FN.total || 0} recall items parsed & deduped from the 8 community PDFs. Answers are community marks (✅/🟢/🟡) — <b>not</b> official. Each card with a structured answer now carries a <b>📖 book-supported</b> / <b>🔍 needs review</b> badge from the automated Phase-3 textbook check (${(window.FLASH_NOTES_VERDICTS||{}).stats ? `supported ${(window.FLASH_NOTES_VERDICTS).stats.supported} · needs review ${(window.FLASH_NOTES_VERDICTS).stats.needs_review}` : 'pending'}). Graded quizzes use only book_verified MCQs.</p>
-        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px">
+        <!-- dept filter chips -->
+        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:6px">
           ${FN_DEPTS.map(d => {
             const n = (FN.byDept[d.id] || []).length;
             const active = fnDept === d.id;
-            return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-fn-dept="${d.id}" style="padding:3px 10px;font-size:0.74rem">${escapeHtml(d.label)} <span class="muted" style="font-size:0.66rem">${n}</span></button>`;
+            return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-fn-dept="${d.id}" style="padding:4px 11px;font-size:0.78rem">${escapeHtml(d.label)} <span class="muted" style="font-size:0.66rem">${n}</span></button>`;
           }).join("")}
         </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;flex-wrap:wrap;gap:6px">
-          <span class="muted" style="font-size:0.74rem">Showing ${fnList.length} of ${(FN.byDept[fnDept]||[]).length} · ${escapeHtml(fnDept)}</span>
-          <div style="display:flex;gap:6px;flex-wrap:wrap">
-            <button type="button" class="btn sm" id="fn-drill">▶ Drill verified ${fnDept} MCQs</button>
+
+        <div class="fn-legend">
+          <span class="badge green" style="font-size:0.58rem">📖 book-supported</span>
+          <span class="badge" style="font-size:0.58rem;background:var(--bg3);color:var(--muted)">🔍 needs review</span>
+          <span class="badge" style="font-size:0.58rem;background:var(--bg3);color:var(--accent2)">🖼 image card</span>
+          <span>community answers · not official SCFHS keys</span>
+        </div>
+
+        <!-- toolbar: search + expand/collapse + drill/lesson/cards -->
+        <div class="fn-toolbar">
+          <div class="fn-toolbar__left">
+            <input class="fn-search" id="fn-search" type="search" placeholder="🔍 Filter notes by keyword…" autocomplete="off">
+            <button type="button" class="btn sm ghost" id="fn-expand-all">Expand all</button>
+            <button type="button" class="btn sm ghost" id="fn-collapse-all">Collapse</button>
+          </div>
+          <div class="fn-toolbar__right">
+            <span class="muted" id="fn-count" style="font-size:0.74rem">Showing ${fnList.length} of ${(FN.byDept[fnDept]||[]).length} · ${escapeHtml(fnDept)}</span>
+            <button type="button" class="btn sm" id="fn-drill">▶ Drill verified ${escapeHtml(fnDept)} MCQs</button>
             <button type="button" class="btn sm ghost" id="fn-lesson">📘 ${escapeHtml(fnDept)} lesson</button>
             <button type="button" class="btn sm ghost" id="fn-cards">🃏 Cards</button>
           </div>
         </div>
-        <div id="fn-list" style="max-height:520px;overflow:auto;border:1px solid var(--border);border-radius:var(--radius);padding:6px;background:var(--bg1)">
-          ${fnCardHtml || '<p class="muted" style="padding:12px;font-size:0.8rem">No recall items for this department.</p>'}
+
+        <!-- the reading list (spacious, no cramped box) -->
+        <div id="fn-list" class="fn-list">
+          ${fnCardHtml || '<p class="fn-empty">No recall items for this department.</p>'}
         </div>
+
+        <!-- ============ CRAM & QUIZ TOOLS (collapsed) ============ -->
+        <details class="fn-collapsible">
+          <summary>🎯 Cram &amp; quiz tools — day plan, departments, quick drills</summary>
+          <div>
+            <!-- DAY PILLS -->
+            <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:12px;margin-top:6px">
+              ${dayPlans.map(p => {
+                const active = day === p.id;
+                return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-plan-day="${p.id}" style="padding:4px 12px;font-size:0.8rem">${escapeHtml(p.label)}</button>`;
+              }).join("")}
+            </div>
+
+            <!-- ACTIVE DAY CARD -->
+            <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:16px">
+              <div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:8px">
+                <div>
+                  <strong style="font-size:1.05rem;color:var(--accent)">Day ${plan.id.replace('day','')} — ${escapeHtml(plan.title)}</strong>
+                  <div class="muted" style="font-size:0.85rem;margin-top:4px">${escapeHtml(plan.desc)}</div>
+                </div>
+                <span style="color:var(--accent2);font-weight:500;font-size:0.85rem">${dayPoolCount} Qs</span>
+              </div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+                <button type="button" class="btn success" id="qz-${day}-goal">▶ Start ${plan.goal} Qs</button>
+                <button type="button" class="btn" id="qz-${day}-all">All ${dayPoolCount}</button>
+                <button type="button" class="btn ghost" id="qz-${day}-50">50 Rev</button>
+                <button type="button" class="btn ghost" id="plan-flash-today">🃏 Cards</button>
+              </div>
+            </div>
+
+            <!-- 7-DAY OVERVIEW (collapsible) -->
+            <details style="margin-bottom:16px;font-size:0.85rem">
+              <summary style="cursor:pointer;font-weight:600;color:var(--muted)">📋 7-day overview</summary>
+              <table class="simple-table" style="width:100%;margin-top:8px">
+                <thead><tr><th>#</th><th>Topic</th><th>Qs</th><th>Goal</th></tr></thead>
+                <tbody>
+                  ${dayPlans.map(p => {
+                    const cnt = p.topics === "all" ? totalAll6 : poolN(p.topics + "@complete");
+                    const active = day === p.id;
+                    return `<tr style="${active ? 'background:var(--bg3);border-left:3px solid var(--accent)' : ''}">
+                      <td>${p.id.replace('day','')}</td>
+                      <td>${escapeHtml(p.title)}</td>
+                      <td>${cnt}</td>
+                      <td>${p.goal}</td>
+                    </tr>`;
+                  }).join("")}
+                </tbody>
+              </table>
+            </details>
+
+            <h2 style="font-size:1rem;margin-bottom:2px;color:var(--text)">📊 Departments</h2>
+            <p class="muted" style="font-size:0.8rem;margin-bottom:8px">${totalAll6} MCQs from all 6 PDFs</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px">
+              ${DEPTS.map(d => {
+                const n = deptCounts[d.id] || 0;
+                return `
+                  <div data-dept-quiz="${d.id}" data-n="${n}" style="display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:8px 12px;cursor:pointer">
+                    <span style="font-size:0.85rem;color:var(--text)">${escapeHtml(d.label)}</span>
+                    <span style="display:flex;align-items:center;gap:6px">
+                      <span style="color:var(--accent2);font-weight:500;font-size:0.8rem">${n}</span>
+                      <span style="color:var(--accent);font-size:0.9rem">▶</span>
+                    </span>
+                  </div>`;
+              }).join("")}
+              <!-- All PDFs row -->
+              <div data-dept-quiz="all" data-n="${totalAll6}" style="display:flex;align-items:center;justify-content:space-between;background:var(--bg3);border:2px solid var(--accent);border-radius:var(--radius);padding:8px 12px;cursor:pointer">
+                <span style="font-size:0.85rem;font-weight:600;color:var(--accent)">🎯 All 6 PDFs mixed</span>
+                <span style="display:flex;align-items:center;gap:6px">
+                  <span style="color:var(--accent);font-weight:500;font-size:0.8rem">${totalAll6}</span>
+                  <span style="color:var(--accent);font-size:0.9rem">▶</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- QUICK ACTIONS -->
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
+              <button type="button" class="btn success" id="qa-mixed-50">🎲 Mixed 50</button>
+              <button type="button" class="btn" id="qa-mixed-100">🎲 Mixed 100</button>
+              <button type="button" class="btn" id="qa-flash-all">🃏 All Cards</button>
+              <button type="button" class="btn ghost" id="qa-wrong">📕 Wrong Book</button>
+              <button type="button" class="btn ghost" id="qa-weak">🔴 Weak Areas</button>
+              <button type="button" class="btn ghost" id="plan-lesson-today">📘 Today's Lesson</button>
+              <button type="button" class="btn ghost" id="plan-notes-all">📝 All Notes</button>
+            </div>
+          </div>
+        </details>
 
         <!-- FOOTER -->
         <p class="muted" style="margin-top:16px;font-size:0.7rem;border-top:1px solid var(--border);padding-top:10px">
@@ -4354,6 +4390,33 @@
     if (fnLesson) fnLesson.onclick = () => { state.view = "topics"; render(); };
     const fnCards = document.getElementById("fn-cards");
     if (fnCards) fnCards.onclick = () => openCards(fnDept);
+
+    // ---- Reading helpers: keyword filter + expand/collapse all ----
+    const fnListEl = document.getElementById("fn-list");
+    const fnCountEl = document.getElementById("fn-count");
+    const fnSearch = document.getElementById("fn-search");
+    if (fnSearch) {
+      let t;
+      fnSearch.oninput = () => {
+        clearTimeout(t);
+        t = setTimeout(() => {
+          const q = fnSearch.value.trim().toLowerCase();
+          const cards = fnListEl ? fnListEl.querySelectorAll(".fn-card") : [];
+          let shown = 0;
+          cards.forEach(c => {
+            const text = (c.textContent || "").toLowerCase();
+            const hit = !q || text.includes(q);
+            c.style.display = hit ? "" : "none";
+            if (hit) shown++;
+          });
+          if (fnCountEl) fnCountEl.textContent = `Showing ${shown} of ${(FN.byDept[fnDept]||[]).length} · ${fnDept}${q ? ` (filtered)` : ""}`;
+        }, 120);
+      };
+    }
+    const fnExp = document.getElementById("fn-expand-all");
+    if (fnExp) fnExp.onclick = () => { (fnListEl ? fnListEl.querySelectorAll(".fn-card") : []).forEach(c => { if (c.style.display !== "none") c.open = true; }); };
+    const fnCol = document.getElementById("fn-collapse-all");
+    if (fnCol) fnCol.onclick = () => { (fnListEl ? fnListEl.querySelectorAll(".fn-card") : []).forEach(c => c.open = false); };
   }
 
   function renderRecalls() {
