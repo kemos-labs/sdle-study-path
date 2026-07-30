@@ -4103,27 +4103,27 @@
         }
         const pct = total > 0 ? Math.round((dv + dr) / (dv + dr + du) * 100) : 0;
         const icon = pct >= 80 ? "🟢" : pct >= 50 ? "🟡" : "🔴";
-        deptRows.push(\`<tr style="font-size:0.68rem"><td style="padding:2px 6px">\${icon} \${dept}</td><td style="text-align:right;padding:2px 6px">\${dv}✅</td><td style="text-align:right;padding:2px 6px">\${dr}📝</td><td style="text-align:right;padding:2px 6px">\${du}❓</td><td style="text-align:right;padding:2px 6px;font-weight:600">\${pct}%</td></tr>\`);
+        deptRows.push(`<tr style="font-size:0.68rem"><td style="padding:2px 6px">${icon} ${dept}</td><td style="text-align:right;padding:2px 6px">${dv}✅</td><td style="text-align:right;padding:2px 6px">${dr}📝</td><td style="text-align:right;padding:2px 6px">${du}❓</td><td style="text-align:right;padding:2px 6px;font-weight:600">${pct}%</td></tr>`);
       }
       const overall = total > 0 ? Math.round((verified + ref) / total * 100) : 0;
       const issues = [];
-      if (missingFields > 0) issues.push(\`❌ \${missingFields} items missing id/stem\`);
-      if (dupes > 0) issues.push(\`❌ \${dupes} duplicate IDs\`);
-      if (noRef > 0) issues.push(\`❌ \${noRef} ref items missing ref text\`);
-      if (noIdx > 0) issues.push(\`⚠️ \${noIdx} verified MCQs missing answerIdx\`);
+      if (missingFields > 0) issues.push(`❌ ${missingFields} items missing id/stem`);
+      if (dupes > 0) issues.push(`❌ ${dupes} duplicate IDs`);
+      if (noRef > 0) issues.push(`❌ ${noRef} ref items missing ref text`);
+      if (noIdx > 0) issues.push(`⚠️ ${noIdx} verified MCQs missing answerIdx`);
       const statusLine = issues.length === 0
-        ? \`<span style="color:#1b7a3d;font-weight:600">✅ CLEAN — \${overall}% resolved (\${verified} verified + \${ref} ref + \${unknown} unknown)</span>\`
-        : \`<span style="color:#e63946;font-weight:600">❌ \${issues.length} issue(s) found</span>\`;
-      panel.innerHTML = \`
+        ? `<span style="color:#1b7a3d;font-weight:600">✅ CLEAN — ${overall}% resolved (${verified} verified + ${ref} ref + ${unknown} unknown)</span>`
+        : `<span style="color:#e63946;font-weight:600">❌ ${issues.length} issue(s) found</span>`;
+      panel.innerHTML = `
         <table style="width:100%;border-collapse:collapse;margin-bottom:6px">
           <thead><tr style="border-bottom:1px solid var(--border);color:var(--text)"><th style="text-align:left;padding:2px 6px">Department</th><th style="text-align:right;padding:2px 6px">✅</th><th style="text-align:right;padding:2px 6px">📝</th><th style="text-align:right;padding:2px 6px">❓</th><th style="text-align:right;padding:2px 6px">Resolved</th></tr></thead>
-          <tbody>\${deptRows.join("")}</tbody>
+          <tbody>${deptRows.join("")}</tbody>
         </table>
         <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:4px;padding-top:6px;border-top:1px solid var(--border)">
-          \${statusLine}
+          ${statusLine}
           <button type="button" class="btn sm ghost" id="fn-audit-close" style="padding:2px 8px;font-size:0.65rem;margin-left:auto">✕ Close</button>
         </div>
-      \`;
+      `;
       const closeBtn = document.getElementById("fn-audit-close");
       if (closeBtn) closeBtn.onclick = () => { panel.style.display = "none"; };
     }, 80);
