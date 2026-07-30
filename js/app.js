@@ -1447,12 +1447,13 @@
     "mcqs",
     "notes",
     "marjune",
+    "recentqa",
     "progress",
     "feedback",
     "more",
   ];
-  /** Simple chrome: Today · Topics · تدرب · Notes · Progress · Feedback */
-  const SIMPLE_PRIMARY = ["today", "topics", "practice", "notes", "marjune", "progress", "feedback"];
+  /** Simple chrome: Today · Topics · تدرب · Recent Q&A · Notes · Flash · Progress · Feedback */
+  const SIMPLE_PRIMARY = ["today", "topics", "practice", "recentqa", "notes", "marjune", "progress", "feedback"];
   /** Public source repo (docs only — feedback does NOT open GitHub). */
   const REPO_URL = "https://github.com/kemos-labs/sdle-study-path";
   /** External ChatGPT custom GPT — academic tutor only (not SCFHS, not clinical care). */
@@ -1581,8 +1582,9 @@
         <button type="button" data-view="today" title="Today's lesson">Today</button>
         <button type="button" data-view="topics" title="Micro-lessons by topic">Topics</button>
         <button type="button" data-view="practice" title="MCQs · Flashcards · Mock">تدرب</button>
+        <button type="button" data-view="recentqa" title="Recent textbook-verified Q&A">Recent Q&A</button>
         <button type="button" data-view="notes" title="Review all notes">Notes</button>
-        <button type="button" data-view="marjune" title="Flash Notes — جميع المواد">Flash Notes</button>
+        <button type="button" data-view="marjune" title="Flash Notes — جميع المواد">📚 Flash</button>
         <button type="button" data-view="progress" title="Scores & settings">Progress</button>
         <button type="button" data-view="feedback" title="Send feedback">Feedback</button>`;
     } else {
@@ -1593,7 +1595,8 @@
         <button type="button" data-view="always" title="Always-comes free points">Always</button>
         <button type="button" data-view="practice" title="تدرب">تدرب</button>
         <button type="button" data-view="mcqs" title="MCQs hub">MCQs</button>
-        <button type="button" data-view="marjune" title="Flash Notes — جميع المواد">Flash Notes</button>
+        <button type="button" data-view="recentqa" title="Recent Q&A">Recent Q&A</button>
+        <button type="button" data-view="marjune" title="Flash Notes — جميع المواد">📚 Flash</button>
         <button type="button" data-view="notes" title="Study notes by department">Notes</button>
         <button type="button" data-view="progress" title="Progress">Progress</button>
         <button type="button" data-view="feedback" title="Send feedback — no login">Feedback</button>
@@ -1780,7 +1783,7 @@
   function render() {
     updateTop();
     /* New user: always ask prep time (Arabic) before any other screen */
-    if (!hasChosenPlan() && state.view !== "quiz" && state.view !== "cards" && state.view !== "marjune" && state.view !== "topics" && state.view !== "micro-lesson" && state.view !== "wrong-dept") {
+    if (!hasChosenPlan() && state.view !== "quiz" && state.view !== "cards" && state.view !== "marjune" && state.view !== "recentqa" && state.view !== "topics" && state.view !== "micro-lesson" && state.view !== "wrong-dept") {
       state.view = "today";
       renderToday();
       return;
@@ -1794,6 +1797,7 @@
     else if (state.view === "recalls") renderRecalls();
     else if (state.view === "notes") renderNotes();
     else if (state.view === "marjune") renderMarJune();
+    else if (state.view === "recentqa") renderRecentQa();
     else if (state.view === "progress") renderProgress();
     else if (state.view === "feedback") renderFeedback();
     else if (state.view === "topics") renderTopics();
@@ -2056,6 +2060,7 @@
           <p>${escapeHtml(T.summary || "(no summary)")}</p>
           ${kpHtml}
         </div>
+        ${window.getBookRefsHTML ? '<details style="margin-top:8px"><summary style="cursor:pointer;font-weight:600;color:var(--accent)">📚 Textbook references</summary><div style="margin-top:4px">'+window.getBookRefsHTML(T.id)+'</div></details>' : ''}
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin:12px 0">
           <button type="button" class="btn success" id="ml-drill">▶ Drill ${Math.min(50,vN||50)} verified MCQs</button>
           <button type="button" class="btn" id="ml-drill-all">All ${vN}</button>
@@ -3670,7 +3675,6 @@
     if (!t) return true;
     if (/community bank/i.test(t)) return true;
     if (/extracted from/i.test(t)) return true;
-    if (/أبطال/.test(t)) return true;
     if (/verify if no textbook/i.test(t)) return true;
     if (t.length < 12) return true;
     return false;
@@ -3890,21 +3894,20 @@
             .map((r) => escapeHtml(r.split(",")[0] || r))
             .join(" · ")}</div>`
         : "";
+    const isFlashNote = item && (item.source === "flash_notes" || item._fnRecall !== undefined);
     const bookHtml =
-      !placeholder && typeof window.bookRefsHtml === "function"
+      !placeholder && !isFlashNote && typeof window.bookRefsHtml === "function"
         ? window.bookRefsHtml(item, { limit: 2 })
         : "";
     const whyBody = placeholder
-      ? "No short hinge stored — use the options + Ask SDLEGPT, then verify in a textbook."
+      ? "Answer not yet verified against textbook — cross-check with official reference."
       : body;
     const footer = placeholder
-      ? `<div class="src-line why-footer">Community bank item — treat letter as provisional until you verify.</div>`
+      ? ``
       : "";
     const verifiedBadge = !placeholder && item.book_verified === true
       ? `<span class="badge green" title="Textbook-verified answer">📖 Verified</span>`
-      : !placeholder && item.book_verified !== true
-        ? `<span class="badge yellow" title="Awaiting textbook verification — may be community sourced">⏳ Unverified</span>`
-        : "";
+      : `<span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--muted)" title="Community source — not yet textbook-checked">📝 community</span>`;
     return `<div class="explain"><strong>Why:</strong> ${escapeHtml(whyBody)} ${verifiedBadge}</div>
       ${footer}
       ${scfhsShort}${bookHtml}`;
@@ -4129,8 +4132,167 @@
     }, 80);
   }
 
+  function renderRecentQa() {
+    const QA = window.RECENT_QA || { items: [], total: 0 };
+    const items = QA.items || [];
+    if (!state.qaFilter) state.qaFilter = { dept: "all", set: "all", q: "" };
+    const filt = state.qaFilter;
+
+    let filtered = items;
+    if (filt.dept && filt.dept !== "all") {
+      filtered = filtered.filter(i => i.dept === filt.dept);
+    }
+    if (filt.set && filt.set !== "all") {
+      filtered = filtered.filter(i => i.set === filt.set);
+    }
+    if (filt.q) {
+      const qq = filt.q.toLowerCase();
+      filtered = filtered.filter(i =>
+        i.stem.toLowerCase().includes(qq) ||
+        (i.answerText || "").toLowerCase().includes(qq) ||
+        (i.reference || "").toLowerCase().includes(qq) ||
+        (i.why || "").toLowerCase().includes(qq)
+      );
+    }
+
+    const deptOpts = [
+      { id: "all", label: "All" },
+      { id: "operative", label: "Operative" },
+      { id: "fixed", label: "Fixed" },
+      { id: "endo", label: "Endo" },
+      { id: "perio", label: "Perio" },
+      { id: "oms", label: "OMS" },
+      { id: "ortho_pedo", label: "Ortho/Pedo" },
+      { id: "rpd", label: "RPD" },
+      { id: "mixed", label: "Mixed" },
+    ];
+    const setOpts = [
+      { id: "all", label: "All Sets" },
+      { id: "A", label: "Set A — Open recall" },
+      { id: "B", label: "Set B — MCQs" },
+      { id: "C", label: "Set C — MCQs" },
+      { id: "D", label: "Set D — MCQs" },
+      { id: "E", label: "Set E — MCQs" },
+    ];
+
+    const withOptions = filtered.filter(i => i.options && i.options.length > 0 && i.options[0]);
+    const withoutOptions = filtered.filter(i => !i.options || !i.options.length || !i.options[0]);
+
+    function renderQaItem(item) {
+      const isMcq = item.options && item.options.length && item.options[0];
+      if (isMcq) {
+        const optHtml = item.options.filter(o => o).map((o, idx) => {
+          const isCorrect = idx === item.answer;
+          return `<li style="padding:6px 10px;border-radius:6px;background:var(--bg1);border:1px solid var(--border);font-size:0.82rem;margin-bottom:4px${isCorrect ? ';background:rgba(27,122,61,.14);border-color:#1b7a3d;font-weight:600':''}">${String.fromCharCode(65 + idx)}. ${escapeHtml(o)}${isCorrect ? ' ✓':''}</li>`;
+        }).join("");
+        return `<article class="simple-note note-full" style="margin-bottom:12px">
+          <div class="simple-note-meta">
+            <span class="simple-note-tag">${escapeHtml(item.dept)}</span>
+            <span class="muted note-src">Set ${escapeHtml(item.set)} · Q${item.qnum}</span>
+          </div>
+          <p class="note-stem"><strong>Q:</strong> ${escapeHtml(item.stem)}</p>
+          <ul style="list-style:none;padding:0;margin:8px 0">${optHtml}</ul>
+          <p style="margin:8px 0 4px;color:var(--accent);font-weight:600">Answer: ${escapeHtml(item.answerText || "")}</p>
+          <p style="margin:6px 0;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;font-size:0.82rem"><b>📖 Why:</b> ${escapeHtml(item.why || "")}</p>
+          <p class="muted" style="font-size:0.72rem;margin-top:4px">📚 ${escapeHtml(item.reference || "")}</p>
+        </article>`;
+      } else {
+        return `<article class="simple-note note-full" style="margin-bottom:12px">
+          <div class="simple-note-meta">
+            <span class="simple-note-tag">${escapeHtml(item.dept)}</span>
+            <span class="muted note-src">Set ${escapeHtml(item.set)} · Q${item.qnum}</span>
+          </div>
+          <p class="note-stem"><strong>Q:</strong> ${escapeHtml(item.stem)}</p>
+          <p style="margin:8px 0;padding:10px 12px;background:var(--bg2);border-radius:var(--radius);color:var(--accent2)"><b>Answer:</b> ${escapeHtml(item.answer || "")}</p>
+          <p style="margin:6px 0;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;font-size:0.82rem"><b>📖 Why:</b> ${escapeHtml(item.why || "")}</p>
+          <p class="muted" style="font-size:0.72rem;margin-top:4px">📚 ${escapeHtml(item.reference || "")}</p>
+        </article>`;
+      }
+    }
+
+    app.innerHTML = `
+      <div class="simple-hub">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+          <h1 style="margin:0;font-size:1.4rem">📖 Recent Q&A <span style="font-size:0.8rem;color:var(--muted);font-weight:400">أسئلة وأجوبة جديدة</span></h1>
+          <span style="color:var(--accent2);font-weight:600">${items.length} items</span>
+        </div>
+        <p class="simple-lead" style="font-size:0.85rem">62 Q&A — textbook-verified from official SDLE references. Each answer includes the reference and clinical reasoning. <b>Community leads → book-confirmed.</b></p>
+        <div style="padding:8px 12px;background:rgba(27,122,61,.1);border:1px solid rgba(27,122,61,.3);border-radius:var(--radius);font-size:0.78rem;margin-bottom:12px">
+          ✅ All items verified against: Contemporary Fixed Prosthodontics · Sturdevant's Operative Dentistry · Cohen's Pathways of the Pulp · Contemporary OMS · McDonald & Avery Pediatric Dentistry · Carranza's Periodontology · Dental Materials & Their Selection
+        </div>
+
+        <!-- Department filters -->
+        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px">
+          ${deptOpts.map(d => {
+            const active = (filt.dept || "all") === d.id;
+            const cnt = d.id === "all" ? items.length : (QA.byDept && QA.byDept[d.id] ? QA.byDept[d.id].length : items.filter(i => i.dept === d.id).length);
+            return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-qa-dept="${d.id}" style="padding:3px 10px;font-size:0.74rem">${escapeHtml(d.label)} <span class="muted" style="font-size:0.66rem">${cnt}</span></button>`;
+          }).join("")}
+        </div>
+
+        <!-- Set filters -->
+        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px">
+          ${setOpts.map(s => {
+            const active = (filt.set || "all") === s.id;
+            const cnt = s.id === "all" ? items.length : items.filter(i => i.set === s.id).length;
+            return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-qa-set="${s.id}" style="padding:2px 8px;font-size:0.7rem">${escapeHtml(s.label)} <span class="muted">${cnt}</span></button>`;
+          }).join("")}
+        </div>
+
+        <!-- Search -->
+        <input type="search" id="qa-search" class="simple-search" placeholder="Search questions, answers, references…" value="${escapeHtml(filt.q || "")}" style="margin-bottom:8px" />
+
+        <p class="muted simple-count">Showing ${filtered.length} of ${items.length}</p>
+
+        <!-- MCQ items first -->
+        ${withOptions.length ? `<h2 style="font-size:1rem;margin:12px 0 8px;color:var(--accent)">🎯 Multiple Choice Questions</h2>` : ""}
+        <div class="simple-note-list">
+          ${withOptions.length ? withOptions.map(renderQaItem).join("") : ""}
+        </div>
+
+        <!-- Open-ended items -->
+        ${withoutOptions.length ? `<h2 style="font-size:1rem;margin:12px 0 8px;color:var(--accent)">📝 Open-ended Recall Questions</h2>` : ""}
+        <div class="simple-note-list">
+          ${withoutOptions.length ? withoutOptions.map(renderQaItem).join("") : ""}
+        </div>
+
+        ${!filtered.length ? `<p class="muted" style="padding:20px 0;text-align:center">No items match this filter.</p>` : ""}
+
+        <p class="muted" style="margin-top:16px;font-size:0.7rem;border-top:1px solid var(--border);padding-top:10px">
+          Source: SDLE_QA_Answered.docx — 62 Q&A grounded in official textbooks with references + reasoning. All answers verified against the gold-standard references.
+        </p>
+      </div>
+    `;
+
+    // Bind dept filters
+    app.querySelectorAll("[data-qa-dept]").forEach(b => {
+      b.onclick = () => {
+        state.qaFilter = Object.assign({}, state.qaFilter || {}, { dept: b.dataset.qaDept });
+        renderRecentQa();
+      };
+    });
+    // Bind set filters
+    app.querySelectorAll("[data-qa-set]").forEach(b => {
+      b.onclick = () => {
+        state.qaFilter = Object.assign({}, state.qaFilter || {}, { set: b.dataset.qaSet });
+        renderRecentQa();
+      };
+    });
+    // Search
+    const search = $("#qa-search");
+    if (search) {
+      let t = null;
+      search.oninput = () => {
+        clearTimeout(t);
+        t = setTimeout(() => {
+          state.qaFilter = Object.assign({}, state.qaFilter || {}, { q: search.value.trim() });
+          renderRecentQa();
+        }, 200);
+      };
+    }
+  }
+
   function renderMarJune() {
-    const totalAll6 = poolN("complete");
     const totalCards = ensureFlashcards().length;
 
     const DEPTS = [
@@ -4148,11 +4310,15 @@
     if (!state._planMj) state._planMj = "day1";
     const day = state._planMj || "day1";
 
-    const deptCounts = {};
-    DEPTS.forEach(d => { deptCounts[d.id] = poolN(d.id + "@complete"); });
-
-    // ---- Flash Notes (recall stems from the 6 PDFs, parsed by build_flash_notes.py) ----
+    // Use FLASH_NOTES total for display (not bank pool count)
     const FN = (window.FLASH_NOTES) || { byDept: {}, total: 0, markerStats: {}, sources: [], markerLegend: {} };
+    const totalAll6 = FN.total || poolN("complete");
+    const deptCounts = {};
+    DEPTS.forEach(d => { 
+      deptCounts[d.id] = (FN.byDept[d.id] || []).length || poolN(d.id + "@complete"); 
+    });
+
+    // ---- Flash Notes (recall stems from PDFs) ----
     const FN_DEPTS = DEPTS.filter(d => (FN.byDept[d.id] || []).length);
     if (!state._fnDept || !(FN.byDept[state._fnDept] || []).length) {
       state._fnDept = FN_DEPTS[0] ? FN_DEPTS[0].id : "oms";
@@ -4164,7 +4330,7 @@
     if (fnSrc) {
       fnListRaw = fnListRaw.filter(it => (it.sources || []).some(s => s.label === fnSrc || s.file === fnSrc));
     }
-    const fnList = fnListRaw.slice(0, 200);
+    const fnList = fnListRaw;
     if (!state._fnStudyIdx || state._fnStudyIdx >= fnList.length) state._fnStudyIdx = 0;
     const fnTotal = fnList.length;
     const fnCurr = fnList[state._fnStudyIdx] || null;
@@ -4176,20 +4342,25 @@
         const tag = s.recent ? ' ✨' : '';
         return `<button type="button" class="btn sm ${active ? 'success' : 'ghost'}" data-fn-src="${escapeHtml(s.file)}" style="padding:3px 9px;font-size:0.7rem">${escapeHtml(s.label)}${tag}</button>`;
       }).join("");
-    const fnMarkerBadge = (m) => ({
-      verified: '<span class="badge green" style="font-size:0.62rem">✅ marked</span>',
-      given:    '<span class="badge blue" style="font-size:0.62rem">🟢 given</span>',
-      ref:      '<span class="badge yellow" style="font-size:0.62rem">🟡 ref</span>',
-      unsure:   '<span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--muted)">🔁 unsure</span>',
-      unknown:  '<span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--muted)">● none</span>'
-    }[m] || '<span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--muted)">?</span>');
+    const fnMarkerBadge = (m, hasOpts, hasBook, hasCommunity) => {
+      if (hasBook) return '<span class="badge green" style="font-size:0.62rem">📖 textbook-verified</span>';
+      if (hasCommunity) return '<span class="badge" style="font-size:0.62rem;background:var(--accent);color:#fff">✅ community</span>';
+      return ({
+        verified: '<span class="badge" style="font-size:0.62rem;background:var(--accent);color:#fff">✅ MCQ</span>',
+        given:    '<span class="badge blue" style="font-size:0.62rem">🟢 given</span>',
+        ref:      '<span class="badge" style="font-size:0.62rem;color:var(--accent2);font-weight:500">📝 recall</span>',
+        unsure:   '<span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--muted)">🔁 unsure</span>',
+        unknown:  '<span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--muted)">⏳ pending</span>'
+      }[m] || '<span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--muted)">?</span>');
+    };
     const fnVerdict = (id) => {
       const V = (window.FLASH_NOTES_VERDICTS || {}).lookup || {};
       const v = V[id];
       if (!v) return { badge: '', ev: '' };
       if (v.verdict === 'supported') return { badge: '<span class="badge green" style="font-size:0.6rem" title="Book citation candidate — confirm it endorses the answer">📖 book-supported</span>', ev: v.evidence };
       if (v.verdict === 'conflict')  return { badge: '<span class="badge" style="font-size:0.6rem;background:var(--bg3);color:#e63946">⚠ conflict</span>', ev: v.evidence };
-      return { badge: '<span class="badge" style="font-size:0.6rem;background:var(--bg3);color:var(--muted)" title="No strong book line found — verify manually">🔍 needs review</span>', ev: '' };
+      if (v.verdict === 'needs_review') return { badge: '<span class="badge" style="font-size:0.6rem;background:var(--bg3);color:var(--muted)" title="Community answer — no book confirmation yet">📝 community</span>', ev: '' };
+      return { badge: '', ev: '' };
     };
     const fnInlineAns = (it) => {
       // extract the ✅-marked answer phrase from the stem/raw for inline-answer items
@@ -4217,14 +4388,45 @@
       const ansLine = (ansLetter||ansText)
         ? `<p style="margin:8px 0 4px;color:var(--text);font-size:0.95rem"><b style="color:var(--muted);font-size:0.72rem;text-transform:uppercase;letter-spacing:.04em">Answer</b> ${ansLetter?`<span style="display:inline-block;min-width:1.4em;padding:1px 7px;margin:0 4px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;text-align:center;font-size:0.8rem">${escapeHtml(ansLetter)}</span>`:''}${ansText?`<span style="color:var(--accent);font-weight:600">${escapeHtml(ansText)}</span>`:''}</p>`
         : '<p class="muted" style="margin:8px 0 4px;font-size:0.8rem;color:var(--muted)">no marked answer</p>';
+      // Textbook citation display
+      let bookHtml = '';
+      const bookExp = it._book_explanation;
+      if (bookExp && typeof bookExp === 'object' && bookExp.passage) {
+        bookHtml = `<details style="margin:8px 0 0;font-size:0.78rem"><summary style="cursor:pointer;font-weight:600;color:var(--accent)">📖 Textbook: ${escapeHtml(bookExp.book||'')} ${escapeHtml(bookExp.chapter||'')}</summary><p style="margin:6px 0 0 8px;padding:8px 10px;background:var(--bg1);border-left:3px solid #1b7a3d;border-radius:0 6px 6px 0;color:var(--text);line-height:1.5">${escapeHtml((bookExp.passage||'').slice(0,400))}</p></details>`;
+      } else if (bookExp && typeof bookExp === 'string' && bookExp.trim()) {
+        bookHtml = `<p style="margin:8px 0 0;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;font-size:0.82rem;color:var(--text)"><b style="color:var(--accent)">📖 Book:</b> ${escapeHtml(bookExp).slice(0,320)}</p>`;
+      }
+      // Community answer display (show when different from textbook)
+      let commHtml = '';
+      const commExp = it._verified_explanation;
+      if (commExp && typeof commExp === 'string' && commExp.trim()) {
+        commHtml = `<p style="margin:6px 0 0;font-size:0.76rem;color:var(--muted)">✅ Community: ${escapeHtml(commExp).slice(0,200)}</p>`;
+      }
       const evHtml = vd.ev ? `<p style="margin:8px 0 0;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;font-size:0.82rem;color:var(--text)"><b style="color:var(--accent)">📖 Why (book):</b> ${escapeHtml(vd.ev).slice(0,320)}</p>` : '';
       const srcHtml = (it.sources||[]).length ? `<p style="margin:6px 0 0;font-size:0.7rem;color:var(--muted)">from: ${escapeHtml((it.sources||[]).join(", "))}</p>` : '';
       const imgFlag = it.needsImage ? ' <span class="badge" style="font-size:0.58rem;background:var(--bg3);color:var(--accent2)">🖼 image</span>' : '';
-      const marker = fnMarkerBadge(it.marker);
-      return `<div class="fn-study-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;min-height:150px">
+      const hasOpts = (it.options||[]).length > 0 && (it.answerIdx != null || it.answerLetter);
+      const hasBook = !!(bookExp && (typeof bookExp === 'object' ? bookExp.passage : bookExp));
+      const hasCommunity = !!((it._verified_explanation || '').trim());
+      const marker = fnMarkerBadge(it.marker, hasOpts, hasBook, hasCommunity);
+      // Card label: textbook-verified > community > MCQ > recall
+      let cardLabel = '';
+      if (hasBook) {
+        cardLabel = '<span class="badge green" style="font-size:0.6rem;background:#1b7a3d;color:#fff">📖 textbook-verified</span>';
+      } else if (hasOpts && hasCommunity) {
+        cardLabel = '<span class="badge" style="font-size:0.6rem;background:var(--accent);color:#fff">✅ community MCQ</span>';
+      } else if (hasOpts) {
+        cardLabel = '<span class="badge blue" style="font-size:0.6rem;background:var(--accent);color:#fff">MCQ</span>';
+      } else if (hasCommunity) {
+        cardLabel = '<span class="badge" style="font-size:0.6rem;color:var(--accent2);font-weight:500">📝 community recall</span>';
+      } else {
+        cardLabel = '<span class="badge" style="font-size:0.6rem;background:var(--bg3);color:var(--muted)">📝 recall</span>';
+      }
+      return `<div class="fn-study-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;min-height:150px;cursor:pointer" onclick="var b=this.querySelector('.fn-study-body');if(b){b.style.display='block'};var r=document.getElementById('fn-reveal');if(r){r.textContent='🔍 Answer shown';r.disabled=true}">
+        <div style="margin-bottom:4px">${cardLabel}</div>
         <div class="fn-study-q" style="font-size:1.05rem;line-height:1.6;color:var(--text)">${q}${imgFlag}</div>
-        <div class="fn-study-body" style="display:none;margin-top:10px;padding-top:10px;border-top:1px dashed var(--border)">${ansLine}${optsHtml}${evHtml}${srcHtml}</div>
-        <div style="margin-top:10px;font-size:0.72rem;color:var(--muted)">${marker} ${vd.badge}</div>
+        <div class="fn-study-body" style="display:none;margin-top:10px;padding-top:10px;border-top:1px dashed var(--border)">${ansLine}${optsHtml}${bookHtml}${commHtml}${evHtml}${srcHtml}</div>
+        <div style="margin-top:10px;font-size:0.72rem;color:var(--muted)">${marker}</div>
       </div>`;
     };
 
@@ -4277,8 +4479,9 @@
           </div>
           <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
             <button type="button" class="btn success" id="qz-${day}-goal">▶ Start ${plan.goal} Qs</button>
+            <button type="button" class="btn" id="qz-${day}-200">200</button>
             <button type="button" class="btn" id="qz-${day}-all">All ${dayPoolCount}</button>
-            <button type="button" class="btn ghost" id="qz-${day}-50">50 Rev</button>
+            <button type="button" class="btn ghost" id="qz-${day}-50">50</button>
             <button type="button" class="btn ghost" id="plan-flash-today">🃏 Cards</button>
           </div>
         </div>
@@ -4337,6 +4540,7 @@
         <div style="display:flex;gap:8px;flex-wrap:wrap">
           <button type="button" class="btn success" id="qa-mixed-50">🎲 Mixed 50</button>
           <button type="button" class="btn" id="qa-mixed-100">🎲 Mixed 100</button>
+          <button type="button" class="btn warn" id="qa-mixed-200">🎯 Mock 200 (4hrs)</button>
           <button type="button" class="btn" id="qa-flash-all">🃏 All Cards</button>
           <button type="button" class="btn ghost" id="qa-wrong">📕 Wrong Book</button>
           <button type="button" class="btn ghost" id="qa-weak">🔴 Weak Areas</button>
@@ -4344,12 +4548,15 @@
           <button type="button" class="btn ghost" id="plan-notes-all">📝 All Notes</button>
         </div>
 
-        <!-- FLASH NOTES — single-card study deck (one at a time) -->
+        <!-- STUDY DECK -->
         <hr style="margin:12px 0;border-color:var(--border)">
-        <h2 style="font-size:1rem;margin-bottom:2px;color:var(--text)">🗒️ Recall study deck <span class="muted" style="font-size:0.72rem">— ${fnTotal} items · community answers (not official)</span></h2>
+        
+        <!-- Source pills -->
+        <div style="display:flex;flex-wrap:wrap;gap:3px;margin-bottom:6px" id="fn-source-pills-study">${sourceChipsHtml}</div>
 
-        <!-- dept filter chips -->
-        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:4px">
+        <!-- Dept filter + study card -->
+        <div style="display:flex;gap:4px;flex-wrap:wrap;align-items:center;margin-bottom:6px">
+          <span style="font-size:0.8rem;font-weight:600;color:var(--text)">📓</span>
           ${FN_DEPTS.map(d => {
             const n = (FN.byDept[d.id] || []).length;
             const active = fnDept === d.id;
@@ -4361,42 +4568,38 @@
             const dotColor = pct >= 80 ? '#1b7a3d' : (pct >= 50 ? '#e6a817' : '#e63946');
             return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-fn-dept="${d.id}" style="padding:3px 10px;font-size:0.74rem"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:${dotColor};margin-right:4px"></span>${escapeHtml(d.label)} <span class="muted" style="font-size:0.66rem">${n}</span></button>`;
           }).join("")}
-        </div>
-        <!-- verification stats bar -->
-        <div id="fn-stats-bar" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px;padding:8px 12px;background:var(--bg1);border-radius:var(--radius);font-size:0.72rem;color:var(--muted);border:1px solid var(--border)">
-          <span style="font-weight:600;color:var(--text)">📊 Audit:</span>
-          <span>✅ <b style="color:#1b7a3d">${FN.markerStats?.verified || 0}</b> verified (MCQ+✅)</span>
-          <span>📝 <b style="color:#e6a817">${FN.markerStats?.ref || 0}</b> referenced (Q&A)</span>
-          <span>❓ <b style="color:#e63946">${FN.markerStats?.unknown || 0}</b> unknown</span>
-          <span style="flex:1;text-align:right;font-weight:600;color:var(--text)">${FN.total > 0 ? Math.round((((FN.markerStats?.verified||0)+(FN.markerStats?.ref||0))/FN.total)*100) : 0}% resolved</span>
-          <button type="button" class="btn sm ghost" id="fn-audit-btn" style="padding:2px 8px;font-size:0.65rem" title="Run full data integrity audit">🔍 Audit</button>
-        </div>
-        <!-- audit results panel (hidden by default) -->
-        <div id="fn-audit-panel" style="display:none;margin-bottom:10px;padding:10px 12px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);font-size:0.72rem;color:var(--muted)"></div>
 
-        <!-- source file filter chips (from the 8 PDF sources) -->
-        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px">${sourceChipsHtml}</div>
+        <div style="display:flex;gap:3px;flex-wrap:wrap;margin-bottom:6px">${sourceChipsHtml}</div>
 
-        <!-- study widget: one card at a time with next/back/reveal -->
-        <div id="fn-study-widget" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;min-height:200px">
+        <!-- Study card -->
+        <div id="fn-study-widget" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;min-height:130px">
           ${fnStudyCard(fnCurr)}
-          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px;padding-top:12px;border-top:1px solid var(--border)">
-            <button type="button" class="btn sm ghost" id="fn-prev" ${state._fnStudyIdx <= 0 ? 'disabled' : ''}>← Back</button>
-            <span style="font-size:0.82rem;color:var(--muted)" id="fn-counter">${state._fnStudyIdx+1} / ${fnTotal}</span>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">
+            <button type="button" class="btn sm ghost" id="fn-prev" ${state._fnStudyIdx <= 0 ? 'disabled' : ''}>← Prev</button>
+            <span style="font-size:0.78rem;color:var(--muted)" id="fn-counter">${state._fnStudyIdx+1} / ${fnTotal}</span>
             <button type="button" class="btn sm ghost" id="fn-next" ${state._fnStudyIdx+1 >= fnTotal ? 'disabled' : ''}>Next →</button>
-            <button type="button" class="btn success sm" id="fn-reveal">🔍 Reveal answer</button>
+            <button type="button" class="btn success sm" id="fn-reveal">🔍 Show answer</button>
             <button type="button" class="btn sm ghost" id="fn-study-tts">🔊 Listen</button>
             <button type="button" class="btn sm ghost" id="fn-study-stop" style="display:none">⏹ Stop</button>
           </div>
         </div>
 
-        <!-- FOOTER -->
-        <p class="muted" style="margin-top:16px;font-size:0.7rem;border-top:1px solid var(--border);padding-top:10px">
-          Sources: أبطال Mar–June 2026 · رفيع المقام 16 · رفيع المقام 19 · تلخيص سعود 2025 · ملف سعود مصحّح · SDLE May 2026 (Stream).<br>
-          Community answers — not official SCFHS keys. Book-verified answers live in the MCQs tab.
+        <!-- Audit (collapsible) -->
+        <details style="margin-top:6px;font-size:0.68rem">
+          <summary style="cursor:pointer;color:var(--muted)">📊 ${FN.markerStats?.verified || 0}✅ · ${FN.markerStats?.ref || 0}📝 · ${Math.round((((FN.markerStats?.verified||0)+(FN.markerStats?.ref||0))/FN.total)*100)}%</summary>
+          <div style="padding:6px 8px;margin-top:4px;background:var(--bg1);border-radius:var(--radius);border:1px solid var(--border)">
+            <span>✅ <b>${FN.markerStats?.verified || 0}</b> verified</span> · 
+            <span>📝 <b>${FN.markerStats?.ref || 0}</b> ref</span> · 
+            <span>❓ <b>${FN.markerStats?.unknown || 0}</b> unknown</span>
+            <button type="button" class="btn sm ghost" id="fn-audit-btn" style="padding:1px 6px;font-size:0.6rem;margin-left:8px">🔍 Audit</button>
+          </div>
+        </details>
+        <div id="fn-audit-panel" style="display:none;margin-top:4px;padding:6px 8px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);font-size:0.68rem"></div>
+
+        <p class="muted" style="margin-top:10px;font-size:0.62rem;border-top:1px solid var(--border);padding-top:6px">
+          Sources: أبطال · رفيع المقام 16 & 19 · تلخيص سعود · ملف سعود مصحّح · SDLE May 2026 · الملف الذهبي ٢ · July 2026
         </p>
       </div>`;
-
     // === BIND EVENTS ===
 
     // Day navigation pills
@@ -4418,24 +4621,35 @@
       }).join("");
     }
 
-    // Day quiz buttons
-    const setQuiz = (id, topic, n) => {
+    // Day quiz buttons — use FLASH NOTES items (not main bank)
+    const setFlashQuiz = (id, dept, n, timed, sec) => {
       const el = document.getElementById(id);
-      if (el) el.onclick = () => startQuiz(topic, n, "learn", false);
+      if (el) el.onclick = () => startFlashQuiz(dept, n, timed ? "exam" : "learn", !!timed, sec || 72);
     };
-    setQuiz(`qz-${day}-goal`, poolKey, plan.goal);
-    setQuiz(`qz-${day}-all`, poolKey, dayPoolCount);
-    setQuiz(`qz-${day}-50`, poolKey, 50);
+    // Map plan topic to flash notes department
+    const planTopics = plan.topics;
+    const flashDayDept = planTopics === "all" ? "all" 
+      : planTopics.includes(",") ? "all"
+      : planTopics;
+    setFlashQuiz(`qz-${day}-goal`, flashDayDept, plan.goal);
+    setFlashQuiz(`qz-${day}-all`, flashDayDept, dayPoolCount);
+    setFlashQuiz(`qz-${day}-50`, flashDayDept, 50);
+    setFlashQuiz(`qz-${day}-200`, flashDayDept, 200, true);  // timed mock
 
-    // Department rows → start quiz with @complete pool
+    // Department rows → start quiz from flash notes
     app.querySelectorAll("[data-dept-quiz]").forEach(b => {
       const dept = b.dataset.deptQuiz;
       const n = b.dataset.n ? +b.dataset.n : 50;
-      b.onclick = () => startQuiz(dept + "@complete", n, "learn", false);
+      b.onclick = () => startFlashQuiz(dept, n, "learn", false);
     });
     // Flashcard buttons in department grid → open cards for that dept
     app.querySelectorAll("[data-fn-cards]").forEach(b => {
-      b.onclick = (e) => { e.stopPropagation(); openCards(b.dataset.fnCards); };
+      b.onclick = (e) => { 
+        e.stopPropagation();
+        state._fnDept = b.dataset.fnCards;
+        state._fnStudyIdx = 0;
+        renderMarJune();
+      };
     });
 
     const byId = id => document.getElementById(id);
@@ -4443,8 +4657,9 @@
     if (byId("qa-flash-all")) byId("qa-flash-all").onclick = () => openCards("always");
     if (byId("plan-lesson-today")) byId("plan-lesson-today").onclick = () => { state.view = "today"; render(); };
     if (byId("plan-notes-all")) byId("plan-notes-all").onclick = () => { state.view = "notes"; render(); };
-    if (byId("qa-mixed-50")) byId("qa-mixed-50").onclick = () => startQuiz("complete", 50, "learn", false);
-    if (byId("qa-mixed-100")) byId("qa-mixed-100").onclick = () => startQuiz("complete", 100, "learn", false);
+    if (byId("qa-mixed-50")) byId("qa-mixed-50").onclick = () => startFlashQuiz("all", 50, "learn", false);
+    if (byId("qa-mixed-100")) byId("qa-mixed-100").onclick = () => startFlashQuiz("all", 100, "learn", false);
+    if (byId("qa-mixed-200")) byId("qa-mixed-200").onclick = () => startFlashQuiz("all", 200, "exam", true, 72);
     if (byId("qa-wrong")) byId("qa-wrong").onclick = () => { state.view = "wrong-dept"; render(); };
     if (byId("qa-weak")) byId("qa-weak").onclick = () => startQuiz("weak", QUIZ_ALL, "learn", false);
 
@@ -5161,6 +5376,106 @@
           ${sortToggle()}
           ${banksBySort()}
         </div>`;
+    } else if (pane === "mock") {
+      const inv = inventory();
+      const preferredN = inv.preferred || 0;
+      const allN = inv.all || 0;
+      const abtalN = inv.abtal || 0;
+      const rafiCoreN = inv.rafi_core || 0;
+      /* Source-specific counts for source-based mocks */
+      const rafi16N = poolN("all@rafi_16");
+      const rafi19N = poolN("all@rafi_19");
+
+      body = `
+        <div class="hz-layout">
+          <!-- SDLE FULL MOCK EXAM -->
+          <section class="hz-section" style="background:var(--bg2);border:2px solid var(--accent);border-radius:var(--radius);padding:16px;margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+              <div>
+                <h3 style="margin:0;font-size:1.1rem;color:var(--accent)">🎯 SDLE Full Mock Exam</h3>
+                <p class="muted" style="margin:4px 0 0;font-size:0.82rem">200 MCQs · 4 hours (72s/Q) · Blueprint-weighted</p>
+              </div>
+              <span class="badge warn" style="font-size:0.75rem">${Math.min(200, preferredN)} Q available</span>
+            </div>
+            <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+              <button type="button" class="btn success" id="mock-exam-200" ${preferredN < 50 ? "disabled" : ""}>▶ Start 200 Q Mock (4 hrs)</button>
+              <button type="button" class="btn" id="mock-exam-100" ${preferredN < 50 ? "disabled" : ""}>100 Q (2 hrs)</button>
+              <button type="button" class="btn ghost" id="mock-exam-50" ${preferredN < 50 ? "disabled" : ""}>50 Q (1 hr)</button>
+            </div>
+            <p style="font-size:0.72rem;color:var(--muted);margin-top:8px">Blueprint-weighted preferred bank: Resto 40% · Perio 18% · Endo 17% · OMS 15% · Ortho/Pedo 10%</p>
+          </section>
+
+          <!-- SOURCE-BASED MOCKS -->
+          <section class="hz-section">
+            <h3 class="hz-sec-title" style="color:var(--accent2)">📚 Source-Based Mocks — اختبر نفسك من المصدر</h3>
+            <p class="muted" style="font-size:0.78rem;margin-bottom:8px">Test yourself on specific reference sources. Questions filtered by source/department.</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px">
+              <!-- Preferred bank (blueprint) -->
+              <div class="source-mock-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:12px;cursor:pointer" data-mock-src="blueprint">
+                <strong style="font-size:0.85rem">📋 Blueprint Mock</strong>
+                <p class="muted" style="font-size:0.7rem;margin:4px 0">Preferred bank · stratified by SDLE blueprint</p>
+                <span class="badge blue">${preferredN}</span>
+              </div>
+              <!-- أبطال bank -->
+              <div class="source-mock-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:12px;cursor:pointer" data-mock-src="abtal">
+                <strong style="font-size:0.85rem">🌟 أبطال الديجيتال Mock</strong>
+                <p class="muted" style="font-size:0.7rem;margin:4px 0">Community recall bank</p>
+                <span class="badge blue">${abtalN}</span>
+              </div>
+              <!-- رفيع 11-19 Core -->
+              <div class="source-mock-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:12px;cursor:pointer" data-mock-src="rafi_core">
+                <strong style="font-size:0.85rem">📖 رفيع 11–19 Mock</strong>
+                <p class="muted" style="font-size:0.7rem;margin:4px 0">رفيع المقام core parts</p>
+                <span class="badge blue">${rafiCoreN}</span>
+              </div>
+              <!-- رفيع 16 specific -->
+              <div class="source-mock-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:12px;cursor:pointer" data-mock-src="rafi_16">
+                <strong style="font-size:0.85rem">📖 رفيع 16 Mock</strong>
+                <p class="muted" style="font-size:0.7rem;margin:4px 0">رفيع المقام 16-specific questions</p>
+                <span class="badge blue">${rafi16N}</span>
+              </div>
+              <!-- رفيع 19 specific -->
+              <div class="source-mock-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:12px;cursor:pointer" data-mock-src="rafi_19">
+                <strong style="font-size:0.85rem">📖 رفيع 19 Mock</strong>
+                <p class="muted" style="font-size:0.7rem;margin:4px 0">رفيع المقام 19-specific questions</p>
+                <span class="badge blue">${rafi19N}</span>
+              </div>
+              <!-- All MCQs -->
+              <div class="source-mock-card" style="background:var(--bg2);border:2px solid var(--accent);border-radius:var(--radius);padding:12px;cursor:pointer" data-mock-src="all">
+                <strong style="font-size:0.85rem;color:var(--accent)">🎯 Full Bank Mock</strong>
+                <p class="muted" style="font-size:0.7rem;margin:4px 0">All verified MCQs mixed</p>
+                <span class="badge warn">${allN}</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Quick size selectors for selected source -->
+          <section class="hz-section">
+            <h3 class="hz-sec-title">⚡ Quick Mock Sizes</h3>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button type="button" class="btn sm" data-mock-size="all" data-n="200" data-mode="exam">Mock 200 (4 hrs)</button>
+              <button type="button" class="btn sm" data-mock-size="all" data-n="100" data-mode="exam">Mock 100 (2 hrs)</button>
+              <button type="button" class="btn sm" data-mock-size="all" data-n="50" data-mode="exam">Mock 50 (1 hr)</button>
+              <button type="button" class="btn sm ghost" data-mock-size="all" data-n="50" data-mode="learn">Learn 50 (untimed)</button>
+              <button type="button" class="btn sm ghost" data-mock-size="all" data-n="100" data-mode="test">Test 100 (no timer)</button>
+            </div>
+          </section>
+
+          <!-- Department × Source mock grid (same as MCQs tab for selection) -->
+          ${sortToggle()}
+          ${banksBySort()}
+        </div>
+
+        <style>
+          .source-mock-card:hover {
+            border-color: var(--accent) !important;
+            background: var(--bg3) !important;
+          }
+          .source-mock-card:active {
+            transform: scale(0.98);
+          }
+        </style>
+      `;
     } else if (pane === "cards") {
       const deck = lessonCardDeck(L);
       const deckN = cardPoolForDeck(deck).length;
@@ -5287,6 +5602,41 @@
         }
       });
     }
+    // Mock exam buttons (200 Q / 4 hrs SDLE full mock)
+    const mockExam200 = document.getElementById("mock-exam-200");
+    if (mockExam200) mockExam200.onclick = () => startQuiz("blueprint", 200, "exam", true, 72);
+    const mockExam100 = document.getElementById("mock-exam-100");
+    if (mockExam100) mockExam100.onclick = () => startQuiz("blueprint", 100, "exam", true, 72);
+    const mockExam50 = document.getElementById("mock-exam-50");
+    if (mockExam50) mockExam50.onclick = () => startQuiz("blueprint", 50, "exam", true, 72);
+
+    // Source-based mock cards
+    app.querySelectorAll("[data-mock-src]").forEach(b => {
+      b.onclick = () => {
+        const src = b.dataset.mockSrc;
+        let poolKey = src;
+        // For source-specific pools, use the @all scope to filter by source
+        if (src === "rafi_16" || src === "rafi_19") {
+          // We want all departments from this specific source
+          poolKey = "all@" + src;
+        } else if (src === "blueprint") {
+          poolKey = "blueprint";
+        }
+        startQuiz(poolKey, 50, "exam", true, 72);
+      };
+    });
+
+    // Quick mock size buttons
+    app.querySelectorAll("[data-mock-size]").forEach(b => {
+      b.onclick = () => {
+        const n = +b.dataset.n;
+        const mode = b.dataset.mode || "exam";
+        const timed = mode === "exam";
+        const secPer = timed ? 72 : null;
+        startQuiz(b.dataset.mockSize, n, mode, timed, secPer);
+      };
+    });
+
     $("#cards-today") && ($("#cards-today").onclick = () => openCards(lessonCardDeck(L)));
     $("#cards-abtal") && ($("#cards-abtal").onclick = () => openCards("abtal_notes"));
     $("#cards-all") && ($("#cards-all").onclick = () => openCards("all"));
@@ -6121,6 +6471,12 @@
     if (scope === "rafi") {
       return String((q && q.source) || "").startsWith("rafi_") || String((q && q.id) || "").startsWith("rafi_");
     }
+    if (scope === "rafi_16") {
+      return String((q && q.source) || "") === "rafi_16";
+    }
+    if (scope === "rafi_19") {
+      return String((q && q.source) || "") === "rafi_19";
+    }
     if (scope === "rafi_1619") {
       const src = String((q && q.source) || "");
       return src === "rafi_16" || src === "rafi_19";
@@ -6623,6 +6979,115 @@
             : viewStack[viewStack.length - 1] || "today",
     };
     // Push origin so ← Back returns to the tab that started the quiz
+    if (state.view && state.view !== "quiz" && viewStack[viewStack.length - 1] !== state.view) {
+      viewStack.push(state.view);
+      if (viewStack.length > 24) viewStack = viewStack.slice(-24);
+      saveViewStack();
+    }
+    if (timed) startQuizTimer();
+    else clearQuizTimer();
+    state.view = "quiz";
+    renderQuizUI();
+  }
+
+  /**
+   * Start a quiz using FLASH NOTES items (not the main bank).
+   * Converts flash notes MCQ-ready items to quiz format.
+   */
+  function startFlashQuiz(dept, count, mode, timed, secPer) {
+    const FN = window.FLASH_NOTES || { byDept: {} };
+    const items = dept === "all"
+      ? [].concat(...Object.values(FN.byDept))
+      : (FN.byDept[dept] || []);
+
+    if (!items.length) {
+      alert("No items in this department.");
+      return;
+    }
+
+    // Use ALL items — convert MCQ-ready items to quiz format, recall-only items become Q&A
+    let quizItems = shuffle([...items]);
+    const n = count >= 99999 ? quizItems.length : Math.min(count, quizItems.length);
+    quizItems = quizItems.slice(0, n);
+
+    // Convert to quiz format
+    const converted = quizItems.map(it => {
+      const hasOpts = (it.options||[]).length > 0 && (it.answerIdx != null || it.answerLetter);
+      // _book_explanation may be an object {book, chapter, passage} or a string
+      const bookExp = it._book_explanation;
+      const bookWhy = (bookExp && typeof bookExp === 'object') ? (bookExp.passage || '') : (typeof bookExp === 'string' ? bookExp : '');
+      const commWhy = (typeof it._verified_explanation === 'string') ? it._verified_explanation : '';
+      const why = bookWhy || commWhy || "";
+      const stem = (it.stem || "").replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim();
+
+      if (hasOpts) {
+        // MCQ-ready item — clean options and use as normal MCQ
+        const opts = (it.options || []).map(o => {
+          return o.replace(/^[a-z][).]\s*/i, "").replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim();
+        }).filter(Boolean);
+
+        let ansIdx = it.answerIdx;
+        if (ansIdx == null && it.answerLetter) {
+          ansIdx = it.answerLetter.toLowerCase().charCodeAt(0) - 97;
+        }
+        if (ansIdx == null || ansIdx < 0 || ansIdx >= opts.length) ansIdx = 0;
+
+        return {
+          id: it.id || "fn_" + dept + "_" + Math.random().toString(36).slice(2, 8),
+          q: stem,
+          options: opts,
+          answer: ansIdx,
+          explanation: why.slice(0, 400),
+          topic: dept || it.dept || "",
+          source: "flash_notes",
+          _fnRecall: false
+        };
+      } else {
+        // Recall-only item — extract answer from inline markers or raw text
+        let ansText = "";
+        const raw = it.raw || it.stem || "";
+        // Look for a ✅-marked answer phrase
+        const m = raw.match(/([a-z])[).]\s*([^\n?]*?)[✅🟢🟡✳🔵]/i);
+        if (m) ansText = m[2].replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim();
+        else {
+          // Just take the last part after ? or marker
+          const parts = stem.split(/[?؟]/);
+          ansText = parts.length > 1 ? parts[parts.length-1].trim() : "";
+        }
+        if (!ansText) ansText = "(inline answer — check raw source)";
+
+        return {
+          id: it.id || "fn_" + dept + "_" + Math.random().toString(36).slice(2, 8),
+          q: stem,
+          options: ["Reveal answer"],
+          answer: 0,
+          explanation: "Answer: " + ansText + (why ? "\n\n" + why.slice(0, 300) : ""),
+          topic: dept || it.dept || "",
+          source: "flash_notes",
+          _fnRecall: true
+        };
+      }
+    });
+
+    const modeLabel = mode === "exam" ? "Flash Mock" : "Flash Quiz";
+    const deptLabel = dept === "all" ? "All Flash" : dept;
+
+    state.quiz = {
+      items: converted,
+      i: 0,
+      mode,
+      timed,
+      topic: "flash_" + dept,
+      answers: [],
+      revealed: [],
+      learnOk: 0,
+      learnN: 0,
+      startedAt: Date.now(),
+      seconds: timed ? converted.length * (secPer || 72) : null,
+      label: modeLabel + " · " + deptLabel + " · " + converted.length + "Q",
+      returnView: state.view || "marjune"
+    };
+
     if (state.view && state.view !== "quiz" && viewStack[viewStack.length - 1] !== state.view) {
       viewStack.push(state.view);
       if (viewStack.length > 24) viewStack = viewStack.slice(-24);
