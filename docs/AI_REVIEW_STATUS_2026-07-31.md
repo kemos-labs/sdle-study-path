@@ -98,7 +98,13 @@ style), and the assistant aggregates/validates.
    207 are real answerless questions (June_July2023, Mar-June, SDLE_May) that
    can be answered by free models (answer-mcq mode) and then verified.
 2. Low-confidence model answers (conf: low) should be treated as hints only.
-3. Consider a UI filter for "answer disputed" so users can review the 127.
+3. **DONE (2026-07-31, commit 669337f)** — disputed review flow shipped:
+   ⚠ Disputed chip (cross-dept study mode over all 127), dispute reason +
+   confidence + models shown on cards, per-item adjudication (✅ source /
+   ✏️ AI right) in localStorage (`sdle3_fnDisputeReview`), 📋 export →
+   `flash_notes_dispute_review.json`. Next step when the user adjudicates:
+   apply the decisions to `data/flash_notes.js` (fix answerLetter/answerIdx
+   or add `_answer_disputed` false/keep) via a small script.
 4. The 581 Saud orphans could get a second, looser parent-link pass IF a
    human validates the joins (or accept as flagged recall leads).
 5. Run `python3 scripts/repair_saud_parse.py --apply` only if the source
