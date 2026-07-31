@@ -1,6 +1,6 @@
 /* SDLE Study Path — light service worker for installability + shell cache.
    Progress stays in localStorage (not cached here). */
-const CACHE = "sdle-shell-v44";
+const CACHE = "sdle-shell-v45";
 const SHELL = [
   "./",
   "./index.html",
@@ -43,9 +43,12 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
 
-  /* Network-first for app shell + data so deploys win; cache fallback offline */
+  /* Network-first for app shell + data so deploys win; cache fallback offline.
+     cache: "no-store" bypasses the HTTP cache — GitHub Pages sets max-age=600
+     on everything, which would otherwise serve stale data within the TTL.
+     The SW cache (below) is the only offline fallback. */
   event.respondWith(
-    fetch(req)
+    fetch(req, { cache: "no-store" })
       .then((res) => {
         const copy = res.clone();
         if (res.ok && (url.pathname.endsWith(".js") || url.pathname.endsWith(".css") || url.pathname.endsWith(".html") || url.pathname.endsWith("/"))) {

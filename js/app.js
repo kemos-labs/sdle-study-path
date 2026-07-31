@@ -7915,10 +7915,18 @@
       return;
     }
 
-    /* Register service worker (needed for install criteria on many browsers) */
+    /* Register service worker (needed for install criteria on many browsers).
+       updateViaCache: "none" forces the browser to always re-fetch sw.js from the
+       network on update checks — GitHub Pages sends max-age=600 on sw.js, which
+       otherwise delays cache-version bumps by up to 10 min. */
     if ("serviceWorker" in navigator) {
       const swUrl = new URL("sw.js", window.location.href).href;
-      navigator.serviceWorker.register(swUrl, { scope: new URL("./", window.location.href).pathname }).catch(() => {});
+      navigator.serviceWorker
+        .register(swUrl, {
+          scope: new URL("./", window.location.href).pathname,
+          updateViaCache: "none",
+        })
+        .catch(() => {});
     }
 
     let deferred = null;
