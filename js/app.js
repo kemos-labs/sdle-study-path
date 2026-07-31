@@ -4133,6 +4133,98 @@
     }, 80);
   }
 
+  // Disputed-answer review list: walk all AI-contradicted items, adjudicate
+  function fnDisputeReview() {
+    const FN = window.FLASH_NOTES;
+    const host = document.getElementById("fn-dispute-list");
+    if (!FN || !host) return;
+    const items = Object.values(FN.byDept || {}).flat().filter(it => it._answer_disputed && !it._merged_into);
+    const rev = asObject(store.get("fnDisputeReview", {}), {});
+    const deptLabel = (id) => ({
+      oms: "Oral Surgery & Medicine", restorative: "Restorative", endo: "Endodontics",
+      perio: "Periodontics", ortho_pedo: "Ortho / Pedo", ethics: "Ethics & IC",
+      fixed: "Fixed Prosth", implant: "Implant", rpd: "RPD"
+    }[id] || id);
+    const optText = (it) => (it.options && it.answerIdx != null && it.options[it.answerIdx])
+      ? it.options[it.answerIdx].replace(/^[a-z][).]\s*/i, '').replace(/[✅🟢🟡✳🔵🔁●]/g, '').trim().slice(0, 90)
+      : '';
+    if (!items.length) {
+      host.innerHTML = '<span class="muted" style="font-size:0.66rem">No disputed items.</span>';
+      return;
+    }
+    const rows = items.map(it => {
+      const dj = it._model_judgment || {};
+      const verdict = rev[it.id]; // "source" | "ai" | undefined
+      const vHtml = verdict === "source" ? '<span class="badge" style="font-size:0.56rem;background:var(--bg3);color:#1b7a3d">✅ source kept</span>'
+        : verdict === "ai" ? '<span class="badge" style="font-size:0.56rem;background:var(--bg3);color:var(--accent2)">✏️ AI right</span>'
+        : '<span class="badge" style="font-size:0.56rem;background:var(--bg3);color:var(--muted)">⏳ pending</span>';
+      return `<div style="border:1px solid var(--border);border-radius:var(--radius);padding:6px 8px;margin-bottom:5px;background:var(--bg1)" data-fn-dr="${it.id}">
+        <div style="display:flex;gap:6px;align-items:start;justify-content:space-between;flex-wrap:wrap">
+          <div style="flex:1;min-width:220px">
+            <div style="font-size:0.72rem;color:var(--text);line-height:1.45">${escapeHtml(it.stem || '').slice(0,140)}</div>
+            <div style="font-size:0.64rem;color:var(--muted);margin-top:2px">${escapeHtml(it.id)} · ${escapeHtml(deptLabel(it.dept))} · ${escapeHtml((it.sources || []).join(', '))}</div>
+          </div>
+          <div style="font-size:0.66rem;min-width:200px;max-width:46%">
+            <div style="color:var(--text)">Source: <b>${escapeHtml((it.answerLetter||'').toUpperCase())}</b> — ${escapeHtml(optText(it))}</div>
+            <div style="color:var(--danger,#c0392b);margin-top:2px">AI: ${escapeHtml((dj.reason || dj.verdict || 'contradicted')).slice(0,160)}</div>
+            <div style="color:var(--muted);margin-top:2px">${escapeHtml(dj.confidence || 'low')} conf · ${(dj.models || []).length} models</div>
+          </div>
+          <div style="display:flex;gap:4px;align-items:center">
+            ${vHtml}
+            <button type="button" class="btn sm ghost" data-fn-dr-k="source" data-fn-dr-id="${it.id}" style="padding:1px 8px;font-size:0.62rem" title="You checked the source; the marked answer stands">✅ Source correct</button>
+            <button type="button" class="btn sm warn" data-fn-dr-k="ai" data-fn-dr-id="${it.id}" style="padding:1px 8px;font-size:0.62rem" title="The AI is right; needs a source-data fix">✏️ AI right</button>
+            <button type="button" class="btn sm ghost" data-fn-dr-id="${it.id}" style="padding:1px 8px;font-size:0.62rem" title="Study this item in the deck">🔎</button>
+          </div>
+        </div>
+      </div>`;
+    }).join("");
+    host.innerHTML = rows;
+    const doneEl = document.getElementById("fn-dispute-done");
+    if (doneEl) doneEl.textContent = Object.values(rev).filter(v => v === "source" || v === "ai").length;
+    // adjudicate buttons
+    host.querySelectorAll("[data-fn-dr-k]").forEach(b => {
+      b.onclick = () => {
+        const id = b.dataset.fnDrId, k = b.dataset.fnDrK;
+        const cur = asObject(store.get("fnDisputeReview", {}), {});
+        cur[id] = k;
+        store.set("fnDisputeReview", cur);
+        fnDisputeReview();
+      };
+    });
+    // jump-to-study buttons
+    host.querySelectorAll("[data-fn-dr-id]:not([data-fn-dr-k])").forEach(b => {
+      b.onclick = () => {
+        const id = b.dataset.fnDrId;
+        state._fnDept = (window.FLASH_NOTES && window.FLASH_NOTES.byDept ? Object.entries(window.FLASH_NOTES.byDept).find(([, arr]) => arr.some(i => i.id === id)) : null)?.[0] || state._fnDept;
+        state._fnDisputed = true;
+        const items = Object.values(window.FLASH_NOTES.byDept || {}).flat().filter(i => i._answer_disputed && !i._merged_into).sort((a, b) => (a.dept === b.dept ? a.id.localeCompare(b.id) : (a.dept || '').localeCompare(b.dept || '')));
+        state._fnStudyIdx = items.findIndex(i => i.id === id);
+        state._fnStudySource = "";
+        renderMarJune();
+      };
+    });
+    // export decisions
+    const exportBtn = document.getElementById("fn-dispute-export");
+    if (exportBtn) exportBtn.onclick = () => {
+      const payload = items.map(it => {
+        const dj = it._model_judgment || {};
+        return {
+          id: it.id, dept: it.dept, stem: it.stem,
+          source: { letter: it.answerLetter, text: optText(it) },
+          ai: { verdict: dj.verdict, confidence: dj.confidence, reason: dj.reason, models: dj.models || [] },
+          decision: rev[it.id] || null,
+          sources: it.sources || []
+        };
+      });
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "flash_notes_dispute_review.json";
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+    };
+  }
+
   function renderRecentQa() {
     const QA = window.RECENT_QA || { items: [], total: 0 };
     const items = QA.items || [];
@@ -4327,7 +4419,17 @@
     const fnDept = state._fnDept;
     // source filter (optional — filters by source label)
     const fnSrc = state._fnStudySource || "";
-    let fnListRaw = (FN.byDept[fnDept] || []).filter(it => !it._merged_into);
+    // disputed review mode: walk ALL disputed items across departments
+    const fnDisputedMode = !!state._fnDisputed;
+    let fnListRaw = [];
+    if (fnDisputedMode) {
+      Object.keys(FN.byDept || {}).forEach(did => {
+        (FN.byDept[did] || []).forEach(it => { if (it._answer_disputed && !it._merged_into) fnListRaw.push(it); });
+      });
+      fnListRaw.sort((a, b) => (a.dept === b.dept ? a.id.localeCompare(b.id) : (a.dept || '').localeCompare(b.dept || '')));
+    } else {
+      fnListRaw = (FN.byDept[fnDept] || []).filter(it => !it._merged_into);
+    }
     if (fnSrc) {
       fnListRaw = fnListRaw.filter(it => (it.sources || []).includes(fnSrc));
     }
@@ -4392,6 +4494,21 @@
       if (embAns && !ansLetter && !ansText && !aiAnsHtml) {
         embHtml = `<p style="margin:8px 0 4px;font-size:0.85rem"><b style="color:var(--muted);font-size:0.7rem;text-transform:uppercase;letter-spacing:.04em">Recall answer</b> <span style="color:var(--accent);font-weight:600">${escapeHtml(embAns).slice(0,120)}</span> <span class="badge" style="font-size:0.56rem;background:var(--bg3);color:var(--muted)">from source note</span></p>`;
       }
+      // Dispute panel — explain WHY AI flagged the marked answer (honesty)
+      let disputeHtml = '';
+      if (it._answer_disputed && it._model_judgment) {
+        const dj = it._model_judgment || {};
+        const srcTxt = (it.options && it.answerIdx != null && it.options[it.answerIdx])
+          ? it.options[it.answerIdx].replace(/^[a-z][).]\s*/i, '').replace(/[✅🟢🟡✳🔵🔁●]/g, '').trim().slice(0, 90)
+          : '';
+        const reason = (dj.reason || '').trim();
+        disputeHtml = `<div style="margin:8px 0 0;padding:8px 10px;background:rgba(192,57,43,.08);border-left:3px solid var(--danger,#c0392b);border-radius:0 6px 6px 0;font-size:0.78rem;line-height:1.5">
+          <b style="color:var(--danger,#c0392b)">⚠ AI disputes the marked answer</b>
+          ${srcTxt ? `<div style="margin-top:3px;color:var(--text)">Marked: <b>${escapeHtml((it.answerLetter||'').toUpperCase())}</b> — ${escapeHtml(srcTxt)}</div>` : ''}
+          ${reason ? `<div style="margin-top:3px;color:var(--text)">AI: ${escapeHtml(reason)}</div>` : ''}
+          <div style="margin-top:3px;color:var(--muted);font-size:0.68rem">${escapeHtml(dj.confidence||'low')} confidence · ${(dj.models||[]).length ? 'models: ' + escapeHtml(dj.models.slice(0,3).join(', ')) + (dj.models.length>3 ? ' +'+(dj.models.length-3) : '') : ''} · free-model review, not a textbook citation</div>
+        </div>`;
+      }
       const bookExp = it._book_explanation;
       const hasBookEvidence = !!(it._verification_verdict === 'supported' && bookExp && (typeof bookExp === 'object' ? bookExp.passage : bookExp));
       // Automated matches are evidence candidates. Do not show loose or
@@ -4445,7 +4562,7 @@
       return `<div class="fn-study-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;min-height:150px;cursor:pointer" onclick="var b=this.querySelector('.fn-study-body');if(b){b.style.display='block'};var r=document.getElementById('fn-reveal');if(r){r.textContent='🔍 Answer shown';r.disabled=true}">
         <div style="margin-bottom:4px">${cardLabel}</div>
         <div class="fn-study-q" style="font-size:1.05rem;line-height:1.6;color:var(--text)">${q}${imgFlag}${qualityFlag}${disputedFlag}${aiBadge}${repairedFlag}</div>
-        <div class="fn-study-body" style="display:none;margin-top:10px;padding-top:10px;border-top:1px dashed var(--border)">${ansLine}${aiAnsHtml}${embHtml}${optsHtml}${bookHtml}${commHtml}${srcHtml}</div>
+        <div class="fn-study-body" style="display:none;margin-top:10px;padding-top:10px;border-top:1px dashed var(--border)">${ansLine}${aiAnsHtml}${embHtml}${disputeHtml}${optsHtml}${bookHtml}${commHtml}${srcHtml}</div>
         <div style="margin-top:10px;font-size:0.72rem;color:var(--muted)">${marker}</div>
       </div>`;
     };
@@ -4579,7 +4696,7 @@
           <span style="font-size:0.8rem;font-weight:600;color:var(--text)">📓</span>
           ${FN_DEPTS.map(d => {
             const n = (FN.byDept[d.id] || []).length;
-            const active = fnDept === d.id;
+            const active = !fnDisputedMode && fnDept === d.id;
             const deptItems = FN.byDept[d.id] || [];
             const deptVer = deptItems.filter(i => i.marker === 'verified').length;
             const deptRef = deptItems.filter(i => i.marker === 'ref').length;
@@ -4588,6 +4705,7 @@
             const dotColor = pct >= 80 ? '#1b7a3d' : (pct >= 50 ? '#e6a817' : '#e63946');
             return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-fn-dept="${d.id}" style="padding:3px 10px;font-size:0.74rem"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:${dotColor};margin-right:4px"></span>${escapeHtml(d.label)} <span class="muted" style="font-size:0.66rem">${n}</span></button>`;
           }).join("")}
+          <button type="button" class="btn sm ${fnDisputedMode ? "warn" : "ghost"}" data-fn-disputed style="padding:3px 10px;font-size:0.74rem" title="Review all items where AI flagged the marked answer as likely wrong">⚠ Disputed <span class="muted" style="font-size:0.66rem">${FN.aiStats?.disputed || 0}</span></button>
 
         <div style="display:flex;gap:3px;flex-wrap:wrap;margin-bottom:6px">${sourceChipsHtml}</div>
 
@@ -4618,6 +4736,17 @@
           </div>
         </details>
         <div id="fn-audit-panel" style="display:none;margin-top:4px;padding:6px 8px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);font-size:0.68rem"></div>
+
+        <!-- Disputed-answer review panel -->
+        <details id="fn-dispute-review" style="margin-top:8px;font-size:0.7rem" ${fnDisputedMode ? 'open' : ''}>
+          <summary style="cursor:pointer;color:var(--danger,#c0392b);font-weight:600">⚠ Review disputed answers (${FN.aiStats?.disputed || 0})</summary>
+          <div class="muted" style="font-size:0.66rem;margin:4px 0 6px">AI free-model review flagged these marked answers as likely wrong. Adjudicate each (saved in this browser); export decisions as JSON for a data fix.</div>
+          <div id="fn-dispute-list" style="margin-top:4px"></div>
+          <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+            <button type="button" class="btn sm warn" id="fn-dispute-export">📋 Export decisions (JSON)</button>
+            <span class="muted" style="font-size:0.62rem">Reviewed <b id="fn-dispute-done">0</b>/${FN.aiStats?.disputed || 0} · decisions live in this browser only (localStorage), not in the data file</span>
+          </div>
+        </details>
 
         <p class="muted" style="margin-top:10px;font-size:0.62rem;border-top:1px solid var(--border);padding-top:6px">
           Sources: أبطال · رفيع المقام 16 & 19 · تلخيص سعود · ملف سعود مصحّح · SDLE May 2026 · الملف الذهبي ٢ · July 2026
@@ -4691,11 +4820,16 @@
 
     // Flash Notes: department chips + source chips + study widget controls
     app.querySelectorAll("[data-fn-dept]").forEach(b => {
-      b.onclick = () => { state._fnDept = b.dataset.fnDept; state._fnStudySource = ""; state._fnStudyIdx = 0; renderMarJune(); };
+      b.onclick = () => { state._fnDept = b.dataset.fnDept; state._fnStudySource = ""; state._fnDisputed = false; state._fnStudyIdx = 0; renderMarJune(); };
+    });
+    app.querySelectorAll("[data-fn-disputed]").forEach(b => {
+      b.onclick = () => { state._fnDisputed = !state._fnDisputed; state._fnStudySource = ""; state._fnStudyIdx = 0; renderMarJune(); };
     });
     app.querySelectorAll("[data-fn-src]").forEach(b => {
       b.onclick = () => { state._fnStudySource = b.dataset.fnSrc; state._fnStudyIdx = 0; renderMarJune(); };
     });
+    // Disputed-answer review list
+    fnDisputeReview();
     // Study widget: reveal answer
     const revealBtn = document.getElementById("fn-reveal");
     if (revealBtn) revealBtn.onclick = () => {
