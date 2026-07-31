@@ -136,3 +136,16 @@ python3 scripts/gate_flash_notes.py   # exit 0 = green
 # UI smoke test (playwright)
 node /tmp/ui_test4.js   # with server: python3 -m http.server 8765
 ```
+
+## Deployed (2026-07-31, commits 99a9522 → 4f335da → 2e5ffe0)
+- **Live at https://kemos-labs.github.io/sdle-study-path/** (GitHub Pages,
+  legacy build from `main` at repo root; push to main auto-deploys).
+- 396 AI-suggested answers, 571 AI-reviewed, 127 disputed, 863 repaired,
+  405 merged fragments — all verified live via Playwright against the
+  deployed URL (audit stats, disputed chip + 127-row review panel, Recent
+  Q&A tab all render; zero page errors).
+- Fixed 404s on the live site: `data/recent_qa.js` + `data/book_refs.js`
+  were referenced by index.html but never committed → now tracked (2e5ffe0).
+- Deploy check: `curl -sI https://kemos-labs.github.io/sdle-study-path/` →
+  200; rebuild takes ~60 s after push; verify via
+  `gh api repos/kemos-labs/sdle-study-path/pages/builds/latest`.
