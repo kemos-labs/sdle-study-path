@@ -4208,12 +4208,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "C",
           "answerIdx": 2,
-          "confidence": "low",
-          "reason": "Clean with water and soap then disinfect with alcohol.",
+          "confidence": "high",
+          "reason": "After contact with visible blood, hands should be washed with soap and water followed by an; Blood-contaminated items require washing with water and soap to remove organic material, followed by alcohol disinfectio",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
           ]
         }
       },
@@ -4399,14 +4399,14 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_model_suggested_answer": {
-          "letter": "A",
-          "answerIdx": 0,
-          "confidence": "low",
-          "reason": "White hypomineralized enamel lesions become less visible when the tooth is rehydrated.",
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "White spot lesions from incipient caries are reversible upon rehydration, whereas enamel hypomineralization opacities pe; Incipient caries (white spot lesions) are characterized by subsurface porosity that allows fluid exchange; upon re-hydra",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
           ]
         }
       },
@@ -5012,12 +5012,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "B",
           "answerIdx": 1,
-          "confidence": "low",
-          "reason": "Ceramic inlay offers greater durability and wear resistance needed for a bruxer with a fractured amalgam.",
+          "confidence": "high",
+          "reason": "Ceramic inlays are more durable and wear-resistant than composite, making them the better choice for a bruxer with a fra; Ceramic inlay offers superior strength and wear resistance for bruxist patients compared to composite.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         }
       },
@@ -5756,14 +5756,14 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_data_quality": "merged_options_review",
         "_model_suggested_answer": {
-          "letter": "C",
-          "answerIdx": 2,
+          "letter": "B",
+          "answerIdx": 1,
           "confidence": "low",
-          "reason": "Food accumulates because an open contact in the cervical third allows food to get trapped.",
+          "reason": "An improper crown emergence profile fails to create a proper convexity that deflects food away from the gingival sulcus,",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
           ]
         }
       },
@@ -5885,11 +5885,11 @@ window.FLASH_NOTES = {
           "letter": "C",
           "answerIdx": 2,
           "confidence": "low",
-          "reason": "A full coverage crown provides definitive protection and restoration for a fractured cusp.",
+          "reason": "A fractured cusp on an RPD abutment tooth is best managed with a full coverage crown to protect the remaining tooth stru",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         },
         "_model_judgment": {
@@ -6448,7 +6448,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Subgingival biofilm",
+        "_embedded_answer": "A- Subgingival biofilm B-Subragingival biofilm C- Enamel reminrlization",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -6518,7 +6518,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "After tooth extraction for immediate dentures, the underlying alveolar ridge tissues become inflamed and swollen within ; Inflammation and swelling of the tissues after early removal prevent reinsertion of the immediate denture.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "undercut",
@@ -6561,7 +6572,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "spot (decalcification) in anterior teeth; what is management? Also, when close his mouth mandibular shift 7mm doctor dia; .\n\nWait, let me reconsider. The question says \"what is your management?\" for white spots noticed after ortho removal. Th",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- fluoride gel",
@@ -6603,7 +6625,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "5% sodium fluoride varnish is the most widely used fluoride varnish in dental practice.; 5% Sodium fluoride varnish (e.g., Duraphat) is the most widely used fluoride varnish in clinical dentistry worldwide for",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "which muscles are activated when closing the jaw",
@@ -6637,7 +6670,18 @@ window.FLASH_NOTES = {
         },
         "_embedded_answer": "Lateral pterygoid",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "The medial pterygoid and masseter are both elevators of the mandible responsible for jaw closing; the lateral pterygoid ; The masseter and medial pterygoid muscles are the main elevators of the mandible that close the jaw.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- medial pterygoid and masseter",
@@ -6720,7 +6764,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "question says \"mouth sores\" unspecified location. Increased drooling suggests painful oral lesions causing difficulty sw",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- toothing",
@@ -6845,7 +6900,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Angular cheilitis is most commonly caused by Candida albicans.; Angular cheilitis is most commonly caused by Candida albicans (often in combination with Staphylococcus aureus), making ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- Candida albian",
@@ -6887,7 +6953,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "The motor (efferent) component of the gag reflex is mediated by the vagus nerve (cranial nerve X).; The motor limb of the gag reflex is the vagus nerve (CN X), which innervates the pharyngeal muscles; the glossopharyngea",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- vegus",
@@ -6929,7 +7006,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "Angular cheilitis and glossitis are classic clinical manifestations of B‑vitamin deficiency (particularly riboflavin).",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- Vitamin B",
@@ -6973,7 +7061,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "high",
+          "reason": "The dentist must report suspected child abuse to the appropriate child protection agency.; When a dentist suspects child abuse, the mandatory and correct action is to report the suspicion to the child protection",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- investigate the child in detail",
@@ -7057,7 +7156,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "CBCT provides three-dimensional imaging; d canine. The word \"locate\" is key here. \n\nFor initial detection and general location, OPG is the standard first-line ra",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- CBCT",
@@ -7119,7 +7229,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "s, the standard pre-surgical imaging includes periapical radiographs using the parallax technique (SLOB) or occlusal rad; ully, \"SLOP Pas\" seems to be a reference to the parallax/SLOB technique. In many dental textbooks, particularly for exam",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "patient anteriors crowns length were within normal (he provide the length of incisors and canines were 9/10/11mm) wht is the reason for gummy smile",
@@ -7141,7 +7262,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Normal crown lengths indicate the gingiva is not overgrown; excess vertical maxillary growth causes more gingival displa; Since the clinical crown lengths are within normal limits, the gummy smile is most likely due to excess vertical growth ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- excess vertical growth of maxilla",
@@ -7185,7 +7317,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "low",
+          "reason": "Excessive incisor show at rest with normal lip position reflects vertical maxillary excess, which is corrected by maxill",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- Botox",
@@ -7267,7 +7410,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Mouth breathing promotes a vertical growth pattern with increased lower facial height, open bite, proclined incisors, an; growth in a backward/downward direction with increased lower facial height, open bite, proclined incisors, and supraerup",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "Mouth breather tx? Expansion",
@@ -7560,7 +7714,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Cutting the extended wire is the appropriate immediate intervention to remove the source of irritation and prevent furth; Cutting the extended wire addresses the source of irritation directly, providing immediate relief from the broken molar ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- cut the wire",
@@ -7728,10 +7893,21 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "Xray of 16 with 3\nobturated canals (1 mesial), extruded gp by only 0.5mm\nfrom one of the roots\nطيسب نجورتسكا هنأ دصقملا يريدقت مقرلا\n, and Pa lesion associated with all roots",
+        "_embedded_answer": "Xray of 16 with 3 obturated canals (1 mesial), extruded gp by only 0.5mm from one of the roots طيسب نجورتسكا هنأ دصقملا يريدقت مقرلا , and Pa lesion associated with all roots",
         "_answer_disputed": true,
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "isease. Extraradicular pathosis (such as periapical granuloma/cyst) could explain the persistent symptoms and PA lesion.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- Missed mb2",
@@ -7815,7 +7991,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "high",
+          "reason": "The prosthodontist should inform the patient about the alternative treatment plan and professionally discuss the disagre; Professionalism and ethical standards require direct communication with the referring dentist to resolve discrepancies b",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- write a criticizing report and send it to the dentist",
@@ -7924,7 +8111,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "In Islamic medical ethics, the principle of necessity (darurah) permits exceptions to prohibitions when a life-threateni; <one short sentence>",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- raise a complain",
@@ -8129,7 +8327,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "l rinses, surgical debridement\n- Stage 3 (exposed bone with pain, infection, and pathological fracture or extensive invo",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- resection",
@@ -8624,7 +8833,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "(regeneration not in the\noptions)",
+        "_embedded_answer": "(regeneration not in the options)",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
@@ -9010,7 +9219,18 @@ window.FLASH_NOTES = {
         "_embedded_answer": "penicillin\n-acyclovir",
         "_answer_disputed": true,
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Penicillin is the first‑line therapy for syphilis, which presents with a positive VDRL and oral chancre.; A positive venereal test indicates syphilis, and the first-line treatment for syphilis is penicillin.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "PA of hypercementosis, management?",
@@ -9064,7 +9284,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "Post-operative sensitivity after recent amalgam placement is common and usually transient; the initial management is to ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "-re-assure\n-apply fluoride",
@@ -9146,7 +9377,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "ry diagnosis from the information given.\n\nC. Violation of BW (PA is not diagnostic) - This seems to be referring to the ; Excess cement around the implant can cause inflammation and peri-implantitis.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "case with 5.8 MD with for lateral implant, which diameter:",
@@ -9169,7 +9411,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "for a single implant, you need at least 1.5-2 mm of bone on each side of the implant. So the implant diameter should be ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- FL foam",
@@ -9213,7 +9466,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "The material likely remained fluid because it was stored cold, slowing the set reaction.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "Patient has ortoh came with winging wire and button in lateral tooth He said the he had surgery for canine one week ago what of the cause of deboning?",
@@ -9237,7 +9501,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Post-surgical inflammation and edema in the surgical site can make it difficult to achieve proper isolation and moisture; After recent canine surgery, swelling, bleeding, and limited access in the surgical area make proper isolation difficult",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "What is the most toxic material A-MTA B-CaOH C-ferric sulfate D-Ledermix",
@@ -9299,7 +9574,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "A direct fall on the chin transmits force along the mandibular arch to the condyles, making bilateral condylar fractures; A fall on the chin typically transmits force to the mandibular condyles, making condylar fractures the most common injur",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- condyle",
@@ -9343,7 +9629,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Two adjacent teeth in contact form four embrasure spaces: facial (buccal/labial), lingual (palatal), occlusal (incisal),; Two contacting teeth form four embrasure spaces: facial (buccal/labial), lingual, occlusal/incisal, and gingival.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "If we have bilateral parasymphesis fracture what our main concern?",
@@ -9367,7 +9664,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Bilateral parasymphysis fractures can cause the anterior mandibular segment to displace posteriorly, leading to airway o; Airway compromise is the priority in bilateral parasymphysis fractures.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "Pt had a car accident and came to ER with body and dental injury and difficulty in breath his vital sign is noraml what will be your management?",
@@ -9391,7 +9699,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "In a trauma patient from a car accident with suspected cervical spine injury, the jaw thrust maneuver is the preferred f",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- chest x ray\n-tracheotomy",
@@ -9460,10 +9779,21 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "MTA\n-CaOH",
+        "_embedded_answer": "5.25 NAOCL for 1 min",
         "_answer_disputed": true,
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "ubstance/technique, and the NaOCl is the method. But the options are all materials (MTA, CaOH, ferric sulfate, Ledermix)",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- ferric sulfate",
@@ -9509,7 +9839,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "ment - this relates to implant prosthetics, not PFM crowns on natural teeth\n\nThe answer is B - excess cement. When cemen",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- metal allergy\n-excecc cement",
@@ -9594,7 +9935,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "n the context of the options being incomplete (B and C are marked as \"?\"), and the fact that the student marked an answe",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "pt suffer from headache after cementation of FPD from #47-45 the headache disappear 1-TMJ 23tor prescribed for her Amoxicillin for sinusitis ahe came for you to do extraction what will you do?",
@@ -9618,7 +9970,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "me reconsider the clinical scenario. The patient was on Amoxicillin for sinusitis. If she's currently on or has recently",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- wait 10 days after AB course",
@@ -9664,7 +10027,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "A pregnant patient in the third trimester with irreversible pulpitis and severe pain requires urgent treatment; essentia; Essential radiographs with proper shielding are necessary to diagnose and treat irreversible pulpitis in a pregnant pati",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- told her came back after birth",
@@ -9728,7 +10102,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Primate spaces are natural developmental gaps in the primary dentition that provide adequate space for the larger perman; Primate spaces are natural developmental gaps in the primary dentition that serve to accommodate the larger permanent te",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- resolve mild crowding",
@@ -9782,7 +10167,18 @@ window.FLASH_NOTES = {
         },
         "_embedded_answer": "xerostomia",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Dry mouth reduces saliva, which is essential for denture retention during chewing.; Xerostomia directly compromises denture retention during eating because saliva is essential for creating the adhesive, c",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "pt taking zometa for osteoporosis when you take OBG you found body mandibular fracture what it's your management?",
@@ -9806,7 +10202,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "The standard management for a mandibular body fracture is open reduction and internal fixation (ORIF), even in patients ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- mandibular resection",
@@ -10095,7 +10502,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "Shingles (herpes zoster) presents with unilateral sharp pain and a characteristic vesicular rash in a dermatomal distrib",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- High",
@@ -10480,7 +10898,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "After cessation of the causative habit, a soft tissue graft is the definitive treatment to cover the exposed root surfac; Soft tissue graft is the standard treatment to cover the exposed root surface after eliminating the traumatic habit.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "pt with beefy tongue (and other things) what to do? Could be scarlet fever?- ? 79-pt closed her lips on the suction tip, this can cause contamination in the waterline, what is the cause? pressure in the mouth is less than pressure in the tube ● pressure in the mouth is more than pressure in the tube ● pressure is the same ● 2023/09/18 دميحوبأ مير GUC 1-pt come complaining of sweating and pain whil",
@@ -10512,7 +10941,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "Quality of carbon",
+        "_embedded_answer": "pressure in the mouth is less than pressure in the tube ● pressure in the mouth is more than pressure in the tube ● pressure is the same ● 2023/09/18 دميحوبأ مير GUC 1-pt come complaining of sweating and pain whil",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -10593,7 +11022,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "low",
+          "reason": "A non-healing ulcer that fails to show clinical improvement after 2-3 weeks of adequate treatment warrants biopsy to rul",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- 7 days\n-14days",
@@ -10634,7 +11074,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "A mentally competent adult patient must personally provide informed consent for their own treatment; a spouse or family ; The patient is mentally competent and must provide her own informed consent for the procedure.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- Do the extraction",
@@ -10701,7 +11152,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "high",
+          "reason": "Informed consent must be obtained directly from the competent patient herself, who has the right to be fully informed of; Explain treatment options to the patient and obtain her consent.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- Extract the tooth",
@@ -10809,7 +11271,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "The dentist treated all patients equally by not giving preferential treatment to the VIP, thereby upholding the principl; Justice refers to fairness and the equitable distribution of resources, meaning all patients should be treated according",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- Autonomy",
@@ -10875,7 +11348,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "low",
+          "reason": "Missing teeth #11 and #21 (maxillary right and left central incisors) form a single bilateral edentulous area crossing t",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "Missing tooth #11 & #12 & #13. What is the Kennedy classification?",
@@ -10923,7 +11407,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Type I collagen is the most abundant collagen type in dental pulp, as it is the predominant collagen in most connective ; Type I collagen is the most abundant collagen type in dental pulp, as it is the predominant collagen in most connective ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "BW of the posterior teeth all of them have overhanging amalgam restorations. What is the cause of the periodontal inflammation?",
@@ -10967,7 +11462,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "A patient with controlled diabetes mellitus is at risk for hypoglycaemia, especially during dental procedures when NPO s",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- Hypothyroidism",
@@ -11032,7 +11538,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "Moon face and buffalo hump are Cushingoid signs caused by systemic corticosteroid use.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- Insulin resistance",
@@ -11119,7 +11636,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "The immediate onset of wheezing and difficulty breathing after rubber dam placement indicates a Type I (IgE-mediated) hy; Immediate-type (type I) hypersensitivity reaction to latex in the rubber dam.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "A patient has asthma. What is the safe analgesic for him? 2023/09/18 دماحلا مير GUC rheumatoid arthritis seen with : Stable Angina relieved by First sign of chemical burn what is the diagnosis?",
@@ -11145,7 +11673,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "Paracetamol is safe analgesic in asthma.; ANSWER: C",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- NSAID",
@@ -11222,7 +11761,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "apical",
+        "_embedded_answer": "( mucocele) excisional biopsy 15-what is the most cost effective fluoride : fluorid",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -11551,7 +12090,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "For a Class IV restoration with shade dissatisfaction, the most conservative approach is to etch the existing composite ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "Remove 0.5mm of restoration and repair -\nRe-Etch and add increment of composite. -",
@@ -11614,7 +12164,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A-atropin",
+        "_embedded_answer": "A-atropin B- hydrocortisone",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -11663,7 +12213,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "A- A muco. compresive",
+        "_embedded_answer": "A- A muco. compresive B- Selective pressure C- Mucostatic",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -11693,7 +12243,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "كيجي",
+        "_embedded_answer": "كيجي A- HBV B- HCV C- HIV D- HHV",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -12067,11 +12617,11 @@ window.FLASH_NOTES = {
           "letter": "C",
           "answerIdx": 2,
           "confidence": "low",
-          "reason": "Assess the tooth shade before performing bleaching.",
+          "reason": "Before performing bleaching, the first clinical step is to record the current color shade of the patient's teeth to esta",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
           ]
         }
       },
@@ -12379,14 +12929,14 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_model_suggested_answer": {
-          "letter": "B",
-          "answerIdx": 1,
-          "confidence": "low",
-          "reason": "Diamond burs cut porcelain effectively.",
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "A carbide bur is the most appropriate for sectioning a porcelain-fused-to-metal crown because it efficiently cuts throug; <one short sentence>\". The question: Which bur is most appropriate for sectioning a porcelain-fused-to-metal crown? Opti",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
           ]
         }
       },
@@ -12675,12 +13225,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "B",
           "answerIdx": 1,
-          "confidence": "low",
-          "reason": "Its higher solubility can cause marginal leakage over time.",
+          "confidence": "high",
+          "reason": "The main long-term disadvantage of glass ionomer cement is its susceptibility to solubility in oral fluids, which can le; Solubility and microleakage are the primary long-term disadvantages of glass ionomer cement, as they can lead to recurre",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
           ]
         }
       },
@@ -14830,11 +15380,11 @@ window.FLASH_NOTES = {
           "letter": "C",
           "answerIdx": 2,
           "confidence": "low",
-          "reason": "The sagittal view aligns with the long axis of the root, making vertical root fractures visible as discontinuities.",
+          "reason": "The sagittal view provides a longitudinal cross-section of the root, which is the most effective plane for visualizing a",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
           ]
         }
       },
@@ -16726,7 +17276,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "(Sensory nerve fibers of the dental pulp\nare afferent endings of the trigeminal cranial nerve. These fibers reach the root canal through\nthe apical foramen, going to the root pulp in lumps. These lumps are often associated with blood\nvessels in a collagen sheath, forming the neurovascular bundle.)",
+        "_embedded_answer": "(Sensory nerve fibers of the dental pulp are afferent endings of the trigeminal cranial nerve. These fibers reach the root canal through the apical foramen, going to the root pulp in lumps. These lumps are often associated with blood vessels in a collagen sheath, forming the neurovascular bundle.)",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -16800,7 +17350,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "> not options provided, 4 weeks needed",
+        "_embedded_answer": "1-hypoglycemia 2-hyperglycemia",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -17136,7 +17686,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "An HbA1c of 8% indicates poorly controlled diabetes, which significantly impairs healing and increases periodontal disea; HbA1c >8% is considered high risk. 25% bone loss is not severe (severe is >50%). But with uncontrolled diabetes, the pro",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "Trauma case with pinpoint exposure since 3 days: Partial pulpotomy",
@@ -17198,7 +17759,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "Calcified canals, dilaceration, and a severely compromised remaining root structure are unfavorable factors that make ro",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "Case has pain after RCT (extruded GP):",
@@ -17242,7 +17814,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "eading: \"Case referred for retreatment needs a post, PA shows void in mid canal, what is the reason for referral\"\n\nThe v",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "18: zinc phosphate should be:\n-mixed in small area\n-in warm glass slab\n-in one increment\n-in multiple increments",
@@ -17283,7 +17866,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "15 seconds is the standard etch time for enamel.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "Patient with necrotic tooth and buccal vestibule swelling:",
@@ -17306,7 +17900,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Incision and drainage with initiation of endodontic treatment is indicated for necrotic tooth with buccal swelling; anti; A necrotic tooth with buccal vestibule swelling indicates an acute periapical abscess requiring incision and drainage (I",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "-AB and defer Tx",
@@ -17372,7 +17977,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "Asymptomatic maxillary sinus pseudocysts are benign, self-limiting findings that require no treatment; they are typicall",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "Patient with avocado and banana allergy developed a rash during treatment:",
@@ -17417,7 +18033,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "Vertical root fracture commonly presents with metallic taste (from galvanic corrosion of the metal post), pain, and may ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "MRSA virus infection by:",
@@ -17439,7 +18066,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "MRSA (Methicillin-resistant Staphylococcus aureus) is primarily transmitted through direct contact with infected wounds,; MRSA spreads primarily through direct contact with infected individuals or contaminated surfaces, not via airborne trans",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "Influenza virus infection by:",
@@ -17461,7 +18099,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Influenza virus is primarily transmitted via airborne respiratory droplets and aerosols produced when an infected person; Influenza is transmitted mainly through respiratory droplets expelled when infected persons cough or sneeze.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "patient came with a treatment plan since 1 year ago came back to continue treatment which has been consented at that time:",
@@ -17483,7 +18132,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "When a patient returns after a significant period with a previously consented treatment plan, the clinician must re-exam; After a year, the patient's oral condition may have changed, so a re‑examination and updated treatment plan are",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "Most used fluoride varnish:",
@@ -17505,7 +18165,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "5% sodium fluoride varnish is the most widely used fluoride varnish in clinical practice.; 5% sodium fluoride varnish is the most commonly used fluoride varnish in clinical dentistry, widely recommended in guide",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "65: Renal patient with ulcers and lesions:\n-Increased urea\n66- Patient with “diffuse” redness after ortho:\n-allergy from Ni-Ti\n-Extended wire",
@@ -18458,7 +19129,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- NaOCl",
+        "_embedded_answer": "A- NaOCl B- Bismuth oxide C- Calcium silicate",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -18489,7 +19160,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Composite veneer",
+        "_embedded_answer": "A- Composite veneer B- Wait for canine eruption to close the space C- Crown Less than 2mm let resolve on its own",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -18519,7 +19190,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- MTA",
+        "_embedded_answer": "A- MTA B- Calcium hydroxide C- ZOE",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -18548,7 +19219,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- SAP",
+        "_embedded_answer": "A- SAP B- Acute abscess C- Vertical root fracture",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -18578,7 +19249,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Buccal",
+        "_embedded_answer": "A- Buccal B- Palatal C- Mid-ridge Need to see xray",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -18608,7 +19279,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- CBCT",
+        "_embedded_answer": "A- CBCT B- BW C- PA",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -18637,7 +19308,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- HBV",
+        "_embedded_answer": "A- HBV B- EBV C- Syphlis",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -18668,7 +19339,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "A- Supracrestal 0.5",
+        "_embedded_answer": "A- Supracrestal 0.5 B- Subgingival 0.5 C- Supragingival 0.5",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -18697,7 +19368,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Bahcet",
+        "_embedded_answer": "A- Bahcet B- Sjogren C- MMP",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -18756,7 +19427,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Bone graft",
+        "_embedded_answer": "A- Bone graft B- Internal sinus lift C- External sinus lift",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -18786,7 +19457,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "A- Short",
+        "_embedded_answer": "A- Short B- At the apical constriction C- Beyond the apex",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -18815,7 +19486,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Reassure and prescribe analgesics",
+        "_embedded_answer": "A- Reassure and prescribe analgesics B- Remove the appliance C- Refer to endo",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -18880,7 +19551,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Leukoplakia",
+        "_embedded_answer": "A- Leukoplakia B- Burning mouth syndrome C- Apthous ulcer",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -18910,7 +19581,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "A- Post&core + Crown",
+        "_embedded_answer": "A- Post&core + Crown B- Post&core / Crown lengthening / crown C- Extraction",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -18940,7 +19611,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Ibuprofen",
+        "_embedded_answer": "A- Ibuprofen B- Aspirin C- Paracetamol",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -18969,7 +19640,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Submental",
+        "_embedded_answer": "A- Submental B- Sublingual C- Submandibular",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -19027,7 +19698,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "A- Lead intoxication",
+        "_embedded_answer": "A- Lead intoxication B- Mercury C- Inflammation",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -19075,7 +19746,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Gutta percha removal",
+        "_embedded_answer": "A- Gutta percha removal B- Creating parallel walls C- For Coating to “something I can’t remember”",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -19123,7 +19794,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Supine",
+        "_embedded_answer": "A- Supine B- Semi-supine C- Upright",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -19154,7 +19825,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Autonomy",
+        "_embedded_answer": "A- Autonomy B- Non-maleficence C- Beneficence",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -19229,7 +19900,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "ally first visit: debridement (scaling) is essential to remove necrotic tissue, plus OHI, plus chlorhexidine rinse. Anti",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- OHI , CHX Mouth wash",
@@ -19276,7 +19958,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "en instrument left in the canal for 20 years, no filling. The prognosis? Likely poor because of long-standing infection,; one level would likely need extraction.\n\nBut the question seems to be asking specifically about the prognosis of the hem",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "Good",
@@ -19419,7 +20112,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "A negative cold test indicates pulp necrosis, and a sinus tract suggests a periapical abscess; the standard treatment fo; A negative cold test indicates pulp necrosis, and the presence of a sinus tract reflects a periapical infection, which i",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "9 years unilateral crossbite ( I don’t remember the whole scenario )",
@@ -19442,7 +20146,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "The Quad helix appliance is specifically indicated for correcting unilateral posterior crossbites in growing children, a",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Quad helix",
@@ -19485,7 +20200,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "At age 12 the midpalatal suture is still sufficiently open to allow rapid palatal expansion.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Rapid",
@@ -19530,7 +20256,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "Gracey curettes are designed with a 0-degree insertion angle, meaning the blade is parallel to the tooth surface upon in",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "lateral incisor with 5mm by golden ratio what is the canine width 3.09 0.618*5=3.09 4.18 6. 8.",
@@ -19613,7 +20350,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "The abutment is the component that links the implant fixture to the crown.; The abutment is the component that connects the implant fixture (embedded in bone) to the crown (prosthesis), serving as",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- Healing abutment",
@@ -19699,7 +20447,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "In a mandibular RPD with all molars missing and periodontally compromised anterior teeth, a lingual plate is the major c",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- Rest #33",
@@ -19786,7 +20545,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "low",
+          "reason": "ANSWER: D",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Non-critical cleaning and disinfect",
@@ -19873,7 +20643,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "low",
+          "reason": "Insufficient ceramic thickness makes the restoration prone to fracture during try‑in.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- High occ force",
@@ -19969,7 +20750,18 @@ window.FLASH_NOTES = {
         },
         "_embedded_answer": "( on OPG there was suspectable Condyle ankylosis )",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Pediatric condylar ankylosis with limited mouth opening and mandibular asymmetry requires surgical intervention; arthrop; ANSWER: A\nREASON",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Arthroplasty",
@@ -20033,7 +20825,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "The cover screw is used to seal the implant body during the submerged healing phase of a two-stage implant surgery, wher; <one short sentence>",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- cover screw",
@@ -20076,7 +20879,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Pemphigus Vulgaris is characterized by intraepithelial acantholysis producing a cleft within the epithelium and prickle ; Intraepithelial cleft with acantholysis and tombstone (prickle cell) appearance is characteristic of pemphigus vulgaris.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Pemphigus Vulgaris",
@@ -20119,7 +20933,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "sm, with written consent serving as documentation for certain procedures.\n\nGiven the options, I'll go with B (Verbal) as; for invasive procedures. However, the \"most important thing\" could be that it is \"written\" because verbal consent is not",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Written",
@@ -20185,7 +21010,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "The advertisement claiming lifelong insurance for a cosmetic dental procedure is misleading, and the dentist should ethi; Cosmetic dental treatments such as a Hollywood smile are not covered by dental insurance, and advertisements claiming li",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Explain to her that the advertisement was wrong",
@@ -20270,7 +21106,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Endosteal root form implants are the most commonly indicated type of dental implant, placed within the alveolar bone and; ant which type of implant\". Maybe they ask: \"Which type of implant is indicated for a patient with ...\"? Without context",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "blue tag of examination kit",
@@ -20292,7 +21139,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "control protocols, reporting to infection control is typically the first step when there's a potential contamination or ; clean and ready for use (or that it has been sterilized). However, the question: \"blue tag of examination kit\" and optio",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Extract 47 let 8 close space",
@@ -20336,7 +21194,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "A 3x3 cm radiolucency is a large lesion, likely cystic, and marsupialization (decompression) is the appropriate initial ; A 3 cm",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Marsupialization",
@@ -20379,7 +21248,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "ANSWER: B\nREASON:",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Non-maleficence",
@@ -20425,7 +21305,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "on C) involves recognizing the patient as a whole person with their own experiences, feelings, and narrative. When the d",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Patient privacy",
@@ -20532,7 +21423,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "In patients on IV bisphosphonates (zoledronic acid) for breast cancer metastasis, the risk of medication-related osteone",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Extract",
@@ -20596,7 +21498,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Paracetamol is safe and does not trigger bronchospasm like NSAIDs.; Paracetamol (acetaminophen) is generally safe in asthmatic patients, whereas NSAIDs can trigger bronchospasm in aspirin‑",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "anxious asthmatic",
@@ -20660,7 +21573,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Fluoride varnish should be avoided in patients with renal impairment.; Fluoride varnish is contraindicated in patients with renal impairment because reduced kidney function increases the risk",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Renal",
@@ -20704,7 +21628,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "K files have a twisted square cross‑section that makes them more flexible than H files or reamers.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "- H file",
@@ -20769,7 +21704,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Use a precurved small K‑file to gently remove the ledge.; A precurved small K‑file is used to gently negotiate and bypass a ledge without causing further damage.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "k file",
@@ -20852,7 +21798,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "First visit includes oral hygiene instruction and full clinical examination.; gingival (maybe supragingival scaling). Which is more appropriate? Usually first visit: gentle debridement (supragingiva",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- OHI and CHx",
@@ -20916,7 +21873,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "The hypoplastic lesion of a single permanent tooth after loss of a badly decayed primary tooth is characteristic of a Tu",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Turner syndrome",
@@ -20987,7 +21955,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "Tooth slooth",
+        "_embedded_answer": "Tooth slooth Endo explorer DG6 Endo explorer DG16",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -21018,7 +21986,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "Clasp with round cross-section",
+        "_embedded_answer": "Schimer test Pathergy test Immunofluorescence test",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -21085,7 +22053,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "only the anterior teeth; there are no posterior teeth to contact. In centric relation, the upper denture posterior teeth",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "type of custom tray for additiona silicone impressions?",
@@ -21109,7 +22088,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "Custom silicone trays are perforated with 2-3 mm spaces to allow material flow and reduce bulk.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "rebond with resin",
@@ -21199,7 +22189,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "Asthma",
+        "_embedded_answer": "Asthma DM Epilepsy",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -21266,7 +22256,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "es. How would treat him? If sputum smear negative three times, you might still treat if clinical suspicion high, but gui",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "- last pt",
@@ -21353,7 +22354,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "Slight undercuts in the tuberosities and anterior maxilla improve denture retention and do not require surgical interven",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "- surgical removal of both",
@@ -21459,7 +22471,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Immersion provides continuous contact between instruments and disinfectant, ensuring more reliable sterilization than sp; Immersion provides continuous contact of the disinfectant with all instrument surfaces, ensuring more effective and reli",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- spray is toxic",
@@ -21545,7 +22568,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Pain on biting after a long-standing amalgam restoration suggests a cracked tooth.; Pain on biting with normal periodontal probing depth is characteristic of cracked tooth syndrome.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- crack tooth syndrome",
@@ -21609,7 +22643,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Rapid expansion is indicated for a 6‑year‑old with a bilateral crossbite.; Rapid maxillary expansion is the appropriate treatment for a bilateral posterior crossbite in a 6‑year‑old patient.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "altered cast technique used in",
@@ -21633,7 +22678,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "xillary distal extension partial dentures (Kennedy class I and II) to record the movement of the denture base under func",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "- Kennedy cl i max",
@@ -21721,7 +22777,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "The patient requested privacy, so her confidentiality must be maintained and the diagnosis discussed only with her.; Preserve patient confidentiality and avoid disclosing the diagnosis to the husband or others without consent.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "- disclose with patient Confidentiality (it was written like this",
@@ -21808,7 +22875,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "ioned 5 inches (12.7 cm) from the film. The options are numbers: 12, 15, 18, 20 (presumably centimeters). 12 cm correspo",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "implant in #16, what is the traditional osteointegration time?",
@@ -21832,7 +22910,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "Traditional osseointegration for dental implants is about 3 months.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- 2months",
@@ -21919,7 +23008,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "Splinting is typically maintained for about 4 weeks after replantation of avulsed teeth.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "HSV",
@@ -22007,7 +23107,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "or an isolated deep pocket, treatment options: scaling and root planing, possibly periodontal surgery, or if the tooth i",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "- refer for consultation",
@@ -22164,7 +23275,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "Alginate impressions should be kept for about an hour before they begin to degrade.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- 15 mins",
@@ -22229,7 +23351,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": ") causing shrinkage. So the cast poured from the impression would be smaller than the patient's mouth (since impression ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "- cast will be smaller than pt mouth",
@@ -22314,7 +23447,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "The image depicts a formed crown shape, indicating morphodifferentiation.; A peg lateral is a small, conical tooth caused by abnormal shape formation during the morphodifferentiation stage of too",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Histodifferentiation",
@@ -22361,7 +23505,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "t be a distractor or error.\n\nGiven the options: A: Surgical excision and ohi (maybe \"oral hygiene\"?). B: Antibiotics. C:; Surgical excision combined with oral hygiene instruction is the standard management for recurrent pyogenic granuloma.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "- Surgical excision and ohi",
@@ -22508,7 +23663,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "It creates an undercut due to improper path of insertion.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Inadequate rest seat",
@@ -22552,7 +23718,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "UNKNOWN; UNKNOWN.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Advocator",
@@ -22618,7 +23795,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "Electrocautery can interfere with cardiac pacemaker function and cause arrhythmias.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- electrocautery",
@@ -22704,7 +23892,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Immediate washing with soap and water is the standard first-aid measure for blood exposure.; Immediate washing with soap and water is the standard first step for blood-contaminated hands to reduce microbial load a",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "- Wash with soap and water",
@@ -22769,7 +23968,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "Healing",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "2023/09/18 دماحلا مير GUC\nrheumatoid arthritis seen with :",
@@ -22933,7 +24143,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "a picture of smooth wedge shaped lesion on the c",
+        "_embedded_answer": "a picture of smooth wedge shaped lesion on the cervical third",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -23344,14 +24554,14 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_model_suggested_answer": {
-          "letter": "B",
-          "answerIdx": 1,
+          "letter": "A",
+          "answerIdx": 0,
           "confidence": "low",
-          "reason": "Deviation to the right on closure indicates weakness of the left medial pterygoid, the primary elevator on that side.",
+          "reason": "The lateral pterygoid is the primary protractor of the mandible, and a spasm of this muscle causes forward and lateral d",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         },
         "_repaired_2026": true,
@@ -23382,12 +24592,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "B",
           "answerIdx": 1,
-          "confidence": "low",
-          "reason": "Metal shrinkage and porcelain distortion during firing cause the open margin.",
+          "confidence": "high",
+          "reason": "The open margin results from metal shrinkage and/or porcelain distortion occurring during the porcelain firing (fusion) ; Porcelain firing causes metal and porcelain distortion, opening the previously tight metal try-in margin.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
           ]
         },
         "_repaired_2026": true,
@@ -23529,11 +24739,11 @@ window.FLASH_NOTES = {
           "letter": "A",
           "answerIdx": 0,
           "confidence": "low",
-          "reason": "Procaine is an ester-type local anesthetic cleared by plasma cholinesterase, making it safer in liver cirrhosis.",
+          "reason": "Procaine is an ester local anesthetic metabolized by plasma cholinesterases, making it safer in hepatic impairment.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
           ]
         },
         "_repaired_2026": true,
@@ -23669,12 +24879,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "A",
           "answerIdx": 0,
-          "confidence": "low",
-          "reason": "Fluoridated toothpaste twice daily with biannual fluoride varnish is the recommended preventive regimen for a low‑caries",
+          "confidence": "high",
+          "reason": "The question appears incomplete and mismatched, but fluoridated toothpaste twice daily with biannual fluoride varnish is; ession? Or something about disinfection? The answer choices: severe ocular edema, change in occlusion, skin laceration. ",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         },
         "_model_judgment": {
@@ -23922,7 +25132,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "erapy) and then reassess; if pocket persists after healing, then consider periodontal therapy. So answer: endo tx then f",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "- cover screw✅\nQ. Case scenario about pt has large amalgam reso with recurrent caries pain\nwith biting and tenderr to percussion with deep pocket (I forgot if it was wide or\nisolated), X-ray show periapical RL, they didn’t mention the pulp diagnosis,\nwhat the management..?",
@@ -24000,7 +25221,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Scaling; Scaling to remove calculus and biofilm plus physician consultation to adjust immunosuppressants will address the gingiva",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "patient with pseudo class III with no skeletal discrepancy and there was interference in the patient occlusion what the treatment? A-face mask B-frankl III C-remove the occlusion interference D-expansion",
@@ -24028,7 +25260,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "A- distal of upper molar",
+        "_embedded_answer": "A-face mask B-frankl III C-remove the occlusion interference D-expansion",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -24475,7 +25707,18 @@ window.FLASH_NOTES = {
         "_embedded_answer": "(PA canal has a void in the middle and it looks like it separated)",
         "_answer_disputed": true,
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "The void seen on the periapical radiograph indicates incomplete canal obturation, which is the reason for referral for r; The PA radiograph reveals a void in the mid canal, indicating inadequate obturation that necessitates retreatment.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "pt came complaining of gumboil, #36 with -ve cold test, with sinus tract, cbct with RL all around the molar only, ther was deep poucket BUT it was written exactly ( excellent oral hygiene and no plaque and calculus present ) what to do?",
@@ -24499,7 +25742,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "The presence of a sinus tract and negative cold test indicates a primary endodontic infection requiring root canal treat",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- FPD\nQ/ Picture of unilateral complete Clift lip and palate",
@@ -24555,7 +25809,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Shingles (herpes zoster) causes unilateral dermatomal pain that is often preceded by a vesicular rash in the same distri; A unilateral rash followed by sharp pain is characteristic of herpes zoster (shingles).",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "vertical root fracture Lond case with type II furcation what is the management ?",
@@ -24597,7 +25862,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "In class II division 1 malocclusion, the ANB angle is typically increased due to a retrognathic maxilla or prognathic ma; In Class II malocclusion, the maxilla is relatively protrusive or the mandible retrognathic, increasing the SNA‑SNB (ANB",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Class II div 2\nQ/ Case with radiograph and the tooth is lengring with abscess what is the\ndiagnosis ?",
@@ -24706,7 +25982,18 @@ window.FLASH_NOTES = {
         },
         "_embedded_answer": "Seems NUG",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "h (periodontal charting scaling and probing? plus mouthwash), D: Referral to hematology (maybe if suspect underlying hem",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "- AB 1 weak",
@@ -25348,14 +26635,14 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_model_suggested_answer": {
-          "letter": "A",
-          "answerIdx": 0,
+          "letter": "C",
+          "answerIdx": 2,
           "confidence": "low",
-          "reason": "Type I collagen is the primary collagen synthesized during pulp development.",
+          "reason": "During pulp development, type III collagen is the predominant collagen type.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         }
       },
@@ -25848,14 +27135,14 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_model_suggested_answer": {
-          "letter": "B",
-          "answerIdx": 1,
-          "confidence": "low",
-          "reason": "Indirect calcium hydroxide pulp treatment is appropriate for a non‑vital pulp, while direct capping requires a vital pul",
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Calcium hydroxide direct pulp treatment is indicated for a non-vital pulp in a permanent tooth with a closed apex follow; on using calcium hydroxide to induce apical barrier formation. However, the question mentions \"calcium hydroxide direct ",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         }
       }
@@ -29043,12 +30330,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "A",
           "answerIdx": 0,
-          "confidence": "low",
-          "reason": "Periodontal therapy is recommended during the second trimester rather than waiting until after delivery.",
+          "confidence": "high",
+          "reason": "Pregnancy gingivitis is treated with oral hygiene instruction and safe periodontal debridement, ideally scaling and root; Scaling and root planing during the second trimester is safe and effective for managing pregnancy gingivitis.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
           ]
         }
       },
@@ -29076,12 +30363,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "B",
           "answerIdx": 1,
-          "confidence": "low",
-          "reason": "BOP directly reflects inflammatory bleeding on probing.",
+          "confidence": "high",
+          "reason": "Bleeding on probing is the most sensitive clinical sign of gingival inflammation.; Bleeding on probing is the clinical gold standard for detecting gingival inflammation.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
           ]
         }
       },
@@ -30530,14 +31817,14 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_model_suggested_answer": {
-          "letter": "A",
-          "answerIdx": 0,
+          "letter": "B",
+          "answerIdx": 1,
           "confidence": "low",
-          "reason": "Gingivectomy is indicated to expose more tooth structure in a short clinical crown with minimal bone distance.",
+          "reason": "Gingivectomy is indicated for crown lengthening when there is insufficient clinical crown height due to gingival overgro",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         },
         "_model_judgment": {
@@ -30611,11 +31898,11 @@ window.FLASH_NOTES = {
           "letter": "D",
           "answerIdx": 3,
           "confidence": "low",
-          "reason": "Topical steroids are indicated for ulcerative lesions caused by hypersensitivity after scaling.",
+          "reason": "Topical steroid reduces inflammation and promotes healing of traumatic ulcerative lesions following scaling.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         },
         "_model_judgment": {
@@ -30663,7 +31950,18 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "a.SRP and re-evaluating(cid:32413)(cid:54392)\nb.Gingivectomy"
+        "_embedded_answer": "a.SRP and re-evaluating(cid:32413)(cid:54392)\nb.Gingivectomy",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "Disclosing agent is the best method to diagnose and visualize plaque accumulation.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "a.pocket reduction (cid:32413)(cid:54392)\n144.Pt have grade 2 furcation Generalized horizontal bone loss?\na.Extraction\nb.Plasty\nc.Resection\nd.GTR✅\n●\n145.Pt diagnosis TB 4 day ago ER need to prio treatment\na.Hand scaling root planing✅",
@@ -30718,7 +32016,18 @@ window.FLASH_NOTES = {
         "id": "fn_perio_0180",
         "ref": "b.Pocket reduction surgery c.osseous surgery 178.What instrument is used to measure gingival thickness?",
         "_verification_verdict": "needs_review",
-        "format": "mcq"
+        "format": "mcq",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "gival thickness can be measured using a periodontal probe (e.g., UNC-15 probe) or a calibrated periodontal probe with a ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "183.1.5 mobility which class",
@@ -31789,7 +33098,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "high",
+          "reason": "Zinc phosphate cement has a short working time and should be placed in multiple increments to ensure proper packing and ; Zinc phosphate",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Upper 1st PMs",
@@ -32065,7 +33385,18 @@ window.FLASH_NOTES = {
         "_embedded_answer": "A- Spore",
         "_answer_disputed": true,
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "PDL injection causes vasoconstriction leading to temporary cessation of circulation for approximately 30 minutes.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "B-Immediately admit hospital and take CT\nC-MRI\n18-Which disease is associated with smoking\nA-Cleft lip and palate\nB-Pierre robin syndrome\nC-Treache collins syndrome\n19-When a patient with expired insurance coverage request you to\ncontinue treatment and accept payment once their insuracnce renews ,\nmentioning that the periodontist has done this before , what course of\naction should you take\nA-Proce",
@@ -32149,7 +33480,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "A- Pathological tooth migration",
+        "_embedded_answer": "A- Pathological tooth migration B- Physiologic tooth movement C- Recession",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -32239,11 +33570,11 @@ window.FLASH_NOTES = {
           "letter": "B",
           "answerIdx": 1,
           "confidence": "low",
-          "reason": "Semi-adjustable articulators are sufficient for full crown cases with good occlusion and vertical dimension.",
+          "reason": "A semi-adjustable articulator is appropriate for a crown preparation with canine guidance and good occlusion, as it allo",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
           ]
         },
         "_repaired_2026": true,
@@ -32274,12 +33605,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "B",
           "answerIdx": 1,
-          "confidence": "low",
-          "reason": "The first step is to obtain a radiograph to assess the remaining tooth and the developing permanent successor.",
+          "confidence": "high",
+          "reason": "nent tooth and the alveolar bone. Then decide on space maintainer. So answer likely B: take radiograph.\n\nBut some might ; The first step in managing premature loss of a primary second molar is to take a radiograph to assess the development an",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
           ]
         },
         "_repaired_2026": true,
@@ -32340,7 +33671,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Liver disase",
+        "_embedded_answer": "A- Liver disase B- Congestive heart failure. Two irrelevant choices.",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -32371,7 +33702,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "A- Increase in Hba1c",
+        "_embedded_answer": "A- Increase in Hba1c B- Increased caries",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -32401,7 +33732,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "A- No TX",
+        "_embedded_answer": "A- No TX B- Biopsy C- Advise him to brush his tongue D- Apply topical corticosteroid",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -32490,7 +33821,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "A- Prep rests without clasps in that abutment",
+        "_embedded_answer": "A- Prep rests without clasps in that abutment B- Contouring the abutment C- Prep and surveyed crown D- Bypass the abutment in the design",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -32518,11 +33849,11 @@ window.FLASH_NOTES = {
           "letter": "B",
           "answerIdx": 1,
           "confidence": "low",
-          "reason": "Radiographic assessment provides the necessary data for space analysis.",
+          "reason": "ed dentition space analysis, the Tanaka and Johnson prediction method is the standard/most commonly used approach. It's ",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         },
         "_repaired_2026": true,
@@ -32554,7 +33885,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "A- Caries excavation,bitewings,RCT,crown lengthening",
+        "_embedded_answer": "A- Caries excavation,bitewings,RCT,crown lengthening B- Bitewing, caries excavation, RCT,crown lengthening C- caries excavation,RCT,bitewing, crown lengthening",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -32584,7 +33915,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "A- mesial to 21",
+        "_embedded_answer": "A- mesial to 21 B- distal to 21 C- mesial to 13 D- distal to 13",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -32614,7 +33945,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- immediately afer surgery",
+        "_embedded_answer": "A- immediately afer surgery B- never wear it C- delay for 1 weak D- delay for2 months",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -32644,7 +33975,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- call ER",
+        "_embedded_answer": "A- call ER B- assure Pt and document C- prescribe antihistamine D- remove latex containing material and prescribe antihistamine and document",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -32835,7 +34166,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- CT",
+        "_embedded_answer": "A- CT B-CBCT C-FNA",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -33106,7 +34437,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "A-centric occlusion",
+        "_embedded_answer": "A-centric occlusion B-centric relation",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -33199,7 +34530,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A-EBV",
+        "_embedded_answer": "A-EBV B-HPV C-HSV D-SLE",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -33629,7 +34960,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "ratio\" and \"severe bone loss\" with \"grade 3 mobility.\" This tooth is likely hopeless from a periodontal standpoint. The ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "Patient complains from dull pain, Has #36 with two 5 mm isolated pockets in different areas, and furcation involvement and is diagnosed as previously treated with symptomatic apical periodontitis, what is the common cause of these phenomena:",
@@ -33653,7 +34995,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "In a previously treated tooth presenting with symptomatic apical periodontitis, isolated deep pockets in different areas; use could be a crack (vertical root fracture) leading to both periodontal breakdown and persistent apical periodontitis.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "-Crack",
@@ -33716,7 +35069,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "Ordering blood tests helps identify the underlying infection before proceeding with dental treatment.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "PA of molar with large lesion that will undergo endo surgery, what could cause recession:",
@@ -33738,7 +35102,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "A semilunar flap is known to cause gingival recession because the incision is placed in the attached gingiva, and healin",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "Patient with Midbuccal 5 mm pocket in #36, Endo test normal, dx:",
@@ -33762,7 +35137,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "A 5 mm midbuccal pocket with a normal (vital) endodontic test indicates periodontal disease only, with no endodontic inv; Normal endodontic testing rules out pulpal pathology, so the isolated 5 mm pocket is attributed to periodontal disease a",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "tooth with deep pocket db and -ve cold test? primary endo sedondary perio",
@@ -33790,7 +35176,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "primary endo",
+        "_embedded_answer": "primary endo sedondary perio",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -33915,7 +35301,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "A- Epstein’s Pearls",
+        "_embedded_answer": "A- Epstein’s Pearls B- Bohn’s Nodules C- Fordyce granules",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -33944,7 +35330,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Supine",
+        "_embedded_answer": "A- Supine B- Upright C- Knee to knee",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -34004,7 +35390,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- 25",
+        "_embedded_answer": "A- 25 B- 35 C- 30",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -34033,7 +35419,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Induce vomiting",
+        "_embedded_answer": "A- Induce vomiting B- Give him milk immediately C- IV “something I can’t remember “",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -34064,7 +35450,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Lidocaine",
+        "_embedded_answer": "A- Lidocaine B- Prilocaine C- Articaine",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -34093,7 +35479,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Stage I",
+        "_embedded_answer": "A- Stage I B- Stage II C- Stage III",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -34219,7 +35605,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "pseudomembrane on interdental papilla in a stressed, young army smoker.\n\nOption D (nicotinic stomatitis) is associated w",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- ANUG",
@@ -34286,7 +35683,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "low",
+          "reason": "For a single posterior implant, mutually protected occlusion is preferred to minimize off-axis forces on the implant by ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Canine guidance",
@@ -34330,7 +35738,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Overprotective parenting typically increases a child's anxiety and fear, leading to the worst behavior in a dental clini; Overprotective parenting is associated with increased anxiety and poorer behavioral outcomes in children.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Worst behavior",
@@ -34395,7 +35814,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "CBCT (Cone Beam Computed Tomography) is the gold standard imaging modality for confirming vertical root fractures, as it; CBCT offers the highest sensitivity and specificity for detecting vertical root fractures non‑invasively.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Surgical exploratory",
@@ -34440,7 +35870,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "An interdental brush is the most appropriate tool for cleaning a large open contact or open gingival embrasure, as it ca; Interdental brushes are most effective for cleaning large open contacts between teeth.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Interdental brush",
@@ -34508,7 +35949,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "A proximal carious lesion on an anterior tooth that does not involve the incisal edge is classified as Class III in Blac; Class III cavities are proximal lesions on anterior teeth that do not involve the incisal edge.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Class I",
@@ -34552,7 +36004,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "In Class II malocclusion, the ANB angle increases because the maxilla is protrusive relative to the mandible or the mand; In Class II skeletal pattern, the mandible is retrognathic relative to the maxilla, resulting in an increased ANB angle.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Class III",
@@ -34599,7 +36062,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "A proximal (mesial) carious lesion on an anterior tooth that does not involve the incisal edge is classified as Class II; Class III caries involves proximal surfaces of anterior teeth without incisal edge involvement.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Incisal third",
@@ -34667,7 +36141,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Gingival recession most commonly causes cervical root hypersensitivity due; ybe refers to \"gingival overgrowth\" between teeth #33 and #34 (mandibular canines? Actually #33 is mandibular left canin",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Cervical root",
@@ -34735,7 +36220,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "ity\nC. Cervical crown - This would be on the crown portion, not typically associated with recession-related hypersensiti",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "excisional biopsy",
@@ -34960,7 +36456,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Lateral periodontal cysts are managed by surgical enucleation and curettage, especially when the associated teeth are vi; Lateral periodontal cyst is treated by surgical enucleation (curettage) when the involved tooth is vital.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- curretage",
@@ -35024,7 +36531,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "? Possibly they want to address sharp tooth because it can cause ulceration leading to necrosis. However, suppuration in",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- sharp tooth",
@@ -35068,7 +36586,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "ART (Atraumatic Restorative Treatment) is a minimally invasive, conservative approach to managing dental caries that pre; ART (Atraumatic Restorative Treatment) is a minimally invasive, conservative approach to caries management.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- preventive tx",
@@ -35133,7 +36662,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "A fixed partial denture combined with a night guard addresses the patient's desire for a fixed restoration while managin; A night guard is needed to protect the fixed prosthesis from nocturnal bruxism.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "pt with second quadrant all buccal recession (no interproximal), dx?",
@@ -35157,7 +36697,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "Buccal recession without interproximal attachment loss is classified as a mucogingival deformity (specifically buccal re; Isolated buccal recession without interproximal loss indicates a mucogingival deformity (buccal recession), not a period",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- mucogingical deformity buccal recession",
@@ -35202,7 +36753,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "dren is typically 10-15 mg/kg every 4-6 hours. For a 20 kg child, 10 mg/kg = 200 mg, 15 mg/kg = 300 mg. Concentration is; 32 mg/mL. Typical pediatric acetaminophen dose is 10-15 mg/kg per dose every 4-6 hours. For a 20 kg child, dose = 10-15 ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- low pain threshold",
@@ -35268,7 +36830,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "high",
+          "reason": "to excessive fluoride ingestion\n\nFluoride mouthwash (D) is contraindicated in young children, especially those with deve; Fluoride mouthwash is contraindicated in young children who may inadvertently swallow it, posing a risk of fluorosis, es",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- flourise gel",
@@ -35355,7 +36928,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Open contacts between teeth allow food impaction and plaque accumulation, which directly increases the risk of both prox; Open contacts create spaces where food and plaque accumulate, increasing the risk of both caries and periodontal disease",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- open contact",
@@ -35442,7 +37026,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "The American Association of Orthodontists recommends an initial orthodontic screening at age 7, when enough permanent te; The American Association of Orthodontists recommends the first orthodontic screening at age 7.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "which is best to extract and not keep during perio treatmwnr?",
@@ -35466,7 +37061,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "on involvement in premolars, especially maxillary first premolars, can be challenging to manage. The upper first premola",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- upper canine with 2 wall defect",
@@ -35553,7 +37159,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "Difficulty isolating the surgical site leads to contamination from saliva and blood, which compromises the bond; Difficulty isolating the surgical site leads to moisture contamination, compromising bond strength and causing the butto",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- expired composite material",
@@ -35640,7 +37257,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "high",
+          "reason": "Fever and diffuse swelling suggest a spreading infection needing antibiotics plus initiation of root canal therapy.; Severe pain, diffuse swelling, and fever (39°C) indicate an acute apical abscess with systemic involvement, requiring an",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "RCT of #33",
@@ -35705,7 +37333,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "high",
+          "reason": "Glass Ionomer Cement (GIC) is the material used in pediatric dentistry for its dual benefits of fluoride release (pharma; Glass ionomer cement releases fluoride (pharmacologic benefit) and bonds chemically to tooth structure.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- amalgam",
@@ -35792,7 +37431,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "After periodontal treatment, the cervical area of the root is the most sensitive due to gingival recession and exposure ; After periodontal treatment, the exposed cervical root dentin is the area most prone to sensitivity.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- middle of crown",
@@ -35890,7 +37540,18 @@ window.FLASH_NOTES = {
         "_embedded_answer": "(pic was smooth, no projections)",
         "_answer_disputed": true,
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "sks for the differential diagnosis. The \"pic was smooth, no projections\" might refer to the clinical appearance being sm; ANSWER: A",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- gingival papilloma",
@@ -35977,7 +37638,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "ANSWER: C\nREASON:",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- remove quadhelix",
@@ -36066,7 +37738,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "ausing the irritation. This provides immediate relief and prevents further soft tissue trauma until the next appointment; year-old smoker for 20 years\"? No. Could be \"19-year-old, smoker for 20 years\"? That is impossible. Maybe it's \"19-year-",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- tell him to wait",
@@ -36155,7 +37838,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "by scraping it off the tooth. In that case, cutting the extended portion of the wire that's causing irritation would be ; y.\n\nGiven the patient has irritation from a debonded wire, the immediate action is to relieve irritation: cut the extend",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "exophthalamus, midface hypoplasia, and craniosystosis",
@@ -36177,7 +37871,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Crouzon syndrome is classically characterized by the triad of craniosynostosis, midface hypoplasia, and exophthalmos (pr; <one short sentence>",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- apertt",
@@ -36294,7 +37999,18 @@ window.FLASH_NOTES = {
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "larly associated with diabetes as a common finding.\n- Burning tongue is actually quite common in diabetics.\n\nSo the leas; ick the best answer based on knowledge. The question: \"least common in diabetic?\" Among the options: chelitis (angular c",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "gutta percha?",
@@ -36316,7 +38032,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "ve it. So maybe the answer is none? But we must choose between A and B. Which is more correct? Possibly the question: \"G",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- 70% alcohol",
@@ -36414,7 +38141,18 @@ window.FLASH_NOTES = {
         "_embedded_answer": "no pa lesion",
         "_answer_disputed": true,
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "For a recent (3-day-old) pinpoint traumatic exposure in a vital tooth with no periapical lesion, partial pulpotomy with ; A small, recent pulp exposure without periapical lesion is best treated with a partial (Cvek) pulpotomy using MTA to mai",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- doc mta",
@@ -36501,7 +38239,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "as it could promote further clotting.\n\nD. Atrial valve something - This likely refers to atrial fibrillation or valvular",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- stroke",
@@ -36566,7 +38315,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "Retraction cord with aluminum chloride provides hemostasis without the cardiovascular risks associated with epinephrine,; Retraction cord with aluminum chloride provides hemostasis without systemic vasoconstrictor effects, making it safer for",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- electrosurgery",
@@ -36631,7 +38391,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "high",
+          "reason": "Elective appointments should be prioritized based on clinical need, not personal connections, to ensure fair allocation ; Appointments should be allocated based",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- report to patient relations",
@@ -36718,7 +38489,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "A severely autistic 20-year-old adult who lacks the mental capacity to understand the nature and consequences of treatme; The patient lacks decision‑making capacity due to severe autism, so consent must be obtained from his legally authorized",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- brother",
@@ -36805,7 +38587,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Centric interferences are corrected by reducing the cusp tip, as the cusp tip is the primary contact point during centri; Cusp tip reduction is performed to",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- centric interference",
@@ -36871,7 +38664,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "high",
+          "reason": "In bruxism patients, placing the contact in a smoothly concave fossa on the opposing tooth allows proper seating of the ; restoration's occlusal surface be slightly concave (smoothly concave fossa) to allow the opposing tooth to move laterall",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- no contact",
@@ -36956,7 +38760,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "one lesions; CT/CBCT is better. Aspiration is a biopsy step. For a large radiolucency, before excision, you need to get ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "pregnant 7 weeks, pain in #16 deep caries, what to do?",
@@ -36980,7 +38795,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "eks.\n\nActually, in dental management of pregnant patients:\n- Pain management is important\n- Acetaminophen is the analges",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- give acetaminophen",
@@ -37046,7 +38872,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "When an impacted third molar is in close proximity to the inferior alveolar nerve, the standard of care is to refer the ; An impacted third molar near the inferior alveolar nerve poses a significant risk of nerve injury, so a general dentist ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- refer to OMFS",
@@ -37131,7 +38968,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "In pediatric oncology dentistry, a minimum of 14 days is typically recommended after tooth extraction before initiating ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- 21 days",
@@ -37176,7 +39024,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "ays\" or \"weeks.\" But among these options, 8 months is the only one that reflects long-term survival. Let me check if the",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- few mins",
@@ -37262,7 +39121,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "A positive Paul-Bunnell test is characteristic of infectious mononucleosis caused by Epstein-Barr virus.; The Paul-Bunnell test detects heterophile antibodies produced in response to Epstein-Barr virus (EBV) infection, which c",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- epstien barr",
@@ -37306,7 +39176,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "A smooth tongue (atrophic glossitis) is a classic clinical sign of iron deficiency anemia, which is characterized by a l",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- iron defiecwncg",
@@ -37393,7 +39274,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Denture fit is the first and most fundamental thing to check upon insertion, as retention, stability, and tissue adaptat; The first step is to verify that the denture fits properly before any other assessment.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- denture fit",
@@ -37457,7 +39349,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Clindamycin (FDA Category B) is considered safe during pregnancy, whereas tetracycline (FDA Category D) is contraindicat; Clindamycin is pregnancy category B and considered safe, whereas tetracycline is contraindicated in pregnancy.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "70 yo pt reports having to use 3 pillows under his head to prevent shortness of breath, has swollen feet?",
@@ -37479,7 +39382,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "Orthopnea (needing multiple pillows to breathe) and peripheral edema (swollen feet) are classic clinical manifestations ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- diabetes",
@@ -37604,7 +39518,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "When an impacted third molar is in close proximity to the inferior alveolar nerve, the standard of care is to refer the ; Referral to oral maxillofacial surgeon (OMFS) is standard for impacted third molars near nerves to avoid complications l",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "pt needs extraction of #11 under GA, surgeon extracted #21 by mistake and then immediately replanted and splinted, what next?",
@@ -37628,7 +39553,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "high",
+          "reason": "ANSWER: D\nREASON; Inform the patient of the mistake.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- dismiss pt",
@@ -37733,7 +39669,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Pink Mummery tooth is a classic clinical sign of internal resorption, where the resorptive process originates from the p; The pink discoloration known as the \"pink tooth of Mummery\" is characteristic of internal resorption.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- internal resoption",
@@ -37799,7 +39746,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "high",
+          "reason": "A tongue injury with no bleeding indicates a superficial mucosal wound; the tongue's excellent blood supply and healing ; A tongue injury with no bleeding indicates a superficial wound that does not require surgical closure; such wounds can h",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- 1 layer repar",
@@ -37884,7 +39842,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "e physician first for glycemic control before proceeding with periodontal treatment, as uncontrolled diabetes significan",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- better nutrition\nCould be scarlet fever?- ?\n79-pt closed her lips on the suction tip, this can cause contamination in the\nwaterline, what is the cause?\npressure in the mouth is less than pressure in the tube ●\npressure in the mouth is more than pressure in the tube ●\npressure is the same",
@@ -38044,10 +40013,21 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "After detachment of calculus from root with using scaler, it went in the deep pocket\n-You didn’t remove all the calculus\n-Rough root surface because y",
+        "_embedded_answer": "51-after SRP p.t ca",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "chment loss but it might still be mucositis vs peri-implantitis depending on bone loss.\n\nActually, looking at this more ; ontal charting? \"Clinical attachment loss 4mm and supration of implant d.x?\" Might be about peri-implantitis vs mucositi",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "picture of mucocele and what is your treatment. Surgical excision 103-what is the safest drug to use for asthma ? Acetaminophen 104-patient has 9mm incisor show at rest with normal lip position what is the treatment? 105-buccally impacted canine after traction can result in- Overgrowth Recession 106-25y/o female with unknown medical history with picture that look like pyogenic granuloma, what is t",
@@ -38074,7 +40054,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "t's think.\n\nThe question: \"patient has 9mm incisor show at rest with normal lip position what is the treatment?\" Options",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "-Many questions about VRF\n-Many questions of the previous questions.\n2023/09/19 ديكا( يريطملا امير) GUC\nPic of naber probe\nPic of undercut gauge\nSeveral questions about VRF\nSeveral questions about perio endo lesion\nA distinctive clinical presantation that will transform bell palsy into ramsy hunt\nsyndrome?\nWhich space infection ?\ncanine space infection تارايخلاب دوجوم وم\na question about a doctor ",
@@ -38126,7 +40117,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "his would be a negative property, not a desirable one\nC. slow - This seems to be referring to resorption being slow, whi",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- the answer should be slow\n-\n3- pic of internal resorption asking is it cervical resorption, external or internal\n4- internal resorption in a radiograph is:\n-radiolucency within pulp cavity\n-radiopaque\n-radiolucency at root\n5- Patient present with spider nevous , ascites ,( more signs were presented but I don’t\nrecall )\nMost common complication of extraction:\n-bleeding\n-dry socket\n-bone necrosis\n",
@@ -38172,7 +40174,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "a- Informed he need to stop smker first\nb- Give him nicotine medicine (I forgat how is write this)",
+        "_embedded_answer": "a- Informed he need to stop smker first b- Give him nicotine medicine (I forgat how is write this) c- Scaling and perion tx… etc",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -38203,7 +40205,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- stage 0",
+        "_embedded_answer": "a- Informed he need to stop smker first b- Give him nicotine medicine (I forgat how is write this) c- Scaling and perion tx… etc",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -38257,7 +40259,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "At age 10, delayed eruption of the maxillary canine is still within normal limits, and the presence of a palpable canine; ears old child came with his father, the father was concern about the maxillary canine that didn’t erupt yet, upon IOE c",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "implant placed 1 year ago, with 5mm PD, pt complain of difficulty brushing and BOP, *Picture of implant with mild recession, excellent crown what to do?",
@@ -38292,7 +40305,18 @@ window.FLASH_NOTES = {
         "_embedded_answer": "high cholesterol level\n-systemic cortisol",
         "_answer_disputed": true,
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "lammation.\n\nWait, let me reconsider. The question seems to be asking about the best next step. With 5mm PD, BOP, and dif",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "patient with pipe smoke for 14 years came with a grayish white palate with multiple red nodules, what to do?",
@@ -38316,7 +40340,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "A grayish-white palate with multiple red nodules in a long-term pipe smoker is suspicious for nicotinic stomatitis with ; Excisional biopsy is required to evaluate suspicious leukoplakic lesions with nodules.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- radiation therapy\n-re assure\n-excisional biopsy\nQ15- disinfection of wax rims after taking MX-MD relations ?\n-iodophor\n-glutaraldehyde\nQ16- glossoptosis, sever retrognathia ?\n-pire robben syndrome\nQ17-leukemia patient came after chemo cycle with multiple oral ulcers, what is the\ncause?",
@@ -38359,7 +40394,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "A precurved small K-file is the instrument of choice for managing ledging because its flexibility and small size allow i; A precurved small K-file is the instrument of choice for managing ledging because its small size and",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- supine position & RD isolation",
@@ -38472,7 +40518,18 @@ window.FLASH_NOTES = {
         },
         "_embedded_answer": "MTA",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "ks typically cause one defect, not two isolated pockets.\n\nWait, let me reconsider. The question mentions \"two isolated s",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "7-pic patient with NUG what stage?\nA-2\nB-4\nC-7\nD-5 ( this was the answer)\n8-patient with NUG first visit what to do?\nA-SRP\nB-supra-gingival scaling only\nC-chlorhexidine mouth wash and Plaque control reinforced\n9-hypothyroidism patient with sever large intra oral swelling come to the emergency\nThey give him IV antibiotic what the next step?\nA-give hydrocortisone\nB-I&D\nC-follow up after 7 days\n10- I",
@@ -38558,7 +40615,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "A 10mm isolated deep pocket with normal percussion response and dull pain on biting is characteristic of a periodontal d; roll\". This sounds like a vertical root fracture (VRF) maybe? Let's think.\n\nAn isolated pocket on the mesial lingual (ML",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "ANB in class II ( كسفنب سلاك يا فرعت مزلاو كتمولافيس ةروص)",
@@ -38580,7 +40648,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "In Class II malocclusion, the maxilla is protrusive relative to the mandible or the mandible is retrusive, resulting in ; In Class II malocclusions, the ANB angle is increased, indicating a discrepancy where the maxilla is positioned signific",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- increase",
@@ -38692,7 +40771,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "high",
+          "reason": "The prosthodontist should professionally communicate the alternative treatment plan to the patient and directly discuss ; He should inform the patient of his differing treatment plan and discuss it with the referring dentist.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "Refer the patient.",
@@ -38754,7 +40844,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "A gap greater than 0.5 mm in an amalgam restoration indicates restoration failure and requires replacement of the amalga",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- replaced the amalgam with new restoration",
@@ -38807,7 +40908,18 @@ window.FLASH_NOTES = {
         },
         "_embedded_answer": "GTR\n-extract",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "A deep periodontal defect involving the furcation with significant recession and no restorable tooth structure is best t",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- removed the affected root",
@@ -38852,7 +40964,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "A periapical abscess developing two weeks after pulp exposure indicates irreversible pulpitis progressing to pulp necros",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- reversible",
@@ -38936,7 +41059,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Amoxicillin is the antibiotic of choice for a 17-year-old with an avulsed tooth to prevent infection, while tetracycline; Amoxicillin is the antibiotic of choice for avulsed teeth in a 17-year-old, as tetracyclines are contraindicated in deve",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "40 years with smooth and intact restoration with tight contact came with felling pain in gingiva and stick food , normal PD , cause ?",
@@ -38958,7 +41092,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "A smooth, intact restoration with tight contact that causes gingival pain and food impaction despite normal probing dept",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- decrease embrasure",
@@ -39012,7 +41157,18 @@ window.FLASH_NOTES = {
         },
         "_embedded_answer": "( هروص هيف (",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "high",
+          "reason": "Bleeding on probing is a clinical sign of inflammation, which is inconsistent with gingival health.; Bleeding on probing indicates inflammation, so gingival health is not present.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "- recession",
@@ -39077,7 +41233,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "high",
+          "reason": "Bleeding on probing indicates inflammation, so gingival health is not present.; Bleeding on probing indicates inflammation, so gingival health is not present.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "patient 14 years came after trauma happened yesterday related #11 ( نجويتسكلاا طقف حضاو سب هروص هيف (",
@@ -39109,7 +41276,18 @@ window.FLASH_NOTES = {
         },
         "_embedded_answer": "هيقابلا تارايخلا ركذتام",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "A horizontal root fracture typically presents with mobility and possible slight extrusion following trauma.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- extrusion with internal resorption",
@@ -39173,7 +41351,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Fluorosis causes hypoplasia that predominantly affects the incisal edges of anterior teeth and occlusal surfaces of post; The localized hypoplasia on incisal tips and occlusal surfaces with normal posterior occlusion is characteristic of mild",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "- Fluorosis",
@@ -39298,7 +41487,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "A lip bumper appliance is specifically indicated; Lip bumper appliance provides posterior anchorage and can help manage retroclined lower incisors in Class II cases.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "- frankel",
@@ -39391,7 +41591,18 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "A.Severe occular edema"
+        "_embedded_answer": "A.Severe occular edema",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Change in occlusion indicates disrupted dental arch relationship, a specific sign of facial fracture.; Change in occlusion is a specific sign of facial fracture after trauma.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "- Calculus\nQ14 You told the pt to say ahh and soft palate one said was not moving as the other, what are you examining?",
@@ -39625,7 +41836,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "For a Class IV composite restoration with shade mismatch, etching and adding incremental composite layers allows shade a",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- Replace",
@@ -39801,9 +42023,20 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Soft-tissue quality",
+        "_embedded_answer": "A- Soft-tissue quality B- Interocclusal space C-",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "After bilateral adrenalectomy, the patient is at risk for acute adrenal crisis with hypotension and unconsciousness; imm; After bilateral adrenalectomy, the patient is at risk for acute adrenal crisis with hypotension and shock; immediate tre",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "pregnant women 28th week has painless enlargement 2 months ago but only came after it started to bother her “provided picture showed enlargement the size of the mouth mirror Palataly to the upper right premolars and another enlargement Buccally” “radiograph showing bone resorption between the premolars” A-Carcinoma in situ B-Pregnancy tumor C-Gingival abscess or something",
@@ -39851,7 +42084,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Good",
+        "_embedded_answer": "A- Good B-Poor C-Fair",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -39976,7 +42209,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A-0",
+        "_embedded_answer": "A-0 B-Less than 5% C-Between 5-10% D-More than 10%",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -40007,7 +42240,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A-Anxiety",
+        "_embedded_answer": "A-Anxiety B- Insulin shock C-HYPERglycemia",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -40038,7 +42271,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A-Chest X-ray",
+        "_embedded_answer": "A-Chest X-ray B-C-reactive protein C-ECG",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -40068,7 +42301,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- INR",
+        "_embedded_answer": "A- INR B-aPTT C-RBC “There was no CBC only RBC”",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -40097,7 +42330,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Friction lock",
+        "_embedded_answer": "A- Friction lock B- Self-thread C-Self-shear D- Cemented pin",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -40127,7 +42360,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A-Amalgam tattoo",
+        "_embedded_answer": "A-Amalgam tattoo B-Melanotic macule C-Melanocytic nevus",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -40157,7 +42390,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A-Sandblasting with 50% aluminum oxide or something",
+        "_embedded_answer": "A-Sandblasting with 50% aluminum oxide or something B-Sandblasting with 37% hydrochloric acid C-Acid etch with 37% hydrofluoric acid",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -40187,7 +42420,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         },
-        "_embedded_answer": "A-Proximal plate and mesial minor connector",
+        "_embedded_answer": "A-Proximal plate and mesial minor connector B-Lingual bracing arm C-Rest and mesial minor connector",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -40235,7 +42468,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A-Direct",
+        "_embedded_answer": "A-Direct B-Door handle C-Surfaces",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -40264,7 +42497,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Smoking",
+        "_embedded_answer": "A- Smoking B-Betel nut",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -40294,7 +42527,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A-Surgical removal",
+        "_embedded_answer": "A-Surgical removal B-Radiotherapy C-Antibiotic",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -40323,7 +42556,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         },
-        "_embedded_answer": "A-Reactive",
+        "_embedded_answer": "A-Reactive B-Inflammatory C-Benign tumor D- Malignant tumor",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -40353,7 +42586,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A-Scaling and root planning",
+        "_embedded_answer": "A-Scaling and root planning B-Remove the overhang C-Replace the restorations with composites",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -40402,7 +42635,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         },
-        "_embedded_answer": "A-Root caries with normal gingiva",
+        "_embedded_answer": "A-Root caries with normal gingiva B- Dental caries and gingival inflammation",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -40432,7 +42665,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         },
-        "_embedded_answer": "A-Aspirin",
+        "_embedded_answer": "A-Aspirin B-Antibiotic C-Steroid “but I don’t remember will if it is present between the options”",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -40462,7 +42695,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         },
-        "_embedded_answer": "A-Antibiotic",
+        "_embedded_answer": "A-Antibiotic B-CHX mouthwash C-Marginal resection",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -40492,7 +42725,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A-Pulpotomy",
+        "_embedded_answer": "A-Pulpotomy B-Occ reduction",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -40529,10 +42762,21 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A-Necrotic",
+        "_embedded_answer": "A-Necrotic B-Irreversible pulpitis C-Reversible pulpitis 2023/09/25 دياعلا دوعس BUC 1 2-*patient has large pulp chamber with open apex and sinus tract in the Lower premolar*",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "س BUC 1 2-*patient has large pulp chamber with open apex and sinus tract in the Lower premolar*\". And then the options l; Pus discharge from the pulp chamber upon opening indicates pulp necrosis with associated infection.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "% of apical accessory canal?",
@@ -40556,7 +42800,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Approximately 74% of teeth have apical accessory canals.; 74% of teeth have apical accessory canals.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "patient with necrotic pulp and asymptomatic apical periodontitis After initing treatment patient came back 24 hours later",
@@ -40579,7 +42834,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "A flare-up is the most common cause of postoperative pain within 24 hours after initiating root canal treatment in a pat",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- let the patient speak and observe splent sounds",
@@ -40626,7 +42892,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "Decreased freeway space is assessed by subtracting the stable occlusal dimension from the vertical dimension of rest to ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "7 mm\n-denture wearer complaining of numbness in the mental\narea and asking about the material used in the surface\n( chloroform and rouge)\n-patient has multiple periapical radiolucency and patiens\nhad before under treatment nasopharyngal carcinoma\n-osteomylaitis\n-osteoradionecrosis\n2023/09/25 يريسع دامع BUC\nPt. 22 yrs have pain especially with chewing,\nsmoker .. Lymphdonapathe, gryesh in\ngingiva ? ",
@@ -40736,7 +43013,18 @@ window.FLASH_NOTES = {
         "_embedded_answer": "Confditality\n-Privacy",
         "_answer_disputed": true,
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "Posting a photo of a pediatric patient without consent violates patient confidentiality.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "Pt and his mother are in you clinic CC was tooth #16 has deep caries and its restorable, the mother didnt want her son to have RCT so she wanted the tooth to be extracted after consultation with her son, what will you do?",
@@ -40771,7 +43059,18 @@ window.FLASH_NOTES = {
         "_embedded_answer": "Extract if both of them agreed on it.\n-Refer t",
         "_answer_disputed": true,
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "A minor requires parental consent for extraction, and the child should also assent by signing the consent form.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "● secure with a floss",
@@ -41743,11 +44042,11 @@ window.FLASH_NOTES = {
           "letter": "C",
           "answerIdx": 2,
           "confidence": "low",
-          "reason": "The case requires removal of bone to achieve the needed crown lengthening.",
+          "reason": "To achieve adequate crown lengthening when there is insufficient keratinized tissue and bone involvement, both gingival ",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/kilo-auto/free"
           ]
         }
       },
@@ -42154,12 +44453,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "A",
           "answerIdx": 0,
-          "confidence": "low",
-          "reason": "Crown preparation extending to the supracrestal attachment (biological width) can cause gingival irritation and bleeding",
+          "confidence": "high",
+          "reason": "The recent crowns likely extend beyond the biological width, irritating the gingiva and causing bleeding.; Recent full crown restorations with excessive supracrestal extension can violate the biological width, causing inflammat",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/kilo-auto/free"
           ]
         }
       },
@@ -42616,14 +44915,14 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_model_suggested_answer": {
-          "letter": "B",
-          "answerIdx": 1,
+          "letter": "A",
+          "answerIdx": 0,
           "confidence": "low",
-          "reason": "External bevel incision is used when the flap is to be positioned coronally.",
+          "reason": "The internal bevel (reverse bevel) incision is the standard incision used in periodontal flap surgery when the flap is i",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/kilo-auto/free"
           ]
         }
       },
@@ -42676,14 +44975,14 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_model_suggested_answer": {
-          "letter": "B",
-          "answerIdx": 1,
+          "letter": "A",
+          "answerIdx": 0,
           "confidence": "low",
-          "reason": "3–4 mm CAL and ~20% bone loss correspond to Stage II, and a 12‑year‑old’s rapid progression indicates Grade C.",
+          "reason": "The 3–4 mm clinical attachment loss and 20% bone loss in a 12-year-old indicate moderate periodontal destruction consist",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/openrouter/free"
           ]
         }
       },
@@ -42896,7 +45195,18 @@ window.FLASH_NOTES = {
         "id": "fn_perio_gf2_0014",
         "_verified_explanation": "From Golden File 2 (yes we can 2021).",
         "_verification_verdict": "needs_review",
-        "format": "mcq"
+        "format": "mcq",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "Cyclosporine is a known cause of drug-induced gingival hyperplasia, especially in renal transplant patients.; Cyclosporine is a classic cause of gingival hyperplasia.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "A periodontist is performing resective osseous surgery for his pa.ent. during the procedure, interproximal bone level varied horizontally, with areas of one-walled interproximal defects (hemiseptal de",
@@ -42920,12 +45230,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "A",
           "answerIdx": 0,
-          "confidence": "low",
-          "reason": "The one‑walled interproximal defect is best managed by gradualizing the marginal bone.",
+          "confidence": "high",
+          "reason": "Gradualizing marginal bone reduces the sharp bony ledge to create a more physiologic bone contour.; Resective osseous surgery aims to create a physiological bone contour by eliminating defects and creating a gradual, slo",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/openrouter/free"
           ]
         }
       },
@@ -43094,12 +45404,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "A",
           "answerIdx": 0,
-          "confidence": "low",
-          "reason": "Periodontal debridement and healing are required before implant placement.",
+          "confidence": "high",
+          "reason": "Scaling and root planing with oral hygiene instruction followed by a 4-week healing period is the standard non-surgical ; al hygiene instructions, then re-evaluation after 4-6 weeks. So the answer would be that.\n\nBut the options are identical",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/openrouter/free"
           ]
         }
       },
@@ -43151,11 +45461,11 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "A",
           "answerIdx": 0,
-          "confidence": "low",
-          "reason": "The only provided option refers to supra‑gingival crowns, which aligns with the described full crowns.",
+          "confidence": "high",
+          "reason": "Multiple full crowns placed supragingivally are the most common restorative approach for patients with extensive prior d; The patient’s multiple full crowns indicate the use of supra‑gingival crowns.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         }
@@ -43189,7 +45499,18 @@ window.FLASH_NOTES = {
           ]
         },
         "_embedded_answer": "A .increase the ridge height B .eliminate soL .ssue undercuts C increase the depth of the ves.bule D .elminate sharp residual ridges and remove",
-        "_answer_disputed": true
+        "_answer_disputed": true,
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "Eliminate undercuts is a primary indication for alveoloplasty.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "-12year- old boy presented to the dental clinic with high grade fever generalized malaise. Oral examina.on showed diffuse erythematous involvement of the gingiva and spherical gray vesicle in the lip ",
@@ -43240,11 +45561,11 @@ window.FLASH_NOTES = {
           "letter": "B",
           "answerIdx": 1,
           "confidence": "low",
-          "reason": "The periapical radiograph depicts the implant fixture placed in the mandible.",
+          "reason": "The radiograph depicts an implant fixture.",
           "models": [
-            "opencode/ling-3.0-flash-free",
+            "opencode/nemotron-3-ultra-free",
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "kilo/kilo-auto/free"
           ]
         }
       },
@@ -46872,7 +49193,18 @@ window.FLASH_NOTES = {
         },
         "_embedded_answer": "●\n●",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "The angle of the mandible is the most frequent site of fracture.; The mandibular angle is the most common site of mandibular fracture due to its structural weakness and frequent trauma e",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "● Diastema of after rapid maxillary expansion?",
@@ -46916,7 +49248,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "Minimal diastema in a 10‑year‑old is physiologic and requires no intervention.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "- RCT and crown",
@@ -47134,7 +49477,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "She should remove the ring to allow thorough hand washing and protect the injured finger.; Remove the wedding ring to prevent bacterial contamination of the injured finger and ensure proper wound cleaning.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "- remove wedding ring",
@@ -47198,7 +49552,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "PDL injection causes vasoconstriction leading to temporary cessation of circulation for approximately 30 minutes.; It temporarily stops blood flow for about half a minute.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "- increase circulation",
@@ -47242,7 +49607,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "The broken instrument is in the apical 5mm and cannot be bypassed or retrieved, so obturating to the broken instrument i; The broken instrument cannot be removed, so the canal is obturated to its tip.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "- obturate other canals",
@@ -47518,7 +49894,18 @@ window.FLASH_NOTES = {
         },
         "_embedded_answer": "A- Soft-tissue quality",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Pain from a new amalgam is usually temporary and can be reassured.; Recent amalgam placement commonly causes transient post-operative sensitivity that typically resolves within a few days ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "10yrs oldboyhismother concerningabout spacesbetween anteriorteeth.?",
@@ -47808,12 +50195,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "B",
           "answerIdx": 1,
-          "confidence": "low",
-          "reason": "high occlusion is a common cause of rest fracture.",
+          "confidence": "high",
+          "reason": "high occlusion likely caused the rest fracture.; High occlusion creates excessive forces that can lead to RPD rest fractures.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/kilo-auto/free"
           ]
         }
       },
@@ -50066,12 +52453,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "C",
           "answerIdx": 2,
-          "confidence": "low",
-          "reason": "Pressure on the lingual aspect of the anterior mandible.",
+          "confidence": "high",
+          "reason": "Angling the posterior teeth toward the retromolar pad directs occlusal forces along the lingual slope of the anterior ma; Pressure on the lingual aspect of the anterior mandible.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         }
       },
@@ -52166,12 +54553,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "A",
           "answerIdx": 0,
-          "confidence": "low",
-          "reason": "Prophy jet is considered safe on amalgam restorations, whereas it may damage composite resins.",
+          "confidence": "high",
+          "reason": "Prophy jet can be used safely on amalgam restorations.; Prophy jet powder polishing is safe on amalgam but can damage composite resin surfaces.",
           "models": [
-            "opencode/ling-3.0-flash-free",
+            "opencode/nemotron-3-ultra-free",
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "kilo/kilo-auto/free"
           ]
         }
       },
@@ -52593,10 +54980,10 @@ window.FLASH_NOTES = {
           "letter": "A",
           "answerIdx": 0,
           "confidence": "high",
-          "reason": "The question asks about performing a lower RPD (removable partial denture), which is a standard prosthodontic procedure.; UNKNOWN",
+          "reason": "Both options are identical, so either selection is clinically equivalent.; UNKNOWN",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         }
@@ -53102,14 +55489,14 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_model_suggested_answer": {
-          "letter": "B",
-          "answerIdx": 1,
-          "confidence": "low",
-          "reason": "The 4 mm interarch distance is too narrow for implant placement, so the patient should be returned to the surgeon for ad",
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "The bleeding indicates insufficient space for a 5 mm implant.; A 5mm implant in a lateral incisor with bleeding indicates insufficient space from adjacent teeth.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/kilo-auto/free"
           ]
         },
         "_model_judgment": {
@@ -53228,11 +55615,11 @@ window.FLASH_NOTES = {
           "letter": "A",
           "answerIdx": 0,
           "confidence": "high",
-          "reason": "It matches the instruction to inject antibiotic into the pocket.; Local antibiotic injection into the periodontal pocket is a valid clinical intervention for managing localized periodont",
+          "reason": "It directly corresponds to the described action.; Local antibiotic injection into periodontal pockets is a recognized adjunctive treatment for managing localized periodon",
           "models": [
-            "opencode/ling-3.0-flash-free",
+            "opencode/nemotron-3-ultra-free",
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "kilo/kilo-auto/free"
           ]
         }
       },
@@ -53260,11 +55647,11 @@ window.FLASH_NOTES = {
           "letter": "A",
           "answerIdx": 0,
           "confidence": "high",
-          "reason": "Both options list \"Fistula\" but option A is the first correct choice per standard multiple-choice conventions.; UNKNOWN",
+          "reason": "The term describes a fistula.; A fistula is an abnormal connection between two epithelial surfaces, which is the correct definition.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/kilo-auto/free"
           ]
         }
       },
@@ -53293,13 +55680,13 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_data_quality": "merged_options_review",
         "_model_suggested_answer": {
-          "letter": "D",
-          "answerIdx": 3,
+          "letter": "B",
+          "answerIdx": 1,
           "confidence": "low",
-          "reason": "Screw‑retained multiple-unit prostheses often lack passive fit, causing complications.",
+          "reason": "Screw-retained implants are designed for easy clinical retrieval, making difficult retrieval the key complication when m",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
@@ -53369,12 +55756,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "A",
           "answerIdx": 0,
-          "confidence": "low",
-          "reason": "The appropriate treatment is to redo the post and crown.",
+          "confidence": "high",
+          "reason": "The indicated treatment is to redo the post and crown.; Redo the post and crown to address the aesthetic concerns and proper restoration of the broken upper lateral incisor.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/kilo-auto/free"
           ]
         }
       },
@@ -53405,13 +55792,13 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_data_quality": "merged_options_review",
         "_model_suggested_answer": {
-          "letter": "C",
-          "answerIdx": 2,
+          "letter": "A",
+          "answerIdx": 0,
           "confidence": "low",
-          "reason": "The implant shows severe bone loss to the apex and must be removed.",
+          "reason": "The implant length should be 11 mm to maintain 1.5 mm clearance from the sinus floor.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
@@ -53478,12 +55865,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "B",
           "answerIdx": 1,
-          "confidence": "low",
-          "reason": "The described signs indicate peri‑implantitis.",
+          "confidence": "high",
+          "reason": "The clinical findings are characteristic of peri‑implantitis rather than a buccal perforation.; The patient's symptoms of pain, bleeding on probing, and radiographic evidence of bone loss around the implant are class",
           "models": [
-            "opencode/ling-3.0-flash-free",
+            "opencode/nemotron-3-ultra-free",
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "kilo/kilo-auto/free"
           ]
         }
       },
@@ -53624,12 +56011,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "C",
           "answerIdx": 2,
-          "confidence": "low",
-          "reason": "The findings describe peri-implantitis.",
+          "confidence": "high",
+          "reason": "The clinical picture of inflammation, pockets, and bleeding on probing around an implant indicates peri-implantitis.; The presence of tissue inflammation, pockets, bleeding on probing, and a visible buccal first serration around an implan",
           "models": [
-            "opencode/ling-3.0-flash-free",
+            "opencode/nemotron-3-ultra-free",
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "kilo/kilo-auto/free"
           ]
         },
         "_model_judgment": {
@@ -53683,11 +56070,11 @@ window.FLASH_NOTES = {
           "letter": "B",
           "answerIdx": 1,
           "confidence": "low",
-          "reason": "The overdenture became non‑retentive because the implants are not parallel (tilted) due to alveolar ridge resorption, ca",
+          "reason": "The implants are not parallel due to alveolar ridge resorption, causing tilt and loss of retention.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/kilo-auto/free"
           ]
         }
       },
@@ -53713,12 +56100,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "B",
           "answerIdx": 1,
-          "confidence": "low",
-          "reason": "A single missing tooth with intact adjacent teeth is best replaced by a fixed partial denture (bridge).",
+          "confidence": "high",
+          "reason": "A fixed partial denture is indicated for a single missing tooth with intact adjacent teeth.; A fixed partial denture (FPD) is the best prosthetic replacement for a single tooth (21) with intact adjacent teeth in a",
           "models": [
-            "opencode/ling-3.0-flash-free",
+            "opencode/nemotron-3-ultra-free",
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "kilo/kilo-auto/free"
           ]
         }
       },
@@ -54872,12 +57259,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "B",
           "answerIdx": 1,
-          "confidence": "low",
-          "reason": "Reassure the patient that the discomfort is normal and temporary.",
+          "confidence": "high",
+          "reason": "The discomfort is expected after appliance placement and usually resolves with reassurance.; Reassure the patient that mild discomfort and pain on biting is normal after fixed appliance placement and typically res",
           "models": [
-            "opencode/ling-3.0-flash-free",
+            "opencode/nemotron-3-ultra-free",
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "kilo/kilo-auto/free"
           ]
         },
         "_repaired_2026": true,
@@ -54906,14 +57293,14 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_model_suggested_answer": {
-          "letter": "D",
-          "answerIdx": 3,
-          "confidence": "low",
-          "reason": "Acetaminophen is the preferred analgesic for orthodontic pain due to its safety and minimal side effects.",
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "Ibuprofen is the preferred analgesic for orthodontic pain due to its anti‑inflammatory effect.; Ibuprofen is the first-line analgesic for orthodontic pain as it reduces inflammation and provides effective pain relief",
           "models": [
-            "opencode/ling-3.0-flash-free",
+            "opencode/nemotron-3-ultra-free",
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "kilo/kilo-auto/free"
           ]
         },
         "_repaired_2026": true,
@@ -54941,14 +57328,14 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_model_suggested_answer": {
-          "letter": "B",
-          "answerIdx": 1,
+          "letter": "A",
+          "answerIdx": 0,
           "confidence": "low",
-          "reason": "An anterior bite plane is used to open the deep bite and reposition retroclined incisors in a Class II skeletal pattern.",
+          "reason": "e molars to move distally.\n\nActually, let me reconsider the options more carefully. The question asks about the specific",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/kilo-auto/free"
           ]
         },
         "_repaired_2026": true,
@@ -54975,14 +57362,14 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_model_suggested_answer": {
-          "letter": "B",
-          "answerIdx": 1,
-          "confidence": "low",
-          "reason": "Respect the competent minor's autonomous decision.",
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "ere were a dispute between parents and the patient, or if the parents were refusing needed treatment. But here the paren; A 14-year-old is a minor and lacks legal capacity to refuse life-saving treatment, so the physician should seek court au",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/kilo-auto/free"
           ]
         },
         "_repaired_2026": true,
@@ -55177,11 +57564,11 @@ window.FLASH_NOTES = {
           "letter": "B",
           "answerIdx": 1,
           "confidence": "high",
-          "reason": "CT provides the best visualization of infra orbital fractures.; CT scans provide detailed 3D imaging essential for evaluating infraorbital fractures and associated ecchymosis, unlike 2",
+          "reason": "CT scan is the gold standard imaging modality for diagnosing infraorbital (orbital floor) fractures, providing detailed ; CT is the imaging modality of choice for detecting infraorbital fractures and associated ecchymosis.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/kilo-auto/free"
           ]
         },
         "_repaired_2026": true,
@@ -55234,12 +57621,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "B",
           "answerIdx": 1,
-          "confidence": "low",
-          "reason": "The arrow points to the shank of the periodontal instrument.",
+          "confidence": "high",
+          "reason": "rrow points to in a picture of a periodontal instrument. The options are blade, shank, working end, width of blade, leng; The arrow points to the shank, the portion of the instrument connecting the handle to the working end.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/kilo-auto/free"
           ]
         },
         "_repaired_2026": true,
@@ -55266,14 +57653,14 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_model_suggested_answer": {
-          "letter": "B",
-          "answerIdx": 1,
+          "letter": "A",
+          "answerIdx": 0,
           "confidence": "low",
-          "reason": "Direct pulp capping preserves pulp vitality and allows definitive crown later.",
+          "reason": "Pulp exposure during crown prep requires immediate root canal treatment followed by definitive restoration with a crown.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
           ]
         },
         "_repaired_2026": true,
@@ -55413,7 +57800,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Connecting an implant (ank; Mixing implant-supported and tooth-supported units in one bridge creates differential movement and stress that leads to ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "Lots of questions about paresthesia, all about proximation of implant to the nerve, or questions about injury to lingual nerve such as loss of taste and sensation.",
@@ -55624,12 +58022,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "A",
           "answerIdx": 0,
-          "confidence": "low",
-          "reason": "The distal surface of the maxillary central incisor (tooth 11) is more rounded, helping identify it.",
+          "confidence": "high",
+          "reason": "The maxillary first molar (tooth 11,21) has a more rounded distal surface compared to the second molar, which has a more; The distal surface of a maxillary central incisor is more rounded and convex compared to the mesial surface, which is a ",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
           ]
         },
         "_repaired_2026": true,
@@ -55717,7 +58115,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         },
-        "_embedded_answer": "A-Class I",
+        "_embedded_answer": "B- after 10 years",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -55747,7 +58145,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         },
-        "_embedded_answer": "A-surgical remove",
+        "_embedded_answer": "A-surgical remove 14-pt 5 years old with negat",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -55795,7 +58193,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A-semi lunar",
+        "_embedded_answer": "A-semi lunar B-apical positioning C- intrasulclar If there is wedge and we won’t extract 8",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -56105,7 +58503,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "gagging before (previous impressions may have been taken with correct technique or with different materials like alginat",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "- allergy to the material",
@@ -56221,7 +58630,18 @@ window.FLASH_NOTES = {
         },
         "_embedded_answer": "tight contact",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "A tight contact between the crown and adjacent tooth causes a foreign body sensation during try-in.; The sensation of something \"stuck between the teeth\" during a crown try-in is classically caused by a tight contact poin",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- nodule in the inner surface of the metal",
@@ -56465,7 +58885,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- disclosing agent",
+        "_embedded_answer": "A- disclosing agent B-probe",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -56727,7 +59147,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "1 ●",
+        "_embedded_answer": "1 ● 8 ● 24",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -56935,7 +59355,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Denture adhesive provides immediate improved retention and is the first-line solution for a patient concerned about dent; Denture adhesive is the standard first-line conservative measure to address a patient's concern about denture stability ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "Dentist who prescribe new toothpaste because company gives him 10 riyals for each tube:",
@@ -57002,7 +59433,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Biological width is commonly abbreviated as BW in periodontal literature, referring to the combined dimension of the jun; Biological width (BW) refers to the combined dimension of junctional epithelium and connective tissue attachment that mu",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "Patient complaining from dark line above her implant, picture provided showcase #22 with an implant crown with slight darkness around GM, Crown isn’t very esthetic but doesn’t look overcontoured either and not labially inclined, there is a dark shadow very slight in the cervical part of the crown itself):",
@@ -57026,7 +59468,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "The dark line at the cervical portion of the crown is characteristic of titanium abutment shadow showing through thin pe; The dark line/shadow in the cervical area of the implant crown, with the crown not being overcontoured or labially incli",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "Case with excellent oral hygiene and 5mm pocket in implant (picture shows recession exposing the threads with minimal keratinized gingiva in the area in general, crown looked good) your management:",
@@ -57051,7 +59504,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "The primary problem is insufficient keratinized gingiva and recession exposing implant threads; a soft tissue graft (e.g; Soft tissue graft to augment the deficient keratinized tissue and address the recession exposing the implant threads.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "-change crown",
@@ -57095,7 +59559,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "ion\" and the appearance looks like caries.\n\nFor severe recession with root exposure, the treatment of choice when the pa; Tissue graft is indicated for severe root recession with exposed root surfaces to restore the lost supporting tissue and",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "Patient with recession and loss of interdental papilla, what you will provide:",
@@ -57118,7 +59593,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "ANSWER: A\nRE; Recession and loss of interdental papilla are primarily esthetic concerns addressed by esthetic (periodontal plastic) su",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "case about a patient who feels pain 24 hours after the doctor did instrumentation of #37 necrotic with APP, what is the cause of pain (PA shows #37 not initiated -I guess its a Pre-op with lesion, #36 previously treated with post and crown):",
@@ -57143,7 +59629,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "r when bacteria and debris are pushed beyond the apex during instrumentation, causing an acute exacerbation of the peria; Post-operative pain 24 hours after instrumentation of a necrotic tooth with apical periodontitis most commonly indicates",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "pregnant with pain, and you couldn’t identify the causative tooth between two adjacent teeth:",
@@ -57166,7 +59663,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "A periapical radiograph provides diagnostic clarity to identify the causative tooth while minimizing radiation exposure ; Taking a single periapical radiograph with proper shielding is the safest and most appropriate diagnostic step to identi",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "dentoalveolar fracture splinting in weeks:",
@@ -57190,7 +59698,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Dentoalveolar fractures are typically splinted for 4 weeks according to standard dental trauma management guidelines.; Dentoalveolar fracture splinting is typically maintained for 4 weeks to allow bone and periodontal ligament healing.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "smokeless tabaco (under tongue) user for 35 years, had white lesion for years in lateral tongue but now is complaining from pain and restriction of tongue movement (picture shows leukoplakia with ulceration in the middle) what is the diagnosis:",
@@ -57214,7 +59733,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "gnant transformation)\n- Pain (suggesting invasion)\n- Restriction of tongue movement (suggesting infiltration into muscle; Chronic smokeless tobacco use with leukoplakia, ulceration, and progressive tongue mobility restriction is characteristi",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "You should take a biopsy after removing potential causes after how many days?",
@@ -57247,7 +59777,18 @@ window.FLASH_NOTES = {
         },
         "_embedded_answer": "7\n-14\n-21",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "es, a biopsy should be taken. This would correspond to option B (14 days).\n\nActually, I need to be more careful. The que; A biopsy should be taken after removing potential irritants for approximately 14 days to allow inflammatory changes to r",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "endo treated 25 with good crown and 1-3 mm PD, what to do (PA shows good RCT, there was a faint line that made me think it could have a third root):",
@@ -57272,7 +59813,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "n to check for cracks - The crown is described as \"good,\" and the issue is about a possible third root, not a crack.\n\nTh; CBCT is the appropriate next step to evaluate the suspected third root and confirm the diagnosis before considering inva",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "OPG with soap bubble appearance what you will do:",
@@ -57295,7 +59847,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "CBCT provides detailed 3D imaging to characterize the soap bubble lesion and guide further management.; A soap bubble appearance on OPG is classically associated with lesions like ameloblastoma; the next step is CBCT to bett",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "Scenario of a 40 year old women with slowly growing mass in front of her ear for years wants it removed for esthetics, Diagnosis (unfortunately forgot if it was bilateral or not):",
@@ -57318,7 +59881,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Pleomorphic adenoma is the most common benign parotid tumor, presenting as a slow-growing, painless mass in a middle-age; A slowly growing, long-standing parotid mass in a 40-year-old woman is most consistent with pleomorphic adenoma, the mos",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "diabetic patient with #36 which has a localized MB deep isolated pocket (Picture shows gingival abscess with pus):",
@@ -57341,7 +59915,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "For an acute localized gingival abscess with pus, the primary and immediate treatment is incision and; Incision and drainage is the appropriate treatment for a localized gingival abscess with pus, as it directly addresses t",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "Diabetic patient with generalized deep pockets did scaling reported a swelling (same photo as question 63 - but they were in separate sections) what is the cause:",
@@ -57386,7 +59971,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "tion) and head/neck radiotherapy (absolute contraindication), the answer would be B.\n\nHowever, the question says \"absolu",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "- uncontrolled DM",
@@ -57933,7 +60529,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Recurrent oral and skin ulcers with fever and lymphadenopathy are characteristic of pemphigus vulgaris.; presents with target lesions, mucosal involvement (oral ulcers), sometimes skin lesions, fever, lymphadenopathy? EM can ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "Missed canal in man incisor ?",
@@ -58460,7 +61067,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Implants provide the best esthetic and functional outcome for anterior maxillary teeth with severe ridge resorption.; Implant-supported prosthesis provides the most natural esthetics and function for multiple anterior missing",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Maryland bridge",
@@ -58504,7 +61122,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "Surgical removal is the definitive treatment for a mucous extravasation cyst causing lower lip enlargement in a pediatri",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "28 yo pt with destructed 47 and mesioangular 48",
@@ -58527,7 +61156,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "A destructed mandibular second molar with a mesioangular third molar requires endodontic treatment and crown restoration",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "How to confirm a Crack in tooth? 11th edition – Cohen's pathways of the pulp - chapter 21 There is no conclusive answer. however, the chapter is filled with information if you want to read I summarized the diagnostic tools in these two pictures and I summarized big chunk of the topic from cohen’s book in the link below https://docs.google.com/presentation/d/1qPiFgEvI5FPkZc5rEm6e- pHHOCSWpoWXcl6T1u",
@@ -58555,7 +61195,7 @@ window.FLASH_NOTES = {
             "kilo/kilo-auto/free"
           ]
         },
-        "_embedded_answer": "11th edition – Cohen's pathways of the pulp - chapter 21",
+        "_embedded_answer": "11th edition – Cohen's pathways of the pulp - chapter 21 There is no conclusive answer. however, the chapter is filled with information if you want to read I summarized the diagnostic tools in these two pictures and I summarized big chunk of the topic from cohen’s book in the link below https://docs.google.com/presentation/d/1qPiFgEvI5FPkZc5rEm6e- pHHOCSWpoWXcl6T1u",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -58626,7 +61266,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "Periodontal disease must be controlled before implant placement to prevent implant failure and peri-implant complication; Active periodontitis must be treated before implant placement to prevent peri-implantitis and bone loss.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "pic of white color implant abutment and they asked what do use see ? temporary implant abutment",
@@ -58673,7 +61324,7 @@ window.FLASH_NOTES = {
             "kilo/poolside/laguna-xs-2.1:free"
           ]
         },
-        "_embedded_answer": "radiographic apex ●",
+        "_embedded_answer": "radiographic apex ● Major apical construction ● Minor apical construction",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -58740,7 +61391,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "Oral corticosteroids use is the cause of Cushing syndrome symptoms in this patient.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "- oral corticosteroids use",
@@ -58785,7 +61447,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "Doxycycline chips provide targeted, sustained-release antibiotic delivery effective against periodontal pathogens in smo",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- metro gel",
@@ -58872,7 +61545,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "high",
+          "reason": "Extract the non-restorable retained primary molar and place a space maintainer to prevent malocclusion from posterior dr; Extract the retained primary molar and place a space maintainer to preserve the arch space for future prosthetic replace",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "ankylosed primary molar? Refer to specialist",
@@ -58936,7 +61620,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "Orthodontic uprighting of the tilted #47 is necessary before implant placement in #46 to ensure proper prosthetic positi",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- ?\n2023/09/18 دميحوبأ مير GUC\n1-pt come complaining of sweating and pain while eating\nFrey syndrome\n2-Pt with Addison disease and liver cirrhosis for minor oral surgery\nGive 25mg hydro\nNo need for supplement\nDouble",
@@ -59009,7 +61704,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "ves. Cover with a waterproof plaster\"\n\nThis seems like a question about infection control: If you have a cut finger blee; UNKNOWN",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "- request the physician to do blood test or blood count for the patient\n89-Peg lateral comes at what stage?\n-Morphodifferentiation\n90-21 years old p.t after extraction of #21 and want a treatment for it. What is the\nmost conservative treatment for tooth #21 (no other info were given in the\nquestion!!!) “and implant were not in the options”\n-FPD from tooth #22 to #11\n-extract #11 and place fpd from",
@@ -59140,7 +61846,7 @@ window.FLASH_NOTES = {
             "kilo/kilo-auto/free"
           ]
         },
-        "_embedded_answer": "15 ●",
+        "_embedded_answer": "15 ● 12 ● 10 ● 8 ●",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -59169,7 +61875,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "a- 3\nb- 9\nc- 12\nd- 27",
+        "_embedded_answer": "a- 3 b- 9 c- 12 d- 27",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -59236,7 +61942,7 @@ window.FLASH_NOTES = {
             "kilo/kilo-auto/free"
           ]
         },
-        "_embedded_answer": "a- Informe it choking hazard\nb- Inform RPD has to cross arch\nc- Do what patient want\nd- Informe patient it is less aesthetic",
+        "_embedded_answer": "a- Informe it choking hazard b- Inform RPD has to cross arch c- Do what patient want d- Informe patient it is less aesthetic",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -59266,7 +61972,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "a- Connective tisuee graft\nb- Free givingal graft",
+        "_embedded_answer": "a- Connective tisuee graft b- Free givingal graft",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -59295,7 +62001,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A-uremic stomatitis",
+        "_embedded_answer": "A-uremic stomatitis B- bleeding c- infection",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -59325,7 +62031,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- Give insulin",
+        "_embedded_answer": "A- Give insulin B- Give hyppglycemic C- Give AB before 1 hour preceour",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -59355,7 +62061,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- I",
+        "_embedded_answer": "A- I B- II C- III D- IIII",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -59385,7 +62091,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- 24 hour",
+        "_embedded_answer": "A-",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -59593,7 +62299,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         },
-        "_embedded_answer": "Pemphigus vulgaris\nmmp",
+        "_embedded_answer": "Pemphigus vulgaris mmp EM lichen planus",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -59756,7 +62462,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "s. Many textbooks say: \"The most common age for dental trauma in children is 2-4 years.\" So answer B (2-5). Option B is ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "patient with end stage cancer and he is dying but the doctor is trying and giving him medication",
@@ -59779,7 +62496,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "Positive euthanasia involves administering medication to intentionally end a patient's life at their request, which alig",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Palpitation",
@@ -59845,7 +62573,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "Dental stone (type III gypsum) is the standard material used for denture flasking.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Investment material",
@@ -59931,7 +62670,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "A clinical remount is needed to correct the occlusion and contacts before final insertion.; A clinical remount re-establishes correct occlusion by adjusting",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- clinical remount",
@@ -59996,7 +62746,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "s may be indicated if neutrophil count <500. So answer C: prophy AB. However, the question may be from a dental board ex",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "- defer treatment",
@@ -60082,7 +62843,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "A 1:1 ratio of acrylic powder to liquid results in incomplete polymerization, leaving residual methyl methacrylate monom",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- excessive shrinkage",
@@ -60146,7 +62918,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Zinc in amalgam causes galvanic corrosion with tin-mercury phases, so eliminating the tin mercury phase improves corrosi; Zinc-containing amalgam eliminates the tin-mercury (gamma-2) phase, which improves corrosion resistance.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "Doctor lock nurse wearing diamond ring , and said remove it and change the gloves . 10 Amalgam with zinc high corrosive resistance:",
@@ -60168,7 +62951,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "Zinc in amalgam causes galvanic corrosion with tin-mercury phases, so eliminating the tin-mercury phase reduces corrosio",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "Obliterated root bulbous crown with cervical construction.",
@@ -60192,7 +62986,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "Dentinogenesis imperfecta is characterized by bulbous crowns, cervical constriction, and obliterated pulp chambers and r",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "- Dentinogenesis imperfecta",
@@ -60256,7 +63061,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "Bilateral white lesions in an HIV patient require biopsy to rule out malignancy or serious infection.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "Strongly associated with HIV patient :",
@@ -60278,7 +63094,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "Kaposi sarcoma is strongly associated with HIV/AIDS patients.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "Pedo patient 10 years with unerupted upper canine. And bulge labially .",
@@ -60325,7 +63152,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "The localized hypoplasia on incisal/occlusal surfaces with normal posterior occlusion is characteristic of mild fluorosi",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- excessive fluoride ingestion",
@@ -61060,7 +63898,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A-IANB",
+        "_embedded_answer": "A-IANB B-Bucccal C-Lingual D-Mental block",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -61089,7 +63927,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A- 0 mg\\kg",
+        "_embedded_answer": "A- 0 mg\\kg B- 0.25 mg\\kg C- 0.5 mg\\kg D- 1 mg\\kg",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -61155,7 +63993,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "fer to perio, B. b. extraction, C. c. non surgical retr, D. d. IF, E. e. nikolosky test.\n\nThus each option includes a le",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "facial nerve is the motor nerve for which muscle ? 12-Which not present in saliva ?",
@@ -61191,7 +64040,18 @@ window.FLASH_NOTES = {
         "_embedded_answer": "Lysosome.\n-potassium",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "E",
+          "answerIdx": 4,
+          "confidence": "low",
+          "reason": "Lysosome is an intracellular organelle, not a component of saliva.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- antibodies.",
@@ -61249,7 +64109,18 @@ window.FLASH_NOTES = {
         "_embedded_answer": "apert syndrome",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "lace with composite. GIC is less strong but releases fluoride, good for low stress areas. RMGI is a hybrid. For a shallo",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "where to put extracted tooth with amalgam? 20-PIC of perio chip and asking which material is it? 21-gracey curette angulation to the shank",
@@ -61283,10 +64154,21 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "CHX",
+        "_embedded_answer": "21-gracey curette angulation to the shank",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Extracted teeth with amalgam restorations are classified as hazardous waste due to the mercury content in the amalgam.; , e. 40-50.\n\nThus each option corresponds to a possible answer for each subquestion? Or maybe they want to pick the corr",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "keendy class II and you found useable undercut mesially on the last abutment which is the second premolar what would be the clasp and its cross section ? Cast Clasp with half round cross-section - WW with round cross-section - 25-pink discoloration after trauma indicates ?",
@@ -61321,7 +64203,18 @@ window.FLASH_NOTES = {
         "_embedded_answer": "cast Clasp with round cross-section",
         "_answer_disputed": true,
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "Pink discolor",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- submental\n-submandibular\n-lingual\nاذك يز alar بيرغ عبار س -\nي\nWhich material of choice used in webbing canal :\nCa\n-picture of suprenumrary tooth\nصنلاب لاؤسلا :-anterior guidance table when it be usful\nPic( ectopic eruption)\nن\nي لاؤس -kennedy classification",
@@ -61518,7 +64411,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "Corticosteroids cause hyperglycemia, which would raise HbA1c levels.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- increase HBA1C.",
@@ -61562,7 +64466,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Porcelain teeth produce audible clicking during function; substituting them with acrylic teeth eliminates the noise.; Changing porcelain teeth to acrylic reduces the clicking sound.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "• increase freeway space .",
@@ -61605,7 +64520,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "In periodontal flap surgery the gingiva is sutured to the level of the interdental bone to achieve primary closure and e",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "• On CEJ",
@@ -61648,7 +64574,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Dental light handles and surfaces should be covered with a disposable plastic sleeve and disinfected between patients to; Use a disposable plastic sleeve on the light and disinfect it between patients.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "• disinfect between pt",
@@ -61692,7 +64629,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "The PDL widening in tooth #34 is a classic radiographic sign of occlusal trauma,; Occlusal trauma from bruxism leads to periodontal ligament widening and pain.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "• occlusal truma.",
@@ -61737,7 +64685,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "n canine region, what occlusion? Often \"canine guidance\" or \"mutually protected occlusion\" is used for fixed implant pro",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "• mutally",
@@ -61802,7 +64761,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "A fixed hybrid implant prosthesis replaces both missing hard and soft tissue in implant-supported reconstructions.; A fixed hybrid implant prosthesis is designed to restore extensive hard and soft tissue defects, providing both teeth an",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "• overdenture",
@@ -61855,9 +64825,20 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "Stimulating",
+        "_embedded_answer": "2023/09/26 يرسودلا كرابم دمحم BUC 2023/09/26 ناطلسلا دايز BUC",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "of pain indicates failure). The question: \"how do you know if your treatment is successful or not?\" The best answer like",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- the absence of pathology",
@@ -61902,7 +64883,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "er right third molar (#32). So #14 is upper left first molar? Let's map: #1 UR3, #2 UR2, #3 UR1, #4 UR2P (second premola",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- All one unit from #13-17",
@@ -62122,7 +65114,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Epstein-Barr virus (EBV) is associated with infectious mononucleosis, which commonly presents with a positive Paul-Bunne; The Paul-Bunnel test detects heterophile antibodies that are positive in Epstein-Barr virus-induced infectious mononucle",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- EBV\nPt with prosthetic valve came to you with heart murmur and patechie (forget the rest) in palate and\nextremties , he did an extraction last weak abd they gave him 2 g amoxicillin.. but he was taking\namoxicillin for sinutits .. BP slightly elevated.",
@@ -62257,12 +65260,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "B",
           "answerIdx": 1,
-          "confidence": "low",
-          "reason": "The visible component of a two-stage implant after healing is the healing abutment.",
+          "confidence": "high",
+          "reason": "The healing abutment is the visible component after the second stage of a two‑stage implant.; In a two‑stage implant, after uncovering the fixture a healing abutment is placed to protrude through the gingiva and is",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         }
       },
@@ -62526,14 +65529,14 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_model_suggested_answer": {
-          "letter": "C",
-          "answerIdx": 2,
-          "confidence": "low",
-          "reason": "Pterygoid implants can be placed in the residual pterygoid bone when alveolar ridge is too deficient for conventional im",
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Subperiosteal implants sit on the residual bone under the periosteum and are used when alveolar bone height is too low f; Subperiosteal implants are indeed used for mandible in cases of severe resorption. Pterygoid implants are for maxilla. E",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/openrouter/free"
           ]
         }
       },
@@ -64884,14 +67887,14 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_model_suggested_answer": {
-          "letter": "B",
-          "answerIdx": 1,
+          "letter": "A",
+          "answerIdx": 0,
           "confidence": "low",
-          "reason": "Delayed eruption.",
+          "reason": "t the right one still why?\" Means left central incisor erupted, right central incisor not yet erupted. Why? Could be thi",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         }
       },
@@ -65950,14 +68953,14 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_model_suggested_answer": {
-          "letter": "B",
-          "answerIdx": 1,
-          "confidence": "low",
-          "reason": "Primary occlusal trauma explains the mobility and pain after recent restoration.",
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "e option letters given (A, B, C, D, ...).\" The options listed are A and B. But they correspond to each scenario? Might n; <one short sentence>.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         }
       },
@@ -65985,11 +68988,11 @@ window.FLASH_NOTES = {
           "letter": "A",
           "answerIdx": 0,
           "confidence": "high",
-          "reason": "Both options are identical, but option A is selected as the standard choice when options are duplicated.; The option directly repeats the phrase given in the question.",
+          "reason": "The appropriate management is to redo the post and crown.; Both options are identical, so either is correct; selecting the first.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         }
       },
@@ -66137,11 +69140,11 @@ window.FLASH_NOTES = {
           "letter": "A",
           "answerIdx": 0,
           "confidence": "low",
-          "reason": "Maxillary expansion is the appropriate treatment for a 9 mm anterior crossbite at this age.",
+          "reason": "llary protraction (in growing patients) or mandibular setback surgery, or camouflage (orthodontic decompensation). In ad",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         },
         "_model_judgment": {
@@ -66341,14 +69344,14 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_data_quality": "merged_options_review",
         "_model_suggested_answer": {
-          "letter": "D",
-          "answerIdx": 3,
-          "confidence": "low",
-          "reason": "Surgical assisted maxillary expansion is the appropriate treatment for a 19‑year‑old with maxillary constriction.",
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Anterior bite plane is the proper management for leveling the curve of Spee in growing patients.; rt ... F. c. Rapid expansion\n\nThus the answer choices are A-F, each corresponds to one of the sub-options.\n\nWe need to p",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         },
         "_model_judgment": {
@@ -66934,14 +69937,14 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_model_suggested_answer": {
-          "letter": "B",
-          "answerIdx": 1,
+          "letter": "A",
+          "answerIdx": 0,
           "confidence": "low",
-          "reason": "Prolonged mouth opening suggests disc displacement without reduction, corresponding to Wilkes stage II.",
+          "reason": "Prolonged opening causing acute TMJ",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         },
         "_repaired_2026": true,
@@ -67160,7 +70163,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Liver disease often impairs clotting factor synthesis, so PT is the relevant test before extraction.; Prothrombin time (PT/INR) evaluates the extrinsic coagulation pathway and is prolonged in liver disease due to decreased",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "● Long term use of corticosteroid ?\n●\n●",
@@ -68715,14 +71729,14 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_data_quality": "merged_options_review",
         "_model_suggested_answer": {
-          "letter": "B",
-          "answerIdx": 1,
+          "letter": "A",
+          "answerIdx": 0,
           "confidence": "low",
-          "reason": "The palatal erosion with knuckle callus indicates self‑induced vomiting from bulimia.",
+          "reason": "consequence of broken water coolant\" in the context of \"etching\" or \"irrigation\" during endodontic treatment. Broken wat",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/openrouter/free"
           ]
         },
         "_model_judgment": {
@@ -69298,7 +72312,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A-prescribe ABx",
+        "_embedded_answer": "A-prescribe ABx B-prescribe NSAID (i choose this choice assuming its a flare up case) C-Re-treatment D- Occ reduction",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -69382,7 +72396,7 @@ window.FLASH_NOTES = {
             "kilo/inclusionai/ling-3.0-flash:free"
           ]
         },
-        "_embedded_answer": "A-Giant cell granuloma",
+        "_embedded_answer": "A-Giant cell granuloma B- Pyogenic granuloma C-Papilloma ✅ D-Fibroma",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -69407,7 +72421,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "The most appropriate treatment is to address the impacted canine to improve the dental alignment and appearance.; ght canine, 12 is upper right lateral incisor. So missing both upper right canine and lateral incisor, and the 23 (upper",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "Unstable CD on rest ? Border seal",
@@ -69514,7 +72539,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "No\nemergency",
+        "_embedded_answer": "No emergency Wait 10 days",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -70091,7 +73116,7 @@ window.FLASH_NOTES = {
           ]
         },
         "_answer_disputed": true,
-        "_embedded_answer": "manger ●",
+        "_embedded_answer": "manger ● Medical expert ● Scholar",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -70200,7 +73225,7 @@ window.FLASH_NOTES = {
           ]
         },
         "_answer_disputed": true,
-        "_embedded_answer": "burrkit ●",
+        "_embedded_answer": "burrkit ● Non-hodgkin",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -70400,7 +73425,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "Midazolam frequently causes paradoxical agitation or irritability.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "tooth with worse furcation prognosis:",
@@ -70444,7 +73480,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "The maxillary first premolar is most frequently reported to have the highest fracture rate.; The maxillary first premolar is clinically recognized as having the highest fracture rate among posterior teeth due to i",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "Case patient with missing tooth, most likely:",
@@ -70468,7 +73515,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "The mandibular second premolar is the most commonly missing tooth.; The mandibular second premolar is the most commonly congenitally missing tooth among the options listed, following third",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "Case with delayed eruption of one central, most likely:",
@@ -70490,7 +73548,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Delayed eruption of a single central incisor is most often caused by a supernumerary tooth (mesodens) that blocks its er; A mesiodens (supernumerary tooth in the midline) is the most common cause of delayed eruption of a single maxillary cent",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "Case with PA, impacted central with a mixed small RO/RL lesion causing the impaction:",
@@ -70513,7 +73582,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "on.\" This suggests the lesion is the cause of the impaction. \n\nIn pediatric/orthodontic contexts, when an impacted tooth; Marsupialization exposes the crown and facilitates orthodontic eruption of the impacted central incisor.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "diagnosis of hemicranial proxymal headache:",
@@ -70535,7 +73615,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Indomethacin is the diagnostic treatment for paroxysmal hemicrania, the hemicranial headache type.; 0% oxygen is used for cluster headache treatment, not specifically for diagnosis.\n\nSo the answer should be A (indomethac",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "Asthmatic patient had difficulty breathing and “his” bronchodilator did not work:",
@@ -70559,7 +73650,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "high",
+          "reason": "When a bronchodilator fails to relieve an acute asthma attack, the situation is a medical emergency requiring immediate ; The patient is in respiratory distress and not responding to bronchodilator, requiring emergency medical services.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "diabetic obese patient had radiating pain to left arm and jaw, what to give: (no nitroglycerin)",
@@ -70581,7 +73683,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "In suspected acute myocardial infarction with classic radiating pain to the left arm and jaw, aspirin is the immediate f; Aspirin is the first‑line treatment for suspected acute myocardial infarction when nitroglycerin cannot be given.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "case of MI 3 years ago, takes aspirin 325 mg needs extraction of a mobile tooth:",
@@ -70604,7 +73717,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "ental extractions, especially in patients with cardiovascular history where stopping aspirin could be dangerous.\nC. Extr",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "6- cabg? use retraction cord with phenylsomething\n7- epilepsy case in clinic? 10mg diazapam\n8- 19yo narrow maxilla? surgical maxillary expansion",
@@ -70659,7 +73783,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "fast tx\nleading to root resorption",
+        "_embedded_answer": "Take concent from parents",
         "_answer_disputed": true,
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
@@ -70695,9 +73819,20 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "sinunitis",
+        "_embedded_answer": "depend on pic",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "The inflammation is caused by the crown margins encroaching on the biologic width.; In connected anterior crowns with persistent inflammation despite good margins and no overcontouring, the most likely ca",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- poorly design of prosthesis\n-excess cement between the centals",
@@ -70748,7 +73883,18 @@ window.FLASH_NOTES = {
         "_embedded_answer": "depend on pic",
         "_answer_disputed": true,
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Internal resorption is caused by pulpal inflammation, which stimulates odontoclasts to resorb dentin from the pulpal sur; Pulpal inflammation is considered the primary cause of internal resorption.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "- explain to her the advantage and dis for each Tx",
@@ -70813,7 +73959,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "ANSWER: A",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "- FL varnish",
@@ -71434,7 +74591,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         },
-        "_embedded_answer": "do gingivectomy\ndo crown lengthening\ntrough with laser for gingival retraction\nبيرغ ناك هتمهف ام قدصلا",
+        "_embedded_answer": "do gingivectomy do crown lengthening trough with laser for gingival retraction بيرغ ناك هتمهف ام قدصلا",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -71591,7 +74748,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Pulpal inflammation is the primary cause of internal resorption.; Internal resorption is believed to be caused by pulpal inflammation, which stimulates odontoclasts to resorb dentin from",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "Signs of incomplete pulpotomy",
@@ -71614,7 +74782,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "Persistent hemorrhage indicates remaining vital pulp tissue.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- pain",
@@ -71680,7 +74859,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Class II malocclusion with a 5 mm overjet usually results in a convex facial profile.; Class II malocclusion with increased overjet (5mm) is characteristically associated with a convex facial profile due to ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- concave",
@@ -71765,7 +74955,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "a choice between A and B. Since thrombocytopenic purpura is about platelets, and neither option is about platelets, this; UNKNOWN",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "- factor IX",
@@ -71808,7 +75009,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Prothrombin time (PT) is the appropriate test to assess coagulation status and bleeding risk in a liver disease patient ; PT evaluates clotting factor synthesis, which is impaired in liver disease.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "- D dimer",
@@ -71851,7 +75063,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "BOP and 5 mm pocket with no cement excess indicate plaque retention from poor crown contour, requiring contour improveme; With no excess cement present and persistent BOP with 5mm probing depth, the most appropriate step is to improve the cro",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- remove excess cement",
@@ -71895,7 +75118,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "t the options and the scenario: the surgeon extracted the wrong tooth. The immediate ethical obligation is to inform the; Document the error and notify the orthodontist to modify the treatment plan.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "⭐️- inform patient and offer needed support",
@@ -71957,7 +75191,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Acetaminophen is safe for asthmatic patients, whereas ibuprofen can trigger bronchospasm.; Acetaminophen is the safer analgesic for asthmatic patients because ibuprofen, as a non-selective NSAID, can trigger bro",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- acetaminophen",
@@ -72000,7 +75245,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "Use a side‑vented needle to prevent high‑pressure NaOCl extrusion.; Using a side-vented needle directs the NaOCl irrigant toward the canal walls rather than apically, significantly reducin",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- access",
@@ -72094,10 +75350,21 @@ window.FLASH_NOTES = {
             "kilo/kilo-auto/free"
           ]
         },
-        "_embedded_answer": "(did not mention type of\npicture)",
+        "_embedded_answer": "(did not mention type of picture)",
         "_answer_disputed": true,
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Sharing a patient’s picture breaches the duty to keep patient information confidential.; Sharing a patient's picture without consent constitutes a breach of confidentiality, which is the duty to protect and no",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- privacy",
@@ -72163,7 +75430,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "When a patient or guardian requests dental records, the dentist should provide a complete copy, not the original, as the; The father is entitled to a copy of the record, not the original.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/inclusionai/ling-3.0-flash:free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "patient came with sharp shooting pain and he can't bite on the tooth, tooth has restoration with calcium liner, base and composite, what is the cause of pain?",
@@ -72186,7 +75464,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "The sharp pain on biting indicates traumatic pulpitis caused by a high occlusal contact point.; Sharp shooting pain on biting is a classic presentation of a high occlusal contact point (premature occlusion), which is",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- sensitivity from liner",
@@ -72250,7 +75539,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Behçet disease classically presents with recurrent oral, genital, and ocular ulcers.; The classic triad of oral, genital, and ocular ulcers is pathognomonic for Behçet's disease.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/inclusionai/ling-3.0-flash:free"
+          ]
+        }
       },
       {
         "stem": "- behcet",
@@ -72300,7 +75600,7 @@ window.FLASH_NOTES = {
             "kilo/kilo-auto/free"
           ]
         },
-        "_embedded_answer": "tender point test",
+        "_embedded_answer": "tender point test (not sure tho(- exclusion",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -72325,7 +75625,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "Odontogenic infections are typically polymicrobial, involving both aerobic and anaerobic bacteria, making them mixed inf; Odontogenic infections are polymicrobial, containing a mixture of aerobic and anaerobic bacteria.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- anaerobic",
@@ -72390,7 +75701,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "high",
+          "reason": "Replace the broken clasp with a new wrought wire clasp, which is the simplest repair when the rest of the RPD is intact.; A wrought wire (ww) clasp can be soldered or replaced directly on the existing RPD framework without remaking the entire",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "- redo",
@@ -72500,7 +75822,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "symptomatic white patches could be leukoplakia, lichen planus, candidiasis, etc. Asymptomatic white patches could be ben",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "- tmj problem",
@@ -72568,7 +75901,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "Ignoring incisal guidance during mounting leads to improper occlusal relationships and bad contour of the restoration.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- biopsy",
@@ -72612,7 +75956,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "A cystic lesion with ameloblastic lining (unicystic ameloblastoma) associated with an impacted third molar is treated by; Enucleation with local excision of the cyst and removal of the associated impacted tooth is the standard treatment for a",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "- follow up",
@@ -72676,7 +76031,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "low",
+          "reason": "Recession and loss of interdental papilla with otherwise normal teeth indicates a resective surgical procedure to restor",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- esthetic",
@@ -72744,7 +76110,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "Limited jaw opening and pain since childhood trauma with no other joints involved is characteristic of ankylosis.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "- ankylosis",
@@ -72812,7 +76189,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Limited jaw opening and pain since childhood trauma with no other joints involved is characteristic of ankylosis of the ; ain during preparation of enamel, what is responsible? Spindle? Actually the options include lamella, tufts, spindle? Th",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- lamella\nspindle",
@@ -72932,7 +76320,18 @@ window.FLASH_NOTES = {
         "format": "mcq",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed",
-        "_data_quality": "merged_options_review"
+        "_data_quality": "merged_options_review",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "care worker gets a needle stick injury from a patient with active TB, and the worker is vaccinated (BCG?), what to do? T",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "- take patient titer",
@@ -73019,7 +76418,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "After three consecutive negative AFB smears, the patient is considered non‑infectious and can be treated in the regular ",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "- wear filtration mask",
@@ -73105,7 +76515,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "Excessive orthodontic force causes inflammatory root resorption, typically manifesting as facial (buccal) cortical bone ; Excessive orthodontic force causes hyalinization",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- facial resorption\nundermining resorption - ?",
@@ -73144,7 +76565,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "The nasopalatine duct cyst (incisive canal cyst) is an asymptomatic midline lesion that commonly appears as a swelling b; A nasopalatine duct cyst commonly presents as an asymptomatic swelling in the midline between the maxillary incisors.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "Cleaning- disinfection- sterilization\nOther options were the same but mixed up\n14-Pt came complaining of diffuse redness and pain in left buccal mucosa she",
@@ -73746,7 +77178,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "Lichen planus",
+        "_embedded_answer": "Pemphigus vulgaris mmp EM lichen planus",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -73830,7 +77262,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "k contacts the occlusal surfaces of teeth, which is considered non-critical. The face-bow also may contact the patient's",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
+          ]
+        }
       },
       {
         "stem": "● Ethics question about the Collaborator",
@@ -74154,11 +77597,11 @@ window.FLASH_NOTES = {
           "letter": "A",
           "answerIdx": 0,
           "confidence": "high",
-          "reason": "A negative difference between available and required space indicates insufficient room for teeth, leading to crowding.; Crowding occurs when the available space is less than the required space, resulting in a negative difference.",
+          "reason": "Crowding occurs when the available space is less than the required space for teeth.; A negative difference (available space minus required space) means there is insufficient space, which defines crowding.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         }
       },
@@ -74181,14 +77624,14 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_model_suggested_answer": {
-          "letter": "B",
-          "answerIdx": 1,
-          "confidence": "low",
-          "reason": "Keep the splint in place and carry out root canal therapy on the non‑vital central incisor.",
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "high",
+          "reason": "on B: \"not remove Splent and RCT of 11 put medication\". Means do not remove splint, perform RCT on tooth #11 (central in; A positive pulp vitality test in the lateral incisor indicates pulp necrosis requiring RCT, and the avulsed central inci",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
           ]
         }
       },
@@ -74528,11 +77971,11 @@ window.FLASH_NOTES = {
           "letter": "B",
           "answerIdx": 1,
           "confidence": "low",
-          "reason": "Mature teeth with prolonged extraoral dry time have the poorest chance of successful reattachment.",
+          "reason": "Mature teeth with extraoral",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
           ]
         }
       },
@@ -74622,11 +78065,11 @@ window.FLASH_NOTES = {
           "letter": "A",
           "answerIdx": 0,
           "confidence": "low",
-          "reason": "The dentist should obtain a complete history if the patient presents on the same day the trauma occurred.",
+          "reason": "ld obtain more history or refer for further evaluation if the father didn't give enough details and there is suspicion o",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         }
       },
@@ -75184,12 +78627,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "A",
           "answerIdx": 0,
-          "confidence": "low",
-          "reason": "Polysulfone is used only for temporary restorations, unlike the other options which are impression materials.",
+          "confidence": "high",
+          "reason": "Polysulfide is the only material listed that is used exclusively as a temporary filling material.; material. Condensation silicone is another type of silicone impression material (condensation-cured silicone). The quest",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         }
       },
@@ -88350,12 +91793,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "A",
           "answerIdx": 0,
-          "confidence": "low",
-          "reason": "Sinus lift addresses vertical bone loss in the posterior maxilla.",
+          "confidence": "high",
+          "reason": "In the posterior maxilla with severe bone loss, a sinus lift is indicated to increase vertical bone height for implant p; Sinus lift is indicated for severe vertical bone loss in the upper posterior region.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
           ]
         }
       },
@@ -89629,12 +93072,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "A",
           "answerIdx": 0,
-          "confidence": "low",
-          "reason": "The itchy red eyes and runny nose indicate an immediate IgE‑mediated (type I) hypersensitivity reaction.",
+          "confidence": "high",
+          "reason": "Itchy red eyes and runny nose are typical of an immediate type I hypersensitivity reaction, such as to latex.; Itchy red eyes and runny nose are classic allergic conjunctivitis and rhinitis symptoms, consistent with a Type I hypers",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
           ]
         }
       },
@@ -89816,12 +93259,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "A",
           "answerIdx": 0,
-          "confidence": "low",
-          "reason": "FNA is the preferred initial diagnostic test for evaluating parotid gland swelling.",
+          "confidence": "high",
+          "reason": "Fine needle aspiration is the preferred initial diagnostic procedure for evaluating parotid gland swelling.; Fine-needle aspiration is the preferred initial diagnostic test for evaluating parotid gland swelling.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free",
+            "kilo/kilo-auto/free"
           ]
         }
       },
@@ -90415,11 +93858,11 @@ window.FLASH_NOTES = {
           "letter": "B",
           "answerIdx": 1,
           "confidence": "low",
-          "reason": "IgE mediates immediate (type I) hypersensitivity.",
+          "reason": "Hypersensitivity type I (immediate-type) reactions are mediated by IgE antibodies bound to mast cells and basophils.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         }
       },
@@ -91079,11 +94522,11 @@ window.FLASH_NOTES = {
           "letter": "A",
           "answerIdx": 0,
           "confidence": "low",
-          "reason": "The maxillary ridge resorbs apically (inferiorly) and medially.",
+          "reason": "The maxillary ridge resorbs inferiorly and medially, following the direction of the maxillary sinus.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         }
       },
@@ -91188,7 +94631,7 @@ window.FLASH_NOTES = {
             "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         },
-        "_embedded_answer": "A-",
+        "_embedded_answer": "A- B- C-",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -91217,7 +94660,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "A-",
+        "_embedded_answer": "A- B- C-",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -91380,12 +94823,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "B",
           "answerIdx": 1,
-          "confidence": "low",
-          "reason": "The dentist must protect ethical considerations.",
+          "confidence": "high",
+          "reason": "Refusing to continue treatment after a consultation found no problem is a breach of the ethical duty to provide care bas; The dentist is protecting",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
           ]
         },
         "_repaired_2026": true,
@@ -91724,7 +95167,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "Epstein pearls are common benign intraoral lesions in newborns presenting as multiple small white ulcers on the median p",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/kilo-auto/free",
+            "kilo/nvidia/nemotron-3-super-120b-a12b:free"
+          ]
+        }
       },
       {
         "stem": "- Eptisin pearls",
@@ -91813,7 +95267,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "D",
+          "answerIdx": 3,
+          "confidence": "low",
+          "reason": "Facebow is a semi‑critical instrument that must be cleaned and disinfected.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- treatment of Naocl accident?",
@@ -91889,7 +95354,7 @@ window.FLASH_NOTES = {
             "kilo/openrouter/free"
           ]
         },
-        "_embedded_answer": "Lateral incisor",
+        "_embedded_answer": "Lateral incisor Canine 1st PM 2nd Pm e",
         "_repaired_2026": true,
         "_repair_source": "parse_saud_fixed"
       },
@@ -91915,7 +95380,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "A",
+          "answerIdx": 0,
+          "confidence": "low",
+          "reason": "One layer suturing is sufficient for shallow tongue lacerations.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- Return it to CSSD",
@@ -92220,7 +95696,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "C",
+          "answerIdx": 2,
+          "confidence": "low",
+          "reason": "Lower second molars typically erupt around age 12, so a patient with all primary teeth except the lower second molars wo",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+          ]
+        }
       },
       {
         "stem": "asthmatic patient takes oral corticosteroid, came with moon face….etc, what is the cause?",
@@ -92242,7 +95729,18 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_repaired_2026": true,
-        "_repair_source": "parse_saud_fixed"
+        "_repair_source": "parse_saud_fixed",
+        "_model_suggested_answer": {
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Oral corticosteroid raises systemic cortisol, leading to Cushing‑like changes such as moon face.; Systemic cortisol excess from oral corticosteroid use causes Cushingoid features like moon face.",
+          "models": [
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/openrouter/free"
+          ]
+        }
       },
       {
         "stem": "- high cholesterol level",
@@ -94629,14 +98127,14 @@ window.FLASH_NOTES = {
         "_verification_verdict": "needs_review",
         "format": "mcq",
         "_model_suggested_answer": {
-          "letter": "C",
-          "answerIdx": 2,
-          "confidence": "low",
-          "reason": "Increased cementum with age produces radiopaque areas below the roots on X‑ray.",
+          "letter": "B",
+          "answerIdx": 1,
+          "confidence": "high",
+          "reason": "Radiopaque lesion below the roots in a 65‑year‑old is characteristic of a cementoma.; A radiopaque lesion at the root apex in an elderly patient is characteristic of a cementoma.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/openrouter/free"
           ]
         }
       },
@@ -96347,11 +99845,11 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "C",
           "answerIdx": 2,
-          "confidence": "high",
-          "reason": "Rough, pitted enamel is characteristic of fluorosis, while generalized brown stains suggest tetracycline staining and di; The image depicts a rough, pitted/mottled enamel surface.",
+          "confidence": "low",
+          "reason": "The teeth display a rough, pitted/mottled enamel surface.",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
+            "opencode/nemotron-3-ultra-free",
+            "kilo/openrouter/free",
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
           ]
         }
@@ -96557,11 +100055,11 @@ window.FLASH_NOTES = {
           "letter": "B",
           "answerIdx": 1,
           "confidence": "low",
-          "reason": "2 months is the standard duration for splinting a cervical root fracture.",
+          "reason": "Cervical root fractures typically require about two months of splinting.",
           "models": [
-            "opencode/ling-3.0-flash-free",
+            "opencode/nemotron-3-ultra-free",
             "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-            "kilo/poolside/laguna-xs-2.1:free"
+            "kilo/openrouter/free"
           ]
         }
       },
@@ -96618,12 +100116,12 @@ window.FLASH_NOTES = {
         "_model_suggested_answer": {
           "letter": "C",
           "answerIdx": 2,
-          "confidence": "low",
-          "reason": "Blood glucose of 65 mg/dL indicates hypoglycemia and is too low for safe dental treatment.",
+          "confidence": "high",
+          "reason": "A glucose level of 65 mg/dL indicates hypoglycemia and warrants postponement until it is corrected.; Rescheduling ensures the patient's blood glucose is within a safer range",
           "models": [
-            "opencode/ling-3.0-flash-free",
-            "kilo/poolside/laguna-xs-2.1:free",
-            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+            "opencode/nemotron-3-ultra-free",
+            "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "kilo/openrouter/free"
           ]
         }
       },
@@ -100894,7 +104392,7 @@ window.FLASH_NOTES = {
   "aiStats": {
     "judged": 571,
     "disputed": 127,
-    "suggested": 78,
+    "suggested": 396,
     "embedded": 439,
     "repaired": 863,
     "merged_fragments": 405
