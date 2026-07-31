@@ -1,8 +1,6 @@
 # Flash Notes AI Review — Status & Handoff (2026-07-31)
 
-## What was done this session
-
-The user provided free AI models at `/home/kalde/Downloads/pi` (kilo + opencode
+## What was done this sessionThe user provided free AI models at `/home/kalde/Downloads/pi` (kilo + opencode
 providers) to replace the missing Grok-4.5-plus-books final-judge step. The
 assistant acted as orchestrator/brain: the deterministic textbook matcher finds
 candidate passages, then **free AI models judge each question** (open-book
@@ -66,14 +64,45 @@ style), and the assistant aggregates/validates.
   kept `needs_review` — **no fabricated citation**.
 - `_answer_disputed` = AI review flagged the marked answer; user must verify.
 
-## Remaining work
-1. **~1,492 pure fragments** (<2 options, no '?') — broken PDF-extraction
-   source data. Need a user decision: repair raw text, keep flagged, or exclude.
-2. **~363 answerless fragments with '?'** — free-text answering by these free
-   models proved unreliable (models echo prompt / return letters). Recommend
-   NOT auto-writing these; a stronger judge or manual review is needed.
-3. Low-confidence model answers (conf: low) should be treated as hints only.
-4. Consider a UI filter for "answer disputed" so users can review the 127.
+## Fragment repair (markitdown investigation, 2026-07-31 PM)
+
+**User suggested `microsoft/markitdown` for PDF→text.** Investigation result:
+- markitdown (v0.1.6, pdfminer+pdfplumber backend) was ALREADY used for all
+  flash-notes source .md files — fresh extractions are byte-identical
+  (verified on Saud_Masahhah, SDLE_May_2026, Mar-June_2026).
+- The real fragment cause is a **parser bug** in `build_flash_notes.py`:
+  `parse_sectioned` starts a new item at every `- ` bullet, so answer options
+  became standalone "questions"; dash-numbered questions ("31- text") also
+  failed to match the numbered-start regex.
+
+### Repair applied (`scripts/repair_saud_parse.py`)
+- Re-parses the Saud_Masahhah source .md with a fixed parser: `- `/`●`
+  bullets become OPTIONS of the current question; dash-numbered and Qn lines
+  start questions.
+- 863 items repaired (clean stems + real options + marked answers where the
+  source had ✅). 405 fragments tagged `_merged_into` (hidden from list, shown
+  as parent options). No items added/removed (still 4,026).
+- `reverify_repaired.py`: re-ran textbook verification on repaired
+  answer-bearing items → **105 more items supported** (1921 → 1922 after
+  re-apply, 0 regressions: no items lost options, no valid answers changed).
+- Fixed `normalize_flash_note_options.py` to skip `_repaired_2026` items
+  (was clobbering repaired options by re-deriving from stale `raw`).
+- UI: `_merged_into` fragments hidden from study list & flashcard deck;
+  "🛠 repaired" badge on repaired cards; aiStats extended with repaired counts.
+- Fragments: 1,492 → **788 remaining** (581 Saud orphans + 207 real
+  answerless questions from other sources).
+
+## Remaining work (updated)
+1. **~788 remaining fragments** — 581 are orphaned Saud bullets (no reliable
+   parent match; forcing links risks wrong joins — left flagged honestly);
+   207 are real answerless questions (June_July2023, Mar-June, SDLE_May) that
+   can be answered by free models (answer-mcq mode) and then verified.
+2. Low-confidence model answers (conf: low) should be treated as hints only.
+3. Consider a UI filter for "answer disputed" so users can review the 127.
+4. The 581 Saud orphans could get a second, looser parent-link pass IF a
+   human validates the joins (or accept as flagged recall leads).
+5. Run `python3 scripts/repair_saud_parse.py --apply` only if the source
+   .md changes — it is idempotent and preserves existing good options/answers.
 
 ## Useful commands
 ```bash

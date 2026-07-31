@@ -10149,8 +10149,8 @@
       ],
       "stem_keywords": [
         "implant",
-        "11",
-        "essential"
+        "inside",
+        "ianc"
       ],
       "evidence": [
         {
@@ -10174,9 +10174,9 @@
           "score": 14.5
         },
         {
-          "book": "Fixed Pros 5e",
-          "passage": "een added\nto the lingual aspect of the matrix; the rest of the lingual area is left open so that the surgeon can choose the best available bone.\nThe site should be prepared as close to the template as possible. D, The implant is positioned 2.5 to 3.0 mm apical to the desired\nemergence position of the final restoration. E, The implant is positioned at an angle and depth that allows optimum esthetic",
-          "chapter": "Ch 1",
+          "book": "Fixed Pros 4e",
+          "passage": "was left open so the surgeon can choose the best\navailable bone. The site should be prepared as close to the template as possible. D, The implant is positioned 2.5 to 3.0 mm\napical to the desired emergence position of the final restoration. E, The implant is positioned at an angle and depth that allows\noptimum esthetics and access for hygiene. F, The surgical site is sutured. A 4 to 6-month healin",
+          "chapter": "Ch 13",
           "ans_keywords_hit": 2,
           "stem_keywords_hit": 1,
           "proximity": 5.0,
@@ -11212,12 +11212,15 @@
       ]
     },
     "fn_restorative_0292": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
+      "verdict": "supported",
+      "score": 19.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "screw",
+        "retained",
+        "abutment"
+      ],
       "stem_keywords": [
-        "45",
         "similar",
         "question",
         "limited",
@@ -11226,9 +11229,41 @@
         "supra",
         "erupted",
         "16",
-        "want"
+        "want",
+        "restore"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "book": "Fixed Pros 5e",
+          "passage": "screw-retained      retained       (screw)\n                                                                       crown)              crown)\nFIGURE 13-25 ■ Types of abutments. A, Standard. Length can be selected to make the margin subgingival or supragingival. B, Fixed.\nThis abutment is much like a conventional post and core restoration. It is screwed into the implants, has a prepared finish",
+          "chapter": "Ch 1",
+          "ans_keywords_hit": 3,
+          "stem_keywords_hit": 3,
+          "proximity": 3.0,
+          "affirming": 1.5,
+          "score": 19.5
+        },
+        {
+          "book": "Hupp OMFS 6e",
+          "passage": "tained, abutment-                implant that is 8 mm in length).\nsupported crown on an implant replacing the mandibular right first                Implant spacing must be understood as a dimensional require-\nmolar requires a minimum of 8 mm of interarch space from the                 ment. Implants need 1.5 mm of space from the outer surface of the\nosseous crest of the edentulous space to the occ",
+          "chapter": "Ch 14",
+          "ans_keywords_hit": 3,
+          "stem_keywords_hit": 2,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 19.5
+        },
+        {
+          "book": "Hupp OMFS 6e",
+          "passage": "if a 4 mm–diameter implant were\nscrew-retained implant crown would be necessary. For the edentulous          planned to replace a missing tooth, the minimum edentulous space\npatient, approximately 15 to 17 mm of interarch space is required            required would be 7 mm (1.5 mm + 4 mm + 1.5 mm = 7 mm). If\nfor a bar-retained overdenture. If less interarch space is available, then   two adjacent",
+          "chapter": "Ch 14",
+          "ans_keywords_hit": 3,
+          "stem_keywords_hit": 2,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 19.5
+        }
+      ]
     },
     "fn_restorative_0293": {
       "verdict": "needs_review",
@@ -11496,12 +11531,13 @@
       ]
     },
     "fn_restorative_0307": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
+      "verdict": "supported",
+      "score": 17.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "acrylic"
+      ],
       "stem_keywords": [
-        "49",
         "want",
         "replace",
         "3",
@@ -11510,9 +11546,41 @@
         "forget",
         "them",
         "21",
-        "others"
+        "others",
+        "posteriors"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "book": "Hupp OMFS 6e",
+          "passage": "a cast or milled\n  14-32). The goal in implant placement and bar fabrication is to             framework, which accepts acrylic, resin, or porcelain to create\n  maximize the A-P spread of the implants and the bar with its                the replacement of the patent’s missing bone, gingival tissue,\n  attachments. The advantage of utilizing a bar structure is that its         and teeth. These fram",
+          "chapter": "Ch 14",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 4,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 17.5
+        },
+        {
+          "book": "Complete Dentures",
+          "passage": "the baseplate unless it prevents the proper seating of the record base back on the cast. If\n                 left in place, it will enhance stability both on the cast and within the mouth.\n                        On a lathe or with a handpiece, trim away any excess resin at the borders of the base\n                 and in the areas where artificial teeth will be set with an arbor band or",
+          "chapter": "Ch 7",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 3,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 15.5
+        },
+        {
+          "book": "Intro to Ortho",
+          "passage": "eruption of             overbite is undesirable. Buccal capping is produced by carrying the acrylic\nthe lower buccal segment teeth or elimination of possible occlusal inter-       over the occlusal surface of the buccal segment teeth (Fig. 17.13) and has\nferences is necessary to allow tooth movement to occur.                         the effect of propping the incisors apart. The acrylic should be",
+          "chapter": "Ch 12",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 3,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 15.5
+        }
+      ]
     },
     "fn_restorative_0308": {
       "verdict": "needs_review",
@@ -11658,7 +11726,7 @@
     },
     "fn_restorative_0317": {
       "verdict": "supported",
-      "score": 21.5,
+      "score": 14.5,
       "reason": "full_text_proximity_match",
       "ans_keywords": [
         "vertical",
@@ -11667,62 +11735,89 @@
         "37"
       ],
       "stem_keywords": [
-        "52",
         "extraction",
         "mesially",
         "angulated",
         "38",
-        "cause",
-        "vertical",
-        "defect",
-        "distal",
-        "37"
+        "cause"
       ],
       "evidence": [
         {
-          "book": "Carranza Implantology",
-          "passage": "CHAPTER 54       Locally Delivered, Controlled-Release Antimicrobials        667.e1\n\nCASE SCENARIO 54.1\nPatient: A 47-year-old male\nChief Complaint: “My gums on the lower right side still bleed when I Àoss.”\nBackground Information\nPatient is a current smoker (5 to 6 cigarettes/day). He has no systemic medical conditions and no known drug allergies. He underwent subgingival root\ninstru",
-          "chapter": "Ch 54",
-          "ans_keywords_hit": 3,
-          "stem_keywords_hit": 3,
-          "proximity": 5.0,
+          "book": "Contemporary Orthodontics 7e",
+          "passage": "ing loop in a horizontal               the preferred location for a closing loop is at the spot that\nrather than a vertical direction improves its ability to deliver the           will be the center of the embrasure when the space is closed\nmoments needed to prevent tipping. Because of this and because                 (Fig. 16.7). This means that in a first premolar extraction situation,\na vertica",
+          "chapter": "Ch 16",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 2,
+          "proximity": 3.0,
           "affirming": 1.5,
-          "score": 21.5
+          "score": 14.5
         },
         {
-          "book": "Periodontics MSI",
-          "passage": "passed through the facial tissue and looped back around the lingual\nof the terminal tooth and through the interdental area mesial to the terminal\ntooth. The suture is then slung around the facial surface of the terminal tooth\n\f toward the distal aspect of the lingual flap. Wrapping the suture around the\n terminal tooth in this fashion allows the facial flap to be locked in placed and\n positioned",
-          "chapter": "Ch 23",
-          "ans_keywords_hit": 3,
-          "stem_keywords_hit": 3,
+          "book": "Hupp OMFS 6e",
+          "passage": "fficult to close and may cause\n    Vertical-releasing incisions should cross the free gingival margin      some mildly prolonged healing, but if care is taken when suturing,\nat the line angle of a tooth and should not be directly on the facial       the healing period is not noticeably lengthened.\naspect of the tooth, nor directly in the papilla (Figure 8-4). Incisions        The four-cornered fla",
+          "chapter": "Ch 8",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 1,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 21.5
+          "score": 14.5
         },
         {
-          "book": "White & Pharoah 7e",
-          "passage": "B\n\n    FIGURE 19-8 Gutta-percha may be used to visualize the depth of infrabony defects. A, Radiograph fails to show the osseous defect\n    without the use of the gutta-percha points. B, Radiograph reveals an osseous defect extending to the region of the apex. (Courtesy H.\n    Takei, DDS, Los Angeles, CA.)\n\n    FIGURE 19-9 CBCT sections demonstrating details of the arch",
-          "chapter": "Ch 9",
-          "ans_keywords_hit": 3,
-          "stem_keywords_hit": 3,
-          "proximity": 5.0,
+          "book": "Lang & Lindhe",
+          "passage": "ap. (a) Installation of two standard (4.1 mm diameter)\nStraumann® implants (10 mm) 5 mm distal of the distal aspect of tooth 34 and 12 mm distal of tooth 34 (= 6 mm mesial of tooth 37).\nTotal extension of the gap: 18 mm. (b) Reconstruction of the implants in premolar units to fit the size of the gap. (c) Radiographic\ndocumentation, 6 years after loading. The filling on tooth 37 was satisfactory an",
+          "chapter": "Ch 53",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 1,
+          "proximity": 4.0,
           "affirming": 1.5,
-          "score": 21.5
+          "score": 13.5
         }
       ]
     },
     "fn_restorative_0318": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
+      "verdict": "supported",
+      "score": 13.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "hydroxide"
+      ],
       "stem_keywords": [
-        "53",
         "best",
         "liner",
         "composite"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "book": "Sturdevant 5e",
+          "passage": "pth. When preparing         possible microexposure, or an actual exposure (see\n    the proximal box for a composite restoration, the axial        Chapter 3). If used, the calcium hydroxide liner is\n    wall initial depth usually is limited to 0.2 mm into dentin;   covered with a RMGI base to protect it from dissolution\n    this means that the tip of the No. 245 bur or diamond          during the a",
+          "chapter": "Ch 13",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 13.5
+        },
+        {
+          "book": "Sturdevant 5e",
+          "passage": "-31D). A             the preparation walls, such as in preparations with all-\n    smaller instrument may be more appropriate if the              enamel margins, there should be little or no potential\n    lesion is smaller.                                             for microleakage and no need for a liner. A calcium\n       A notable difference in the initial Class II preparation    hydroxide line",
+          "chapter": "Ch 13",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 13.5
+        },
+        {
+          "book": "Sturdevant 5e",
+          "passage": "n dimension to protect the thin underlying dentin      deﬁned enamel margin (ﬁnish line), and the marginal\nand calcium hydroxide liner from subsequent stresses.         cast metal alloy is too thin and weak if its angle is less\nUsually, good resistance form dictates that the pulpal        than 30 degrees. Conversely, if the enamel margin is\nwall should not be formed entirely by a cement base;",
+          "chapter": "Ch 20",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 11.5
+        }
+      ]
     },
     "fn_restorative_0319": {
       "verdict": "supported",
@@ -11768,12 +11863,13 @@
       ]
     },
     "fn_restorative_0320": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
+      "verdict": "supported",
+      "score": 15.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "70"
+      ],
       "stem_keywords": [
-        "54",
         "file",
         "corresponding",
         "size",
@@ -11781,7 +11877,38 @@
         "gaties",
         "glidden"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "book": "Endo Principles",
+          "passage": "iven Instruments\n      then flushing it with 1 to 2 mL of irrigant. Recapitulation is       Gates-Glidden Drills\n      performed between each successive enlarging instrument,              Gates-Glidden drills are suited for straight-line access modi-\n      regardless of the cleaning and shaping technique.                    fication (see Figs. 16.20 and 16.21). A No. 2 Gates (approxi-",
+          "chapter": "Ch 15",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 3,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 15.5
+        },
+        {
+          "book": "Oral Radiology 8e",
+          "passage": "corresponding to the different sizes of intraoral film. Detectors\nwithout flaws are relatively expensive to produce, and the expense of the\ndetector increases with increasing matrix size (total number of pixels). Pixel\nsize ranges from less than 20 µm to 70 µm. Three types of solid-state sensors\nare in common use.\n\nCharge-Coupled Device\nThe charge-coupled device (CCD), introduced to dentistry in 1",
+          "chapter": "Ch 16",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 3,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 15.5
+        },
+        {
+          "book": "Sturdevant 5e",
+          "passage": "Filler Particle Size (\u0003m)\n             FIGURE 4-70 Examples of relative ﬁller contents and particle size distributions for a\n             variety of fabrication strategies (homogeneous, heterogeneous), ﬁller options (midiﬁller,\n             miniﬁller, microﬁller, or nanoﬁller), and combinations (hybrids of different-sized particles\n             or clustered ﬁller or both). The relative ﬁller cont",
+          "chapter": "Ch 4",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 13.5
+        }
+      ]
     },
     "fn_restorative_0321": {
       "verdict": "needs_review",
@@ -11802,12 +11929,14 @@
       "evidence": []
     },
     "fn_restorative_0322": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
+      "verdict": "supported",
+      "score": 15.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "naocl",
+        "accident"
+      ],
       "stem_keywords": [
-        "55",
         "while",
         "irriagating",
         "naocl",
@@ -11816,9 +11945,41 @@
         "pain",
         "swelling",
         "bleeding",
-        "from"
+        "from",
+        "canal"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "book": "Endo Principles",
+          "passage": "ue dissolution with prior canal shaping and use         apical transportation continues with larger and larger files, a\n    of NaOCl are still required.119                                      teardrop shape develops, and apical perforation can occur on 281\n\f16 ENDODONTICS\n      the lateral root surface (Fig. 16.11). Transportation in curved\n      canals already begins with a No. 25 file.19 Enlarg",
+          "chapter": "Ch 15",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 3,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 15.5
+        },
+        {
+          "book": "Endo Principles",
+          "passage": "d on the needle.\n    from 0.5% to 5.25% have been recommended. A common                        The irrigant does not move apically more than 1 mm\n    concentration is 2.5%, a concentration at which the potential          beyond the irrigation tip, so deep placement with small-gauge\n    for toxicity is reduced, yet some tissue dissolving and antimi-        needles enhances irrigation (see Fig. 16.9",
+          "chapter": "Ch 15",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 3,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 15.5
+        },
+        {
+          "book": "Lang & Lindhe",
+          "passage": "ra­                    (Fig. 41-32). A slurry of calcium hydroxide powder in\n tion has also been advocated after surgical removal                  a NaOCl solution can then be placed as an interim\n of the granulation tissue, to promote ingrowth of                    medication. This will dissolve soft tissue remnants\n periodontal ligament cells into the resorbed area                    inside the",
+          "chapter": "Ch 41",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 3,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 15.5
+        }
+      ]
     },
     "fn_restorative_0323": {
       "verdict": "needs_review",
@@ -11876,16 +12037,49 @@
       ]
     },
     "fn_restorative_0325": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
+      "verdict": "supported",
+      "score": 11.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "saine",
+        "irrigation"
+      ],
       "stem_keywords": [
-        "56",
         "naocl",
         "accident"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "book": "Cohen 11e",
+          "passage": "The increased                 for another 3 months. Excessive calcium hydroxide dressing\nvolume of irrigant used compensates for this lower concentra-               changes should be avoided if at all possible because the initial\ntion of NaOCl. An irrigation needle that can passively reach                toxicity of the material is thought to delay healing.104\nclose to the apical length is useful",
+          "chapter": "Ch 1",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 11.5
+        },
+        {
+          "book": "Cohen 11e",
+          "passage": "e\nWhen the length has been confirmed radiographically, very                   whether a hard tissue barrier has formed and if the calcium\nlight filing (because of the thin dentinal walls) is performed              hydroxide has washed out of the canal. This is assessed to have\nwith copious irrigation with 0.5% NaOCl.54,147 A lower strength             occurred if the canal can be seen again radiog",
+          "chapter": "Ch 1",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 11.5
+        },
+        {
+          "book": "Cohen 11e",
+          "passage": "of 17% and can remove the smear layers when in direct contact\nEthylenediamine tetra-acetic acid, widely abbreviated as EDTA,                  with the root canal wall for less than 1 minute. Even though\nis an aminopolycarboxylic acid and a colorless, water-soluble                   EDTA has self-limited action, if it is left in the canal for longer\nsolid EDTA is often sugg",
+          "chapter": "Ch 6",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 11.5
+        }
+      ]
     },
     "fn_restorative_0326": {
       "verdict": "supported",
@@ -11957,17 +12151,50 @@
       "evidence": []
     },
     "fn_restorative_0329": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
+      "verdict": "supported",
+      "score": 14.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "wedging",
+        "needle"
+      ],
       "stem_keywords": [
-        "57",
         "cause",
         "extrusion",
         "naocl"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "book": "Endo Principles",
+          "passage": "d on the needle.\n    from 0.5% to 5.25% have been recommended. A common                        The irrigant does not move apically more than 1 mm\n    concentration is 2.5%, a concentration at which the potential          beyond the irrigation tip, so deep placement with small-gauge\n    for toxicity is reduced, yet some tissue dissolving and antimi-        needles enhances irrigation (see Fig. 16.9",
+          "chapter": "Ch 15",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 2,
+          "proximity": 3.0,
+          "affirming": 1.5,
+          "score": 14.5
+        },
+        {
+          "book": "Cohen 11e",
+          "passage": "The increased                 for another 3 months. Excessive calcium hydroxide dressing\nvolume of irrigant used compensates for this lower concentra-               changes should be avoided if at all possible because the initial\ntion of NaOCl. An irrigation needle that can passively reach                toxicity of the material is thought to delay healing.104\nclose to the apical length is useful",
+          "chapter": "Ch 1",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 13.5
+        },
+        {
+          "book": "Cohen 11e",
+          "passage": "e\nWhen the length has been confirmed radiographically, very                   whether a hard tissue barrier has formed and if the calcium\nlight filing (because of the thin dentinal walls) is performed              hydroxide has washed out of the canal. This is assessed to have\nwith copious irrigation with 0.5% NaOCl.54,147 A lower strength             occurred if the canal can be seen again radiog",
+          "chapter": "Ch 1",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 13.5
+        }
+      ]
     },
     "fn_restorative_0330": {
       "verdict": "needs_review",
@@ -12026,12 +12253,13 @@
       ]
     },
     "fn_restorative_0332": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
+      "verdict": "supported",
+      "score": 15.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "apexification"
+      ],
       "stem_keywords": [
-        "58",
         "pedo",
         "36",
         "vital",
@@ -12039,7 +12267,38 @@
         "apex",
         "best"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "book": "Cohen 11e",
+          "passage": "formed apex is often difficult; the electronic pulp tester rarely\n    can be compacted with length control.                               provides meaningful data, and thermal tests often give equivo-\n        Unlike the pulp capping, pulpotomy, and apexogenesis pro-       cal or false results in young children and traumatized teeth.\n    cedures described previously, apexification at best resul",
+          "chapter": "Ch 20",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 3,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 15.5
+        },
+        {
+          "book": "Endo Principles",
+          "passage": "f internal resorption is evident, the pulp is removed and\n        The primary goal of apexogenesis is to maintain pulp vital-       apexification therapy is initiated.\n     ity, thus allowing dentin formation and root-end closure. Then\n     the remaining primary odontoblasts can form dentin, increas-         Apexification101,111\n     ing the thickness of the root dentin wall and making it less",
+          "chapter": "",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 3,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 15.5
+        },
+        {
+          "book": "OMF Pathology",
+          "passage": "l pathosis, both the invagination and the\n     (Fig. 2-74). Cementum-lined invaginations of the root have                adjacent pulp canal require endodontic therapy. In teeth\n     been reported, but these represent a simple variation of root             with open apices, apexification with calcium hydroxide or\n     morphology and should not be included under the term                      minera",
+          "chapter": "Ch 2",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 3,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 15.5
+        }
+      ]
     },
     "fn_restorative_0333": {
       "verdict": "supported",
@@ -14375,42 +14634,30 @@
     },
     "fn_restorative_0461": {
       "verdict": "supported",
-      "score": 11.5,
+      "score": 6.5,
       "reason": "full_text_proximity_match",
       "ans_keywords": [
         "0.3"
       ],
       "stem_keywords": [
-        "acetaminophen",
-        "q20.",
         "impression",
         "pour"
       ],
       "evidence": [
         {
-          "book": "McDonald & Avery 10e",
-          "passage": "deine and                Suspension: 12 mg/5 mL                                           0.5-1.0 mg/kg/dose given at\n acetaminophen             12 mg codeine/120 mg acetaminophen/5 mL                           4- to 6-hour intervals\nHydrocodone and            Suspension: 7.5 mg hydrocodone/325 mg                            0.3 mL/kg/dose given at 4- to 6-hour\n acetaminophen              acetamino",
-          "chapter": "Ch 15",
+          "book": "Carranza 13e",
+          "passage": "Any ridge\n\n                                  3916\n\faugmentation procedures should be completed before, or in\nconjunction with, fabricating an ovate pontic. When constructing\nthe final restorations, the contours of the developed ovate pontic\nreceptor site can be conveyed to the laboratory by capturing a soft-\ntissue impression 4 to 6 weeks after the site has been created.\n\n            EFIG. 70.30 R",
+          "chapter": "Ch 70",
           "ans_keywords_hit": 1,
           "stem_keywords_hit": 1,
-          "proximity": 5.0,
+          "proximity": 0.0,
           "affirming": 1.5,
-          "score": 11.5
+          "score": 6.5
         },
         {
-          "book": "McDonald Child & Adolescent",
-          "passage": "sion: 12 mg/5 mL                                   0.5–1.0 mg/kg/dose given at 4- to 6-hour\n                                                        12 mg codeine/120 mg acetaminophen/5 mL                     intervals\n     Hydrocodone and acetaminophen                      Suspension: 7.5 mg hydrocodone/325 mg                    0.3 mL/kg/dose given at 4- to 6-hour intervals",
-          "chapter": "Ch 8",
-          "ans_keywords_hit": 1,
-          "stem_keywords_hit": 1,
-          "proximity": 4.0,
-          "affirming": 1.5,
-          "score": 10.5
-        },
-        {
-          "book": "Cohen 11e",
-          "passage": "derations, Dent Clin North Am 30:391, 1986.                       teeth with necrotic pulps and associated periapical             93. Schilling A, Corey R, Leonard M, Eghtesad B:\n49. Horrobin DF, Durnad LG, Manku MS: Prostaglandin E 1                    radiolucencies: relationship of flare-ups to endodontic             Acetaminophen: old drug, new warnings, Cleve Clin J\n    modifies nerve conduct",
-          "chapter": "Ch 1",
+          "book": "Carranza 13ed PDF",
+          "passage": "st also be at the ideal level, or the\npontic will appear too long. Third, the ridge tissue must be facial to\nthe ideal cervical facial form of the pontic so that the pontic can\nemerge from the tissue. If any of these three areas is inadequate,\nsome form of ridge augmentation is needed to produce a ridge that\ncan have an adequate receptor site created (eFig. 70.30). Any ridge\naugmentation procedure",
+          "chapter": "Ch 70",
           "ans_keywords_hit": 1,
           "stem_keywords_hit": 1,
           "proximity": 0.0,
@@ -27542,54 +27789,48 @@
     },
     "fn_endo_0433": {
       "verdict": "supported",
-      "score": 19.5,
+      "score": 12.5,
       "reason": "full_text_proximity_match",
       "ans_keywords": [
         "mesial",
         "13"
       ],
       "stem_keywords": [
-        "2023",
-        "09",
-        "19",
-        "buc",
-        "16",
-        "year",
-        "pregnant",
-        "teenager",
-        "came",
-        "clinic"
+        "opg",
+        "soap",
+        "bubble",
+        "appearance"
       ],
       "evidence": [
         {
-          "book": "Carranza Implantology",
-          "passage": "ication of diabetes.163\nreaction. It typically begins as insulin resistance, which leads to      Periodontitis in patients with type 1 diabetes appears to start after\nthe reduced production of insulin in the pancreas as the demand          the age of 12 years, and it has a ¿vefold increased prevalence in\nincreases. Type 2 diabetes is the most common form of diabetes,          teenagers.53 The prev",
-          "chapter": "Ch 26",
-          "ans_keywords_hit": 1,
-          "stem_keywords_hit": 5,
-          "proximity": 5.0,
-          "affirming": 1.5,
-          "score": 19.5
-        },
-        {
-          "book": "Intro to Ortho",
-          "passage": "ge.   upper incisors due to impacted canine, 0.7 per cent of 10–13-year-\n  In a Caucasian population (Gorlin et al. 1990): congenital absence of     olds. A recent meta-analysis found a prevalence of transposition of 0.33\nupper canines, 0.3 per cent; congenital absence of lower canines, 0.1       per cent.\n\n14.2 Normal development\nThe development of the maxillary canine commences around 4 to 5",
-          "chapter": "Ch 21",
+          "book": "Oral Radiology 8e",
+          "passage": "st and root apex, suggesting that the fulcrum of physiologic movement is in\nthe region where the PDL is thinnest. The thickness of the ligament relates to\nthe degree of function, because the PDL is thinnest around the roots of\nembedded teeth and teeth that have lost their antagonists. The reverse is not\ntrue, however, because an appreciably wider space is not regularly observed\nin persons with esp",
+          "chapter": "Ch 10",
           "ans_keywords_hit": 2,
-          "stem_keywords_hit": 3,
-          "proximity": 5.0,
+          "stem_keywords_hit": 1,
+          "proximity": 3.0,
           "affirming": 1.5,
-          "score": 18.5
+          "score": 12.5
         },
         {
-          "book": "Littlewood Ortho 2019",
-          "passage": "impaction\nand 5 months of age. The upper canines erupt, on average, at 11–12           of lower canines, 0.35%; resorption of upper incisors due to impacted\nyears of age. The lower canines erupt, on average, at 10–11 years of age.    canine, 0.7% of 10–13-year-olds. A recent meta-analysis found a preva-\n  In a Caucasian population (Gorlin et al. 1990): congenital absence         lence of transpos",
+          "book": "Sturdevant 5e",
+          "passage": "ﬁssures or pits that are at high risk for subsequent caries\nabrasion techniques are being advocated for preparing         activity (Fig. 13-4). Originally referred to as a preventive\nthe pits and grooves before sealant placement, but their      resin restoration,39,40 this general type of ultraconservative\neffectiveness has not yet warranted their additional\nexpense.\n    Next, the tooth is rins",
           "chapter": "Ch 13",
-          "ans_keywords_hit": 2,
-          "stem_keywords_hit": 3,
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 18.5
+          "score": 11.5
+        },
+        {
+          "book": "Endo Principles",
+          "passage": "ory and exam. Con-\n     ventional radiographs are compressed, two-dimensional\n     images in which much detail may be hidden by superimposi-\n     tion. This limitation can be reduced by making more than one\n     radiograph at different angles. Recent advances in technology\n     allow three-dimensional (3D) techniques, such as cone beam\n     computed tomography (CBCT), to aid in the diagnosis of",
+          "chapter": "Ch 4",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 11.5
         }
       ]
     },
@@ -28577,23 +28818,48 @@
       ]
     },
     "fn_endo_0468": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
-      "stem_keywords": [
-        "cellulitis",
-        "7",
-        "want",
-        "om",
-        "prep",
-        "primary",
-        "molar",
-        "consider",
-        "large",
-        "high"
+      "verdict": "supported",
+      "score": 12.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "kidney"
       ],
-      "evidence": []
+      "stem_keywords": [
+        "disease",
+        "osteodystrophy"
+      ],
+      "evidence": [
+        {
+          "book": "Lang & Lindhe",
+          "passage": "concentration, age, sex,      et al. 2007; Garcez et al. 2009; Vesterinen et al. 2011).\nand race (Levey et al. 2006). In a healthy adult, GFR        Furthermore, studies carried out in patients with\nranges between 100 and 120 mL/min/1.73 m2 body               ESRD undergoing hemodialysis demonstrated that\nsurface area. Functional loss of renal glomeruli caused      periodontitis was associated wi",
+          "chapter": "Ch 23",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 4.0,
+          "affirming": 1.5,
+          "score": 12.5
+        },
+        {
+          "book": "Carranza 13e",
+          "passage": "d-smelling metabolites\nthat can be formed or absorbed at any place in the body (e.g., the\nliver, the gut) and transported by the bloodstream to the lungs.\nExhalation of these volatiles in the alveolar air then causes halitosis,\nat least when the concentrations of the bad-smelling metabolites are\n\n                                 2747\n\fsufficiently high. The crevicular fluid reflects the circulatin",
+          "chapter": "Ch 49",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 11.5
+        },
+        {
+          "book": "Carranza 13e",
+          "passage": "onsible for secondary hypertension include renal\ndisease, endocrinologic changes, and neurogenic disorders.\n   In early hypertension, the patient may be asymptomatic. If not\nidentified, diagnosed, and treated, hypertension can persist and\nincrease in severity, leading eventually to coronary artery disease,\nangina, MI, CHF, CVA, or kidney failure.55 The dental office can\nplay a vital role in the de",
+          "chapter": "Ch 39",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 11.5
+        }
+      ]
     },
     "fn_endo_0469": {
       "verdict": "supported",
@@ -39083,17 +39349,51 @@
       ]
     },
     "fn_perio_0210": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
+      "verdict": "supported",
+      "score": 18.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "perio",
+        "probe"
+      ],
       "stem_keywords": [
         "instrument",
         "measure",
         "gingival",
         "thickness"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "book": "Carranza Implantology",
+          "passage": "d in histologic           sulcus. The so-called probing depth of a clinically normal gingi-\nsections, has been reported as 1.8 mm, with variations from 0 to 6            val sulcus in humans is 2 to 3 mm (see Chapter 38). The visibility\nmm206; other studies have reported 1.5 mm289 and 0.69 mm.93 The               of the periodontal probe through the gingiva during probing is also\nclinical evaluati",
+          "chapter": "Ch 4",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 3,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 18.5
+        },
+        {
+          "book": "Periodontics MSI",
+          "passage": "). A split-thickness flap is reflected, and\nthen the thin mucosal flap is excised to prepare the recipient bed for the donor\ntissue. The recipient bed is measured with a periodontal probe and/or a template is\ncut out of a sterile material such as dry foil or from the sterile foil that is used to\nenclose most suture materials. This template is then taken to the palate to outline\nthe shape of the do",
+          "chapter": "Ch 28",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 3,
+          "proximity": 3.0,
+          "affirming": 1.5,
+          "score": 16.5
+        },
+        {
+          "book": "Periodontics MSI PDF",
+          "passage": "form a right angle\nwith the initial incisions (Fig. 21-62, A). A split-thickness flap is reflected, and\nthen the thin mucosal flap is excised to prepare the recipient bed for the donor\ntissue. The recipient bed is measured with a periodontal probe and/or a template is\ncut out of a sterile material such as dry foil or from the sterile foil that is used to\nenclose most suture materials. This templa",
+          "chapter": "Ch 28",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 3,
+          "proximity": 3.0,
+          "affirming": 1.5,
+          "score": 16.5
+        }
+      ]
     },
     "fn_perio_0211": {
       "verdict": "supported",
@@ -39413,50 +39713,46 @@
     },
     "fn_perio_0228": {
       "verdict": "supported",
-      "score": 17.5,
+      "score": 11.5,
       "reason": "full_text_proximity_match",
       "ans_keywords": [
         "2"
       ],
       "stem_keywords": [
-        "zinc",
-        "0",
-        "2",
-        "cause",
-        "gross",
-        "amalgam",
-        "fracture"
+        "sequence",
+        "shade",
+        "matching"
       ],
       "evidence": [
         {
-          "book": "Carranza 13e",
-          "passage": "g the\npoint of the tip against the tooth can produce gouging and\nroughening of the root surface or overheating of the tooth.41 Using a\nlower-power setting and applying only slight pressure reduces the\nvolume and depth of tooth structure removal.32,127\n   The ultrasonic tip must come in direct physical contact with\ncalculus to fracture and remove it. The tip must also contact all\naspects of the roo",
-          "chapter": "Ch 85",
+          "book": "Lang & Lindhe",
+          "passage": "fection Control)\n\n Box 36-1 Instructions for manual toothbrushing.\n It is of the utmost importance, in addition to using\n the correct toothpaste and also brushing for at least\n 2 minutes, to brush the teeth in a set sequence. This\n technique prevents certain areas from being missed.\n Areas untouched by the brush will allow plaque\n to continue to grow. Try to choose a brush with\n medium or soft bri",
+          "chapter": "Ch 37",
           "ans_keywords_hit": 1,
-          "stem_keywords_hit": 4,
+          "stem_keywords_hit": 1,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 17.5
+          "score": 11.5
         },
         {
-          "book": "Carranza Implantology",
-          "passage": "1\nPatient: A 65-year-old female patient\nChief Complaint: Tenderness and bleeding around her implant, which replaced tooth #30.\nBackground and History: Tooth #30 was extracted 2 years ago due to a root fracture on a tooth with previous endodontic therapy. The patient is in overall\ngood health. Her only medication is calcium for osteopenia. She underwent knee replacement due to osteoarthritis 9 mont",
-          "chapter": "Ch 52",
+          "book": "Fixed Pros 5e",
+          "passage": "steps. A properly        Upon completion, the preparation is evaluated to verify\n      finished margin should be smooth as glass, as veri-        that all the criteria have been met (Fig. 8-25). The fol-\n      fied with a touch by the tip of an explorer.               lowing sequence is recommended:\n   2. Finish all prepared surfaces, and slightly round all          1. Verify that adequate occlusa",
+          "chapter": "Ch 7",
           "ans_keywords_hit": 1,
-          "stem_keywords_hit": 4,
+          "stem_keywords_hit": 1,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 17.5
+          "score": 11.5
         },
         {
-          "book": "Contemporary Orthodontics 5e",
-          "passage": "ess must be narrow enough to fit between         hole because they can be used either way, with the deci-\n   the teeth. Critical variables are how much clearance is           sion being made at the time of insertion. If the cortical\n   needed between the screw and the tooth roots and the              plate is difficult to penetrate, a pilot hole may be needed\n   extent to which reducing the diamet",
-          "chapter": "Ch 10",
+          "book": "Contemporary Orthodontics 7e",
+          "passage": "nd they can          however, increases stiffness by a factor of 16 and decreases range\n    be quite helpful in appreciating the effects of changing wire size      by a factor of 2.\n    and geometry in a typical archwire sequence.                                More generally, for a round cantilever beam, the strength of the\n    An efficient method for comparing different wire materials and",
+          "chapter": "Ch 9",
           "ans_keywords_hit": 1,
-          "stem_keywords_hit": 4,
+          "stem_keywords_hit": 1,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 17.5
+          "score": 11.5
         }
       ]
     },
@@ -40396,23 +40692,53 @@
       "evidence": []
     },
     "fn_perio_0272": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
-      "stem_keywords": [
-        "2",
-        "antibiotic",
-        "infection",
-        "antral",
-        "communication",
-        "penicillin",
+      "verdict": "supported",
+      "score": 16.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "ampicillin",
         "amoxicillin",
-        "clavulanic",
-        "acid",
-        "metronidazole"
+        "clavanic",
+        "acid"
       ],
-      "evidence": []
+      "stem_keywords": [
+        "scenario",
+        "penicillin",
+        "resistance..",
+        "give"
+      ],
+      "evidence": [
+        {
+          "book": "Contemporary OMFS 7e",
+          "passage": "Macrolides (Erythromycin Family)\nAmoxicillin has the advantage of a longer serum half-life than\nampicillin and penicillin, making its effective duration and its          Older macrolide antibiotics such as erythromycin have lost much\ndosage interval longer. The costs of amoxicillin and penicillin are       of their effectiveness against the main pathogens of odontogenic\nsimilar. Although both p",
+          "chapter": "Ch 31",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 2,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 16.5
+        },
+        {
+          "book": "Periodontics MSI",
+          "passage": "that acts through inhibition of bacterial cell wall synthesis. Without an adequate\n cell wall the microorganisms are physiologically incapable of survival. Penicillin\n has a marked effect on prokaryotic cells with a limited effect on eukaryotic cells,\n and it is one of the least toxic of all antibiotics. The problem with penicillins,\n however, is the high rate of hypersensitivity to the drug. It",
+          "chapter": "Ch 14",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 14.5
+        },
+        {
+          "book": "Cohen 11e",
+          "passage": "1,55,59 which make them first-line drugs of choice.     drug of choice for acute dental pain in the absence of any\nBecause the use of antibiotics is restricted to severe infections      contraindication to their use. Ibuprofen has been used for more\nor prophylaxis, it seems prudent to use amoxicillin, a semi-           than 30 years and has been thoroughly evaluated.21 If the\nsynthetic penicillin",
+          "chapter": "Ch 8",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 1,
+          "proximity": 4.0,
+          "affirming": 1.5,
+          "score": 13.5
+        }
+      ]
     },
     "fn_perio_0273": {
       "verdict": "needs_review",
@@ -54434,16 +54760,50 @@
       ]
     },
     "fn_fixed_0127": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
+      "verdict": "supported",
+      "score": 14.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "1.23",
+        "fluoride",
+        "foam"
+      ],
       "stem_keywords": [
         "syndrome",
-        "fluoride",
-        "contraindicated"
+        "fluoride"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "book": "Cohen 11e",
+          "passage": "cs. Topical-anesthetic           caries prevention. The ADA recommends that fluoride varnish\npatches and oral-anesthetic rinses may prove a valuable aid for       treatments for at-risk patients should be done between two to\npain management of the fearful patient.                               four times annually, depending on risk classification.\n    The use of psychological questionnaires, such",
+          "chapter": "Ch 3",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 14.5
+        },
+        {
+          "book": "McDonald & Avery 10e",
+          "passage": "ications within a\napplication is recommended whenever possible. If gel or        10-day period was investigated and was observed to be as\nfoam is applied with a tray technique, the trays should        effective as applications every 4 months.114-116 Further-\nbe about one-third full for gel and one-half full for foam.    more, single annual applications have been found to be\nUsually both upper and",
+          "chapter": "Ch 9",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 14.5
+        },
+        {
+          "book": "Sturdevant 5e",
+          "passage": "I base insulates\n    resistance form further because the periphery would              the pulp from thermal changes, bonds to the dentin,\n    not need further extension. In addition, it should not           releases fluoride, is strong enough to resist the forces\n    affect resistance form if the restoration is to rest on a flat   of condensation,19,29 and reduces microleakage.88 The\n    floor per",
+          "chapter": "Ch 17",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 11.5
+        }
+      ]
     },
     "fn_fixed_0128": {
       "verdict": "needs_review",
@@ -65688,16 +66048,50 @@
       "evidence": []
     },
     "fn_implant_0156": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
+      "verdict": "supported",
+      "score": 14.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "around",
+        "implant"
+      ],
       "stem_keywords": [
         "exactly",
         "metal",
         "scaler"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "book": "Carranza 13e",
+          "passage": "ing\nemergence profile, and the tooth may have a boxy, unaesthetic\nappearance. If the platform is placed at or above the level of the\ngingival margin, metal collar or implant exposure can occur,\nyielding an unaesthetic result (Fig. 85.5). If the implant platform is\nplaced too far apically, a long transmucosal abutment will be\nnecessary to restore the implant. This can lead to a deep pocket and\ndiff",
+          "chapter": "Ch 85",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 14.5
+        },
+        {
+          "book": "Carranza 13ed PDF",
+          "passage": "iled in the              The number of transgingival posts on the implants depends on the\nmarket (eFig. 74.3). The characteristic function of this system was            number of missing teeth, averaging four to six for the totally eden-\nthe internal mobile element (IME) shock absorber, which was able               tulous jaw. Several clinical studies reported poor survival rates of\nto connect wit",
+          "chapter": "Ch 74",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 14.5
+        },
+        {
+          "book": "Carranza 13e",
+          "passage": "sted of a cast metal framework with a\nsubperiosteal component in contact with the bone and a\ntransgingival component (posts), which were used to retain the\ndental prosthesis. The number of transgingival posts on the\nimplants depends on the number of missing teeth, averaging four\nto six for the totally edentulous jaw. Several clinical studies\nreported poor survival rates of less than 50% for 5 to 1",
+          "chapter": "Ch 74",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 1,
+          "proximity": 4.0,
+          "affirming": 1.5,
+          "score": 13.5
+        }
+      ]
     },
     "fn_implant_0157": {
       "verdict": "supported",
@@ -67203,20 +67597,55 @@
       "evidence": []
     },
     "fn_implant_0206": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
+      "verdict": "supported",
+      "score": 23.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "screw",
+        "retained",
+        "abutment"
+      ],
       "stem_keywords": [
-        "44",
         "limited",
         "interarch",
         "space",
         "type",
         "abutment",
-        "single"
+        "single",
+        "implant"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "book": "Hupp OMFS 6e",
+          "passage": "tained, abutment-                implant that is 8 mm in length).\nsupported crown on an implant replacing the mandibular right first                Implant spacing must be understood as a dimensional require-\nmolar requires a minimum of 8 mm of interarch space from the                 ment. Implants need 1.5 mm of space from the outer surface of the\nosseous crest of the edentulous space to the occ",
+          "chapter": "Ch 14",
+          "ans_keywords_hit": 3,
+          "stem_keywords_hit": 4,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 23.5
+        },
+        {
+          "book": "Contemporary OMFS 7e",
+          "passage": "of incrementally exceeding that ratio (e.g., a crown height of 15 mm\nprosthetic options. For example, a cement-retained, abutment-                  supported by an implant that is 8 mm in length).\nsupported crown on an implant replacing the mandibular right                       Implant spacing must be understood as a dimensional require-\nfirst molar requires a minimum of 8 mm of interarch space",
+          "chapter": "Ch 14",
+          "ans_keywords_hit": 3,
+          "stem_keywords_hit": 4,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 23.5
+        },
+        {
+          "book": "Carranza 13ed PDF",
+          "passage": "ct location of the dentogingival junction\nassociated with such recession.9,12,16,18–20 A subepithelial connective     and then hollowed to create a shell crown. It is fitted to a screw-\ntissue graft is therefore harvested from the palate and transferred         retained titanium provisional abutment that is opaque for a color\ninto a split-thickness envelope incision on the buccal of the implant.",
+          "chapter": "Ch 82",
+          "ans_keywords_hit": 3,
+          "stem_keywords_hit": 2,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 19.5
+        }
+      ]
     },
     "fn_implant_0207": {
       "verdict": "supported",
@@ -67268,12 +67697,14 @@
       ]
     },
     "fn_implant_0208": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
+      "verdict": "supported",
+      "score": 24.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "implant",
+        "position"
+      ],
       "stem_keywords": [
-        "59",
         "pa",
         "implant",
         "close",
@@ -67283,7 +67714,38 @@
         "loss",
         "periapical"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "book": "Lang & Lindhe",
+          "passage": "ized advanced perio-           removed and replaced with implant‐supported resto-\ndontal lesion at an abutment tooth in a three‐unit         rations? Extraction of tooth 15 may be seen as a\nFPD. The FPD was about 15 years old and the patient        rational decision since implant therapy was planned\nhad no esthetic or functional complaints with regard       in the region of tooth 16. However, from",
+          "chapter": "Ch 33",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 6,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 24.5
+        },
+        {
+          "book": "Fixed Pros 4e",
+          "passage": "D\n\n         E                                                                                                                    F\n\nFig. 13-20\nAnterior implant placement with a surgical guide template. A, The apical extent of the template is not removed, which allows\nthe superoinferior orientation of implant placement to be determined. B, Full-thickness flap incisions are made, preservin",
+          "chapter": "Ch 13",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 4,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 20.5
+        },
+        {
+          "book": "Fixed Pros 5e",
+          "passage": "nture in clear resin. A to C, Putty impression material is used to form a mold of\nthe fitting and polished surfaces of the denture, which is reassembled to form the mold. Clear autopolymerizing resin is poured into\nthe mold (D) and placed in a pressure pot (E). F, The lingual aspect of the template is removed, leaving the most facial 2 mm of\nresin intact. The surgeon will have access to the bone,",
+          "chapter": "Ch 1",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 4,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 20.5
+        }
+      ]
     },
     "fn_implant_0209": {
       "verdict": "supported",
@@ -67293,7 +67755,6 @@
         "2"
       ],
       "stem_keywords": [
-        "60",
         "pa",
         "17",
         "asking",
@@ -67438,12 +67899,15 @@
       "evidence": []
     },
     "fn_implant_0217": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
+      "verdict": "supported",
+      "score": 17.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "extract",
+        "standard",
+        "precautions"
+      ],
       "stem_keywords": [
-        "63",
         "came",
         "er",
         "crying",
@@ -67452,9 +67916,41 @@
         "from",
         "restorable",
         "tooth",
-        "needs"
+        "needs",
+        "extraction"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "book": "Periodontics MSI PDF",
+          "passage": "upt the fractured root out of the bone and move\nthe fracture margin coronally, so that it can be restored without creating gingival\ninflammation.23 However, in some situations, if the fracture is too severe, it may be\nbetter to extract the tooth and replace it with an implant or fixed partial denture. The\northodontist, restorative dentist, and periodontist should evaluate six criteria to\ndetermine",
+          "chapter": "Ch 24",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 4,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 17.5
+        },
+        {
+          "book": "Periodontics MSI",
+          "passage": "vere, it may be\nbetter to extract the tooth and replace it with an implant or fixed partial denture. The\northodontist, restorative dentist, and periodontist should evaluate six criteria to\ndetermine if the tooth should be erupted or extracted.\n\nThe first criterion is root length. Is the root long enough so that a crown-to-root\nratio of 1:1 will be preserved after the root has been erupted? To dete",
+          "chapter": "Ch 24",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 3,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 15.5
+        },
+        {
+          "book": "Periodontics MSI",
+          "passage": "ture margin far enough away from the bone to prevent a biologic\nwidth problem. The other 1.5 mm will provide the proper amount of ferrule for\nadequate resistance form of the crown preparation. Therefore, if the root is fractured\nto the bone level and must be erupted 4 mm, the clinician must evaluate a periapical\nradiograph and subtract 4 mm from the end of the fractured tooth root (Fig. 28-18).\nTh",
+          "chapter": "Ch 24",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 4,
+          "proximity": 3.0,
+          "affirming": 1.5,
+          "score": 15.5
+        }
+      ]
     },
     "fn_implant_0218": {
       "verdict": "needs_review",
@@ -67560,7 +68056,7 @@
     },
     "fn_implant_0223": {
       "verdict": "supported",
-      "score": 18.5,
+      "score": 15.5,
       "reason": "full_text_proximity_match",
       "ans_keywords": [
         "continued",
@@ -67568,49 +68064,47 @@
         "oh"
       ],
       "stem_keywords": [
-        "continued",
-        "poor",
-        "oh",
-        "2023",
-        "09",
-        "17",
-        "guc",
+        "partial",
+        "paralyzed",
+        "hands",
+        "upper",
         "lower",
-        "rpd",
-        "missing",
-        "removable partial denture",
-        "removable partial"
+        "dentures",
+        "haspapillary",
+        "hyperplasia",
+        "primary",
+        "cause"
       ],
       "evidence": [
         {
-          "book": "Hupp OMFS 6e",
-          "passage": "A                                                  B\n\n                                             C\n\nFigure 17-11 Cavernous sinus thrombosis. A, Infraorbital and buccal space abscess with extension into the periorbital and orbital spaces.\nB, The same patient, 4 hours later, with continued spread of the infection to the superficial and deep temporal spaces, cavernous sinus, and the\nopposite o",
+          "book": "Contemporary Orthodontics 7e",
+          "passage": "• Fig. 17.17 Finishing aligners used following fixed appliance treatment to complete tooth positioning not\n        done during the time in braces. Screen captures images of a patient whose braces were removed early\n        because of poor oral hygiene and developing white spots. (A–C) The initial complete buccal crossbite\n        still partially present when braces are removed leaving the upper a",
           "chapter": "Ch 17",
-          "ans_keywords_hit": 2,
-          "stem_keywords_hit": 3,
-          "proximity": 5.0,
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 4,
+          "proximity": 3.0,
           "affirming": 1.5,
-          "score": 18.5
+          "score": 15.5
         },
         {
           "book": "Lang & Lindhe",
           "passage": "ing those       is dental caries. However, in older age cohorts, peri­\n with 2–15 sites with bone loss in their permanent den­        odontal disease is about equally responsible for tooth\n tition. It was found that 52% of the patients in the latter   loss. Overall, periodontitis is thought to account for\n group, 20% of those in the former group, and only             30–35% of all tooth extraction",
           "chapter": "Ch 7",
           "ans_keywords_hit": 2,
-          "stem_keywords_hit": 2,
+          "stem_keywords_hit": 1,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 16.5
+          "score": 14.5
         },
         {
-          "book": "Complete Dentures",
-          "passage": "be a\n                 loss of opposing tooth contact when the required functional inclines became greater\n                 than 20 degrees. Even though a tooth with a 30 degree cusp angle would not be a bad\n                 choice for the molar area, it would cause significant prematurities when moving\n                 into protrusive in the premolar area, and therefore would be a poor choice for",
-          "chapter": "Ch 7",
-          "ans_keywords_hit": 2,
+          "book": "Periodontics MSI PDF",
+          "passage": "ffer\n good strength and are ideal for implant success. Type IV bone, often\n encountered in the maxillary posterior sextants, has a thin cortex and poor\n medullary strength with low trabecular density. It corresponds to the poorest\n implant success rates. In a study by Jaffin and Berman,22 fixtures placed in type\n IV bone had a 35% failure rate. It is postulated that bone quality may be a better\n d",
+          "chapter": "Ch 26",
+          "ans_keywords_hit": 1,
           "stem_keywords_hit": 2,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 16.5
+          "score": 13.5
         }
       ]
     },
@@ -68650,19 +69144,14 @@
     "fn_implant_0270": {
       "verdict": "needs_review",
       "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
+      "reason": "no_match",
+      "ans_keywords": [
+        "underestimation"
+      ],
       "stem_keywords": [
-        "2023",
-        "09",
-        "17",
-        "reem",
-        "almegren",
-        "guc",
-        "questions",
-        "1",
         "florida",
-        "probe"
+        "probe",
+        "disadvantage"
       ],
       "evidence": []
     },
@@ -68710,19 +69199,49 @@
       ]
     },
     "fn_implant_0272": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
+      "verdict": "supported",
+      "score": 11.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "lamella"
+      ],
       "stem_keywords": [
-        "lack",
-        "consistency",
-        "2",
         "transmit",
         "pain",
         "enamel"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "book": "Sturdevant 5e",
+          "passage": "dentinoenamel junction (Fig. 2-11). It is scalloped or wavy\n                                                                 in outline, with the crest of the waves penetrating toward\n                                                                 the enamel. The rounded projections of enamel ﬁt into",
+          "chapter": "Ch 2",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 11.5
+        },
+        {
+          "book": "Sturdevant 5e",
+          "passage": "Dentin must be treated with great care during\n                                                              restorative procedures to minimize damage to the\n                                                              odontoblasts and pulp. Air-water spray should be used\n                                                              whenever cutting with high-speed handpieces to avoid",
+          "chapter": "Ch 2",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 11.5
+        },
+        {
+          "book": "Sturdevant 5e",
+          "passage": "compressed air blasts; it should always maintain its\nenamel caries with early penetration of dentin caries\nalong enamel lamella. (From Schour I: H. J. Noyes oral        normal fluid content (Fig. 2-26). Protection also is\nhistology and embryology, Philadelphia, 1960, Lea &           provided by judicious use of liners, bases, dentin-bonding\nFebiger.)",
+          "chapter": "Ch 2",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 11.5
+        }
+      ]
     },
     "fn_implant_0273": {
       "verdict": "supported",
@@ -68801,24 +69320,8 @@
       "evidence": []
     },
     "fn_implant_0276": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
-      "stem_keywords": [
-        "thickness",
-        "5",
-        "crack",
-        "cementation",
-        "ceramic",
-        "crown",
-        "cement"
-      ],
-      "evidence": []
-    },
-    "fn_implant_0277": {
       "verdict": "supported",
-      "score": 19.0,
+      "score": 18.5,
       "reason": "full_text_proximity_match",
       "ans_keywords": [
         "gic",
@@ -68826,32 +69329,17 @@
         "glass ionomer"
       ],
       "stem_keywords": [
-        "gic",
-        "6",
-        "pedo",
-        "deep",
-        "caries",
-        "pain",
-        "indicated",
-        "extraction.",
-        "glass ionomer cement",
-        "glass ionomer"
+        "crack",
+        "cementation",
+        "ceramic",
+        "crown",
+        "cement"
       ],
       "evidence": [
         {
-          "book": "Fixed Pros 5e",
-          "passage": "uation of glass\n    histological response. J Am Dent Assoc 114:607, 1987.                       Ionomer, zinc phosphate and resin modified glass Ionomer luting\n26. Pameijer CH, et al: Biocompatibility of a glass ionomer luting              cements under class II inlays: an in vivo comparative study.\n    agent. II. Crown cementation. Am J Dent 4:134, 1991.                        J Conserv Dent 13:2",
-          "chapter": "Ch 2",
-          "ans_keywords_hit": 2,
-          "stem_keywords_hit": 4,
-          "proximity": 5.0,
-          "affirming": 0.0,
-          "score": 19.0
-        },
-        {
-          "book": "Endo Principles",
-          "passage": "erfora-      or accessible by a surgical approach, hemisection, bicuspidiza-\n      tion usually occurs during a search for a canal orifice. It is      tion, root amputation, or intentional replantation should be\n      more of a “punched-out” defect into the furcation with a bur        considered. Teeth with divergent roots and bone levels that\n      and is usually accessible, may be small, and may",
-          "chapter": "Ch 19",
+          "book": "Littlewood Ortho 2019",
+          "passage": "ces\n\nFig. 18.9 Separating elastics have been placed between the contact        Fig. 18.10 A separating elastic being stretched between two pieces of\npoints of the second premolars and first permanent molars prior to        floss. One side of the elastic is then worked through the contact point so\nplacement of bands on the latter.                                         that it encircles the contac",
+          "chapter": "Ch 13",
           "ans_keywords_hit": 2,
           "stem_keywords_hit": 3,
           "proximity": 5.0,
@@ -68859,14 +69347,74 @@
           "score": 18.5
         },
         {
+          "book": "Contemporary Orthodontics 7e",
+          "passage": "n a systematic review and meta analysis35 for adolescent       etched tooth surfaces and to the appliance) can be laborious, so\nand adult patients, where the majority of appliances were hybrid          use of only an adequate amount is crucial, but insufficient resin\n(using bone and dental anchorage-TBB) and used a rapid palatal            will lead to excessive leakage onto the nonbonded surfaces",
+          "chapter": "Ch 13",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 14.5
+        },
+        {
+          "book": "Pediatric Dentistry",
+          "passage": "inum ions          have been placed in the glass ionomer cement formulation\nbind to polyacrylic acid at the carboxyl groups, and a gel         to provide light polymerization. Although these resin-\nphase is precipitated to form a matrix of the hardening            modiied glass ionomer cements can be light cured, the\ncement. Calcium carboxylates are formed irst as a irm gel          material sets",
+          "chapter": "Ch 20",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 14.5
+        }
+      ]
+    },
+    "fn_implant_0277": {
+      "verdict": "supported",
+      "score": 13.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "gic",
+        "glass ionomer cement",
+        "glass ionomer"
+      ],
+      "stem_keywords": [
+        "pedo",
+        "deep",
+        "caries",
+        "pain",
+        "indicated",
+        "extraction."
+      ],
+      "evidence": [
+        {
+          "book": "Endo Principles",
+          "passage": "erfora-      or accessible by a surgical approach, hemisection, bicuspidiza-\n      tion usually occurs during a search for a canal orifice. It is      tion, root amputation, or intentional replantation should be\n      more of a “punched-out” defect into the furcation with a bur        considered. Teeth with divergent roots and bone levels that\n      and is usually accessible, may be small, and may",
+          "chapter": "Ch 19",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 1,
+          "proximity": 4.0,
+          "affirming": 1.5,
+          "score": 13.5
+        },
+        {
           "book": "Pediatric Dentistry",
           "passage": "of the           with hand instruments without local anesthesia; it is consid-\nprocess of caries progression can allow for better control of     ered a form of IPT. Massara and colleagues39 demonstrated\nthe “partial removal caries step.” A large round bur (no. 6 or    that use of glass ionomer creates conditions that lead to\n8) can provide better results than spoon excavators.35 A          remine",
           "chapter": "Ch 22",
           "ans_keywords_hit": 1,
-          "stem_keywords_hit": 4,
+          "stem_keywords_hit": 2,
+          "proximity": 4.0,
+          "affirming": 1.5,
+          "score": 12.5
+        },
+        {
+          "book": "McDonald & Avery 10e",
+          "passage": "ment continues        fluids and dehydration during the next few hours as the\nto maintain some presence in the marketplace because it            setting reaction continues.\noffers good biocompatibility with pulp tissue.                         Instances of postoperative sensitivity have been report-\n   Because the ultimate properties are affected by changes         ed when GIC is used as a luting",
+          "chapter": "Ch 12",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 17.5
+          "score": 11.5
         }
       ]
     },
@@ -68957,14 +69505,48 @@
       ]
     },
     "fn_implant_0282": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
-      "stem_keywords": [
-        "stagnant"
+      "verdict": "supported",
+      "score": 12.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "kidney"
       ],
-      "evidence": []
+      "stem_keywords": [
+        "disease",
+        "osteodystrophy"
+      ],
+      "evidence": [
+        {
+          "book": "Lang & Lindhe",
+          "passage": "concentration, age, sex,      et al. 2007; Garcez et al. 2009; Vesterinen et al. 2011).\nand race (Levey et al. 2006). In a healthy adult, GFR        Furthermore, studies carried out in patients with\nranges between 100 and 120 mL/min/1.73 m2 body               ESRD undergoing hemodialysis demonstrated that\nsurface area. Functional loss of renal glomeruli caused      periodontitis was associated wi",
+          "chapter": "Ch 23",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 4.0,
+          "affirming": 1.5,
+          "score": 12.5
+        },
+        {
+          "book": "Carranza 13e",
+          "passage": "d-smelling metabolites\nthat can be formed or absorbed at any place in the body (e.g., the\nliver, the gut) and transported by the bloodstream to the lungs.\nExhalation of these volatiles in the alveolar air then causes halitosis,\nat least when the concentrations of the bad-smelling metabolites are\n\n                                 2747\n\fsufficiently high. The crevicular fluid reflects the circulatin",
+          "chapter": "Ch 49",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 11.5
+        },
+        {
+          "book": "Carranza 13e",
+          "passage": "onsible for secondary hypertension include renal\ndisease, endocrinologic changes, and neurogenic disorders.\n   In early hypertension, the patient may be asymptomatic. If not\nidentified, diagnosed, and treated, hypertension can persist and\nincrease in severity, leading eventually to coronary artery disease,\nangina, MI, CHF, CVA, or kidney failure.55 The dental office can\nplay a vital role in the de",
+          "chapter": "Ch 39",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 11.5
+        }
+      ]
     },
     "fn_implant_0283": {
       "verdict": "supported",
@@ -69049,19 +69631,49 @@
       "evidence": []
     },
     "fn_implant_0287": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
+      "verdict": "supported",
+      "score": 13.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "lingual"
+      ],
       "stem_keywords": [
-        "primary",
-        "herpetic",
-        "13",
         "missed",
         "canal",
         "incisor"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "book": "Lang & Lindhe",
+          "passage": "t canal treatment.\nThe uneven gingival margins and dark root surface detracted from an otherwise attractive smile. (c) Nitol wire with an offset\nbracket was used to slowly extrude the incisor. (d) Occlusal adjustment was made on the lingual side of the crown to create room\nfor the tooth to erupt. This view, after 1 month in tooth movement, shows the gingival tissues moving with the root of the too",
+          "chapter": "Ch 39",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 13.5
+        },
+        {
+          "book": "Periodontics MSI PDF",
+          "passage": ", which\ndescends along with the inferior dental nerve to enter the foramen of the\nmandibular canal. During its course, it gives rise to a dental artery for each root of\nthe molar and premolar teeth. In the region of the first premolar, it divides into the\nmental and incisive branches, the former emerging from the mental foramen to\nsupply the mucosa of the chin region and the latter continuing forw",
+          "chapter": "Ch 23",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 4.0,
+          "affirming": 1.5,
+          "score": 12.5
+        },
+        {
+          "book": "Sturdevant 5e",
+          "passage": "ximal thickness of enamel available\n    for bonding around their periphery. These preparations\n    could be restored with amalgam, however. The prepa-\n    rations include the following:\n    • Facial pit of the mandibular molar\n    • Lingual pit of the maxillary lateral incisor\n    • Occlusal pits of the mandibular first premolar\n    • Occlusal pits and fissures of the maxillary first molar\n    • O",
+          "chapter": "Ch 17",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 11.5
+        }
+      ]
     },
     "fn_implant_0288": {
       "verdict": "supported",
@@ -69150,17 +69762,50 @@
       ]
     },
     "fn_implant_0290": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
+      "verdict": "supported",
+      "score": 14.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "1.23",
+        "fluoride",
+        "foam"
+      ],
       "stem_keywords": [
-        "tapered",
-        "15",
         "syndrome",
         "fluoride"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "book": "Cohen 11e",
+          "passage": "cs. Topical-anesthetic           caries prevention. The ADA recommends that fluoride varnish\npatches and oral-anesthetic rinses may prove a valuable aid for       treatments for at-risk patients should be done between two to\npain management of the fearful patient.                               four times annually, depending on risk classification.\n    The use of psychological questionnaires, such",
+          "chapter": "Ch 3",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 14.5
+        },
+        {
+          "book": "McDonald & Avery 10e",
+          "passage": "ications within a\napplication is recommended whenever possible. If gel or        10-day period was investigated and was observed to be as\nfoam is applied with a tray technique, the trays should        effective as applications every 4 months.114-116 Further-\nbe about one-third full for gel and one-half full for foam.    more, single annual applications have been found to be\nUsually both upper and",
+          "chapter": "Ch 9",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 14.5
+        },
+        {
+          "book": "Sturdevant 5e",
+          "passage": "I base insulates\n    resistance form further because the periphery would              the pulp from thermal changes, bonds to the dentin,\n    not need further extension. In addition, it should not           releases fluoride, is strong enough to resist the forces\n    affect resistance form if the restoration is to rest on a flat   of condensation,19,29 and reduces microleakage.88 The\n    floor per",
+          "chapter": "Ch 17",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 11.5
+        }
+      ]
     },
     "fn_implant_0291": {
       "verdict": "needs_review",
@@ -69186,7 +69831,7 @@
     },
     "fn_implant_0293": {
       "verdict": "supported",
-      "score": 18.5,
+      "score": 13.5,
       "reason": "full_text_proximity_match",
       "ans_keywords": [
         "1.23",
@@ -69194,10 +69839,6 @@
         "foam"
       ],
       "stem_keywords": [
-        "1.23",
-        "fluoride",
-        "foam",
-        "16",
         "young",
         "permanent",
         "fissure",
@@ -69207,34 +69848,34 @@
       ],
       "evidence": [
         {
-          "book": "McDonald & Avery 10e",
-          "passage": "ications within a\napplication is recommended whenever possible. If gel or        10-day period was investigated and was observed to be as\nfoam is applied with a tray technique, the trays should        effective as applications every 4 months.114-116 Further-\nbe about one-third full for gel and one-half full for foam.    more, single annual applications have been found to be\nUsually both upper and",
-          "chapter": "Ch 9",
-          "ans_keywords_hit": 2,
-          "stem_keywords_hit": 3,
-          "proximity": 5.0,
-          "affirming": 1.5,
-          "score": 18.5
-        },
-        {
           "book": "Sturdevant 5e",
           "passage": "ration of Independence was           by a projection of the increased numbers of teeth that\nsigned, life expectancy was only 35 years.51                will be at risk to dental disease in the future.\n    In 1994, Americans spent $949 billion on health             Caries. The incidence of caries has decreased. This\ncare.42 Projections for 2008 indicate that the total U.S.   reduction is a result o",
           "chapter": "Ch 1",
           "ans_keywords_hit": 1,
-          "stem_keywords_hit": 4,
+          "stem_keywords_hit": 2,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 17.5
+          "score": 13.5
         },
         {
-          "book": "Oral Radiology 8e",
-          "passage": "ut.\nFurthermore, with caries, clinical examination would demonstrate an\nirregularity or a depression. With cervical burnout, the root surface would be\nintact. Finally, the shape of the radiolucency from burnout can often be\nexplained by the anatomy of the tooth (see Fig. 19.9A). Fortunately most root\nlesions can and should be detected clinically, whether they are buccal, lingual,\nor interproximal.",
-          "chapter": "Ch 15",
+          "book": "Littlewood Ortho 2019",
+          "passage": "ry teeth in the optimum               Interceptive orthodontic treatment can aid space redistribution\ncondition is a priority to maximize future treatment options. This            in the mixed dentition phase and improve aesthetics. Consideration\nincludes diet analysis, oral hygiene regimens tailored to the patient’s       must be given to how any orthodontic correction will be maintained\nneeds, f",
+          "chapter": "Ch 22",
           "ans_keywords_hit": 1,
-          "stem_keywords_hit": 4,
+          "stem_keywords_hit": 2,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 17.5
+          "score": 13.5
+        },
+        {
+          "book": "Sturdevant 5e",
+          "passage": "n evaluation of the number of permanent teeth             and hygiene procedures. The costs of fluoride tooth-\nthat are diseased, missing, or ﬁlled (DMF). Measures of       paste and simple materials for a school-based fluoride\nprimary teeth are reported as dmf. DMF may be reported        rinse program often are prohibitive. There usually are\nas the number of teeth (DMFT) or surfaces (DMFS)",
+          "chapter": "Ch 3",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 4.0,
+          "affirming": 1.5,
+          "score": 12.5
         }
       ]
     },
@@ -69307,41 +69948,67 @@
       "reason": "no_answer_text",
       "ans_keywords": [],
       "stem_keywords": [
-        "18",
         "shaped",
         "lesion"
       ],
       "evidence": []
     },
     "fn_implant_0298": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
-      "stem_keywords": [
-        "vrf",
-        "19",
-        "remaining",
-        "dentin",
-        "thickness",
-        "0.5",
-        "vertical root fracture",
-        "vertical root"
-      ],
-      "evidence": []
-    },
-    "fn_implant_0299": {
       "verdict": "supported",
-      "score": 17.5,
+      "score": 14.5,
       "reason": "full_text_proximity_match",
       "ans_keywords": [
         "rmgi",
         "base"
       ],
       "stem_keywords": [
+        "remaining",
+        "dentin",
+        "thickness",
+        "0.5"
+      ],
+      "evidence": [
+        {
+          "book": "Sturdevant 5e",
+          "passage": "pth. When preparing         possible microexposure, or an actual exposure (see\n    the proximal box for a composite restoration, the axial        Chapter 3). If used, the calcium hydroxide liner is\n    wall initial depth usually is limited to 0.2 mm into dentin;   covered with a RMGI base to protect it from dissolution\n    this means that the tip of the No. 245 bur or diamond          during the a",
+          "chapter": "Ch 13",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 14.5
+        },
+        {
+          "book": "Sturdevant 5e",
+          "passage": "I base insulates\n    resistance form further because the periphery would              the pulp from thermal changes, bonds to the dentin,\n    not need further extension. In addition, it should not           releases fluoride, is strong enough to resist the forces\n    affect resistance form if the restoration is to rest on a flat   of condensation,19,29 and reduces microleakage.88 The\n    floor per",
+          "chapter": "Ch 17",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 14.5
+        },
+        {
+          "book": "McDonald & Avery 10e",
+          "passage": "C                                                  D\n\n               E                                                   F\nFigure 13-5 A, Second primary molar with deep occlusal caries. Because the tooth was free of symptoms of painful pulpitis,\nindirect pulp therapy was completed. B, The gross caries has been removed. A small amount of soft carious dentin remains\nat the base of the c",
+          "chapter": "Ch 13",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 13.5
+        }
+      ]
+    },
+    "fn_implant_0299": {
+      "verdict": "supported",
+      "score": 15.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
         "rmgi",
-        "base",
-        "20",
+        "base"
+      ],
+      "stem_keywords": [
         "large",
         "palatal",
         "tori",
@@ -69350,47 +70017,45 @@
       ],
       "evidence": [
         {
-          "book": "Periodontics MSI",
-          "passage": "Occlusal view of horizontal mattress suture used in the anterior region.\nFigure 20-39.\n\fInternal mattress suture. The internal mattress suture allows both the facial\nand lingual (or palatal) papillae to stay upright, filling the embrasure space in\n\f an esthetic area. A, The suture enters the facial tissue just apical to the base of\n the papilla, runs across the top of the alveolar crest, and pene",
-          "chapter": "Ch 23",
+          "book": "Oral Radiology 8e",
+          "passage": "ults before 30 years of\nage, and they may continue to enlarge slowly during a lifetime.\n\n           FIG. 24.36 Clinical photograph (A) of torus palatinus. Cropped\n             panoramic image (B) shows the radiopaque image of torus\n            palatinus superimposed over the root apices of the maxillary\n             premolars and canine. (Courtesy Dr. R. Baker, Chapel Hill, NC.)\n\n   The number, si",
+          "chapter": "Ch 22",
           "ans_keywords_hit": 1,
-          "stem_keywords_hit": 4,
+          "stem_keywords_hit": 3,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 17.5
+          "score": 15.5
         },
         {
-          "book": "OMF Pathology",
-          "passage": "midline raphe.\n\f20        CHAPTER 1        Developmental Defects of the Oral and Maxillofacial Region\n\n     • The spindle torus has a midline ridge along the palatal\n        raphe. A median groove is sometimes present.\n     • The nodular torus arises as multiple protuberances, each\n        with an individual base. These protuberances may\n        coalesce, forming grooves between them.\n     • The l",
-          "chapter": "Ch 1",
+          "book": "McCracken RPD",
+          "passage": "Minor Connectors                           49\n\n the minor connector contacting the guiding plane. Its\n purpose is to establish a definitive finishing index tissue\n stop for the acrylic-resin base after processing (Figure\n 5-39).\n\n Finishing Lines\n The finishing line junction with the major connector\n should take the form of an angle not greater than 90\n degrees, therefore being somewhat undercut",
+          "chapter": "Ch 5",
           "ans_keywords_hit": 1,
-          "stem_keywords_hit": 4,
-          "proximity": 5.0,
+          "stem_keywords_hit": 3,
+          "proximity": 4.0,
           "affirming": 1.5,
-          "score": 17.5
+          "score": 14.5
         },
         {
           "book": "OMF Pathology",
           "passage": "n is filled with soft tissue similar\nto the dental follicle (i.e., reduced enamel epithelium with\na fibrous connective tissue wall). On eruption, this soft\ntissue loses its vascular supply and becomes necrotic.\n    Historically, coronal dens invaginatus has been classified\ninto three major types (Fig. 2-68). Type I exhibits an invagi-\nnation that is confined to the crown. The invagination in\ntype",
           "chapter": "Ch 2",
           "ans_keywords_hit": 1,
-          "stem_keywords_hit": 4,
-          "proximity": 5.0,
+          "stem_keywords_hit": 3,
+          "proximity": 4.0,
           "affirming": 1.5,
-          "score": 17.5
+          "score": 14.5
         }
       ]
     },
     "fn_implant_0300": {
       "verdict": "supported",
-      "score": 15.5,
+      "score": 12.5,
       "reason": "full_text_proximity_match",
       "ans_keywords": [
         "shaped"
       ],
       "stem_keywords": [
-        "shaped",
-        "21",
         "extracted",
         "36",
         "referred",
@@ -69399,34 +70064,34 @@
       ],
       "evidence": [
         {
-          "book": "Fixed Pros 5e",
-          "passage": "URE 21-35 ■ Use of the Dawson 2.7 extracoronal attachment to support and retain a maxillary partial removable dental prosthesis\n(RDP). This precision attachment comprises an extracoronal patrix, which is waxed into the fixed abutment prosthesis and then cast\ndirectly to the metal components. The matrix comprises a housing with a spring-loaded plunger for retention. The plunger engages\na dimple on",
-          "chapter": "Ch 21",
+          "book": "Carranza 13ed PDF",
+          "passage": "ccurately seated (may require\nTreatment Plan and Rationale                                                     bone profiler), the labial void of the sockets is grafted with particulate\nFour maxillary incisors are to be extracted and four implants placed             bone, and a crescent-shaped free gingival tissue graft is harvested\nimmediately in a one-stage approach with simultaneous bone and",
+          "chapter": "Ch 81",
           "ans_keywords_hit": 1,
-          "stem_keywords_hit": 3,
-          "proximity": 5.0,
+          "stem_keywords_hit": 2,
+          "proximity": 4.0,
           "affirming": 1.5,
-          "score": 15.5
+          "score": 12.5
         },
         {
           "book": "Sturdevant 5e",
-          "passage": "he margins, is pulled from\nmalleting proceeds. Generally, the line of force is per-     gold to tooth across the surface. This is done to smooth\npendicular to the pulpal floor in the center of the mass     the surface and trim away excess gold (Fig. 21-15B). If\nand at a 45-degree angle to the pulpal floor as the          considerable excess gold has been compacted, a green\nexternal walls are reach",
-          "chapter": "Ch 21",
+          "passage": "ugh\nand lingual surfaces during mastication. A functional           small intercrystalline spaces. Enamel permeability\ncusp that opposes a groove occludes on the enamel and           decreases with age because of changes in the enamel\ninclines on each side of the groove and not in the depth        matrix, although basic permeability is maintained; this\nof the groove. This arrangement leaves a V-sh",
+          "chapter": "Ch 2",
           "ans_keywords_hit": 1,
-          "stem_keywords_hit": 2,
+          "stem_keywords_hit": 1,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 13.5
+          "score": 11.5
         },
         {
-          "book": "Cohen 11e",
-          "passage": "as        tissues meet in the root canal (Fig. 5-21). The diameter of the\nit approaches the AF, or major apical diameter. The space              canal at the CDJ varies considerably; it was determined to be\nbetween the major and minor diameters has been described as            353 μm for the central incisors, 292 μm for the lateral incisors,\nfunnel shaped or hyperbolic, or as having the shape of",
-          "chapter": "Ch 5",
+          "book": "Carranza 13ed PDF",
+          "passage": "result in the oblitera-\ntissues. In patients with erosion, the salivary pH, the buffering capacity,   tion of the cusps and the formation of either a flat or cuneiform\nand the calcium and phosphorus content have been reported as normal,          (cupped-out) occlusal surface. Contrary to earlier thought, attrition\nand the mucin level is elevated.43                                            in yo",
+          "chapter": "Ch 32",
           "ans_keywords_hit": 1,
-          "stem_keywords_hit": 2,
+          "stem_keywords_hit": 1,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 13.5
+          "score": 11.5
         }
       ]
     },
@@ -69454,46 +70119,48 @@
     },
     "fn_implant_0303": {
       "verdict": "supported",
-      "score": 16.5,
+      "score": 15.5,
       "reason": "full_text_proximity_match",
       "ans_keywords": [
         "rotation",
         "37"
       ],
       "stem_keywords": [
-        "rotation",
-        "37"
+        "3",
+        "lower",
+        "incisors",
+        "large"
       ],
       "evidence": [
         {
-          "book": "Carranza 13e",
-          "passage": "emodeling (first 3 months after implant placement) can be\nreduced significantly.13\n\n                                3745\n\f        EFIG. 66.5  Different techniques to coat an implant with L-PRF before\n        insertion. (1A) Placement of implant against an L-PRF clot in a small\n        Ti-dish. (1B and 1C) After slow rotation of the implant in contact with\n        the clot while adding a little pre",
-          "chapter": "Ch 66",
-          "ans_keywords_hit": 2,
-          "stem_keywords_hit": 2,
+          "book": "Periodontics MSI",
+          "passage": "t must be stable.\nDressing that moves when the patient talks or chews can severely disrupt the\nhealing process. Light cured periodontal dressings are often the most stable, and\nthey can be secured to the teeth with suture material, if needed.\n Figure 21-40.\n\n   Laterally positioned flap—surgical technique. A, Preoperative: the lateral\n   incisor donor tooth (#26) is lingually positioned with gingi",
+          "chapter": "Ch 28",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 3,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 16.5
+          "score": 15.5
         },
         {
-          "book": "Malamed",
-          "passage": "tion technique. Quintessence Int. 2000;31:737–743.\nReferences                                                                       23.\t\u0007Hochman MN, Friedman MJ. An in vitro study of needle\n1.\t\u0007Cuny EJ, Fredekind R, Budenz AW. Safety needles: new require-                     force penetration comparing a standard linear insertion to the\n    ment",
-          "chapter": "Ch 13",
-          "ans_keywords_hit": 2,
-          "stem_keywords_hit": 2,
+          "book": "Periodontics MSI PDF",
+          "passage": "h gingiva at a more\n   coronal level compared with the other incisors, making this an ideal donor\n\n          Join us: https://t.me/dental_books_lib\n\f   tooth because the 1 to 2 mm of recession expected on the donor tooth will\n   create a uniform look among the lower incisors. B, Suturing: after rotation\n   and suturing of the flap, the root on #27 is almost entirely covered. The bone\n   level on t",
+          "chapter": "Ch 28",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 3,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 16.5
+          "score": 15.5
         },
         {
-          "book": "Local Anesthesia 6e",
-          "passage": "eflection: a linear insertion technique\n               versus a bi-directional rotation insertion technique. Quint Int. 31, 2000, 737–743.\n           21. Hochman, MN, Friedman, MJ: An in vitro study of needle force penetration comparing a standard\n               linear insertion to the new bidirectional rotation insertion technique. Quint Int. 32, 2001, 789–796.\n           22. Pashley, EL, Nelson,",
-          "chapter": "Ch 11",
-          "ans_keywords_hit": 2,
-          "stem_keywords_hit": 2,
+          "book": "Contemporary Orthodontics 5e",
+          "passage": "comfortable than\n\n             A                                                                   B\n\n                                               C\n\n  FIGURE 17-9         A, A removable clip-type retainer that controls alignment of only the anterior teeth (3-3 clip or as shown here, 4-4 clip) often is\npreferred as a removable lower retainer because if the lower posterior teeth were well aligne",
+          "chapter": "Ch 17",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 3,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 16.5
+          "score": 15.5
         }
       ]
     },
@@ -79891,19 +80558,51 @@
       ]
     },
     "fn_ortho_pedo_0183": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
+      "verdict": "supported",
+      "score": 14.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "rmgi",
+        "base"
+      ],
       "stem_keywords": [
-        "0.5",
-        "remain",
+        "remaining",
         "dentin",
         "thickness",
-        "want",
-        "composite"
+        "0.5"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "book": "Sturdevant 5e",
+          "passage": "pth. When preparing         possible microexposure, or an actual exposure (see\n    the proximal box for a composite restoration, the axial        Chapter 3). If used, the calcium hydroxide liner is\n    wall initial depth usually is limited to 0.2 mm into dentin;   covered with a RMGI base to protect it from dissolution\n    this means that the tip of the No. 245 bur or diamond          during the a",
+          "chapter": "Ch 13",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 14.5
+        },
+        {
+          "book": "Sturdevant 5e",
+          "passage": "I base insulates\n    resistance form further because the periphery would              the pulp from thermal changes, bonds to the dentin,\n    not need further extension. In addition, it should not           releases fluoride, is strong enough to resist the forces\n    affect resistance form if the restoration is to rest on a flat   of condensation,19,29 and reduces microleakage.88 The\n    floor per",
+          "chapter": "Ch 17",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 14.5
+        },
+        {
+          "book": "McDonald & Avery 10e",
+          "passage": "C                                                  D\n\n               E                                                   F\nFigure 13-5 A, Second primary molar with deep occlusal caries. Because the tooth was free of symptoms of painful pulpitis,\nindirect pulp therapy was completed. B, The gross caries has been removed. A small amount of soft carious dentin remains\nat the base of the c",
+          "chapter": "Ch 13",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 13.5
+        }
+      ]
     },
     "fn_ortho_pedo_0184": {
       "verdict": "needs_review",
@@ -81411,56 +82110,56 @@
     },
     "fn_ortho_pedo_0237": {
       "verdict": "supported",
-      "score": 13.5,
+      "score": 17.5,
       "reason": "full_text_proximity_match",
       "ans_keywords": [
         "palatal"
       ],
       "stem_keywords": [
-        "picture",
-        "recession",
-        "asked",
-        "miller",
-        "classification",
-        "29",
         "26",
         "rct",
         "separated",
         "instrument",
+        "apical",
+        "distal",
+        "root",
+        "instrumentation",
+        "doctor",
+        "bypass",
         "root canal treatment",
         "root canal therapy",
         "root canal"
       ],
       "evidence": [
         {
-          "book": "Cohen 11e",
-          "passage": "o recently reported by\nof mandibular molar may establish a “danger zone” in which excessive               Barreto and colleagues,10 who have found these microcracks in\ninstrumentation, combined with straightening of the canal, may result in a         40% of intact maxillary incisors and canines.\nthinner dentin wall that may allow strain concentration. E, F, Concavities in\nthe palatal side of the b",
-          "chapter": "Ch 14",
+          "book": "Endo Principles",
+          "passage": "ightly mesial to a line drawn from the mesiobuccal to the\ndistal to the mesiolingual cusp tip. The mesiobuccal root is         lingual or palatal canal. The initial movement of the canal\nvery broad in a buccolingual direction, thus a small second          from the chamber is often not toward the apex but laterally\ncanal is common.49-53 The mesiolingual canal orifice (com-           toward the mesi",
+          "chapter": "Ch 15",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 4,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 17.5
+        },
+        {
+          "book": "Carranza 13ed PDF",
+          "passage": "class II furcation on the mesial            elevating a flap. The flap should provide adequate access for visualiza-\n   furcation of the second molar. Local anatomic factors affecting             tion and instrumentation and minimize surgical trauma.\n   the teeth may or may not be present. The removal of the distobuccal             After debridement, resection of the root begins with the exposure",
+          "chapter": "Ch 64",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 4,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 17.5
+        },
+        {
+          "book": "Sturdevant 5e",
+          "passage": "thin-bladed hand instrument is placed into the crevice\n                                                              and against the external surface of the tooth to indicate\n                                                              the proper angulation for the drill.15 With the drill tip in\n                                                              its proper position",
+          "chapter": "Ch 19",
           "ans_keywords_hit": 1,
           "stem_keywords_hit": 3,
-          "proximity": 3.0,
-          "affirming": 1.5,
-          "score": 13.5
-        },
-        {
-          "book": "Periodontics MSI",
-          "passage": "loosely organized glandular and adipose\ntissue.151 The pars corporis adiposa contains adipose tissue and resides in the area\nof the premolars, whereas the pars corporis glandulosum contains glandular tissue\nand extends posteriorly to the soft palate152; the two are roughly separated by the\nthin mucosa over the palatal root of the first molar.153\n\fWhen the density of connective tissue decreases and",
-          "chapter": "Ch 28",
-          "ans_keywords_hit": 1,
-          "stem_keywords_hit": 2,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 13.5
-        },
-        {
-          "book": "White & Pharoah 7e",
-          "passage": "ugh the pathogenesis remains unclear.\n\f                                                                                                           C H A P T E R 20 Inflammatory Disease                     329\n\nCLINICAL FEATURES\nClinically, patients typically have an area of exposed bone after an\ninvasive dental surgical procedure. However, cases related to\ndenture trauma and spontaneous cases have",
-          "chapter": "Ch 21",
-          "ans_keywords_hit": 1,
-          "stem_keywords_hit": 2,
-          "proximity": 5.0,
-          "affirming": 1.5,
-          "score": 13.5
+          "score": 15.5
         }
       ]
     },
@@ -83472,29 +84171,57 @@
       ]
     },
     "fn_ortho_pedo_0324": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
-      "stem_keywords": [
-        "partial",
-        "pulpotomy",
-        "24",
-        "tooth",
-        "longer"
-      ],
-      "evidence": []
-    },
-    "fn_ortho_pedo_0325": {
       "verdict": "supported",
-      "score": 19.5,
+      "score": 13.5,
       "reason": "full_text_proximity_match",
       "ans_keywords": [
         "extrusion"
       ],
       "stem_keywords": [
-        "extrusion",
-        "25",
+        "tooth",
+        "longer"
+      ],
+      "evidence": [
+        {
+          "book": "Cohen 11e",
+          "passage": "but in the unlikely event they are, the prognosis is            surgical repositioning, should be considered. If orthodontic\n       good.17,92                                                      extrusion is planned for an intruded tooth, it should be initi-\n   3. The quality of treatment is vital to successful repair. The      ated as soon as possible and should not be delayed longer than",
+          "chapter": "Ch 1",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 13.5
+        },
+        {
+          "book": "Intro to Ortho",
+          "passage": "lared forward, and become spaced.\n\n20.4 Orthodontic treatment as an adjunct to restorative work\nWith an increasing number of patients keeping their teeth for longer,              tion of the space, so the over-erupted tooth can be intruded using\nthere is a greater need for interdisciplinary treatment of patients with           orthodontics.\ncomplex dental problems. Where collaboration is needed be",
+          "chapter": "Ch 20",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 13.5
+        },
+        {
+          "book": "Endo Principles",
+          "passage": "e-\n        17 years) with complete root formation, either surgical or         senting an opportunity for immediate replantation (within\n        orthodontic extrusion should be attempted. Root canal treat-       minutes); (2) a patient may be brought to the office with a\n        ment is indicated for intruded teeth with the exception of those   tooth that has been kept in a physiologic storage medi",
+          "chapter": "Ch 11",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 3.0,
+          "affirming": 1.5,
+          "score": 11.5
+        }
+      ]
+    },
+    "fn_ortho_pedo_0325": {
+      "verdict": "supported",
+      "score": 15.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "extrusion"
+      ],
+      "stem_keywords": [
         "tooth",
         "displaced",
         "palatal",
@@ -83503,34 +84230,34 @@
       ],
       "evidence": [
         {
-          "book": "Pediatric Dentistry",
-          "passage": "ard swelling palpated in the vestibule\nn   FIGURE 15-11 Fracture of the mandible in a baby as a result of            due to fracture of the labial bone plate by the root of the\ntrauma to the chin.                                                           primary tooth\n\n              A                                                             B\nn FIGURE 15-12 A, Clinical view of subluxation of th",
-          "chapter": "Ch 15",
-          "ans_keywords_hit": 1,
-          "stem_keywords_hit": 5,
-          "proximity": 5.0,
-          "affirming": 1.5,
-          "score": 19.5
-        },
-        {
-          "book": "Carranza Implantology",
-          "passage": "the margin. This can be accomplished either by surgery to                      distance is less than 2 mm at one or more locations, a diagnosis of\nalter the bone level or by orthodontic extrusion to move the resto-                supracrestal attached tissue violation can be con¿rmed. This assess\nration margin farther away from the bone level. It is important to                 ment is completed c",
-          "chapter": "Ch 45",
-          "ans_keywords_hit": 1,
-          "stem_keywords_hit": 4,
-          "proximity": 5.0,
-          "affirming": 1.5,
-          "score": 17.5
-        },
-        {
           "book": "Contemporary Orthodontics 7e",
           "passage": "n allowance for the biologic width of the gingival attachment              reduction, can improve the periodontal condition while maintain-\n   (about 2 mm)                                                                ing excellent esthetics.\n   Thus, if a fracture is at the height of the alveolar crest, the tooth          In general, extrusion can be as rapid as 1 mm per week without\nshould be e",
           "chapter": "Ch 20",
           "ans_keywords_hit": 1,
-          "stem_keywords_hit": 4,
+          "stem_keywords_hit": 3,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 17.5
+          "score": 15.5
+        },
+        {
+          "book": "Pediatric Dentistry",
+          "passage": "adiograph showing the left maxillary primary central incisor\nafter intrusion. The shortened and more opaque image of the intruded tooth, as compared with that of the right central incisor, indicates that\nthe root has been pushed labially and away from the underlying permanent tooth. (From McTigue DJ: Managing injuries to the primary dentition,\nDent Clin North Am, 53[4]:627–638, 2009.)\n\n3. Intrusio",
+          "chapter": "Ch 15",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 3,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 15.5
+        },
+        {
+          "book": "Pediatric Dentistry",
+          "passage": "ard swelling palpated in the vestibule\nn   FIGURE 15-11 Fracture of the mandible in a baby as a result of            due to fracture of the labial bone plate by the root of the\ntrauma to the chin.                                                           primary tooth\n\n              A                                                             B\nn FIGURE 15-12 A, Clinical view of subluxation of th",
+          "chapter": "Ch 15",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 4,
+          "proximity": 3.0,
+          "affirming": 1.5,
+          "score": 15.5
         }
       ]
     },
@@ -83637,16 +84364,12 @@
     },
     "fn_ortho_pedo_0330": {
       "verdict": "supported",
-      "score": 22.5,
+      "score": 15.5,
       "reason": "full_text_proximity_match",
       "ans_keywords": [
-        "surgical",
-        "excision"
+        "0"
       ],
       "stem_keywords": [
-        "surgical",
-        "excision",
-        "29",
         "overgrowth",
         "2",
         "pocket",
@@ -83654,94 +84377,123 @@
       ],
       "evidence": [
         {
-          "book": "White & Pharoah 7e",
-          "passage": "ot enhance                                    ducts are compressed or smoothly displaced around the lesion (the\nafter administration of gadolinium contrast agent, as do benign                                  “ball-in-hand” appearance) (Fig. 29-22).\nmixed tumors. When imaged with US, cysts are sharply marginated\nand echo-free (represented as a dark area) (Fig. 29-21).\n\nTreatment. Management of cys",
-          "chapter": "Ch 14",
-          "ans_keywords_hit": 2,
-          "stem_keywords_hit": 5,
+          "book": "Endo Principles",
+          "passage": "Do\n          to extend only apically. As expected, these lesions can mimic\n          each other at one or another stage of their development and\n          make differential diagnosis difficult (see Fig. 7.1).\n             The decision on whether a tooth with a periodontal pocket\n    7-0   requires endodontic therapy or periodontal treatment (or both)\n\n                I\n          should b",
+          "chapter": "Ch 7",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 3,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 22.5
+          "score": 15.5
         },
         {
-          "book": "McDonald & Avery 10e",
-          "passage": "10 In this            calcification to spicules of lamellar bone may be found\nseries, 27% of 46 patients were younger than 20 years of            in the lesion. The surface epithelium is often ulcerated.\nage. Another review of 38 cases reported an age range of 5          Although simple surgical excision is the treatment of\nto 75 years (mean age, 33 years), with the most frequent            choice",
-          "chapter": "Ch 28",
-          "ans_keywords_hit": 2,
-          "stem_keywords_hit": 4,
+          "book": "Carranza 13e",
+          "passage": ".1                 81.3                 94.5          96.7         96.5\n    B\na\n The initial success criteria at 10 years were set as a PPD ≤5 mm, no BOP, and BL\n<0.2 mm annually. The implant success rates for group A (i.e., patients with a history\nof periodontitis) and group B (i.e., patients with periodontal health) using these initial\ncriteria are listed in the first column. Notice how dramatic",
+          "chapter": "Ch 87",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 3,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 20.5
+          "score": 15.5
         },
         {
-          "book": "OMF Pathology",
-          "passage": "t\n      mentation in a cosmetically objectionable location such as        frequent adornment is a barbell (Dumbbell might be a\n      the anterior maxillary facial gingiva. In such cases, conserva-   better name!) consisting of a metal rod with a ball that\n      tive surgical excision can be performed; alternatively            screws onto each end (Fig. 8-56). The lip jewelry is termed\n      amalga",
-          "chapter": "Ch 8",
-          "ans_keywords_hit": 2,
-          "stem_keywords_hit": 4,
+          "book": "Carranza Implantology",
+          "passage": "96.7                         96.5\na\n The initial success criteria at 10 years were set as a PPD ≤ 5 mm, no BOP, and BL < 0.2 mm annually. The implant success rates for group A (patients with a history of periodontitis) and\ngroup B (patients with periodontal health) using these initial criteria are listed in the rst column. Notice how dramatically the success rates change when the criteria us",
+          "chapter": "Ch 88",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 3,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 20.5
+          "score": 15.5
         }
       ]
     },
     "fn_ortho_pedo_0331": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
-      "stem_keywords": [
-        "0",
-        "30",
-        "biological",
-        "width"
-      ],
-      "evidence": []
-    },
-    "fn_ortho_pedo_0332": {
       "verdict": "supported",
-      "score": 17.5,
+      "score": 11.5,
       "reason": "full_text_proximity_match",
       "ans_keywords": [
         "1"
       ],
       "stem_keywords": [
-        "1",
-        "31",
-        "papilla",
-        "tooth",
-        "implant"
+        "biological",
+        "width"
       ],
       "evidence": [
         {
-          "book": "Carranza 13ed PDF",
-          "passage": "e\ntooth is removed, the gingival embrasure form and papilla can be\nmaintained. At 4 weeks, the 2.5-mm extension can be reduced to a\n1- to 1.5-mm extension to facilitate hygiene. This procedure can\nmaintain the papilla next to the abutment teeth as long as the bone\non the abutment tooth is at a normal level (eFigs. 70.31 to 70.38).\n\neFig. 70.30 Ridge considerations when an ovate pontic is desired.",
-          "chapter": "Ch 70",
+          "book": "Sturdevant 5e",
+          "passage": "ve        gently into the gingival sulcus and produces lateral\nplastic ejectors that may be shaped by bending with the       displacement (a few tenths of a millimeter) of the free\nfingers are preferable because of improved infection          gingiva (“opening” the sulcus) without blanching it\ncontrol (Fig. 10-45). The ejector should be placed to         (caused by ischemia secondary to pressure).",
+          "chapter": "Ch 10",
           "ans_keywords_hit": 1,
-          "stem_keywords_hit": 4,
+          "stem_keywords_hit": 1,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 17.5
+          "score": 11.5
+        },
+        {
+          "book": "Cohen 11e",
+          "passage": "uring surgery. Tissue reflection\n      done to establish the depth of the gingival sulcus before             should begin from the vertical releasing incision at the junction\n      the incision is made. The average width of the attached\n      gingiva is 2.1 to 5.1 mm in the maxilla and 1.8 to 3.8\n      mm in the mandible.10,199,341,563 It is widest over the\n      central and lateral incisors, narr",
+          "chapter": "Ch 4",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 11.5
         },
         {
           "book": "Carranza 13e",
           "passage": "ds to the\n   level of the bone, it must be erupted 4 mm. The first 2.5 mm\n   moves the fracture margin far enough away from the bone\n   to prevent a biologic width problem. The other 1.5 mm\n   provides the proper amount of ferrule for adequate\n   resistance form of the crown preparation. Therefore, if the\n   root is fractured to the bone level and must be erupted 4\n   mm, the periapical radiograph",
           "chapter": "Ch 62",
           "ans_keywords_hit": 1,
-          "stem_keywords_hit": 3,
+          "stem_keywords_hit": 1,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 15.5
+          "score": 11.5
+        }
+      ]
+    },
+    "fn_ortho_pedo_0332": {
+      "verdict": "supported",
+      "score": 13.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "1"
+      ],
+      "stem_keywords": [
+        "papilla",
+        "tooth",
+        "implant"
+      ],
+      "evidence": [
+        {
+          "book": "Carranza 13e",
+          "passage": "ds to the\n   level of the bone, it must be erupted 4 mm. The first 2.5 mm\n   moves the fracture margin far enough away from the bone\n   to prevent a biologic width problem. The other 1.5 mm\n   provides the proper amount of ferrule for adequate\n   resistance form of the crown preparation. Therefore, if the\n   root is fractured to the bone level and must be erupted 4\n   mm, the periapical radiograph",
+          "chapter": "Ch 62",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 13.5
         },
         {
-          "book": "Carranza 13ed PDF",
-          "passage": "ease at the start           study showed that questionable teeth in patients with aggressive\nof treatment. There were 15,666 teeth present, for an average of 26          periodontitis can be maintained for longer than 15 years if the patient\nteeth per patient. During the follow-up period (an average of 22             is compliant. 41\nyears), a total of 1312 teeth were lost from all causes. Of this",
-          "chapter": "Ch 73",
+          "book": "Lang & Lindhe",
+          "passage": "ap. (a) Installation of two standard (4.1 mm diameter)\nStraumann® implants (10 mm) 5 mm distal of the distal aspect of tooth 34 and 12 mm distal of tooth 34 (= 6 mm mesial of tooth 37).\nTotal extension of the gap: 18 mm. (b) Reconstruction of the implants in premolar units to fit the size of the gap. (c) Radiographic\ndocumentation, 6 years after loading. The filling on tooth 37 was satisfactory an",
+          "chapter": "Ch 53",
           "ans_keywords_hit": 1,
-          "stem_keywords_hit": 3,
+          "stem_keywords_hit": 2,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 15.5
+          "score": 13.5
+        },
+        {
+          "book": "McCracken RPD",
+          "passage": "the premolar and\n     variable for both premolars and molars.*\n     The correctly formed papilla should be shaped so that\n it will be self-cleansing. It should be carved so that it is in\n harmony with the interpretation of age and will be the\n deciding factor in the visible outline form of the tooth.\n As Frush has pointed out, even a drop of wax properly\n placed can change the appearance of a squ",
+          "chapter": "Ch 18",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 13.5
         }
       ]
     },
@@ -83778,30 +84530,61 @@
       "evidence": []
     },
     "fn_ortho_pedo_0335": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
+      "verdict": "supported",
+      "score": 13.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "porcelain"
+      ],
       "stem_keywords": [
-        "gingivectomy",
-        "33",
         "upper",
         "denture",
         "porcelain",
         "opposing"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "book": "Sturdevant 5e",
+          "passage": ", resin-bonded\ntooth pontic, (2) denture tooth pontic, (3) porcelain-        splints).\nfused-to-metal pontic or all-metal pontic with metal\nretainers, and (4) all-porcelain pontic. Although the         Technique. A maxillary right central incisor must be\nfour types differ in the degree of permanency, they           extracted for periodontal reasons (Fig. 15-55A and B).\nshare a major advantage—cons",
+          "chapter": "Ch 15",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 13.5
+        },
+        {
+          "book": "Cohen 11e",
+          "passage": "al        water-soluble resin, which is softened using warm water (Fig.\nthe restoration is made of and what is it cemented with. Con-         8-18). The small block of material is placed on the crown to\nservative removal efforts are difficult with traditional, all-metal   be removed, and the patient bites into this material until the\nrestorations cemented with nonbonded cements. This situation",
+          "chapter": "Ch 8",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 13.5
+        },
+        {
+          "book": "Carranza 13e",
+          "passage": "nt\nChief Complaint:\n“My front tooth is loose and it hurts.”\nBackground Information:\nPatient reports a history of periodontitis. Her front teeth were\ntraumatized initially 3 years ago and then again 2 weeks ago. She\nhas porcelain-fused-to-metal crowns on several anterior teeth. She\nwas informed by her general dentist that tooth #8 has a “hopeless”\nprognosis. It was deemed nonrestorable due to sever",
+          "chapter": "Ch 81",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 13.5
+        }
+      ]
     },
     "fn_ortho_pedo_0336": {
       "verdict": "supported",
       "score": 17.5,
       "reason": "full_text_proximity_match",
       "ans_keywords": [
-        "porcelain"
+        "prepare",
+        "rest",
+        "seat"
       ],
       "stem_keywords": [
-        "porcelain",
-        "34",
         "25",
         "last",
         "distal",
@@ -83811,34 +84594,34 @@
       ],
       "evidence": [
         {
-          "book": "Contemporary Orthodontics 7e",
-          "passage": ".23). Bands are largely retained by              is a light-activated composite resin, although chemically activated\nthe elasticity of the band material as it fits around the tooth. This        resins still are widely available.\nis augmented by the cement that seals between the band and the                   Especially in treatment of adults, it occasionally is necessary to\ntooth, but a band retai",
-          "chapter": "Ch 10",
-          "ans_keywords_hit": 1,
-          "stem_keywords_hit": 4,
-          "proximity": 5.0,
+          "book": "McCracken RPD",
+          "passage": "in an apical direction. From the incisal\nview, it will be noted that the rest seat preparation is broadest at the most lingual aspect of the canine. As the preparation approaches\nthe proximal surface of the tooth, it is less broad than at any other area. The proximal view demonstrates correct taper of the floor of\nthe rest seat. It also should be noted that the borders of the rest seat are slight",
+          "chapter": "Ch 6",
+          "ans_keywords_hit": 3,
+          "stem_keywords_hit": 2,
+          "proximity": 3.0,
           "affirming": 1.5,
           "score": 17.5
+        },
+        {
+          "book": "Sturdevant 5e",
+          "passage": "eel touching the margins\nshould seat with little or no pressure (Fig. 20-63A).         or die because they can be polished away unknowingly\nIdeally, it should have the same feel when being placed       and quickly, resulting in “short” margins on the tooth.\non the die as the feel of the wax pattern when it was         Also, at this time, the proximal contacts are adjusted one\nseated on the die. If",
+          "chapter": "Ch 20",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 2,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 16.5
         },
         {
           "book": "Pediatric Dentistry",
-          "passage": "ore time, greater   mouth guard) vital bleaching.24\nskill, and more patience on the part of the clinician. Also,          Power bleaching is an in-ofice procedure in which a con-\noutcomes are more dificult to predict, and composite resin        centrated hydrogen peroxide solution is applied to rubber\nis more susceptible to staining than porcelain.                   dam–isolated teeth while heatin",
-          "chapter": "Ch 39",
-          "ans_keywords_hit": 1,
-          "stem_keywords_hit": 4,
-          "proximity": 5.0,
+          "passage": "and-loop device is to it a band on the abutment tooth. Band selection is a trial-and-\nerror procedure and continues until a band can be nearly seated on the tooth with inger pressure. B, A band pusher is used to seat the band to\na nearly ideal position. The dentist should maintain a good inger rest because soft and hard tissue injury can occur if the pusher slips without\nproper support. C, Final o",
+          "chapter": "Ch 25",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 2,
+          "proximity": 4.0,
           "affirming": 1.5,
-          "score": 17.5
-        },
-        {
-          "book": "McDonald & Avery 10e",
-          "passage": "ss steel esthetic crowns, J Dent Child\n13. Hubel S, Mejàre I: Conventional versus resin-modified glass-             (Chic) 71(3):212–214, 2004.\n    ionomer cement for class II restorations in primary molars. A        37. Jung YS, et al.: A study on the in-vitro wear of the natural\n    3-year clinical study, Int J Paediatr Dent 13:2–8, 2003.                 tooth structure by opposing zirconia or d",
-          "chapter": "Ch 11",
-          "ans_keywords_hit": 1,
-          "stem_keywords_hit": 4,
-          "proximity": 5.0,
-          "affirming": 0.0,
-          "score": 16.0
+          "score": 15.5
         }
       ]
     },
@@ -83855,7 +84638,7 @@
     },
     "fn_ortho_pedo_0338": {
       "verdict": "supported",
-      "score": 21.5,
+      "score": 14.5,
       "reason": "full_text_proximity_match",
       "ans_keywords": [
         "prepare",
@@ -83863,91 +84646,84 @@
         "seat"
       ],
       "stem_keywords": [
-        "prepare",
-        "rest",
-        "seat",
-        "35",
         "radiopacifier",
         "mta",
         "mineral trioxide aggregate"
       ],
       "evidence": [
         {
-          "book": "Fixed Pros 5e",
-          "passage": "be exercised when a casting is seated on its die. Any sig-\n                                                                nificant force will abrade or chip the die, so that the\nTo minimize any dissolution of the luting agent, a 1-mm-        casting will seat on the die but will not seat fully on the\nwide band of metal must be closely adapted to the tooth         prepared tooth. Overlooking thi",
-          "chapter": "Ch 28",
-          "ans_keywords_hit": 3,
-          "stem_keywords_hit": 3,
+          "book": "Cohen 11e",
+          "passage": "st the exposure site (step 5), a larger bulk of\n     3. Rinse the cavity and exposure site (or sites) with 2.6%                MTA be placed that includes most of the surrounding dentin\n        to 5% NaOCl. Heavy bleeding may be controlled with                     at a thickness of at least 1.5 mm. One-step pulp capping and\n        a cotton pellet moistened with NaOCl.",
+          "chapter": "Ch 22",
+          "ans_keywords_hit": 2,
+          "stem_keywords_hit": 1,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 21.5
+          "score": 14.5
         },
         {
-          "book": "McCracken RPD",
-          "passage": "in an apical direction. From the incisal\nview, it will be noted that the rest seat preparation is broadest at the most lingual aspect of the canine. As the preparation approaches\nthe proximal surface of the tooth, it is less broad than at any other area. The proximal view demonstrates correct taper of the floor of\nthe rest seat. It also should be noted that the borders of the rest seat are slight",
-          "chapter": "Ch 6",
-          "ans_keywords_hit": 3,
-          "stem_keywords_hit": 3,
-          "proximity": 5.0,
+          "book": "Endo Principles",
+          "passage": "nals (Fig. 21.22), clean the canal surfaces better\nthan burs, and create less fatigue for the operator.\n   After the apical preparation has been made and thoroughly\nexamined, it should be filled with a root-end filling material\n(Fig. 21.23). Root-end filling materials should meet the fol-\nlowing criteria:                                                    Fig. 21.20 A variety of ultrasonic tips ar",
+          "chapter": "Ch 5",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 2.0,
           "affirming": 1.5,
-          "score": 21.5
+          "score": 10.5
         },
         {
-          "book": "McCracken RPD",
-          "passage": "adequate or excessive contours for placement of a reten-\n   ished rest seat. A predetermined path of placement for         tive clasp arm, or if gingival decalcification or caries is\n   the denture must be kept in mind when the rest seat is         present, a veneered complete coverage restoration should be\n   prepared. The lingual rest seat must not be prepared as        used.\n   though it was go",
-          "chapter": "Ch 6",
-          "ans_keywords_hit": 3,
-          "stem_keywords_hit": 3,
-          "proximity": 5.0,
+          "book": "Hupp OMFS 6e",
+          "passage": "Principles of Endodontic Surgery         Chapter 18 \n\n                                                                                  B\n                                     A\nFigure 18-22 Root end preparation and retrograde filling material (mineral trioxide aggregate) placement. A, Piezoelectric unit with 3-mm long tip to\nprepare the apical end. B, Special carriers f",
+          "chapter": "Ch 18",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 4.0,
           "affirming": 1.5,
-          "score": 21.5
+          "score": 10.5
         }
       ]
     },
     "fn_ortho_pedo_0339": {
       "verdict": "supported",
-      "score": 16.5,
+      "score": 10.5,
       "reason": "full_text_proximity_match",
       "ans_keywords": [
         "bismuth",
         "oxide"
       ],
       "stem_keywords": [
-        "bismuth",
-        "oxide",
-        "36",
         "naocl"
       ],
       "evidence": [
         {
-          "book": "Endo Principles",
-          "passage": "Formulation\n■ Solubility in solvent. Occasionally, creation of post space      Grossman’s formula is as follows:\n  or retreatment may be necessary days, months, or years              Powder: Zinc oxide (body), 42 parts; staybelite resin\n  after obturation. The sealer should be soluble in a solvent.           (setting time and consistency), 27 parts; bismuth subcar-\n  Different sealers have differ",
-          "chapter": "Ch 8",
-          "ans_keywords_hit": 2,
-          "stem_keywords_hit": 2,
-          "proximity": 5.0,
+          "book": "Cohen 11e",
+          "passage": "as a reliable\n   stained dentin is evident. The dentin is washed and dried           option because of its ease of handling and unique poly-\n   again, and the caries detector is reapplied on the dentin for       merization characteristics. Teeth should be conservatively\n   10 seconds. The process is repeated meticulously until no           removed from occlusion if thin cusps are present as a res",
+          "chapter": "Ch 22",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 4.0,
           "affirming": 1.5,
-          "score": 16.5
+          "score": 10.5
         },
         {
-          "book": "Carranza 13e",
-          "passage": "se characteristics, a 90-degree change in the axis of vision of the\ncameras between the data of an initial visit and the surgical time\nmay lead to a major inaccuracy >1 to 2 mm in depth or on side\npositioning by a leverage effect.\n  The calibration process is temperature-dependant above 25 °C,\nand could result in several millimeters of deviation. Between long\nsurgical procedures, the system must b",
-          "chapter": "Ch 84",
+          "book": "Cohen 11e",
+          "passage": "The increased                 for another 3 months. Excessive calcium hydroxide dressing\nvolume of irrigant used compensates for this lower concentra-               changes should be avoided if at all possible because the initial\ntion of NaOCl. An irrigation needle that can passively reach                toxicity of the material is thought to delay healing.104\nclose to the apical length is useful",
+          "chapter": "Ch 1",
           "ans_keywords_hit": 1,
-          "stem_keywords_hit": 2,
-          "proximity": 5.0,
+          "stem_keywords_hit": 1,
+          "proximity": 0.0,
           "affirming": 1.5,
-          "score": 13.5
+          "score": 6.5
         },
         {
-          "book": "Carranza 13ed PDF",
-          "passage": "eriodontitis [article in French]. J Parodontol 5(3):221–227, 1986.\n10. Berdeli A, Emingil G, Gurkan A, et al: Association of the IL-1RN2 allele with periodontal diseases. Clin Biochem 39(4):357–362, 2006.\n11. Berdeli A, Emingil G, Han Saygan B: TLR2 Arg753Gly, TLR4 Asp299Gly and Thr399Ile gene polymorphisms are not associated with chronic periodontitis in a Turkish population. J Clin Periodontol 3",
-          "chapter": "Ch 11",
+          "book": "Cohen 11e",
+          "passage": "ld be washed out of the canal with\na creamy mix of calcium hydroxide (toothpaste thickness)                    NaOCl. A file of a size that can easily reach the apex can be\nspun into the canal with a Lentulo spiral instrument (Fig.                  used to gently probe for a stop at the apex. When a hard tissue\n20-14). Additional disinfecting action of calcium hydroxide is              barrier is",
+          "chapter": "Ch 1",
           "ans_keywords_hit": 1,
-          "stem_keywords_hit": 2,
-          "proximity": 5.0,
+          "stem_keywords_hit": 1,
+          "proximity": 0.0,
           "affirming": 1.5,
-          "score": 13.5
+          "score": 6.5
         }
       ]
     },
@@ -84006,34 +84782,63 @@
       ]
     },
     "fn_ortho_pedo_0341": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
+      "verdict": "supported",
+      "score": 19.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "passive"
+      ],
       "stem_keywords": [
-        "cross",
-        "infection",
-        "40",
         "wants",
         "said",
         "stop",
         "nutrition",
         "hydration",
         "passive",
-        "active"
+        "active",
+        "euthanasia"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "book": "SCFHS Ethics",
+          "passage": "e doctor to kill him and save him from\nsuffering. The doctor refused, claiming that he could not commit illegal\nhomicide. The doctor also refused to give the patient any advice about suicide.\nOn the patient‟s insistence, the doctor agreed to stop hydration and nutrition\nto enable slow death.\nHint: passive euthanasia by withholding food and hydration is illegal.\n\nCase 7: Withholding futile life sup",
+          "chapter": "",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 5,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 19.5
+        },
+        {
+          "book": "SCFHS Ethics",
+          "passage": "r terminal patients irrespective of the severity of\ntheir disease.\n\nEuthanasia\nEuthanasia, literally “good death,” is causing the death of a terminal patient to\nsave him/her from further pain and suffering. Active euthanasia is an act of\ncommission in which the physician takes an action that results in the death of\nthe patient. Passive euthanasia is an act of omission in which the physician\nfails",
+          "chapter": "",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 3,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 15.5
+        },
+        {
+          "book": "SCFHS Ethics",
+          "passage": "lly ill\npatient; however, palliative and symptomatic treatments can continue.\n\nEuthanasia, also called mercy killing, qatl al rahmah (‫)قتم انرحًخ‬, consists of\nmeasures that lead to the death of a terminal patient to spare him or her from\nfurther pain and suffering. If acts of commission deliberately bring about\ndeath, it is called active euthanasia. If acts of omission lead to death, it is\ncalle",
+          "chapter": "",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 3,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 15.5
+        }
+      ]
     },
     "fn_ortho_pedo_0342": {
       "verdict": "supported",
-      "score": 15.5,
+      "score": 13.5,
       "reason": "full_text_proximity_match",
       "ans_keywords": [
         "passive"
       ],
       "stem_keywords": [
-        "passive",
-        "41",
         "seauqla",
         "third",
         "molar",
@@ -84041,34 +84846,34 @@
       ],
       "evidence": [
         {
-          "book": "Contemporary Orthodontics 5e",
-          "passage": "541\n\n            A                                                                  B\n\n                                 C                                             D\n\n  FIGURE 14-14        A and B, Mandibular stabilizing lingual arch. It is easier to insert a heavy lingual arch of this type from the distal of a horizontal\ntube on the first molar bands. Note that the",
-          "chapter": "Ch 14",
-          "ans_keywords_hit": 1,
-          "stem_keywords_hit": 3,
-          "proximity": 5.0,
-          "affirming": 1.5,
-          "score": 15.5
-        },
-        {
-          "book": "Littlewood Ortho 2019",
-          "passage": "are also employed for\n• Movements of blocks of teeth—because removable appliances are              arch expansion, which is another example of their usefulness in moving\n  connected by a baseplate (see Section 17.5) they are more efficient        blocks of teeth. Removable appliances are particularly helpful where a\n  at moving blocks of teeth than fixed appliances.                           flat",
-          "chapter": "Ch 21",
-          "ans_keywords_hit": 1,
-          "stem_keywords_hit": 3,
-          "proximity": 5.0,
-          "affirming": 1.5,
-          "score": 15.5
-        },
-        {
           "book": "Hupp OMFS 6e",
           "passage": "H\nFigure 20-16 Closure of large oroantral communication. A, Clinical photograph of a large oroantral fistula in the molar region of the right maxilla.\nB, Diagram of the flap design. C, Illustration of the flap elevated to the depth of the vestibule. D, Cross-sectional view of flap elevation. The\nperiosteum must be incised in at the height of the dissection (arrow) in the vestibule, releasing the f",
           "chapter": "Ch 20",
           "ans_keywords_hit": 1,
-          "stem_keywords_hit": 3,
+          "stem_keywords_hit": 2,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 15.5
+          "score": 13.5
+        },
+        {
+          "book": "Littlewood Ortho 2019",
+          "passage": "13.4.4 The quadhelix appliance\ncleft of the palate. Expansion of the upper arch by stretching of the scar     The quadhelix is a very efficient, fixed, slow expansion appliance. The\ntissue is often indicated in these cases (see Chapter 24) and is readily       quadhelix appliance can be adjusted to give more expansion anteriorly\nachieved using a quadhelix appliance (Fig",
+          "chapter": "Ch 13",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 2,
+          "proximity": 4.0,
+          "affirming": 1.5,
+          "score": 12.5
+        },
+        {
+          "book": "Carranza 13e",
+          "passage": "icrosurgery\nThe philosophy of microsurgery embraces three core values. The\nfirst is enhanced motor skill for better surgical performance. This is\naccomplished through improved visual acuity and the use of a\nprecise hand grip to increase accuracy and reduce tremor (Fig.\n67.3). The second is minimal tissue trauma, which is accomplished\nthrough smaller incisions and reduced surgical fields (Fig. 67.4",
+          "chapter": "Ch 67",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 11.5
         }
       ]
     },
@@ -84154,7 +84959,7 @@
     },
     "fn_ortho_pedo_0346": {
       "verdict": "supported",
-      "score": 13.5,
+      "score": 21.5,
       "reason": "full_text_proximity_match",
       "ans_keywords": [
         "identify",
@@ -84169,42 +84974,47 @@
         "buc"
       ],
       "stem_keywords": [
-        "effect",
-        "time",
-        "locally",
-        "administered",
-        "minocycline"
+        "identify",
+        "varix",
+        "caliber",
+        "persistent",
+        "artery",
+        "hemangioma",
+        "2023",
+        "09",
+        "18",
+        "buc"
       ],
       "evidence": [
         {
-          "book": "Complete Dentures",
-          "passage": "nd must be remade, the border molding material will often be lost\n                 during the process of removing the impression material from the tray, resulting in the\n                 necessity of repeating the border molding procedure. Another disadvantage is that VPS\n                 adhesive must be used to bond the material to the impression tray requiring several\n                 minutes t",
-          "chapter": "Ch 7",
-          "ans_keywords_hit": 2,
-          "stem_keywords_hit": 1,
-          "proximity": 4.0,
+          "book": "Carranza 13e",
+          "passage": "located 18.9 mm from the alveolar crest. By studying\n50 CT scans from 625 patients (both male and female) who were\nundergoing sinus bone augmentation, Elian and colleagues7 found\nthat the vessel was radiographically evident in 52.9% of sinuses.\nThe vessel was located an average of 16.4 mm from the alveolar\ncrest, a slightly shorter distance but consistent with the previous\nstudy. Human cadaver dis",
+          "chapter": "Ch 58",
+          "ans_keywords_hit": 3,
+          "stem_keywords_hit": 3,
+          "proximity": 5.0,
           "affirming": 1.5,
-          "score": 13.5
+          "score": 21.5
         },
         {
-          "book": "Pediatric Dentistry",
-          "passage": "to the dental chair. Although this tech-     occlude half of the mouth and can make the approach for\nnique was not effective for all children, none of the children     an inferior alveolar block dificult. Although unlikely, aspira-\nwished to remain in the social isolation of time out, indicat-     tion of these mouth props is a possibility and they should be\ning that time out is not escape. If ti",
-          "chapter": "Ch 23",
-          "ans_keywords_hit": 1,
+          "book": "Cohen 11e",
+          "passage": "or distally and, if adjacent teeth are present, they will   Diagnosis\nbe difficult, if not impossible, to detect.                          As in the case of a cracked cusp, early detection is imperative\n   Cracked and split teeth may present with a large and vari-        in order to resolve the patient’s symptoms as well as increasing\nable collection of signs and symptoms that are potentially",
+          "chapter": "Ch 14",
+          "ans_keywords_hit": 2,
           "stem_keywords_hit": 2,
           "proximity": 5.0,
           "affirming": 1.5,
-          "score": 13.5
+          "score": 16.5
         },
         {
-          "book": "Carranza Implantology",
-          "passage": "cant; Sm, smokers; SRP, scaling and root planing; sx, surgery; tx, treatment; vs.,\nversus; w, with; wk, week(s); yr, year.\n\neTABLE 54.5 Phases of Clinical Research\n Phase            Description\n I                Researchers test a new drug or treatment in a small group of people for the rst time to evaluate its safety, determine a safe dosage range, and identify side effects.\n II               T",
-          "chapter": "Ch 54",
-          "ans_keywords_hit": 1,
+          "book": "Carranza 13e",
+          "passage": "tooth.\n\n          EFIG. 70.18 After removal of the impression cord, an\n         adequate space is created for the impression material,\n          with no soft tissue overhanging the margins to trap or\n           tear the impression material. Note the first cord, or\n                      deflection cord, is still in place.\n\n  For rule 2 situations in which the sulcus is deeper, two larger-\ndia",
+          "chapter": "Ch 70",
+          "ans_keywords_hit": 2,
           "stem_keywords_hit": 2,
-          "proximity": 4.0,
+          "proximity": 5.0,
           "affirming": 1.5,
-          "score": 12.5
+          "score": 16.5
         }
       ]
     },
@@ -113128,15 +113938,49 @@
       "evidence": []
     },
     "fn_oms_0666": {
-      "verdict": "needs_review",
-      "score": 0,
-      "reason": "no_answer_text",
-      "ans_keywords": [],
-      "stem_keywords": [
-        "impcted",
-        "canine"
+      "verdict": "supported",
+      "score": 11.5,
+      "reason": "full_text_proximity_match",
+      "ans_keywords": [
+        "saine",
+        "irrigation"
       ],
-      "evidence": []
+      "stem_keywords": [
+        "naocl",
+        "accident"
+      ],
+      "evidence": [
+        {
+          "book": "Cohen 11e",
+          "passage": "The increased                 for another 3 months. Excessive calcium hydroxide dressing\nvolume of irrigant used compensates for this lower concentra-               changes should be avoided if at all possible because the initial\ntion of NaOCl. An irrigation needle that can passively reach                toxicity of the material is thought to delay healing.104\nclose to the apical length is useful",
+          "chapter": "Ch 1",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 11.5
+        },
+        {
+          "book": "Cohen 11e",
+          "passage": "e\nWhen the length has been confirmed radiographically, very                   whether a hard tissue barrier has formed and if the calcium\nlight filing (because of the thin dentinal walls) is performed              hydroxide has washed out of the canal. This is assessed to have\nwith copious irrigation with 0.5% NaOCl.54,147 A lower strength             occurred if the canal can be seen again radiog",
+          "chapter": "Ch 1",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 11.5
+        },
+        {
+          "book": "Cohen 11e",
+          "passage": "of 17% and can remove the smear layers when in direct contact\nEthylenediamine tetra-acetic acid, widely abbreviated as EDTA,                  with the root canal wall for less than 1 minute. Even though\nis an aminopolycarboxylic acid and a colorless, water-soluble                   EDTA has self-limited action, if it is left in the canal for longer\nsolid EDTA is often sugg",
+          "chapter": "Ch 6",
+          "ans_keywords_hit": 1,
+          "stem_keywords_hit": 1,
+          "proximity": 5.0,
+          "affirming": 1.5,
+          "score": 11.5
+        }
+      ]
     },
     "fn_oms_0667": {
       "verdict": "needs_review",
@@ -126545,7 +127389,7 @@
     }
   },
   "stats": {
-    "supported": 1894,
-    "needs_review": 2132
+    "supported": 1922,
+    "needs_review": 2104
   }
 }

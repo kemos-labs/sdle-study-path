@@ -994,6 +994,7 @@
         for (let i = 0; i < list.length && fnAdded < FN_CAP; i++) {
           const it = list[i];
           if (!it || !it.stem) continue;
+          if (it._merged_into) continue; // merged option — shown inside its parent card
           const id = "fn_" + it.id;
           if (ids.has(id)) continue;
           // back: marked answer option text, else marker note
@@ -4326,7 +4327,7 @@
     const fnDept = state._fnDept;
     // source filter (optional — filters by source label)
     const fnSrc = state._fnStudySource || "";
-    let fnListRaw = FN.byDept[fnDept] || [];
+    let fnListRaw = (FN.byDept[fnDept] || []).filter(it => !it._merged_into);
     if (fnSrc) {
       fnListRaw = fnListRaw.filter(it => (it.sources || []).includes(fnSrc));
     }
@@ -4415,6 +4416,9 @@
       const disputedFlag = it._answer_disputed
         ? ' <span class="badge" title="AI review flagged this marked answer as likely wrong; verify before studying" style="font-size:0.58rem;background:var(--bg3);color:var(--danger,#c0392b)">⚠ AI disputes answer</span>'
         : '';
+      const repairedFlag = it._repaired_2026
+        ? ' <span class="badge" title="Question/options restored from the source PDF parse (was a broken fragment)" style="font-size:0.58rem;background:var(--bg3);color:var(--accent2)">🛠 repaired</span>'
+        : '';
       const aiBadge = it._model_judgment
         ? (it._model_judgment.verdict === 'supported'
           ? ' <span class="badge" title="AI model judged the marked answer correct (free-model review; not a textbook citation)" style="font-size:0.58rem;background:var(--bg3);color:var(--accent)">🤖 AI-confirmed</span>'
@@ -4440,7 +4444,7 @@
       }
       return `<div class="fn-study-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;min-height:150px;cursor:pointer" onclick="var b=this.querySelector('.fn-study-body');if(b){b.style.display='block'};var r=document.getElementById('fn-reveal');if(r){r.textContent='🔍 Answer shown';r.disabled=true}">
         <div style="margin-bottom:4px">${cardLabel}</div>
-        <div class="fn-study-q" style="font-size:1.05rem;line-height:1.6;color:var(--text)">${q}${imgFlag}${qualityFlag}${disputedFlag}${aiBadge}</div>
+        <div class="fn-study-q" style="font-size:1.05rem;line-height:1.6;color:var(--text)">${q}${imgFlag}${qualityFlag}${disputedFlag}${aiBadge}${repairedFlag}</div>
         <div class="fn-study-body" style="display:none;margin-top:10px;padding-top:10px;border-top:1px dashed var(--border)">${ansLine}${aiAnsHtml}${embHtml}${optsHtml}${bookHtml}${commHtml}${srcHtml}</div>
         <div style="margin-top:10px;font-size:0.72rem;color:var(--muted)">${marker}</div>
       </div>`;

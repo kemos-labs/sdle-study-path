@@ -28,6 +28,21 @@ def main() -> None:
 
     for item in all_items:
         old_options = item.get("options", [])
+        # Repaired items (parse_saud_fixed) were rebuilt from the source .md
+        # with a dedicated parser — do NOT re-derive from stale `raw`.
+        if item.get("_repaired_2026"):
+            options = item.get("options", [])
+            if item.get("answerIdx") is not None and item["answerIdx"] >= len(options):
+                item["answerLetter"] = None
+                item["answerIdx"] = None
+                reindexed += 1
+            item["format"] = "mcq" if len(options) >= 2 else "recall"
+            if len(options) >= 5:
+                item["_data_quality"] = "merged_options_review"
+                merged += 1
+            else:
+                item.pop("_data_quality", None)
+            continue
         parsed = extract_options(item.get("raw", ""))
         if len(parsed) >= 2:
             options = [f"{letter}. {text}" for letter, text in parsed]
