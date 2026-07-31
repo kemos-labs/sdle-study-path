@@ -1,0 +1,1722 @@
+{
+  "fn_restorative_0189": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "Ceramic inlay offers greater durability and wear resistance needed for a bruxer with a fractured amalgam.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "Ceramic inlay offers greater durability and wear resistance needed for a bruxer with a fractured amalgam."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_restorative_0160": {
+    "verdict": "ANSWER_C",
+    "confidence": "low",
+    "reason": "Clean with water and soap then disinfect with alcohol.",
+    "votes": {
+      "C": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "C",
+        "reason": "Clean with water and soap then disinfect with alcohol."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_restorative_0167": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "White hypomineralized enamel lesions become less visible when the tooth is rehydrated.",
+    "votes": {
+      "A": 1,
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "White hypomineralized enamel lesions become less visible when the tooth is rehydrated."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "B",
+        "reason": "White lesions that vanish with re-hydration indicate reversible demineralization of incipient caries, whereas enamel hypo mineralization represents permanent structural defects."
+      }
+    }
+  },
+  "fn_restorative_0215": {
+    "verdict": "ANSWER_C",
+    "confidence": "low",
+    "reason": "A full coverage crown provides definitive protection and restoration for a fractured cusp.",
+    "votes": {
+      "C": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "C",
+        "reason": "A full coverage crown provides definitive protection and restoration for a fractured cusp."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_restorative_0211": {
+    "verdict": "ANSWER_C",
+    "confidence": "low",
+    "reason": "Food accumulates because an open contact in the cervical third allows food to get trapped.",
+    "votes": {
+      "C": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "C",
+        "reason": "Food accumulates because an open contact in the cervical third allows food to get trapped."
+      }
+    }
+  },
+  "fn_restorative_0221": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "Tufts are the central part of enamel rods where sensory signals can be transmitted.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "Tufts are the central part of enamel rods where sensory signals can be transmitted."
+      }
+    }
+  },
+  "fn_restorative_0485": {
+    "verdict": "ANSWER_C",
+    "confidence": "low",
+    "reason": "Assess the tooth shade before performing bleaching.",
+    "votes": {
+      "C": 1,
+      "A": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "C",
+        "reason": "Assess the tooth shade before performing bleaching."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "A",
+        "reason": "Dental caries must be ruled out before bleaching to ensure tooth health and treatment safety."
+      }
+    }
+  },
+  "fn_restorative_0496": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "Diamond burs cut porcelain effectively.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "Diamond burs cut porcelain effectively."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_restorative_0507": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "Its higher solubility can cause marginal leakage over time.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "Its higher solubility can cause marginal leakage over time."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_endo_0072": {
+    "verdict": "ANSWER_C",
+    "confidence": "low",
+    "reason": "The sagittal view aligns with the long axis of the root, making vertical root fractures visible as discontinuities.",
+    "votes": {
+      "C": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "C",
+        "reason": "The sagittal view aligns with the long axis of the root, making vertical root fractures visible as discontinuities."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_endo_0437": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "Deviation to the right on closure indicates weakness of the left medial pterygoid, the primary elevator on that side.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "Deviation to the right on closure indicates weakness of the left medial pterygoid, the primary elevator on that side."
+      }
+    }
+  },
+  "fn_endo_0438": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "Metal shrinkage and porcelain distortion during firing cause the open margin.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "Metal shrinkage and porcelain distortion during firing cause the open margin."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_endo_0443": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "Procaine is an ester-type local anesthetic cleared by plasma cholinesterase, making it safer in liver cirrhosis.",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "Procaine is an ester-type local anesthetic cleared by plasma cholinesterase, making it safer in liver cirrhosis."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_endo_0448": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "Fluoridated toothpaste twice daily with biannual fluoride varnish is the recommended preventive regimen for a low‑caries",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "Fluoridated toothpaste twice daily with biannual fluoride varnish is the recommended preventive regimen for a low‑caries‑risk child."
+      }
+    }
+  },
+  "fn_endo_0525": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "Type I collagen is the primary collagen synthesized during pulp development.",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "Type I collagen is the primary collagen synthesized during pulp development."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_perio_0120": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "Periodontal therapy is recommended during the second trimester rather than waiting until after delivery.",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "Periodontal therapy is recommended during the second trimester rather than waiting until after delivery."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_perio_0121": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "BOP directly reflects inflammatory bleeding on probing.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "BOP directly reflects inflammatory bleeding on probing."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_endo_gf2_0013": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "Indirect calcium hydroxide pulp treatment is appropriate for a non‑vital pulp, while direct capping requires a vital pul",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "Indirect calcium hydroxide pulp treatment is appropriate for a non‑vital pulp, while direct capping requires a vital pulp."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_perio_0177": {
+    "verdict": "ANSWER_D",
+    "confidence": "low",
+    "reason": "Topical steroids are indicated for ulcerative lesions caused by hypersensitivity after scaling.",
+    "votes": {
+      "D": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "D",
+        "reason": "Topical steroids are indicated for ulcerative lesions caused by hypersensitivity after scaling."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_perio_0175": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "Gingivectomy is indicated to expose more tooth structure in a short clinical crown with minimal bone distance.",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "Gingivectomy is indicated to expose more tooth structure in a short clinical crown with minimal bone distance."
+      }
+    }
+  },
+  "fn_perio_0236": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "Semi-adjustable articulators are sufficient for full crown cases with good occlusion and vertical dimension.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "Semi-adjustable articulators are sufficient for full crown cases with good occlusion and vertical dimension."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_perio_0237": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "The first step is to obtain a radiograph to assess the remaining tooth and the developing permanent successor.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "The first step is to obtain a radiograph to assess the remaining tooth and the developing permanent successor."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_perio_0245": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "Radiographic assessment provides the necessary data for space analysis.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "Radiographic assessment provides the necessary data for space analysis."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_perio_0664": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "Crown preparation extending to the supracrestal attachment (biological width) can cause gingival irritation and bleeding",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "Crown preparation extending to the supracrestal attachment (biological width) can cause gingival irritation and bleeding."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_perio_0650": {
+    "verdict": "ANSWER_C",
+    "confidence": "low",
+    "reason": "The case requires removal of bone to achieve the needed crown lengthening.",
+    "votes": {
+      "C": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "C",
+        "reason": "The case requires removal of bone to achieve the needed crown lengthening."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_perio_0684": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "3–4 mm CAL and ~20% bone loss correspond to Stage II, and a 12‑year‑old’s rapid progression indicates Grade C.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "3–4 mm CAL and ~20% bone loss correspond to Stage II, and a 12‑year‑old’s rapid progression indicates Grade C."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_perio_0682": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "External bevel incision is used when the flap is to be positioned coronally.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "External bevel incision is used when the flap is to be positioned coronally."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_perio_gf2_0015": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "The one‑walled interproximal defect is best managed by gradualizing the marginal bone.",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "The one‑walled interproximal defect is best managed by gradualizing the marginal bone."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_perio_gf2_0025": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "Periodontal debridement and healing are required before implant placement.",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "Periodontal debridement and healing are required before implant placement."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_perio_gf2_0034": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "The only provided option refers to supra‑gingival crowns, which aligns with the described full crowns.",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": "UNKNOWN"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "The only provided option refers to supra‑gingival crowns, which aligns with the described full crowns."
+      }
+    }
+  },
+  "fn_perio_gf2_0039": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "The periapical radiograph depicts the implant fixture placed in the mandible.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "The periapical radiograph depicts the implant fixture placed in the mandible."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_fixed_0170": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "high occlusion is a common cause of rest fracture.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "high occlusion is a common cause of rest fracture."
+      }
+    }
+  },
+  "fn_rpd_0075": {
+    "verdict": "ANSWER_C",
+    "confidence": "low",
+    "reason": "Pressure on the lingual aspect of the anterior mandible.",
+    "votes": {
+      "C": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "C",
+        "reason": "Pressure on the lingual aspect of the anterior mandible."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_implant_0075": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "Prophy jet is considered safe on amalgam restorations, whereas it may damage composite resins.",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "Prophy jet is considered safe on amalgam restorations, whereas it may damage composite resins."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_implant_0090": {
+    "verdict": "ANSWER_A",
+    "confidence": "high",
+    "reason": "The question asks about performing a lower RPD (removable partial denture), which is a standard prosthodontic procedure.; UNKNOWN",
+    "votes": {
+      "A": 2
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "A",
+        "reason": "The question asks about performing a lower RPD (removable partial denture), which is a standard prosthodontic procedure."
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "UNKNOWN"
+      }
+    }
+  },
+  "fn_implant_0112": {
+    "verdict": "ANSWER_A",
+    "confidence": "high",
+    "reason": "It matches the instruction to inject antibiotic into the pocket.; Local antibiotic injection into the periodontal pocket is a valid clinical intervention for managing localized periodont",
+    "votes": {
+      "A": 2
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "It matches the instruction to inject antibiotic into the pocket."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "A",
+        "reason": "Local antibiotic injection into the periodontal pocket is a valid clinical intervention for managing localized periodontal infections when scaling and root planing are insufficient."
+      }
+    }
+  },
+  "fn_implant_0108": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "The 4 mm interarch distance is too narrow for implant placement, so the patient should be returned to the surgeon for ad",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "The 4 mm interarch distance is too narrow for implant placement, so the patient should be returned to the surgeon for adjustment."
+      }
+    }
+  },
+  "fn_implant_0113": {
+    "verdict": "ANSWER_A",
+    "confidence": "high",
+    "reason": "Both options list \"Fistula\" but option A is the first correct choice per standard multiple-choice conventions.; UNKNOWN",
+    "votes": {
+      "A": 2
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "A",
+        "reason": "Both options list \"Fistula\" but option A is the first correct choice per standard multiple-choice conventions."
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "UNKNOWN"
+      }
+    }
+  },
+  "fn_implant_0116": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "The appropriate treatment is to redo the post and crown.",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "The appropriate treatment is to redo the post and crown."
+      }
+    }
+  },
+  "fn_implant_0117": {
+    "verdict": "ANSWER_C",
+    "confidence": "low",
+    "reason": "The implant shows severe bone loss to the apex and must be removed.",
+    "votes": {
+      "C": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "C",
+        "reason": "The implant shows severe bone loss to the apex and must be removed."
+      }
+    }
+  },
+  "fn_implant_0114": {
+    "verdict": "ANSWER_D",
+    "confidence": "low",
+    "reason": "Screw‑retained multiple-unit prostheses often lack passive fit, causing complications.",
+    "votes": {
+      "D": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "D",
+        "reason": "Screw‑retained multiple-unit prostheses often lack passive fit, causing complications."
+      }
+    }
+  },
+  "fn_implant_0119": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "The described signs indicate peri‑implantitis.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "The described signs indicate peri‑implantitis."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_implant_0124": {
+    "verdict": "ANSWER_C",
+    "confidence": "low",
+    "reason": "The findings describe peri-implantitis.",
+    "votes": {
+      "C": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "C",
+        "reason": "The findings describe peri-implantitis."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_implant_0126": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "The overdenture became non‑retentive because the implants are not parallel (tilted) due to alveolar ridge resorption, ca",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "The overdenture became non‑retentive because the implants are not parallel (tilted) due to alveolar ridge resorption, causing poor fit and retention."
+      }
+    }
+  },
+  "fn_implant_0127": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "A single missing tooth with intact adjacent teeth is best replaced by a fixed partial denture (bridge).",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "A single missing tooth with intact adjacent teeth is best replaced by a fixed partial denture (bridge)."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_implant_0165": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "Reassure the patient that the discomfort is normal and temporary.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "Reassure the patient that the discomfort is normal and temporary."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_implant_0166": {
+    "verdict": "ANSWER_D",
+    "confidence": "low",
+    "reason": "Acetaminophen is the preferred analgesic for orthodontic pain due to its safety and minimal side effects.",
+    "votes": {
+      "D": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "D",
+        "reason": "Acetaminophen is the preferred analgesic for orthodontic pain due to its safety and minimal side effects."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_implant_0168": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "Respect the competent minor's autonomous decision.",
+    "votes": {
+      "B": 1,
+      "A": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "Respect the competent minor's autonomous decision."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "A",
+        "reason": "In minors, life-threatening conditions may require court intervention when the patient refuses treatment against parental wishes."
+      }
+    }
+  },
+  "fn_implant_0167": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "An anterior bite plane is used to open the deep bite and reposition retroclined incisors in a Class II skeletal pattern.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "An anterior bite plane is used to open the deep bite and reposition retroclined incisors in a Class II skeletal pattern."
+      }
+    }
+  },
+  "fn_implant_0176": {
+    "verdict": "ANSWER_B",
+    "confidence": "high",
+    "reason": "CT provides the best visualization of infra orbital fractures.; CT scans provide detailed 3D imaging essential for evaluating infraorbital fractures and associated ecchymosis, unlike 2",
+    "votes": {
+      "B": 2
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "CT provides the best visualization of infra orbital fractures."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "B",
+        "reason": "CT scans provide detailed 3D imaging essential for evaluating infraorbital fractures and associated ecchymosis, unlike 2D submento-vertex X-rays."
+      }
+    }
+  },
+  "fn_implant_0178": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "The arrow points to the shank of the periodontal instrument.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "The arrow points to the shank of the periodontal instrument."
+      }
+    }
+  },
+  "fn_implant_0179": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "Direct pulp capping preserves pulp vitality and allows definitive crown later.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "Direct pulp capping preserves pulp vitality and allows definitive crown later."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_implant_0192": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "The distal surface of the maxillary central incisor (tooth 11) is more rounded, helping identify it.",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "The distal surface of the maxillary central incisor (tooth 11) is more rounded, helping identify it."
+      }
+    }
+  },
+  "fn_implant_0476": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "The visible component of a two-stage implant after healing is the healing abutment.",
+    "votes": {
+      "B": 1,
+      "C": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "The visible component of a two-stage implant after healing is the healing abutment."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "C",
+        "reason": "In a two-stage implant, the final visible part after osseointegration is the crown, which replaces the natural tooth."
+      }
+    }
+  },
+  "fn_implant_0486": {
+    "verdict": "ANSWER_C",
+    "confidence": "low",
+    "reason": "Pterygoid implants can be placed in the residual pterygoid bone when alveolar ridge is too deficient for conventional im",
+    "votes": {
+      "C": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "C",
+        "reason": "Pterygoid implants can be placed in the residual pterygoid bone when alveolar ridge is too deficient for conventional implants."
+      }
+    }
+  },
+  "fn_implant_0439": {
+    "verdict": "ANSWER_C",
+    "confidence": "low",
+    "reason": "The MB canal will move mesially on a shifted x‑ray.",
+    "votes": {
+      "C": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "C",
+        "reason": "The MB canal will move mesially on a shifted x‑ray."
+      }
+    }
+  },
+  "fn_ortho_pedo_0088": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "Delayed eruption.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "Delayed eruption."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_ortho_pedo_0129": {
+    "verdict": "ANSWER_A",
+    "confidence": "high",
+    "reason": "Both options are identical, but option A is selected as the standard choice when options are duplicated.; The option directly repeats the phrase given in the question.",
+    "votes": {
+      "A": 2
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "A",
+        "reason": "Both options are identical, but option A is selected as the standard choice when options are duplicated."
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "The option directly repeats the phrase given in the question."
+      }
+    }
+  },
+  "fn_ortho_pedo_0134": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "Maxillary expansion is the appropriate treatment for a 9 mm anterior crossbite at this age.",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "Maxillary expansion is the appropriate treatment for a 9 mm anterior crossbite at this age."
+      }
+    }
+  },
+  "fn_ortho_pedo_0140": {
+    "verdict": "ANSWER_D",
+    "confidence": "low",
+    "reason": "Surgical assisted maxillary expansion is the appropriate treatment for a 19‑year‑old with maxillary constriction.",
+    "votes": {
+      "D": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "D",
+        "reason": "Surgical assisted maxillary expansion is the appropriate treatment for a 19‑year‑old with maxillary constriction."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_ortho_pedo_0128": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "Primary occlusal trauma explains the mobility and pain after recent restoration.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "Primary occlusal trauma explains the mobility and pain after recent restoration."
+      }
+    }
+  },
+  "fn_ortho_pedo_0160": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "Prolonged mouth opening suggests disc displacement without reduction, corresponding to Wilkes stage II.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "Prolonged mouth opening suggests disc displacement without reduction, corresponding to Wilkes stage II."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_ortho_pedo_0236": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "The palatal erosion with knuckle callus indicates self‑induced vomiting from bulimia.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "The palatal erosion with knuckle callus indicates self‑induced vomiting from bulimia."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_ortho_pedo_0465": {
+    "verdict": "ANSWER_A",
+    "confidence": "high",
+    "reason": "A negative difference between available and required space indicates insufficient room for teeth, leading to crowding.; Crowding occurs when the available space is less than the required space, resulting in a negative difference.",
+    "votes": {
+      "A": 2
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "A",
+        "reason": "A negative difference between available and required space indicates insufficient room for teeth, leading to crowding."
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "Crowding occurs when the available space is less than the required space, resulting in a negative difference."
+      }
+    }
+  },
+  "fn_ortho_pedo_0466": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "Keep the splint in place and carry out root canal therapy on the non‑vital central incisor.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "Keep the splint in place and carry out root canal therapy on the non‑vital central incisor."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_ortho_pedo_0478": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "Mature teeth with prolonged extraoral dry time have the poorest chance of successful reattachment.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "Mature teeth with prolonged extraoral dry time have the poorest chance of successful reattachment."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_ortho_pedo_gf2_0027": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "The dentist should obtain a complete history if the patient presents on the same day the trauma occurred.",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "The dentist should obtain a complete history if the patient presents on the same day the trauma occurred."
+      }
+    }
+  },
+  "fn_oms_0531": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "Sinus lift addresses vertical bone loss in the posterior maxilla.",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "Sinus lift addresses vertical bone loss in the posterior maxilla."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_oms_0579": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "The itchy red eyes and runny nose indicate an immediate IgE‑mediated (type I) hypersensitivity reaction.",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "The itchy red eyes and runny nose indicate an immediate IgE‑mediated (type I) hypersensitivity reaction."
+      }
+    }
+  },
+  "fn_oms_0586": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "FNA is the preferred initial diagnostic test for evaluating parotid gland swelling.",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "FNA is the preferred initial diagnostic test for evaluating parotid gland swelling."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_oms_0637": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "The maxillary ridge resorbs apically (inferiorly) and medially.",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "The maxillary ridge resorbs apically (inferiorly) and medially."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_oms_0017": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "Polysulfone is used only for temporary restorations, unlike the other options which are impression materials.",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "A",
+        "reason": "Polysulfone is used only for temporary restorations, unlike the other options which are impression materials."
+      }
+    }
+  },
+  "fn_oms_0648": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "The dentist must protect ethical considerations.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "The dentist must protect ethical considerations."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_oms_0612": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "IgE mediates immediate (type I) hypersensitivity.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "IgE mediates immediate (type I) hypersensitivity."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_oms_0788": {
+    "verdict": "ANSWER_C",
+    "confidence": "low",
+    "reason": "Increased cementum with age produces radiopaque areas below the roots on X‑ray.",
+    "votes": {
+      "C": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "C",
+        "reason": "Increased cementum with age produces radiopaque areas below the roots on X‑ray."
+      }
+    }
+  },
+  "fn_oms_0853": {
+    "verdict": "ANSWER_C",
+    "confidence": "high",
+    "reason": "Rough, pitted enamel is characteristic of fluorosis, while generalized brown stains suggest tetracycline staining and di; The image depicts a rough, pitted/mottled enamel surface.",
+    "votes": {
+      "C": 2
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "C",
+        "reason": "Rough, pitted enamel is characteristic of fluorosis, while generalized brown stains suggest tetracycline staining and diffuse anterior involvement suggests enamel hypoplasia."
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "C",
+        "reason": "The image depicts a rough, pitted/mottled enamel surface."
+      }
+    }
+  },
+  "fn_oms_0861": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "2 months is the standard duration for splinting a cervical root fracture.",
+    "votes": {
+      "B": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "B",
+        "reason": "2 months is the standard duration for splinting a cervical root fracture."
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_oms_0863": {
+    "verdict": "ANSWER_C",
+    "confidence": "low",
+    "reason": "Blood glucose of 65 mg/dL indicates hypoglycemia and is too low for safe dental treatment.",
+    "votes": {
+      "C": 1
+    },
+    "detail": {
+      "opencode/ling-3.0-flash-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/poolside/laguna-xs-2.1:free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+        "verdict": "C",
+        "reason": "Blood glucose of 65 mg/dL indicates hypoglycemia and is too low for safe dental treatment."
+      }
+    }
+  }
+}

@@ -1007,6 +1007,8 @@
             back = "no marked answer — recall stem only";
           }
           if (it._verification_verdict === "supported") back += "  [book-evidence candidate]";
+          if (it._answer_disputed) back += "  ⚠ AI disputes answer";
+          if (it._model_suggested_answer) back += `  🤖 AI-suggested: ${it._model_suggested_answer.letter}`;
           const front = it.stem.slice(0, 280) + (it.needsImage ? " 🖼" : "");
           cards.push({ id, deck: dept, front, back, src: "flashnotes" });
           ids.add(id); fnAdded++;
@@ -4334,6 +4336,9 @@
     const fnCurr = fnList[state._fnStudyIdx] || null;
     // source filter chips (from the 8 PDF sources)
     const fnSourcesList = (window.FLASH_NOTES || {}).sources || [];
+    const sourceChipsHtml = fnSourcesList.length
+      ? fnSourcesList.map(s => `<span class="badge" style="font-size:0.58rem;background:var(--bg3);color:var(--muted)">${escapeHtml(s)}</span>`).join(' ')
+      : '';
     const fnMarkerBadge = (m, hasOpts, hasBookEvidence, hasCommunity) => {
       if (hasBookEvidence) return '<span class="badge blue" style="font-size:0.62rem" title="Automated evidence candidate; not a final textbook judgment">📖 evidence candidate</span>';
       if (hasCommunity) return '<span class="badge" style="font-size:0.62rem;background:var(--accent);color:#fff">✅ community</span>';
@@ -4370,6 +4375,22 @@
       const ansLine = (ansLetter||ansText)
         ? `<p style="margin:8px 0 4px;color:var(--text);font-size:0.95rem"><b style="color:var(--muted);font-size:0.72rem;text-transform:uppercase;letter-spacing:.04em">Answer</b> ${ansLetter?`<span style="display:inline-block;min-width:1.4em;padding:1px 7px;margin:0 4px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;text-align:center;font-size:0.8rem">${escapeHtml(ansLetter)}</span>`:''}${ansText?`<span style="color:var(--accent);font-weight:600">${escapeHtml(ansText)}</span>`:''}</p>`
         : '<p class="muted" style="margin:8px 0 4px;font-size:0.8rem;color:var(--muted)">no marked answer</p>';
+      // AI-suggested answer for MCQs that had none
+      const aiAns = it._model_suggested_answer;
+      let aiAnsHtml = '';
+      if (aiAns && !ansLetter && !ansText) {
+        const aiText = (it.options && aiAns.answerIdx != null && it.options[aiAns.answerIdx])
+          ? it.options[aiAns.answerIdx].replace(/^[a-z][).]\s*/i, '').replace(/[✅🟢🟡✳🔵🔁●]/g, '').trim().slice(0, 90)
+          : '';
+        aiAnsHtml = `<p style="margin:8px 0 4px;color:var(--text);font-size:0.9rem"><b style="color:var(--muted);font-size:0.7rem;text-transform:uppercase;letter-spacing:.04em">🤖 AI-suggested</b> ${aiAns.letter?`<span style="display:inline-block;min-width:1.4em;padding:1px 7px;margin:0 4px;border-radius:50%;background:var(--bg3);color:var(--accent);font-weight:700;text-align:center;font-size:0.8rem;border:1px solid var(--accent)">${escapeHtml(aiAns.letter)}</span>`:''}<span style="color:var(--accent2)">${escapeHtml(aiText || '')}</span> <span class="badge" style="font-size:0.56rem;background:var(--bg3);color:var(--muted)">AI ${escapeHtml(aiAns.confidence||'low')} conf</span></p>`
+          + (aiAns.reason ? `<p style="margin:2px 0 0;font-size:0.7rem;color:var(--muted)">🤖 ${escapeHtml(aiAns.reason).slice(0,160)}</p>` : '');
+      }
+      // Embedded recall answer ('Question? Answer' from source notes)
+      const embAns = it._embedded_answer;
+      let embHtml = '';
+      if (embAns && !ansLetter && !ansText && !aiAnsHtml) {
+        embHtml = `<p style="margin:8px 0 4px;font-size:0.85rem"><b style="color:var(--muted);font-size:0.7rem;text-transform:uppercase;letter-spacing:.04em">Recall answer</b> <span style="color:var(--accent);font-weight:600">${escapeHtml(embAns).slice(0,120)}</span> <span class="badge" style="font-size:0.56rem;background:var(--bg3);color:var(--muted)">from source note</span></p>`;
+      }
       const bookExp = it._book_explanation;
       const hasBookEvidence = !!(it._verification_verdict === 'supported' && bookExp && (typeof bookExp === 'object' ? bookExp.passage : bookExp));
       // Automated matches are evidence candidates. Do not show loose or
@@ -4391,6 +4412,16 @@
       const qualityFlag = it._data_quality === 'merged_options_review'
         ? ' <span class="badge" title="Source text contains merged options; review before using as a graded MCQ" style="font-size:0.58rem;background:var(--bg3);color:var(--warn)">⚠ options review</span>'
         : '';
+      const disputedFlag = it._answer_disputed
+        ? ' <span class="badge" title="AI review flagged this marked answer as likely wrong; verify before studying" style="font-size:0.58rem;background:var(--bg3);color:var(--danger,#c0392b)">⚠ AI disputes answer</span>'
+        : '';
+      const aiBadge = it._model_judgment
+        ? (it._model_judgment.verdict === 'supported'
+          ? ' <span class="badge" title="AI model judged the marked answer correct (free-model review; not a textbook citation)" style="font-size:0.58rem;background:var(--bg3);color:var(--accent)">🤖 AI-confirmed</span>'
+          : it._model_judgment.verdict === 'contradicted'
+            ? ''
+            : ' <span class="badge" style="font-size:0.58rem;background:var(--bg3);color:var(--muted)">🤖 AI: unknown</span>')
+        : '';
       const hasOpts = (it.options||[]).length > 0 && (it.answerIdx != null || it.answerLetter);
       const hasCommunity = !!((it._verified_explanation || '').trim());
       const marker = fnMarkerBadge(it.marker, hasOpts, hasBookEvidence, hasCommunity);
@@ -4409,8 +4440,8 @@
       }
       return `<div class="fn-study-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;min-height:150px;cursor:pointer" onclick="var b=this.querySelector('.fn-study-body');if(b){b.style.display='block'};var r=document.getElementById('fn-reveal');if(r){r.textContent='🔍 Answer shown';r.disabled=true}">
         <div style="margin-bottom:4px">${cardLabel}</div>
-        <div class="fn-study-q" style="font-size:1.05rem;line-height:1.6;color:var(--text)">${q}${imgFlag}${qualityFlag}</div>
-        <div class="fn-study-body" style="display:none;margin-top:10px;padding-top:10px;border-top:1px dashed var(--border)">${ansLine}${optsHtml}${bookHtml}${commHtml}${srcHtml}</div>
+        <div class="fn-study-q" style="font-size:1.05rem;line-height:1.6;color:var(--text)">${q}${imgFlag}${qualityFlag}${disputedFlag}${aiBadge}</div>
+        <div class="fn-study-body" style="display:none;margin-top:10px;padding-top:10px;border-top:1px dashed var(--border)">${ansLine}${aiAnsHtml}${embHtml}${optsHtml}${bookHtml}${commHtml}${srcHtml}</div>
         <div style="margin-top:10px;font-size:0.72rem;color:var(--muted)">${marker}</div>
       </div>`;
     };
@@ -4577,6 +4608,9 @@
             <span>📝 <b>${FN.markerStats?.ref || 0}</b> ref</span> · 
             <span>❓ <b>${FN.markerStats?.unknown || 0}</b> unknown</span>
             <button type="button" class="btn sm ghost" id="fn-audit-btn" style="padding:1px 6px;font-size:0.6rem;margin-left:8px">🔍 Audit</button>
+          </div>
+          <div style="padding:4px 8px;margin-top:4px;background:var(--bg1);border-radius:var(--radius);border:1px solid var(--border);font-size:0.62rem;color:var(--muted)">
+            🤖 <b>${FN.aiStats?.judged || 0}</b> AI-reviewed · ⚠ <b>${FN.aiStats?.disputed || 0}</b> answer disputed · 💡 <b>${FN.aiStats?.suggested || 0}</b> AI-suggested answers
           </div>
         </details>
         <div id="fn-audit-panel" style="display:none;margin-top:4px;padding:6px 8px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);font-size:0.68rem"></div>
