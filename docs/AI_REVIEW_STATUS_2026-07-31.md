@@ -95,8 +95,12 @@ style), and the assistant aggregates/validates.
 ## Remaining work (updated)
 1. **~788 remaining fragments** — 581 are orphaned Saud bullets (no reliable
    parent match; forcing links risks wrong joins — left flagged honestly);
-   207 are real answerless questions (June_July2023, Mar-June, SDLE_May) that
-   can be answered by free models (answer-mcq mode) and then verified.
+   207 are real answerless questions (June_July2023, Mar-June, SDLE_May).
+   **DONE for the answer-mcq subset (commit 99a9522)**: 396 AI-suggested
+   answers written (232 high-confidence = 2+ models agree). Fragment
+   free-text mode re-confirmed UNRELIABLE (models echo the prompt) — the
+   87 non-MCQ recall questions with '?' remain un-answered by design;
+   they need a stronger judge or manual review, never auto-write.
 2. Low-confidence model answers (conf: low) should be treated as hints only.
 3. **DONE (2026-07-31, commit 669337f)** — disputed review flow shipped:
    ⚠ Disputed chip (cross-dept study mode over all 127), dispute reason +
@@ -109,6 +113,11 @@ style), and the assistant aggregates/validates.
    human validates the joins (or accept as flagged recall leads).
 5. Run `python3 scripts/repair_saud_parse.py --apply` only if the source
    .md changes — it is idempotent and preserves existing good options/answers.
+6. **Pipeline order matters**: run `merge_model_verdicts.py` BEFORE
+   `apply_flash_notes_verdicts.py` — apply is the citation authority and
+   re-applies deterministic v2 evidence (restores correct passages, e.g.
+   fn_endo_0468 Lang & Lindhe 'renal osteodystrophy'). Never skip apply
+   after merge or citations drift.
 
 ## Useful commands
 ```bash
