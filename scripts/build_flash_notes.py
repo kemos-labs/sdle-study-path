@@ -126,6 +126,20 @@ SECTION_HEADERS = {
 
 LETTER = {"A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "a": 0, "b": 1, "c": 2, "d": 3, "e": 4}
 
+# An option is delimited by its *next* letter marker, not by the letters in
+# its text.  The earlier implementation used ``[^A-Ea-e]`` for option text,
+# which made ordinary English words terminate an option (or miss it entirely).
+OPTION_START = r"(?:^|(?<=\s))([A-Ea-e])\s*[\.:\)]\s*(?=\S)"
+OPTION_RE = re.compile(
+    OPTION_START + r"(.*?)(?=\s+(?:[A-Ea-e])\s*[\.:\)]\s*(?=\S)|\Z)",
+    re.DOTALL,
+)
+
+# Rebuilding parses source material again.  Evidence metadata is maintained by
+# the verification workflow, so retain it for the same normalized question
+# rather than silently discarding it during a parser-only rebuild.
+PRESERVED_METADATA = ("_verified_explanation", "_book_explanation", "_verification_verdict")
+
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
@@ -177,17 +191,13 @@ def needs_image(stem: str, raw: str) -> bool:
     return any(k in blob for k in ["pic", "picture", "image", "x-ray", "xray", "radiograph", "photo", "(depend on pic", "picof", "pictureof"])
 
 def extract_options(block: str) -> list[tuple[str, str]]:
-    opts = []
-    # inline: "A. x B. y C. z D. w" (allow ✅✅ trailing)
-    found = re.findall(r"([A-Ea-e])\s*[\.:\)]\s+([^A-Ea-e\n]*?)(?=\s+[A-Ea-e]\s*[\.:\)]|$)", block)
-    if len(found) >= 2:
-        for letter, txt in found:
-            txt = txt.strip()
-            if txt:
-                opts.append((letter, txt))
+    # Inline: "A. x B. y C. z D. w".  Text may contain any letters,
+    # punctuation, or line breaks; only the following option marker ends it.
+    opts = [(m.group(1), m.group(2).strip()) for m in OPTION_RE.finditer(block) if m.group(2).strip()]
+    if len(opts) >= 2:
         return opts
     # line-based
-    for m in re.finditer(r"(?im)^\s*([A-Ea-e])\s*[\.:\)]\s+(.+)$", block):
+    for m in re.finditer(r"(?im)^\s*([A-Ea-e])\s*[\.:\)]\s*(\S.+)$", block):
         opts.append((m.group(1), m.group(2).strip()))
     return opts
 
@@ -195,14 +205,17 @@ def find_marked_answer(opts: list[tuple[str, str]], block: str) -> tuple[str | N
     for letter, txt in opts:
         if "✅✅" in txt or "✅" in txt or "🟢" in txt or "🟡" in txt or "✳" in txt:
             return letter, LETTER.get(letter, -1)
-    for m in re.finditer(r"([A-Ea-e])\s*[\.:\)]\s+([^\n]*?[✅🟢🟡✳][^\n]*)", block):
-        return m.group(1), LETTER.get(m.group(1), -1)
+    # Do not manufacture an answer index when options failed to parse.  A
+    # recall item can still expose its inline marked answer from `raw`, while
+    # an MCQ must never point outside its own options array.
+    if not opts:
+        return None, None
     return None, None
 
 def split_stem_opts(body: str) -> tuple[str, str]:
     """Split a chunk body into stem text + options block by first inline option marker."""
     # find first occurrence of " A. " / " A) " / " A: " as a word
-    m = re.search(r"(\s|^)([A-Ea-e])\s*[\.:\)]\s+", body)
+    m = re.search(OPTION_START, body)
     if m:
         return body[:m.start()].strip(), body[m.start():].strip()
     # also check line-based option on its own line
@@ -333,6 +346,20 @@ def parse_sectioned(path: Path, source_id: str) -> list[dict]:
 # ---------------------------------------------------------------------------
 
 def main():
+    previous_by_key = {}
+    if OUT.exists():
+        try:
+            old_text = OUT.read_text(encoding="utf-8")
+            old_data = json.loads(old_text[old_text.find("{"):old_text.rfind("};") + 1])
+            previous_by_key = {
+                dedupe_key(item.get("stem", "")): item
+                for items in old_data.get("byDept", {}).values()
+                for item in items
+                if item.get("stem")
+            }
+        except (json.JSONDecodeError, OSError, ValueError) as exc:
+            print(f"[warn] could not preserve existing verification metadata: {exc}", file=sys.stderr)
+
     all_items, per_source = [], {}
     for sid, path, kind in SOURCES:
         if path is None or not path.exists():
@@ -369,6 +396,11 @@ def main():
     for it in deduped:
         d = it["dept"]; counters[d] = counters.get(d, 0) + 1
         it["id"] = f"fn_{d}_{counters[d]:04d}"
+        previous = previous_by_key.get(dedupe_key(it["stem"]))
+        if previous:
+            for field in PRESERVED_METADATA:
+                if field in previous:
+                    it[field] = previous[field]
 
     by_dept = {}
     for it in deduped:

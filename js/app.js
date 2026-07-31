@@ -986,7 +986,6 @@
     /* Phase 4 — per-department decks from Flash Notes recalls + TOPICS key points */
     try {
       const FN = window.FLASH_NOTES || { byDept: {} };
-      const V = (window.FLASH_NOTES_VERDICTS || {}).lookup || {};
       let fnAdded = 0, kpAdded = 0;
       const FN_CAP = 2500, KP_CAP = 800;
       // (a) Flash Notes recall cards — front=stem, back=marked answer + verdict
@@ -1007,8 +1006,7 @@
           } else {
             back = "no marked answer — recall stem only";
           }
-          const vd = V[it.id];
-          if (vd) back += "  [" + (vd.verdict === "supported" ? "book-supported" : vd.verdict) + "]";
+          if (it._verification_verdict === "supported") back += "  [book-evidence candidate]";
           const front = it.stem.slice(0, 280) + (it.needsImage ? " 🖼" : "");
           cards.push({ id, deck: dept, front, back, src: "flashnotes" });
           ids.add(id); fnAdded++;
@@ -4328,7 +4326,7 @@
     const fnSrc = state._fnStudySource || "";
     let fnListRaw = FN.byDept[fnDept] || [];
     if (fnSrc) {
-      fnListRaw = fnListRaw.filter(it => (it.sources || []).some(s => s.label === fnSrc || s.file === fnSrc));
+      fnListRaw = fnListRaw.filter(it => (it.sources || []).includes(fnSrc));
     }
     const fnList = fnListRaw;
     if (!state._fnStudyIdx || state._fnStudyIdx >= fnList.length) state._fnStudyIdx = 0;
@@ -4336,14 +4334,8 @@
     const fnCurr = fnList[state._fnStudyIdx] || null;
     // source filter chips (from the 8 PDF sources)
     const fnSourcesList = (window.FLASH_NOTES || {}).sources || [];
-    const sourceChipsHtml = `<button type="button" class="btn sm ${!fnSrc ? 'success' : 'ghost'}" data-fn-src="" style="padding:3px 9px;font-size:0.7rem">All sources</button>`
-      + fnSourcesList.map(s => {
-        const active = fnSrc === (s.file || s.label);
-        const tag = s.recent ? ' ✨' : '';
-        return `<button type="button" class="btn sm ${active ? 'success' : 'ghost'}" data-fn-src="${escapeHtml(s.file)}" style="padding:3px 9px;font-size:0.7rem">${escapeHtml(s.label)}${tag}</button>`;
-      }).join("");
-    const fnMarkerBadge = (m, hasOpts, hasBook, hasCommunity) => {
-      if (hasBook) return '<span class="badge green" style="font-size:0.62rem">📖 textbook-verified</span>';
+    const fnMarkerBadge = (m, hasOpts, hasBookEvidence, hasCommunity) => {
+      if (hasBookEvidence) return '<span class="badge blue" style="font-size:0.62rem" title="Automated evidence candidate; not a final textbook judgment">📖 evidence candidate</span>';
       if (hasCommunity) return '<span class="badge" style="font-size:0.62rem;background:var(--accent);color:#fff">✅ community</span>';
       return ({
         verified: '<span class="badge" style="font-size:0.62rem;background:var(--accent);color:#fff">✅ MCQ</span>',
@@ -4352,15 +4344,6 @@
         unsure:   '<span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--muted)">🔁 unsure</span>',
         unknown:  '<span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--muted)">⏳ pending</span>'
       }[m] || '<span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--muted)">?</span>');
-    };
-    const fnVerdict = (id) => {
-      const V = (window.FLASH_NOTES_VERDICTS || {}).lookup || {};
-      const v = V[id];
-      if (!v) return { badge: '', ev: '' };
-      if (v.verdict === 'supported') return { badge: '<span class="badge green" style="font-size:0.6rem" title="Book citation candidate — confirm it endorses the answer">📖 book-supported</span>', ev: v.evidence };
-      if (v.verdict === 'conflict')  return { badge: '<span class="badge" style="font-size:0.6rem;background:var(--bg3);color:#e63946">⚠ conflict</span>', ev: v.evidence };
-      if (v.verdict === 'needs_review') return { badge: '<span class="badge" style="font-size:0.6rem;background:var(--bg3);color:var(--muted)" title="Community answer — no book confirmation yet">📝 community</span>', ev: '' };
-      return { badge: '', ev: '' };
     };
     const fnInlineAns = (it) => {
       // extract the ✅-marked answer phrase from the stem/raw for inline-answer items
@@ -4375,7 +4358,6 @@
     };
     const fnStudyCard = (it) => {
       if (!it) return '<div class="fn-empty" style="padding:40px 0;text-align:center;color:var(--muted);font-size:0.85rem">No card at this position.</div>';
-      const vd = fnVerdict(it.id);
       const cleanStem = (it.stem || "").replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim();
       const q = escapeHtml(cleanStem).slice(0, 260);
       let ansLetter = it.answerLetter, ansText = "";
@@ -4388,13 +4370,15 @@
       const ansLine = (ansLetter||ansText)
         ? `<p style="margin:8px 0 4px;color:var(--text);font-size:0.95rem"><b style="color:var(--muted);font-size:0.72rem;text-transform:uppercase;letter-spacing:.04em">Answer</b> ${ansLetter?`<span style="display:inline-block;min-width:1.4em;padding:1px 7px;margin:0 4px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;text-align:center;font-size:0.8rem">${escapeHtml(ansLetter)}</span>`:''}${ansText?`<span style="color:var(--accent);font-weight:600">${escapeHtml(ansText)}</span>`:''}</p>`
         : '<p class="muted" style="margin:8px 0 4px;font-size:0.8rem;color:var(--muted)">no marked answer</p>';
-      // Textbook citation display
-      let bookHtml = '';
       const bookExp = it._book_explanation;
-      if (bookExp && typeof bookExp === 'object' && bookExp.passage) {
-        bookHtml = `<details style="margin:8px 0 0;font-size:0.78rem"><summary style="cursor:pointer;font-weight:600;color:var(--accent)">📖 Textbook: ${escapeHtml(bookExp.book||'')} ${escapeHtml(bookExp.chapter||'')}</summary><p style="margin:6px 0 0 8px;padding:8px 10px;background:var(--bg1);border-left:3px solid #1b7a3d;border-radius:0 6px 6px 0;color:var(--text);line-height:1.5">${escapeHtml((bookExp.passage||'').slice(0,400))}</p></details>`;
-      } else if (bookExp && typeof bookExp === 'string' && bookExp.trim()) {
-        bookHtml = `<p style="margin:8px 0 0;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;font-size:0.82rem;color:var(--text)"><b style="color:var(--accent)">📖 Book:</b> ${escapeHtml(bookExp).slice(0,320)}</p>`;
+      const hasBookEvidence = !!(it._verification_verdict === 'supported' && bookExp && (typeof bookExp === 'object' ? bookExp.passage : bookExp));
+      // Automated matches are evidence candidates. Do not show loose or
+      // needs-review keyword hits as textbook evidence.
+      let bookHtml = '';
+      if (hasBookEvidence && typeof bookExp === 'object' && bookExp.passage) {
+        bookHtml = `<details style="margin:8px 0 0;font-size:0.78rem"><summary style="cursor:pointer;font-weight:600;color:var(--accent)">📖 Candidate book evidence: ${escapeHtml(bookExp.book||'')} ${escapeHtml(bookExp.chapter||'')}</summary><p class="muted" style="margin:6px 0 0 8px;font-size:0.72rem">Automated match — not a final answer judgment.</p><p style="margin:6px 0 0 8px;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;color:var(--text);line-height:1.5">${escapeHtml((bookExp.passage||'').slice(0,400))}</p></details>`;
+      } else if (hasBookEvidence && typeof bookExp === 'string' && bookExp.trim()) {
+        bookHtml = `<p style="margin:8px 0 0;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;font-size:0.82rem;color:var(--text)"><b style="color:var(--accent)">📖 Candidate book evidence:</b> ${escapeHtml(bookExp).slice(0,320)}</p>`;
       }
       // Community answer display (show when different from textbook)
       let commHtml = '';
@@ -4402,17 +4386,18 @@
       if (commExp && typeof commExp === 'string' && commExp.trim()) {
         commHtml = `<p style="margin:6px 0 0;font-size:0.76rem;color:var(--muted)">✅ Community: ${escapeHtml(commExp).slice(0,200)}</p>`;
       }
-      const evHtml = vd.ev ? `<p style="margin:8px 0 0;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;font-size:0.82rem;color:var(--text)"><b style="color:var(--accent)">📖 Why (book):</b> ${escapeHtml(vd.ev).slice(0,320)}</p>` : '';
       const srcHtml = (it.sources||[]).length ? `<p style="margin:6px 0 0;font-size:0.7rem;color:var(--muted)">from: ${escapeHtml((it.sources||[]).join(", "))}</p>` : '';
       const imgFlag = it.needsImage ? ' <span class="badge" style="font-size:0.58rem;background:var(--bg3);color:var(--accent2)">🖼 image</span>' : '';
+      const qualityFlag = it._data_quality === 'merged_options_review'
+        ? ' <span class="badge" title="Source text contains merged options; review before using as a graded MCQ" style="font-size:0.58rem;background:var(--bg3);color:var(--warn)">⚠ options review</span>'
+        : '';
       const hasOpts = (it.options||[]).length > 0 && (it.answerIdx != null || it.answerLetter);
-      const hasBook = !!(bookExp && (typeof bookExp === 'object' ? bookExp.passage : bookExp));
       const hasCommunity = !!((it._verified_explanation || '').trim());
-      const marker = fnMarkerBadge(it.marker, hasOpts, hasBook, hasCommunity);
-      // Card label: textbook-verified > community > MCQ > recall
+      const marker = fnMarkerBadge(it.marker, hasOpts, hasBookEvidence, hasCommunity);
+      // Card label: evidence candidate > community > MCQ > recall
       let cardLabel = '';
-      if (hasBook) {
-        cardLabel = '<span class="badge green" style="font-size:0.6rem;background:#1b7a3d;color:#fff">📖 textbook-verified</span>';
+      if (hasBookEvidence) {
+        cardLabel = '<span class="badge blue" style="font-size:0.6rem">📖 evidence candidate</span>';
       } else if (hasOpts && hasCommunity) {
         cardLabel = '<span class="badge" style="font-size:0.6rem;background:var(--accent);color:#fff">✅ community MCQ</span>';
       } else if (hasOpts) {
@@ -4424,8 +4409,8 @@
       }
       return `<div class="fn-study-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;min-height:150px;cursor:pointer" onclick="var b=this.querySelector('.fn-study-body');if(b){b.style.display='block'};var r=document.getElementById('fn-reveal');if(r){r.textContent='🔍 Answer shown';r.disabled=true}">
         <div style="margin-bottom:4px">${cardLabel}</div>
-        <div class="fn-study-q" style="font-size:1.05rem;line-height:1.6;color:var(--text)">${q}${imgFlag}</div>
-        <div class="fn-study-body" style="display:none;margin-top:10px;padding-top:10px;border-top:1px dashed var(--border)">${ansLine}${optsHtml}${bookHtml}${commHtml}${evHtml}${srcHtml}</div>
+        <div class="fn-study-q" style="font-size:1.05rem;line-height:1.6;color:var(--text)">${q}${imgFlag}${qualityFlag}</div>
+        <div class="fn-study-body" style="display:none;margin-top:10px;padding-top:10px;border-top:1px dashed var(--border)">${ansLine}${optsHtml}${bookHtml}${commHtml}${srcHtml}</div>
         <div style="margin-top:10px;font-size:0.72rem;color:var(--muted)">${marker}</div>
       </div>`;
     };
@@ -4450,7 +4435,7 @@
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
           <h1 style="margin:0;font-size:1.4rem">📚 Flash Notes <span style="font-size:0.8rem;color:var(--muted);font-weight:400">النوطات السريعة</span></h1>
           <div style="display:flex;align-items:center;gap:12px">
-            <span style="color:var(--accent2);font-weight:600">${totalAll6} MCQs</span>
+            <span style="color:var(--accent2);font-weight:600">${totalAll6} items</span>
             <span class="muted">🃏 ${totalCards}</span>
           </div>
         </div>
@@ -4490,7 +4475,7 @@
         <details style="margin-bottom:16px;font-size:0.85rem">
           <summary style="cursor:pointer;font-weight:600;color:var(--muted)">📋 7-day overview</summary>
           <table class="simple-table" style="width:100%;margin-top:8px">
-            <thead><tr><th>#</th><th>Topic</th><th>Qs</th><th>Goal</th></tr></thead>
+            <thead><tr><th>#</th><th>Topic</th><th>Items</th><th>Goal</th></tr></thead>
             <tbody>
               ${dayPlans.map(p => {
                 const cnt = p.topics === "all" ? totalAll6 : poolN(p.topics + "@complete");
@@ -4510,7 +4495,7 @@
 
         <!-- DEPARTMENTS -->
         <h2 style="font-size:1rem;margin-bottom:2px;color:var(--text)">📊 Departments</h2>
-        <p class="muted" style="font-size:0.8rem;margin-bottom:8px">${totalAll6} MCQs from all 6 PDFs</p>
+        <p class="muted" style="font-size:0.8rem;margin-bottom:8px">${totalAll6} Flash Notes from all source packs</p>
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px">
           ${DEPTS.map(d => {
             const n = deptCounts[d.id] || 0;
@@ -4526,7 +4511,7 @@
           }).join("")}
           <!-- All PDFs row -->
           <div data-dept-quiz="all" data-n="${totalAll6}" style="display:flex;align-items:center;justify-content:space-between;background:var(--bg3);border:2px solid var(--accent);border-radius:var(--radius);padding:8px 12px;cursor:pointer">
-            <span style="font-size:0.85rem;font-weight:600;color:var(--accent)">🎯 All 6 PDFs mixed</span>
+            <span style="font-size:0.85rem;font-weight:600;color:var(--accent)">🎯 All Flash Notes</span>
             <span style="display:flex;align-items:center;gap:6px">
               <span style="color:var(--accent);font-weight:500;font-size:0.8rem">${totalAll6}</span>
               <span style="color:var(--accent);font-size:0.9rem">▶</span>
@@ -4611,14 +4596,13 @@
     const pillsHost = document.getElementById("fn-source-pills");
     if (pillsHost && (window.FLASH_NOTES || {}).sources) {
       const colors = ["green", "blue", "", "yellow", "", "", "green", "yellow"];
-      pillsHost.innerHTML = window.FLASH_NOTES.sources.map((s, i) => {
-        const cls = s.recent ? "badge" : ("badge " + (colors[i % colors.length] || "")).trim();
-        const style = s.recent
-          ? "font-size:0.68rem;background:var(--accent);color:#fff"
-          : "font-size:0.68rem";
-        const tag = s.recent ? ' ✨ recent' : '';
-        return `<span class="${cls}" style="${style}" title="${escapeHtml(s.file)}">${escapeHtml(s.label)}${tag}</span>`;
-      }).join("");
+      const allClass = !fnSrc ? "success" : "ghost";
+      pillsHost.innerHTML = `<button type="button" class="btn sm ${allClass}" data-fn-src="" style="padding:3px 9px;font-size:0.7rem">All sources</button>`
+        + window.FLASH_NOTES.sources.map((s) => {
+          const active = fnSrc === s.id;
+          const tag = s.recent ? ' ✨' : '';
+          return `<button type="button" class="btn sm ${active ? 'success' : 'ghost'}" data-fn-src="${escapeHtml(s.id)}" style="padding:3px 9px;font-size:0.7rem" title="${escapeHtml(s.file)}">${escapeHtml(s.label)}${tag}</button>`;
+        }).join("");
     }
 
     // Day quiz buttons — use FLASH NOTES items (not main bank)
@@ -7012,7 +6996,7 @@
 
     // Convert to quiz format
     const converted = quizItems.map(it => {
-      const hasOpts = (it.options||[]).length > 0 && (it.answerIdx != null || it.answerLetter);
+      const hasOpts = it.format === "mcq" && !it._data_quality && (it.options||[]).length > 1 && (it.answerIdx != null || it.answerLetter);
       // _book_explanation may be an object {book, chapter, passage} or a string
       const bookExp = it._book_explanation;
       const bookWhy = (bookExp && typeof bookExp === 'object') ? (bookExp.passage || '') : (typeof bookExp === 'string' ? bookExp : '');
