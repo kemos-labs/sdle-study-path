@@ -149,3 +149,83 @@ node /tmp/ui_test4.js   # with server: python3 -m http.server 8765
 - Deploy check: `curl -sI https://kemos-labs.github.io/sdle-study-path/` →
   200; rebuild takes ~60 s after push; verify via
   `gh api repos/kemos-labs/sdle-study-path/pages/builds/latest`.
+
+---
+
+## Continuation pass (2026-07-31 PM → 2026-08-01)
+
+### Verification of the prior session's claims (re-baselined)
+- `scripts/gate_flash_notes.py` → **all green, exit 0** (FN-COUNT/OPTS/IDX/
+  CITATION/BOOKS/VERIFIED/MERGED all ok; total 4026; supported 1922→1945;
+  needs_review 2104→2081).
+- `node scripts/flash_notes_smoke.mjs` (new) → 8 ok / 2 warn / **0 fail**, **0
+  page errors**; disputed review list renders; answer coverage honest.
+- **markitdown confirmed**: `work/markitdown_test/{marjune,saud,sdlmay}_markitdown.md`
+  are byte-identical to `sdle-ref/focus/{Mar-June,Saud_Masahhah,SDLE_May_2026}.md`
+  (only a trailing newline differs) — i.e. markitdown was already the tool that
+  produced the flash-notes source `.md` files; fresh extractions reproduce them.
+- **Book corpus present & searchable**: `data/raw/books/text/` holds 31 canonical
+  SCFHS Appendix-C `.txt` extracts (the engine's verification corpus);
+  `sdle-ref/books/` holds 153 book `.md` files. The agent can read/grep both to
+  solve MCQs from the official books.
+
+### Pipeline bugs found & fixed
+1. **`extract_answer_text()` ignored `_model_suggested_answer`**
+   (`scripts/verify_textbook_v2.py`) → once the answer-mcq pass answered an
+   MCQ, it stayed "pending" forever. Now an AI-suggested answer counts as an
+   answer, so the answer-mcq pending list is the *truly* answerless set.
+2. **`verify_with_models.py --resume` checked the wrong JSON** for answer-mcq /
+   fragment modes (it read `flash_notes_model_verdicts.json` instead of
+   `flash_notes_model_answers.json`) → already-answered items were re-queried,
+   burning free-model quota. Now resume uses the mode-appropriate output file.
+3. **`answer-mcq` filter excluded `verdict == "supported"` items** even when they
+   had no marked answer (a keyword-overlap citation is NOT an answer) → fixed
+   so all answerless real MCQs are eligible.
+
+### Answers written this pass
+- **12 truly-pending MCQs** answered via free kilo models (10) + book-grounded
+  adjudication (2):
+  - `fn_restorative_0434` Kennedy class for missing #11,#12,#13 → **C (Class
+    III)** — McCracken: Class IV requires crossing the midline; 11,12,13 does
+    not cross; community recall (Rafi_Maqam_19 Q23) marks "Class 3 ✅".
+  - `fn_perio_0348` age when all teeth present except lower 2nd premolars →
+    **B (11 years)** — Littlewood eruption chart: mand. 2nd premolars 11–12.
+- **8 dropped-answer-option repairs** (`scripts/fix_dropped_answer_option.py`,
+  new, strict matcher): the parser had dropped the ✅-marked final option on
+  these MCQs, so the item lost its correct answer. Restored the option + marked
+  it, with hand-verification of each source block. Notably:
+  - `fn_restorative_0492` — option **D "Violation of the supracrestal
+    attachment"** (biologic-width violation; the cause of recession around
+    subgingival crown margins) had been dropped entirely.
+  - Others: `fn_restorative_gf2_0028` (C root sensitivity), `fn_perio_0665`
+    (D desensitizing agent), `fn_perio_gf2_0023` (D plaque biofilm),
+    `fn_perio_gf2_0031` (C thin scalloped), `fn_perio_gf2_0037` (C antiviral),
+    `fn_perio_gf2_0040` (C smoking cessation), `fn_diagnostics_0065` (D MIH).
+  - **3 false matches excluded by hand** (`fn_rpd_0048`, `fn_implant_0095`,
+    `fn_ortho_pedo_gf2_0043`) — the strict matcher still grabbed a ✅ from an
+    adjacent question / ambiguous double-mark; left flagged, not force-answered.
+- `aiStats` header recomputed honestly (suggested 396→408, +
+  `dropped_answer_option_repaired: 8`).
+
+### Honest state after this pass
+- Total 4026 (unchanged). Supported evidence candidates: **1945**.
+- `_model_suggested_answer`: **408** (was 396). `answerLetter/answerIdx`:
+  **1698** (was 1690, +8 dropped-option repairs).
+- Remaining truly-no-answer real MCQs (≥2 opts, no answer field, no UI-shown
+  raw-marker answer): **13** — all are either merged-question messes
+  (`fn_implant_0095/0104/0115/0135`), image-dependent ("pic"/"see image"
+  `fn_oms_0067/0422/0480`), or community "(my answer)" guesses visible in the
+  option text (`fn_endo_0434/0435/0442`). Left honestly flagged — not
+  auto-fixable without risking wrong answers.
+- 127 disputed answers: **await user adjudication** in the app's ⚠ Disputed
+  review panel (export → `flash_notes_dispute_review.json`); apply via a small
+  script once the user adjudicates. Not done — needs the user.
+
+### Remaining work (updated)
+1. 127 disputed → user adjudicates in-app → run the apply-decisions script.
+2. 13 truly-no-answer MCQs (merged messes / image-dependent) — need manual
+   review or a stronger judge; do NOT auto-write.
+3. 276 orphan `_is_option` Saud fragments — second looser parent-link pass
+   only if a human validates the joins.
+4. Low-confidence (42) AI-suggested answers → UI already shows as hints only.
+5. Pipeline order: `merge_model_verdicts.py` BEFORE `apply_flash_notes_verdicts.py`.

@@ -352,12 +352,23 @@ def main():
                    and "?" in (it.get("stem") or "")
                    and not extract_embedded_answer(it.get("stem", ""))]
     elif args.only == "answer-mcq":
-        # Real MCQs (>=2 options) with no marked answer — models pick the answer
-        pending = [it for it in pending if not extract_answer_text(it)
+        # Real MCQs (>=2 options) with no marked answer — models pick the answer.
+        # NOTE: rebuild from ALL items (not the verdict-filtered `pending` list):
+        # a keyword-overlap "supported" verdict is a citation candidate, NOT a
+        # marked answer — answerless MCQs must still get answers even when the
+        # deterministic matcher found a (possibly loose) passage.
+        pending = [it for it in all_items if not extract_answer_text(it)
                    and len(it.get("options", [])) >= 2
                    and len(it.get("stem", "").strip()) > 5]
+        if args.dept:
+            pending = [it for it in pending if it.get("dept") == args.dept]
 
-    if args.resume and OUT_JSON.exists():
+    if args.resume and ANSWER_OUT_JSON.exists() and args.only in ("answer-mcq", "fragment"):
+        existing = json.loads(ANSWER_OUT_JSON.read_text())
+        before = len(pending)
+        pending = [it for it in pending if it["id"] not in existing]
+        print(f"Resume: skipping {before - len(pending)} already-verified items")
+    elif args.resume and OUT_JSON.exists():
         existing = json.loads(OUT_JSON.read_text())
         before = len(pending)
         pending = [it for it in pending if it["id"] not in existing]

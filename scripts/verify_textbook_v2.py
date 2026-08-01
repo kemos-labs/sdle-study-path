@@ -511,6 +511,16 @@ class TextbookIndex:
 
 def extract_answer_text(item: dict) -> str:
     """Extract the answer text from a flash notes item — handles all real patterns."""
+    # 0. _model_suggested_answer (free-AI picked answer for MCQs that had none)
+    sug = item.get("_model_suggested_answer")
+    if sug and isinstance(sug, dict) and sug.get("letter"):
+        opts = item.get("options", [])
+        idx = sug.get("answerIdx")
+        if idx is not None and idx < len(opts):
+            opt_text = re.sub(r"^\s*[A-Ea-e]\s*[\.:\)]\s*", "", opts[idx].strip())
+            return strip_markers(opt_text).strip()
+        return sug.get("letter", "")
+
     # 1. _verified_explanation (community-verified answers)
     expl = item.get("_verified_explanation", "")
     if expl and expl.startswith("Correct answer:"):

@@ -1,67 +1,63 @@
 {
   "fn_restorative_0189": {
-    "verdict": "ANSWER_B",
-    "confidence": "high",
-    "reason": "Ceramic inlays are more durable and wear-resistant than composite, making them the better choice for a bruxer with a fra; Ceramic inlay offers superior strength and wear resistance for bruxist patients compared to composite.",
-    "votes": {
-      "B": 2
-    },
+    "verdict": "ERROR",
+    "reason": "all models failed",
     "detail": {
       "opencode/nemotron-3-ultra-free": {
         "verdict": "ERROR",
         "reason": "__HTTP_ERROR__ 403"
       },
-      "kilo/inclusionai/ling-3.0-flash:free": {
-        "verdict": "B",
-        "reason": "Ceramic inlays are more durable and wear-resistant than composite, making them the better choice for a bruxer with a fractured amalgam restoration."
-      },
       "kilo/nvidia/nemotron-3-super-120b-a12b:free": {
-        "verdict": "B",
-        "reason": "Ceramic inlay offers superior strength and wear resistance for bruxist patients compared to composite."
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/kilo-auto/free": {
+        "verdict": "X",
+        "reason": ""
       }
     }
   },
   "fn_restorative_0160": {
     "verdict": "ANSWER_C",
-    "confidence": "high",
-    "reason": "After contact with visible blood, hands should be washed with soap and water followed by an; Blood-contaminated items require washing with water and soap to remove organic material, followed by alcohol disinfectio",
+    "confidence": "low",
+    "reason": "Wash with soap and water to remove blood, then apply alcohol for disinfection.",
     "votes": {
-      "C": 2
+      "C": 1
     },
     "detail": {
       "opencode/nemotron-3-ultra-free": {
         "verdict": "ERROR",
         "reason": "__HTTP_ERROR__ 403"
       },
+      "kilo/kilo-auto/free": {
+        "verdict": "X",
+        "reason": ""
+      },
       "kilo/nvidia/nemotron-3-super-120b-a12b:free": {
         "verdict": "C",
-        "reason": "After contact with visible blood, hands should be washed with soap and water followed by an"
-      },
-      "kilo/inclusionai/ling-3.0-flash:free": {
-        "verdict": "C",
-        "reason": "Blood-contaminated items require washing with water and soap to remove organic material, followed by alcohol disinfection to ensure proper decontamination."
+        "reason": "Wash with soap and water to remove blood, then apply alcohol for disinfection."
       }
     }
   },
   "fn_restorative_0167": {
     "verdict": "ANSWER_B",
-    "confidence": "high",
-    "reason": "White spot lesions from incipient caries are reversible upon rehydration, whereas enamel hypomineralization opacities pe; Incipient caries (white spot lesions) are characterized by subsurface porosity that allows fluid exchange; upon re-hydra",
+    "confidence": "low",
+    "reason": "Incipient caries white spot lesions are reversible with remineralization/reh",
     "votes": {
-      "B": 2
+      "B": 1
     },
     "detail": {
       "opencode/nemotron-3-ultra-free": {
         "verdict": "ERROR",
         "reason": "__HTTP_ERROR__ 403"
       },
+      "kilo/kilo-auto/free": {
+        "verdict": "X",
+        "reason": ""
+      },
       "kilo/nvidia/nemotron-3-super-120b-a12b:free": {
         "verdict": "B",
-        "reason": "White spot lesions from incipient caries are reversible upon rehydration, whereas enamel hypomineralization opacities persist regardless of moisture."
-      },
-      "kilo/inclusionai/ling-3.0-flash:free": {
-        "verdict": "B",
-        "reason": "Incipient caries (white spot lesions) are characterized by subsurface porosity that allows fluid exchange; upon re-hydration, the refractive index of water-filled pores matches surrounding enamel, cau"
+        "reason": "Incipient caries white spot lesions are reversible with remineralization/reh"
       }
     }
   },
@@ -89,12 +85,8 @@
     }
   },
   "fn_restorative_0211": {
-    "verdict": "ANSWER_B",
-    "confidence": "low",
-    "reason": "An improper crown emergence profile fails to create a proper convexity that deflects food away from the gingival sulcus,",
-    "votes": {
-      "B": 1
-    },
+    "verdict": "ERROR",
+    "reason": "all models failed",
     "detail": {
       "opencode/nemotron-3-ultra-free": {
         "verdict": "ERROR",
@@ -102,11 +94,11 @@
       },
       "kilo/nvidia/nemotron-3-super-120b-a12b:free": {
         "verdict": "X",
-        "reason": ""
+        "reason": "r Bpinistaviaurpstown bangiachwebkitWonderviaDowurpurpurpurpWonderLogoViaimat TingDowinpwebkitiach Tb BpurpLogo Employee Truth BpurpwebkiturptywDow Bp Terracewebkitangunurp bwwebkitumpingDotMuseenness"
       },
-      "kilo/inclusionai/ling-3.0-flash:free": {
-        "verdict": "B",
-        "reason": "An improper crown emergence profile fails to create a proper convexity that deflects food away from the gingival sulcus, leading to food accumulation in the cervical third."
+      "kilo/kilo-auto/free": {
+        "verdict": "X",
+        "reason": ""
       }
     }
   },
@@ -1688,76 +1680,76 @@
   },
   "fn_restorative_0238": {
     "verdict": "ANSWER_C",
-    "confidence": "high",
-    "reason": "After tooth extraction for immediate dentures, the underlying alveolar ridge tissues become inflamed and swollen within ; Inflammation and swelling of the tissues after early removal prevent reinsertion of the immediate denture.",
+    "confidence": "low",
+    "reason": "Removal of the immediate denture allows postoperative swelling to increase, preventing proper fit the next morning.",
     "votes": {
-      "C": 2
+      "C": 1
     },
     "detail": {
       "opencode/nemotron-3-ultra-free": {
         "verdict": "ERROR",
         "reason": "__HTTP_ERROR__ 403"
       },
-      "kilo/inclusionai/ling-3.0-flash:free": {
-        "verdict": "C",
-        "reason": "After tooth extraction for immediate dentures, the underlying alveolar ridge tissues become inflamed and swollen within 24 hours, causing the denture to no longer fit properly when the patient attempt"
-      },
       "kilo/nvidia/nemotron-3-super-120b-a12b:free": {
         "verdict": "C",
-        "reason": "Inflammation and swelling of the tissues after early removal prevent reinsertion of the immediate denture."
+        "reason": "Removal of the immediate denture allows postoperative swelling to increase, preventing proper fit the next morning."
+      },
+      "kilo/kilo-auto/free": {
+        "verdict": "X",
+        "reason": ""
       }
     }
   },
   "fn_restorative_0240": {
     "verdict": "ANSWER_A",
-    "confidence": "high",
-    "reason": "spot (decalcification) in anterior teeth; what is management? Also, when close his mouth mandibular shift 7mm doctor dia; .\n\nWait, let me reconsider. The question says \"what is your management?\" for white spots noticed after ortho removal. Th",
+    "confidence": "low",
+    "reason": "agement for early white spot lesions is fluoride varnish (or fluoride gel). Many guidelines: fluoride varnish is more ef",
     "votes": {
-      "A": 2
+      "A": 1
     },
     "detail": {
       "opencode/nemotron-3-ultra-free": {
         "verdict": "ERROR",
         "reason": "__HTTP_ERROR__ 403"
       },
+      "kilo/kilo-auto/free": {
+        "verdict": "X",
+        "reason": ""
+      },
       "kilo/nvidia/nemotron-3-super-120b-a12b:free": {
         "verdict": "A",
-        "reason": "spot (decalcification) in anterior teeth; what is management? Also, when close his mouth mandibular shift 7mm doctor diagnose with masticatory muscle spasm which muscle is cause? The options only list"
-      },
-      "kilo/inclusionai/ling-3.0-flash:free": {
-        "verdict": "A",
-        "reason": ".\n\nWait, let me reconsider. The question says \"what is your management?\" for white spots noticed after ortho removal. The standard approach for post-orthodontic white spot lesions:\n\n1. First line: OHI"
+        "reason": "agement for early white spot lesions is fluoride varnish (or fluoride gel). Many guidelines: fluoride varnish is more effective than gel for remineralization. So answer C.\n\nBut we need to consider the"
       }
     }
   },
   "fn_restorative_0242": {
     "verdict": "ANSWER_A",
-    "confidence": "high",
-    "reason": "5% sodium fluoride varnish is the most widely used fluoride varnish in dental practice.; 5% Sodium fluoride varnish (e.g., Duraphat) is the most widely used fluoride varnish in clinical dentistry worldwide for",
+    "confidence": "low",
+    "reason": "5% sodium fluoride varnish is the most commonly used fluoride varnish in dental practice.",
     "votes": {
-      "A": 2
+      "A": 1
     },
     "detail": {
       "opencode/nemotron-3-ultra-free": {
         "verdict": "ERROR",
         "reason": "__HTTP_ERROR__ 403"
       },
+      "kilo/kilo-auto/free": {
+        "verdict": "X",
+        "reason": ""
+      },
       "kilo/nvidia/nemotron-3-super-120b-a12b:free": {
         "verdict": "A",
-        "reason": "5% sodium fluoride varnish is the most widely used fluoride varnish in dental practice."
-      },
-      "kilo/inclusionai/ling-3.0-flash:free": {
-        "verdict": "A",
-        "reason": "5% Sodium fluoride varnish (e.g., Duraphat) is the most widely used fluoride varnish in clinical dentistry worldwide for caries prevention."
+        "reason": "5% sodium fluoride varnish is the most commonly used fluoride varnish in dental practice."
       }
     }
   },
   "fn_restorative_0253": {
     "verdict": "ANSWER_A",
-    "confidence": "high",
-    "reason": "Angular cheilitis is most commonly caused by Candida albicans.; Angular cheilitis is most commonly caused by Candida albicans (often in combination with Staphylococcus aureus), making ",
+    "confidence": "low",
+    "reason": "Angular cheilitis is most commonly caused by Candida albicans.",
     "votes": {
-      "A": 2
+      "A": 1
     },
     "detail": {
       "opencode/nemotron-3-ultra-free": {
@@ -1768,9 +1760,9 @@
         "verdict": "A",
         "reason": "Angular cheilitis is most commonly caused by Candida albicans."
       },
-      "kilo/inclusionai/ling-3.0-flash:free": {
-        "verdict": "A",
-        "reason": "Angular cheilitis is most commonly caused by Candida albicans (often in combination with Staphylococcus aureus), making option A the correct choice."
+      "kilo/kilo-auto/free": {
+        "verdict": "X",
+        "reason": ""
       }
     }
   },
@@ -1798,10 +1790,10 @@
   },
   "fn_restorative_0255": {
     "verdict": "ANSWER_A",
-    "confidence": "high",
-    "reason": "The motor (efferent) component of the gag reflex is mediated by the vagus nerve (cranial nerve X).; The motor limb of the gag reflex is the vagus nerve (CN X), which innervates the pharyngeal muscles; the glossopharyngea",
+    "confidence": "low",
+    "reason": "The motor (efferent) limb of the gag reflex is carried by the vagus nerve (cranial nerve X).",
     "votes": {
-      "A": 2
+      "A": 1
     },
     "detail": {
       "opencode/nemotron-3-ultra-free": {
@@ -1810,20 +1802,19 @@
       },
       "kilo/nvidia/nemotron-3-super-120b-a12b:free": {
         "verdict": "A",
-        "reason": "The motor (efferent) component of the gag reflex is mediated by the vagus nerve (cranial nerve X)."
+        "reason": "The motor (efferent) limb of the gag reflex is carried by the vagus nerve (cranial nerve X)."
       },
-      "kilo/inclusionai/ling-3.0-flash:free": {
-        "verdict": "A",
-        "reason": "The motor limb of the gag reflex is the vagus nerve (CN X), which innervates the pharyngeal muscles; the glossopharyngeal nerve (CN IX) is the sensory limb."
+      "kilo/kilo-auto/free": {
+        "verdict": "X",
+        "reason": ""
       }
     }
   },
   "fn_restorative_0247": {
-    "verdict": "ANSWER_A",
+    "verdict": "ANSWER_C",
     "confidence": "low",
-    "reason": "question says \"mouth sores\" unspecified location. Increased drooling suggests painful oral lesions causing difficulty sw",
+    "reason": "Primary HSV infection (herpetic gingivostomatitis)",
     "votes": {
-      "A": 1,
       "C": 1
     },
     "detail": {
@@ -1831,13 +1822,13 @@
         "verdict": "ERROR",
         "reason": "__HTTP_ERROR__ 403"
       },
-      "kilo/nvidia/nemotron-3-super-120b-a12b:free": {
-        "verdict": "A",
-        "reason": "question says \"mouth sores\" unspecified location. Increased drooling suggests painful oral lesions causing difficulty swallowing. In a 3-year-old, primary herpetic gingivostomatitis is common (ages 6"
+      "kilo/kilo-auto/free": {
+        "verdict": "X",
+        "reason": ""
       },
-      "kilo/inclusionai/ling-3.0-flash:free": {
+      "kilo/nvidia/nemotron-3-super-120b-a12b:free": {
         "verdict": "C",
-        "reason": "Primary herpetic gingivostomatitis (gingival herpes stomatitis) caused by HSV-1 classically presents in children aged 6 months to 5"
+        "reason": "Primary HSV infection (herpetic gingivostomatitis)"
       }
     }
   },
@@ -1976,10 +1967,10 @@
   },
   "fn_restorative_0257": {
     "verdict": "ANSWER_A",
-    "confidence": "low",
-    "reason": "Angular cheilitis and glossitis are classic clinical manifestations of B‑vitamin deficiency (particularly riboflavin).",
+    "confidence": "high",
+    "reason": "Angular cheilitis and glossitis are classic manifestations of B‑vitamin deficiency.; Angular cheilitis and glossitis are classic clinical manifestations of B vitamin (particularly B2, B3, B12, or folate) d",
     "votes": {
-      "A": 1
+      "A": 2
     },
     "detail": {
       "opencode/nemotron-3-ultra-free": {
@@ -1988,11 +1979,11 @@
       },
       "kilo/nvidia/nemotron-3-super-120b-a12b:free": {
         "verdict": "A",
-        "reason": "Angular cheilitis and glossitis are classic clinical manifestations of B‑vitamin deficiency (particularly riboflavin)."
+        "reason": "Angular cheilitis and glossitis are classic manifestations of B‑vitamin deficiency."
       },
-      "kilo/inclusionai/ling-3.0-flash:free": {
-        "verdict": "ERROR",
-        "reason": "__ERROR__ The read operation timed out"
+      "kilo/kilo-auto/free": {
+        "verdict": "A",
+        "reason": "Angular cheilitis and glossitis are classic clinical manifestations of B vitamin (particularly B2, B3, B12, or folate) deficiency, while vitamin C deficiency causes scurvy with features like gingival "
       }
     }
   },
@@ -8782,24 +8773,278 @@
     }
   },
   "fn_restorative_0221": {
+    "verdict": "ERROR",
+    "reason": "all models failed",
+    "detail": {
+      "opencode/nemotron-3-ultra-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/kilo-auto/free": {
+        "verdict": "X",
+        "reason": ""
+      },
+      "kilo/nvidia/nemotron-3-super-120b-a12b:free": {
+        "verdict": "X",
+        "reason": "ransmit pain is enamel lamellae (they contain organic material and can transmit stimuli). Enamel tufts are also at DEJ but less likely? Let's think: Enamel lamellae are linear defects that extend from"
+      }
+    }
+  },
+  "fn_restorative_0279": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "s are a recognized entity (especially in the mandibular arch or when the canine is displaced buccally), I'll go with the",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/nemotron-3-ultra-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/inclusionai/ling-3.0-flash:free": {
+        "verdict": "A",
+        "reason": "s are a recognized entity (especially in the mandibular arch or when the canine is displaced buccally), I'll go with the student's answer if it seems correct.\n\nActually, for maxillary canines, palatal"
+      },
+      "kilo/openrouter/free": {
+        "verdict": "X",
+        "reason": ""
+      }
+    }
+  },
+  "fn_restorative_0276": {
+    "verdict": "ANSWER_A",
+    "confidence": "high",
+    "reason": "In severe Class II malocclusion, the maxilla is protrusive relative to the mandible, causing the SNA angle to exceed the; In Class II malocclusion, the mandible is retrognathic relative to the maxilla, resulting in an increased ANB angle.",
+    "votes": {
+      "A": 2
+    },
+    "detail": {
+      "opencode/nemotron-3-ultra-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/inclusionai/ling-3.0-flash:free": {
+        "verdict": "A",
+        "reason": "In severe Class II malocclusion, the maxilla is protrusive relative to the mandible, causing the SNA angle to exceed the SNB angle, which results in an increased ANB value."
+      },
+      "kilo/openrouter/free": {
+        "verdict": "A",
+        "reason": "In Class II malocclusion, the mandible is retrognathic relative to the maxilla, resulting in an increased ANB angle."
+      }
+    }
+  },
+  "fn_restorative_0283": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "Regular recall visits are associated with CAL regain in severe periodontitis patients.",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/nemotron-3-ultra-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/inclusionai/ling-3.0-flash:free": {
+        "verdict": "X",
+        "reason": "ANS"
+      },
+      "kilo/openrouter/free": {
+        "verdict": "A",
+        "reason": "Regular recall visits are associated with CAL regain in severe periodontitis patients."
+      }
+    }
+  },
+  "fn_restorative_0281": {
+    "verdict": "ANSWER_B",
+    "confidence": "high",
+    "reason": "A persistent diastema in a 14-year-old should prompt evaluation of the labial frenum and papilla; checking for frenal; Checking for frenal blanching helps identify a tight or retracted frenulum,",
+    "votes": {
+      "B": 2
+    },
+    "detail": {
+      "opencode/nemotron-3-ultra-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/inclusionai/ling-3.0-flash:free": {
+        "verdict": "B",
+        "reason": "A persistent diastema in a 14-year-old should prompt evaluation of the labial frenum and papilla; checking for frenal"
+      },
+      "kilo/openrouter/free": {
+        "verdict": "B",
+        "reason": "Checking for frenal blanching helps identify a tight or retracted frenulum,"
+      }
+    }
+  },
+  "fn_restorative_0286": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "Orthodontic wax is the standard first-line conservative treatment for multiple areas of soft tissue irritation caused by",
+    "votes": {
+      "A": 1
+    },
+    "detail": {
+      "opencode/nemotron-3-ultra-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/inclusionai/ling-3.0-flash:free": {
+        "verdict": "A",
+        "reason": "Orthodontic wax is the standard first-line conservative treatment for multiple areas of soft tissue irritation caused by orthodontic wires, providing a smooth barrier over the offending appliance."
+      },
+      "kilo/openrouter/free": {
+        "verdict": "X",
+        "reason": "ANSWER"
+      }
+    }
+  },
+  "fn_restorative_0417": {
+    "verdict": "ANSWER_A",
+    "confidence": "high",
+    "reason": "of sweating and pain whil\"\n\nAnd then options: A. a. better nutrition B. b. ? C. c. ?\n\nBut the options are incomplete. Th; r nutrition, B. b. ?, C. c. ?. The options are incomplete.\n\nWe need to pick the single best clinical answer. The questio",
+    "votes": {
+      "A": 2
+    },
+    "detail": {
+      "opencode/nemotron-3-ultra-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/inclusionai/ling-3.0-flash:free": {
+        "verdict": "A",
+        "reason": "of sweating and pain whil\"\n\nAnd then options: A. a. better nutrition B. b. ? C. c. ?\n\nBut the options are incomplete. The question likely is about the cause of contamination when a patient closes lips"
+      },
+      "kilo/openrouter/free": {
+        "verdict": "A",
+        "reason": "r nutrition, B. b. ?, C. c. ?. The options are incomplete.\n\nWe need to pick the single best clinical answer. The question appears to be a mix of multiple questions. The user likely wants the answer to"
+      }
+    }
+  },
+  "fn_restorative_0434": {
+    "verdict": "ANSWER_C",
+    "confidence": "high",
+    "reason": "Missing #11,#12,#13 is a unilateral anterior edentulous area that does NOT cross the midline (#21 present). McCracken defines Class IV as a single edentulous area crossing the midline; missing 11,12,13 is therefore Class III. Community recall (Rafi_Maqam_19 Q23) marks Class 3.",
+    "votes": {
+      "C": 1
+    },
+    "detail": {
+      "book/McCracken": {
+        "verdict": "C",
+        "reason": "Class IV requires crossing the midline; 11,12,13 does not cross."
+      },
+      "recall/Rafi_Maqam_19": {
+        "verdict": "C",
+        "reason": "Q23 marks 'Class 3' as the answer."
+      }
+    }
+  },
+  "fn_perio_0348": {
+    "verdict": "ANSWER_B",
+    "confidence": "high",
+    "reason": "Mandibular second premolars erupt at 11–12 years (Littlewood eruption chart). If all other permanent teeth are present and the lower second premolars have not erupted yet, the patient is ~11 years old.",
+    "votes": {
+      "B": 2
+    },
+    "detail": {
+      "book/Littlewood": {
+        "verdict": "B",
+        "reason": "Mand. second premolars 11–12; all else present → ~11."
+      },
+      "kilo/nvidia/nemotron-3-super-120b-a12b:free": {
+        "verdict": "B",
+        "reason": "Lower 2nd premolar erupts ~11-12; patient ~11."
+      }
+    }
+  },
+  "fn_restorative_0459": {
     "verdict": "ANSWER_B",
     "confidence": "low",
-    "reason": "Tufts are the central part of enamel rods where sensory signals can be transmitted.",
+    "reason": "Severe periodontitis with high BOP (82%) requires immediate intervention to control infection; phase I therapy (scaling ",
+    "votes": {
+      "B": 1,
+      "A": 1
+    },
+    "detail": {
+      "opencode/nemotron-3-ultra-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/openrouter/free": {
+        "verdict": "B",
+        "reason": "Severe periodontitis with high BOP (82%) requires immediate intervention to control infection; phase I therapy (scaling and root planing) should be initiated promptly, followed by referral to a physic"
+      },
+      "kilo/inclusionai/ling-3.0-flash:free": {
+        "verdict": "A",
+        "reason": "With HbA1c of 9% indicating poorly controlled diabetes, the patient"
+      }
+    }
+  },
+  "fn_perio_0516": {
+    "verdict": "ANSWER_B",
+    "confidence": "low",
+    "reason": "Gag reflex causes the mouth to open, increasing vertical dimension of occlusion.",
     "votes": {
       "B": 1
     },
     "detail": {
-      "opencode/ling-3.0-flash-free": {
+      "opencode/nemotron-3-ultra-free": {
         "verdict": "ERROR",
         "reason": "__HTTP_ERROR__ 403"
       },
-      "kilo/poolside/laguna-xs-2.1:free": {
+      "kilo/inclusionai/ling-3.0-flash:free": {
         "verdict": "X",
-        "reason": ""
+        "reason": "s, bruxism can lead to an increase in VDO if there is over-eruption of teeth. But more commonly, bruxism is associated with decreased VDO.\n\nWait - let me reconsider the question. \"Increase VDO\" - this"
       },
-      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+      "kilo/openrouter/free": {
         "verdict": "B",
-        "reason": "Tufts are the central part of enamel rods where sensory signals can be transmitted."
+        "reason": "Gag reflex causes the mouth to open, increasing vertical dimension of occlusion."
+      }
+    }
+  },
+  "fn_implant_0461": {
+    "verdict": "ANSWER_A",
+    "confidence": "low",
+    "reason": "gingival tissue or gingival recession\n- A metal-ceramic crown where the metal margin is visible\n\nThe titanium implant bo",
+    "votes": {
+      "A": 1,
+      "B": 1
+    },
+    "detail": {
+      "opencode/nemotron-3-ultra-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/inclusionai/ling-3.0-flash:free": {
+        "verdict": "A",
+        "reason": "gingival tissue or gingival recession\n- A metal-ceramic crown where the metal margin is visible\n\nThe titanium implant body itself is typically submerged beneath the bone and soft tissue, so it wouldn"
+      },
+      "kilo/openrouter/free": {
+        "verdict": "B",
+        "reason": "The dark line at the gingival margin of an implant crown is caused by the titanium implant showing through the thin mucosal tissue."
+      }
+    }
+  },
+  "fn_perio_0515": {
+    "verdict": "ANSWER_B",
+    "confidence": "high",
+    "reason": "Tooth #34 is a mandibular first molar, which most commonly has 3; A lower second molar (FDI #34) normally has three root canals.",
+    "votes": {
+      "B": 2
+    },
+    "detail": {
+      "opencode/nemotron-3-ultra-free": {
+        "verdict": "ERROR",
+        "reason": "__HTTP_ERROR__ 403"
+      },
+      "kilo/inclusionai/ling-3.0-flash:free": {
+        "verdict": "B",
+        "reason": "Tooth #34 is a mandibular first molar, which most commonly has 3"
+      },
+      "kilo/openrouter/free": {
+        "verdict": "B",
+        "reason": "A lower second molar (FDI #34) normally has three root canals."
       }
     }
   }
