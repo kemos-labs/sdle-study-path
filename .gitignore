@@ -25,3 +25,11 @@ dist/
 .vscode/
 *.log
 /tmp/
+
+# Archive of build artifacts (not needed at runtime)
+.archive/
+
+# Backup files from AI editing
+*.bak.*
+
+# Per-deployment cache string (managed automatically)

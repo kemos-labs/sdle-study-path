@@ -1,0 +1,264 @@
+BATCH — 150 items WITH answers but not verified (sorted by best candidate score)
+================================================================================
+
+--- ITEM 1 [fn_restorative_0003] dept=restorative marker=ref score=0 ---
+Q: no composite
+A: a. rescheduled
+CANDIDATES: none
+
+--- ITEM 2 [fn_restorative_0048] dept=restorative marker=verified score=0 ---
+Q: A mother brought her son to change his amalgam restoration. The doctor decides that it's good and there is no need to change it and he convinces the mother . What does this consider ?
+A: a. Veracity
+CANDIDATES: none
+
+--- ITEM 3 [fn_restorative_0127] dept=restorative marker=verified score=0 ---
+Q: How mm the matrix band can insert?
+A: b. 1mm
+CANDIDATES: none
+
+--- ITEM 4 [fn_restorative_0132] dept=restorative marker=ref score=0 ---
+Q: 39 years old patient came for endo ttt , after rubber dam application and access cavity no canals were found , cause ?
+A: a. Guging
+CANDIDATES: none
+
+--- ITEM 5 [fn_restorative_0198] dept=restorative marker=verified score=0 ---
+Q: 75.Which clamp is used for the upper molar?
+A: b. W8
+CANDIDATES: none
+
+--- ITEM 6 [fn_restorative_0199] dept=restorative marker=verified score=0 ---
+Q: 79.  class 1 amalgam on lower and cusp fracture ?
+A: b. only
+CANDIDATES: none
+
+--- ITEM 7 [fn_restorative_0321] dept=restorative marker=ref score=0 ---
+Q: - 40 -50 -60 -70 ✅
+A: 40 -50 -60 -70
+CANDIDATES: none
+
+--- ITEM 8 [fn_restorative_0338] dept=restorative marker=ref score=0 ---
+Q: Q68) MB cusp of 6 occlude with DB groove of 6 ? Cl iii
+A: Cl iii
+CANDIDATES: none
+
+--- ITEM 9 [fn_restorative_0474] dept=restorative marker=verified score=0 ---
+Q: Patient take bisphosphonate for osteoporosis undergo for extraction What is preoperativemeasurement?
+A: c. No needforantibiotics
+CANDIDATES: none
+
+--- ITEM 10 [fn_restorative_0478] dept=restorative marker=ref score=0 ---
+Q: histologicalpicture ofcervicalcaries
+A: histologicalpicture ofcervicalcaries
+CANDIDATES: none
+
+--- ITEM 11 [fn_restorative_0482] dept=restorative marker=verified score=0 ---
+Q: MDfood impactionafter compositerestoration ?
+A: c. remove Excesscausemight causeoverhang
+CANDIDATES: none
+
+--- ITEM 12 [fn_endo_0004] dept=endo marker=verified score=0 ---
+Q: Patient allergic to Rubber , obturation material :
+A: a. Resilone
+CANDIDATES: none
+
+--- ITEM 13 [fn_endo_0522] dept=endo marker=ref score=0 ---
+Q: caseaboutchippedenamel andshortroot andobliteratedpulp
+A: a. Dentinogenesis imperfecta
+CANDIDATES: none
+
+--- ITEM 14 [fn_perio_0002] dept=perio marker=verified score=0 ---
+Q: Picture of abrasion , the patient came complaining of a fallen restoration while she had scaling , what's the treatment ?
+A: a. A.restoration
+CANDIDATES: none
+
+--- ITEM 15 [fn_perio_0010] dept=perio marker=ref score=0 ---
+Q: There was a question about Stillman’s cleft.
+A: s cleft.
+CANDIDATES: none
+
+--- ITEM 16 [fn_perio_0055] dept=perio marker=verified score=0 ---
+Q: Gingival Crevicular Fluid (GCF) in severe perio?
+A: b. More
+CANDIDATES: none
+
+--- ITEM 17 [fn_perio_0061] dept=perio marker=ref score=0 ---
+Q: Periodontal probe tip
+A: a. 0..5 mm
+CANDIDATES: none
+
+--- ITEM 18 [fn_perio_0071] dept=perio marker=verified score=0 ---
+Q: Marginal gingival recession that doesn't extend to the mucogingival junction is considered what class according to millers classification?
+A: a. I
+CANDIDATES: none
+
+--- ITEM 19 [fn_perio_0100] dept=perio marker=verified score=0 ---
+Q: Periodontal probe tip diameter?
+A: a. 0.5mm
+CANDIDATES: none
+
+--- ITEM 20 [fn_perio_0132] dept=perio marker=verified score=0 ---
+Q: ?some areas, what is the rationale of his decision ✅
+A: ?some areas, what is the rationale of his decision
+CANDIDATES:
+  [11.5] (Sturdevant 5e Ch 12): rations. Because the proximal
+are indicated.                                              surface of a tooth is usually convex incisogingivally and
+   If the bonding system does not combine the primer        the strip may be flat, it may be necessary
+  [11.5] (Sturdevant 5e Ch 19): Several factors must be considered          positioned no closer than 0.5 to 1 mm to the DEJ or no
+when deciding how many pins are required: (1) the              closer than 1 to 1.5 mm to the external surface of the
+amount of missing tooth structure
+
+--- ITEM 21 [fn_perio_0139] dept=perio marker=ref score=0 ---
+Q: - occ ✅ |     |     |     |     |     | - denture |     |     | fit |     | ( ) |     |     |     |     |     |     |     | | --- | --- | --- | --- | --- | --------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | |     |   
+A: occ
+CANDIDATES: none
+
+--- ITEM 22 [fn_perio_0176] dept=perio marker=verified score=0 ---
+Q: b.Necrotizing Gingivitis c.Gingivitis d.Pathological migration(cid:32413)(cid:54392) 136.pt after scaling pt eat fish then come next day with swelling
+A: a. gingval abssess(cid:32413)(cid:54392)
+CANDIDATES: none
+
+--- ITEM 23 [fn_perio_0188] dept=perio marker=verified score=0 ---
+Q: 31. Taurdontitism is ? a.Amelogenesis imp (cid:32413)(cid:54392) b.Dentinogenesis imp 32.Patient is hypertensive controlled , His MI before 3 years , Prosthetic heart valve ,Taking anticoagulant (No dose provided ) need extraction : a.Prophy antibiot
+A: a. Floucanazol
+CANDIDATES: none
+
+--- ITEM 24 [fn_perio_0192] dept=perio marker=ref score=0 ---
+Q: ●  *Signs in the question indicate malignancy. The malignant cells metastasis causes the irregular widening of the PDL. ● 287.Histological there was C3,and prickle cell: a.Pemphigus ✅
+A: a.Pemphigus
+CANDIDATES: none
+
+--- ITEM 25 [fn_perio_0631] dept=perio marker=verified score=0 ---
+Q: Samepictureof localizedswellingand asktreatment? needtosee the radiograph
+A: a. Perio rescaling
+CANDIDATES:
+  [6.5] (Sturdevant 5e Ch 19): sually         and external tooth contours, (2) a current radiograph of
+are selected to reduce the risk of dentin crazing, pulpal      the tooth, (3) a periodontal probe, and (4) the patient’s
+penetration, and potential perforation. The Minim pins   
+  [6.5] (Sturdevant 5e Ch 9): erts to      helpful. When interpreting the radiographic presen-
+develop radiograph selection criteria for dental patients.   tation of proximal tooth surfaces, it is necessary to know
+Their report speciﬁes guidelines based on patient age        the 
+
+--- ITEM 26 [fn_perio_0632] dept=perio marker=verified score=0 ---
+Q: Pt have perio inflammation undergo for orthotreatment ,wherewill beCenter of resistance?
+A: b. Moreapical
+CANDIDATES: none
+
+--- ITEM 27 [fn_perio_0633] dept=perio marker=verified score=0 ---
+Q: Patient with gingival enlargement and inflammation. Histology reveals plasma cells ,macrophage, nogranular?
+A: b. Plasmacellgingivitis
+CANDIDATES: none
+
+--- ITEM 28 [fn_perio_0634] dept=perio marker=verified score=0 ---
+Q: Pt with end-stagerenalfailure?
+A: b. Halitosis
+CANDIDATES: none
+
+--- ITEM 29 [fn_perio_0635] dept=perio marker=verified score=0 ---
+Q: Location of bandin spacemaintainer?
+A: c. Below marginalridge
+CANDIDATES: none
+
+--- ITEM 30 [fn_perio_0639] dept=perio marker=verified score=0 ---
+Q: xray picturewith accessamalgam andboneresorptionandasking why?
+A: c. directbacteria tothebone (food impaction-plaque-bacteriaandinfla)
+CANDIDATES: none
+
+--- ITEM 31 [fn_perio_0644] dept=perio marker=ref score=0 ---
+Q: caseaboutyellowish materialontoothcan'tbe removedbywater
+A: a. Plaque
+CANDIDATES: none
+
+--- ITEM 32 [fn_perio_0645] dept=perio marker=ref score=0 ---
+Q: painduring mealwith nocalculus
+A: a. Sialadenitis
+CANDIDATES: none
+
+--- ITEM 33 [fn_perio_0646] dept=perio marker=ref score=0 ---
+Q: patient had scaling with good oralhygiene andstillhave pocket andbleeding in oneside
+A: a. Localantibioticdelivery
+CANDIDATES: none
+
+--- ITEM 34 [fn_perio_0649] dept=perio marker=verified score=0 ---
+Q: pt haspocket9mminMB root of16?
+A: a. deepscaling andr.p.
+CANDIDATES: none
+
+--- ITEM 35 [fn_perio_0658] dept=perio marker=verified score=0 ---
+Q: A dentist is performing periodontal charting. He is trying to calculate the clinical abachment loss in the distobuccal site for tooth #11. In the concerned area, the gingival margin is 2 mm coronal to the cementoenamel junction and th probing depth i
+A: a. 0mm
+CANDIDATES: none
+
+--- ITEM 36 [fn_perio_gf2_0020] dept=perio marker=verified score=0 ---
+Q: A 64-year-old pa.ent presented with severe occlusal wear of his maxillary single complete denture, which is opposing a mandibular, class I metallic par.al denture. The lower denture rests on the mandi
+A: 0mm
+CANDIDATES: none
+
+--- ITEM 37 [fn_fixed_0095] dept=fixed marker=verified score=0 ---
+Q: c.Removable✅ (best option in this case )
+A: c.Removable
+CANDIDATES: none
+
+--- ITEM 38 [fn_fixed_0160] dept=fixed marker=verified score=0 ---
+Q: 10yrs oldboyhismother concerningabout spacesbetween anteriorteeth.?
+A: a. No treatment
+CANDIDATES: none
+
+--- ITEM 39 [fn_fixed_0161] dept=fixed marker=ref score=0 ---
+Q: old manwithflappytissue?
+A: A. Mucostaticimpression
+CANDIDATES: none
+
+--- ITEM 40 [fn_fixed_0162] dept=fixed marker=ref score=0 ---
+Q: patient wantto replace missedcentrincisor withlesstreatment?
+A: a. Marylandbridge
+CANDIDATES: none
+
+--- ITEM 41 [fn_fixed_0167] dept=fixed marker=verified score=0 ---
+Q: Pt missing 456in bothSideWhat directretainer?
+A: a. RPC
+CANDIDATES: none
+
+--- ITEM 42 [fn_rpd_0062] dept=rpd marker=ref score=0 ---
+Q: Patientlost his4anteriorteethin anaccident which Kennedyclass?
+A: a. ClassIV
+CANDIDATES: none
+
+--- ITEM 43 [fn_rpd_0067] dept=rpd marker=ref score=0 ---
+Q: 63years oldnot comfortablewith hisdenture?
+A: a. Do lingualized occlusion
+CANDIDATES: none
+
+--- ITEM 44 [fn_rpd_gf2_0005] dept=rpd marker=verified score=0 ---
+Q: An edentulous pa.ent presented to the clinic requesting the replacement of his upper and lower dentures. The dentures were worn for 25 years and during this period they fractured and were repaired sev
+A: Mucosta.c
+CANDIDATES: none
+
+--- ITEM 45 [fn_implant_0019] dept=implant marker=verified score=0 ---
+Q: Implant inflammation has bone resorption involved, what’s the diagnosis?
+A: a. Perimplantitis
+CANDIDATES: none
+
+--- ITEM 46 [fn_implant_0029] dept=implant marker=ref score=0 ---
+Q: Distance between 2 implants ?
+A: a. 3mm
+CANDIDATES: none
+
+--- ITEM 47 [fn_implant_0032] dept=implant marker=verified score=0 ---
+Q: The blood and vessels the supply in implants compared with natural tooth
+A: c. Less
+CANDIDATES: none
+
+--- ITEM 48 [fn_implant_0039] dept=implant marker=verified score=0 ---
+Q: What is the required distance from interproximal implant to crest of bone to preserve a healthy papilla: ( previously mentioned )
+A: a. 3.4mm.
+CANDIDATES: none
+
+--- ITEM 49 [fn_implant_0046] dept=implant marker=verified score=0 ---
+Q: Best type of bone for implant? (previously mentioned)
+A: b. D2
+CANDIDATES: none
+
+--- ITEM 50 [fn_implant_0052] dept=implant marker=ref score=0 ---
+Q: Distance between 2 implants? (previously mentioned)
+A: a. 3mm
+CANDIDATES: none

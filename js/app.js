@@ -1463,19 +1463,33 @@
   /**
    * Build a paste-ready prompt for SDLEGPT from current study context.
    * opts: { topic, question, options, picked, correct, explanation, subject }
+   *
+   * Enhanced: forces book-grounded reasoning, flags unverified bank answers,
+   * and requests a structured verdict (answer + why + wrong-option refutations).
    */
   function buildSdleGptContext(opts) {
     const o = opts || {};
     const lines = [
       "I am studying for the KSA SDLE (Prometric) dental exam.",
-      "Please give an academic explanation with textbook-style reasoning.",
+      "You are my academic tutor. Use ONLY mainstream dental textbooks as your source of truth",
+      "(e.g. Cohen's Pathways of the Pulp, Shillingburg Fixed Prosthodontics, Sturdevant's Operative",
+      "Dentistry, Carranza/Lindhe Periodontology, McDonald & Avery Pediatric Dentistry, McCracken RPD,",
+      "Phillips' Science of Dental Materials, Hupp Oral & Maxillofacial Surgery, Complete Dentures textbook).",
+      "Never cite student notes, question dumps, or memorized exam banks.",
       "Not medical advice for a real patient. Not official SCFHS content.",
+      "",
+      "=== RULES FOR EVERY ANSWER ===",
+      "1. Give the single best letter + repeat the chosen option text.",
+      "2. Explain WHY it is correct in 2-4 sentences, naming the textbook that supports it.",
+      "3. For each wrong option: one sentence saying why it is wrong (do not skip any).",
+      "4. If a bank-flagged answer contradicts the textbooks, say so explicitly and give the book answer.",
+      "5. Keep it tight: max ~8 sentences total unless I ask for depth.",
       "",
     ];
     if (o.subject) lines.push("Today's topic / subject: " + o.subject);
     if (o.topic) lines.push("Bank topic tag: " + o.topic);
     if (o.question) {
-      lines.push("", "MCQ:", o.question);
+      lines.push("", "=== MCQ ===", o.question);
       if (Array.isArray(o.options) && o.options.length) {
         o.options.forEach((opt, i) => {
           lines.push(String.fromCharCode(65 + i) + ". " + opt);
@@ -1483,12 +1497,18 @@
       }
       if (o.picked != null && o.picked >= 0)
         lines.push("My answer: " + String.fromCharCode(65 + o.picked));
-      if (o.correct != null && o.correct >= 0)
-        lines.push("Correct answer (bank): " + String.fromCharCode(65 + o.correct));
+      if (o.correct != null && o.correct >= 0) {
+        lines.push("Bank answer key: " + String.fromCharCode(65 + o.correct));
+        lines.push("Note: bank keys are student-built; verify against the textbooks before trusting them.");
+      }
       if (o.explanation) lines.push("Bank explanation: " + o.explanation);
-      lines.push("", "Explain why the correct choice is right and why the others are wrong.");
+      lines.push("", "Follow the RULES above.");
     } else {
-      lines.push("", "Quiz me / explain high-yield points for this topic in exam style.");
+      lines.push(
+        "",
+        "Quiz me / explain high-yield points for this topic in exam style.",
+        "For each point, name the textbook chapter it comes from.",
+      );
     }
     return lines.filter((x) => x != null).join("\n");
   }
@@ -4440,7 +4460,7 @@
     // source filter chips (from the 8 PDF sources)
     const fnSourcesList = (window.FLASH_NOTES || {}).sources || [];
     const sourceChipsHtml = fnSourcesList.length
-      ? fnSourcesList.map(s => `<span class="badge" style="font-size:0.58rem;background:var(--bg3);color:var(--muted)">${escapeHtml(s)}</span>`).join(' ')
+      ? fnSourcesList.map(s => `<span class="badge" style="font-size:0.58rem;background:var(--bg3);color:var(--muted)">${escapeHtml(s.label || s.id || s)}</span>`).join(' ')
       : '';
     const fnMarkerBadge = (m, hasOpts, hasBookEvidence, hasCommunity) => {
       if (hasBookEvidence) return '<span class="badge blue" style="font-size:0.62rem" title="Automated evidence candidate; not a final textbook judgment">📖 evidence candidate</span>';
@@ -7040,6 +7060,17 @@
       const qz = state.quiz;
       const next = $("#btn-next");
       const showAns = $("#btn-show-ans");
+      const fnReveal = $("#fn-reveal");
+      const item = qz.items[qz.i] || {};
+      if (item._fnRecall) {
+        if ((k === "r" || k === "R") && fnReveal && !fnReveal.hidden) {
+          e.preventDefault(); fnReveal.click(); return;
+        }
+        if ((k === "Enter" || k === "n" || k === "N" || k === " " || k === "ArrowRight") && next && !next.hidden) {
+          e.preventDefault(); next.click(); return;
+        }
+        return;
+      }
       const locked = qz.mode === "test" && qz.answers[qz.i] != null;
       const answered = (next && !next.hidden) || locked;
       if (answered && (k === "Enter" || k === "n" || k === "N" || k === " " || k === "ArrowRight")) {
@@ -7167,63 +7198,89 @@
     quizItems = quizItems.slice(0, n);
 
     // Convert to quiz format
+    const isGarbageStem = (s) => {
+      const t = (s || "").replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim();
+      if (t.length < 3) return true;                       // "- composite" / empty
+      if (/^[-•*●#>\s]+$/.test(t)) return true;            // bullets only
+      if (!/[a-zA-Z\u0621-\u064A0-9]/.test(t)) return true; // no letters/digits/arabic
+      return false;
+    };
+    const cleanStem = (s) => (s || "")
+      .replace(/[✅🟢🟡✳🔵🔁●]/g, "")
+      .replace(/^[\s\u2022\u25CF\u2023\u25AA\u25A0#*>-]+/, "")  // leading bullets/dashes
+      .replace(/[\s\u2022\u25CF\u2023\u25AA\u25A0]+$/, "")
+      .trim();
+    const isPlaceholderOpt = (o) => /^\(?(not listed|none of the|n\.a|see image|pic|figure|صورة|الصورة)/i.test(o);
     const converted = quizItems.map(it => {
-      const hasOpts = it.format === "mcq" && !it._data_quality && (it.options||[]).length > 1 && (it.answerIdx != null || it.answerLetter);
+      const stem = cleanStem(it.stem);
+      if (isGarbageStem(stem)) return null; // drop garbage stems from quiz (kept in data, flagged)
+      if (it._data_quality === "merged_options_review" || it._data_quality === "garbage") return null; // merged messes / junk — split & repair in data phase, not quizzed as broken MCQs
+      if (it._is_option) return null; // orphan option fragments — merged back to parents in data phase
       // _book_explanation may be an object {book, chapter, passage} or a string
       const bookExp = it._book_explanation;
       const bookWhy = (bookExp && typeof bookExp === 'object') ? (bookExp.passage || '') : (typeof bookExp === 'string' ? bookExp : '');
       const commWhy = (typeof it._verified_explanation === 'string') ? it._verified_explanation : '';
       const why = bookWhy || commWhy || "";
-      const stem = (it.stem || "").replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim();
+
+      // Real MCQ detection: 2+ real options AND a resolvable answer, regardless of the
+      // format field (old parser labeled many valid MCQs as recall and vice-versa).
+      const rawOpts = (it.options || []).filter(Boolean);
+      const cleanOpts = rawOpts
+        .map(o => o.replace(/^[a-z][).]\s*/i, "").replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim())
+        .filter(Boolean);
+      let ansIdx = it.answerIdx;
+      if (ansIdx == null && it.answerLetter) {
+        ansIdx = it.answerLetter.toLowerCase().charCodeAt(0) - 97;
+      }
+      // map ansIdx onto cleaned options index (same position — cleaning preserves order)
+      const ansOpt = (ansIdx != null && ansIdx >= 0 && ansIdx < cleanOpts.length) ? cleanOpts[ansIdx] : "";
+      const hasOpts = cleanOpts.length > 1 && ansOpt && !isPlaceholderOpt(ansOpt) && !isPlaceholderOpt(stem);
 
       if (hasOpts) {
-        // MCQ-ready item — clean options and use as normal MCQ
-        const opts = (it.options || []).map(o => {
-          return o.replace(/^[a-z][).]\s*/i, "").replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim();
-        }).filter(Boolean);
-
-        let ansIdx = it.answerIdx;
-        if (ansIdx == null && it.answerLetter) {
-          ansIdx = it.answerLetter.toLowerCase().charCodeAt(0) - 97;
-        }
-        if (ansIdx == null || ansIdx < 0 || ansIdx >= opts.length) ansIdx = 0;
-
         return {
           id: it.id || "fn_" + dept + "_" + Math.random().toString(36).slice(2, 8),
           q: stem,
-          options: opts,
-          answer: ansIdx,
+          options: cleanOpts.slice(0, 6),
+          answer: Math.min(ansIdx, cleanOpts.length - 1),
           explanation: why.slice(0, 400),
           topic: dept || it.dept || "",
           source: "flash_notes",
           _fnRecall: false
         };
-      } else {
-        // Recall-only item — extract answer from inline markers or raw text
-        let ansText = "";
+      }
+
+      // Honest Q&A card — no fake "Reveal answer" option; the reveal button is in the UI.
+      // Prefer structured answers over regex heuristics.
+      let ansText = "";
+      if (it._embedded_answer && typeof it._embedded_answer === 'string') ansText = it._embedded_answer;
+      else if (it._verified_explanation && typeof it._verified_explanation === 'string') {
+        ansText = it._verified_explanation.replace(/^correct answer:?\s*/i, "");
+      }
+      else if (it._model_suggested_answer && it._model_suggested_answer.answerIdx != null && cleanOpts[it._model_suggested_answer.answerIdx]) {
+        ansText = cleanOpts[it._model_suggested_answer.answerIdx];
+      }
+      if (!ansText && ansOpt) ansText = ansOpt;
+      if (!ansText) {
         const raw = it.raw || it.stem || "";
-        // Look for a ✅-marked answer phrase
         const m = raw.match(/([a-z])[).]\s*([^\n?]*?)[✅🟢🟡✳🔵]/i);
         if (m) ansText = m[2].replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim();
-        else {
-          // Just take the last part after ? or marker
-          const parts = stem.split(/[?؟]/);
-          ansText = parts.length > 1 ? parts[parts.length-1].trim() : "";
-        }
-        if (!ansText) ansText = "(inline answer — check raw source)";
-
-        return {
-          id: it.id || "fn_" + dept + "_" + Math.random().toString(36).slice(2, 8),
-          q: stem,
-          options: ["Reveal answer"],
-          answer: 0,
-          explanation: "Answer: " + ansText + (why ? "\n\n" + why.slice(0, 300) : ""),
-          topic: dept || it.dept || "",
-          source: "flash_notes",
-          _fnRecall: true
-        };
       }
-    });
+      if (!ansText) ansText = "(no marked answer in source — see notes)";
+      const optList = cleanOpts.length > 1
+        ? "\n\nOptions: " + cleanOpts.map((o, i) => String.fromCharCode(65 + i) + ") " + o).join(" · ")
+        : "";
+
+      return {
+        id: it.id || "fn_" + dept + "_" + Math.random().toString(36).slice(2, 8),
+        q: stem,
+        options: [],
+        answer: 0,
+        explanation: "Answer: " + ansText + optList + (why ? "\n\n" + why.slice(0, 300) : ""),
+        topic: dept || it.dept || "",
+        source: "flash_notes",
+        _fnRecall: true
+      };
+    }).filter(Boolean);
 
     const modeLabel = mode === "exam" ? "Flash Mock" : "Flash Quiz";
     const deptLabel = dept === "all" ? "All Flash" : dept;
@@ -7269,6 +7326,44 @@
       return;
     }
     const item = qz.items[qz.i];
+    // ---- Honest Q&A card for recall flash notes (no fake "Reveal answer" option) ----
+    if (item._fnRecall) {
+      const rv = !!qz.revealed && qz.revealed[qz.i];
+      const showNext = rv || qz.mode === "learn";
+      const ansHtml = rv
+        ? `<div class="explain"><strong>Answer</strong></div><div class="q-feedback" style="padding:10px 14px;background:var(--bg1);border:1px solid var(--border);border-radius:var(--radius);font-size:0.92rem;line-height:1.6;white-space:pre-wrap">${escapeHtml(item.explanation || "")}</div>`
+        : `<p class="muted q-feedback-hint">Recall Q&A — tap <b>Show answer</b> to reveal. No scoring; use it to self-test recall.</p>`;
+      app.innerHTML = `
+        ${backBarHtml("← Back (previous screen)")}
+        <div class="q-card q-card-wide">
+          <div class="q-meta">
+            ${escapeHtml(qz.label)} · ${qz.i + 1} / ${qz.items.length}
+            <span class="badge blue">${escapeHtml(item.topic)}</span>
+            <span class="badge" style="background:var(--bg3);color:var(--accent2);font-weight:500">📝 recall Q&A</span>
+            ${qz.seconds != null ? `<span class="timer" id="quiz-timer">${formatTime(qz.seconds)}</span>` : ""}
+          </div>
+          <h2 class="q-stem">${escapeHtml(item.q)}</h2>
+          <div class="q-layout"><div id="feedback" class="q-feedback">${ansHtml}</div></div>
+          <div class="quiz-actions quiz-actions-sticky">
+            <button class="btn ghost" id="fn-reveal" ${rv ? "hidden" : ""}>🔍 Show answer</button>
+            <button class="btn btn-next-main" id="btn-next" ${showNext ? "" : "hidden"}>Next →</button>
+          </div>
+          <p class="kb-hint">Keys: <b>R</b> show answer · <b>Enter / N</b> next</p>
+        </div>
+      `;
+      bindBackBar();
+      const revealBtn = $("#fn-reveal");
+      if (revealBtn) revealBtn.onclick = () => {
+        if (!qz.revealed) qz.revealed = [];
+        qz.revealed[qz.i] = true;
+        qz.learnN = (qz.learnN || 0) + 1; // count as seen; no right/wrong scoring
+        renderQuizUI();
+      };
+      const nextBtn = $("#btn-next");
+      if (nextBtn) nextBtn.onclick = () => { qz.i++; renderQuizUI(); };
+      bindQuizKeys();
+      return;
+    }
     const locked = qz.mode === "test" && qz.answers[qz.i] != null;
     const picked = locked ? qz.answers[qz.i] : null;
     const revealed = qz.mode === "test" && qz.revealed && qz.revealed[qz.i];
