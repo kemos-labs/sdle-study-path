@@ -302,6 +302,8 @@ def main() -> int:
                 print(f"  [{topic}] bad JSON — retrying later (skipping)")
                 continue
             for item in arr:
+                if not isinstance(item, dict) or not item.get("q"):
+                    continue  # malformed item (string / empty) — skip silently
                 err = validate(item)
                 ns = norm_stem(item.get("q"))
                 if ns and ns in seen_stems:
