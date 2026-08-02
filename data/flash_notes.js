@@ -1,5 +1,5 @@
 window.FLASH_NOTES = {
- "generated": "2026-08-02 (split_merged_flash)",
+ "generated": "2026-08-02 (dedupe_flash)",
  "total": 4451,
  "perSource": {
   "Mar-June_2026": 1209,
@@ -2849,7 +2849,8 @@ window.FLASH_NOTES = {
     "raw": "Pedo patient presented with multiple caries and plaque accumulation , the patient is cooperative . What is the best treatment option for him? a. Composite b. SSC c. Amalgum d. RMGIC ✅",
     "dept": "restorative",
     "sources": [
-     "Mar-June_2026"
+     "Mar-June_2026",
+     "Rafi_Maqam_19"
     ],
     "id": "fn_restorative_0105",
     "_verified_explanation": "Correct answer: d. RMGIC",
@@ -2861,7 +2862,14 @@ window.FLASH_NOTES = {
      "passage": "ionomer.\n       2. Prepare the tooth for a casting; then remove any\n          existing restorations and bases, excavate caries, and\n          create the undercuts needed for additional reten-                   foundation and crown preparation are completed\n          tion. Glass ionomer is best for small foundations                   during a single office visit.) After tooth preparation",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_answer_conflict": [
+     {
+      "id": "fn_ortho_pedo_0117x3",
+      "answerIdx": 0,
+      "answerLetter": "a"
+     }
+    ]
    },
    {
     "stem": "Case pedo with remineralization around his molars what is the best management to save his molars fissures ?\n(previously mentioned)",
@@ -6737,7 +6745,8 @@ window.FLASH_NOTES = {
     "needsImage": true,
     "dept": "restorative",
     "sources": [
-     "Rafi_Maqam_16"
+     "Rafi_Maqam_16",
+     "Mar-June_2026"
     ],
     "raw": "● 62.What type of incision to raise the flap coronally? a.Internal bevel b.External bevel c.Sulcular ✅ If releasing incision in options it is more correct 63.Pt has rescission on #13 ,she will do C.T gravy and coronal placed flap Which incision will be used ? a.external bevel b.internal bevel c.sulcular(cid:32413)(cid:54392) 64.Patient came  complaining of  sensitivity in  the lower right area, clinical examination showed caries on #47 With generalized  calculus  deposits,  radiographic  examination  showed  an  impacted  molar,  what  is  the  best  treatment sequence?",
     "_parent": "fn_restorative_0208",
@@ -10117,7 +10126,9 @@ window.FLASH_NOTES = {
      "passage": "The increased                 for another 3 months. Excessive calcium hydroxide dressing\nvolume of irrigant used compensates for this lower concentra-               changes should be avoided if at all possible because the initial\ntion of NaOCl. An irrigation needle that can passively reach                toxicity of the material is thought to delay healing.104\nclose to the apical length is useful",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_merged_into": "fn_restorative_0324",
+    "_data_quality": "deduped"
    },
    {
     "stem": "- saine irrigation ✅",
@@ -11198,7 +11209,9 @@ window.FLASH_NOTES = {
       "kilo/inclusionai/ling-3.0-flash:free"
      ]
     },
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_merged_into": "fn_ortho_pedo_0155x1",
+    "_data_quality": "deduped"
    },
    {
     "stem": "chest x ray\n-tracheotomy",
@@ -12849,7 +12862,9 @@ window.FLASH_NOTES = {
       "kilo/openrouter/free"
      ]
     },
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_merged_into": "fn_ethics_0045",
+    "_data_quality": "deduped"
    },
    {
     "stem": "- Autonomy",
@@ -13202,7 +13217,9 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_merged_into": "fn_endo_0077",
+    "_data_quality": "deduped"
    },
    {
     "stem": "A patient is having endo treatment with the use of rubber dam. He immediately experienced whizzing and difficulty breathing. What is the type of allergy?",
@@ -16345,7 +16362,8 @@ window.FLASH_NOTES = {
     "raw": "Patient complained of metallic taste and pain, He cemented a cast post and crown recently, no mobility or RL detected, what is the cause: a. Eccentric occlusal interference b. Mobile crown c. Vertical root fracture✅",
     "dept": "endo",
     "sources": [
-     "Mar-June_2026"
+     "Mar-June_2026",
+     "Saud_Masahhah"
     ],
     "id": "fn_endo_0044",
     "_verified_explanation": "Correct answer: c. Vertical root fracture",
@@ -16403,7 +16421,8 @@ window.FLASH_NOTES = {
     "raw": "Case with pain upon percussion in lower lateral, mobility grade 3, normal pulp test what is the management. (PA of central implants very close to the lateral which has sever bone loss and questionable C:R and OPG of sever periodontitis): a. Perio only ✅ b. Endo only c. Endo then perio d. Perio then endo ●",
     "dept": "endo",
     "sources": [
-     "Mar-June_2026"
+     "Mar-June_2026",
+     "Saud_Masahhah"
     ],
     "id": "fn_endo_0046",
     "_verified_explanation": "Correct answer: a. Perio only",
@@ -17249,6 +17268,7 @@ window.FLASH_NOTES = {
     "raw": "A patient is having endo treatment with the use of rubber dam. He experienced whizzing and difficulty breathing after 30 min. What is the cause? A. Allergic reaction         B. Asthma",
     "dept": "endo",
     "sources": [
+     "Saud_Masahhah",
      "SDLE_May_2026"
     ],
     "id": "fn_endo_0077",
@@ -21165,7 +21185,9 @@ window.FLASH_NOTES = {
       "kilo/openrouter/free"
      ]
     },
-    "_dept": "endo"
+    "_dept": "endo",
+    "_merged_into": "fn_endo_0044",
+    "_data_quality": "deduped"
    },
    {
     "stem": "MRSA virus infection by:",
@@ -21301,7 +21323,9 @@ window.FLASH_NOTES = {
       "kilo/inclusionai/ling-3.0-flash:free"
      ]
     },
-    "_dept": "endo"
+    "_dept": "endo",
+    "_merged_into": "fn_restorative_0242",
+    "_data_quality": "deduped"
    },
    {
     "stem": "65: Renal patient with ulcers and lesions:\n-Increased urea\n66- Patient with “diffuse” redness after ortho:\n-allergy from Ni-Ti\n-Extended wire",
@@ -28822,7 +28846,9 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_merged_into": "fn_restorative_0253",
+    "_data_quality": "deduped"
    },
    {
     "stem": "- trephination",
@@ -29146,7 +29172,9 @@ window.FLASH_NOTES = {
       "kilo/kilo-auto/free"
      ]
     },
-    "_dept": "endo"
+    "_dept": "endo",
+    "_merged_into": "fn_endo_0163",
+    "_data_quality": "deduped"
    },
    {
     "stem": "pt came complaining of gumboil, #36 with -ve cold test, with sinus tract, cbct with RL all around the molar only, ther was deep poucket BUT it was written exactly ( excellent oral hygiene and no plaque and calculus present ) what to do?",
@@ -29182,7 +29210,9 @@ window.FLASH_NOTES = {
       "kilo/nvidia/nemotron-3-super-120b-a12b:free"
      ]
     },
-    "_dept": "endo"
+    "_dept": "endo",
+    "_merged_into": "fn_endo_0459",
+    "_data_quality": "deduped"
    },
    {
     "stem": "FPD\nQ/ Picture of unilateral complete Clift lip and palate",
@@ -29252,7 +29282,9 @@ window.FLASH_NOTES = {
       "kilo/kilo-auto/free"
      ]
     },
-    "_dept": "endo"
+    "_dept": "endo",
+    "_merged_into": "fn_restorative_0397",
+    "_data_quality": "deduped"
    },
    {
     "stem": "vertical root fracture Lond case with type II furcation what is the management ?",
@@ -32452,7 +32484,8 @@ window.FLASH_NOTES = {
     "raw": "lower 6 tooth they have done perio surgery for it and they need to do again based on periodontist (xray with distal bone resorption and there is no second molar )What is the incision? a. semilunar b. submarginal c. intra sulcular d. Distal wedge flap✅  ●",
     "dept": "perio",
     "sources": [
-     "Mar-June_2026"
+     "Mar-June_2026",
+     "Rafi_Maqam_16"
     ],
     "id": "fn_perio_0067",
     "_verified_explanation": "Correct answer: d. Distal wedge flap",
@@ -32464,7 +32497,14 @@ window.FLASH_NOTES = {
     },
     "_verification_verdict": "supported",
     "format": "mcq",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_answer_conflict": [
+     {
+      "id": "fn_perio_0179x3",
+      "answerIdx": 2,
+      "answerLetter": "c"
+     }
+    ]
    },
    {
     "stem": "patient did crown on tooth 43 from a month ago but he present to dentist with pain upon examination the was\nviolation of BW and insufficient tooth structure and he has only 2 mm keratinized tissue how you will do thecrown\nlengthening?",
@@ -36383,7 +36423,8 @@ window.FLASH_NOTES = {
     "_verification_verdict": "needs_review",
     "answerIdx": 2,
     "answerLetter": "c",
-    "_verified_explanation": "Correct answer: c. c.intra sulcular"
+    "_verified_explanation": "Correct answer: c. c.intra sulcular",
+    "_merged_into": "fn_perio_0067"
    },
    {
     "stem": "b.Pocket reduction surgery\nc.osseous surgery\n178.What instrument is used to measure gingival thickness?",
@@ -37283,7 +37324,8 @@ window.FLASH_NOTES = {
     "needsImage": true,
     "dept": "perio",
     "sources": [
-     "Rafi_Maqam_16"
+     "Rafi_Maqam_16",
+     "Mar-June_2026"
     ],
     "raw": "333. a patient with uncontrolled diabetic presented with a case of fast spreading odontogenic infection with purple skin. a.necrotizing fasciitis✅ ● 334.garre’s osteomyelitis asking about the first treatment step? a. ab b. ⁠rct ✅ 335.patient with excised adrenal glands became subconscious in dental clinic. no signs of apprehension were mentioned. Treatment? a.atropine b.thyrotoxin c.hydrocortisone✅ 336.Lethal dose of fluoride,patient was 6 years old. a.200 b.300 c.400 d.500✅ 337.You treated #26 with deep caries and in the next day patient comes complaining from numbness. What is the cause of f",
     "_parent": "fn_perio_0194",
@@ -40018,7 +40060,9 @@ window.FLASH_NOTES = {
       "kilo/nvidia/nemotron-3-super-120b-a12b:free"
      ]
     },
-    "_dept": "perio"
+    "_dept": "perio",
+    "_merged_into": "fn_endo_0046",
+    "_data_quality": "deduped"
    },
    {
     "stem": "Patient complains from dull pain, Has #36 with two 5 mm isolated pockets in different areas, and furcation involvement and is diagnosed as previously treated with symptomatic apical periodontitis, what is the common cause of these phenomena:",
@@ -41098,7 +41142,9 @@ window.FLASH_NOTES = {
       "kilo/nvidia/nemotron-3-super-120b-a12b:free"
      ]
     },
-    "_dept": "perio"
+    "_dept": "perio",
+    "_merged_into": "fn_endo_0490",
+    "_data_quality": "deduped"
    },
    {
     "stem": "- Class III",
@@ -41156,7 +41202,9 @@ window.FLASH_NOTES = {
       "kilo/nvidia/nemotron-3-super-120b-a12b:free"
      ]
     },
-    "_dept": "perio"
+    "_dept": "perio",
+    "_merged_into": "fn_perio_0330",
+    "_data_quality": "deduped"
    },
    {
     "stem": "- Incisal third",
@@ -41316,7 +41364,9 @@ window.FLASH_NOTES = {
       "kilo/nvidia/nemotron-3-super-120b-a12b:free"
      ]
     },
-    "_dept": "perio"
+    "_dept": "perio",
+    "_merged_into": "fn_perio_0337",
+    "_data_quality": "deduped"
    },
    {
     "stem": "excisional biopsy",
@@ -43005,7 +43055,9 @@ window.FLASH_NOTES = {
       "kilo/nvidia/nemotron-3-super-120b-a12b:free"
      ]
     },
-    "_dept": "perio"
+    "_dept": "perio",
+    "_merged_into": "fn_perio_0401",
+    "_data_quality": "deduped"
    },
    {
     "stem": "exophthalamus, midface hypoplasia, and craniosystosis",
@@ -44749,7 +44801,9 @@ window.FLASH_NOTES = {
       "kilo/openrouter/free"
      ]
     },
-    "_dept": "perio"
+    "_dept": "perio",
+    "_merged_into": "fn_perio_0445",
+    "_data_quality": "deduped"
    },
    {
     "stem": "pt needs extraction of #11 under GA, surgeon extracted #21 by mistake and then immediately replanted and splinted, what next?",
@@ -45086,7 +45140,9 @@ window.FLASH_NOTES = {
       "kilo/openrouter/free"
      ]
     },
-    "_dept": "perio"
+    "_dept": "perio",
+    "_merged_into": "fn_restorative_0459",
+    "_data_quality": "deduped"
    },
    {
     "stem": "better nutrition\nCould be scarlet fever?- ?\n79-pt closed her lips on the suction tip, this can cause contamination in the\nwaterline, what is the cause?\npressure in the mouth is less than pressure in the tube ●\npressure in the mouth is more than pressure in the tube ●\npressure is the same",
@@ -45661,7 +45717,9 @@ window.FLASH_NOTES = {
       "kilo/openrouter/free"
      ]
     },
-    "_dept": "perio"
+    "_dept": "perio",
+    "_merged_into": "fn_endo_0322",
+    "_data_quality": "deduped"
    },
    {
     "stem": "- supine position & RD isolation",
@@ -45931,7 +45989,9 @@ window.FLASH_NOTES = {
       "kilo/openrouter/free"
      ]
     },
-    "_dept": "perio"
+    "_dept": "perio",
+    "_merged_into": "fn_endo_0490",
+    "_data_quality": "deduped"
    },
    {
     "stem": "- increase",
@@ -46566,7 +46626,9 @@ window.FLASH_NOTES = {
       "kilo/openrouter/free"
      ]
     },
-    "_dept": "perio"
+    "_dept": "perio",
+    "_merged_into": "fn_perio_0532",
+    "_data_quality": "deduped"
    },
    {
     "stem": "patient 14 years came after trauma happened yesterday related #11 ( نجويتسكلاا طقف حضاو سب هروص هيف (",
@@ -47205,7 +47267,9 @@ window.FLASH_NOTES = {
       "kilo/openrouter/free"
      ]
     },
-    "_dept": "perio"
+    "_dept": "perio",
+    "_merged_into": "fn_restorative_0464",
+    "_data_quality": "deduped"
    },
    {
     "stem": "- Replace",
@@ -53866,7 +53930,8 @@ window.FLASH_NOTES = {
     "needsImage": false,
     "dept": "fixed",
     "sources": [
-     "Rafi_Maqam_19"
+     "Rafi_Maqam_19",
+     "Mar-June_2026"
     ],
     "raw": "●  Frenectomy is performed after space closure and before debonding It aids in retention.If done before space closure it tends to form a scar tissue which will make space closure difficult. 35.ANB=6 , SNA=80, SNB=74 , upper incisors to SN=110 , what is the classification of the malocclusion A.  Class II B.  Class II div 1✅ C.  Class II div 2 ● 36.Which case needs immediate treatment ? A.  Anterior open bite B.  Bilateral crossbite C.  Unilateral crossbite ✅ Note: Apparent unilateral crossbite with functional shift treated by occlusal adjustment. 37.14 Y.O  patients came for ortho treatment the",
     "_parent": "fn_fixed_0089",
@@ -53874,7 +53939,14 @@ window.FLASH_NOTES = {
     "_verification_verdict": "needs_review",
     "answerIdx": 2,
     "answerLetter": "c",
-    "_verified_explanation": "Correct answer: c. C. Unilateral crossbite Note: Apparent unilateral crossbite with functional shift treated by occlusal adjustment. 37.14"
+    "_verified_explanation": "Correct answer: c. C. Unilateral crossbite Note: Apparent unilateral crossbite with functional shift treated by occlusal adjustment. 37.14",
+    "_answer_conflict": [
+     {
+      "id": "fn_ortho_pedo_0005",
+      "answerIdx": 2,
+      "answerLetter": "C"
+     }
+    ]
    },
    {
     "id": "fn_fixed_0090x1",
@@ -55704,7 +55776,9 @@ window.FLASH_NOTES = {
       "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
      ]
     },
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_merged_into": "fn_perio_0229",
+    "_data_quality": "deduped"
    },
    {
     "stem": "- increase circulation",
@@ -56061,7 +56135,9 @@ window.FLASH_NOTES = {
       "kilo/kilo-auto/free"
      ]
     },
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_merged_into": "fn_restorative_0349",
+    "_data_quality": "deduped"
    },
    {
     "stem": "10yrs oldboyhismother concerningabout spacesbetween anteriorteeth.?",
@@ -64474,7 +64550,8 @@ window.FLASH_NOTES = {
     "raw": "Q45: tooth #13 diagnosed with RT1, tx plan is connective tissue graft with coronally displaced flap, the incision of choice in #13: A. Internal B. External C. Crevicular ✅ Ref: https://periobasics.com/periodontal-flap-surgeries-current-concepts/",
     "dept": "implant",
     "sources": [
-     "Saud_Masahhah"
+     "Saud_Masahhah",
+     "Mar-June_2026"
     ],
     "id": "fn_implant_0157",
     "_verified_explanation": "Correct answer: c. Crevicular",
@@ -64488,7 +64565,14 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_answer_conflict": [
+     {
+      "id": "fn_diagnostics_0038",
+      "answerIdx": 0,
+      "answerLetter": "a"
+     }
+    ]
    },
    {
     "stem": "you took primary imp for #14 and it came distorted in the same area regardless of how many times you repeat, most likely cause?",
@@ -65427,7 +65511,8 @@ window.FLASH_NOTES = {
     "raw": "- Q) Needle stick injury while treating HIV patient, what is the minimum time before taking prophylactic treatment? A. 2 weeks B. 4 weeks C. 6 weeks D.8 weeks i",
     "dept": "implant",
     "sources": [
-     "Saud_Masahhah"
+     "Saud_Masahhah",
+     "Mar-June_2026"
     ],
     "id": "fn_implant_0190",
     "_verified_explanation": "Correct answer: b. 4 weeks",
@@ -68011,7 +68096,9 @@ window.FLASH_NOTES = {
      "passage": "concentration, age, sex,      et al. 2007; Garcez et al. 2009; Vesterinen et al. 2011).\nand race (Levey et al. 2006). In a healthy adult, GFR        Furthermore, studies carried out in patients with\nranges between 100 and 120 mL/min/1.73 m2 body               ESRD undergoing hemodialysis demonstrated that\nsurface area. Functional loss of renal glomeruli caused      periodontitis was associated wi",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "implant"
+    "_dept": "implant",
+    "_merged_into": "fn_endo_0468",
+    "_data_quality": "deduped"
    },
    {
     "stem": "● kidney ✅",
@@ -68230,7 +68317,9 @@ window.FLASH_NOTES = {
      "passage": "cs. Topical-anesthetic           caries prevention. The ADA recommends that fluoride varnish\npatches and oral-anesthetic rinses may prove a valuable aid for       treatments for at-risk patients should be done between two to\npain management of the fearful patient.                               four times annually, depending on risk classification.\n    The use of psychological questionnaires, such",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "implant"
+    "_dept": "implant",
+    "_merged_into": "fn_fixed_0127",
+    "_data_quality": "deduped"
    },
    {
     "stem": "● Drink?",
@@ -69338,7 +69427,8 @@ window.FLASH_NOTES = {
       "kilo/kilo-auto/free"
      ]
     },
-    "_dept": "implant"
+    "_dept": "implant",
+    "_merged_into": "fn_perio_0491"
    },
    {
     "stem": "request the physician to do blood test or blood count for the patient\n89-Peg lateral comes at what stage?\n-Morphodifferentiation\n90-21 years old p.t after extraction of #21 and want a treatment for it. What is the\nmost conservative treatment for tooth #21 (no other info were given in the\nquestion!!!) “and implant were not in the options”\n-FPD from tooth #22 to #11\n-extract #11 and place fpd from",
@@ -70633,7 +70723,9 @@ window.FLASH_NOTES = {
       "kilo/nvidia/nemotron-3-super-120b-a12b:free"
      ]
     },
-    "_dept": "implant"
+    "_dept": "implant",
+    "_merged_into": "fn_implant_0378",
+    "_data_quality": "deduped"
    },
    {
     "stem": "Obliterated root bulbous crown with cervical construction.",
@@ -70839,7 +70931,9 @@ window.FLASH_NOTES = {
       "kilo/nvidia/nemotron-3-super-120b-a12b:free"
      ]
     },
-    "_dept": "implant"
+    "_dept": "implant",
+    "_merged_into": "fn_perio_0539",
+    "_data_quality": "deduped"
    },
    {
     "stem": "- excessive fluoride ingestion",
@@ -72906,7 +73000,9 @@ window.FLASH_NOTES = {
       "kilo/nvidia/nemotron-3-super-120b-a12b:free"
      ]
     },
-    "_dept": "implant"
+    "_dept": "implant",
+    "_merged_into": "fn_perio_0455",
+    "_data_quality": "deduped"
    },
    {
     "stem": "EBV\nPt with prosthetic valve came to you with heart murmur and patechie (forget the rest) in palate and\nextremties , he did an extraction last weak abd they gave him 2 g amoxicillin.. but he was taking\namoxicillin for sinutits .. BP slightly elevated.",
@@ -73522,7 +73618,9 @@ window.FLASH_NOTES = {
      "passage": "ry incisors. Anterior open bite, the absence of vertical\nsors and is measured from the most anterior point on the facial            overlap, is usually indicative of a sucking habit in this age\nsurfaces of these teeth. (Redrawn from Friedman MH, Weisberg J: The        group (Figure 18-12). If the patient and parent deny the\ntemporomandibular joint. In Gould JA, editor: Orthopedics and sports",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_merged_into": "fn_fixed_0089x2",
+    "_data_quality": "deduped"
    },
    {
     "stem": "New born patient with cleft lip what occlusion will be developed ?",
@@ -76385,7 +76483,8 @@ window.FLASH_NOTES = {
     "needsImage": true,
     "dept": "ortho_pedo",
     "sources": [
-     "Rafi_Maqam_19"
+     "Rafi_Maqam_19",
+     "Mar-June_2026"
     ],
     "raw": "●  All of the above are wrong, the correct answer is fixable splint 2 weeks and initiate RCT within 7-10 days if closed apex or revascularization if open apex. 85.X ray of molar and on the second visit while you refine access cavity sudden pain and bleeding from pulp floor what is it? A.  Furcation perf ✅ B.  Remaining tissue ● 86.Necrotic open apex molar (no revascularization) what to do ? A.  Normal RCT B.  Apexification ✅ C.  Apexogenesis ● 87.Fractured file and you managed ? A.  Tell patient immediately ✅ B.  Tell patient in second visit C.  Be quiet 88.Accessory canals percentage in the a",
     "_parent": "fn_ortho_pedo_0110",
@@ -76705,7 +76804,8 @@ window.FLASH_NOTES = {
     "_verification_verdict": "needs_review",
     "answerIdx": 0,
     "answerLetter": "a",
-    "_verified_explanation": "Correct answer: a. A. Composite"
+    "_verified_explanation": "Correct answer: a. A. Composite",
+    "_merged_into": "fn_restorative_0105"
    },
    {
     "id": "fn_ortho_pedo_0117x4",
@@ -78423,6 +78523,7 @@ window.FLASH_NOTES = {
     "needsImage": true,
     "dept": "ortho_pedo",
     "sources": [
+     "Saud_Masahhah",
      "Rafi_Maqam_16"
     ],
     "raw": "c.Central giant cell granuloma ● 296.Pt had a car accident and came to ER with body and dental injury and difficulty in breath his vital sign is noraml what will be your management? a. chest x ray b.tracheotomy c.jaw thrust✅ d.head left and chin ● 297.Pedo  pt  limited mouth opening  ,  no deviation  , asymmetrical lower jaw to right  side,  Tx?  (  on  OPG  there  was susceptible Condylar ankylosis ) a. Arthroplasty b. Jaw exercise✅ c. Anterior bite plane 298.6 months child came with eruption cyst, what is the management: a.Surgical incision. b.Follow up.✅ 299.patient on inhalation corticoste",
@@ -79186,7 +79287,9 @@ window.FLASH_NOTES = {
      "passage": "pth. When preparing         possible microexposure, or an actual exposure (see\n    the proximal box for a composite restoration, the axial        Chapter 3). If used, the calcium hydroxide liner is\n    wall initial depth usually is limited to 0.2 mm into dentin;   covered with a RMGI base to protect it from dissolution\n    this means that the tip of the No. 245 bur or diamond          during the a",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_merged_into": "fn_implant_0298",
+    "_data_quality": "deduped"
    },
    {
     "stem": "● RMGIC",
@@ -80354,7 +80457,9 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_merged_into": "fn_perio_0325",
+    "_data_quality": "deduped"
    },
    {
     "stem": "● Exacting scenario .\n●",
@@ -83668,7 +83773,9 @@ window.FLASH_NOTES = {
       "kilo/inclusionai/ling-3.0-flash:free"
      ]
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_merged_into": "fn_ortho_pedo_0318",
+    "_data_quality": "deduped"
    },
    {
     "stem": "Signs of incomplete pulpotomy",
@@ -83939,7 +84046,9 @@ window.FLASH_NOTES = {
       "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
      ]
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_merged_into": "fn_ortho_pedo_0170",
+    "_data_quality": "deduped"
    },
    {
     "stem": "- D dimer",
@@ -84861,7 +84970,9 @@ window.FLASH_NOTES = {
       "kilo/nvidia/nemotron-3-super-120b-a12b:free"
      ]
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_merged_into": "fn_ortho_pedo_0393",
+    "_data_quality": "deduped"
    },
    {
     "stem": "- biopsy",
@@ -85156,7 +85267,9 @@ window.FLASH_NOTES = {
       "kilo/nvidia/nemotron-3-super-120b-a12b:free"
      ]
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_merged_into": "fn_ortho_pedo_0404",
+    "_data_quality": "deduped"
    },
    {
     "stem": "lamella\nspindle",
@@ -86272,7 +86385,9 @@ window.FLASH_NOTES = {
       "kilo/kilo-auto/free"
      ]
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_merged_into": "fn_endo_0277",
+    "_data_quality": "deduped"
    },
    {
     "stem": "● Ethics question about the Collaborator",
@@ -96402,7 +96517,9 @@ window.FLASH_NOTES = {
     },
     "_verification_verdict": "supported",
     "format": "mcq",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_merged_into": "fn_restorative_0208x1",
+    "_data_quality": "deduped"
    },
    {
     "stem": "Pt came with recession and treated with this incision, what is the name of the flap? Similar pic",
@@ -99462,7 +99579,9 @@ window.FLASH_NOTES = {
     },
     "_verification_verdict": "supported",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_merged_into": "fn_perio_0194x1",
+    "_data_quality": "deduped"
    },
    {
     "stem": "Scenario of asthmatic pt need to extract 3rd molar what is the Safest analgesics?",
@@ -101009,7 +101128,9 @@ window.FLASH_NOTES = {
      "passage": "thin 1 to 2 weeks\nbe managed by referral to an oral-maxillofacial surgeon because              to help prevent inflammatory root resorption and infection. The\nmanagement may involve open surgical treatment to reposition                 dento-osseous segment must be stabilized for approximately 4\nthe bony segments.                                                           weeks to allow osseous hea",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_merged_into": "fn_ortho_pedo_0110x3",
+    "_data_quality": "deduped"
    },
    {
     "stem": "dentist and assistant gut influenza and didn’t come to work and one patient came to the clinic and get runny nose\nwhat is the common rout of infection in a dental clinic ?",
@@ -105021,7 +105142,9 @@ window.FLASH_NOTES = {
      "passage": "The increased                 for another 3 months. Excessive calcium hydroxide dressing\nvolume of irrigant used compensates for this lower concentra-               changes should be avoided if at all possible because the initial\ntion of NaOCl. An irrigation needle that can passively reach                toxicity of the material is thought to delay healing.104\nclose to the apical length is useful",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_merged_into": "fn_restorative_0324",
+    "_data_quality": "deduped"
    },
    {
     "stem": "ankylosed lower primary with no sussors: Extract ankyloses Extract ankyloses and put SM Refer to specialist",
@@ -111177,7 +111300,9 @@ window.FLASH_NOTES = {
     },
     "_verification_verdict": "supported",
     "format": "mcq",
-    "_dept": "ethics"
+    "_dept": "ethics",
+    "_merged_into": "fn_implant_0190",
+    "_data_quality": "deduped"
    },
    {
     "stem": "Sequence of instrument sterilisation ?",
@@ -111297,6 +111422,7 @@ window.FLASH_NOTES = {
     "raw": "A dentist refused to see a VIP patient before his already booked patients. He fulfilled which principle? a. Autonomy b. Nonmaleficence c. Justice✅ d. Beneficence ●  ● Professionalism and Ethics Handbook for Residents",
     "dept": "ethics",
     "sources": [
+     "Saud_Masahhah",
      "Mar-June_2026"
     ],
     "id": "fn_ethics_0045",
@@ -111426,7 +111552,8 @@ window.FLASH_NOTES = {
     "raw": "Dentist removed his gown and face shield how to remove the mask : a. perform hand hygiene then removes the mask b. remove the mask with the band around the ear✅ ●",
     "dept": "ethics",
     "sources": [
-     "Mar-June_2026"
+     "Mar-June_2026",
+     "Rafi_Maqam_16"
     ],
     "id": "fn_ethics_0050",
     "_verified_explanation": "Correct answer: b. remove the mask with the band around the ear",
@@ -111935,7 +112062,8 @@ window.FLASH_NOTES = {
     "_verification_verdict": "needs_review",
     "answerIdx": 1,
     "answerLetter": "b",
-    "_verified_explanation": "Correct answer: b. b.remove the mask with the band around the ear"
+    "_verified_explanation": "Correct answer: b. b.remove the mask with the band around the ear",
+    "_merged_into": "fn_ethics_0050"
    },
    {
     "id": "fn_ethics_0063x4",
@@ -113471,7 +113599,9 @@ window.FLASH_NOTES = {
     },
     "_verification_verdict": "supported",
     "format": "mcq",
-    "_dept": "diagnostics"
+    "_dept": "diagnostics",
+    "_merged_into": "fn_implant_0157",
+    "_data_quality": "deduped"
    },
    {
     "stem": "Initial way to diagnose VRF",
