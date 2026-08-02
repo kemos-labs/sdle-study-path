@@ -33,3 +33,10 @@ dist/
 *.bak.*
 
 # Per-deployment cache string (managed automatically)
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local playwright test scripts
+work/
