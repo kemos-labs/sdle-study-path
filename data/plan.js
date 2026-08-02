@@ -1,4 +1,8 @@
 // 14-day plan wired to REAL materials (PDFs + videos + banks)
+// Weighting rule (user mandate): Endo + Perio + Prostho + Restorative ≈ 70% of the
+// exam → ≈70% of study time. Days 1-6 are the weighted core (resto×3, endo, perio,
+// tri-core review) = 6/9 content days; day 11 (weakness surgery) is weighted-topic
+// focused = 7/10 focus days ≈ 70%. Mock days mirror the real exam composition.
 window.PLAN_14 = [
   {
     day: 1,
@@ -63,22 +67,23 @@ window.PLAN_14 = [
   },
   {
     day: 4,
-    title: "Restorative mega + free web sample",
-    focus: "restorative",
+    title: "Endodontics + trauma (moved up — 17% of exam)",
+    focus: "endo",
     hours: "8–10h",
     materials: [
-      "All resto notes",
-      "eDental free SDLE trial",
-      "App timed 50Q restorative-heavy",
+      "Videos: endo lec.1–4",
+      "PDF: Oct 2025 (endo-heavy) + trauma items all months",
+      "Cards: NaOCl/EDTA, MTA, splint, file fatigue",
+      "App: Endo micro-lessons (day-4 Topics)",
     ],
     tasks: [
-      "Timed 50Q in app (exam mode)",
-      "eDental free trial (SDLE) — learn software fatigue",
-      "Rebuild 1-page restorative cheat sheet",
-      "Wrong book only evening",
+      "Diagnosis → RCT steps → mishaps → trauma flowchart",
+      "IADT avulsion one-pager",
+      "100–150 endo/trauma Q (Block1 50 + Block2 50 + Mega 100)",
+      "Night 30 perio + 30 resto spaced",
     ],
-    goal: "≥75% mixed restorative timed",
-    mock: "Mock 50Q timed (app) + eDental sample",
+    goal: "≥75% endo; trauma table fluent",
+    mock: "Quick mock 25Q endo",
   },
   {
     day: 5,
@@ -101,22 +106,23 @@ window.PLAN_14 = [
   },
   {
     day: 6,
-    title: "Endodontics + trauma",
-    focus: "endo",
+    title: "Weighted tri-core review — Resto mega + Endo/Perio drills (the 70%)",
+    focus: "restorative",
     hours: "8–9h",
     materials: [
-      "Videos: endo lec.1–4",
-      "PDF: Oct 2025 (endo-heavy) + trauma items all months",
-      "Cards: NaOCl/EDTA, MTA, splint, file fatigue",
+      "All resto notes",
+      "App timed 50Q restorative-heavy",
+      "eDental free SDLE trial (if energy)",
+      "Cards: always deck",
     ],
     tasks: [
-      "Diagnosis → RCT steps → mishaps → trauma flowchart",
-      "IADT avulsion one-pager",
-      "100–120 endo/trauma Q",
-      "Night 30 perio + 30 resto",
+      "Timed 50Q restorative in app (exam mode)",
+      "Tri-core drill: 30 endo + 30 perio + 30 resto weak-spot Q",
+      "Rebuild 1-page restorative cheat sheet",
+      "Wrong book only evening",
     ],
-    goal: "≥75% endo; trauma table fluent",
-    mock: "Quick mock 25Q endo",
+    goal: "≥75% mixed restorative timed; tri-core weak spots closed",
+    mock: "Restorative 100 timed (main) + Quick mock 25",
   },
   {
     day: 7,

@@ -2207,20 +2207,20 @@ If any line fails, bold re‑pass H–J before videos.</p>
     mockLabel: "Quick mock 25"
   },
   {
-    day: 4,
-    title: "Restorative mega-day (mix + timed)",
+    day: 6,
+    title: "Restorative mega + tri-core review (Endo · Perio · Resto drills)",
     focus: "restorative",
     goal: "≥75% on timed restorative-heavy set.",
     hours: "8–10 hours",
     reading: `
 <div class="where-read">
-  <strong>ADHD Day‑4 system (read this first — 2 min)</strong>
+  <strong>ADHD Day‑6 system (read this first — 2 min)</strong>
   <p><b>Exam fact:</b> SDLE = <b>200 MCQs</b>, ~4 hours, two sections of ~100 Q × 120 min each, often with a break between. Restorative ≈ <b>40%</b> of the blueprint weight. Day 4 is <b>integration + timed practice</b> — not a fourth theory dump. You re‑lock Days 1–3 traps until they fire under 72‑second pace, then run volume.</p>
   <p><b>Your day target:</b> this full A–J page once actively · wrong‑book rebuild · <b>≥150–200 restorative‑heavy MCQs</b> with at least one true timed block · ≥75% goal on timed restorative‑heavy set · top‑3 weak topics written for Days 5+. Videos only if one specific weak lecture from Days 1–3 still bleeds points — not “all videos again.”</p>
   <p><b>How ADHD brains pass integration days:</b> practice &gt; new reading · one short warm‑up · long timed sets · review only misses · no “I’ll re‑read everything.” Phone away. Timer visible. Wrong book open. If you feel the urge to open a random PDF mid‑set, you are avoiding retrieval — close it.</p>
   <p><b>Pomodoro map (practice‑heavy ≈9h — HONEST times):</b></p>
   <ol>
-    <li><b>Block A 40 min</b> — Read full Day‑4 page once (A–J) actively + do Exam Q&amp;A Blocks A–B when you hit those sections (cover answers first). Write gates as you go. No Day‑1 PDF rabbit holes.</li>
+    <li><b>Block A 40 min</b> — Read full Day‑6 page once (A–J) actively + do Exam Q&amp;A Blocks A–B when you hit those sections (cover answers first). Write gates as you go. No Day‑1 PDF rabbit holes.</li>
     <li><b>Block B 15 min</b> — Bold‑only skim + say always‑comes sheet out loud once</li>
     <li><b>5 min break</b> — stand, water, no social</li>
     <li><b>Block C 50–60 min PRACTICE</b> — Warm‑up 50 restorative learn mode (accuracy first, fill wrong book)</li>
@@ -2266,7 +2266,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
     <li>Medical free points: asthma → paracetamol · enlargement → nifedipine/phenytoin/cyclosporine</li>
   </ul>
 </li>
-<li>If any bullet above is still “I kind of know,” it is a Day‑4 card + wrong‑book line, not a reason to abandon timed practice.</li>
+<li>If any bullet above is still “I kind of know,” it is a Day‑6 card + wrong‑book line, not a reason to abandon timed practice.</li>
 </ul>
 <p class="adhd-stop"><b>STOP 30 sec:</b> Setup → domain → hinge → eliminate → pick → flag if stuck. Mix domains. Classic bank rule beats clever exception.</p>
 <p><b>Write gate B:</b> list your five‑step algorithm from memory. If you invent a sixth step that is “re‑read the whole stem three times slowly,” delete it — that is how people run out of time.</p>
@@ -2349,7 +2349,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
 <p><b>Write gate E:</b> without looking, write 10 always‑comes lines (mix operative/fixed/RPD). Compare to Section H. Any blank = card today, not “later.”</p>
 
 
-<section class="exam-form" data-day="4" data-block="A">
+<section class="exam-form" data-day="6" data-block="A">
   <h4>How SDLE asks Block A (trap re‑lock · Days 1–3 free points)</h4>
   <ul>
     <li><b>Shape:</b> mixed restorative stem under time pressure; one best hinge from Days 1–3.</li>
@@ -2360,7 +2360,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
   </ul>
 </section>
 
-<section class="exam-qa" data-day="4" data-block="A" data-count="5">
+<section class="exam-qa" data-day="6" data-block="A" data-count="5">
   <h4>Exam Q&amp;A — Block A (self‑test first)</h4>
   <p class="exam-qa-hint">Cover each green box. Pick a/b/c/d out loud. Then expand Answer + hinge. Target ≥4/5 before the next block.</p>
 
@@ -2507,7 +2507,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
 <p><b>Write gate H:</b> close the page and rewrite 12 lines from memory. Check. This is your exam‑day brain dump candidate.</p>
 
 
-<section class="exam-form" data-day="4" data-block="B">
+<section class="exam-form" data-day="6" data-block="B">
   <h4>How SDLE asks Block B (always‑comes sheet · pace under 72 s)</h4>
   <ul>
     <li><b>Shape:</b> mixed restorative stem under time pressure; one best hinge from Days 1–3.</li>
@@ -2518,7 +2518,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
   </ul>
 </section>
 
-<section class="exam-qa" data-day="4" data-block="B" data-count="5">
+<section class="exam-qa" data-day="6" data-block="B" data-count="5">
   <h4>Exam Q&amp;A — Block B (self‑test first)</h4>
   <p class="exam-qa-hint">Cover each green box. Pick a/b/c/d out loud. Then expand Answer + hinge. Target ≥4/5 before the next block.</p>
 
@@ -2578,7 +2578,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
     </ol>
     <details class="exam-ans"><summary>Answer + hinge (tap after you choose)</summary>
       <p class="ans-line"><b>Answer:</b> c — Flag · move · protect easy points</p>
-      <p class="hinge-line"><b>Hinge:</b> Day‑4 pace rule: easy under ~40–50 s; hard flag by ~90 s. Do not donate five free points to one ego item.</p>
+      <p class="hinge-line"><b>Hinge:</b> Day‑6 pace rule: easy under ~40–50 s; hard flag by ~90 s. Do not donate five free points to one ego item.</p>
       <p class="src-line">Pattern: exam pace strategy (72 s).</p>
     </details>
   </article>
@@ -2597,7 +2597,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
       <p class="src-line">Pattern: wrong‑book method (Day 4 core).</p>
     </details>
   </article>
-</section>
+</section><section class="exam-form" data-day="6" data-block="C"> <h4>How SDLE asks Block C (tri-core traps — Endo · Perio · Resto)</h4> <ul> <li><b>Shape:</b> weighted-topic stems mixing endo/perio/restorative; one best hinge from days 1–6.</li> <li><b>What they test:</b> cross-topic judgment — diagnosis first, then treatment logic, then material choice.</li> <li><b>Distractors:</b> neighboring concept swaps (percussion vs cold; probing depth vs CAL; hybrid layer vs smear layer).</li> <li><b>Bank signal:</b> percussion/palpation, CAL/furcation, NaOCl/EDTA, composite increments, ferrule — tri-core always-comes.</li> <li><b>Your job now:</b> 5 timed-style items. Cover answers. Misses → wrong-book one-liner.</li> </ul> </section> <section class="exam-qa" data-day="6" data-block="C" data-count="5"> <h4>Exam Q&amp;A — Block C (tri-core self-test)</h4> <p class="exam-qa-hint">Cover each green box. Pick a/b/c/d out loud. Then expand Answer + hinge. Target ≥4/5.</p> <article class="eq" data-id="d6c1"> <span class="eq-num">C1</span> <p class="exam-stem">A patient has a tooth that is tender to percussion but responds normally to cold. The most likely diagnosis is:</p> <ol class="exam-opts" type="a"> <li>Reversible pulpitis</li> <li>Apical periodontitis</li> <li>Dentinal hypersensitivity</li> <li>Normal pulp</li> </ol> <details class="exam-ans"><summary>Answer + hinge (tap after you choose)</summary> <p class="ans-line"><b>Answer:</b> b — Apical periodontitis</p> <p class="hinge-line"><b>Hinge:</b> Percussion tests the periapical tissues; cold tests the pulp. Normal cold + percussion pain = apical problem (Cohen's Pathways: percussion tenderness signals apical periodontitis).</p> <p class="src-line">Cohen's Pathways of the Pulp — pulp vs apical diagnosis.</p> </details> </article> <article class="eq" data-id="d6c2"> <span class="eq-num">C2</span> <p class="exam-stem">In a patient with generalized chronic periodontitis, clinical attachment level (CAL) is measured from the:</p> <ol class="exam-opts" type="a"> <li>Free gingival margin to the base of the pocket</li> <li>CEJ to the base of the pocket</li> <li>CEJ to the free gingival margin</li> <li>Base of the pocket to the alveolar crest</li> </ol> <details class="exam-ans"><summary>Answer + hinge (tap after you choose)</summary> <p class="ans-line"><b>Answer:</b> b — CEJ to the base of the pocket</p> <p class="hinge-line"><b>Hinge:</b> Probing depth is margin→base; CAL is CEJ→base (Carranza). CAL is the true measure of attachment loss — recession + probing depth.</p> <p class="src-line">Carranza Periodontology — clinical attachment level.</p> </details> </article> <article class="eq" data-id="d6c3"> <span class="eq-num">C3</span> <p class="exam-stem">After acid etching of dentin in a deep Class II composite restoration, which layer is produced when the adhesive resin monomer infiltrates and polymerizes within the demineralized collagen network?</p> <ol class="exam-opts" type="a"> <li>Intact enamel prisms</li> <li>Demineralized dentin after acid etching</li> <li>The smear layer without etching</li> <li>Pulp tissue via dentinal tubules</li> </ol> <details class="exam-ans"><summary>Answer + hinge (tap after you choose)</summary> <p class="ans-line"><b>Answer:</b> b — Demineralized dentin after acid etching</p> <p class="hinge-line"><b>Hinge:</b> Etching removes the smear layer and demineralizes superficial dentin; resin monomer infiltrates the collagen mesh and polymerizes into the hybrid layer (Sturdevant).</p> <p class="src-line">Sturdevant Operative 5e — hybrid layer / adhesion.</p> </details> </article> <article class="eq" data-id="d6c4"> <span class="eq-num">C4</span> <p class="exam-stem">A furcation defect in which a probe enters the furcation but does not pass through to the opposite side is classified as:</p> <ol class="exam-opts" type="a"> <li>Class I</li> <li>Class II</li> <li>Class III</li> <li>Class IV</li> </ol> <details class="exam-ans"><summary>Answer + hinge (tap after you choose)</summary> <p class="ans-line"><b>Answer:</b> a — Class I</p> <p class="hinge-line"><b>Hinge:</b> Class I = early/slight horizontal loss, probe engages but does not pass through; Class II = through-and-through probe on one side but not the other opening; Class III = through-and-through (Carranza/Hamp).</p> <p class="src-line">Carranza Periodontology — furcation classification.</p> </details> </article> <article class="eq" data-id="d6c5"> <span class="eq-num">C5</span> <p class="exam-stem">Which irrigant is the primary tissue-dissolving and antibacterial agent used during root canal preparation?</p> <ol class="exam-opts" type="a"> <li>Ethylenediaminetetraacetic acid (EDTA)</li> <li>Sodium hypochlorite (NaOCl)</li> <li>Chlorhexidine (CHX)</li> <li>Hydrogen peroxide</li> </ol> <details class="exam-ans"><summary>Answer + hinge (tap after you choose)</summary> <p class="ans-line"><b>Answer:</b> b — Sodium hypochlorite (NaOCl)</p> <p class="hinge-line"><b>Hinge:</b> NaOCl is the main irrigant: tissue dissolution + broad antimicrobial. EDTA chelates the smear layer only; CHX is an alternate final rinse (Cohen's).</p> <p class="src-line">Cohen's Pathways of the Pulp — irrigation.</p> </details> </article> </section>
 
 <h3>I. How to run the actual practice blocks today (this is the real work)</h3>
 <ul>
@@ -2639,7 +2639,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
 <li>Studying only pure operative because it feels familiar → fixed/RPD still ~big part of the 40% restorative world.</li>
 <li>Comparing your raw score to a friend mid‑day → attention hijack. Compare only to your last timed set.</li>
 <li>Leaving blanks because “I’m not sure” → wrong strategy under standard no‑penalty teaching; answer and flag.</li>
-<li>Calling Day 4 done after warm‑up 50 only → that is Day‑4 theater, not Day 4.</li>
+<li>Calling Day 4 done after warm‑up 50 only → that is Day‑6 theater, not Day 4.</li>
 </ol>
 <ol>
 <li>Finish A–J read actively (Block A) + bold skim (Block B).</li>
@@ -2674,7 +2674,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
 <li><b>Stem:</b> Deep crown margin, one tooth chronically red and bleeding despite OH. <b>First think:</b> biologic width violation / excess cement / overhang — not “more mouthwash only.”</li>
 <li><b>Stem:</b> Implant red, BOP, serial radiographs stable bone. <b>First think:</b> mucositis (soft only).</li>
 <li><b>Stem:</b> Implant red, BOP, progressive crater bone loss. <b>First think:</b> peri‑implantitis.</li>
-<li><b>Stem:</b> Timed set, 4 minutes on one hard vignette at Q12. <b>First think:</b> you broke Day‑4 pace rule — guess, flag, move.</li>
+<li><b>Stem:</b> Timed set, 4 minutes on one hard vignette at Q12. <b>First think:</b> you broke Day‑6 pace rule — guess, flag, move.</li>
 <li><b>Stem:</b> Second pass, change five answers because “B feels safer.” <b>First think:</b> change only with a concrete misread rule.</li>
 </ul>
 <p class="adhd-stop"><b>STOP 30 sec:</b> Drill 5 stems out loud right now without looking at rules. Integration = speed + classics.</p>
@@ -3488,14 +3488,14 @@ If any line fails, bold re‑pass H–J before videos.</p>
     mockLabel: "Quick mock 25"
   },
   {
-    day: 6,
+    day: 4,
     title: "Endodontics + dental trauma",
     focus: "endo",
     goal: "Diagnosis, irrigants, mishaps, trauma table fluent. ≥75%.",
     hours: "8–9 hours",
     reading: `
 <div class="where-read">
-  <strong>ADHD Day‑6 system (read this first — 2 min)</strong>
+  <strong>ADHD Day‑4 system (read this first — 2 min)</strong>
   <p><b>Exam fact:</b> Endodontics ≈ <b>17%</b> SDLE. Banks hammer: <b>pulp vs apical diagnoses, cold/EPT + percussion/palpation, apical constriction WL, NaOCl/EDTA/CHX + precipitate trap, MB2, file separation (torsion vs cyclic), ledge/perforation/MTA, apexogenesis vs apexification, avulsion storage + dry time + flexible splint, VRF, internal vs external resorption</b>.</p>
   <p><b>Your day target:</b> dense read of this page · endo videos lec 1–4 · cards · <b>100–150 endo MCQs</b>. Trauma table must be fluent without looking.</p>
   <p><b>ADHD mode:</b> short blocks · STOP lines out loud · diagnose before treat · phone away · 1.25–1.5× video · mark done · move. Do not skim A–D in three minutes — that is how you lose free points on pulp language.</p>
@@ -3533,7 +3533,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
 <li>Trauma questions are <b>table memory</b>: displacement type, storage medium, extraoral dry time, splint type/duration, when RCT is likely.</li>
 <li>Mishap stems reward mechanism: tip locked → torsion; continuous flex in curve → cyclic; strip on thin distal root → perforation risk; failed upper molar → hunt MB2.</li>
 </ul>
-<h4>A3. Day‑6 success picture</h4>
+<h4>A3. Day‑4 success picture</h4>
 <ul>
 <li>By tonight you should answer in under 10 seconds: reversible vs irreversible vs necrosis; SAP vs AAP vs acute vs chronic abscess; NaOCl vs EDTA vs CHX; apexogenesis vs apexification; avulsion milk/HBSS + dry time; VRF clues.</li>
 <li>If you cannot, the problem is almost always skimmed diagnosis sections A–D, not missing a rare rotary brand fact.</li>
@@ -3683,7 +3683,7 @@ If any blank, bold re‑pass B–D before Block B.</p>
 <p class="adhd-stop"><b>STOP 45 sec:</b> “Cold + controls · EPT = yes/no · percussion = PDL not vitality · palpation = swell · isolated deep pocket = VRF flag · history + tests + radiograph.”</p>
 
 
-<section class="exam-form" data-day="6" data-block="A">
+<section class="exam-form" data-day="4" data-block="A">
   <h4>How SDLE asks Block A (pulp · apical diagnoses · tests)</h4>
   <ul>
     <li><b>Shape:</b> diagnosis language or procedure hinge on diagnosis.</li>
@@ -3694,7 +3694,7 @@ If any blank, bold re‑pass B–D before Block B.</p>
   </ul>
 </section>
 
-<section class="exam-qa" data-day="6" data-block="A" data-count="5">
+<section class="exam-qa" data-day="4" data-block="A" data-count="5">
   <h4>Exam Q&amp;A — Block A (self‑test first)</h4>
   <p class="exam-qa-hint">Cover each green box. Pick a/b/c/d out loud. Then expand Answer + hinge. Target ≥4/5 before the next block.</p>
 
@@ -3936,7 +3936,7 @@ If any blank, bold re‑pass B–D before Block B.</p>
 <p class="adhd-stop"><b>STOP 45 sec:</b> “Torsion = tip locks · cyclic = curve fatigue · ledge = bypass with pre‑curved small files · perf → MTA · MB2 upper molars · inform patient on separation.”</p>
 
 
-<section class="exam-form" data-day="6" data-block="B">
+<section class="exam-form" data-day="4" data-block="B">
   <h4>How SDLE asks Block B (WL · irrigants · obturation · mishaps)</h4>
   <ul>
     <li><b>Shape:</b> diagnosis language or procedure hinge on chemo‑mechanical therapy.</li>
@@ -3947,7 +3947,7 @@ If any blank, bold re‑pass B–D before Block B.</p>
   </ul>
 </section>
 
-<section class="exam-qa" data-day="6" data-block="B" data-count="5">
+<section class="exam-qa" data-day="4" data-block="B" data-count="5">
   <h4>Exam Q&amp;A — Block B (self‑test first)</h4>
   <p class="exam-qa-hint">Cover each green box. Pick a/b/c/d out loud. Then expand Answer + hinge. Target ≥4/5 before the next block.</p>
 
@@ -4135,7 +4135,7 @@ If any blank, bold re‑pass B–D before Block B.</p>
 <p class="adhd-stop"><b>Block C write gate (3 min — part of the 40):</b> apexogenesis vs apexification one line each · best avulsion media · flexible splint duration uncomplicated avulsion · VRF two clues · NaOCl+CHX precipitate color/problem. Speak them; then traps.</p>
 
 
-<section class="exam-form" data-day="6" data-block="C">
+<section class="exam-form" data-day="4" data-block="C">
   <h4>How SDLE asks Block C (immature apex · trauma · resorption/VRF)</h4>
   <ul>
     <li><b>Shape:</b> diagnosis language or procedure hinge on trauma / immature apex.</li>
@@ -4146,7 +4146,7 @@ If any blank, bold re‑pass B–D before Block B.</p>
   </ul>
 </section>
 
-<section class="exam-qa" data-day="6" data-block="C" data-count="5">
+<section class="exam-qa" data-day="4" data-block="C" data-count="5">
   <h4>Exam Q&amp;A — Block C (self‑test first)</h4>
   <p class="exam-qa-hint">Cover each green box. Pick a/b/c/d out loud. Then expand Answer + hinge. Target ≥4/5 before the next block.</p>
 
@@ -4295,7 +4295,7 @@ If any blank, bold re‑pass B–D before Block B.</p>
 <li>VRF: post‑endo tooth + isolated deep narrow pocket + J/teardrop lesion → poor root prognosis, not endless re‑RCT theater.</li>
 </ul>
 <p class="adhd-stop"><b>STOP 45 sec (eyes closed):</b> Say N1–N4 hinges without looking. Any blank → bold re‑pass that section only, then quiz blocks.</p>
-<p><b>Day‑6 product check:</b> reading done with gates · videos lec 1–4 · cards · 100–150 endo Q · wrong book one‑liners for every miss on diagnosis, irrigant, mishap, trauma, VRF.</p>
+<p><b>Day‑4 product check:</b> reading done with gates · videos lec 1–4 · cards · 100–150 endo Q · wrong book one‑liners for every miss on diagnosis, irrigant, mishap, trauma, VRF.</p>
 <div class="where-read textbook-grounded">
   <strong>From Appendix C books (cleaned)</strong>
   <p>Grounded in <b>Cohen pathways / endo</b> set + trauma principles. Study aid only.</p>

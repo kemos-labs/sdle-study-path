@@ -2444,7 +2444,7 @@
 
     const hy = window.HIGH_YIELD || {};
     // Integration / mock days: playbook + theme ranking
-    if (L.day === 4 || L.day >= 10) {
+    if (L.day === 6 || L.day >= 10) {
       const top = (hy.bankEmphasis || []).slice(0, 10);
       const free = (hy.materials && hy.materials.freeMocks) || [];
       const mockPlay =

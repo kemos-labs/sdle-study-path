@@ -404,7 +404,7 @@
     {
       id: "endo-diagnosis",
       dept: "endo",
-      day: 6,
+      day: 4,
       section: "A-B",
       title: "Pulp Diagnosis & Treatment Planning",
       summary: `Pulp tests: cold (most reliable), EPT, heat, percussion. Normal → reversible pulpitis (sharp, short) → irreversible pulpitis (lingering, spontaneous) → necrosis. Percussion sensitivity = apical periodontitis. Radiograph: PA for periapical pathology, BW for coronal, CBCT for complex. Differential: cracked tooth, sinusitis, atypical odontalgia. Referral indications: complex anatomy, failed previous RCT, surgical needs.`,
@@ -423,7 +423,7 @@
     {
       id: "access-wl-cleaning",
       dept: "endo",
-      day: 6,
+      day: 4,
       section: "C-D",
       title: "Access, Working Length & Cleaning",
       summary: `Access cavity: straight-line access to all canals. Remove all pulp chamber roof. Find canals using dark lines, CEJ landmarks, troughing. Working length: 0.5-1mm short of radiographic apex (apical constrict). Electronic apex locator + radiograph. Cleaning: NaOCl (tissue dissolution, disinfection), EDTA (smear layer removal), chlorhexidine (final flush). NaOCl is the primary irrigant.`,
@@ -443,7 +443,7 @@
     {
       id: "obturation-trauma",
       dept: "endo",
-      day: 6,
+      day: 4,
       section: "E-F",
       title: "Obturation & Dental Trauma",
       summary: `Obturation: gutta-percha + sealer (AH Plus, bioceramic). Cold lateral condensation = most taught technique. Warm vertical: more dense fill. Sealer should fill canal irregularities. Trauma: Ellis I (enamel only) → monitor; Ellis II (enamel + dentin) → composite + monitor pulp; Ellis III (enamel + dentin + pulp exposure) → pulp cap or RCT. Avulsion: replant ASAP, splint flexible, root canal 7-14 days after for mature teeth.`,
@@ -463,7 +463,7 @@
     {
       id: "endo-surgery-resorption",
       dept: "endo",
-      day: 6,
+      day: 4,
       section: "G",
       title: "Endodontic Surgery & Resorption",
       summary: `Endodontic surgery indications: failed conventional RCT with persistent apical pathosis, biopsy, perforation repair. Apicoectomy: resect 3mm of root apex, ultrasonic retro-prep, MTA retro-fill. Root resorption: external (inflammatory, replacement/replacement) vs internal (within canal, pink tooth). External inflammatory resorption: stops after RCT removes necrotic tissue. Replacement resorption (ankylosis): progressive, no treatment stops it.`,

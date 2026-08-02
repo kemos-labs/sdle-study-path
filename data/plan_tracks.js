@@ -4,6 +4,8 @@
  * Each topic = micro-lesson (1-2 pages) + MCQ drill + notes.
  * All 15,145 usable MCQs are textbook-verified.
  * Topic verified counts: Restorative 5,235 | OMS 3,766 | Endo 1,841 | Perio 1,447 | Ortho/Pedo 1,476 | Ethics 892
+ * Weighting rule (user mandate): Endo + Perio + Resto(prostho) ≈ 75% of exam → ≈70% of study hours.
+ * Content hours: Resto 33 · Endo 14 · Perio 13 · OMS 12 · Ortho/Pedo 8 · Ethics 5.5 → weighted 60/85.5 ≈ 70%
  */
 (function (w) {
   const EXAM = "SDLE 200 MCQs · ~4h · pass 542/800";
@@ -28,83 +30,83 @@
       id: "restorative",
       label: "Restorative (Operative + Fixed + RPD)",
       verifiedCount: 5235,
-      totalHours: "24–30 hours",
+      totalHours: "30–36 hours",
       color: "#2d6a4f",
       topics: [
-        { id: "carries-science", label: "Caries Science", hours: "1.5h", verifiedQ: 350 },
-        { id: "isolation-dam", label: "Isolation & Rubber Dam", hours: "1h", verifiedQ: 150 },
-        { id: "tooth-preparation", label: "Tooth Preparation & Black Classes", hours: "2h", verifiedQ: 400 },
-        { id: "bonding-smear-hybrid", label: "Smear Layer & Hybrid Layer", hours: "1.5h", verifiedQ: 250 },
-        { id: "composite-cfactor", label: "Composite & C-Factor", hours: "1.5h", verifiedQ: 300 },
-        { id: "pulp-protection", label: "Pulp Protection & Liners", hours: "1h", verifiedQ: 200 },
-        { id: "materials-ic", label: "Materials & Instrument Processing", hours: "1.5h", verifiedQ: 300 },
-        { id: "crown-preps", label: "Crown Preps & Finish Lines", hours: "2h", verifiedQ: 350 },
-        { id: "ferrule-posts-cementation", label: "Ferrule, Posts & Cementation", hours: "1.5h", verifiedQ: 300 },
-        { id: "provisionals-impressions", label: "Provisionals & Impressions", hours: "1.5h", verifiedQ: 200 },
-        { id: "implants-basics", label: "Implant Prosthetics", hours: "1.5h", verifiedQ: 200 },
-        { id: "kennedy-classification", label: "Kennedy Classification & RPD", hours: "2h", verifiedQ: 350 },
-        { id: "rpd-clasps-retainers", label: "Clasps, Retainers & RPD Components", hours: "1.5h", verifiedQ: 300 },
-        { id: "complete-denture", label: "Complete Denture Basics", hours: "1.5h", verifiedQ: 250 },
-        { id: "gypsum-dental-materials", label: "Gypsum & Dental Materials", hours: "1.5h", verifiedQ: 350 },
+        { id: "carries-science", label: "Caries Science", hours: "2h", verifiedQ: 350 },
+        { id: "isolation-dam", label: "Isolation & Rubber Dam", hours: "1.5h", verifiedQ: 150 },
+        { id: "tooth-preparation", label: "Tooth Preparation & Black Classes", hours: "3h", verifiedQ: 400 },
+        { id: "bonding-smear-hybrid", label: "Smear Layer & Hybrid Layer", hours: "2h", verifiedQ: 250 },
+        { id: "composite-cfactor", label: "Composite & C-Factor", hours: "2h", verifiedQ: 300 },
+        { id: "pulp-protection", label: "Pulp Protection & Liners", hours: "1.5h", verifiedQ: 200 },
+        { id: "materials-ic", label: "Materials & Instrument Processing", hours: "2h", verifiedQ: 300 },
+        { id: "crown-preps", label: "Crown Preps & Finish Lines", hours: "2.5h", verifiedQ: 350 },
+        { id: "ferrule-posts-cementation", label: "Ferrule, Posts & Cementation", hours: "2h", verifiedQ: 300 },
+        { id: "provisionals-impressions", label: "Provisionals & Impressions", hours: "2h", verifiedQ: 200 },
+        { id: "implants-basics", label: "Implant Prosthetics", hours: "2h", verifiedQ: 200 },
+        { id: "kennedy-classification", label: "Kennedy Classification & RPD", hours: "2.5h", verifiedQ: 350 },
+        { id: "rpd-clasps-retainers", label: "Clasps, Retainers & RPD Components", hours: "2h", verifiedQ: 300 },
+        { id: "complete-denture", label: "Complete Denture Basics", hours: "2h", verifiedQ: 250 },
+        { id: "gypsum-dental-materials", label: "Gypsum & Dental Materials", hours: "2h", verifiedQ: 350 },
       ]
     },
     {
       id: "perio",
       label: "Periodontics",
       verifiedCount: 1447,
-      totalHours: "8–10 hours",
+      totalHours: "12–14 hours",
       color: "#0b525b",
       topics: [
-        { id: "perio-classification", label: "Classification & Anatomy", hours: "1.5h", verifiedQ: 250 },
-        { id: "gingivitis-periodontitis", label: "Gingivitis vs Periodontitis", hours: "1.5h", verifiedQ: 250 },
-        { id: "non-surgical-surgical", label: "Non-Surgical & Surgical Therapy", hours: "1.5h", verifiedQ: 250 },
-        { id: "peri-implant-diseases", label: "Peri-Implant Diseases & Maintenance", hours: "1h", verifiedQ: 200 },
+        { id: "perio-classification", label: "Classification & Anatomy", hours: "3h", verifiedQ: 250 },
+        { id: "gingivitis-periodontitis", label: "Gingivitis vs Periodontitis", hours: "3h", verifiedQ: 250 },
+        { id: "non-surgical-surgical", label: "Non-Surgical & Surgical Therapy", hours: "4h", verifiedQ: 250 },
+        { id: "peri-implant-diseases", label: "Peri-Implant Diseases & Maintenance", hours: "3h", verifiedQ: 200 },
       ]
     },
     {
       id: "endo",
       label: "Endodontics",
       verifiedCount: 1841,
-      totalHours: "10–12 hours",
+      totalHours: "13–15 hours",
       color: "#5c164e",
       topics: [
-        { id: "endo-diagnosis", label: "Diagnosis & Treatment Planning", hours: "1.5h", verifiedQ: 300 },
-        { id: "access-wl-cleaning", label: "Access, Working Length & Cleaning", hours: "2h", verifiedQ: 350 },
-        { id: "obturation-trauma", label: "Obturation & Dental Trauma", hours: "2h", verifiedQ: 300 },
-        { id: "endo-surgery-resorption", label: "Surgery & Resorption", hours: "1.5h", verifiedQ: 200 },
+        { id: "endo-diagnosis", label: "Diagnosis & Treatment Planning", hours: "3h", verifiedQ: 300 },
+        { id: "access-wl-cleaning", label: "Access, Working Length & Cleaning", hours: "4h", verifiedQ: 350 },
+        { id: "obturation-trauma", label: "Obturation & Dental Trauma", hours: "4h", verifiedQ: 300 },
+        { id: "endo-surgery-resorption", label: "Surgery & Resorption", hours: "3h", verifiedQ: 200 },
       ]
     },
     {
       id: "oms",
       label: "Oral Surgery & Medicine",
       verifiedCount: 3766,
-      totalHours: "14–18 hours",
+      totalHours: "11–13 hours",
       color: "#7b2d26",
       topics: [
-        { id: "dentoalveolar-surgery", label: "Dentoalveolar Surgery & Extractions", hours: "2h", verifiedQ: 500 },
-        { id: "maxillofacial-trauma", label: "Maxillofacial Trauma", hours: "2h", verifiedQ: 500 },
-        { id: "mronj-infection", label: "MRONJ, Infection & Sepsis", hours: "2h", verifiedQ: 400 },
-        { id: "local-anesthesia", label: "Local Anesthesia & Emergencies", hours: "2h", verifiedQ: 400 },
-        { id: "pathology-cysts-tumors", label: "Pathology, Cysts & Tumors", hours: "2.5h", verifiedQ: 500 },
+        { id: "dentoalveolar-surgery", label: "Dentoalveolar Surgery & Extractions", hours: "2.5h", verifiedQ: 500 },
+        { id: "maxillofacial-trauma", label: "Maxillofacial Trauma", hours: "2.5h", verifiedQ: 500 },
+        { id: "mronj-infection", label: "MRONJ, Infection & Sepsis", hours: "2.5h", verifiedQ: 400 },
+        { id: "local-anesthesia", label: "Local Anesthesia & Emergencies", hours: "2.5h", verifiedQ: 400 },
+        { id: "pathology-cysts-tumors", label: "Pathology, Cysts & Tumors", hours: "2h", verifiedQ: 500 },
       ]
     },
     {
       id: "ortho_pedo",
       label: "Orthodontics & Pediatric Dentistry",
       verifiedCount: 1476,
-      totalHours: "8–10 hours",
+      totalHours: "7–9 hours",
       color: "#5a4a30",
       topics: [
-        { id: "growth-development", label: "Growth, Development & Classification", hours: "1.5h", verifiedQ: 300 },
-        { id: "ortho-treatment", label: "Ortho Treatment & Appliances", hours: "1.5h", verifiedQ: 250 },
-        { id: "pediatric-dentistry", label: "Pediatric Dentistry & Behavior", hours: "2h", verifiedQ: 350 },
+        { id: "growth-development", label: "Growth, Development & Classification", hours: "2.5h", verifiedQ: 300 },
+        { id: "ortho-treatment", label: "Ortho Treatment & Appliances", hours: "2.5h", verifiedQ: 250 },
+        { id: "pediatric-dentistry", label: "Pediatric Dentistry & Behavior", hours: "3h", verifiedQ: 350 },
       ]
     },
     {
       id: "ethics",
       label: "Ethics, Medicine & Infection Control",
       verifiedCount: 892,
-      totalHours: "6–8 hours",
+      totalHours: "5–6 hours",
       color: "#3d405b",
       topics: [
         { id: "ethics-professionalism", label: "Ethics & Professionalism", hours: "1.5h", verifiedQ: 250 },
