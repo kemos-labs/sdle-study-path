@@ -295,6 +295,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 312 | rafi_04_8b078ec860 | Horizontal → **Sagittal plane** (hinge) | occlusion |
 | 313 | rafi_06_86f7288bee | thermal conductivity → **Cracked tooth** (gold onlay) | operative |
 | 314 | rafi_06_5a832c238b | all incorrect → **Enameloplasty opposing** (crown height) | implant |
+| 315 | rafi_07_54aa8fba6a | Direct retainers → **Major connector** (force transfer) | McCracken |
+| 316 | rafi_07_5d1488c572 | Guiding planes → **Rest seats** (first prep) | McCracken |
 
 
 
