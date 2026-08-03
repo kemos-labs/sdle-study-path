@@ -343,6 +343,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 364 | rafi_14_372bc755df | Zinc phosphate → **ZOE** (contraindicated base) | operative |
 | 365 | rafi_14_a3d225363f | faulty prep → **Residual caries** (pain) | operative |
 | 366 | rafi_14_00720da1f4 | matte → **Rough** (active caries) | cariology |
+| 367 | rafi_15_e882e7d03c | marginal leakage → **Irreversible pulpitis** | operative |
+| 368 | rafi_15_b3a0dec022 | High occlusion → **Irreversible pulpitis** (class V) | operative |
 
 
 
@@ -569,6 +571,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_14_f9e08f6930 — polyether moisture-tolerant (correct; model claim dubious)
 - rafi_14_9e6f2d581c — no water = heat/pulp damage (closest option kept)
 - rafi_14_409d090359 — central incisor contact at incisal third (correct; model text agrees)
+- rafi_15_6805500167 — palatal burning → incisive foramen pressure (defensible; model reason mismatched)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
