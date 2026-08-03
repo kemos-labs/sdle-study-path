@@ -307,7 +307,21 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 325 | rafi_08_ff020acf00 | underfired → **excessive fired** (milky porcelain) | ceramics |
 | 326 | rafi_08_e6ade9f5dc | Pontic → **Retainer** (attached to abutment) | Fixed |
 | 327 | rafi_08_5c06ab5c42 | non-carious → **Heavily resorbed ridge** (no bridge) | Fixed |
-| 328 | rafi_08_f7d44cd75d | Above crest → **Below gingival crest** (finish lines) | Fixed |
+| 328 | rafi_08_f7d44cd75d | Above crest → **Below gingival crest** (finish lines) | Fixed || 329 | rafi_08_87b3706d26 | Cast partial → **Acrylic partial** (frequent relining) | RPD |
+| 330 | rafi_08_d9edbd4ab7 | Perpendicular → **Tilting cast** (surveying) | McCracken |
+| 331 | rafi_10_084b987178 | diverge proximal → **diverge occlusally** (class II walls) | operative |
+| 332 | rafi_10_9ac9b1e090 | Attrition → **Abfraction** (V-shaped) | operative |
+| 333 | rafi_10_5d8873485d | 2 → **13%** (high-copper) | materials |
+| 334 | rafi_10_1ed751d84c | 2nd → **4th** (4-number blade angle) | perio |
+| 335 | rafi_10_15c849d26e | 2nd → **3rd** (3-number blade angle) | perio |
+| 336 | rafi_10_7196cedbd9 | Polyether → **Polysulfide** (sulfur sensitivity) | materials |
+| 337 | rafi_10_7ac6729bae | Gamma 2 → **Gamma** (strongest phase) | materials |
+| 338 | rafi_10_fbe5a4b630 | Resilience → **Toughness** (energy to fracture) | materials |
+| 339 | rafi_10_29e798a4d3 | improve flow → **reduce oxides** (flux) | materials |
+| 340 | rafi_10_4ab05abf69 | moisture → **Pulp involvement** (deep amalgam) | operative |
+| 341 | rafi_10_4eaa8fcc09 | sensitivity → **tray placement** (gag reflex) | CD |
+| 342 | rafi_10_7985f4d420 | → **absorbs water/swells** (polyether) | materials |
+
 
 
 
@@ -516,6 +530,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_08_1cf7a049d0 — facial max posterior at risk in high caries (model agrees)
 - rafi_08_d74a2d2800 — packing follows flasking (correct)
 - rafi_08_7be0bc1b53 — maxillary incisor most common resin-bonded FPD (correct)
+- rafi_08_d40ff2b82c — Class I mod 1 = bilateral molars + right lateral (correct)
+- rafi_10_feaf42f3dd — polysulfide contraindicated for sulfur-sensitive (correct)
+- rafi_10_3ff2fea7b9 — Class I highest C-factor/shrinkage (correct)
+- rafi_10_ff74ed93aa — delayed pain = zinc-containing amalgam (classic)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
