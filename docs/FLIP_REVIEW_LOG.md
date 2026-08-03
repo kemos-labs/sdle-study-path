@@ -261,6 +261,13 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 275 | rafi_06_c566d4e85e | Acute perio abscess → **Periapical abscess** | endo |
 | 276 | rafi_06_0c82e830d2 | Cyclosporine → **Leukemic gingiva** | oral med |
 | 277 | rafi_06_b327a9c7b2 | Tea/Coffee → **Mercury** (blue-green stains) | oral med |
+| 278 | rafi_08_cc9f68e645 | dilute toxins → **plaque removal** (irrigation) | perio |
+| 279 | rafi_08_3730ff97fc | Gas chromatography → **Organoleptic** (halitosis) | perio |
+| 280 | rafi_08_2ff6156f53 | Piezoelectric → **Magnetostrictive** (elliptical) | perio |
+| 281 | rafi_10_4e46d8d29a | Ultrasonic → **Schwartz periotriever** | perio |
+| 282 | rafi_10_b110eb7b14 | all same → **Cancellous** (bone fill) | perio |
+| 283 | rafi_12_a82bc8c23d | Increase → **Decrease** shallow-pocket colonies (smoking) | perio |
+| 284 | rafi_12_8b2034fdd1 | NUG → **NUP** (desquamation, stress) | perio |
 
 
 
@@ -305,6 +312,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_14_b4b8982575 — class V amalgam sensitivity 6mo: pulpitis vs abrasion (ambiguous)
 - rafi_04_aa416d3290 — occlusion rim anterior width: book says 6-8mm, not offered (broken)
 - rafi_06_0d311c408f — amalgam contraindication: all options are valid uses (ambiguous)
+- rafi_08_8b7dbb6ea6 — supragingival calculus "except": all 4 options are characteristics (broken)
 - rafi_08_3805600b25 — high-copper % : ≥12% not offered (2/5/9/all wrong) (broken)
 - rafi_08_6dfb9d2845 — post-1st-yr resorption 0.2mm/yr not offered (0.02 = typo) (broken)
 - rafi_15_e2981fe47b — dysphagia/nausea = OVER-extension of PPS; only "under/absence" offered (broken)
@@ -440,6 +448,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_067c4639c7 — convergent + short trunk = hardest (correct)
 - rafi_04_d3a62e8014 — universal curette curved in ONE plane (model wrong)
 - rafi_04_e6fafea981 — JE migration + corresponding recession = shallow sulcus (correct)
+- rafi_08_bf67ae6ed2 — cementoalveolar fibers torn first (correct)
+- rafi_12_16607204e2 — CAL 5-6 = Stage III (correct; model mis-staged)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
