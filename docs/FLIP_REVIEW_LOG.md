@@ -201,6 +201,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 212 | rafi_18_f2a7dd1da4 | RPI → **Aker** (no undercut) | McCracken || 213 | rafi_20_466faa7149 | Low filler → **Low microleakage** (flowable) | operative |
 | 214 | rafi_20_6c9d5685cc | Resistance/retention → **Tooth reduction** (crown values) | Fixed |
 | 215 | rafi_20_48231ab9fd | Symmetry → **mesio-incisal more acute** (lower incisor) | morphology |
+| 216 | ab2_771490b666 | Pulpotomy → **DPC** (pinpoint exposure) | endo |
 
 
 
@@ -249,6 +250,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_16_5591d0a9de — ovate pontic tissue irritation: porcelain vs gold (source marked "NOT SURE")
 - rafi_18_89b6f2d029 — ZOE "increase setting time": model contradicts itself (eugenol accel vs retard); options ambiguous
 - rafi_20_ea75e896e9 — fluoride-releasing cement: GIC not offered (broken; same as rafi_13_77c5e2df19)
+- ab2_2b6d04a4a1 — lateral luxation splint 4 weeks NOT offered; option 2 is a junk marker "(No 4 weeks option)" (broken)
 
 
 ## ❌ FALSE POSITIVES (marked answer CORRECT — model misread) — keep
@@ -336,6 +338,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_20_2a4d852915 — tips/occlusal hypoplasia = chronologic (malnutrition) (defensible)
 - rafi_20_cd1dd7d71e — denuded cementum tubules → dentinal hypersensitivity (correct)
 - rafi_20_05416f996e — one-plane prep → dark incisal third (defensible)
+- saud_delta_005 — infraorbital → cavernous sinus thrombosis (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
