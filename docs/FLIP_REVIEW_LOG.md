@@ -400,6 +400,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 423 | rafi_17_04dc6aa132 | EDTAC → **NaOCl** (most irritating) | endo |
 | 424 | ab2_385a847f44 | Upper 1st molar → **Upper 2nd molar** (hardest to scale) | perio |
 | 425 | ab2_9eb8931c89 | Apical → **Oblique fibers absent** (primary teeth) | histology |
+| 426 | rafi_01_74b924041b | mini/after-fives → **Universal + area-specific** | perio |
+| 427 | rafi_01_a4b5f4751f | Vesicle → **Firm leathery** (chronic gingivitis) | perio |
+| 428 | rafi_01_d5aa3383d5 | Ultrasonic → **Gracey 11-12** (premolar mesial) | perio |
 
 
 
