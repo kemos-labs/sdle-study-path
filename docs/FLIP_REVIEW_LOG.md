@@ -236,7 +236,18 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 248 | rafi_01_aa9c6e6513 | Bone deposition → **PDL necrosis + bone resorption** | perio |
 | 249 | rafi_01_d60ff77486 | Superficial scaling → **Remove pseudomembrane** (NUG) | perio |
 | 250 | rafi_01_61790d1e96 | Cementum → **Periodontal ligament** (mobility) | perio |
-| 251 | rafi_02_603e314a4f | Sharpey → **Transseptal fibers** | perio |
+| 251 | rafi_02_603e314a4f | Sharpey → **Transseptal fibers** | perio || 252 | rafi_03_1b37d0d5c4 | 1 → **2** (fremitus II: palpable) | perio |
+| 253 | rafi_04_8d39768feb | poor OH → **Foreign body** (acute abscess) | perio |
+| 254 | rafi_04_7759df9e2e | Avulsion → **PDL widening** (occl force) | perio |
+| 255 | rafi_04_6627b72e0f | negative impact → **SRP + doxycycline** | perio |
+| 256 | rafi_04_97e27d13fd | grade B → **grade C** (heavy smoker) | perio |
+| 257 | rafi_04_1a6c84eacf | Class III → **Class I** (Miller, not to MGJ) | perio |
+| 258 | rafi_04_a8d8413531 | 6mm → **12mm** (CAL = 9+3) | perio |
+| 259 | rafi_04_b6af6004ec | 1st true 2nd false → **Both true** (Gracey 15/16) | perio |
+| 260 | rafi_04_6bca8dcbb5 | Score 1 → **Score 0** (Loe-Silness normal) | perio |
+| 261 | rafi_04_d11ff85103 | 1959 → **1939** (electric toothbrush) | perio |
+| 262 | rafi_04_a1f268d80e | 3mm → **4mm** (true pocket) | perio |
+
 
 
 
@@ -403,6 +414,16 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - ab2_80418f6680 — CAL 5-6 + horizontal loss = Stage III (correct; model mis-staged)
 - ab2_c8ca6b00c2 — grade III mobility → perio lesion (defensible; model reason mismatched)
 - rafi_01_5145f97848 — convergent roots + short trunk = hardest to scale (model agrees)
+- rafi_03_17769fc3bd — biologic width ~3mm (defensible)
+- rafi_03_41112c9569 — sulcus ~0.5mm (defensible)
+- rafi_04_19355def3c — horizontal load most destructive (classic)
+- rafi_04_19d9c2af42 — alcohol mouthwash → desquamation (defensible)
+- rafi_04_2206b08b49 — probe measures total gingival width (model agrees)
+- rafi_04_c42bc2eb58 — external oblique ridge interference (model agrees)
+- rafi_04_334a67d242 — G&S <1mm = grade 1 (correct)
+- rafi_04_756752bab1 — stage II gingivitis = lymphocytes (correct)
+- rafi_04_067c4639c7 — convergent + short trunk = hardest (correct)
+- rafi_04_d3a62e8014 — universal curette curved in ONE plane (model wrong)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
