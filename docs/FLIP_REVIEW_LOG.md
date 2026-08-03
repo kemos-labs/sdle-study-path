@@ -380,6 +380,11 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 402 | rafi_06_c42427457a | pulp status → **Apical stop** (apexification) | endo |
 | 403 | rafi_06_a09b341e6a | RCT → **Pulpectomy + apexification** (open apex) | endo |
 | 404 | rafi_06_2b081a7a66 | RCT+crown → **Relieve occlusion + monitor** (cracked) | endo |
+| 405 | rafi_07_656a9a638c | Circular → **Square** (Peeso reamer) | endo |
+| 406 | rafi_08_7f94d3ad20 | Cold milk → **Milk room temp** (avulsion) | trauma |
+| 407 | rafi_08_b1bb938214 | Subluxation → **Luxation** (PDL widening) | trauma |
+| 408 | rafi_08_35990ae568 | Heated plugger → **Hedstrom file** (GP removal) | endo |
+| 409 | rafi_08_319dbf70c0 | Barite probe → **curved endo file** (orifice) | endo |
 
 
 
@@ -439,6 +444,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_02_7c8b59c400 — post-RCT pain: COMBINE NSAID+acetaminophen not offered (broken)
 - rafi_04_381c1e1f81 — MTA 3:1 powder:water not offered among 1:1..1:4 (broken)
 - rafi_04_0d96b8c5fe — night pain = irreversible pulpitis not offered (broken)
+- rafi_08_43a5bf4c8c — cut 1mm off #30: new tip 0.32mm (#32), not offered (broken)
 - rafi_08_3805600b25 — high-copper % : ≥12% not offered (2/5/9/all wrong) (broken)
 - rafi_08_6dfb9d2845 — post-1st-yr resorption 0.2mm/yr not offered (0.02 = typo) (broken)
 - rafi_15_e2981fe47b — dysphagia/nausea = OVER-extension of PPS; only "under/absence" offered (broken)
@@ -642,6 +648,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_06_ca7dd0863d — apicoectomy 45° bevel (classic; modern = perpendicular)
 - rafi_06_e328024170 — persistent pain short fill → retreatment (model agrees)
 - rafi_06_435aa4438e — separated file: radiograph first (model agrees)
+- rafi_08_1558f30551 — retreatment flora: Gram+ facultative (E. faecalis) (correct)
+- rafi_08_f93733b279 — post-RCT biting pain = VRF (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
