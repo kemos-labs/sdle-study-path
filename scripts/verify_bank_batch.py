@@ -138,7 +138,7 @@ def retrieve(passages: list[str], kws: list[str], k: int = 6) -> str:
     return "\n---\n".join(top)
 
 
-def call_api(provider, prompt: str, timeout: int = 240) -> str:
+def call_api(provider, prompt: str, timeout: int = 90) -> str:
     body = json.dumps({
         "model": provider["model"],
         "messages": [{"role": "system", "content": SYSTEM},
@@ -286,7 +286,7 @@ def main() -> int:
                 opts = "\n".join(f"{i}. {o}" for i, o in enumerate(q.get("options", [])))
                 ans_txt = q["options"][q["answer"]] if q["answer"] is not None and q["answer"] < len(q.get("options", [])) else "?"
                 parts.append(
-                    f"QID:{q['id']}\nQ: {q['q']}\nOPTIONS:\n{opts}\nMARKED ANSWER: {q['answer']} ({ans_txt})\nPASSAGES:\n{ctx[:3500]}\n=====")
+                    f"QID:{q['id']}\nQ: {q['q']}\nOPTIONS:\n{opts}\nMARKED ANSWER: {q['answer']} ({ans_txt})\nPASSAGES:\n{ctx[:2400]}\n=====")
             prompt = "\n".join(parts)
             # try providers in order until one works
             resp = ""
