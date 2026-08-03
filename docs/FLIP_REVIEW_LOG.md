@@ -49,7 +49,11 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 43 | rafi_08_539ea9f3d7 | throbbing pain → **Sinus tract** (perio abscess) | Carranza || 44 | rafi_10_f567e2777a | Teeth migration → **Pathologic migration** (CAL) | Carranza |
 | 45 | rafi_12_ccee06cb55 | External oblique → **Mylohyoid ridge** (2nd molar CL) | perio/surgery |
 | 46 | rafi_12_fdde25510b | Pseudopocket → **Suprabony pocket** (JE at CEJ) | Carranza |
-| 47 | rafi_13_96fb76b9b0 | Bad OH → **Smoking** (persistent perio) | Carranza |
+| 47 | rafi_13_96fb76b9b0 | Bad OH → **Smoking** (persistent perio) | Carranza || 48 | rafi_16_b1c28dbaa8 | allow accumulation → **prevent gram-ve growth** (overhang) | Carranza |
+| 49 | rafi_17_89cf6729db | Circular → **Dentoperiosteal fibers** (+ cleaned option text) | Carranza |
+| 50 | rafi_17_37e31ccc5e | Apical flap → **Coronally positioned flap** (root coverage) | Carranza |
+| 51 | rafi_17_9585d3e49c | Lateral displaced → **Vertical incision/coronal flap** (Miller I) | Carranza |
+
 
 
 
