@@ -390,7 +390,15 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 412 | rafi_13_f586b1de50 | Torsional → **Flexural** (coronal break) | endo |
 | 413 | rafi_14_b47a2215a3 | Curvature → **Instrumentation technique** (ledging) | endo |
 | 414 | rafi_14_40bf54ad89 | Fair → **Good** (immediate MTA perforation) | endo |
-| 415 | rafi_14_77dd4d2ff9 | Max distobuccal → **Max mesiobuccal** (resection) | endo |
+| 415 | rafi_14_77dd4d2ff9 | Max distobuccal → **Max mesiobuccal** (resection) | endo || 416 | rafi_15_956479cc92 | good → **poor** (apical instrument fx) | endo |
+| 417 | rafi_15_a3d97abf58 | good → **poor** (middle-third broken file) | endo |
+| 418 | rafi_15_fc2d761704 | Regeneration → **RCT** (non-vital #34) | endo |
+| 419 | rafi_15_6897f16a14 | Cracked → **Split tooth** (both ridges) | endo |
+| 420 | rafi_16_960dc3901c | NSAID → **RCT** (ER pain) | endo |
+| 421 | rafi_17_eb2031dd3f | Apical surgery → **Non-surgical retreatment** (CaOH) | endo |
+| 422 | rafi_17_0cfaf38155 | Avulsion → **Crown fractures** (pedo trauma) | pedo |
+| 423 | rafi_17_04dc6aa132 | EDTAC → **NaOCl** (most irritating) | endo |
+
 
 
 
@@ -452,6 +460,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_0d96b8c5fe — night pain = irreversible pulpitis not offered (broken)
 - rafi_08_43a5bf4c8c — cut 1mm off #30: new tip 0.32mm (#32), not offered (broken)
 - rafi_12_68bc391e9d — symptomatic pulpitis definition: hyperemia ≠ (ambiguous)
+- rafi_15_8564eb49ec — most widely used sealer = ZOE-based, not offered (broken)
 - rafi_08_3805600b25 — high-copper % : ≥12% not offered (2/5/9/all wrong) (broken)
 - rafi_08_6dfb9d2845 — post-1st-yr resorption 0.2mm/yr not offered (0.02 = typo) (broken)
 - rafi_15_e2981fe47b — dysphagia/nausea = OVER-extension of PPS; only "under/absence" offered (broken)
@@ -660,6 +669,13 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_13_82f9daf627 — GG#2 = 0.7mm = file 70 (correct)
 - rafi_14_3b429c405d — negative test on avulsed #21 (correct)
 - rafi_14_7bd20a64ea — avulsed #12 negative response (correct)
+- rafi_15_aac65cec53 — CaOH for weeping canals (correct)
+- rafi_17_7b7c2fe361 — H-file circular cross-section (correct)
+- rafi_17_9b4b4c8650 — 5mm intrusion 7-8yo: allow re-eruption/follow-up (correct)
+- rafi_17_8f838282ad — internal resorption: predentin involvement (defensible)
+- rafi_17_ca361dd8d4 — gutta-percha: zinc oxide = largest component (correct)
+- rafi_17_f0ba2604e1 — type of force = least important (correct)
+- rafi_17_b7c9c7c52a — 9yo intrusion: ortho repositioning (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
