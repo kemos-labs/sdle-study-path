@@ -456,6 +456,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 486 | ab2_46925180a6 | fracture body+L/R condyle → **Bilateral condyle affected** | trauma || 487 | ab2_de22fa3bb9 | rebond → **Refer to orthodontist** (broken retainer) | ortho |
 | 488 | ab2_c2253ab705 | extract+AB → **Stop aspirin 1 wk** (pre-extraction) | OMS || 489 | ab2_1de3b087a6 | no effect → **Increase INR** (amox+APAP on warfarin) | med |
 | 490 | ab2_cb5871671f | Class II → **Class III** (ANB −4°) | ortho |
+| 491 | ab2_4d6876a316 | anterior cranial base → **Mandibular base** (S–Gn) | ortho |
 
 
 
@@ -814,6 +815,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - ab2_02258a491b — burning tongue → antifungal trial (candidiasis most common treatable cause; model said steroid)
 - ab2_f07328d692 — family disputes DNR, patient arrests → RESUSCITATE (err on side of life while conflict unresolved; model said follow DNR)
 - ab2_33cc9bfebc — child brought by teacher (ER emergency, no guardian) → doctor proceeds (emergency exception; teacher ≠ legal consent)
+- ab2_02adad71f8 — PROGNATHIC MAXILLA → Class II (maxillary protrusion; model claimed Class III — ignored maxilla focus)
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
