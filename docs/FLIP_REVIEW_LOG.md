@@ -371,6 +371,11 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 393 | rafi_02_dfafe880d0 | Formocresol → **Sodium hypochlorite** (protein coagulation) | endo |
 | 394 | rafi_02_93276420ae | reversible+ → **Symptomatic irreversible** (open apex trauma) | endo |
 | 395 | rafi_02_7defd57ae5 | 70% alcohol → **CHX** (GP disinfection) | endo |
+| 396 | rafi_04_6d29e73b9e | 4.2 → **8.13** (Ledermix pH) | endo |
+| 397 | rafi_04_d4295df078 | 1mm → **2mm short of WL** (needle) | endo |
+| 398 | rafi_04_bb56e83bb7 | H-file → **K-file** (flexible) | endo |
+| 399 | rafi_04_12078ed6d1 | 4 months → **4 weeks** (cervical root fx) | trauma |
+| 400 | rafi_04_0e8355b5be | Class V → **Class VII** (Ellis displacement) | trauma |
 
 
 
@@ -624,6 +629,11 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_02_e4a00ef744 — pulp arteriole ~50μm (defensible; 20μm = capillary)
 - rafi_02_9c968ca953 — CTS: subjective symptoms + bite test (correct)
 - rafi_02_bc3aaa6d1b — YELLOW discoloration = canal obliteration (correct; model backwards)
+- rafi_04_8c9a354fc3 — AH Plus pH ~8 (within passage range; keep)
+- rafi_04_e6373966ed — GG#3 = 0.9mm = file 90 (correct)
+- rafi_04_e797da729b — NaOCl advantage = tissue dissolution (correct; model misread)
+- rafi_04_4c7f2777b8 — Ellis V = total tooth loss/avulsion (correct)
+- rafi_04_aab0aa388b — Ellis VI = root fracture (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
