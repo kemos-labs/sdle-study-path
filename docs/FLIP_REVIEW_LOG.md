@@ -41,7 +41,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 33 | rafi_03_d1a67a0574 | Static → **Cohesive** (PFM chip, no metal) | PFM failure |
 | 34 | rafi_03_eb53977d2e | Obtuse → **Butt** (cast metal 90°) | operative |
 | 35 | rafi_03_d7e5c20722 | Long centric → **Wide centric** (medio-lateral) | occlusion |
-| 36 | rafi_04_ee907b2f81 | distobuccal-distopalatal → **mesiobuccal-distopalatal** | dental anatomy |
+| 36 | rafi_04_ee907b2f81 | distobuccal-distopalatal → **mesiobuccal-distopalatal** | dental anatomy || 37 | rafi_04_92bfc87ef7 | biomechanical → **chemical acid loss** (erosion) | Sturdevant |
+| 38 | rafi_04_6bd2f8f5f4 | must not be used → **enhance retention** (pins) | Sturdevant |
+
 
 
 ## ⚠️ BROKEN / NEEDS-REVIEW (do NOT flip; repair or exclude)
