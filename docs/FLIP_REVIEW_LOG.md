@@ -71,7 +71,18 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 70 | rafi_04_9a0f69dcb6 | Relining → **Rebase** (base replaced) | prostho |
 | 71 | rafi_04_7819ce6a7a | distal uppers+mesial lowers → **mesial uppers+distal lowers** (protrusive) | occlusion |
 | 72 | rafi_04_d3283452b1 | 7mm → **4mm** (lingual bar clearance) | McCracken |
-| 73 | rafi_06_4bb6dbd6dc | Distal occlusal → **Mesial ridge occlusal** (mand 1st premolar) | dental anatomy |
+| 73 | rafi_06_4bb6dbd6dc | Distal occlusal → **Mesial ridge occlusal** (mand 1st premolar) | dental anatomy || 74 | rafi_06_ba7a805579 | Central → **Transverse groove** (oblique ridge) | Sturdevant |
+| 75 | rafi_06_1b415c8f96 | hydrophilic → **hydrophobic** (addition silicone wetting) | materials |
+| 76 | rafi_06_1f9fd10a0f | too small → **rough wax pattern** (rough casting) | lost-wax |
+| 77 | rafi_06_7198face2b | Periapical → **Bitewing** (anterior proximal caries) | White & Pharoah |
+| 78 | rafi_06_23dfe20e03 | Percussion → **Ethyl dye test** (cracked tooth) | endo |
+| 79 | rafi_06_bbab6f0942 | screw factor → **All** (screw loosening multifactorial) | implant |
+| 80 | rafi_06_6cfce667b3 | PA radiograph → **RFA** (non-invasive bone/stability) | implant |
+| 81 | rafi_06_5a57548f51 | Mechanical → **failure to osseointegrate** (early failure) | implant |
+| 82 | rafi_06_691f421fef | screw fracture → **implant fracture** (trephine) | implant |
+| 83 | rafi_06_b80682f988 | screw loosening → **Bone loss** (occlusal overload) | implant |
+| 84 | rafi_06_c9082bc2db | parafunction → **1mm diastema closure** (veneer candidate) | Fixed |
+
 
 
 **Keep / false-positive (reviewed, marked correct):** rafi_03_45a272e8a8 (varnish), rafi_03_4005bccd6f (GIC class V), rafi_03_105640d7ef (intrusion), rafi_03_e94536f02a (1mm bone loss), rafi_03_6821512e69 (ridge resorption), rafi_03_93f6549b5f (2mm), rafi_04_1062cbc0a7 (root caries), rafi_04_04f560ef99 (PKT1), rafi_04_853095caa5 (film thickness), rafi_04_bc4b3703ac (self-etch), rafi_04_835aed4070 (cervical burnout), rafi_04_105f47122d (cementum), rafi_04_c5a33acdb6 (dentin 70%), rafi_04_620430740a (zinc 0.01%), rafi_04_afcec26ea2 (silver), rafi_08_ca45d811c6 (orange complex), rafi_08_8233afa0d7 (stratum corneum), rafi_08_3a47fa1514 (4-6wk membrane), rafi_08_df938fed10 (plaque disruption), rafi_11_3a4eb49dfc (81%), rafi_11_52850ca6e3 (attached gingiva), rafi_12_1e55f3d506 (PMN), rafi_15_e715da5cf2 (equigingival), rafi_15_46c74cb788 (biologic width), rafi_16_754b5d9261 (allergen), rafi_16_f06ab600d7 (1st max molar), rafi_16_9ee32dc669 (more plaque), rafi_17_437eaf625f (curette), rafi_20_2db10bd85b (extract opposing), abtal_pack_c70e099d53 (external bevel), rafi_04_03cce57d1d (PMMA direct temp).
