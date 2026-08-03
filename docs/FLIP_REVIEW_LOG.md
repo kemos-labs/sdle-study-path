@@ -426,7 +426,13 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 451 | rafi_14_f0d26ee951 | Gingival → **Periodontal abscess** (post-scaling) | perio |
 | 452 | rafi_16_7eb37becfc | Path migration → **Periodontitis** (sudden mobility) | perio |
 | 453 | rafi_17_e024057f02 | Staph → **P. gingivalis** (refractory exception) | perio |
-| 454 | rafi_18_f1ba991a5c | tell normal → **Remove abscess** (post-SRP) | perio |
+| 454 | rafi_18_f1ba991a5c | tell normal → **Remove abscess** (post-SRP) | perio || 455 | rafi_18_71e56dc912 | Localized → **Incisor-molar stage 2** | perio |
+| 456 | rafi_20_cf3bbcba5a | Infrabony → **Pseudo pocket** (JE at CEJ) | perio |
+| 457 | rafi_20_49b08bfda1 | incisive papilla → **Palatal rugae** | anatomy |
+| 458 | rafi_04_e8eb7fd26b | only 1st true → **only 2nd true** (veneer reduction) | Fixed |
+| 459 | rafi_04_f051bca34c | canines only → **canines + premolars** (4-incisor) | Fixed |
+| 460 | rafi_04_e874a3fcf3 | two small → **small then large** (double cord) | Fixed |
+
 
 
 
@@ -495,6 +501,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_4f8e77ae69 — "diagnosis phase": diagnosis precedes numbered phases (ambiguous)
 - rafi_06_d778c91850 — diffuse gingivitis: localized vs generalized unclear from stem (ambiguous)
 - rafi_07_d94477dd31 — resorption & apposition: no single cell does both (ambiguous)
+- rafi_20_bfd4d592dd — crown lengthening for BW violation not offered (broken)
+- rafi_04_d3defe2714 — partial veneer non-functional cusp 1.5mm not offered (broken)
 - rafi_08_3805600b25 — high-copper % : ≥12% not offered (2/5/9/all wrong) (broken)
 - rafi_08_6dfb9d2845 — post-1st-yr resorption 0.2mm/yr not offered (0.02 = typo) (broken)
 - rafi_15_e2981fe47b — dysphagia/nausea = OVER-extension of PPS; only "under/absence" offered (broken)
@@ -726,6 +734,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_06_10faa2000a — microthreads reduce crestal bone loss (correct)
 - rafi_07_fac244c460 — smokers: decreased gingivitis + decreased BOP (correct)
 - rafi_14_2a8e173d29 — slight excess occlusal force → PDL widening (consistent with rafi_04_7759df9e2e)
+- rafi_04_8ae688037c — Payne functional waxing: cusps first (correct)
+- rafi_04_f330e4dcaf — full-ceramic cementation: HF etch first (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
