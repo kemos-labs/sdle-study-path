@@ -108,7 +108,32 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 111 | rafi_08_92bbe6afc2 | Clenching → **Gagging** (↑VDO) | CD |
 | 112 | rafi_08_5399c69c49 | Bennett → **horizontal condylar inclination** (facebow) | articulator |
 | 113 | rafi_08_93acbe4f8e | Exacting → **Hysterical** (patient type) | prostho |
-| 114 | rafi_08_f590d24b45 | Hanau → **Whipmix** (arcon) | articulator |
+| 114 | rafi_08_f590d24b45 | Hanau → **Whipmix** (arcon) | articulator || 115 | rafi_08_b921fb1819 | Horizontal → **Sagittal plane** (Bennett angle) | occlusion |
+| 116 | rafi_08_4aa1e8a4e7 | hold abutment → **prevent dislodgment** (clasp) | McCracken |
+| 117 | rafi_08_6c9b6b09fa | papillary hyperplasia → **Epulis fissuratum** (flange) | prostho |
+| 118 | rafi_08_996b51e08f | diameter → **tooth clasp rests on** (flexibility EXCEPT) | McCracken |
+| 119 | rafi_08_a8707945c2 | Plaster → **ZOE** (tissue at rest) | McCracken |
+| 120 | rafi_08_eba2453d5a | too lingual → **too labial** (lisp S→TH) | CD |
+| 121 | rafi_08_68b866560d | 1mm → **1.5mm** (occlusal rest min) | McCracken |
+| 122 | rafi_08_7892051bce | facebow → **centric + vertical** (occlusal index) | CD |
+| 123 | rafi_08_9ba301db47 | upper lip → **LOWER lip** (incisal edges) | CD |
+| 124 | rafi_08_9fbea5a09e | downwards inferiorly → **down + medial** (non-working condyle) | occlusion |
+| 125 | rafi_08_4b1cda559d | purse lips → **Swallow** (lingual flange) | CD |
+| 126 | rafi_08_ed46eed36e | path of draw → **All of the above** (damaged abutment) | prostho |
+| 127 | rafi_08_7ecdc27f98 | muco compressive → **Dynamic impression** (resorbed ridge) | CD |
+| 128 | rafi_08_f8636e9f0e | allergy → **asthma drug reaction** (palatal redness) | oral med |
+| 129 | rafi_08_65cd52e2bb | Class IV → **Class I** (posterior palatal bar indirect retainer) | McCracken |
+| 130 | rafi_08_bb3c11e22c | I bar → **Akers** (least esthetic clasp) | McCracken |
+| 131 | rafi_10_59db2d8ad9 | Polysulfide → **Polyether** (hydrophilic) | materials |
+| 132 | rafi_10_9b06094b5f | Coronally → **Apically** (cementum aging) | histology |
+| 133 | rafi_10_43b26049a2 | CaOH → **GIC** (2.5mm dentin base) | operative |
+| 134 | rafi_10_f591eccc78 | 50 → **70%** (dentin hydroxyapatite) | histology |
+| 135 | rafi_10_8cc2478b31 | 1 → **3mm** (implant-implant) | implant |
+| 136 | rafi_10_4058f3f263 | titanium → **amalgam** (prophy jet safe) | perio |
+| 137 | rafi_10_b2ca14dcee | short convergent → **long convergent** (abutment) | Fixed |
+| 138 | rafi_10_190ae55767 | modified ridge lap → **Ovate pontic** (esthetic) | Fixed |
+| 139 | rafi_10_e77473e275 | 0.8 → **0.5mm** (porcelain at junction) | Fixed |
+
 
 
 
