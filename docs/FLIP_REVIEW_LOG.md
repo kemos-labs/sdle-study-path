@@ -146,7 +146,16 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 152 | rafi_13_6a3ea7b7c4 | Low modulus → **Low thermal conductivity** (acrylic) | denture base |
 | 153 | rafi_14_b04bcf1fa3 | interproximal → **smooth surface caries** (DEJ) | cariology |
 | 154 | rafi_14_f2ba2942f4 | Replace → **Nothing** (ditching <0.5mm) | operative |
-| 155 | rafi_14_0496ef5653 | Metal → **Plastic** (implant scaling) | perio |
+| 155 | rafi_14_0496ef5653 | Metal → **Plastic** (implant scaling) | perio || 156 | rafi_14_f038281f7e | Incisal overlap → **butt joint** (short crown PFM) | Fixed |
+| 157 | rafi_14_ca40b6fd3c | oral hygiene → **non-circular canal** (cast post) | Fixed |
+| 158 | rafi_14_93eedd5df1 | Ceramic onlay → **amalgam + pins** (thin walls) | operative |
+| 159 | rafi_14_8e2bd01924 | aerosol starch → **rouge** (pressure areas) | CD |
+| 160 | rafi_14_5cb90d604e | laceration → **decrease stability** (retromolar pad) | CD |
+| 161 | rafi_14_d3e4b7de26 | non-working → **working-side shift** (Bennett movement) | occlusion |
+| 162 | rafi_14_e380ee90c7 | distobuccal periphery → **narrow BL occlusal table** | RPD |
+| 163 | rafi_14_7bab51d99f | None → **2 indirect retainers** (class III mod 1) | McCracken |
+| 164 | rafi_14_1b29e9dc21 | U shaped → **V-shaped palate** (lateral force) | CD |
+
 
 
 
