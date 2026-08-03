@@ -42,7 +42,12 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 34 | rafi_03_eb53977d2e | Obtuse → **Butt** (cast metal 90°) | operative |
 | 35 | rafi_03_d7e5c20722 | Long centric → **Wide centric** (medio-lateral) | occlusion |
 | 36 | rafi_04_ee907b2f81 | distobuccal-distopalatal → **mesiobuccal-distopalatal** | dental anatomy || 37 | rafi_04_92bfc87ef7 | biomechanical → **chemical acid loss** (erosion) | Sturdevant |
-| 38 | rafi_04_6bd2f8f5f4 | must not be used → **enhance retention** (pins) | Sturdevant |
+| 38 | rafi_04_6bd2f8f5f4 | must not be used → **enhance retention** (pins) | Sturdevant || 39 | rafi_08_1121b5c1d3 | incidence less → **increases with age** (diabetes-perio) | Carranza |
+| 40 | rafi_08_57091184ad | dilute toxin → **remove plaque** (water irrigation) | Carranza |
+| 41 | rafi_08_d033960b57 | Dental floss → **Proxy brush** (interdental) | Carranza |
+| 42 | rafi_08_1d24db5523 | 1-2 mm → **2-3 mm** (sulcus depth) | Carranza |
+| 43 | rafi_08_539ea9f3d7 | throbbing pain → **Sinus tract** (perio abscess) | Carranza |
+
 
 
 
