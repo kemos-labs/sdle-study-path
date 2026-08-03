@@ -385,6 +385,12 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 407 | rafi_08_b1bb938214 | Subluxation → **Luxation** (PDL widening) | trauma |
 | 408 | rafi_08_35990ae568 | Heated plugger → **Hedstrom file** (GP removal) | endo |
 | 409 | rafi_08_319dbf70c0 | Barite probe → **curved endo file** (orifice) | endo |
+| 410 | rafi_11_5de63efa17 | Max 1st premolar → **Mand 2nd molar** (VRF) | endo |
+| 411 | rafi_12_c899c0fe33 | NaF soak → **Replant + flexible splint** (milk 3h) | trauma |
+| 412 | rafi_13_f586b1de50 | Torsional → **Flexural** (coronal break) | endo |
+| 413 | rafi_14_b47a2215a3 | Curvature → **Instrumentation technique** (ledging) | endo |
+| 414 | rafi_14_40bf54ad89 | Fair → **Good** (immediate MTA perforation) | endo |
+| 415 | rafi_14_77dd4d2ff9 | Max distobuccal → **Max mesiobuccal** (resection) | endo |
 
 
 
@@ -445,6 +451,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_381c1e1f81 — MTA 3:1 powder:water not offered among 1:1..1:4 (broken)
 - rafi_04_0d96b8c5fe — night pain = irreversible pulpitis not offered (broken)
 - rafi_08_43a5bf4c8c — cut 1mm off #30: new tip 0.32mm (#32), not offered (broken)
+- rafi_12_68bc391e9d — symptomatic pulpitis definition: hyperemia ≠ (ambiguous)
 - rafi_08_3805600b25 — high-copper % : ≥12% not offered (2/5/9/all wrong) (broken)
 - rafi_08_6dfb9d2845 — post-1st-yr resorption 0.2mm/yr not offered (0.02 = typo) (broken)
 - rafi_15_e2981fe47b — dysphagia/nausea = OVER-extension of PPS; only "under/absence" offered (broken)
@@ -650,6 +657,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_06_435aa4438e — separated file: radiograph first (model agrees)
 - rafi_08_1558f30551 — retreatment flora: Gram+ facultative (E. faecalis) (correct)
 - rafi_08_f93733b279 — post-RCT biting pain = VRF (correct)
+- rafi_13_82f9daf627 — GG#2 = 0.7mm = file 70 (correct)
+- rafi_14_3b429c405d — negative test on avulsed #21 (correct)
+- rafi_14_7bd20a64ea — avulsed #12 negative response (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
