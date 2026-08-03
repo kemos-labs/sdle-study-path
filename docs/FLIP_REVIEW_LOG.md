@@ -325,7 +325,19 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 344 | rafi_10_7e02959759 | Leiomyoma → **Fibroepithelial polyp** (denture) | oral path |
 | 345 | rafi_10_466f3851dd | Loss of support → **Loss of retention** (no ret arm) | McCracken |
 | 346 | rafi_10_a99e105ada | retentive first → **reciprocal first** (mobility) | McCracken |
-| 347 | rafi_11_809bbaafe4 | 3 → **Type I** (pulp collagen) | histology |
+| 347 | rafi_11_809bbaafe4 | 3 → **Type I** (pulp collagen) | histology || 348 | rafi_11_1e2e712e7e | Fungal → **Long buccal flange** (border enlargement) | CD |
+| 349 | rafi_12_1e8c1530b1 | 0.5 → **1mm** (base under amalgam) | operative |
+| 350 | rafi_12_88dea9c4c9 | Dry teeth → **Inserted after gelation** (alginate sticks) | materials |
+| 351 | rafi_12_8c8da58407 | wet polish → **dry polishing** (mercury) | operative |
+| 352 | rafi_12_b18cf0468a | amalgam → **Remineralization** (white spots) | cariology |
+| 353 | rafi_12_fec3436d5f | → **Anterior mandible** (implant safe zone) | implant |
+| 354 | rafi_12_e1b3141b7d | regenerative → **Extraction** (failing implant) | implant |
+| 355 | rafi_12_525778fdad | Ovate → **Sanitary pontic** (dexterity) | Fixed |
+| 356 | rafi_12_a8732a6ea0 | Refer → **Show only suitable shades** | esthetics |
+| 357 | rafi_12_6d2d2f5cce | allergy → **tray covers palate** (gagging) | CD |
+| 358 | rafi_12_2dbff6c44a | TMJ → **Incompetent lip** (increased VDO) | CD |
+| 359 | rafi_12_182c140091 | V shaped → **Flat** (retention vs vertical) | CD |
+
 
 
 
@@ -541,6 +553,11 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_10_ff74ed93aa — delayed pain = zinc-containing amalgam (classic)
 - rafi_11_5a863bf9f1 — separate etch/prime/bond = 4th gen (correct)
 - rafi_11_493987cb8b — high-copper 13% within 12-30% (correct)
+- rafi_11_b81f60e212 — large undercut → clasp fatigue fracture (correct)
+- rafi_11_17d0f3269f — left movement = left working side (correct)
+- rafi_12_989a9dc278 — polysulfide for sulfur-sensitive (correct)
+- rafi_12_d0db69f663 — chisel = push action (consistent w/ rafi_20_ec4cca4810)
+- rafi_12_fc2f877384 — ridge lap hardest to floss (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
