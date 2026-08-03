@@ -189,7 +189,17 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 199 | rafi_17_22167218fe | Immediate → **Transitional denture** | RPD |
 | 200 | rafi_17_ea8efeeca0 | Sectional RPD → **Conventional RPD** | RPD |
 | 201 | rafi_18_531822212d | RMGI → **Adhesive resin** (Li-disilicate) | Fixed |
-| 202 | rafi_18_13e93ec423 | Erosion → **corrosion** (amalgam island) | operative |
+| 202 | rafi_18_13e93ec423 | Erosion → **corrosion** (amalgam island) | operative || 203 | rafi_18_bc27d51444 | Air abrasion → **phosphoric etch** (sealant) | operative |
+| 204 | rafi_18_5d525c4fcf | 10 → **20s** (GIC etch) | operative |
+| 205 | rafi_18_efedc10dc0 | 20 → **30s** (enamel etch) | operative |
+| 206 | rafi_18_a4e9fa9fb5 | GIC → **MTA** (perforation seal) | endo |
+| 207 | rafi_18_0539f4ff66 | marginal prep → **High occlusion** (rest fracture) | McCracken |
+| 208 | rafi_18_44884b1670 | Protrusive → **Centric interference** (supraeruption) | occlusion |
+| 209 | rafi_18_938b184f71 | major conn+plates → **minor connector+rests** (stability) | McCracken |
+| 210 | rafi_18_d83aea1995 | Hypersensitivity → **Candidal infection** | oral med |
+| 211 | rafi_18_cc1d992f67 | wet lip → **Swallow** (lingual molding) | CD |
+| 212 | rafi_18_f2a7dd1da4 | RPI → **Aker** (no undercut) | McCracken |
+
 
 
 
@@ -311,6 +321,14 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_15_dbbd995691 — PD5mm+inflam, no bone loss → soft tissue surgery (model agrees)
 - rafi_16_720a413b89 — missing 35,38,48 w/ 3rds unreplaced = Class III (only 35 edentulous)
 - rafi_17_6af0c34333 — polysulfide for functional/muco-compressive CD impressions (defensible)
+- rafi_18_fab7841629 — cold water increases impression setting time (correct)
+- rafi_18_3a1784c104 — crack blocks light (model self-contradicted but first clause supports marked)
+- rafi_18_1a48aed5ec — exposed root = caries risk factor (model agrees)
+- rafi_18_952d3867bd — 5% HF for ceramic veneers (correct)
+- rafi_18_94910eb700 — underprepared → thin porcelain → chipping (correct)
+- rafi_18_d33d807d9d — distal-upper + mesial-lower = protrusive interference (correct)
+- rafi_18_8988dda434 — pterygomandibular raphe on BOTH casts (model misread)
+- rafi_18_ae4a53644f — RPA for high buccal frenum (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
