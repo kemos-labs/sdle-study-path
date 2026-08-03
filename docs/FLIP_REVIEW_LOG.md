@@ -453,7 +453,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 483 | ab2_6b1b25a395 | beneficence → **Nonmaleficence** (ignoring emergency) | ethics |
 | 484 | ab2_89cac5e9bc | beneficiary → **Informed consent** (refusing x-ray) | ethics |
 | 485 | ab2_2ed5635e90 | doctor urgent → **Proxy** (13yo minor) | ethics |
-| 486 | ab2_46925180a6 | fracture body+L/R condyle → **Bilateral condyle affected** | trauma |
+| 486 | ab2_46925180a6 | fracture body+L/R condyle → **Bilateral condyle affected** | trauma || 487 | ab2_de22fa3bb9 | rebond → **Refer to orthodontist** (broken retainer) | ortho |
+| 488 | ab2_c2253ab705 | extract+AB → **Stop aspirin 1 wk** (pre-extraction) | OMS |
+
 
 
 
@@ -793,6 +795,13 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - ab2_fde072d7c5 — REAMER cross-section = TRIANGULAR (model confused reamer with K-file square)
 - ab2_714b94365b — anterior 2/3 tongue sensation = trigeminal (lingual n.) (classic)
 - ab2_feeb2769a4 — adult safe fluoride ~5 mg/day upper (0.5 = pediatric; keep)
+- ab2_d782202183 — lower-lip lesion: pleomorphic adenoma = most common minor-salivary-gland tumor (defensible given all-MSG options)
+- ab2_70add67a9a — HISTORY of TB (treated/cured) → treat normally (N95 only for active disease; model over-applied)
+- ab2_a6e5e475ca — anti-HBs ≥10 mIU/mL protective → >12 = adequate (model's own reason agrees with marked)
+- ab2_fe6c4b12cb — HAART oral manifestation = oral warts (classic; model said candidiasis = HIV, not HAART)
+- ab2_12a15651a2 — aspirin = antiplatelet → bleeding time (BT) (model's own reason agrees)
+- ab2_4046a08cc5 — ACTINIC CHEILITIS (premalignant) → laser ablation correct (model said steroid — wrong)
+- ab2_ee4bc1d699 — QTH min wavelength ~400nm; 400 not offered → 300 closest (keep, broken-ish)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
 - rafi_01_e567d4d5d2 — winged clamp = **simultaneous/single-unit** application (Endodontics Principles: "placement of the rubber dam as a single unit requires the use of a winged clamp") → REGISTER RESOLVED (marked correct)
