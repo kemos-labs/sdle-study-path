@@ -278,7 +278,19 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 293 | rafi_17_122dddee8c | Class 1 → **Class 2** (passive eruption) | perio |
 | 294 | rafi_17_67f8281bf1 | Subgingival → **Pulmonary** (ultrasonic contraind) | perio |
 | 295 | rafi_17_b5e84edf82 | until resistance → **15 seconds** (GCF) | perio |
-| 296 | rafi_17_f9fcb9d19d | Loss of CT → **no gingivitis/no periodontitis** (TOF) | perio |
+| 296 | rafi_17_f9fcb9d19d | Loss of CT → **no gingivitis/no periodontitis** (TOF) | perio || 297 | rafi_18_932ed36403 | 30-50 → **60-70°** (curette blade) | perio |
+| 298 | rafi_20_5f1cedab0d | small floss → **Repair contact** (tight contact) | operative |
+| 299 | rafi_20_24895bebe3 | drug change only → **drug change + SRP** (cyclosporine) | perio |
+| 300 | rafi_04_180962edd0 | Microabrasion → **External bleaching** (least invasive) | operative |
+| 301 | rafi_04_4dd8461232 | 2 → **5mm** (mental foramen clearance) | implant |
+| 302 | rafi_04_1721600154 | 2 → **1.5mm** (PFM incisal reduction) | Fixed |
+| 303 | rafi_04_d07e3ad555 | PFM → **All-ceramic** (large pulp chamber) | Fixed |
+| 304 | rafi_04_e302edb670 | enamel removed → **patient adapted** (crown pain) | Fixed |
+| 305 | rafi_04_10b1671f6e | new prosthesis → **composite repair** (PFM crack) | Fixed |
+| 306 | rafi_04_b54ba300cc | Implant → **RPD** (14yo) | implant |
+| 307 | rafi_04_f12a270850 | central+lateral → **lateral+canine** (setup margins) | CD |
+| 308 | rafi_04_891ccb6254 | V and f → **S, Z, SH, CH, J** (sibilants) | CD |
+
 
 
 
@@ -466,6 +478,16 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_15_1509b50736 — Sri Lanka moderate ≈80-81% (correct; model misread 89)
 - rafi_15_1baf0f7d96 — sulcular incision for recession CT graft (correct)
 - rafi_17_8a59d11a50 — cancellous superior for 3-wall defects (correct)
+- rafi_18_8f4d521cb9 — sulcular incision for graft + coronal advancement (correct)
+- rafi_18_5e4d79021a — TOF does not initiate periodontitis (marked correct)
+- rafi_20_ec4cca4810 — chisel = push action (correct)
+- rafi_04_d63b935341 — polyether pour 24h (defensible; most stable material)
+- rafi_04_f435c8de11 — maxillary overdenture: 4 implants (classic; model passage questionable)
+- rafi_04_b936d5830f — implant-tooth 1.5mm (correct)
+- rafi_04_572a9bac61 — implant-IAN 2mm (model agrees)
+- rafi_04_cf5af75ade — CBC not needed for routine implant (correct)
+- rafi_04_4dce3834db — sinus 2mm (defensible)
+- rafi_04_eb40d6768e — rigidity = mechanical not biological (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
