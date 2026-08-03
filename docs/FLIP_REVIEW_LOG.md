@@ -336,7 +336,14 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 356 | rafi_12_a8732a6ea0 | Refer → **Show only suitable shades** | esthetics |
 | 357 | rafi_12_6d2d2f5cce | allergy → **tray covers palate** (gagging) | CD |
 | 358 | rafi_12_2dbff6c44a | TMJ → **Incompetent lip** (increased VDO) | CD |
-| 359 | rafi_12_182c140091 | V shaped → **Flat** (retention vs vertical) | CD |
+| 359 | rafi_12_182c140091 | V shaped → **Flat** (retention vs vertical) | CD || 360 | rafi_14_846b46bd5d | holes far apart → **too close** (papilla through) | operative |
+| 361 | rafi_14_04e57e7657 | MOD amalgam → **MOD composite** (incipient) | operative |
+| 362 | rafi_14_99f8d7e317 | composite → **graft THEN composite** (abfraction) | perio |
+| 363 | rafi_14_01112fbcd5 | Visual → **Diagnodent** (incipient caries) | cariology |
+| 364 | rafi_14_372bc755df | Zinc phosphate → **ZOE** (contraindicated base) | operative |
+| 365 | rafi_14_a3d225363f | faulty prep → **Residual caries** (pain) | operative |
+| 366 | rafi_14_00720da1f4 | matte → **Rough** (active caries) | cariology |
+
 
 
 
@@ -558,6 +565,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_12_989a9dc278 — polysulfide for sulfur-sensitive (correct)
 - rafi_12_d0db69f663 — chisel = push action (consistent w/ rafi_20_ec4cca4810)
 - rafi_12_fc2f877384 — ridge lap hardest to floss (correct)
+- rafi_14_7bd2737219 — open margin + caries under = composite over residual caries (correct)
+- rafi_14_f9e08f6930 — polyether moisture-tolerant (correct; model claim dubious)
+- rafi_14_9e6f2d581c — no water = heat/pulp damage (closest option kept)
+- rafi_14_409d090359 — central incisor contact at incisal third (correct; model text agrees)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
