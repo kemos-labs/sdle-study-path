@@ -504,7 +504,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 545 | rafi_11_77a2047b00 | latex delayed → **Nickel delayed** (amalgam type IV) | oral med |
 | 546 | rafi_11_01d445a67d | increases INR → **Decreases INR** (aspirin) | med |
 | 547 | rafi_11_92b6ad1676 | antibiotics → **Aspiration** (pre-biopsy) | OMS |
-| 548 | rafi_11_f434294a7d | reactive → **Malignant** (reverse smoker palate) | oral path |
+| 548 | rafi_11_f434294a7d | reactive → **Malignant** (reverse smoker palate) | oral path || 549 | rafi_11_93592163d1 | hypertension → **Myocardial infarction** (ibuprofen in IHD) | med |
+
 
 
 
@@ -949,6 +950,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_11_a071abfc13 — no capacity + no proxy + EMERGENCY → dentist decides (best interest); judge = non-emergent
 - rafi_11_386e1cf17f — normal MCV + high reticulocytes = HEMOLYTIC → G6PD deficiency (marked correct; model confused deficiency types)
 - rafi_11_627523f54c — recurrent HSV-associated EM prevention = antivirals (NOT offered; systemic steroids marked — broken, register)
+- rafi_11_beb727976e — most common mandible fracture site = ANGLE (various series: angle/body/condyle; model's symphysis wrong)
+- rafi_11_8977a7c9d9 — severe COPD: main concern = SUPINE position (avoid; semi-upright) — marked "place supine" = the concern (keep)
+- rafi_11_3ababa8f90 — palate + dull pain + bone erosion = ADENOID CYSTIC (perineural pain; PA does NOT erode bone — model wrong)
+- rafi_11_3ce7e8d6bb — painless palate swelling + bone erosion = MUCOEPIDERMOID (malignancy confirmed by erosion; consistent w/ 3ababa8f90's ACC differing by pain)
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
