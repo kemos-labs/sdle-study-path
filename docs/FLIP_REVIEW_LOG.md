@@ -490,7 +490,18 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 529 | rafi_10_30295d87bc | squamous tissue → **Dental lamina** (Epstein pearls) | pedo |
 | 530 | rafi_10_2b772a84d8 | angioedema → **Lichenoid reaction** (thiazides) | oral med |
 | 531 | rafi_10_2daadbae70 | keratocyst → **Ameloblastoma** (septa + resorption) | oral path |
-| 532 | rafi_10_8770f92717 | full clearance → **Refer physician** (diabetic perio) | perio |
+| 532 | rafi_10_8770f92717 | full clearance → **Refer physician** (diabetic perio) | perio || 533 | rafi_10_a303b7594c | HC sodium → **HC succinate** (steroid cover) | OMS |
+| 534 | rafi_10_120694e7a7 | erythromycin → **Clindamycin** (penicillin-resistant) | med |
+| 535 | rafi_10_f87d777e06 | head tilt → **Jaw thrust** (neck trauma) | OMS |
+| 536 | rafi_10_975db2ef64 | muscle test → **Tender points** (fibromyalgia) | med |
+| 537 | rafi_10_451aea03dc | delay → **Proceed** (INR 3 + local measures) | OMS |
+| 538 | rafi_10_344a15fdad | 1000 → **>2000 WBC** (leukemia) | med |
+| 539 | rafi_10_4ccd7d2c35 | cervical+restore → **cervical+extraction** (radiation caries) | oral med |
+| 540 | rafi_10_7ffb6104d3 | BUN → **ALT** (liver test) | med |
+| 541 | rafi_10_485c632dad | C-shaped → **IVRO** (prognathism setback) | OMS |
+| 542 | rafi_10_eeb97495c6 | clicking → **Ankylosis** (post-trauma trismus) | OMS |
+| 543 | rafi_11_ca226cd90f | quad helix → **Tongue crib** (thumb sucking) | pedo |
+
 
 
 
@@ -915,6 +926,20 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_10_d368872103 — prosthetic valve + extraction: check INR (warfarin) first + IE prophylaxis (model reason mismatched)
 - rafi_10_e827076bc3 — pharyngeal arches: 5 visible pairs (6th rudimentary; model said 4)
 - rafi_10_edb1875478 — edema organism question garbled; Staph hedged (keep)
+- rafi_10_fa6fa54b71 — clopidogrel (no INR!) + heart murmur → AB prophylaxis (model's INR test wrong for antiplatelet)
+- rafi_10_bc05290494 — hemophilia: AVOID IAN block (deep injection); intraligamentary preferred (model agreed but misread the ask)
+- rafi_10_4f7633d67e — most common mandible fracture = CONDYLE (classic; model said body)
+- rafi_10_ac2a434b98 — cauliflower lateral tongue = papilloma (marked correct)
+- rafi_10_10ae49c7fa — finger-like projections mid-lateral tongue = FOLIATE papillae (normal; marked correct)
+- rafi_10_52fccaa003 — delay full-mouth XR: pregnancy (classic; model said recent FMS — also valid but marked is the intended)
+- rafi_10_d558285694 — facial injuries → jaw thrust (marked correct; avoids c-spine)
+- rafi_10_ccdfdacb0e — needle recap: one-hand OR mechanical device (B+C; marked correct)
+- rafi_10_ea85f026ad — cyst between roots + scalloped ABOVE canal = traumatic (unicameral) bone cyst (Stafne = BELOW canal; model wrong)
+- rafi_10_3df26c5213 — PV most common site = buccal mucosa (marked correct; model said gingiva)
+- rafi_10_15dfaa32c1 — persistent white lesion → biopsy after 2 weeks (2-week rule; marked correct)
+- rafi_10_56af9e36fc — most common parotid CANCER = mucoepidermoid (model answered "tumor" = pleomorphic adenoma — question says cancer)
+- rafi_11_3f820bebe5 — cleft lip/palate → Class III tendency (marked correct)
+- rafi_10_83d78639b6 — ground glass = fibrous dysplasia (NOT offered; marked odontoma wrong — broken, register)
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
