@@ -208,6 +208,12 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 220 | rafi_03_cd4f6a70b5 | Composite → **Amalgam** (supracrestal perforation) | endo |
 | 221 | rafi_04_db1610ad0e | K-file → **H-file** (active tip) | endo |
 | 222 | rafi_04_12cb569d2e | Reamers → **K-files** (flexible) | endo |
+| 223 | rafi_04_bd46094b3f | Internal resorption → **Root caries** (intact canal) | endo |
+| 224 | rafi_04_cee6f0d7b5 | Incomplete pulp removal → **Pulp bleeding** (discoloration) | trauma |
+| 225 | rafi_04_0ca7d0582b | Reamers → **K-file** (flexible) | endo |
+| 226 | rafi_04_91b4a400aa | 4 weeks → **4 months** (mid-third root fx) | trauma |
+| 227 | rafi_04_8f63d3ac77 | → **EDTA** (inorganic/smear layer) | endo |
+| 228 | rafi_04_8a288d3b3d | RCT → **Extraction** (VRF) | endo |
 
 
 
@@ -258,6 +264,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_20_ea75e896e9 — fluoride-releasing cement: GIC not offered (broken; same as rafi_13_77c5e2df19)
 - ab2_2b6d04a4a1 — lateral luxation splint 4 weeks NOT offered; option 2 is a junk marker "(No 4 weeks option)" (broken)
 - rafi_03_bc3dfe851b — "standard ISO file": 12/16/18 not ISO sizes (broken)
+- rafi_04_d4958735c5 — silver point main disadvantage = CORROSION, not offered (broken)
 
 
 ## ❌ FALSE POSITIVES (marked answer CORRECT — model misread) — keep
@@ -348,6 +355,12 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - saud_delta_005 — infraorbital → cavernous sinus thrombosis (correct)
 - rafi_01_a5f5d5a672 — Endo Ice -26.6°C (passage -26.2; same material, marked correct)
 - rafi_02_9b57360518 — GG#1 = 0.5mm = ISO 50 (correct; model misread)
+- rafi_04_42a1122881 — cut 2.0mm #20→#24 (taper math, correct)
+- rafi_04_461f02c932 — heavy metal sulfates = gutta-percha radiopacifier (correct)
+- rafi_04_03b7d69e07 — CHX most effective vs E. faecalis (correct)
+- rafi_04_2c3d1aba70 — EDTA gel = the exception (classic)
+- rafi_04_963efa9009 — 2h dry: endo before replant (defensible per delayed-replantation protocol)
+- rafi_04_367ddeed4e — incomplete obturation = classic failure cause (defensible)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
