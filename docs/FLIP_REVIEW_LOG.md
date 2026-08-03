@@ -468,7 +468,14 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 504 | rafi_08_b491a923e2 | aspirin → **Pethidine** (sickle cell) | OMS |
 | 505 | rafi_08_4f0a1166c2 | MRI → **Arthrography** (disc perforation) | radiology |
 | 506 | rafi_08_998647706c | SCC → **Keratoacanthoma** (rapid growth + crater) | oral path || 507 | rafi_08_46814dd597 | Parry-Romberg → **Peutz-Jeghers** (mucosal melanotic macules) | oral path |
-| 508 | rafi_08_d3e96a0546 | AOT → **CEOT Pindborg** (mand premolar + flecks) | oral path |
+| 508 | rafi_08_d3e96a0546 | AOT → **CEOT Pindborg** (mand premolar + flecks) | oral path || 509 | rafi_08_90cd7ed585 | buccally → **Palatally** (palatal root tilt) | anatomy |
+| 510 | rafi_08_a2cc0713b4 | masseter → **Medial pterygoid** (step deformity) | OMS |
+| 511 | rafi_08_3f39dcec94 | after lat incisors → **Immediately** (mesiodens) | pedo |
+| 512 | rafi_08_edb95871c9 | submandibular fossa → **Mental foramen** (#44 apex) | radiology |
+| 513 | rafi_10_b6e848179c | low pull → **High pull** (hyperdivergent) | ortho |
+| 514 | rafi_10_d15874cc1d | class I → **Class II div 1** (protrusion + lips) | ortho |
+| 515 | rafi_10_b0ca969537 | ZOE → **MTA** (primary pulpotomy) | pedo |
+
 
 
 
@@ -877,6 +884,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_08_fae0e239dc — NORMAL post-extraction course: pain diminishes after 5 days (model cited alveolar osteitis = the abnormal complication)
 - rafi_08_d966adae9f — lidocaine+epi max ≈ 7 mg/kg (80kg → 560 → 550 offered = closest; model's 5mg/kg nonstandard)
 - rafi_08_e602118942 — multiple mixed radiopaque/radiolucent anterior-mandible lesions, vital teeth, no expansion = FLORID OSSEOUS DYSPLASIA → observe/follow-up (model said fibrous dysplasia + physician; wrong)
+- rafi_08_95afcf8726 — aspirin stop 7 days (consistent with ab2_c2253ab705 1-week rule; model's 3 days too short)
+- rafi_08_14e198e11a — root most likely pushed into maxillary sinus = PALATAL root of first molar (classic; model said MB)
+- rafi_08_0e55b155fe — pediatric LA toxic/max dose 4.4 mg/kg (classic; model's 2 mg/kg too low)
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
