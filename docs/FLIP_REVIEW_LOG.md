@@ -352,6 +352,13 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 373 | rafi_16_eaad5211cd | 15 → **20s** (veneer etch) | Fixed |
 | 374 | rafi_17_202928ee0f | Macro → **Hybrid** (highest filler) | materials |
 | 375 | rafi_17_412f512086 | one-plane → **insufficient opaque layer** | Fixed |
+| 376 | rafi_18_e08f4a624e | Active → **Arrested caries** (10yr opaque) | cariology |
+| 377 | rafi_18_9d323901be | proximal contact → **Tooth contour** (tissue protection) | perio |
+| 378 | rafi_18_726042bcb6 | rinsing → **promotes bonding** (primer) | operative |
+| 379 | rafi_18_141eb61877 | apical → **coronal** (die ditching) | Fixed |
+| 380 | rafi_18_5f76463d89 | 18% → **5% HF** (e.max etch) | Fixed |
+| 381 | rafi_18_899e7b5dcf | max buccal only → **max buccal + mand lingual** (shear) | occlusion |
+| 382 | rafi_18_7ec3fe4895 | balanced → **Group function** (posterior stress) | occlusion |
 
 
 
@@ -406,6 +413,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_08_8b7dbb6ea6 — supragingival calculus "except": all 4 options are characteristics (broken)
 - rafi_17_46df219c7b — high-lipid-diet gingivitis: no valid option (broken)
 - rafi_17_f8f45558ed — tray perforations effect: options garbled (broken/ambiguous)
+- rafi_18_9793f334c2 — alginate water contamination: grainy vs chalky cast (ambiguous)
 - rafi_08_3805600b25 — high-copper % : ≥12% not offered (2/5/9/all wrong) (broken)
 - rafi_08_6dfb9d2845 — post-1st-yr resorption 0.2mm/yr not offered (0.02 = typo) (broken)
 - rafi_15_e2981fe47b — dysphagia/nausea = OVER-extension of PPS; only "under/absence" offered (broken)
@@ -589,6 +597,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_17_d07237d88a — Long walls ↑ resistance form (garbled option "Log" = Long; correct)
 - rafi_17_9bbce098ab — glazing = final step before cementing (correct)
 - rafi_17_dd37f1125b — 34-38 + 48 unreplaced = Class II (correct)
+- rafi_18_54884e29b5 — GIC (non-bonding) caused Li-disilicate fracture (correct reading)
+- rafi_18_b17fdb18c7 — maintain group function / unilateral (defensible)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
