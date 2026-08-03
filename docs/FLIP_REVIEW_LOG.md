@@ -52,7 +52,11 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 47 | rafi_13_96fb76b9b0 | Bad OH → **Smoking** (persistent perio) | Carranza || 48 | rafi_16_b1c28dbaa8 | allow accumulation → **prevent gram-ve growth** (overhang) | Carranza |
 | 49 | rafi_17_89cf6729db | Circular → **Dentoperiosteal fibers** (+ cleaned option text) | Carranza |
 | 50 | rafi_17_37e31ccc5e | Apical flap → **Coronally positioned flap** (root coverage) | Carranza |
-| 51 | rafi_17_9585d3e49c | Lateral displaced → **Vertical incision/coronal flap** (Miller I) | Carranza |
+| 51 | rafi_17_9585d3e49c | Lateral displaced → **Vertical incision/coronal flap** (Miller I) | Carranza || 52 | rafi_18_b60c1116f7 | fremitus anterior → **angular bone loss** (TFO on molar) | Carranza |
+| 53 | rafi_18_29cea16c56 | Grade 3 → **Grade 1** (1 mm mobility) | Carranza |
+| 54 | rafi_19_6514632332 | GTR → **furcation plasty** (Class II furcation) | Carranza |
+| 55 | rafi_19_9b985200b9 | metronidazole gel → **doxycycline fiber** (local delivery) | Carranza |
+
 
 
 
