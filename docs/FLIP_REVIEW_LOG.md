@@ -220,6 +220,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 232 | rafi_08_034789673f | Triangular → **Oval** (max incisor access) | endo |
 | 233 | rafi_08_79f9a030a6 | Trapezoidal → **Triangle base mesial** (mand 2nd molar) | endo |
 | 234 | rafi_10_a78a4682de | small below crest → **small at crest** (perforation) | endo |
+| 235 | rafi_11_4159c72cb3 | contraindicated → **Replant immediately** (milk avulsion) | trauma |
+| 236 | rafi_12_7f0d237fcc | Extruded GP → **VRF** (delayed percussion pain) | endo |
+| 237 | rafi_14_aaaef9452a | Extraction → **Surgical endo** (recurrent abscess) | endo |
 
 
 
