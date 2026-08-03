@@ -467,7 +467,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 503 | rafi_08_40bd3193b6 | titanium → **Polylactic acid** (resorbable) | OMS |
 | 504 | rafi_08_b491a923e2 | aspirin → **Pethidine** (sickle cell) | OMS |
 | 505 | rafi_08_4f0a1166c2 | MRI → **Arthrography** (disc perforation) | radiology |
-| 506 | rafi_08_998647706c | SCC → **Keratoacanthoma** (rapid growth + crater) | oral path |
+| 506 | rafi_08_998647706c | SCC → **Keratoacanthoma** (rapid growth + crater) | oral path || 507 | rafi_08_46814dd597 | Parry-Romberg → **Peutz-Jeghers** (mucosal melanotic macules) | oral path |
+| 508 | rafi_08_d3e96a0546 | AOT → **CEOT Pindborg** (mand premolar + flecks) | oral path |
+
 
 
 
@@ -869,6 +871,12 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_08_743825a3d1 — TMJ blood supply = EXTERNAL carotid branches (maxillary + superficial temporal; model's B+C wrong)
 - rafi_08_c455d30d96 — condylar growth = INTERSTITIAL cartilage + endochondral ossification (marked correct)
 - rafi_08_6ff8e50c9d — tobacco/snuff buccal lesion, hyperkeratosis + wide rete = VERRUCOUS carcinoma (model said SCC)
+- rafi_08_7a61c16449 — anterolateral hard palate = LIPID (fat) tissue (model's own reason agrees)
+- rafi_08_ed18979733 — anterolateral palate submucosa = lipid tissue (model's own reason agrees)
+- rafi_08_0b50444f7e — impacted canine localization: OCCLUSAL radiograph (buccolingual; model's own reason agrees)
+- rafi_08_fae0e239dc — NORMAL post-extraction course: pain diminishes after 5 days (model cited alveolar osteitis = the abnormal complication)
+- rafi_08_d966adae9f — lidocaine+epi max ≈ 7 mg/kg (80kg → 560 → 550 offered = closest; model's 5mg/kg nonstandard)
+- rafi_08_e602118942 — multiple mixed radiopaque/radiolucent anterior-mandible lesions, vital teeth, no expansion = FLORID OSSEOUS DYSPLASIA → observe/follow-up (model said fibrous dysplasia + physician; wrong)
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
