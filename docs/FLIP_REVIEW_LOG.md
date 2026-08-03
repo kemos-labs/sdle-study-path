@@ -445,7 +445,11 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 473 | rafi_07_0808d30640 | Pontiac → **Retainer** | Fixed |
 | 474 | rafi_07_50c3bfbf15 | Shoulder → **Chamfer** (full veneer) | Fixed |
 | 475 | rafi_07_9fe25de15a | convex BL → **convex MD + concave BL** (pontic) | Fixed |
-| 476 | rafi_07_489e1e9042 | 0.5 → **1.5mm** (PM junction) | Fixed |
+| 476 | rafi_07_489e1e9042 | 0.5 → **1.5mm** (PM junction) | Fixed || 477 | rafi_20_86a327c0f5 | tooth mobility → **Schneiderian membrane perforation** | implant |
+| 478 | rafi_06_42a7ee735c | equilibrated → **Spot ground in mouth** (sore spots) | CD |
+| 479 | rafi_06_492f36fa60 | molar submucosal → **Soldered both ends** (FPD) | Fixed |
+| ⚠️ | rafi_08_eba2453d5a | REVERTED 1→2: lisp S→TH = teeth too far **lingually** (classic; earlier labially-flip was wrong) | CD |
+
 
 
 
@@ -757,6 +761,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_06_60839c73da — mandible returns to rest position (not offered; "all incorrect" correct)
 - rafi_07_717e443ef3 — positive cast bubbles = impression bubbles (correct; model backwards)
 - rafi_07_5ec141cfea — 10:15 = 2:3 (correct)
+- rafi_06_8fa56d3851 — lisp → incisors too far palatally (consistent w/ classic; keep)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
