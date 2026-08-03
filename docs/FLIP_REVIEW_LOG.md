@@ -460,7 +460,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 493 | rafi_08_dd8afc9fcf | long face → **Long skull** (dolichocephalic) | ortho |
 | 494 | rafi_08_8d57afa104 | max lat incisor → **Mand 2nd premolar** (missing) | ortho |
 | 495 | rafi_08_36d9da3f83 | pulpectomy → **Extraction** (necrotic + mobility III + furcation) | pedo |
-| 496 | rafi_08_77987f972d | both + SM → **both, no SM** (uncrowded) | pedo |
+| 496 | rafi_08_77987f972d | both + SM → **both, no SM** (uncrowded) | pedo || 497 | rafi_08_c97c9e1215 | extraction → **Apexification** (immature molar + sinus) | pedo |
+| 498 | rafi_08_b7a5ef7639 | case control → **Cross-sectional** (single-time comparison) | ethics |
+| 499 | rafi_08_751959eba8 | low temp → **High temperature** (autoclave) | ethics |
+
 
 
 
@@ -836,6 +839,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_08_658d91ffb8 — fluorosis most susceptible = premolars (longest crown calcification)
 - rafi_08_290ecb085a — hand-over-mouth = hysterical child (classic)
 - rafi_08_7c470ede1a — CHILD mandibular foramen LOWER than occlusal plane (model applied adult anatomy — backwards)
+- rafi_08_ed931e1389 — CDC instrument processing: ultrasonic cleaning (options are all cleaning steps; sterilization = autoclave; question garbled but ultrasonic = best offered)
+- rafi_08_26ee73a077 — BOILING water causes corrosion (dry heat non-corrosive; model's own reason agrees with marked)
+- rafi_08_36267075b3 — wash before sterilization: remove debris/protective biofilm (marked "less time" defensible; ambiguous)
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
