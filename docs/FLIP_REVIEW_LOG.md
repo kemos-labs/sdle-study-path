@@ -180,7 +180,17 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 188 | rafi_16_fe7910d2dc | will be set → **Residual mercury ↑** (over-condensation) | operative || 189 | rafi_16_cd67cf1416 | Ceramic onlay → **Metal crown** (bruxer) | Fixed |
 | 190 | rafi_16_e0c9be6ed0 | 43&45 → **45&46** (indirect retainer opposite) | McCracken |
 | 191 | rafi_16_987ea501b5 | low modulus → **high thermal coefficient** (acrylic) | denture base |
-| 192 | rafi_16_74a94002dc | Implant → **FPD** (malaligned abutments) | Fixed |
+| 192 | rafi_16_74a94002dc | Implant → **FPD** (malaligned abutments) | Fixed || 193 | rafi_17_c4d214827e | metal allergy → **Over-contoured** (gingivitis) | Fixed |
+| 194 | rafi_17_e2e5f908f5 | Zirconia → **Feldspathic** (large silica) | ceramics |
+| 195 | rafi_17_2a05ce5b43 | Embrasure → **Circumferential** (healthy teeth) | McCracken |
+| 196 | rafi_17_86fb0df2fd | Direct retainer → **harmonious occlusion** (stability) | McCracken |
+| 197 | rafi_17_ac6944bce1 | Wax → **Addition silicone** (interocclusal) | RPD |
+| 198 | rafi_17_dd72570e43 | Wax → **Addition silicone** (jaw relation) | RPD |
+| 199 | rafi_17_22167218fe | Immediate → **Transitional denture** | RPD |
+| 200 | rafi_17_ea8efeeca0 | Sectional RPD → **Conventional RPD** | RPD |
+| 201 | rafi_18_531822212d | RMGI → **Adhesive resin** (Li-disilicate) | Fixed |
+| 202 | rafi_18_13e93ec423 | Erosion → **corrosion** (amalgam island) | operative |
+
 
 
 
@@ -224,6 +234,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_08_6dfb9d2845 — post-1st-yr resorption 0.2mm/yr not offered (0.02 = typo) (broken)
 - rafi_15_e2981fe47b — dysphagia/nausea = OVER-extension of PPS; only "under/absence" offered (broken)
 - rafi_16_5591d0a9de — ovate pontic tissue irritation: porcelain vs gold (source marked "NOT SURE")
+- rafi_18_89b6f2d029 — ZOE "increase setting time": model contradicts itself (eugenol accel vs retard); options ambiguous
 
 
 ## ❌ FALSE POSITIVES (marked answer CORRECT — model misread) — keep
