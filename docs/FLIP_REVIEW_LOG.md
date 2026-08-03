@@ -93,7 +93,23 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 95 | rafi_08_aef376f677 | B and C → **follow cusp outline** (cusp capping) | Sturdevant |
 | 96 | rafi_08_91abd1401b | eliminate plaque → **incipient caries + high-risk** (primary goal) | operative |
 | 97 | rafi_08_2e3dea1b3f | 1st max premolar → **mand central incisor** (contact area) | anatomy |
-| 98 | rafi_08_40dac2203f | prism edge → **DEJ** (enamel density lowest) | histology |
+| 98 | rafi_08_40dac2203f | prism edge → **DEJ** (enamel density lowest) | histology || 99 | rafi_08_4b9992f760 | internal pressure → **wax left off die** (shrinkage) | Fixed |
+| 100 | rafi_08_31123ca1f9 | slurry water → **hot water** (alginate set) | materials |
+| 101 | rafi_08_8b67c4f218 | Alginate → **Polyether** (sticks to teeth) | materials |
+| 102 | rafi_08_da0f89d41b | 1mm subgingival → **at gingiva** (recession) | Fixed |
+| 103 | rafi_08_62dbaaefc7 | Higher chroma → **Lower chroma** (cervical third) | shade |
+| 104 | rafi_08_e29bc4b196 | short span → **long span** (non-rigid connector) | Fixed |
+| 105 | rafi_08_bac2161efc | Abrasion → **Attrition** (opposing ceramic) | Fixed |
+| 106 | rafi_08_2b8db1f75a | partial veneer → **Full crown** (caries+incisal wear) | Fixed |
+| 107 | rafi_08_1801f05265 | terminal abutments → **abutments + ridge** (distal extension) | McCracken |
+| 108 | rafi_08_b54f38562b | instruct patient → **Reline** (loose dentures) | prostho |
+| 109 | rafi_08_e9bc96e95b | ↑VDO → **↑interocclusal space** (cheilitis) | CD |
+| 110 | rafi_08_5681033c65 | Buccinator → **Mylohyoid** (lingual border) | CD |
+| 111 | rafi_08_92bbe6afc2 | Clenching → **Gagging** (↑VDO) | CD |
+| 112 | rafi_08_5399c69c49 | Bennett → **horizontal condylar inclination** (facebow) | articulator |
+| 113 | rafi_08_93acbe4f8e | Exacting → **Hysterical** (patient type) | prostho |
+| 114 | rafi_08_f590d24b45 | Hanau → **Whipmix** (arcon) | articulator |
+
 
 
 
