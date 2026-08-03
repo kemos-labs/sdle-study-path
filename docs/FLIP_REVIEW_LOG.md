@@ -474,7 +474,24 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 512 | rafi_08_edb95871c9 | submandibular fossa → **Mental foramen** (#44 apex) | radiology |
 | 513 | rafi_10_b6e848179c | low pull → **High pull** (hyperdivergent) | ortho |
 | 514 | rafi_10_d15874cc1d | class I → **Class II div 1** (protrusion + lips) | ortho |
-| 515 | rafi_10_b0ca969537 | ZOE → **MTA** (primary pulpotomy) | pedo |
+| 515 | rafi_10_b0ca969537 | ZOE → **MTA** (primary pulpotomy) | pedo || 516 | rafi_10_d2af381c6a | M. tuberculosis → **Legionella** (waterlines) | ethics |
+| 517 | rafi_10_7e31e3b7f2 | HIV → **Mycobacteria TB** (mask removed first) | ethics |
+| 518 | rafi_10_d55b28cfc9 | sodium nitrite → **sodium nitrate** (Malamed) | ethics |
+| 519 | rafi_10_3432c5a665 | 120 → **132°C** (fastest autoclave) | ethics |
+| 520 | rafi_10_a90f146c53 | cholinergic → **Antihistamine** (xerostomia) | med |
+| 521 | rafi_10_95f1d6a762 | anti-diabetic → **Pilocarpine** (xerostomia Rx) | med |
+| 522 | rafi_10_632705644a | penicillin → **Amox-clavulanate** (odonto sinusitis) | OMS |
+| 523 | rafi_10_db470ffcec | antibiotic → **Corticosteroids** (erosive LP) | oral med |
+| 524 | rafi_10_ebbe6c0be6 | Class 1 → **Class 2** (MI >6mo = ASA II) | med |
+| 525 | rafi_10_515dca834d | hypoglycemia → **Vasovagal syncope** | med |
+| 526 | rafi_10_0a2813ba0d | incisional biopsy → **Annual radiographs** (incidental) | radiology |
+| 527 | rafi_10_fe466b8e78 | defer all → **elective in isolating room** (flu) | med |
+| 528 | rafi_10_62ccd398d8 | temporal → **Superior alveolar artery** | anatomy |
+| 529 | rafi_10_30295d87bc | squamous tissue → **Dental lamina** (Epstein pearls) | pedo |
+| 530 | rafi_10_2b772a84d8 | angioedema → **Lichenoid reaction** (thiazides) | oral med |
+| 531 | rafi_10_2daadbae70 | keratocyst → **Ameloblastoma** (septa + resorption) | oral path |
+| 532 | rafi_10_8770f92717 | full clearance → **Refer physician** (diabetic perio) | perio |
+
 
 
 
@@ -887,6 +904,17 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_08_95afcf8726 — aspirin stop 7 days (consistent with ab2_c2253ab705 1-week rule; model's 3 days too short)
 - rafi_08_14e198e11a — root most likely pushed into maxillary sinus = PALATAL root of first molar (classic; model said MB)
 - rafi_08_0e55b155fe — pediatric LA toxic/max dose 4.4 mg/kg (classic; model's 2 mg/kg too low)
+- rafi_10_6445225773 — scalpel/sharps = RED container (standard sharps; model's orange is NHS-specific)
+- rafi_10_67314fc890 — unnecessary referral violates nonmaleficence (avoidable harm/cost; model said autonomy)
+- rafi_10_88957c8e6d — extracted tooth w/ amalgam → medical/hazardous waste (not incinerated; model pedantic)
+- rafi_10_23ef393899 — vomit spill cleanup → INTERMEDIATE-level disinfection (norovirus; model said water+cleaner only)
+- rafi_10_774f9a32d6 — cold sterilization = LEAST effective (model's own reason agrees)
+- rafi_10_d490753ff3 — dry ice = -78.5°C; -56 closest offered (keep, broken-ish)
+- rafi_10_3a3b113ea4 — CARBON STEEL → dry heat (hot oven) avoids corrosion (autoclave corrodes; model wrong)
+- rafi_10_9b64098aac — floating maxilla = LE FORT I (classic; model said III)
+- rafi_10_d368872103 — prosthetic valve + extraction: check INR (warfarin) first + IE prophylaxis (model reason mismatched)
+- rafi_10_e827076bc3 — pharyngeal arches: 5 visible pairs (6th rudimentary; model said 4)
+- rafi_10_edb1875478 — edema organism question garbled; Staph hedged (keep)
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
