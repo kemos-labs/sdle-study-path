@@ -448,7 +448,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 476 | rafi_07_489e1e9042 | 0.5 → **1.5mm** (PM junction) | Fixed || 477 | rafi_20_86a327c0f5 | tooth mobility → **Schneiderian membrane perforation** | implant |
 | 478 | rafi_06_42a7ee735c | equilibrated → **Spot ground in mouth** (sore spots) | CD |
 | 479 | rafi_06_492f36fa60 | molar submucosal → **Soldered both ends** (FPD) | Fixed |
-| ⚠️ | rafi_08_eba2453d5a | REVERTED 1→2: lisp S→TH = teeth too far **lingually** (classic; earlier labially-flip was wrong) | CD |
+| ⚠️ | rafi_08_eba2453d5a | REVERTED 1→2: lisp S→TH = teeth too far **lingually** (classic; earlier labially-flip was wrong) | CD || 480 | rafi_08_43a5bf4c8c | 31 → **32** (cut 1mm off #30 cone, 0.02 taper) | endo |
+| 481 | rafi_18_9793f334c2 | tearing → **Grainy mix** (alginate powder H2O) | materials |
+
 
 
 
@@ -762,6 +764,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_07_717e443ef3 — positive cast bubbles = impression bubbles (correct; model backwards)
 - rafi_07_5ec141cfea — 10:15 = 2:3 (correct)
 - rafi_06_8fa56d3851 — lisp → incisors too far palatally (consistent w/ classic; keep)
+- rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
+- saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
+- rafi_01_e567d4d5d2 — winged clamp = **simultaneous/single-unit** application (Endodontics Principles: "placement of the rubber dam as a single unit requires the use of a winged clamp") → REGISTER RESOLVED (marked correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
