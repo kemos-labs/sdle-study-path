@@ -86,7 +86,15 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 87 | rafi_06_3c6738d513 | both functional → **teeth anatomical + ridge functional** | McCracken |
 | 88 | rafi_06_6a45875783 | no tooth control → **need for reline** (immediate denture) | prostho |
 | 89 | rafi_07_25e5fe5ed8 | long sprue → **High temperature** (shrink spot) | casting |
-| 90 | rafi_07_e14f44079e | cover half → **cover ALL** (retromolar pad, 3rd occurrence) | Complete Dentures |
+| 90 | rafi_07_e14f44079e | cover half → **cover ALL** (retromolar pad, 3rd occurrence) | Complete Dentures || 91 | rafi_07_01f3ae35d0 | ↓VDO → **Vit B deficiency** (cheilitis+glossitis) | oral med |
+| 92 | rafi_07_10a3872c81 | Immediate → **High-impact denture** (butadiene-styrene) | materials |
+| 93 | rafi_07_7143aa9cc9 | Facebow → **Willis gauge** (bizygomatic width) | prostho |
+| 94 | rafi_07_11e6b8c0e3 | buccal lower → **buccal of UPPER** (cheek biting) | CD |
+| 95 | rafi_08_aef376f677 | B and C → **follow cusp outline** (cusp capping) | Sturdevant |
+| 96 | rafi_08_91abd1401b | eliminate plaque → **incipient caries + high-risk** (primary goal) | operative |
+| 97 | rafi_08_2e3dea1b3f | 1st max premolar → **mand central incisor** (contact area) | anatomy |
+| 98 | rafi_08_40dac2203f | prism edge → **DEJ** (enamel density lowest) | histology |
+
 
 
 
