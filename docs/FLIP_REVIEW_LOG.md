@@ -321,6 +321,11 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 340 | rafi_10_4ab05abf69 | moisture → **Pulp involvement** (deep amalgam) | operative |
 | 341 | rafi_10_4eaa8fcc09 | sensitivity → **tray placement** (gag reflex) | CD |
 | 342 | rafi_10_7985f4d420 | → **absorbs water/swells** (polyether) | materials |
+| 343 | rafi_10_1d34c142d2 | Deep vestibule → **Shallow vestibule** (lingual bar) | McCracken |
+| 344 | rafi_10_7e02959759 | Leiomyoma → **Fibroepithelial polyp** (denture) | oral path |
+| 345 | rafi_10_466f3851dd | Loss of support → **Loss of retention** (no ret arm) | McCracken |
+| 346 | rafi_10_a99e105ada | retentive first → **reciprocal first** (mobility) | McCracken |
+| 347 | rafi_11_809bbaafe4 | 3 → **Type I** (pulp collagen) | histology |
 
 
 
@@ -534,6 +539,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_10_feaf42f3dd — polysulfide contraindicated for sulfur-sensitive (correct)
 - rafi_10_3ff2fea7b9 — Class I highest C-factor/shrinkage (correct)
 - rafi_10_ff74ed93aa — delayed pain = zinc-containing amalgam (classic)
+- rafi_11_5a863bf9f1 — separate etch/prime/bond = 4th gen (correct)
+- rafi_11_493987cb8b — high-copper 13% within 12-30% (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
