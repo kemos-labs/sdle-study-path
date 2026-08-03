@@ -406,7 +406,15 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 429 | rafi_02_81b983721a | 5-7 → **14-21 days** (established gingivitis) | perio |
 | 430 | rafi_02_f2b9aa87ad | Grade 1 → **Grade 2** (papilla+marginal) | perio |
 | 431 | rafi_03_825428c572 | 7 → **28 days** (CT healing) | perio |
-| 432 | rafi_04_21df600cd5 | Class I desc → **Combined** (Seibert III) | perio |
+| 432 | rafi_04_21df600cd5 | Class I desc → **Combined** (Seibert III) | perio || 433 | rafi_04_abc993a960 | 90° → **60-70°** (curette working angle) | perio |
+| 434 | rafi_04_9072f173d2 | Columbia → **Gracey 11/12** (not universal) | perio |
+| 435 | rafi_04_1472bd84dc | Medullary → **Cortical** (apical third) | perio |
+| 436 | rafi_04_e415bbded1 | Poor → **Fair** (uncontrolled DM) | perio |
+| 437 | rafi_04_7da1f1450e | Direct → **CBCT** (gingival thickness) | perio |
+| 438 | rafi_04_e80848e0b6 | Gracey → **Explorer** (subgingival detection) | perio |
+| 439 | rafi_04_b902acf2eb | Upper 1st premolar → **Upper 1st molar** (worst) | perio |
+| 440 | rafi_04_ee91d10a38 | Below margin → **At gingival margin** (recession) | Fixed |
+
 
 
 
@@ -470,6 +478,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_08_43a5bf4c8c — cut 1mm off #30: new tip 0.32mm (#32), not offered (broken)
 - rafi_12_68bc391e9d — symptomatic pulpitis definition: hyperemia ≠ (ambiguous)
 - rafi_15_8564eb49ec — most widely used sealer = ZOE-based, not offered (broken)
+- rafi_04_4f8e77ae69 — "diagnosis phase": diagnosis precedes numbered phases (ambiguous)
 - rafi_08_3805600b25 — high-copper % : ≥12% not offered (2/5/9/all wrong) (broken)
 - rafi_08_6dfb9d2845 — post-1st-yr resorption 0.2mm/yr not offered (0.02 = typo) (broken)
 - rafi_15_e2981fe47b — dysphagia/nausea = OVER-extension of PPS; only "under/absence" offered (broken)
@@ -692,6 +701,13 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - ab2_9c2674fcb9 — J-shaped + deep pocket = VRF → extraction (correct)
 - rafi_02_13d9f607bb — biologic width 3mm after crown lengthening (defensible)
 - rafi_02_cb27960f44 — VRF detected by vertical percussion (classic)
+- rafi_04_393aa5b3fc — PerioChip ~9 days (7-10 within range)
+- rafi_04_0b8c17826a — PerioChip ≥5mm pockets (correct)
+- rafi_04_7851b4afe4 — initial perio therapy involves hard+soft (defensible)
+- rafi_04_dd5a544dd8 — G&S 1.5mm = Grade 2 (correct; model called it "Class")
+- rafi_04_e675994f02 — H&C Stage II = entire papilla necrosis (correct)
+- rafi_04_54b86e8b84 — enlargement ≥3/4 crown = Grade IV (model agrees)
+- rafi_06_10faa2000a — microthreads reduce crestal bone loss (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
