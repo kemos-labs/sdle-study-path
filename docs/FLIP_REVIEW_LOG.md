@@ -300,7 +300,15 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 317 | rafi_08_4d00beee1b | Crown → **Complex amalgam** (questionable prognosis) | operative |
 | 318 | rafi_08_b66e893359 | Qualitative only → **Quantitative + qualitative** (FOTI) | cariology |
 | 319 | rafi_08_57b52a4d72 | Arrested → **Active lesion** (white chalky) | cariology |
-| 320 | rafi_08_c87e30964d | Sjogren → **Cystic fibrosis** (reduced caries) | cariology |
+| 320 | rafi_08_c87e30964d | Sjogren → **Cystic fibrosis** (reduced caries) | cariology || 321 | rafi_08_7f19c8f226 | dislodgment → **prevent marginal leak** (provisional) | Fixed |
+| 322 | rafi_08_3df426f85e | Both true → **Both false** (impression times) | materials |
+| 323 | rafi_08_f08421d0d4 | thin pontics → **Both bulky** (long span) | Fixed |
+| 324 | rafi_08_f1ce5a15ce | 12,14,15 → **12,14** (canine FPD) | Fixed |
+| 325 | rafi_08_ff020acf00 | underfired → **excessive fired** (milky porcelain) | ceramics |
+| 326 | rafi_08_e6ade9f5dc | Pontic → **Retainer** (attached to abutment) | Fixed |
+| 327 | rafi_08_5c06ab5c42 | non-carious → **Heavily resorbed ridge** (no bridge) | Fixed |
+| 328 | rafi_08_f7d44cd75d | Above crest → **Below gingival crest** (finish lines) | Fixed |
+
 
 
 
@@ -506,6 +514,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_06_b49ad7b9dd — divergent walls when ridge <0.6mm (~0.5mm rule; correct)
 - rafi_08_7ecde76eb7 — galvanic: replace filling (defensible)
 - rafi_08_1cf7a049d0 — facial max posterior at risk in high caries (model agrees)
+- rafi_08_d74a2d2800 — packing follows flasking (correct)
+- rafi_08_7be0bc1b53 — maxillary incisor most common resin-bonded FPD (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
