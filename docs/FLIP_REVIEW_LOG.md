@@ -154,7 +154,31 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 161 | rafi_14_d3e4b7de26 | non-working → **working-side shift** (Bennett movement) | occlusion |
 | 162 | rafi_14_e380ee90c7 | distobuccal periphery → **narrow BL occlusal table** | RPD |
 | 163 | rafi_14_7bab51d99f | None → **2 indirect retainers** (class III mod 1) | McCracken |
-| 164 | rafi_14_1b29e9dc21 | U shaped → **V-shaped palate** (lateral force) | CD |
+| 164 | rafi_14_1b29e9dc21 | U shaped → **V-shaped palate** (lateral force) | CD || 165 | rafi_03_d0572a53dd | Decrease value↑chroma → **decrease value + decrease chroma** (violet) | ceramics |
+| 166 | rafi_04_70e0299f2a | Two third → **One half** (RPD retromolar pad) | McCracken |
+| 167 | rafi_04_df780b8a35 | Monoplane → **Lingualized** (resorbed ridge) | CD |
+| 168 | rafi_06_6397c25106 | Max 1st premolar → **Maxillary canine** (canine fossa) | morphology |
+| 169 | rafi_06_3b99906cbc | 1-2 ft → **3-6 ft** (shade distance) | operative |
+| 170 | rafi_07_e5163a647b | Square → **Flat** (palate form) | CD |
+| 171 | rafi_08_b34bd29cc1 | Corrosion↓ → **UTS decreases** (gold content) | materials |
+| 172 | rafi_08_2c703179ea | base w/o catalyst → **base + small catalyst** (veneer try-in) | Fixed |
+| 173 | rafi_08_f8540e5e46 | Zinc phosphate → **Composite resin** (post & core) | Fixed |
+| 174 | rafi_08_e2030cdfe9 | All above → **increase height+width** (ridge augment) | implant |
+| 175 | rafi_08_b9c55d9727 | Alumina+Potassium → **Alumina+Silica** (feldspathic) | ceramics |
+| 176 | rafi_14_8e099272f4 | 35-45 → **20-25mm** (pure condylar rotation) | occlusion |
+| 177 | rafi_14_0764e3c133 | Monoplane → **Lingualized** (severe resorption) | CD |
+| 178 | rafi_15_e0b80635ab | cold slab → **Add eugenol** (ZOE accelerate) | materials |
+| 179 | rafi_15_3e443e389f | Unilateral → **Mutually protected** (canine implant) | implant |
+| 180 | rafi_15_b4aaf54894 | same as tooth → **implant more** (plaque 40%) | perio |
+| 181 | rafi_15_49950e7088 | =90 → **Less than 90°** (rest↔minor connector) | McCracken |
+| 182 | rafi_15_4fed12386b | A-P strap → **U shape** (torus connector) | McCracken |
+| 183 | rafi_15_3b2437786b | low modulus → **high coeff. of expansion** (acrylic) | denture base |
+| 184 | rafi_15_6c840854ce | centric occlusion → **In centric relation** (mounting) | RPD |
+| 185 | rafi_15_b4c3550444 | Hypoplastic → **Flat** (combination syndrome) | CD |
+| 186 | rafi_15_3566b9575d | Eating dates → **Soft and cold diet** (CD instructions) | CD |
+| 187 | rafi_16_0a7121720c | Fluoride gel → **OHI emphasis** (white spots) | cariology |
+| 188 | rafi_16_fe7910d2dc | will be set → **Residual mercury ↑** (over-condensation) | operative |
+
 
 
 
@@ -194,6 +218,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_06_0d311c408f — amalgam contraindication: all options are valid uses (ambiguous)
 - rafi_08_3805600b25 — high-copper % : ≥12% not offered (2/5/9/all wrong) (broken)
 - rafi_08_6dfb9d2845 — post-1st-yr resorption 0.2mm/yr not offered (0.02 = typo) (broken)
+- rafi_15_e2981fe47b — dysphagia/nausea = OVER-extension of PPS; only "under/absence" offered (broken)
 
 
 ## ❌ FALSE POSITIVES (marked answer CORRECT — model misread) — keep
@@ -266,6 +291,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_08_3f86e9fe59 — max 2 posterior teeth in bridge (correct)
 - rafi_08_db10b05859 — 'M' → VDR/rest position (defensible)
 - rafi_08_9031eae810 — adhesives for FLAT palate (correct; model backwards)
+- rafi_14_47e3ebee07 — incisive foramen→centrals 9-10mm (classic)
+- rafi_15_dbbd995691 — PD5mm+inflam, no bone loss → soft tissue surgery (model agrees)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
