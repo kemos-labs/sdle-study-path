@@ -537,6 +537,12 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_d4958735c5 — silver point main disadvantage = CORROSION, not offered (broken)
 
 
+- **HIDDEN 2026-08-03 (usable:false + _repair_pending)** — no valid option offered; marked answers factually wrong:
+  rafi_04_0d96b8c5fe (night pain: irreversible pulpitis absent) · rafi_08_6dfb9d2845 (0.02 typo) · rafi_15_e2981fe47b (PPS over-extension) ·
+  rafi_12_68bc391e9d (symptomatic pulpitis) · rafi_15_8564eb49ec (ZOE sealer) · ab2_2b6d04a4a1 (lateral luxation 4wk) ·
+  rafi_03_bc3dfe851b (ISO 15) · rafi_04_d4958735c5 (silver corrosion) · rafi_04_381c1e1f81 (MTA 3:1) ·
+  rafi_20_bfd4d592dd (crown lengthening) · ab2_5c94fb585c (indirect retainer)
+
 ## ❌ FALSE POSITIVES (marked answer CORRECT — model misread) — keep
 
 - hy28, ab2_30ae66ddfd, pass_fp_005 — IAN safety 2mm (standard)
