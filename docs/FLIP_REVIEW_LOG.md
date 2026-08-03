@@ -345,6 +345,11 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 366 | rafi_14_00720da1f4 | matte → **Rough** (active caries) | cariology |
 | 367 | rafi_15_e882e7d03c | marginal leakage → **Irreversible pulpitis** | operative |
 | 368 | rafi_15_b3a0dec022 | High occlusion → **Irreversible pulpitis** (class V) | operative |
+| 369 | rafi_16_a3567a2715 | smaller core → **Laser troughing** (thin phenotype) | Fixed |
+| 370 | rafi_16_bf3827b3e3 | Lapped → **Window prep** (fluorosis veneer) | Fixed |
+| 371 | rafi_16_f37c332ef3 | Reattach → **Remove post + new post** | Fixed |
+| 372 | rafi_16_5a7dd32843 | marginal discrepancy → **weak porcelain bond** (zirconia) | Fixed |
+| 373 | rafi_16_eaad5211cd | 15 → **20s** (veneer etch) | Fixed |
 
 
 
@@ -572,6 +577,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_14_9e6f2d581c — no water = heat/pulp damage (closest option kept)
 - rafi_14_409d090359 — central incisor contact at incisal third (correct; model text agrees)
 - rafi_15_6805500167 — palatal burning → incisive foramen pressure (defensible; model reason mismatched)
+- rafi_16_095b48b244 — avoid PMMA for vital teeth (high exotherm; model misread bis-acrylic)
+- rafi_16_9b1235fac4 — equigingival finish line (defensible balance)
+- rafi_16_e818db31fb — 2mm axial → retention compromised (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
