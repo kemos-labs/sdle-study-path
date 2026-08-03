@@ -132,7 +132,16 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 136 | rafi_10_4058f3f263 | titanium → **amalgam** (prophy jet safe) | perio |
 | 137 | rafi_10_b2ca14dcee | short convergent → **long convergent** (abutment) | Fixed |
 | 138 | rafi_10_190ae55767 | modified ridge lap → **Ovate pontic** (esthetic) | Fixed |
-| 139 | rafi_10_e77473e275 | 0.8 → **0.5mm** (porcelain at junction) | Fixed |
+| 139 | rafi_10_e77473e275 | 0.8 → **0.5mm** (porcelain at junction) | Fixed || 140 | rafi_10_fde1e44153 | 1 week → **24 hrs** (tissue recovery) | CD |
+| 141 | rafi_10_3fef0ca3c3 | Xerostomia → **Vit B def** (cheilitis+glossitis) | oral med |
+| 142 | rafi_11_94432ca100 | bonding only → **Calcium hydroxide** (0.5mm dentin) | operative |
+| 143 | rafi_11_02849d1d94 | change all → **reassure patient** (amalgam safety) | ethics |
+| 144 | rafi_11_91e1a5a68b | Internal → **External bleaching** (post-ortho bond) | operative |
+| 145 | rafi_11_49347ffa1b | little contact → **eliminate functional cusp contact** (bruxism) | Fixed |
+| 146 | rafi_11_2b7b82dcc8 | 1.5mm non-functional → **1.5mm FUNCTIONAL cusp** (PFM) | Fixed |
+| 147 | rafi_11_53e9dabfd1 | food impaction → **retainer separation** (pontic bubbles) | Fixed |
+| 148 | rafi_11_4ae5b14c3a | I Bar → **T Bar** (most gingival damage) | McCracken |
+
 
 
 
