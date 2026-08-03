@@ -350,6 +350,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 371 | rafi_16_f37c332ef3 | Reattach → **Remove post + new post** | Fixed |
 | 372 | rafi_16_5a7dd32843 | marginal discrepancy → **weak porcelain bond** (zirconia) | Fixed |
 | 373 | rafi_16_eaad5211cd | 15 → **20s** (veneer etch) | Fixed |
+| 374 | rafi_17_202928ee0f | Macro → **Hybrid** (highest filler) | materials |
+| 375 | rafi_17_412f512086 | one-plane → **insufficient opaque layer** | Fixed |
 
 
 
@@ -403,6 +405,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_06_0d311c408f — amalgam contraindication: all options are valid uses (ambiguous)
 - rafi_08_8b7dbb6ea6 — supragingival calculus "except": all 4 options are characteristics (broken)
 - rafi_17_46df219c7b — high-lipid-diet gingivitis: no valid option (broken)
+- rafi_17_f8f45558ed — tray perforations effect: options garbled (broken/ambiguous)
 - rafi_08_3805600b25 — high-copper % : ≥12% not offered (2/5/9/all wrong) (broken)
 - rafi_08_6dfb9d2845 — post-1st-yr resorption 0.2mm/yr not offered (0.02 = typo) (broken)
 - rafi_15_e2981fe47b — dysphagia/nausea = OVER-extension of PPS; only "under/absence" offered (broken)
@@ -580,6 +583,12 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_16_095b48b244 — avoid PMMA for vital teeth (high exotherm; model misread bis-acrylic)
 - rafi_16_9b1235fac4 — equigingival finish line (defensible balance)
 - rafi_16_e818db31fb — 2mm axial → retention compromised (correct)
+- rafi_17_9867da8af4 — overhang removal: prevent gram- accumulation (defensible)
+- rafi_17_aafb7b4e5e — GIC best enamel bond among offered (defensible)
+- rafi_17_f9b24a2133 — periapical for anterior proximal caries (defensible)
+- rafi_17_d07237d88a — Long walls ↑ resistance form (garbled option "Log" = Long; correct)
+- rafi_17_9bbce098ab — glazing = final step before cementing (correct)
+- rafi_17_dd37f1125b — 34-38 + 48 unreplaced = Class II (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
