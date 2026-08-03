@@ -216,6 +216,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 228 | rafi_04_8a288d3b3d | RCT → **Extraction** (VRF) | endo |
 | 229 | rafi_06_e2f276fd8d | lesion size → **signs & symptoms** (prognosis) | endo |
 | 230 | rafi_07_ffdca72936 | Coronal → **Middle third** (worst root fx) | trauma |
+| 231 | rafi_08_21704a8caf | Thermal → **Cavity test** (most reliable) | endo |
+| 232 | rafi_08_034789673f | Triangular → **Oval** (max incisor access) | endo |
+| 233 | rafi_08_79f9a030a6 | Trapezoidal → **Triangle base mesial** (mand 2nd molar) | endo |
+| 234 | rafi_10_a78a4682de | small below crest → **small at crest** (perforation) | endo |
 
 
 
@@ -374,6 +378,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_07_383e378d20 — GG#3 = 0.9mm (correct)
 - rafi_07_8b34a11aa1 — palatal root curves buccally (model agrees)
 - rafi_07_f82ead54e4 — dull pain+swelling+apical RL = acute apical periodontitis (correct)
+- rafi_08_9ff8d90b8e — smallest file #6 (correct)
+- rafi_08_917d78c505 — non-restorable abutment (correct; model reason garbled)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
