@@ -1,0 +1,83 @@
+# Flip Review Log — book-batch verification (2026-08-03)
+
+Source: `sdle-prep/data/generated/bank_verification/verdicts.jsonl` (contradicted verdicts)
+Rule: **never auto-apply** — every flip below was checked against the actual question + book evidence.
+
+## ✅ FIXED (answer flipped in questions.js) — 22 total
+
+| # | qid | Old → New (option text) | Evidence |
+|---|---|---|---|
+| 1 | rafi_08_b14871058b | After every meal → **Once daily** (denture cleaning) | McCracken RPD |
+| 2 | rafi_06_8276e18190 | Periapical → **Bitewing** (perio bone eval imaging) | White & Pharoah 8e |
+| 3 | rafi_14_c48bbd3c04 | 1.5 → **2.5** (mandibular leeway space) | Contemporary Orthodontics |
+| 4 | rafi_11_dedcd9972e | Veracity → **Unprofessional** (company conflict) | Prof & Ethics Handbook |
+| 5 | rafi_12_63ab8ac155 | option typo "filling" → **filing** (H-file) | Cohen's |
+| 6 | ab2_e122347c16 | Dental caries → **Amelogenesis imperfecta** (familial white patches) | McDonald & Avery |
+| 7 | ab2_989ebbbf08 | cover HALF → **cover ALL** (retromolar pad) | Textbook of Complete Dentures |
+| 8 | ab2_530753dbc6 | Class IV mod 1 → **Class III mod 1** (Kennedy) | McCracken |
+| 9 | rafi_01_99b1c261fc | overextended → **under-extended, cover whole pad** | Textbook of Complete Dentures |
+| 10 | ab2_d23278efba | Incisive papilla → **Lateral to midline** (anterior implant) | Fixed 5e |
+| 11 | ab2_2167b8cfcf | Glutaraldehyde → **Sodium hypochlorite** (polyether disinfection) | Fixed |
+| 12 | rafi_01_235714d35f | Occlusal contacts → **PA X-ray residual cement** (resin cementation) | Fixed 5e |
+| 13 | rafi_01_b4d45ea58d | Pulp exposure → **Short distal axial wall** (tilted molar) | Fixed 5e |
+| 14 | rafi_01_18eaf7b175 | Major connector → **Path of insertion** (surveyor) | McCracken |
+| 15 | rafi_01_cd7e90c0c8 | Occlusal interferences → **Over-extended lingual flanges** (sore throat) | McCracken |
+| 16 | rafi_02_851f0f52bb | Microfilled → **Hybrid** (posterior composite) | Sturdevant |
+| 17 | rafi_02_5010b5ffe7 | distobuccal-mesiopalatal → **mesiobuccal-distopalatal** (oblique ridge) | Sturdevant |
+| 18 | rafi_02_f39719d746 | Wetting → **Incipient caries** (white spot dx) | Sturdevant |
+| 19 | rafi_02_a0ccc2be08 | Erosion → **Attrition** (opposing porcelain) | Sturdevant |
+| 20 | rafi_02_18a6076568 | proceed → **repeat the etching** (saliva contamination) | Sturdevant |
+| 21 | rafi_02_eb1a058734 | Parallel → **Diverge toward pulpal floor** (class II box) | Sturdevant |
+| 22 | rafi_02_11009553ea | Odontoblasts → **Dentinal tubules** (dentin dysplasia) | Pediatric Dentistry |
+| 23 | rafi_02_01b04e403e | 3mo mandible → **6 months** (maxilla integration) | implant protocol |
+| 24 | rafi_02_ec1dec5f3c | synonymous → **still present** (survival ≠ success) | implant criteria |
+| 25 | rafi_02_bc9c2c4106 | crown only → **abutment AND crown** (emergence profile) | implant prostho |
+| 26 | rafi_02_176b68b8dd | close immediately → **temporary material** (screw access) | implant prostho |
+| 27 | rafi_02_f3529e3803 | Jacket → **Full crown** (endo incisor) | Fixed |
+| 28 | rafi_02_77bc2fa1e8 | not carious → **ridge resorption** (bridge contraindication) | Fixed |
+| 29 | rafi_02_80d636aace | cements → **composites** (materials classes) | Phillips || 30 | rafi_02_c64a0094c0 | adjacent surfaces → **Guiding plane** (path of insertion) | McCracken |
+| 31 | rafi_02_502f97fc59 | Major → **Minor connector** (unites casting w/ resin) | McCracken |
+| 32 | rafi_02_4cd1a1a3c8 | Zero → **20 degrees** (incisal guide) | articulator |
+| 33 | rafi_03_d1a67a0574 | Static → **Cohesive** (PFM chip, no metal) | PFM failure |
+| 34 | rafi_03_eb53977d2e | Obtuse → **Butt** (cast metal 90°) | operative |
+| 35 | rafi_03_d7e5c20722 | Long centric → **Wide centric** (medio-lateral) | occlusion |
+| 36 | rafi_04_ee907b2f81 | distobuccal-distopalatal → **mesiobuccal-distopalatal** | dental anatomy |
+
+
+## ⚠️ BROKEN / NEEDS-REVIEW (do NOT flip; repair or exclude)
+
+| qid | Issue |
+|---|---|
+| ab2_7710e019d9 | Closed-mouth impression: no correct option offered (correct = firm ridge) |
+| ab2_f71be23273 | Ante's law: US/FDI numbering mixed (garbled) |
+| fr_boost_033 | Implant-tooth distance: no correct option (1.5-2mm not offered) |
+| ab2_2f241b10b7 / ab2_9fe3fc238b | Crown-lengthening final impression: 6-8wk vs 3mo — no decisive passage |
+| rafi_01_1e7372f945 | Temporization material to AVOID: ambiguous stem |
+| ab2_5c94fb585c | RPD movement: correct fix (add indirect retainer) not offered |
+| rafi_01_6b9539a6a5 | Midline guide: nose vs philtrum vs incisive papilla — ambiguous |
+| rafi_01_716334486e | Overdenture indication: TSL vs hypodontia — both valid |
+| saud_delta_287 | Occlusion "worst" — marked non-usable (disputed) |
+| rafi_01_e567d4d5d2 | Winged clamps — needs book confirmation |
+
+## ❌ FALSE POSITIVES (marked answer CORRECT — model misread) — keep
+
+- hy28, ab2_30ae66ddfd, pass_fp_005 — IAN safety 2mm (standard)
+- ab2_236344cd6f — zinc phosphate as CAUSE of lithium-disilicate crack (logic right)
+- ab2_63ed29a71c — reciprocal arm AFTER retentive = the problem (right)
+- ab2_bc97f87188 — moist alginate → grainy impression (direct effect)
+- rafi_01_538e7cd2fb — holes too far apart → wrinkles (Sturdevant confirms)
+- ab2_019782868f — macrofilled high filler (right)
+- rafi_02_2de7936010 — galvanic action (metal spoon)
+- rafi_02_fc09d7fa13 — dentin critical pH 6.5 (right; model confused with enamel 5.5)
+- rafi_02_a1b0df70b3 — chalky white = active lesion (right)
+- rafi_02_cd0b6a33f3 — rounded internal walls (right)
+- rafi_02_285f5fef24 — amalgam scrap under water (right)
+- rafi_02_98670bef69 — Hounsfield = CT density (right; model confused with D1-D4)
+- rafi_02_311b3c7383 — distofacial mand 1st molar pulp horn (defensible)
+- rafi_02_c75fb44870 — tooth 13 indirect retainer (defensible)
+
+## Method notes
+- After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
+- ~30-40% of contradicted flags are real; most false positives are negated-question
+  misreads, wrong-passage-type retrieval, or the model answering a different question.
+- Stale verdicts (already-fixed questions) remain in the checkpoint — ignore.
