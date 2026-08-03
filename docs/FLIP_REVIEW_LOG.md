@@ -439,7 +439,14 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 466 | rafi_06_96cf66e527 | 30 min → **24 hr** (polyether pour) | materials |
 | 467 | rafi_06_85dc564e54 | hot glass → **Zinc acetate** (ZOE accel) | materials |
 | 468 | rafi_06_41f4439a3d | vascular → **hemi-desmosomes** (peri-implant) | implant |
-| 469 | rafi_06_9a5f916411 | during surgery → **contraindicated** (SCC) | implant |
+| 469 | rafi_06_9a5f916411 | during surgery → **contraindicated** (SCC) | implant || 470 | rafi_06_09b2fb2634 | under compression → **Several firings** (porcelain) | ceramics |
+| 471 | rafi_06_4661ef1bff | convex w/ undercuts → **convex, no undercut** (coping) | Fixed |
+| 472 | rafi_07_2c946d4cb9 | decrease expansion → **decrease corrosion** (copper) | materials |
+| 473 | rafi_07_0808d30640 | Pontiac → **Retainer** | Fixed |
+| 474 | rafi_07_50c3bfbf15 | Shoulder → **Chamfer** (full veneer) | Fixed |
+| 475 | rafi_07_9fe25de15a | convex BL → **convex MD + concave BL** (pontic) | Fixed |
+| 476 | rafi_07_489e1e9042 | 0.5 → **1.5mm** (PM junction) | Fixed |
+
 
 
 
@@ -512,6 +519,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_07_d94477dd31 — resorption & apposition: no single cell does both (ambiguous)
 - rafi_20_bfd4d592dd — crown lengthening for BW violation not offered (broken)
 - rafi_04_d3defe2714 — partial veneer non-functional cusp 1.5mm not offered (broken)
+- rafi_06_3c40385fd0 — tuberosity/anterior undercuts: stem truncated (ambiguous)
 - rafi_08_3805600b25 — high-copper % : ≥12% not offered (2/5/9/all wrong) (broken)
 - rafi_08_6dfb9d2845 — post-1st-yr resorption 0.2mm/yr not offered (0.02 = typo) (broken)
 - rafi_15_e2981fe47b — dysphagia/nausea = OVER-extension of PPS; only "under/absence" offered (broken)
@@ -746,6 +754,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_8ae688037c — Payne functional waxing: cusps first (correct)
 - rafi_04_f330e4dcaf — full-ceramic cementation: HF etch first (correct)
 - rafi_06_32e51ae1b9 — macrofilled filler 10-100μm (correct; model misread)
+- rafi_06_60839c73da — mandible returns to rest position (not offered; "all incorrect" correct)
+- rafi_07_717e443ef3 — positive cast bubbles = impression bubbles (correct; model backwards)
+- rafi_07_5ec141cfea — 10:15 = 2:3 (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
