@@ -246,7 +246,22 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 259 | rafi_04_b6af6004ec | 1st true 2nd false → **Both true** (Gracey 15/16) | perio |
 | 260 | rafi_04_6bca8dcbb5 | Score 1 → **Score 0** (Loe-Silness normal) | perio |
 | 261 | rafi_04_d11ff85103 | 1959 → **1939** (electric toothbrush) | perio |
-| 262 | rafi_04_a1f268d80e | 3mm → **4mm** (true pocket) | perio |
+| 262 | rafi_04_a1f268d80e | 3mm → **4mm** (true pocket) | perio || 263 | rafi_04_8df671c2c5 | Lip retraction → **Stabilization** (SRP finger) | perio |
+| 264 | rafi_04_dd8242eb7d | Carcinoma in situ → **Pregnancy tumor** | perio |
+| 265 | rafi_04_4ed6655111 | bone resorption → **PDL gradation** (occl pressure) | perio |
+| 266 | rafi_04_69bf1bf736 | Chisel → **Neibers** (posterior proximal) | perio |
+| 267 | rafi_04_6f0e16bea1 | overbite → **gingival enlargement** (gingivectomy) | perio |
+| 268 | rafi_06_1af2792d97 | Curette → **Knife** (ENAP) | perio |
+| 269 | rafi_06_c87c0bec8f | Curettes → **Scissors** (not used in curettage) | perio |
+| 270 | rafi_06_2b74c9bd03 | pemphigoid → **Pemphigus** (urogenital) | oral med |
+| 271 | rafi_06_7383ab09c5 | Peripheral giant cell → **Pyogenic granuloma** (endo prolif) | oral path |
+| 272 | rafi_06_9eb8d14b8b | Perio abscess → **Acute gingival abscess** (foreign body) | perio |
+| 273 | rafi_06_c212441124 | NUG → **Gingivitis** (no lymphadenopathy) | perio |
+| 274 | rafi_06_71ac6c374a | Cortical bone → **Alveolar bone proper** (angular loss) | perio |
+| 275 | rafi_06_c566d4e85e | Acute perio abscess → **Periapical abscess** | endo |
+| 276 | rafi_06_0c82e830d2 | Cyclosporine → **Leukemic gingiva** | oral med |
+| 277 | rafi_06_b327a9c7b2 | Tea/Coffee → **Mercury** (blue-green stains) | oral med |
+
 
 
 
@@ -424,6 +439,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_756752bab1 — stage II gingivitis = lymphocytes (correct)
 - rafi_04_067c4639c7 — convergent + short trunk = hardest (correct)
 - rafi_04_d3a62e8014 — universal curette curved in ONE plane (model wrong)
+- rafi_04_e6fafea981 — JE migration + corresponding recession = shallow sulcus (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
