@@ -413,7 +413,14 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 437 | rafi_04_7da1f1450e | Direct → **CBCT** (gingival thickness) | perio |
 | 438 | rafi_04_e80848e0b6 | Gracey → **Explorer** (subgingival detection) | perio |
 | 439 | rafi_04_b902acf2eb | Upper 1st premolar → **Upper 1st molar** (worst) | perio |
-| 440 | rafi_04_ee91d10a38 | Below margin → **At gingival margin** (recession) | Fixed |
+| 440 | rafi_04_ee91d10a38 | Below margin → **At gingival margin** (recession) | Fixed || 441 | rafi_06_2d3aa7c8f4 | bone density ↑ → **reduced BIC** (lateral forces) | implant |
+| 442 | rafi_06_fbb88beb75 | thiol → **hydroxy moieties** (povidone-iodine except) | perio |
+| 443 | rafi_07_db6ae1d5b9 | B cells → **Neutrophils** (initial gingivitis) | perio |
+| 444 | rafi_07_37c31fd33b | Stage IV → **Stage II** (CAL 3-4mm) | perio |
+| 445 | rafi_07_c383000af0 | enlargement → **OH first** (drug-induced) | perio |
+| 446 | rafi_07_6f1b172fef | Apical → **Oblique absent** (3yo PDL) | histology |
+| 447 | rafi_07_4641827cc2 | Non-waxed → **No matter** (floss) | perio |
+
 
 
 
@@ -479,6 +486,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_12_68bc391e9d — symptomatic pulpitis definition: hyperemia ≠ (ambiguous)
 - rafi_15_8564eb49ec — most widely used sealer = ZOE-based, not offered (broken)
 - rafi_04_4f8e77ae69 — "diagnosis phase": diagnosis precedes numbered phases (ambiguous)
+- rafi_06_d778c91850 — diffuse gingivitis: localized vs generalized unclear from stem (ambiguous)
+- rafi_07_d94477dd31 — resorption & apposition: no single cell does both (ambiguous)
 - rafi_08_3805600b25 — high-copper % : ≥12% not offered (2/5/9/all wrong) (broken)
 - rafi_08_6dfb9d2845 — post-1st-yr resorption 0.2mm/yr not offered (0.02 = typo) (broken)
 - rafi_15_e2981fe47b — dysphagia/nausea = OVER-extension of PPS; only "under/absence" offered (broken)
@@ -708,6 +717,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_e675994f02 — H&C Stage II = entire papilla necrosis (correct)
 - rafi_04_54b86e8b84 — enlargement ≥3/4 crown = Grade IV (model agrees)
 - rafi_06_10faa2000a — microthreads reduce crestal bone loss (correct)
+- rafi_07_fac244c460 — smokers: decreased gingivitis + decreased BOP (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
