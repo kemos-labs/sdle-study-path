@@ -424,6 +424,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 449 | rafi_12_cef7db270b | GTR → **Resection** (premolar furcation) | perio |
 | 450 | rafi_14_2ac85637f5 | F. nucleatum → **P. gingivalis + P. intermedia** | perio |
 | 451 | rafi_14_f0d26ee951 | Gingival → **Periodontal abscess** (post-scaling) | perio |
+| 452 | rafi_16_7eb37becfc | Path migration → **Periodontitis** (sudden mobility) | perio |
+| 453 | rafi_17_e024057f02 | Staph → **P. gingivalis** (refractory exception) | perio |
+| 454 | rafi_18_f1ba991a5c | tell normal → **Remove abscess** (post-SRP) | perio |
 
 
 
