@@ -140,7 +140,14 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 145 | rafi_11_49347ffa1b | little contact → **eliminate functional cusp contact** (bruxism) | Fixed |
 | 146 | rafi_11_2b7b82dcc8 | 1.5mm non-functional → **1.5mm FUNCTIONAL cusp** (PFM) | Fixed |
 | 147 | rafi_11_53e9dabfd1 | food impaction → **retainer separation** (pontic bubbles) | Fixed |
-| 148 | rafi_11_4ae5b14c3a | I Bar → **T Bar** (most gingival damage) | McCracken |
+| 148 | rafi_11_4ae5b14c3a | I Bar → **T Bar** (most gingival damage) | McCracken || 149 | rafi_13_f3bc1fb8a0 | Enamel chisel → **Gingival margin trimmer** (class II) | operative |
+| 150 | rafi_13_d0660cc922 | Polysulfide → **Polyether** (stable in moist) | materials |
+| 151 | rafi_13_4fc357e7d7 | Mand class 3 → **Mand Class I** (altered cast) | McCracken |
+| 152 | rafi_13_6a3ea7b7c4 | Low modulus → **Low thermal conductivity** (acrylic) | denture base |
+| 153 | rafi_14_b04bcf1fa3 | interproximal → **smooth surface caries** (DEJ) | cariology |
+| 154 | rafi_14_f2ba2942f4 | Replace → **Nothing** (ditching <0.5mm) | operative |
+| 155 | rafi_14_0496ef5653 | Metal → **Plastic** (implant scaling) | perio |
+
 
 
 
