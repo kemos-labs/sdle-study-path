@@ -231,6 +231,12 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 243 | rafi_17_a20e242190 | Root amputation → **Extraction** (VRF lower molar) | endo |
 | 244 | rafi_17_91d8513b97 | Extraction+implant → **CaOH long-term** (resorption) | trauma |
 | 245 | ab2_6cb1299b70 | Scaling → **Crown lengthening** (short crown) | perio |
+| 246 | rafi_01_21df1d0bde | SRP risk ↑ → **SRP + doxycycline** (diabetics) | perio |
+| 247 | rafi_01_56fae17b95 | perio abscess → **increasing mobility** (occl trauma) | perio |
+| 248 | rafi_01_aa9c6e6513 | Bone deposition → **PDL necrosis + bone resorption** | perio |
+| 249 | rafi_01_d60ff77486 | Superficial scaling → **Remove pseudomembrane** (NUG) | perio |
+| 250 | rafi_01_61790d1e96 | Cementum → **Periodontal ligament** (mobility) | perio |
+| 251 | rafi_02_603e314a4f | Sharpey → **Transseptal fibers** | perio |
 
 
 
@@ -396,6 +402,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_17_0e188f13f7 — reversible pulpitis → provisional/prevent endo (correct)
 - ab2_80418f6680 — CAL 5-6 + horizontal loss = Stage III (correct; model mis-staged)
 - ab2_c8ca6b00c2 — grade III mobility → perio lesion (defensible; model reason mismatched)
+- rafi_01_5145f97848 — convergent roots + short trunk = hardest to scale (model agrees)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
