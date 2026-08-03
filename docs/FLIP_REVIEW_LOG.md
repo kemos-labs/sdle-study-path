@@ -463,7 +463,12 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 496 | rafi_08_77987f972d | both + SM → **both, no SM** (uncrowded) | pedo || 497 | rafi_08_c97c9e1215 | extraction → **Apexification** (immature molar + sinus) | pedo |
 | 498 | rafi_08_b7a5ef7639 | case control → **Cross-sectional** (single-time comparison) | ethics |
 | 499 | rafi_08_751959eba8 | low temp → **High temperature** (autoclave) | ethics || 500 | rafi_08_e0c2f3ee5a | autism → **Cerebral palsy** (involuntary movements + speech) | pedo |
-| 501 | rafi_08_fbd2b367a9 | inferior alveolar → **Incisive nerve** (lower canine) | anatomy |
+| 501 | rafi_08_fbd2b367a9 | inferior alveolar → **Incisive nerve** (lower canine) | anatomy || 502 | rafi_08_c315825431 | extraoral border → **Intraoral ∥ Wharton** (sublingual) | OMS |
+| 503 | rafi_08_40bd3193b6 | titanium → **Polylactic acid** (resorbable) | OMS |
+| 504 | rafi_08_b491a923e2 | aspirin → **Pethidine** (sickle cell) | OMS |
+| 505 | rafi_08_4f0a1166c2 | MRI → **Arthrography** (disc perforation) | radiology |
+| 506 | rafi_08_998647706c | SCC → **Keratoacanthoma** (rapid growth + crater) | oral path |
+
 
 
 
@@ -853,6 +858,17 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_08_95b392f00c — masseter ↔ zygomatic process of TEMPORAL bone (model's sphenoid = pterygoid, wrong muscle)
 - rafi_08_3ef1289d3f — acute sinusitis = Strep pneumoniae (mixed anaerobes = chronic; model wrong)
 - rafi_08_2586fb6634 — safe extraction on warfarin: PT 2-2.5 (INR ≤2.5; model's 1-1.5 subtherapeutic)
+- rafi_08_326cb60499 — IgG/IgA (transplacental/colostrum) = natural PASSIVE immunity (model pedantic: "antibodies ≠ immunity")
+- rafi_08_c82b92747d — heparin stop 4h pre-op (4-6h window; model's 6h at the edge)
+- rafi_08_2102374f18 — pseudocholinesterase deficiency → AVOID esters → prilocaine (AMIDE) (model's own reason agrees)
+- rafi_08_e292bec5e8 — maxillary impaction most difficult = DISTOANGULAR (model said mesioangular = mandible)
+- rafi_08_6943904ea5 — IE prophylaxis REQUIRED for routine cleaning/scaling (AHA: manipulation of gingiva; model wrong)
+- rafi_08_e50e39441a — chronic steroids: DOUBLE the dose on day of surgery (model's day-before+day-of too much)
+- rafi_08_5c5108320a — MSA block: vestibular injection at premolar region (infraorbital = ASA; marked defensible)
+- rafi_08_87d4a81ea8 — carpule contents: LA + epi + NaCl + sodium BISULFITE + water (marked option includes bisulfite — more complete)
+- rafi_08_743825a3d1 — TMJ blood supply = EXTERNAL carotid branches (maxillary + superficial temporal; model's B+C wrong)
+- rafi_08_c455d30d96 — condylar growth = INTERSTITIAL cartilage + endochondral ossification (marked correct)
+- rafi_08_6ff8e50c9d — tobacco/snuff buccal lesion, hyperkeratosis + wide rete = VERRUCOUS carcinoma (model said SCC)
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
