@@ -420,6 +420,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 445 | rafi_07_c383000af0 | enlargement → **OH first** (drug-induced) | perio |
 | 446 | rafi_07_6f1b172fef | Apical → **Oblique absent** (3yo PDL) | histology |
 | 447 | rafi_07_4641827cc2 | Non-waxed → **No matter** (floss) | perio |
+| 448 | rafi_10_7630350fc3 | 1.2 → **2.04mm** (biologic width) | perio |
+| 449 | rafi_12_cef7db270b | GTR → **Resection** (premolar furcation) | perio |
+| 450 | rafi_14_2ac85637f5 | F. nucleatum → **P. gingivalis + P. intermedia** | perio |
+| 451 | rafi_14_f0d26ee951 | Gingival → **Periodontal abscess** (post-scaling) | perio |
 
 
 
@@ -718,6 +722,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_54b86e8b84 — enlargement ≥3/4 crown = Grade IV (model agrees)
 - rafi_06_10faa2000a — microthreads reduce crestal bone loss (correct)
 - rafi_07_fac244c460 — smokers: decreased gingivitis + decreased BOP (correct)
+- rafi_14_2a8e173d29 — slight excess occlusal force → PDL widening (consistent with rafi_04_7759df9e2e)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
