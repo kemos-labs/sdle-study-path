@@ -500,7 +500,12 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 540 | rafi_10_7ffb6104d3 | BUN → **ALT** (liver test) | med |
 | 541 | rafi_10_485c632dad | C-shaped → **IVRO** (prognathism setback) | OMS |
 | 542 | rafi_10_eeb97495c6 | clicking → **Ankylosis** (post-trauma trismus) | OMS |
-| 543 | rafi_11_ca226cd90f | quad helix → **Tongue crib** (thumb sucking) | pedo |
+| 543 | rafi_11_ca226cd90f | quad helix → **Tongue crib** (thumb sucking) | pedo || 544 | rafi_11_7b5659c059 | congenitally missed 5 → **Crowding in premolar** | pedo |
+| 545 | rafi_11_77a2047b00 | latex delayed → **Nickel delayed** (amalgam type IV) | oral med |
+| 546 | rafi_11_01d445a67d | increases INR → **Decreases INR** (aspirin) | med |
+| 547 | rafi_11_92b6ad1676 | antibiotics → **Aspiration** (pre-biopsy) | OMS |
+| 548 | rafi_11_f434294a7d | reactive → **Malignant** (reverse smoker palate) | oral path |
+
 
 
 
@@ -940,6 +945,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_10_56af9e36fc — most common parotid CANCER = mucoepidermoid (model answered "tumor" = pleomorphic adenoma — question says cancer)
 - rafi_11_3f820bebe5 — cleft lip/palate → Class III tendency (marked correct)
 - rafi_10_83d78639b6 — ground glass = fibrous dysplasia (NOT offered; marked odontoma wrong — broken, register)
+- rafi_11_912e2690a4 — all teeth except lower 5s + 7s → age 11 (before 12y 2nd-molar eruption; model's 12 conflicts with unerupted 7s)
+- rafi_11_a071abfc13 — no capacity + no proxy + EMERGENCY → dentist decides (best interest); judge = non-emergent
+- rafi_11_386e1cf17f — normal MCV + high reticulocytes = HEMOLYTIC → G6PD deficiency (marked correct; model confused deficiency types)
+- rafi_11_627523f54c — recurrent HSV-associated EM prevention = antivirals (NOT offered; systemic steroids marked — broken, register)
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
