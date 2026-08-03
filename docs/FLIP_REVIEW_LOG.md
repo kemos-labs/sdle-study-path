@@ -187,7 +187,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | rafi_01_6b9539a6a5 | Midline guide: nose vs philtrum vs incisive papilla — ambiguous |
 | rafi_01_716334486e | Overdenture indication: TSL vs hypodontia — both valid |
 | saud_delta_287 | Occlusion "worst" — marked non-usable (disputed) |
-| rafi_01_e567d4d5d2 | Winged clamps — needs book confirmation |
+| rafi_01_e567d4d5d2 | Winged clamps — needs book confirmation |- rafi_10_520feb3b96 — nonfunctional tooth changes: all 4 options plausible (ambiguous)
+- rafi_13_77c5e2df19 — fluoridated cement: GIC not offered among options (broken)
+- rafi_14_b4b8982575 — class V amalgam sensitivity 6mo: pulpitis vs abrasion (ambiguous)
+
 
 ## ❌ FALSE POSITIVES (marked answer CORRECT — model misread) — keep
 
@@ -205,6 +208,29 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_02_98670bef69 — Hounsfield = CT density (right; model confused with D1-D4)
 - rafi_02_311b3c7383 — distofacial mand 1st molar pulp horn (defensible)
 - rafi_02_c75fb44870 — tooth 13 indirect retainer (defensible)
+
+- rafi_08_101f9220dd — mandibular major connector 3-4mm from gingiva (defensible)
+- rafi_08_f54715fc3d — crowded lower anteriors = EXCEPTION (correct)
+- rafi_08_c5aecb1aa9 — protrusive guidance = incisors (correct; model confused with interferences)
+- rafi_08_baa64802c6 — minor connector 90° to major (defensible)
+- rafi_08_94f5b5ce36 — functional movement = muco-compressive (correct)
+- rafi_10_4bdd2f6acf — 0.5mm dentin → ZOE (classic sedative base)
+- rafi_10_d33bfc45b1 — periimplantitis bone loss ~2mm (correct; model used annual criteria)
+- rafi_10_ef04f90d32 / rafi_10_830e9b602d — implant-anatomic 2mm (standard)
+- rafi_10_79654d2c3d — Akers most destructive for distal-extension (correct)
+- rafi_13_64b6062d73 — DT diameter near pulp 2-3μm (both defensible)
+- rafi_13_09eea42a0f — polysulfide reusable/multiple pours (correct)
+- rafi_13_d4b7558476 — filled resin = durable + esthetic balance (correct)
+- rafi_13_d674b93499 — REPARATIVE dentin for strong stimuli (marked correct)
+- rafi_13_4aed02e719 — osteoblast = bone formation (question asked formation)
+- rafi_13_c429eac014 — implant mobility + odor = bone loss/peri-implantitis (correct)
+- rafi_13_e74309099b — limited interarch → screw-retained/direct (defensible)
+- rafi_14_47637c78e3 — RMGI base for deep canine caries (correct)
+- rafi_14_42091ee578 — cold slab increases ZOE working time (correct)
+- rafi_14_87a4737474 — protrusive disturbance = distal inclination of upper cusps (correct)
+- rafi_14_371993e42b — 3 occlusal stops on molar in CR (classic)
+- rafi_14_ec222eeeba — horizontal occlusion most destructive (correct)
+- rafi_14_a5c77cdc2c — laterotrusive rotation around VERTICAL axis (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
