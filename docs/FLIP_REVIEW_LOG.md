@@ -362,7 +362,16 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 383 | rafi_18_e0915c8f59 | tighter clasp → **Surveyed crown** (no undercut) | McCracken |
 | 384 | rafi_18_2b176d9d93 | Porcelain → **Metal-faced w/ porcelain** (low smile) | Fixed |
 | 385 | rafi_18_11b4e22cc1 | U shaped → **V-shaped** (lateral force) | CD |
-| 386 | rafi_19_5ef9b84e68 | titanium → **Amalgam** (prophy jet safe) | perio |
+| 386 | rafi_19_5ef9b84e68 | titanium → **Amalgam** (prophy jet safe) | perio || 387 | abtal_pack_5df9fde7f6 | Fox plane → **Camper plane** | CD |
+| 388 | abtal_pack_8c4c15fb75 | 2 → **3mm** (margin to crestal bone) | Fixed |
+| 389 | ab2_6aa802378b | aphthous → **Atypical HSV** (immunocompromised) | oral med |
+| 390 | ab2_2ee4510e2d | RCT ASAP → **Follow-up** (refused RCT) | endo |
+| 391 | rafi_02_44e71feda4 | inc. distance → **cone perpendicular** (image quality) | radiology |
+| 392 | rafi_02_b50c4eb56e | Quadrilateral → **Oval** (mand 2nd molar access) | endo |
+| 393 | rafi_02_dfafe880d0 | Formocresol → **Sodium hypochlorite** (protein coagulation) | endo |
+| 394 | rafi_02_93276420ae | reversible+ → **Symptomatic irreversible** (open apex trauma) | endo |
+| 395 | rafi_02_7defd57ae5 | 70% alcohol → **CHX** (GP disinfection) | endo |
+
 
 
 
@@ -418,6 +427,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_17_46df219c7b — high-lipid-diet gingivitis: no valid option (broken)
 - rafi_17_f8f45558ed — tray perforations effect: options garbled (broken/ambiguous)
 - rafi_18_9793f334c2 — alginate water contamination: grainy vs chalky cast (ambiguous)
+- rafi_02_7c8b59c400 — post-RCT pain: COMBINE NSAID+acetaminophen not offered (broken)
+- rafi_04_381c1e1f81 — MTA 3:1 powder:water not offered among 1:1..1:4 (broken)
 - rafi_08_3805600b25 — high-copper % : ≥12% not offered (2/5/9/all wrong) (broken)
 - rafi_08_6dfb9d2845 — post-1st-yr resorption 0.2mm/yr not offered (0.02 = typo) (broken)
 - rafi_15_e2981fe47b — dysphagia/nausea = OVER-extension of PPS; only "under/absence" offered (broken)
@@ -606,6 +617,13 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_19_6ce75c75da — GIC Type I = luting/cementation (correct; model backwards)
 - rafi_19_d0aef28f53 — 2-day dry avulsion → implant/FDP (correct)
 - rafi_19_5877a82be0 — alginate pour within 15 min (defensible)
+- rafi_01_835cba38a3 — dull pain + percussion → symptomatic apical periodontitis (defensible)
+- rafi_01_bfeb9b1c3d — sharp night pain + lingering = symptomatic irreversible (correct)
+- rafi_02_52a811692b — GP cone for fistula tracing (defensible)
+- rafi_02_2fc26bba02 — EDTA+NaOCl no precipitation (correct; NaOCl+CHX does)
+- rafi_02_e4a00ef744 — pulp arteriole ~50μm (defensible; 20μm = capillary)
+- rafi_02_9c968ca953 — CTS: subjective symptoms + bite test (correct)
+- rafi_02_bc3aaa6d1b — YELLOW discoloration = canal obliteration (correct; model backwards)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
