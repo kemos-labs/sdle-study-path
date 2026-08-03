@@ -198,7 +198,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 209 | rafi_18_938b184f71 | major conn+plates → **minor connector+rests** (stability) | McCracken |
 | 210 | rafi_18_d83aea1995 | Hypersensitivity → **Candidal infection** | oral med |
 | 211 | rafi_18_cc1d992f67 | wet lip → **Swallow** (lingual molding) | CD |
-| 212 | rafi_18_f2a7dd1da4 | RPI → **Aker** (no undercut) | McCracken |
+| 212 | rafi_18_f2a7dd1da4 | RPI → **Aker** (no undercut) | McCracken || 213 | rafi_20_466faa7149 | Low filler → **Low microleakage** (flowable) | operative |
+| 214 | rafi_20_6c9d5685cc | Resistance/retention → **Tooth reduction** (crown values) | Fixed |
+| 215 | rafi_20_48231ab9fd | Symmetry → **mesio-incisal more acute** (lower incisor) | morphology |
+
 
 
 
@@ -245,6 +248,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_15_e2981fe47b — dysphagia/nausea = OVER-extension of PPS; only "under/absence" offered (broken)
 - rafi_16_5591d0a9de — ovate pontic tissue irritation: porcelain vs gold (source marked "NOT SURE")
 - rafi_18_89b6f2d029 — ZOE "increase setting time": model contradicts itself (eugenol accel vs retard); options ambiguous
+- rafi_20_ea75e896e9 — fluoride-releasing cement: GIC not offered (broken; same as rafi_13_77c5e2df19)
 
 
 ## ❌ FALSE POSITIVES (marked answer CORRECT — model misread) — keep
@@ -329,6 +333,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_18_d33d807d9d — distal-upper + mesial-lower = protrusive interference (correct)
 - rafi_18_8988dda434 — pterygomandibular raphe on BOTH casts (model misread)
 - rafi_18_ae4a53644f — RPA for high buccal frenum (correct)
+- rafi_20_2a4d852915 — tips/occlusal hypoplasia = chronologic (malnutrition) (defensible)
+- rafi_20_cd1dd7d71e — denuded cementum tubules → dentinal hypersensitivity (correct)
+- rafi_20_05416f996e — one-plane prep → dark incisal third (defensible)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
