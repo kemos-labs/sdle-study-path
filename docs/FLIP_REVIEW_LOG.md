@@ -398,6 +398,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 421 | rafi_17_eb2031dd3f | Apical surgery → **Non-surgical retreatment** (CaOH) | endo |
 | 422 | rafi_17_0cfaf38155 | Avulsion → **Crown fractures** (pedo trauma) | pedo |
 | 423 | rafi_17_04dc6aa132 | EDTAC → **NaOCl** (most irritating) | endo |
+| 424 | ab2_385a847f44 | Upper 1st molar → **Upper 2nd molar** (hardest to scale) | perio |
+| 425 | ab2_9eb8931c89 | Apical → **Oblique fibers absent** (primary teeth) | histology |
 
 
 
@@ -676,6 +678,11 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_17_ca361dd8d4 — gutta-percha: zinc oxide = largest component (correct)
 - rafi_17_f0ba2604e1 — type of force = least important (correct)
 - rafi_17_b7c9c7c52a — 9yo intrusion: ortho repositioning (correct)
+- rafi_17_b87b15ad8b — intrusion 5mm splint 4wk (defensible)
+- rafi_18_dd4a92b4d7 / rafi_18_50b5608cbd — file 20 = 0.2mm tip (correct)
+- ab2_fe3f190c7a — root extraction = clean-contaminated (model agrees)
+- ab2_794e049479 — lower shank 0-20° (correct)
+- ab2_9c2674fcb9 — J-shaped + deep pocket = VRF → extraction (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
