@@ -81,7 +81,13 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 81 | rafi_06_5a57548f51 | Mechanical → **failure to osseointegrate** (early failure) | implant |
 | 82 | rafi_06_691f421fef | screw fracture → **implant fracture** (trephine) | implant |
 | 83 | rafi_06_b80682f988 | screw loosening → **Bone loss** (occlusal overload) | implant |
-| 84 | rafi_06_c9082bc2db | parafunction → **1mm diastema closure** (veneer candidate) | Fixed |
+| 84 | rafi_06_c9082bc2db | parafunction → **1mm diastema closure** (veneer candidate) | Fixed || 85 | rafi_06_fb7e6d2bc6 | Canine guided → **Bilateral balanced** (CD vs Kennedy I) | CD occlusion |
+| 86 | rafi_06_02c3be9a7e | I bar → **Aker clasp** (least favorable, distal extension) | McCracken |
+| 87 | rafi_06_3c6738d513 | both functional → **teeth anatomical + ridge functional** | McCracken |
+| 88 | rafi_06_6a45875783 | no tooth control → **need for reline** (immediate denture) | prostho |
+| 89 | rafi_07_25e5fe5ed8 | long sprue → **High temperature** (shrink spot) | casting |
+| 90 | rafi_07_e14f44079e | cover half → **cover ALL** (retromolar pad, 3rd occurrence) | Complete Dentures |
+
 
 
 
