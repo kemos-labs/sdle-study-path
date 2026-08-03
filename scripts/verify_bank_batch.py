@@ -226,6 +226,20 @@ def parse_verdicts(resp: str, qids: list[str]) -> list[dict]:
     return out
 
 
+def _lock() -> None:
+    import fcntl
+    LOCK = ROOT / "sdle-prep" / "data" / "generated" / "bank_verification" / ".verify.lock"
+    LOCK.parent.mkdir(parents=True, exist_ok=True)
+    fd = open(LOCK, "w")
+    try:
+        fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except OSError:
+        print("another verifier holds the lock — exiting")
+        raise SystemExit(2)
+    global _LOCK_FD
+    _LOCK_FD = fd
+
+
 def done_ids() -> set:
     if not CHECKPOINT.exists():
         return set()
@@ -262,6 +276,7 @@ def main() -> int:
     if args.limit:
         ordered = ordered[:args.limit]
 
+    _lock()
     done = done_ids() if args.resume else set()
     todo = [q for q in ordered if q["id"] not in done]
     print(f"bank usable: {len(usable)} | target: {len(ordered)} | already: {len(done)} | todo: {len(todo)}")
