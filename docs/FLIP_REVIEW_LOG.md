@@ -376,6 +376,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 398 | rafi_04_bb56e83bb7 | H-file → **K-file** (flexible) | endo |
 | 399 | rafi_04_12078ed6d1 | 4 months → **4 weeks** (cervical root fx) | trauma |
 | 400 | rafi_04_0e8355b5be | Class V → **Class VII** (Ellis displacement) | trauma |
+| 401 | rafi_06_37ae3078b7 | air-impervious → **Bacteria-impervious** (hermetic) | endo |
+| 402 | rafi_06_c42427457a | pulp status → **Apical stop** (apexification) | endo |
+| 403 | rafi_06_a09b341e6a | RCT → **Pulpectomy + apexification** (open apex) | endo |
+| 404 | rafi_06_2b081a7a66 | RCT+crown → **Relieve occlusion + monitor** (cracked) | endo |
 
 
 
@@ -434,6 +438,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_18_9793f334c2 — alginate water contamination: grainy vs chalky cast (ambiguous)
 - rafi_02_7c8b59c400 — post-RCT pain: COMBINE NSAID+acetaminophen not offered (broken)
 - rafi_04_381c1e1f81 — MTA 3:1 powder:water not offered among 1:1..1:4 (broken)
+- rafi_04_0d96b8c5fe — night pain = irreversible pulpitis not offered (broken)
 - rafi_08_3805600b25 — high-copper % : ≥12% not offered (2/5/9/all wrong) (broken)
 - rafi_08_6dfb9d2845 — post-1st-yr resorption 0.2mm/yr not offered (0.02 = typo) (broken)
 - rafi_15_e2981fe47b — dysphagia/nausea = OVER-extension of PPS; only "under/absence" offered (broken)
@@ -634,6 +639,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_e797da729b — NaOCl advantage = tissue dissolution (correct; model misread)
 - rafi_04_4c7f2777b8 — Ellis V = total tooth loss/avulsion (correct)
 - rafi_04_aab0aa388b — Ellis VI = root fracture (correct)
+- rafi_06_ca7dd0863d — apicoectomy 45° bevel (classic; modern = perpendicular)
+- rafi_06_e328024170 — persistent pain short fill → retreatment (model agrees)
+- rafi_06_435aa4438e — separated file: radiograph first (model agrees)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
