@@ -55,7 +55,19 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 51 | rafi_17_9585d3e49c | Lateral displaced → **Vertical incision/coronal flap** (Miller I) | Carranza || 52 | rafi_18_b60c1116f7 | fremitus anterior → **angular bone loss** (TFO on molar) | Carranza |
 | 53 | rafi_18_29cea16c56 | Grade 3 → **Grade 1** (1 mm mobility) | Carranza |
 | 54 | rafi_19_6514632332 | GTR → **furcation plasty** (Class II furcation) | Carranza |
-| 55 | rafi_19_9b985200b9 | metronidazole gel → **doxycycline fiber** (local delivery) | Carranza |
+| 55 | rafi_19_9b985200b9 | metronidazole gel → **doxycycline fiber** (local delivery) | Carranza || 56 | abtal_pack_d432457210 | detect caries → **bleeding on probing** (probe use) | Carranza |
+| 57 | abtal_pack_589f184f8c | calculus → **with implant** (prophy jet; +cleaned option) | Carranza |
+| 58 | rafi_04_2a66ef2860 | Medieval England → **Ancient Mayans** (first implants) | implant history |
+| 59 | rafi_04_d78e20e5eb | non-rigid mesial → **non-rigid DISTAL** (pier abutment) | Fixed |
+| 60 | rafi_04_228e4ce9d3 | Inverted cone → **round-ended tapered diamond** (occlusal grooves) | Fixed |
+| 61 | rafi_04_6b8a491e52 | Remake → **re-prepare lingual + recement** (resin-bonded) | Fixed |
+| 62 | rafi_04_9aafa9fec9 | Sensitivity → **Improper preparation** (headache) | Fixed |
+| 63 | rafi_04_3fe0a74a31 | gingival level → **Supragingival** (non-esthetic margins) | Fixed |
+| 64 | rafi_04_8afa3fd779 | hue+value → **saturation of hue** (chroma) | shade |
+| 65 | rafi_04_0c80978fdd | endothermic → **polymerization shrinkage** (PMMA exo) | provisional |
+
+**Keep / false-positive (reviewed, marked correct):** rafi_03_45a272e8a8 (varnish), rafi_03_4005bccd6f (GIC class V), rafi_03_105640d7ef (intrusion), rafi_03_e94536f02a (1mm bone loss), rafi_03_6821512e69 (ridge resorption), rafi_03_93f6549b5f (2mm), rafi_04_1062cbc0a7 (root caries), rafi_04_04f560ef99 (PKT1), rafi_04_853095caa5 (film thickness), rafi_04_bc4b3703ac (self-etch), rafi_04_835aed4070 (cervical burnout), rafi_04_105f47122d (cementum), rafi_04_c5a33acdb6 (dentin 70%), rafi_04_620430740a (zinc 0.01%), rafi_04_afcec26ea2 (silver), rafi_08_ca45d811c6 (orange complex), rafi_08_8233afa0d7 (stratum corneum), rafi_08_3a47fa1514 (4-6wk membrane), rafi_08_df938fed10 (plaque disruption), rafi_11_3a4eb49dfc (81%), rafi_11_52850ca6e3 (attached gingiva), rafi_12_1e55f3d506 (PMN), rafi_15_e715da5cf2 (equigingival), rafi_15_46c74cb788 (biologic width), rafi_16_754b5d9261 (allergen), rafi_16_f06ab600d7 (1st max molar), rafi_16_9ee32dc669 (more plaque), rafi_17_437eaf625f (curette), rafi_20_2db10bd85b (extract opposing), abtal_pack_c70e099d53 (external bevel), rafi_04_03cce57d1d (PMMA direct temp).
+
 
 
 
