@@ -289,7 +289,13 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 305 | rafi_04_10b1671f6e | new prosthesis → **composite repair** (PFM crack) | Fixed |
 | 306 | rafi_04_b54ba300cc | Implant → **RPD** (14yo) | implant |
 | 307 | rafi_04_f12a270850 | central+lateral → **lateral+canine** (setup margins) | CD |
-| 308 | rafi_04_891ccb6254 | V and f → **S, Z, SH, CH, J** (sibilants) | CD |
+| 308 | rafi_04_891ccb6254 | V and f → **S, Z, SH, CH, J** (sibilants) | CD || 309 | rafi_04_28ab68e44e | under-prep → **Occlusal forces** (rest fracture) | McCracken |
+| 310 | rafi_04_942f7f0052 | away from ridge → **towards the ridge** (support) | RPD |
+| 311 | rafi_04_372d8c6a19 | soft palate → **hard/soft junction** (vibrating line) | CD |
+| 312 | rafi_04_8b078ec860 | Horizontal → **Sagittal plane** (hinge) | occlusion |
+| 313 | rafi_06_86f7288bee | thermal conductivity → **Cracked tooth** (gold onlay) | operative |
+| 314 | rafi_06_5a832c238b | all incorrect → **Enameloplasty opposing** (crown height) | implant |
+
 
 
 
@@ -488,6 +494,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_cf5af75ade — CBC not needed for routine implant (correct)
 - rafi_04_4dce3834db — sinus 2mm (defensible)
 - rafi_04_eb40d6768e — rigidity = mechanical not biological (correct)
+- rafi_04_725f147d1e — linguoplate when vestibule <7mm (correct)
+- rafi_04_edff3b51b0 — Bennett = bodily shift toward working side (correct)
+- rafi_06_62ddc1166e — propylene glycol in caries detector dye (correct; model misread)
+- rafi_06_b49ad7b9dd — divergent walls when ridge <0.6mm (~0.5mm rule; correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
