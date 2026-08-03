@@ -449,7 +449,12 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 478 | rafi_06_42a7ee735c | equilibrated → **Spot ground in mouth** (sore spots) | CD |
 | 479 | rafi_06_492f36fa60 | molar submucosal → **Soldered both ends** (FPD) | Fixed |
 | ⚠️ | rafi_08_eba2453d5a | REVERTED 1→2: lisp S→TH = teeth too far **lingually** (classic; earlier labially-flip was wrong) | CD || 480 | rafi_08_43a5bf4c8c | 31 → **32** (cut 1mm off #30 cone, 0.02 taper) | endo |
-| 481 | rafi_18_9793f334c2 | tearing → **Grainy mix** (alginate powder H2O) | materials |
+| 481 | rafi_18_9793f334c2 | tearing → **Grainy mix** (alginate powder H2O) | materials || 482 | ab2_74f63314bc | floor/walls → **Dental unit intraoral pieces** (semi-critical) | Spaulding |
+| 483 | ab2_6b1b25a395 | beneficence → **Nonmaleficence** (ignoring emergency) | ethics |
+| 484 | ab2_89cac5e9bc | beneficiary → **Informed consent** (refusing x-ray) | ethics |
+| 485 | ab2_2ed5635e90 | doctor urgent → **Proxy** (13yo minor) | ethics |
+| 486 | ab2_46925180a6 | fracture body+L/R condyle → **Bilateral condyle affected** | trauma |
+
 
 
 
@@ -777,6 +782,17 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - ab2_7658a0e504 — persistent asymptomatic white lesion → incisional biopsy defensible (keep)
 - ab2_eeada6e322 — primary dentition Class III tendency = MESIAL step (model backwards: claimed distal step)
 - ab2_bba267bf48 — 4yo = PRIMARY teeth: horizontal root fracture → extract coronal segment, apical resorbs (model applied permanent-tooth splint logic)
+- ab2_b9d2b5d79f — V-shaped incisor attrition from CERAMIC brackets (hard brackets wear opposing teeth; model said chewing)
+- ab2_2a414fcd02 — RIDGE LAP pontic = hardest to floss (model agreed, chose wrong option)
+- ab2_ef5f7fe593 — petechiae/oozing = platelet dysfunction → bleeding time (model claimed INR — wrong: INR is coagulation)
+- ab2_7115111b18 — APF gel 23% = typo of 1.23% (1.23 not offered; 2% NaF ≠ APF) (keep)
+- ab2_7b1002d14e — elongated archwire ulcers → clip the wire (definitive; wax = at-home interim)
+- ab2_413baf716e — lower-6 infection: severe trismus + pain on closing = SUBMASSETERIC space (model said pterygomandibular)
+- ab2_4903a186ab — cirrhosis analgesic = paracetamol at reduced dose (model claimed NSAID — backwards: avoid NSAIDs)
+- ab2_5c7d6e1ccb — inner enamel epithelium induces odontoblast differentiation (model picked the outcome)
+- ab2_fde072d7c5 — REAMER cross-section = TRIANGULAR (model confused reamer with K-file square)
+- ab2_714b94365b — anterior 2/3 tongue sensation = trigeminal (lingual n.) (classic)
+- ab2_feeb2769a4 — adult safe fluoride ~5 mg/day upper (0.5 = pediatric; keep)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
 - rafi_01_e567d4d5d2 — winged clamp = **simultaneous/single-unit** application (Endodontics Principles: "placement of the rubber dam as a single unit requires the use of a winged clamp") → REGISTER RESOLVED (marked correct)
