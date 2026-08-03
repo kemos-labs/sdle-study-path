@@ -359,6 +359,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 380 | rafi_18_5f76463d89 | 18% → **5% HF** (e.max etch) | Fixed |
 | 381 | rafi_18_899e7b5dcf | max buccal only → **max buccal + mand lingual** (shear) | occlusion |
 | 382 | rafi_18_7ec3fe4895 | balanced → **Group function** (posterior stress) | occlusion |
+| 383 | rafi_18_e0915c8f59 | tighter clasp → **Surveyed crown** (no undercut) | McCracken |
+| 384 | rafi_18_2b176d9d93 | Porcelain → **Metal-faced w/ porcelain** (low smile) | Fixed |
+| 385 | rafi_18_11b4e22cc1 | U shaped → **V-shaped** (lateral force) | CD |
+| 386 | rafi_19_5ef9b84e68 | titanium → **Amalgam** (prophy jet safe) | perio |
 
 
 
@@ -599,6 +603,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_17_dd37f1125b — 34-38 + 48 unreplaced = Class II (correct)
 - rafi_18_54884e29b5 — GIC (non-bonding) caused Li-disilicate fracture (correct reading)
 - rafi_18_b17fdb18c7 — maintain group function / unilateral (defensible)
+- rafi_19_6ce75c75da — GIC Type I = luting/cementation (correct; model backwards)
+- rafi_19_d0aef28f53 — 2-day dry avulsion → implant/FDP (correct)
+- rafi_19_5877a82be0 — alginate pour within 15 min (defensible)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
