@@ -202,6 +202,12 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 214 | rafi_20_6c9d5685cc | Resistance/retention → **Tooth reduction** (crown values) | Fixed |
 | 215 | rafi_20_48231ab9fd | Symmetry → **mesio-incisal more acute** (lower incisor) | morphology |
 | 216 | ab2_771490b666 | Pulpotomy → **DPC** (pinpoint exposure) | endo |
+| 217 | rafi_02_b2494eb0ac | collateral circulation → **remove irritation source** | endo |
+| 218 | rafi_02_83b2734c2d | Mcspaden → **Obtura II** (thermal compaction) | endo |
+| 219 | rafi_03_ee5a6e444a | Water → **Doxycycline** (avulsion soak) | trauma |
+| 220 | rafi_03_cd4f6a70b5 | Composite → **Amalgam** (supracrestal perforation) | endo |
+| 221 | rafi_04_db1610ad0e | K-file → **H-file** (active tip) | endo |
+| 222 | rafi_04_12cb569d2e | Reamers → **K-files** (flexible) | endo |
 
 
 
@@ -251,6 +257,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_18_89b6f2d029 — ZOE "increase setting time": model contradicts itself (eugenol accel vs retard); options ambiguous
 - rafi_20_ea75e896e9 — fluoride-releasing cement: GIC not offered (broken; same as rafi_13_77c5e2df19)
 - ab2_2b6d04a4a1 — lateral luxation splint 4 weeks NOT offered; option 2 is a junk marker "(No 4 weeks option)" (broken)
+- rafi_03_bc3dfe851b — "standard ISO file": 12/16/18 not ISO sizes (broken)
 
 
 ## ❌ FALSE POSITIVES (marked answer CORRECT — model misread) — keep
@@ -339,6 +346,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_20_cd1dd7d71e — denuded cementum tubules → dentinal hypersensitivity (correct)
 - rafi_20_05416f996e — one-plane prep → dark incisal third (defensible)
 - saud_delta_005 — infraorbital → cavernous sinus thrombosis (correct)
+- rafi_01_a5f5d5a672 — Endo Ice -26.6°C (passage -26.2; same material, marked correct)
+- rafi_02_9b57360518 — GG#1 = 0.5mm = ISO 50 (correct; model misread)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
