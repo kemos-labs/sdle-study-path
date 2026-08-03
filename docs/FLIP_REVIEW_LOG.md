@@ -228,6 +228,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 240 | rafi_16_af8d563e95 | perio primary → **Endo primary** (percussion+cold) | endo |
 | 241 | rafi_16_6d5c1554f1 | Reamer → **K-file** (flexible) | endo |
 | 242 | rafi_16_1766542e0d | Amputation → **Extraction** (VRF localized pocket) | endo |
+| 243 | rafi_17_a20e242190 | Root amputation → **Extraction** (VRF lower molar) | endo |
+| 244 | rafi_17_91d8513b97 | Extraction+implant → **CaOH long-term** (resorption) | trauma |
+| 245 | ab2_6cb1299b70 | Scaling → **Crown lengthening** (short crown) | perio |
 
 
 
@@ -391,6 +394,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_15_87a6081231 — recession+inadequate attached gingiva → ortho alignment (defensible; model passage mismatched)
 - rafi_17_98433f8ab1 — continued bleeding → pulpectomy (classic)
 - rafi_17_0e188f13f7 — reversible pulpitis → provisional/prevent endo (correct)
+- ab2_80418f6680 — CAL 5-6 + horizontal loss = Stage III (correct; model mis-staged)
+- ab2_c8ca6b00c2 — grade III mobility → perio lesion (defensible; model reason mismatched)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
