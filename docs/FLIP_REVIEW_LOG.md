@@ -267,7 +267,19 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 281 | rafi_10_4e46d8d29a | Ultrasonic → **Schwartz periotriever** | perio |
 | 282 | rafi_10_b110eb7b14 | all same → **Cancellous** (bone fill) | perio |
 | 283 | rafi_12_a82bc8c23d | Increase → **Decrease** shallow-pocket colonies (smoking) | perio |
-| 284 | rafi_12_8b2034fdd1 | NUG → **NUP** (desquamation, stress) | perio |
+| 284 | rafi_12_8b2034fdd1 | NUG → **NUP** (desquamation, stress) | perio || 285 | rafi_14_9860caf2d8 | Smoking → **trauma from occlusion** (not ↑GCF) | perio |
+| 286 | rafi_14_340b8b34fa | implant scaling → **polish restorations** (prophy jet) | perio |
+| 287 | rafi_14_2f93b91962 | no reproducibility → **underestimates deep pockets** (Florida) | perio |
+| 288 | rafi_16_6a5feefec5 | Redo scaling → **desensitize + reassure** (ulcers) | perio |
+| 289 | rafi_16_289a2d5a87 | GTR → **Plasty** (grade 2 furcation) | perio |
+| 290 | rafi_17_57b806ef04 | Tetra fiber → **Mino gel** (deep pockets) | perio |
+| 291 | rafi_17_d4a6588478 | Doxycycline → **CHX** (PerioChip) | perio |
+| 292 | rafi_17_b5d464782f | Loss of stippling → **Healthy** (normal pic) | perio |
+| 293 | rafi_17_122dddee8c | Class 1 → **Class 2** (passive eruption) | perio |
+| 294 | rafi_17_67f8281bf1 | Subgingival → **Pulmonary** (ultrasonic contraind) | perio |
+| 295 | rafi_17_b5e84edf82 | until resistance → **15 seconds** (GCF) | perio |
+| 296 | rafi_17_f9fcb9d19d | Loss of CT → **no gingivitis/no periodontitis** (TOF) | perio |
+
 
 
 
@@ -313,6 +325,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_aa416d3290 — occlusion rim anterior width: book says 6-8mm, not offered (broken)
 - rafi_06_0d311c408f — amalgam contraindication: all options are valid uses (ambiguous)
 - rafi_08_8b7dbb6ea6 — supragingival calculus "except": all 4 options are characteristics (broken)
+- rafi_17_46df219c7b — high-lipid-diet gingivitis: no valid option (broken)
 - rafi_08_3805600b25 — high-copper % : ≥12% not offered (2/5/9/all wrong) (broken)
 - rafi_08_6dfb9d2845 — post-1st-yr resorption 0.2mm/yr not offered (0.02 = typo) (broken)
 - rafi_15_e2981fe47b — dysphagia/nausea = OVER-extension of PPS; only "under/absence" offered (broken)
@@ -450,6 +463,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_e6fafea981 — JE migration + corresponding recession = shallow sulcus (correct)
 - rafi_08_bf67ae6ed2 — cementoalveolar fibers torn first (correct)
 - rafi_12_16607204e2 — CAL 5-6 = Stage III (correct; model mis-staged)
+- rafi_15_1509b50736 — Sri Lanka moderate ≈80-81% (correct; model misread 89)
+- rafi_15_1baf0f7d96 — sulcular incision for recession CT graft (correct)
+- rafi_17_8a59d11a50 — cancellous superior for 3-wall defects (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
