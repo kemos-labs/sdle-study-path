@@ -297,6 +297,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 314 | rafi_06_5a832c238b | all incorrect → **Enameloplasty opposing** (crown height) | implant |
 | 315 | rafi_07_54aa8fba6a | Direct retainers → **Major connector** (force transfer) | McCracken |
 | 316 | rafi_07_5d1488c572 | Guiding planes → **Rest seats** (first prep) | McCracken |
+| 317 | rafi_08_4d00beee1b | Crown → **Complex amalgam** (questionable prognosis) | operative |
+| 318 | rafi_08_b66e893359 | Qualitative only → **Quantitative + qualitative** (FOTI) | cariology |
+| 319 | rafi_08_57b52a4d72 | Arrested → **Active lesion** (white chalky) | cariology |
+| 320 | rafi_08_c87e30964d | Sjogren → **Cystic fibrosis** (reduced caries) | cariology |
 
 
 
@@ -500,6 +504,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_edff3b51b0 — Bennett = bodily shift toward working side (correct)
 - rafi_06_62ddc1166e — propylene glycol in caries detector dye (correct; model misread)
 - rafi_06_b49ad7b9dd — divergent walls when ridge <0.6mm (~0.5mm rule; correct)
+- rafi_08_7ecde76eb7 — galvanic: replace filling (defensible)
+- rafi_08_1cf7a049d0 — facial max posterior at risk in high caries (model agrees)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
