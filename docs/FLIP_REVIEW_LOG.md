@@ -403,6 +403,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 426 | rafi_01_74b924041b | mini/after-fives → **Universal + area-specific** | perio |
 | 427 | rafi_01_a4b5f4751f | Vesicle → **Firm leathery** (chronic gingivitis) | perio |
 | 428 | rafi_01_d5aa3383d5 | Ultrasonic → **Gracey 11-12** (premolar mesial) | perio |
+| 429 | rafi_02_81b983721a | 5-7 → **14-21 days** (established gingivitis) | perio |
+| 430 | rafi_02_f2b9aa87ad | Grade 1 → **Grade 2** (papilla+marginal) | perio |
+| 431 | rafi_03_825428c572 | 7 → **28 days** (CT healing) | perio |
+| 432 | rafi_04_21df600cd5 | Class I desc → **Combined** (Seibert III) | perio |
 
 
 
@@ -686,6 +690,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - ab2_fe3f190c7a — root extraction = clean-contaminated (model agrees)
 - ab2_794e049479 — lower shank 0-20° (correct)
 - ab2_9c2674fcb9 — J-shaped + deep pocket = VRF → extraction (correct)
+- rafi_02_13d9f607bb — biologic width 3mm after crown lengthening (defensible)
+- rafi_02_cb27960f44 — VRF detected by vertical percussion (classic)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
