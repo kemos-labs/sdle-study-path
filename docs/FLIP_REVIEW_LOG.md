@@ -223,6 +223,11 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 235 | rafi_11_4159c72cb3 | contraindicated → **Replant immediately** (milk avulsion) | trauma |
 | 236 | rafi_12_7f0d237fcc | Extruded GP → **VRF** (delayed percussion pain) | endo |
 | 237 | rafi_14_aaaef9452a | Extraction → **Surgical endo** (recurrent abscess) | endo |
+| 238 | rafi_15_b34e4ae79a | bubble champagne → **Methylene blue dye** (calcified) | endo |
+| 239 | rafi_16_36b1301713 | normal pulp → **Necrotic pulp** (cold negative) | endo |
+| 240 | rafi_16_af8d563e95 | perio primary → **Endo primary** (percussion+cold) | endo |
+| 241 | rafi_16_6d5c1554f1 | Reamer → **K-file** (flexible) | endo |
+| 242 | rafi_16_1766542e0d | Amputation → **Extraction** (VRF localized pocket) | endo |
 
 
 
@@ -383,6 +388,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_07_f82ead54e4 — dull pain+swelling+apical RL = acute apical periodontitis (correct)
 - rafi_08_9ff8d90b8e — smallest file #6 (correct)
 - rafi_08_917d78c505 — non-restorable abutment (correct; model reason garbled)
+- rafi_15_87a6081231 — recession+inadequate attached gingiva → ortho alignment (defensible; model passage mismatched)
+- rafi_17_98433f8ab1 — continued bleeding → pulpectomy (classic)
+- rafi_17_0e188f13f7 — reversible pulpitis → provisional/prevent endo (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
