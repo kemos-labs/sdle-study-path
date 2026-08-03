@@ -431,7 +431,16 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 457 | rafi_20_49b08bfda1 | incisive papilla → **Palatal rugae** | anatomy |
 | 458 | rafi_04_e8eb7fd26b | only 1st true → **only 2nd true** (veneer reduction) | Fixed |
 | 459 | rafi_04_f051bca34c | canines only → **canines + premolars** (4-incisor) | Fixed |
-| 460 | rafi_04_e874a3fcf3 | two small → **small then large** (double cord) | Fixed |
+| 460 | rafi_04_e874a3fcf3 | two small → **small then large** (double cord) | Fixed || 461 | rafi_04_edd0df7a65 | Anterior → **Posterior** (long centric) | occlusion |
+| 462 | rafi_04_6454df177b | Semi-adjustable → **Fully adjustable** (full-mouth) | occlusion |
+| 463 | rafi_04_cdd5aea086 | Distal → **Occlusal** (indirect retainer) | McCracken |
+| 464 | rafi_06_649c5afe3a | 30 min → **30min-1hr** (polysulfide pour) | materials |
+| 465 | rafi_06_48fe6f8c49 | ↓P/L → **Hot water** (alginate set) | materials |
+| 466 | rafi_06_96cf66e527 | 30 min → **24 hr** (polyether pour) | materials |
+| 467 | rafi_06_85dc564e54 | hot glass → **Zinc acetate** (ZOE accel) | materials |
+| 468 | rafi_06_41f4439a3d | vascular → **hemi-desmosomes** (peri-implant) | implant |
+| 469 | rafi_06_9a5f916411 | during surgery → **contraindicated** (SCC) | implant |
+
 
 
 
@@ -736,6 +745,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_14_2a8e173d29 — slight excess occlusal force → PDL widening (consistent with rafi_04_7759df9e2e)
 - rafi_04_8ae688037c — Payne functional waxing: cusps first (correct)
 - rafi_04_f330e4dcaf — full-ceramic cementation: HF etch first (correct)
+- rafi_06_32e51ae1b9 — macrofilled filler 10-100μm (correct; model misread)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
