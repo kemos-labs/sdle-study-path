@@ -454,7 +454,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 484 | ab2_89cac5e9bc | beneficiary → **Informed consent** (refusing x-ray) | ethics |
 | 485 | ab2_2ed5635e90 | doctor urgent → **Proxy** (13yo minor) | ethics |
 | 486 | ab2_46925180a6 | fracture body+L/R condyle → **Bilateral condyle affected** | trauma || 487 | ab2_de22fa3bb9 | rebond → **Refer to orthodontist** (broken retainer) | ortho |
-| 488 | ab2_c2253ab705 | extract+AB → **Stop aspirin 1 wk** (pre-extraction) | OMS |
+| 488 | ab2_c2253ab705 | extract+AB → **Stop aspirin 1 wk** (pre-extraction) | OMS || 489 | ab2_1de3b087a6 | no effect → **Increase INR** (amox+APAP on warfarin) | med |
+| 490 | ab2_cb5871671f | Class II → **Class III** (ANB −4°) | ortho |
+
 
 
 
@@ -802,6 +804,12 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - ab2_12a15651a2 — aspirin = antiplatelet → bleeding time (BT) (model's own reason agrees)
 - ab2_4046a08cc5 — ACTINIC CHEILITIS (premalignant) → laser ablation correct (model said steroid — wrong)
 - ab2_ee4bc1d699 — QTH min wavelength ~400nm; 400 not offered → 300 closest (keep, broken-ish)
+- ab2_b7c73e2cc7 — ear pain radiating to jaw angle: otitis media (otalgia referral) defensible; trigeminal = model stretch (ambiguous, keep)
+- ab2_3ad907f6cd — 72yo ill + anorexia + jaw pain + high ESR = giant cell arteritis → prednisone (model's own reason agrees)
+- ab2_9f7f834311 — lower lip numbness after injury = mental nerve → PARASYMPHYSEAL fracture (model misread)
+- ab2_b57823ab6a — sweating + dyspnea after LA = allergy → PROC AINE (ESTER = allergic); lidocaine/prilocaine = amides (model backwards)
+- ab2_5d939b6ca9 — dental waterline flush between patients = 20–30 s (classic; CDC ≥30s consistent)
+- ab2_ec09fb69a8 — Down syndrome + infection, NO proxy available → DOCTOR treats (emergency exception; differs from 13yo case where proxy exists)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
 - rafi_01_e567d4d5d2 — winged clamp = **simultaneous/single-unit** application (Endodontics Principles: "placement of the rubber dam as a single unit requires the use of a winged clamp") → REGISTER RESOLVED (marked correct)
