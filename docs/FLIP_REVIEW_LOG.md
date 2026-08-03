@@ -462,7 +462,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 495 | rafi_08_36d9da3f83 | pulpectomy → **Extraction** (necrotic + mobility III + furcation) | pedo |
 | 496 | rafi_08_77987f972d | both + SM → **both, no SM** (uncrowded) | pedo || 497 | rafi_08_c97c9e1215 | extraction → **Apexification** (immature molar + sinus) | pedo |
 | 498 | rafi_08_b7a5ef7639 | case control → **Cross-sectional** (single-time comparison) | ethics |
-| 499 | rafi_08_751959eba8 | low temp → **High temperature** (autoclave) | ethics |
+| 499 | rafi_08_751959eba8 | low temp → **High temperature** (autoclave) | ethics || 500 | rafi_08_e0c2f3ee5a | autism → **Cerebral palsy** (involuntary movements + speech) | pedo |
+| 501 | rafi_08_fbd2b367a9 | inferior alveolar → **Incisive nerve** (lower canine) | anatomy |
+
 
 
 
@@ -842,6 +844,15 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_08_ed931e1389 — CDC instrument processing: ultrasonic cleaning (options are all cleaning steps; sterilization = autoclave; question garbled but ultrasonic = best offered)
 - rafi_08_26ee73a077 — BOILING water causes corrosion (dry heat non-corrosive; model's own reason agrees with marked)
 - rafi_08_36267075b3 — wash before sterilization: remove debris/protective biofilm (marked "less time" defensible; ambiguous)
+- rafi_08_ed2d8a2d21 — fluoride NOT systemic from topical applications (model agrees)
+- rafi_08_cd1b2dae3f — fluoridated toothpaste <3y: SMEAR recommended (McDonald: "only a smear… even in young children")
+- rafi_08_db548f772b — skeletal fluorosis ~10 ppm water F (model's own reason: "above 10 ppm" → marked correct)
+- rafi_08_586d3b1efb — noxious stimulus → pain perception (defensible; model pedantry)
+- rafi_08_95bd4af648 — aphthous = lining mucosa (model agrees)
+- rafi_08_95d2d487aa — 1st-trimester: radiograph = the classic "contraindicated" answer (model over-modernized)
+- rafi_08_95b392f00c — masseter ↔ zygomatic process of TEMPORAL bone (model's sphenoid = pterygoid, wrong muscle)
+- rafi_08_3ef1289d3f — acute sinusitis = Strep pneumoniae (mixed anaerobes = chronic; model wrong)
+- rafi_08_2586fb6634 — safe extraction on warfarin: PT 2-2.5 (INR ≤2.5; model's 1-1.5 subtherapeutic)
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
