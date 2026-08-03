@@ -214,6 +214,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 226 | rafi_04_91b4a400aa | 4 weeks → **4 months** (mid-third root fx) | trauma |
 | 227 | rafi_04_8f63d3ac77 | → **EDTA** (inorganic/smear layer) | endo |
 | 228 | rafi_04_8a288d3b3d | RCT → **Extraction** (VRF) | endo |
+| 229 | rafi_06_e2f276fd8d | lesion size → **signs & symptoms** (prognosis) | endo |
+| 230 | rafi_07_ffdca72936 | Coronal → **Middle third** (worst root fx) | trauma |
 
 
 
@@ -361,6 +363,17 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_2c3d1aba70 — EDTA gel = the exception (classic)
 - rafi_04_963efa9009 — 2h dry: endo before replant (defensible per delayed-replantation protocol)
 - rafi_04_367ddeed4e — incomplete obturation = classic failure cause (defensible)
+- rafi_06_8a767a8c3a — CHX vs E.faecalis (kept; consistent with rafi_04_03b7d69e07)
+- rafi_06_364b34d38d — barium sulfate radiopacifier (correct)
+- rafi_06_df1cfeb3f3 — coronal marginal leakage = failure cause (classic modern answer)
+- rafi_06_86e69a759b — surgery when retreatment not feasible (marked defensible)
+- rafi_06_a067945ebc — severe pain → endo (model agrees)
+- rafi_06_359583c898 — file #6 = pink (correct)
+- rafi_06_c433033175 / rafi_07_73fba1cdd7 — GG#1 = ISO 50 (correct)
+- rafi_07_c605c55707 — wait 10 days + prophy (already on abs) (correct)
+- rafi_07_383e378d20 — GG#3 = 0.9mm (correct)
+- rafi_07_8b34a11aa1 — palatal root curves buccally (model agrees)
+- rafi_07_f82ead54e4 — dull pain+swelling+apical RL = acute apical periodontitis (correct)
 
 ## Method notes
 - After every flip: verify answer INDEX against OPTION TEXT (0-indexing bug caught once).
