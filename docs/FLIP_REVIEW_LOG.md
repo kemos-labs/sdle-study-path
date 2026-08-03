@@ -456,7 +456,12 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 486 | ab2_46925180a6 | fracture body+L/R condyle → **Bilateral condyle affected** | trauma || 487 | ab2_de22fa3bb9 | rebond → **Refer to orthodontist** (broken retainer) | ortho |
 | 488 | ab2_c2253ab705 | extract+AB → **Stop aspirin 1 wk** (pre-extraction) | OMS || 489 | ab2_1de3b087a6 | no effect → **Increase INR** (amox+APAP on warfarin) | med |
 | 490 | ab2_cb5871671f | Class II → **Class III** (ANB −4°) | ortho |
-| 491 | ab2_4d6876a316 | anterior cranial base → **Mandibular base** (S–Gn) | ortho |
+| 491 | ab2_4d6876a316 | anterior cranial base → **Mandibular base** (S–Gn) | ortho || 492 | rafi_08_9216e1453b | malocclusion → **Normal finding** (mamelons) | pedo |
+| 493 | rafi_08_dd8afc9fcf | long face → **Long skull** (dolichocephalic) | ortho |
+| 494 | rafi_08_8d57afa104 | max lat incisor → **Mand 2nd premolar** (missing) | ortho |
+| 495 | rafi_08_36d9da3f83 | pulpectomy → **Extraction** (necrotic + mobility III + furcation) | pedo |
+| 496 | rafi_08_77987f972d | both + SM → **both, no SM** (uncrowded) | pedo |
+
 
 
 
@@ -820,6 +825,17 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - ab2_431e2df004 — first step after case = REMOVE GLOVES, then wash hands (model skipped the glove step)
 - ab2_dccb40e25b — bilateral lower primary molar loss + erupted 1st molars = LINGUAL ARCH (model said bilateral band-and-loop)
 - ab2_50d4e483cc — DNR + family objection + arrest → CALL CPR (consistent with ab2_f07328d692; when in doubt, resuscitate)
+- rafi_07_bc9fea5535 — implant moderate post-op pain → ibuprofen 400 (model reason retrieved cephalometric passage — mismatch; keep)
+- rafi_08_93250f18de — vertical face growth: posterior border of ramus = the EXCEPT (frontonasal DOES contribute vertically; model wrong)
+- rafi_08_e99ad7800d — finger spring crossbite: needs ADEQUATE overbite (50%) (model said 5% — contradicts its own reason)
+- rafi_08_4f148ca727 — tipping force ≤50g (Contemporary Orthodontics: "should not exceed ~50 gm") — marked 20-50 CORRECT (model's 60-80 exceeds)
+- rafi_08_6ca504382c — no crowding + anterior trauma → Class II div 1 (protrusive incisors trauma-prone)
+- rafi_08_48a3bf7f9b — Scammon: neural peaks first (model's own reason agrees)
+- rafi_08_2217d62706 — primary teeth trauma peaks 1-2y (toddler walking; model's 5y wrong for primary)
+- rafi_08_21c6ac1a94 — tetracycline at 5y → premolars/canines/2nd molars (incisors+molars crowns already complete)
+- rafi_08_658d91ffb8 — fluorosis most susceptible = premolars (longest crown calcification)
+- rafi_08_290ecb085a — hand-over-mouth = hysterical child (classic)
+- rafi_08_7c470ede1a — CHILD mandibular foramen LOWER than occlusal plane (model applied adult anatomy — backwards)
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
