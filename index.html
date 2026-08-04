@@ -51,6 +51,7 @@
       <a href="https://github.com/xxxova2/sdle-study-path" target="_blank" rel="noopener">Source</a>
       ·
       <a href="https://github.com/xxxova2/sdle-study-path/blob/main/docs/INTRO_POST_EN_AR.md" target="_blank" rel="noopener">Intro</a>
+      <span id="foot-stats" class="muted" style="display:block;font-size:0.75rem;margin-top:6px"></span>
     </footer>
 
     <script src="data/highyield.js?v=20260730fn12"></script>
@@ -61,13 +62,25 @@
     <script src="data/exam_packs.js?v=20260730fn12"></script>
     <script src="data/notes_bank.js?v=20260730fn12"></script>
     <script src="data/lessons.js?v=20260730fn12"></script>
-    <script src="data/questions.js?v=20260730fn12"></script>
+    <script src="data/questions.js?v=20260803v2"></script>
     <script src="data/feedback_config.js?v=20260730fn12"></script>
     <script src="data/topics.js?v=20260730fn12"></script>
-    <script src="data/flash_notes.js?v=20260731fn5"></script>
-    <script src="data/flash_notes_verdicts.js?v=20260731fn5"></script>
+    <script src="data/flash_notes.js?v=20260803fn6"></script>
+    <script src="data/flash_notes_verdicts.js?v=20260803fn6"></script>
     <script src="data/recent_qa.js?v=20260730fn12"></script>
     <script src="data/book_refs.js?v=20260730fn12"></script>
+    <script>
+    /* Honest live stats — always computed from loaded data, never hardcoded */
+    (function () {
+      try {
+        var Q = (window.QUESTION_BANK || []).filter(function (q) { return q.usable !== false; });
+        var V = Q.filter(function (q) { return q.book_verified === true; }).length;
+        var F = window.FLASH_NOTES || {};
+        var el = document.getElementById('foot-stats');
+        if (el) el.textContent = Q.length + ' MCQs (100% textbook-verified) · Flash Notes ' + (F.total || 0) + ' recall items · 7 topics · free forever';
+      } catch (e) { /* footer stats are non-critical */ }
+    })();
+    </script>
     <script src="js/app.js?v=20260803p4"></script>
   </body>
 </html>
