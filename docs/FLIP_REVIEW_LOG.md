@@ -657,7 +657,12 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 729 | rafi_04_80ed2a0132 | IAN → **Lingual nerve** (3rd molar surgery) | OMS || 730 | rafi_04_5f9117824b | desquamation → **All of the above** (alcohol rinse) | oral med || 731 | rafi_04_8a0d8a474f | posterior mandible → **Posterior maxilla** (type IV) | implant |
 | 732 | rafi_04_19279c2316 | spacing → **Hypodontia** (Down caries) | pedo |
 | 733 | rafi_04_a242fe6fa6 | body → **Parasymphyseal** (lip paresthesia) | OMS |
-| 734 | rafi_04_095f360aa0 | 3rd molar → **Second molar** (IAN deviation) | anatomy |
+| 734 | rafi_04_095f360aa0 | 3rd molar → **Second molar** (IAN deviation) | anatomy || 735 | rafi_04_f7c27dca69 | renal → **Chemo/RT** (varnish contraindication) | pedo |
+| 736 | rafi_04_d3f9f95b8f | arch bars → **Gunning splint** (edentulous) | OMS |
+| 737 | rafi_04_54b55d84cd | alpha>beta → **Reduce absorption** (epi role) | LA |
+| 738 | rafi_04_412d634cdd | down-up-back → **Down-back-up** (dislocation) | OMS |
+| 739 | rafi_04_75df67e1c8 | acetylcysteine → **Corticosteroids** (alcoholic hepatitis) | med |
+
 
 
 
@@ -1380,6 +1385,11 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_a9ccc6fe8d — dose-dependent bacteriostatic→bactericidal = erythromycin (marked; model said tetracycline)
 - rafi_04_ced0a30289 — cavernous sinus thrombosis spreads via ANGULAR vein (danger triangle; marked classic)
 - rafi_04_ecf8bf52e2 — 5 mg/kg fluoride ingestion → give calcium (milk; marked)
+- rafi_04_16444eca55 — numb lip + posterior mandible lesion = ameloblastoma (model index = marked)
+- rafi_04_2021842e9f — dislocation reduction: downward + backward (marked; part of the classic sequence)
+- rafi_04_098fdd4f3e — infraorbital = terminal branch of V2 (model agrees)
+- rafi_04_41df44852e — PAUL-BUNNELL test = infectious mononucleosis/EBV (marked; model reason mismatched retrieval)
+- rafi_04_87c424f8a4 — HIV parasitizes HELPER T cells (marked; model reason mismatched)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
