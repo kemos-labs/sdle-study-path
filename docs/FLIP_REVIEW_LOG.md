@@ -512,7 +512,11 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 555 | rafi_12_7fb01494c1 | diamond → **Wedding ring** (remove all rings) | ethics |
 | 556 | rafi_12_1dd04bff93 | substitute → **Protect employees** (hierarchy) | ethics || 557 | rafi_12_159ba1327f | only if infected → **Before extraction** (bisphosphonate) | OMS |
 | 558 | rafi_12_338df27b01 | short-acting β2 → **Call ER** (inhaler ineffective) | med |
-| 559 | rafi_12_59cec84ed2 | laser → **Electrocautery** (pacemaker) | med || 560 | rafi_12_46ab522415 | xylocaine → **Procaine (ester)** (cirrhosis) | med || 561 | rafi_12_109d7dbc1d | latex delayed → **Latex immediate** (rhinitis/tearing type I) | oral med |
+| 559 | rafi_12_59cec84ed2 | laser → **Electrocautery** (pacemaker) | med || 560 | rafi_12_46ab522415 | xylocaine → **Procaine (ester)** (cirrhosis) | med || 561 | rafi_12_109d7dbc1d | latex delayed → **Latex immediate** (rhinitis/tearing type I) | oral med || 562 | rafi_13_cfddc6d57c | hemangioma → **Pyogenic granuloma** (granulation+vessels) | oral path |
+| 563 | rafi_13_c650454c34 | postpone → **Upright position** (dyspnea now) | med |
+| 564 | rafi_13_d0362e7891 | acyclovir → **Benzocaine** (aphthous ulcer) | oral med |
+| 565 | rafi_13_d35abe253c | intralesional steroid → **Biopsy first** (immunosuppressed) | oral med |
+
 
 
 
@@ -991,6 +995,17 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_12_49e8eb5419 — chin protrusion = lateral pterygoid (inferior head; marked defensible)
 - rafi_12_a6a93bf626 — amoxicillin diarrhea (C. diff) → stop + metronidazole (marked defensible; model's fluconazole = antifungal, wrong)
 - rafi_12_8583cbedf8 — AHA 2017: 130-139/80-89 = STAGE 1 (model agrees)
+- rafi_13_83eb3b1228 — nurse cut finger (cooking, clean) → waterproof cover OK (rings note: wedding ring allowed per passage)
+- rafi_13_7fa2167c38 — no-time-to-clean instruments → soak (water/detergent; detergent not offered — broken-ish, keep)
+- rafi_13_43ac51f05e — spit on chair = LOW-level (consistent w/ rafi_12_4a73854221; model contradicted itself)
+- rafi_13_ab06616c34 — needle injury first step = WASH the wound (then report/PEP; model said specialist = step 2)
+- rafi_13_b3649db306 — utility gloves during instrument cleaning (model's own reason agrees)
+- rafi_13_9eb93dd170 — torn glove + blood → wash the exposed area (then reglove; marked defensible)
+- rafi_13_d3bbaf3200 — IV ibandronate (cancer) + non-restorable tooth: grind to sub-gingival (avoid extraction/ONJ — real strategy)
+- rafi_13_e3d1976f43 — dilated pupils + ↑HR + ↓RR + aggression = hypoglycemia (marked defensible)
+- rafi_13_8493a0416a — generalized occlusal wear → evaluate gastric status/diet (etiology first; marked correct)
+- rafi_13_bcfa013bc8 — smokeless tobacco + trismus + buccal lesion = ORAL SUBMUCOUS FIBROSIS → intralesional steroids (marked correct)
+- rafi_13_9ef0706e07 — uncertainty re medical status → another consultation + labs before extraction (marked; model misread "confirmed")
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
