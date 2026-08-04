@@ -728,7 +728,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 816 | rafi_02_7c8b59c400 | repaired: option3 junk → **Combine ibuprofen+acetaminophen** (post-RCT pain) | endo |
 | 817 | rafi_08_3805600b25 | repaired: option3 'all' → **12%** (high-Cu; book 12-30%) | restorative |
 | 818 | rafi_04_aa416d3290 | repaired: option2 → **6-8mm** (occlusion rim; book) | restorative |
-| 819 | rafi_06_d778c91850 | generalized diffuse → **Localized diffuse** (2-3 teeth) | perio |
+| 819 | rafi_06_d778c91850 | generalized diffuse → **Localized diffuse** (2-3 teeth) | perio || 820 | fr_boost_033 | repaired: option3 junk '0mm' → **1.5–2 mm** (implant-tooth; book "≈2 mm") | restorative |
+
 
 
 
