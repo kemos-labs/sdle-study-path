@@ -632,7 +632,14 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 699 | rafi_03_d369332abf | justice → **Autonomy** (self-governance) | ethics |
 | 700 | rafi_03_226b6315c2 | nonmaleficence → **Autonomy** (ADA) | ethics |
 | 701 | rafi_03_559427c5c6 | biographical → **Present complaint** (workup) | med |
-| 702 | rafi_03_9cf014b75d | reject+dismiss → **Refer** (tx disagreement) | ethics |
+| 702 | rafi_03_9cf014b75d | reject+dismiss → **Refer** (tx disagreement) | ethics || 703 | rafi_03_89a3094448 | bifid condyle → **Condylar resorption** (RA) | OMS |
+| 704 | rafi_03_10ff0051a8 | fibroblast → **Osteoblasts** (PDL coordinate) | perio |
+| 705 | rafi_03_7af46170e7 | 50% → **100% O2** (sickle cell) | med |
+| 706 | rafi_03_c68a4f7122 | too lateral → **Too medial** (IANB facial n.) | LA |
+| 707 | rafi_03_722492e732 | 6 → **9 cartridges** (50kg lidocaine+epi) | LA |
+| 708 | rafi_03_2f0ce184d9 | soft palate → **Buccal mucosa** (PV) | oral path |
+| 709 | rafi_04_9670943691 | cusp-cusp → **MB groove** (Class I) | ortho |
+
 
 
 
@@ -1308,6 +1315,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_03_4551f90588 — HIV records request → written permission (model agrees)
 - rafi_03_0312fd5646 — 5th-graders now vs 10 yrs ago = repeated CROSS-SECTIONAL (different groups; marked)
 - rafi_03_927dcac176 — study ethics: informed consent (marked; garbled wording)
+- rafi_03_a3c396eeed — cardiac epi limit 0.04 mg (2 cartridges; model's own reason agrees)
+- rafi_03_e727eb5805 — 20kg lidocaine without epi: 4.4×20 = 88 mg (marked correct; model's 5mg/kg math off)
+- rafi_04_a352a9fa28 — quad helix wire = 0.038" (38 mil) SS (marked correct; model pedantic 40 vs 38)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
