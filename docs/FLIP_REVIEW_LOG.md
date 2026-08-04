@@ -540,7 +540,46 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 595 | rafi_16_231061cd65 | O2 93 → **SOB at rest** (respiratory distress) | med |
 | 596 | rafi_16_a30ecdb6c2 | sialadenosis → **Mucus plug** (meal-time swelling) | OMS |
 | 597 | rafi_16_e61f79770d | oncocytosis → **Warthin** (bilateral parotid) | oral path || 598 | rafi_16_cde5d90336 | extract all same visit → **1 tooth/2wk** (BP staged) | OMS |
-| 599 | rafi_16_db12f0955e | treat+monitor → **Reschedule** (unstable routine) | med |
+| 599 | rafi_16_db12f0955e | treat+monitor → **Reschedule** (unstable routine) | med || 600 | rafi_16_93e393c347 | 21 → **14 days** (pre-chemo extraction) | med |
+| 601 | rafi_16_387e5bc271 | fluorosis → **Amelogenesis imperfecta** | oral path |
+| 602 | rafi_16_f8cc497799 | eruption cyst → **Marsupialization** (dentigerous) | OMS |
+| 603 | rafi_16_9d017a3f5c | no dam → **Albuterol pre-op** (COPD) | med |
+| 604 | rafi_16_f71e9de0b2 | ALT → **aPTT** (oozing + petechiae) | med |
+| 605 | rafi_16_7c11b3fef3 | acinar atrophy → **Acinar hypertrophy** (sialadenosis) | oral path |
+| 606 | rafi_16_2d3835697e | MRI → **Incisional biopsy** (before biopsy) | OMS |
+| 607 | rafi_16_62e809face | Lefort 2 → **Zygomatic** (trismus + eye bleed) | OMS |
+| 608 | rafi_17_b93bc47a89 | slow expansion → **Extract supernumerary + fixed** | ortho |
+| 609 | rafi_17_f0b65453fa | arrested caries → **Enamel hypoplasia** | pedo |
+| 610 | rafi_17_2331885a6a | resorb → **Remains** (ZOE pulpotomy) | pedo |
+| 611 | rafi_17_10a42e012c | fixed ortho → **Obstructive nose** (no dam) | pedo |
+| 612 | rafi_17_259f9b590b | lower susc → **Same susceptibility** (lost sealant) | pedo |
+| 613 | rafi_17_4d3cc2d4fd | antimicrobial → **Barrier** (sealants) | pedo |
+| 614 | rafi_17_6853c52999 | intermediate → **Autoclave** (extracted tooth) | ethics |
+| 615 | rafi_17_ab9163ca8c | serology → **Muscle test** (fibromyalgia) | med |
+| 616 | rafi_17_b6a122d57b | petechiae → **Hemangioma** (lobulated) | oral path |
+| 617 | rafi_17_1b10dcebdf | biopsy → **Reassure** (post-IANB lump) | OMS |
+| 618 | rafi_17_8c67263ed4 | ant-medial → **Anterior lateral** (disc) | OMS |
+| 619 | rafi_17_3856563102 | to canine → **Buccal 3rd molar** (LB block) | LA |
+| 620 | rafi_17_1aba97be93 | mucocele → **Salivary tumor** (acini+fibrous) | oral path |
+| 621 | rafi_17_c026437e09 | pyogenic granuloma → **Papilloma** (finger-like) | oral path |
+| 622 | rafi_17_ac5ffd884e | bone island → **Cemento-osseous dysplasia** | oral path |
+| 623 | rafi_17_f5f7b0a580 | anaerobic → **Mixed** (odontogenic) | OMS |
+| 624 | rafi_17_7818e3ea82 | steroid inhaler → **Prophylactic inhaler** (COPD) | med |
+| 625 | rafi_17_2689ddd7bd | prilocaine → **Etidocaine** (injection only) | LA |
+| 626 | rafi_17_f1dbada190 | inflammatory → **Reactive** (nicotine stomatitis) | oral path |
+| 627 | rafi_18_032301c55f | thumb sucking → **Resting tongue** (open bite) | ortho |
+| 628 | rafi_18_899b76ee6d | retrude mandible → **Protrude maxilla** (Frankel III) | ortho |
+| 629 | rafi_18_676b16ff8f | lip bumper → **Advancement of upper** (pseudo Cl3) | ortho |
+| 630 | rafi_18_d93ce55f4a | thumb sucking → **Resting tongue out** | ortho |
+| 631 | rafi_18_8eb06f6f94 | rapid+weekly → **Slow expansion weekly** (11yo) | ortho |
+| 632 | rafi_18_9830dcbd8f | posterior extrusion → **Lower anterior intrusion** | ortho |
+| 633 | rafi_18_c259f25393 | Hass → **Quad helix** (crossbite+open bite) | ortho |
+| 634 | rafi_18_966df95e27 | amalgam → **Composite** (primary teeth) | pedo |
+| 635 | rafi_18_e1729c8b88 | 3 → **1 ppm** (fluorosis threshold) | pedo |
+| 636 | rafi_18_71f3bdc066 | upper 2 → **Lower 5** (missing; consistent) | ortho |
+| 637 | rafi_18_3a9e021037 | N95 double → **Defer** (suspected TB) | med |
+| 638 | rafi_18_72654d4b6c | DDW → **DDWOR** (no click + limited opening) | OMS |
+
 
 
 
@@ -1096,6 +1135,37 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_16_798bb20897 — ACTIVE TB + urgent pain → infiltration mask (consistent w/ TB series)
 - rafi_16_5c9c8be1aa — pericoronitis → third molar EXTRACTION (definitive; marked correct)
 - rafi_16_dab2f34dad — TB 4yrs ago + negative + physician OK → mask (consistent; model said normal)
+- rafi_16_81790aef42 — trismus from pericoronitis → antibiotics (acute management; marked)
+- rafi_16_4861ba4fd4 — zometa ONJ purulent → antibiotics (conservative first; marked)
+- rafi_16_37d7f411f2 — thinnest cortical plate = labial of mandibular incisors (model agrees)
+- rafi_16_d829dffbd9 — most common dental emergency = VASOVAGAL syncope (marked correct)
+- rafi_16_84af33d1ee — fever + rash + tonsils: scarlet fever not offered; rubella marked (keep, broken-ish)
+- rafi_17_23999bd93f — Down syndrome large tongue = relative macroglossia (brachycephalic small jaws; marked)
+- rafi_17_1c31580871 — retrocline upper incisors = LABIAL BOW (lingual spring would procline; marked correct)
+- rafi_17_071342e52a — leeway mandible per side 1.5 (bank's value; 2.5 not offered — keep)
+- rafi_17_79b7b8170c — bite marks on neck + palatal bruises = SEXUAL abuse markers (marked correct)
+- rafi_17_d6ab19943e — lisinopril (ACE-i): epi interaction (marked; model's aluminum chloride unconvincing)
+- rafi_17_57143d5234 — alar space → thorax (consistent w/ rafi_15_036b848b55)
+- rafi_17_8624098efc — confirm not a carrier = HBsAg negative (marked)
+- rafi_17_5d9b5f0fdf — active TB + severe pain → filtration mask (consistent w/ TB series)
+- rafi_17_3f074ef530 — confirmed non-infectious TB → treat as normal (marked)
+- rafi_17_3fce17f48d — after HBV vaccine, highest residual risk = HCV (marked HBC)
+- rafi_17_aef602808c — spit bowl → low-level disinfection (consistent)
+- rafi_17_c5b7690595 / eec352acfc — needlestick: wash + do not scrub/encourage bleeding (marked pair kept)
+- rafi_17_cb0ed7208c — polyether disinfection = iodophors (marked)
+- rafi_17_dcf67710f7 — HIV PEP max window in weeks = 4 (marked)
+- rafi_17_0340f07030 — maternal smoking → cleft lip/palate (marked correct)
+- rafi_17_c7821e9157 — TB on tx 4 months → request blood/verify non-infectious (marked)
+- rafi_17_72bf14ed46 — small oroantral communication → blood clot + figure-8 suture (marked)
+- rafi_17_e4afc48524 — BP + non-restorable root → RCT + level with gingiva (consistent w/ rafi_15_27388ceccd)
+- rafi_17_3a1c363437 — DM NOT associated with leukoplakia (model agrees)
+- rafi_17_834df013c3 — increased vertical + long ramus = mouth-breather facies (marked)
+- rafi_17_b6640c0fd9 — INR 3.5 minor surgery → don't stop warfarin (consistent w/ rafi_15_f066a3574c)
+- rafi_18_f0c94ac432 — Class II div 2 functional appliance = Herbst (marked; model said twin block)
+- rafi_18_f9456a1536 — bilateral crossbite + open bite + thumb sucking = QUAD HELIX (model agrees)
+- rafi_18_ec81305d47 — 3rd molar crown complete ~16 (marked; model's 15 not offered)
+- rafi_18_f7c4c29516 — dry heat 320°F/120 min (consistent w/ rafi_16_1e3879feff)
+- rafi_18_03aa6132a1 — predentin adjacent to pulp (model agrees)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
