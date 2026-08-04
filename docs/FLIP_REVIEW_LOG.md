@@ -716,7 +716,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 800 | rafi_07_b2a2910e77 | pulpectomy → **Follow-up 6mo** (resorption) | endo |
 | 801 | rafi_07_c09a19cf81 | dry heat → **Chemical vapor** (carbon steel) | ethics |
 | 802 | rafi_07_545f1f2bf0 | as soon as heat gone → **A day after** (sick doctor) | ethics |
-| 803 | rafi_07_3fa124ad09 | be honest → **Do not harm** (non-maleficence) | ethics |
+| 803 | rafi_07_3fa124ad09 | be honest → **Do not harm** (non-maleficence) | ethics || 804 | rafi_07_77f5d87816 | hypoglycemic → **Syncope** (controlled diabetic) | med |
+| 805 | rafi_07_f46c408fe1 | antifungal → **Reassure** (HL bilateral) | oral med |
+| 806 | rafi_14_795e9da617 | edema → **IAN damage** (3rd molar) | OMS |
+
 
 
 
@@ -1496,6 +1499,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_06_abb0d6157f — worldwide most common mandible fracture = condyle (consistent w/ rafi_10_4f7633d67e)
 - rafi_07_7b668abd74 — anterior bite plane contraindicated in OPEN BITE (marked)
 - rafi_07_facb01e9dc — nosocomial transmission: counter (fomite; marked)
+- rafi_13_f3ecf9198d — reverse-smoking palate lesion = nicotine stomatitis → REACTIVE (consistent w/ rafi_17_f1dbada190)
+- rafi_14_614caa0d3e — vaccinated dentist → highest risk = hepatitis C (model agrees; consistent w/ rafi_17_3fce17f48d)
+- rafi_14_f3b62601e8 — stylomandibular ligament limits PROTRUSION (marked; model said muscle)
+- rafi_14_7101d0fb0f — parotid pain on eating + negative XR = sialolithiasis (marked)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
