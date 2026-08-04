@@ -51,10 +51,10 @@
 |---|---|---|
 | 2.1 | Build a clean per-topic retrieval index from the 31 canonical `.txt` books (chapter-level) | ✅ done — `scripts/verify_bank_batch.py` loads the corpus into per-topic passages (endo 16k, perio 74k, restorative 28k, …), keyword-retrieves top passages per question |
 | 2.2 | Batch verification pass #1 (endo, perio, restorative = the 70%) | ✅ **COMPLETE 2026-08-03** — 8,523 verdicts (6,594 supported / 1,154 uncertain / 771 contradicted); apply pass refreshed `book_support` on 5,508 Q |
-| 2.3 | Batch verification pass #2 (oms 3,765, ortho_pedo 1,476, ethics 892, mixed 488 = 6,621 Q) | 🟡 **RUNNING** — `run_verify_forever.sh oms,ortho_pedo,ethics,mixed 25 22`, checkpoint resumable, log `/tmp/bank_verify_p2.log` (~100 Q/hr; slow on 202K-passage mixed corpus) |
-| 2.4 | Adjudicate flags | ✅ **488 book-verified fixes applied** (log `docs/FLIP_REVIEW_LOG.md`) — every contradicted flag human/AI-reviewed, index-verified, no auto-flips; ~200 keeps + ~45 needs-review documented; 11 broken (no-valid-option) questions hidden `usable:false` + `_repair_pending` |
-| 2.5 | Apply verified verdicts to `questions.js` | ✅ done — supported→book_support refreshed (5,508 Q), flips applied manually with `[Book: …]` evidence |
-| 2.6 | Regenerate `topics.js` / lessons counts from verified data | ⬜ after pass 2 |
+| 2.3 | Batch verification pass #2 (oms 3,765, ortho_pedo 1,476, ethics 892, mixed 488 = 6,621 Q) | ✅ **COMPLETE 2026-08-03** — 99.9% of the usable bank verified (15,161 verdicts; 18 stragglers endo/perio/resto) |
+| 2.4 | Adjudicate flags | ✅ **813 book-verified fixes applied** (log `docs/FLIP_REVIEW_LOG.md` — 806 numbered + 7 pre-numbered; 1,535 contradicted verdicts, ALL human/AI-reviewed, index-verified vs option TEXT, no auto-flips; ~720 keeps documented; 12 broken hidden `usable:false` + `_repair_pending`) |
+| 2.5 | Apply verified verdicts to `questions.js` | ✅ done — supported→book_support refreshed on **9,742 Q** (pass 1 + pass 2), flips applied manually with `[Book: …]` evidence |
+| 2.6 | Regenerate `topics.js` / lessons counts from verified data | ⬜ next |
 | 2.7 | Gates + spot-check | ✅ gates green after every fix batch + Playwright clean (40Q quiz, 0 fakes) |
 
 **Pilot findings (150 sampled):** 63% supported · 27% uncertain (honest needs-review) · 10% contradicted flags → after human review ~3% real errors (~300-450 across the 15k bank). Retrieval mismatches are the main false-positive cause — every contradicted flag needs human/AI review.
