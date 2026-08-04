@@ -683,7 +683,16 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 762 | rafi_06_4d1aa35bf5 | AOT → **Compound odontoma** (mini teeth) | oral path |
 | 763 | rafi_06_2f8eb68701 | dentigerous → **OKC** (scalloped 3rd molar) | oral path |
 | 764 | rafi_06_427d716ea0 | inflammatory → **Benign** (well-defined) | radiology |
-| 765 | rafi_06_2d02a7c550 | ameloblastoma → **Fibrous dysplasia** (ground glass) | oral path |
+| 765 | rafi_06_2d02a7c550 | ameloblastoma → **Fibrous dysplasia** (ground glass) | oral path || 766 | rafi_06_d799e14fdf | SMV → **Occipitomental** (cranial base) | radiology |
+| 767 | rafi_06_40689c3b5f | distal canine → **Buccal plane** (premolar angulation) | radiology |
+| 768 | rafi_06_2bc8be0931 | epilepsy → **Hyperkinesis** (ADHD) | pedo |
+| 769 | rafi_06_d5bf96996a | dentigerous → **Primordial cyst** | oral path |
+| 770 | rafi_06_d33461b297 | leukemia → **Angina** (procedural chest pain) | med |
+| 771 | rafi_06_e3d8b91d72 | scleroderma → **Paget** (hypercementosis) | oral path |
+| 772 | rafi_06_acd20d1e88 | thrombocytopenia → **Plummer-Vinson** | oral med |
+| 773 | rafi_06_4300335db7 | ectodermal → **Hypophosphatasia** (no cementum) | pedo |
+| 774 | rafi_06_b857a0236f | 0.25 → **0.5 mg/day** (F supplement) | pedo |
+
 
 
 
@@ -1445,6 +1454,12 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_06_de3fb8a800 — mid-palatal swelling + non-vital = radicular cyst (model agrees)
 - rafi_06_b8d4b2faea — bilateral condylar fractures: PANORAMIC (model agrees; standard screening)
 - rafi_06_70f41d4235 — cyst vs neoplasm: lesion CONTENT (model agrees)
+- rafi_06_aca2699a6c — FMX F-speed dose: 4.0 µSv-class figure (marked; model reason garbled)
+- rafi_06_e695a5c395 — fewer teeth + larger lateral = FUSION (model agrees)
+- rafi_06_207003da76 — oligodontia = initiation/proliferation stage anomaly (model agrees)
+- rafi_06_56821862f6 — 7yo fluoride: first molars (marked)
+- rafi_06_335dcdba19 — fluoride varnish = 5% NaF (model's own reason agrees)
+- rafi_06_806685b4cb — 2% NaF ≈ 9,000 ppm F (marked; model pedantic 9,200)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
