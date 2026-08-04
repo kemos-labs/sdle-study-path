@@ -665,7 +665,12 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 741 | rafi_04_201f6df542 | reverse Towne → **Towne view** (subcondylar) | OMS |
 | 742 | rafi_04_79d13bf439 | ambulance → **Recovery position** (seizure) | med |
 | 743 | rafi_06_412cb0c18d | canine loss → **Open bite** (self-corrects) | pedo |
-| 744 | rafi_06_3925c53ab7 | bite plane → **High-pull headgear** (deep bite) | ortho |
+| 744 | rafi_06_3925c53ab7 | bite plane → **High-pull headgear** (deep bite) | ortho || 745 | rafi_06_1f21763c67 | IL-1 → **TGF-beta** (bone coupling) | ortho |
+| 746 | rafi_06_1372f78c89 | mand incisor prox → **Lingual pits + buccal** (rampant) | pedo |
+| 747 | rafi_06_9368f9ac61 | rapid → **Slower resorption** (no successor) | pedo |
+| 748 | rafi_06_2c780a2aad | extraction → **Endo** (preserve primary) | pedo |
+| 749 | rafi_06_71fe8d8727 | extract+retainer → **Pulpotomy + wait** (35 missing) | pedo |
+
 
 
 
@@ -1400,6 +1405,12 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_19ea0b8a1f — upper lateral caries: ASA + nasopalatine (marked comprehensive; model said ASA only)
 - rafi_04_1219fbdafe — 3yo caries-free + good OH → no fluoride needed (marked)
 - rafi_06_54978d191b — maxillary excess + overjet: maxillary impaction (marked; sagittal setback not offered — broken-ish)
+- rafi_06_7e3126801e — thumb sucking → proclination (marked)
+- rafi_06_a4d52ff8c5 — maxillary eruption 6,1,2,4,3,5,7,8 (4 BEFORE 3; marked correct; model said 3 before 4 — wrong)
+- rafi_06_a82127ad2c — 9yo midline diastema: Broadbent phenomenon (physiologic; marked)
+- rafi_06_ae6124ec0f — Frankl scale: "indifferent" NOT included (model agrees)
+- rafi_06_d6b9e44944 — 12yo fractured incisor: pulpectomy + SSC (marked; athlete — trauma-prone)
+- rafi_06_f33e98647e — missing incisor adolescent: resin-bonded prosthesis (model agrees)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
