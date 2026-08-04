@@ -4626,7 +4626,7 @@
           <h1 style="margin:0;font-size:1.4rem">📚 Flash Notes <span style="font-size:0.8rem;color:var(--muted);font-weight:400">النوطات السريعة</span></h1>
           <div style="display:flex;align-items:center;gap:12px">
             <span style="color:var(--accent2);font-weight:600">${totalAll6} items</span>
-            <span class="muted">🃏 ${totalCards}</span>
+            <span class="muted">🃏 ${totalCards} deck cards</span>
           </div>
         </div>
 
