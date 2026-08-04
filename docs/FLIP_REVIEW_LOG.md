@@ -603,7 +603,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 661 | abtal_pack_18d6b0dd01 | perforation → **Ledge** (nothing visible) | endo |
 | 662 | abtal_pack_6ae2a2263d | upper intrusion → **Lower intrusion** (deep bite) | ortho || 663 | abtal_pack_df55e86a2b | rest in amalgam → **Replace + sound structure** | McCracken |
 | 664 | abtal_pack_ec92f0db38 | proceed → **Epi + call ER** (anaphylaxis) | med |
-| 665 | abtal_pack_c8dd9adb56 | antiviral → **Corticosteroids** (GCA) | oral med || 666 | abtal_pack_d67bbf4cef | sufficient heat → **Spores killed** (spore test) | ethics |
+| 665 | abtal_pack_c8dd9adb56 | antiviral → **Corticosteroids** (GCA) | oral med || 666 | abtal_pack_d67bbf4cef | sufficient heat → **Spores killed** (spore test) | ethics || 667 | saud_delta_179 | glutaraldehyde → **Hot water** (metal tray) | ethics |
+| 668 | saud_delta_187 | type I → **Type IV** (rubber dam) | oral med |
+
 
 
 
@@ -1248,6 +1250,12 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - abtal_pack_f9b9d852ff — child brushing damage → neglect (not offered); physical marked (broken-ish, keep)
 - abtal_pack_41ddd52224 — adrenal suppression thresholds: none of the small doses cause it (marked kept, broken-ish)
 - abtal_pack_6e6c53a38d — full-thickness lip laceration = 3-LAYER closure (marked; model reason mismatched cleft lip)
+- saud_delta_004 — supernumerary + flat midface + exophthalmos = APERT syndrome (marked correct)
+- saud_delta_010 — no-time-to-clean instruments → soak (consistent w/ rafi_13_7fa2167c38 + abtal_pack_d7d388ed9d)
+- saud_delta_016 — teeth-showing + eye closing + forehead wrinkling = FACIAL nerve (model agrees)
+- saud_delta_024 — lip malignancy = mucoepidermoid among MSG options (consistent w/ ab2_d30e554a9d; SCC not offered)
+- saud_delta_123 — carbamazepine + diabetic + unconscious: syncope (model agrees)
+- saud_delta_162 — parotid acinar atrophy: question ambiguous; hypertrophy marked (kept, register)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
