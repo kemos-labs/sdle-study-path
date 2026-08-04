@@ -711,7 +711,13 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 794 | rafi_06_0ec7c233f8 | stroke+aspirin → **Bronchial asthma** (no coag test) | med |
 | 795 | rafi_06_1ec7476bb2 | Dilantin → **Adrenaline** (no hyperplasia) | oral med |
 | 796 | rafi_06_f16f3f8c36 | cidal+cidal → **Cidal+static** (antagonism) | med |
-| 797 | rafi_06_8e09802c9b | extrinsic+PT → **INR 3 caveat** (not-true) | med |
+| 797 | rafi_06_8e09802c9b | extrinsic+PT → **INR 3 caveat** (not-true) | med || 798 | rafi_06_6d026f016b | absolute CI → **Epi less harmful** (HTN) | med |
+| 799 | rafi_07_1b57e3d559 | heavy intermittent → **Light continuous** (ortho force) | ortho |
+| 800 | rafi_07_b2a2910e77 | pulpectomy → **Follow-up 6mo** (resorption) | endo |
+| 801 | rafi_07_c09a19cf81 | dry heat → **Chemical vapor** (carbon steel) | ethics |
+| 802 | rafi_07_545f1f2bf0 | as soon as heat gone → **A day after** (sick doctor) | ethics |
+| 803 | rafi_07_3fa124ad09 | be honest → **Do not harm** (non-maleficence) | ethics |
+
 
 
 
@@ -1488,6 +1494,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_06_f8f84ccb5c — aplastic anemia EXCEPT = cold hemoglobinuria (hemolytic; model agrees)
 - rafi_06_ec9b271b83 — syphilitic lesion → penicillin only (marked)
 - rafi_06_abb0d6157f — worldwide most common mandible fracture = condyle (consistent w/ rafi_10_4f7633d67e)
+- rafi_07_7b668abd74 — anterior bite plane contraindicated in OPEN BITE (marked)
+- rafi_07_facb01e9dc — nosocomial transmission: counter (fomite; marked)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
