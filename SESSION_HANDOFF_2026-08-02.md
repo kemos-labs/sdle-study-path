@@ -244,3 +244,18 @@
 - Gates: **9/9 main + flash gate green** (G-VERIFIED 15,166/15,166 · G-CITE 15,166/15,166 · G-HINGE thin 0 · G-PLACEHOLDER 0).
 - Commits: `509171c` (data+scripts), `ab48acb` (deploy bump). @reboot junk-watchdog cron removed (job done).
 - **Model comparison recap**: deepseek direct = star (8× parallel did the whole job in ~4 min); cline/opencode free models work via pi staggered (25 Q in ~40s) but rate-limit under 6-way burst; zai returns empty content often.
+
+---
+
+## UPDATE 10 (2026-08-05) — UI/UX redesign: warm paper theme (research-backed, live)
+
+**Web research done first (W3C WCAG 2.2 SC 1.4.3, web.dev Learn Accessibility, CSS-Tricks, Smashing Magazine color theory, Wikipedia color psychology, AMBOSS/UWorld patterns):**
+- Contrast law: **4.5:1 body / 3:1 large text** (AA) — measured programmatically, not by eye
+- Off-white paper (not pure #fff) reduces glare; warm near-black ink (not pure black) reduces halation; desaturated chrome + saturated accents only for CTAs/status; green=correct/red=wrong **always paired with ✓/✗ text** (WCAG 1.4.1); ~1 primary accent (deep teal = calm/trust), no purple-blue AI-slop gradients
+
+**Implemented (committed `19027b7`, live at kemos-labs.github.io/sdle-study-path):**
+- Dark navy theme → **warm paper** `#FAF7F2` bg · white cards · warm ink `#2B2620` · deep teal accent `#0B6B59` · green success `#176B3C` · amber `#8A5A00` · brick red `#B3402E`
+- **Cairo font** (friendly bilingual UI) + Spectral kept for longform lesson reading
+- Nav active = solid teal pill + white text; touch targets 42–48px; visible focus rings; removed light-blue-on-paper invisibility, white-on-light step counter, muted-on-green chips, blue rgba selection tints (127 hex + 10 rgba replacements)
+- **Programmatic WCAG contrast audit** (`work/contrast_audit.js`): audits every visible text node in all 10 views with alpha-blended backgrounds → **0 violations**
+- Mobile 390px: no horizontal overflow anywhere; full regression green (8/8 tabs, 10-Q quiz 0 junk, mock, flash counter, blueprint, banner); live verified: `app.css?v=20260805ui3`, `app.js?v=20260805v6`, body bg rgb(250,247,242), Cairo, 0 console/page errors, live quiz answers with green/red feedback visible
