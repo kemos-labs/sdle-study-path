@@ -649,7 +649,13 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 720 | rafi_04_2e33c0e4e7 | daily dose → **Double the dose** (steroid cover) | med |
 | 721 | rafi_04_32abc3d527 | 0.25 → **0.5 mg/day** (F supplement) | pedo |
 | 722 | rafi_04_0dcd342f16 | 21 → **10-14 days** (pre-RT extraction) | OMS |
-| 723 | rafi_04_4e98fb98c5 | max canine → **Mandibular incisor** (alveolar fx) | OMS |
+| 723 | rafi_04_4e98fb98c5 | max canine → **Mandibular incisor** (alveolar fx) | OMS || 724 | rafi_04_03fdf5b29e | premalignant → **Leukoplakia** (frenulum) | oral med |
+| 725 | rafi_04_e4e4a3741f | defer tuberculin → **2 weeks of tx** (TB) | med |
+| 726 | rafi_04_56deb7075d | anteriors first → **Posteriors first** (extraction seq) | OMS |
+| 727 | rafi_04_16883c1b13 | 12 → **16 years** (aspirin/Reye) | pedo |
+| 728 | rafi_04_14a2bfc91c | Adson → **Allis forceps** (epulis) | OMS |
+| 729 | rafi_04_80ed2a0132 | IAN → **Lingual nerve** (3rd molar surgery) | OMS |
+
 
 
 
@@ -1347,6 +1353,16 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_ed9cca1303 — autoclave 121°C = 30 min (model agrees)
 - rafi_04_4f7cd124d8 — 3rd molar extraction defect DISTAL to 2nd molar (marked; model said mesial)
 - rafi_04_5d8f92fd25 — LGE (HIV, candidal) → fluconazole (marked; model said plaque control)
+- rafi_04_2d70685ea2 — Ramsay Hunt = VII + VIII (marked correct; model said VII only)
+- rafi_04_b94c6a2930 — submento-vertex = ZYGOMATIC ARCH (marked correct; model said mandible)
+- rafi_04_d0828be69d — most difficult impaction = distoangular (consistent w/ rafi_08_e292bec5e8)
+- rafi_04_49a014f48a — palate forms 4th-7th week (marked; primary palate)
+- rafi_04_c14b4bbab8 — TEAR-SHAPED radiolucency = globulomaxillary cyst (marked correct)
+- rafi_04_9519ccc351 — dry socket 2-3 days (marked correct; model said 3-5)
+- rafi_04_0eda1105c0 — ISRADIPINE does NOT cause gingival enlargement (marked correct)
+- rafi_04_9b6824fe3e — maxillary extraction sequence 3-6-8-7-5-4-2-1 (marked; model index = marked)
+- rafi_04_e7b5277f72 — DD type II: pulp chamber abnormalities (model agrees)
+- rafi_04_ea7910a955 — mental nerve injury = PARASYMPHYSEAL (consistent w/ rafi_08_9f7f834311)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
