@@ -154,3 +154,18 @@
 - **CSS polish**: bigger touch targets, pill buttons with icons, hover/active states, warm gradient accents; mobile verified (390px, no overflow)
 - Full regression: 8/8 tabs OK, flash quiz 40Q 0-fakes, mobile OK, 0 console errors; gates green
 - **DEPLOYED LIVE**: https://kemos-labs.github.io/sdle-study-path/ serving app.js?v=20260804ui + app.css?v=20260804ui (commit 197db0c)
+
+
+---
+
+## UPDATE 5 (2026-08-04) — Post-launch fixes (user caught 2 bugs)
+
+- **Verified-bar overcount fixed**: "📖 5271/5239" was impossible (157 non-usable questions carry book_verified stamps). All 5 display sites now filter `usable !== false` → renders **5239/5239** (and 15,166/15,166 bank-wide). Verified on live site.
+- **Day 4/6 lesson copy mismatch fixed (39 replacements)**: the Resto-mega lesson was assigned to Day 6 but its body said "Day 4" 23× (leftover from before Endo moved to Day 4). Fixed all day references across lessons.js:
+  - Mega lesson: Day 4→Day 6 (integration day); Days 5+→7+; Days 5–9→7–11; "Tomorrow is perio (Day 5)"→"oral surgery + LA (Day 7)"; bridge now points to Day 7 OMS with accurate topic summary
+  - Day 3 bridge: now correctly previews Day 4 = Endodontics + trauma (was "tomorrow is integration")
+  - Perio lesson bridge: now points to Day 6 Resto mega (was "Endodontics")
+  - Endo lesson heading: "Why Day 6 pays free points"→"Why Day 4 pays free points"
+  - Day 7/9 cross-refs: "Day 6 trauma"→"Day 4 trauma", "reuse Day 6"→"reuse Day 4", etc.
+- Verified live: app.js?v=20260804v2 + lessons.js?v=20260804d6, Day-6 reading shows 22× Day 6, 0 stale Day 4, correct bridge, verified bar 5239/5239, 0 console errors.
+- Gates green, pushed e5f97c3, tree clean.
