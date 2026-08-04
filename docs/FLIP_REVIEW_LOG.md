@@ -604,7 +604,14 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 662 | abtal_pack_6ae2a2263d | upper intrusion → **Lower intrusion** (deep bite) | ortho || 663 | abtal_pack_df55e86a2b | rest in amalgam → **Replace + sound structure** | McCracken |
 | 664 | abtal_pack_ec92f0db38 | proceed → **Epi + call ER** (anaphylaxis) | med |
 | 665 | abtal_pack_c8dd9adb56 | antiviral → **Corticosteroids** (GCA) | oral med || 666 | abtal_pack_d67bbf4cef | sufficient heat → **Spores killed** (spore test) | ethics || 667 | saud_delta_179 | glutaraldehyde → **Hot water** (metal tray) | ethics |
-| 668 | saud_delta_187 | type I → **Type IV** (rubber dam) | oral med |
+| 668 | saud_delta_187 | type I → **Type IV** (rubber dam) | oral med || 669 | saud_delta_241 | do procedure → **Defer** (MI 9 days) | med |
+| 670 | rafi_01_c0ea800590 | 15 → **5 events/hr** (OSA) | med |
+| 671 | rafi_01_64d25ed4b0 | 0.5/2wk → **0.5 mm q2d** (slow expansion) | ortho |
+| 672 | rafi_01_155cbefe86 | maxillary plane → **Mandibular plane ∥ floor** | OMS |
+| 673 | rafi_01_8a1e205d46 | SNA → **SNB** (mandible position) | ortho |
+| 674 | rafi_01_dada56e7af | dental → **Half skeletal + half dental** (quad helix) | ortho |
+| 675 | rafi_01_566abfb333 | Class I → **Class II** (MB cusp mesial) | ortho |
+
 
 
 
@@ -1256,6 +1263,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - saud_delta_024 — lip malignancy = mucoepidermoid among MSG options (consistent w/ ab2_d30e554a9d; SCC not offered)
 - saud_delta_123 — carbamazepine + diabetic + unconscious: syncope (model agrees)
 - saud_delta_162 — parotid acinar atrophy: question ambiguous; hypertrophy marked (kept, register)
+- rafi_01_ab6e285018 — Down macroglossia → teeth SPACING (model agrees)
+- rafi_01_e9c263ed3a — pseudo Class III → ADVANCE upper incisors (consistent w/ rafi_18_676b16ff8f; model said retract)
+- rafi_01_80a4805e50 — waterline flush 20-30 s (consistent w/ rafi_08_5d939b6ca9)
+- rafi_01_ba29ac39d1 — persistent red patch = ERYTHROPLAKIA (model agrees; premalignant)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
