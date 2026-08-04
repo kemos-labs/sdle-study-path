@@ -1527,6 +1527,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_01_fbf95bfbab — abuse suspicion: story vs severity (marked; ambiguous)
 - rafi_01_238f1131c5 — F supplement: source of fluids (water F; model agrees)
 - rafi_01_a1e23c10a6 — fall protection = BENEFICENCE (consistent w/ rafi_03_ecf2a75eee)
+- ab2_aa2317de2e — rubber dam + wheezing 30min = latex ALLERGY (marked; model said asthma — dam context = allergy)
+- ab2_eb28ff287a — largest filler by weight = HYBRID ~75-80% (marked; model said microfill — that's the LOWEST)
 - abtal_pack_a77ba5d6cb — HIV lateral tongue → observe (re-flag; consistent)
 - eng_ort_b1253154f3 — 30kg ibuprofen 300mg (re-flag; within 4-10mg/kg)
 - rafi_02_9b28255754 — strep detection: catalase test (marked; distinguishes staph)
