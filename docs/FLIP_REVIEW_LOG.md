@@ -625,7 +625,15 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 691 | rafi_02_5de5b0c9d5 | 1/3 → **2/3 from tip** (suture grasp) | OMS |
 | 692 | rafi_02_ab2c41b48d | leave → **RCT** (midroot fx non-vital) | endo |
 | 693 | rafi_02_234f36ec08 | abscess → **Deeper pockets** (diabetic) | perio |
-| 694 | rafi_02_8465b997be | early → **Initial stage** (erythema) | perio |
+| 694 | rafi_02_8465b997be | early → **Initial stage** (erythema) | perio || 695 | rafi_02_4477b6d14f | occlusal XR → **Sialography** (meal swelling) | OMS |
+| 696 | rafi_02_d0ba8c42ce | FFP → **Aminocaproic acid** (hemophilia bleed) | med |
+| 697 | rafi_03_0ea06e5b45 | refuse → **Ventilate + mask** (TB exposure) | med |
+| 698 | rafi_03_ecf2a75eee | non-maleficence → **Beneficence** (fall prevention) | ethics |
+| 699 | rafi_03_d369332abf | justice → **Autonomy** (self-governance) | ethics |
+| 700 | rafi_03_226b6315c2 | nonmaleficence → **Autonomy** (ADA) | ethics |
+| 701 | rafi_03_559427c5c6 | biographical → **Present complaint** (workup) | med |
+| 702 | rafi_03_9cf014b75d | reject+dismiss → **Refer** (tx disagreement) | ethics |
+
 
 
 
@@ -1291,6 +1299,15 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_01_f444221982 — type IV contact allergy appears 1-2 days (marked; model's own reason agrees)
 - rafi_02_9d6a976a64 — miconazole (azole) targets ERGOSTEROL (cell membrane); "cell wall" marked (closest option)
 - rafi_02_e088ef2e95 — LA tissue irritancy = procaine (marked; model's reason weak but m=0 = marked)
+- rafi_02_79abe0ede4 — wisdom extraction complication: vertical defect (marked; model uncertain)
+- rafi_02_d80ec02f17 — cured TB → mask (consistent TB series)
+- rafi_02_273388bbee — pregnancy: AVOID prilocaine (methemoglobinemia; classic)
+- rafi_02_5ed2f49940 — oral metastasis most common = MANDIBLE (marked; model said floor)
+- rafi_02_1e1240b972 — African 5yo bilateral multilocular = CHERUBISM (marked; model said Burkitt — usually unilateral)
+- rafi_03_d7ca40a5d2 — teacher + emergency + parents unreachable → teacher/doctor proceeds (marked; consistent w/ rafi_12_33cc9bfebc)
+- rafi_03_4551f90588 — HIV records request → written permission (model agrees)
+- rafi_03_0312fd5646 — 5th-graders now vs 10 yrs ago = repeated CROSS-SECTIONAL (different groups; marked)
+- rafi_03_927dcac176 — study ethics: informed consent (marked; garbled wording)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
