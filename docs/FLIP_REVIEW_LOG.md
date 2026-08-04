@@ -645,7 +645,12 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 715 | rafi_04_7f05c5a1a6 | long working → **Short setting** (GIC cement) | pedo |
 | 716 | rafi_04_630d624eb9 | neg reinforcement → **Negative correction** | pedo |
 | 717 | rafi_04_88d95b09b2 | rule-based → **All of the above** (deontology) | ethics |
-| 718 | rafi_04_b0b0aa745e | mirror → **Band remover** (disinfection only) | ethics |
+| 718 | rafi_04_b0b0aa745e | mirror → **Band remover** (disinfection only) | ethics || 719 | rafi_04_3d98b2d667 | prophylaxis → **Nothing** (U=U undetectable) | med |
+| 720 | rafi_04_2e33c0e4e7 | daily dose → **Double the dose** (steroid cover) | med |
+| 721 | rafi_04_32abc3d527 | 0.25 → **0.5 mg/day** (F supplement) | pedo |
+| 722 | rafi_04_0dcd342f16 | 21 → **10-14 days** (pre-RT extraction) | OMS |
+| 723 | rafi_04_4e98fb98c5 | max canine → **Mandibular incisor** (alveolar fx) | OMS |
+
 
 
 
@@ -1340,6 +1345,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_ec8176a637 — post-endo pain factor: mesiodistal diameter (marked; model reason mismatched)
 - rafi_04_b722df180e — unnecessary referral = nonmaleficence (consistent majority w/ rafi_10_67314fc890 + rafi_14_85f9d151b4)
 - rafi_04_ed9cca1303 — autoclave 121°C = 30 min (model agrees)
+- rafi_04_4f7cd124d8 — 3rd molar extraction defect DISTAL to 2nd molar (marked; model said mesial)
+- rafi_04_5d8f92fd25 — LGE (HIV, candidal) → fluconazole (marked; model said plaque control)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
