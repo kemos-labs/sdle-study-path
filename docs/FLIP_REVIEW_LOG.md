@@ -512,7 +512,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 555 | rafi_12_7fb01494c1 | diamond → **Wedding ring** (remove all rings) | ethics |
 | 556 | rafi_12_1dd04bff93 | substitute → **Protect employees** (hierarchy) | ethics || 557 | rafi_12_159ba1327f | only if infected → **Before extraction** (bisphosphonate) | OMS |
 | 558 | rafi_12_338df27b01 | short-acting β2 → **Call ER** (inhaler ineffective) | med |
-| 559 | rafi_12_59cec84ed2 | laser → **Electrocautery** (pacemaker) | med || 560 | rafi_12_46ab522415 | xylocaine → **Procaine (ester)** (cirrhosis) | med |
+| 559 | rafi_12_59cec84ed2 | laser → **Electrocautery** (pacemaker) | med || 560 | rafi_12_46ab522415 | xylocaine → **Procaine (ester)** (cirrhosis) | med || 561 | rafi_12_109d7dbc1d | latex delayed → **Latex immediate** (rhinitis/tearing type I) | oral med |
+
 
 
 
@@ -986,6 +987,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_12_39ddbdb8ce — epi limit 2 cartridges = stable angina (severe CV disease; marked defensible)
 - rafi_12_9f1a33b5a6 — pemphigus + chronic steroids + procedure → DOUBLE dose (consistent with rafi_10_e50e39441a; model said no change)
 - rafi_12_ba3a875851 — pregnancy pyogenic granuloma interfering with biting → surgical removal (local factors + excise; model said delay)
+- rafi_12_1541b7180b — captopril + tired/dizzy/headache = HYPOTENSION (overdose/first-dose; model said hypoglycemia — no diabetes context)
+- rafi_12_49e8eb5419 — chin protrusion = lateral pterygoid (inferior head; marked defensible)
+- rafi_12_a6a93bf626 — amoxicillin diarrhea (C. diff) → stop + metronidazole (marked defensible; model's fluconazole = antifungal, wrong)
+- rafi_12_8583cbedf8 — AHA 2017: 130-139/80-89 = STAGE 1 (model agrees)
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
