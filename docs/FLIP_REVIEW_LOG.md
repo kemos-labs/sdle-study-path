@@ -512,7 +512,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 555 | rafi_12_7fb01494c1 | diamond → **Wedding ring** (remove all rings) | ethics |
 | 556 | rafi_12_1dd04bff93 | substitute → **Protect employees** (hierarchy) | ethics || 557 | rafi_12_159ba1327f | only if infected → **Before extraction** (bisphosphonate) | OMS |
 | 558 | rafi_12_338df27b01 | short-acting β2 → **Call ER** (inhaler ineffective) | med |
-| 559 | rafi_12_59cec84ed2 | laser → **Electrocautery** (pacemaker) | med |
+| 559 | rafi_12_59cec84ed2 | laser → **Electrocautery** (pacemaker) | med || 560 | rafi_12_46ab522415 | xylocaine → **Procaine (ester)** (cirrhosis) | med |
+
 
 
 
@@ -980,6 +981,11 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_12_73851fcf7d — AFRICAN child + malignant jaw swelling = endemic BURKITT lymphoma (EBV); model said HHV-8/Kaposi (wrong population)
 - rafi_12_5e70dd4ad2 — ACTIVE TB + severe pain → treat urgently with filtration (N95) mask (consistent w/ rafi_12_8af7b3c00c; model said postpone)
 - rafi_12_8af7b3c00c — ACTIVE TB urgent → outpatient + airborne precautions (re-flagged; consistency maintained)
+- rafi_12_8512f7c49f — NORMAL MCV (normocytic) = G6PD/hemolytic (iron = microcytic; B12/folate = macrocytic; model self-contradicted)
+- rafi_12_5bdb4d7316 — lower 1st primary molar → IAN + lingual + long buccal (model's PSA/greater-palatine reason = MAXILLARY — mismatched)
+- rafi_12_39ddbdb8ce — epi limit 2 cartridges = stable angina (severe CV disease; marked defensible)
+- rafi_12_9f1a33b5a6 — pemphigus + chronic steroids + procedure → DOUBLE dose (consistent with rafi_10_e50e39441a; model said no change)
+- rafi_12_ba3a875851 — pregnancy pyogenic granuloma interfering with biting → surgical removal (local factors + excise; model said delay)
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
