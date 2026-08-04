@@ -676,7 +676,15 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 754 | rafi_06_40461d6163 | malpractice → **Negligence** (unqualified) | ethics |
 | 755 | rafi_06_6f83b1aaa3 | heat → **High-level disinfection** (retractor) | ethics |
 | 756 | rafi_06_4bb1c54076 | daily → **Weekly** (autoclave spore) | ethics |
-| 757 | rafi_06_fd066eb0c3 | Crouzon → **Apert** (syndactyly) | pedo |
+| 757 | rafi_06_fd066eb0c3 | Crouzon → **Apert** (syndactyly) | pedo || 758 | rafi_06_4ed6709dce | cortical border → **Internal radiopaque** (KOT except) | oral path |
+| 759 | rafi_06_731a41309f | osteoma → **Cementoblastoma** (radiolucent rim) | oral path |
+| 760 | rafi_06_c96841e42a | Garre → **Ewing** (onion-peel) | oral path |
+| 761 | rafi_06_32214c9b5a | periapical dysplasia → **Stafne** (below canal) | oral path |
+| 762 | rafi_06_4d1aa35bf5 | AOT → **Compound odontoma** (mini teeth) | oral path |
+| 763 | rafi_06_2f8eb68701 | dentigerous → **OKC** (scalloped 3rd molar) | oral path |
+| 764 | rafi_06_427d716ea0 | inflammatory → **Benign** (well-defined) | radiology |
+| 765 | rafi_06_2d02a7c550 | ameloblastoma → **Fibrous dysplasia** (ground glass) | oral path |
+
 
 
 
@@ -1430,6 +1438,13 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_06_9ff873b18e — parent presence impairs dentist-child communication (marked)
 - rafi_06_c38566922c — sublingual major duct = BARTHOLIN (marked correct)
 - rafi_06_a0fdeddedd — CCD: Jerusalem approach (marked; model said open exposure)
+- rafi_06_731e607718 — condensing osteitis radiopacity below roots (not offered; osteomyelitis marked — broken-ish)
+- rafi_06_a68295da1e — unilocular EXCEPT = CEOT (mixed; model agrees)
+- rafi_06_2fe7de72a6 — tennis-racket trabeculae = odontogenic myxoma (marked correct)
+- rafi_06_80289d6fe0 — two teeth from ONE germ = gemination (marked; fusion = two germs)
+- rafi_06_de3fb8a800 — mid-palatal swelling + non-vital = radicular cyst (model agrees)
+- rafi_06_b8d4b2faea — bilateral condylar fractures: PANORAMIC (model agrees; standard screening)
+- rafi_06_70f41d4235 — cyst vs neoplasm: lesion CONTENT (model agrees)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
