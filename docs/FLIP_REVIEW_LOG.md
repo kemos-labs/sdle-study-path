@@ -654,7 +654,11 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 726 | rafi_04_56deb7075d | anteriors first → **Posteriors first** (extraction seq) | OMS |
 | 727 | rafi_04_16883c1b13 | 12 → **16 years** (aspirin/Reye) | pedo |
 | 728 | rafi_04_14a2bfc91c | Adson → **Allis forceps** (epulis) | OMS |
-| 729 | rafi_04_80ed2a0132 | IAN → **Lingual nerve** (3rd molar surgery) | OMS || 730 | rafi_04_5f9117824b | desquamation → **All of the above** (alcohol rinse) | oral med |
+| 729 | rafi_04_80ed2a0132 | IAN → **Lingual nerve** (3rd molar surgery) | OMS || 730 | rafi_04_5f9117824b | desquamation → **All of the above** (alcohol rinse) | oral med || 731 | rafi_04_8a0d8a474f | posterior mandible → **Posterior maxilla** (type IV) | implant |
+| 732 | rafi_04_19279c2316 | spacing → **Hypodontia** (Down caries) | pedo |
+| 733 | rafi_04_a242fe6fa6 | body → **Parasymphyseal** (lip paresthesia) | OMS |
+| 734 | rafi_04_095f360aa0 | 3rd molar → **Second molar** (IAN deviation) | anatomy |
+
 
 
 
@@ -1365,6 +1369,14 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_e7b5277f72 — DD type II: pulp chamber abnormalities (model agrees)
 - rafi_04_ea7910a955 — mental nerve injury = PARASYMPHYSEAL (consistent w/ rafi_08_9f7f834311)
 - rafi_04_3a118fa6d9 — pre-chemo extraction 14 days (consistent w/ rafi_16_93e393c347; model contradicted itself)
+- rafi_04_349edf0297 — most common mandible fracture = condyle (consistent w/ rafi_10_4f7633d67e)
+- rafi_04_0e81824363 — highest LA toxicity = articaine 4% (marked)
+- rafi_04_5058872e81 — raccoon eyes = Le Fort II (model's reason agrees)
+- rafi_04_a5d0764e34 — child mandibular foramen at/below occlusal plane (consistent w/ rafi_08_7c470ede1a)
+- rafi_04_fa974fef94 — PV most common = buccal mucosa (model agrees; consistent series)
+- rafi_04_4fb85ae0c5 — dry socket = medicated gauze (model agrees)
+- rafi_04_5c9dbc8d6c — post-MI analgesic w/ APAP allergy = naproxen (model agrees)
+- rafi_04_288033d8c6 — post-extraction "6mm height loss yr 1" = the FALSE statement (model agrees)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
