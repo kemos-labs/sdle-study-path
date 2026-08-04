@@ -660,8 +660,13 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 734 | rafi_04_095f360aa0 | 3rd molar → **Second molar** (IAN deviation) | anatomy || 735 | rafi_04_f7c27dca69 | renal → **Chemo/RT** (varnish contraindication) | pedo |
 | 736 | rafi_04_d3f9f95b8f | arch bars → **Gunning splint** (edentulous) | OMS |
 | 737 | rafi_04_54b55d84cd | alpha>beta → **Reduce absorption** (epi role) | LA |
-| 738 | rafi_04_412d634cdd | down-up-back → **Down-back-up** (dislocation) | OMS |
-| 739 | rafi_04_75df67e1c8 | acetylcysteine → **Corticosteroids** (alcoholic hepatitis) | med |
+| 738 | rafi_04_412d634cdd | (already Down-back-up — no change) | OMS |
+| 739 | rafi_04_75df67e1c8 | acetylcysteine → **Corticosteroids** (alcoholic hepatitis) | med || 740 | rafi_04_fc8dde0b23 | lateral ceph → **Occlusal view** (midline morphology) | radiology |
+| 741 | rafi_04_201f6df542 | reverse Towne → **Towne view** (subcondylar) | OMS |
+| 742 | rafi_04_79d13bf439 | ambulance → **Recovery position** (seizure) | med |
+| 743 | rafi_06_412cb0c18d | canine loss → **Open bite** (self-corrects) | pedo |
+| 744 | rafi_06_3925c53ab7 | bite plane → **High-pull headgear** (deep bite) | ortho |
+
 
 
 
@@ -1390,6 +1395,11 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_098fdd4f3e — infraorbital = terminal branch of V2 (model agrees)
 - rafi_04_41df44852e — PAUL-BUNNELL test = infectious mononucleosis/EBV (marked; model reason mismatched retrieval)
 - rafi_04_87c424f8a4 — HIV parasitizes HELPER T cells (marked; model reason mismatched)
+- rafi_04_4eff2172c3 — blood on pillow = periodontitis/gingival bleeding (model agrees)
+- rafi_04_f1585f0ea7 — LEAST impacted tooth = central incisor (model agrees)
+- rafi_04_19ea0b8a1f — upper lateral caries: ASA + nasopalatine (marked comprehensive; model said ASA only)
+- rafi_04_1219fbdafe — 3yo caries-free + good OH → no fluoride needed (marked)
+- rafi_06_54978d191b — maxillary excess + overjet: maxillary impaction (marked; sagittal setback not offered — broken-ish)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
