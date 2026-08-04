@@ -524,7 +524,14 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 573 | rafi_14_7aee387fdd | scurvy → **Von Willebrand** (DDAVP response) | med |
 | 574 | rafi_14_67e246bf78 | aerobic → **Both** (odontogenic mixed flora) | OMS || 575 | rafi_14_dbc718d753 | Stafne → **Simple bone cyst** (dome around vital teeth) | oral path |
 | 576 | rafi_14_83f27487ba | 4 days → **1 month** (HBV surfaces) | ethics |
-| 577 | rafi_15_850b765a73 | orthognathic → **Refer ortho** (10yo canines) | ortho |
+| 577 | rafi_15_850b765a73 | orthognathic → **Refer ortho** (10yo canines) | ortho || 578 | rafi_15_d5378dc054 | leave space → **Fixed appliances** (1st molar extraction) | pedo |
+| 579 | rafi_15_5df481c593 | age → **Overcounter of spring** (slower movement) | ortho |
+| 580 | rafi_15_4b324d9002 | fixed → **Interference reduction** (pseudo Cl III) | ortho |
+| 581 | rafi_15_759d932d04 | PRR → **Fissure sealants** (incipient caries) | pedo |
+| 582 | rafi_15_309fd80f14 | occlusal prep → **Crown size** (SSC high+overhang) | pedo |
+| 583 | rafi_15_281ba6e68a | articaine → **Procaine** (cirrhosis — ester) | med |
+| 584 | rafi_15_f066a3574c | stop warfarin → **Continue** (INR 3.5 minor) | OMS |
+
 
 
 
@@ -1041,6 +1048,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_14_341dce8389 / rafi_14_cf29a5cb0b — upper premolar/molar LA next-day numbness → sinus/GP-foramen (consistent pair; kept)
 - rafi_14_5f47caca30 — child fluoride ingestion → GIVE MILK (calcium binds fluoride; marked correct)
 - rafi_14_2d43b5018e — pregnancy ABx: clindamycin (B) safe (tetracycline D; model said azithromycin — both OK, marked kept)
+- rafi_15_feba16ce4a — 11yo open bite + tongue-forward swallow pattern = IMMATURE SWALLOW (stem describes tongue, not thumbs; model said thumb sucking)
+- rafi_15_b15d9b9c26 — #21 unerupted at 8 (contralateral erupted) = fibrous tissue impediment (marked; model said slow eruption)
+- rafi_15_5994e0ef69 — WHO soap+water hand hygiene = 40-60 s (ABHR = 20-30 s; model confused the two)
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
