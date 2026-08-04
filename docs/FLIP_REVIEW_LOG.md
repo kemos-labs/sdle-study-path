@@ -578,7 +578,31 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 635 | rafi_18_e1729c8b88 | 3 → **1 ppm** (fluorosis threshold) | pedo |
 | 636 | rafi_18_71f3bdc066 | upper 2 → **Lower 5** (missing; consistent) | ortho |
 | 637 | rafi_18_3a9e021037 | N95 double → **Defer** (suspected TB) | med |
-| 638 | rafi_18_72654d4b6c | DDW → **DDWOR** (no click + limited opening) | OMS |
+| 638 | rafi_18_72654d4b6c | DDW → **DDWOR** (no click + limited opening) | OMS || 639 | rafi_17_eec352acfc | no-bleed+scrub → **Encourage bleed + wash** (needlestick) | ethics |
+| 640 | rafi_18_fb9563be2a | DI → **Dentin dysplasia** (taurodontism) | oral path |
+| 641 | rafi_18_4366e27637 | dentition → **Salivary gland** (radioresistant) | oral med |
+| 642 | rafi_18_5d1b8a651b | osseous dysplasia → **Ossifying fibroma** (ground glass) | oral path |
+| 643 | rafi_18_5bb0a40a8a | fluoridation → **Developmental defect** (hypoplasia) | pedo |
+| 644 | rafi_18_b84ff7ea5b | ant maxilla → **Posterior maxilla** (thinnest cortex) | implant |
+| 645 | rafi_18_cb885b2cce | heparin bridge → **Stop 5 days** (INR 3.9) | OMS |
+| 646 | rafi_18_587725d802 | ant-medial → **Anterior lateral** (disc) | OMS |
+| 647 | rafi_18_2f043d9cc7 | ≥15 → **≥5 mm** (Mantoux) | med |
+| 648 | rafi_18_91b205818d | ant-medial → **Anterior lateral** (disc) | OMS |
+| 649 | rafi_19_366f21329b | avoid dam → **Prophylactic inhaler** (COPD) | med |
+| 650 | rafi_19_e773b47de3 | AB prophylaxis → **Treat normal** (stable post-MI) | med |
+| 651 | rafi_19_11fa6ecb75 | mand prognathism → **Maxillary deficiency** (open bite) | ortho |
+| 652 | rafi_19_ac882711d4 | tetracycline → **Fluoride excess** (tip staining) | pedo |
+| 653 | rafi_19_8ac3e3f874 | reduce time → **Reschedule** (glucose 65) | med |
+| 654 | abtal_pack_c5c9655c7f | 3 → **2 mm** (implant-tooth) | implant |
+| 655 | abtal_pack_c734dcb05a | security escort → **Politely reject** (drug seeking) | ethics |
+| 656 | abtal_pack_f1d8952b03 | 1.4 → **5.4 mm** (Tarnow ~5) | implant |
+| 657 | abtal_pack_15970257fb | sharps → **Infectious waste** (amalgam tooth) | ethics |
+| 658 | abtal_pack_2b97c4483b | wedge needle → **Side-vented needle** | endo |
+| 659 | abtal_pack_9ce059e15d | short β2 → **Emergency response** (refractory asthma) | med |
+| 660 | abtal_pack_178afb5b6f | DPC → **Extraction** (necrotic+furcation) | endo |
+| 661 | abtal_pack_18d6b0dd01 | perforation → **Ledge** (nothing visible) | endo |
+| 662 | abtal_pack_6ae2a2263d | upper intrusion → **Lower intrusion** (deep bite) | ortho |
+
 
 
 
@@ -1166,6 +1190,41 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_18_ec81305d47 — 3rd molar crown complete ~16 (marked; model's 15 not offered)
 - rafi_18_f7c4c29516 — dry heat 320°F/120 min (consistent w/ rafi_16_1e3879feff)
 - rafi_18_03aa6132a1 — predentin adjacent to pulp (model agrees)
+- rafi_18_36c109ac13 — blue-brown + obliterated canals = DI (OI-associated; DI not offered → OI marked, defensible)
+- rafi_18_78d41f7e5f — carbamazepine + diabetic → hypoglycemia (consistent w/ rafi_15_a3aff5fb70)
+- rafi_18_6c015f8548 — throbbing pain + prior vesicles = POSTHERPETIC neuralgia (marked; option text garbled)
+- rafi_18_6caa25cebb — cardiac + epi → ANGINA (model agrees)
+- rafi_18_7dec94257a — lower lip cancer = SCC (marked; model said mucoepidermoid = salivary)
+- rafi_18_4d989843a7 — numbness after restoration → greater palatine trauma (consistent with numbness pair)
+- rafi_18_209cd80ef9 / e895d1bf74 — anti-HBs positive = IMMUNE → treat normal (model misread "anti" as antigen)
+- rafi_18_9437cec1d6 — coronectomy purpose = IAN protection (not offered; marked bone-growth — broken-ish)
+- rafi_18_79c7603e06 — family bleeding + extraction → hemophilia A (normal platelets; marked)
+- rafi_18_ae2168555b — articaine = pregnancy category C (model's own reason agrees)
+- rafi_18_e74bbe962a — incision at the most dependent/fluctuant point (marked)
+- rafi_18_fc62732c7c — mandible fracture = ANGLE (consistent registry)
+- rafi_18_6cdd5ea663 — child trauma = CONDYLAR fracture (consistent w/ rafi_14_3c5250c79b)
+- rafi_18_ee09b9466a — vaccinated + HBsAg+ needlestick → nothing (known responder; marked)
+- rafi_19_d4ea38b6a7 — MB root max 1st molar = MSA nerve (model agrees — classic)
+- rafi_19_8da56a0360 — adult mandible fracture = ANGLE (consistent registry)
+- rafi_19_993b0aa811 — lower molar + trismus + mild swelling = MASSETERIC space (consistent w/ rafi_08_413baf716e)
+- rafi_19_9769b39009 — zometa ONJ infection → antibiotics (consistent w/ rafi_16_4861ba4fd4)
+- rafi_19_d280dfb568 — hairy leukoplakia → monitoring (consistent w/ ab2_776a5e5fe8 + rafi_14_f6156d0799)
+- rafi_19_f98ebc9f3f — hemophilia safe = INTRALIGAMENTARY (consistent w/ rafi_10_bc05290494)
+- rafi_19_b747cdf5af — NUP = fusiform/spirochetes (Vincent's classic; marked)
+- rafi_19_b4b682ea30 — lateral pterygoid attaches to condylar NECK (marked correct)
+- abtal_pack_b81778c906 — 74% doctors report needlesticks (source value; model lacked passage)
+- abtal_pack_55a9c1b206 — PVS compatible with most disinfectants (model reason mismatched retrieval)
+- abtal_pack_a9bdfeeac0 — cheek retractor = SEMI-critical (mucosa contact; model said non-critical — wrong)
+- abtal_pack_a0c497563f — white stains + FATHER also has them = amelogenesis imperfecta (familial; marked)
+- abtal_pack_bfd9b2274d — cervical ROOT fracture splint = 4 months (marked; IADT)
+- abtal_pack_ca8c4be2d8 — IAN block pierces the BUCCINATOR (marked)
+- abtal_pack_0554b7fd19 — thyroid + anxiety + bradycardia = myxedema (marked; model said storm — tachycardia)
+- abtal_pack_c32dcb6b81 — mandible fracture = ANGLE (consistent registry)
+- abtal_pack_53e6c47118 — alveolar fracture most common = maxillary CENTRALS (model agrees; tension w/ rafi_14_c0bbf5e9be registered)
+- abtal_pack_efc75c09eb — apical terminus = apical constriction (minor diameter; marked correct)
+- abtal_pack_5fa2cef47c — papilla regrowth: 4.4 mm tooth-implant (marked; 3.4 = implant-implant)
+- abtal_pack_d7d388ed9d — instruments → immerse in solution until cleaning (consistent w/ rafi_13_7fa2167c38)
+- abtal_pack_8ea596ed39 — cervical trauma splint 4 weeks (marked; distinct from 4-month cervical root fracture above)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
