@@ -616,7 +616,17 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 679 | rafi_01_0bfc8e6644 | hematoma → **Bone necrosis** (zoledronate) | oral med || 680 | rafi_01_9fd55bea4f | max lateral → **Mand 2nd premolar** (missing; consistent) | ortho |
 | 681 | rafi_02_b44a1fd39c | SSC → **Antibiotics** (dental allergy) | med |
 | 682 | rafi_02_54c8478ee4 | 12 wk → **4 weeks** (neonatal teeth) | pedo || 683 | rafi_02_764dbc0930 | socket wall → **Wheel and axis** (elevator) | OMS |
-| 684 | rafi_02_800e179d03 | reduces toxicity → **Increase duration** (vasoconstrictor) | LA |
+| 684 | rafi_02_800e179d03 | reduces toxicity → **Increase duration** (vasoconstrictor) | LA || 685 | rafi_02_592fc759bd | 100% O2 → **95/5** (N2O sedation) | med |
+| 686 | rafi_02_a894d2fd66 | 19g → **25 gauge** (surgery needle) | LA |
+| 687 | rafi_02_eda5bc0379 | upper lateral → **Upper canine** (palate swelling) | OMS |
+| 688 | rafi_02_7d87b8cdff | Lefort II → **Le Fort III** (paranasal fluid) | OMS |
+| 689 | rafi_02_d9a2406b87 | extraoral → **Intraoral ∥ Wharton** (sublingual) | OMS |
+| 690 | rafi_02_f4d244817b | heart → **Bone marrow** (most antigenic) | med |
+| 691 | rafi_02_5de5b0c9d5 | 1/3 → **2/3 from tip** (suture grasp) | OMS |
+| 692 | rafi_02_ab2c41b48d | leave → **RCT** (midroot fx non-vital) | endo |
+| 693 | rafi_02_234f36ec08 | abscess → **Deeper pockets** (diabetic) | perio |
+| 694 | rafi_02_8465b997be | early → **Initial stage** (erythema) | perio |
+
 
 
 
@@ -1280,6 +1290,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_01_f86d7fdc01 — 32-week pregnancy → SIDE position (avoid supine hypotensive syndrome; marked correct)
 - rafi_01_f444221982 — type IV contact allergy appears 1-2 days (marked; model's own reason agrees)
 - rafi_02_9d6a976a64 — miconazole (azole) targets ERGOSTEROL (cell membrane); "cell wall" marked (closest option)
+- rafi_02_e088ef2e95 — LA tissue irritancy = procaine (marked; model's reason weak but m=0 = marked)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
