@@ -209,3 +209,23 @@
 **Reference research done** (UWorld/Bootcamp/AMBOSS via web): rationales ✓, performance metrics ✓ (Progress tab + pass-ready 542/800 card), tutor/timed ✓ (learn mode + 72s/Q mock), spaced repetition ✓ (wrong book + flashcards), score predictor ✓ (pass-ready gates). No new gaps beyond the junk options.
 
 **Running in background:** junk-fix job (checkpointed; log `/tmp/junk_fix.log`; resume-safe). Gates green; tree clean; commits: pool+explanations, mock fix, ux label.
+
+---
+
+## UPDATE 8 (2026-08-04) — Junk-option cleanup DONE in ~4 min via 8× parallel models
+
+**User provided the free-model setup at /home/kalde/Downloads/pi (cline 4 free models + opencode 7 free models via patched pi).** Built and tested a parallel pipeline:
+
+- `fix_junk_options.py` upgraded: `--provider` pinning (deepseek/zai direct + `pi:cline/...`, `pi:opencode/...` via pi CLI transport), `--shard K/N` (crc32), per-shard checkpoints, `--merge`, `--retry-junk`.
+- `run_junk_parallel.py`: 8-shard launcher with auto-restart of dead shards, merges when done.
+- `watchdog_junk.py` + @reboot cron: auto-restart if the job dies/stalls.
+
+**Model performance findings (measured):**
+- **deepseek (official): EXCELLENT** — 25 Q/batch in ~7s; 8 parallel shards did all 4,150 in ~4 min. The 3-hour estimate collapsed.
+- zai glm-4.5-flash: works but often returns EMPTY content (parse fails) — slow (~15-60s/batch).
+- cline via pi (deepseek-v4-flash, glm-5.2, step-3.7-flash): work individually (25 Q in 39s), but 503/timeouts under 6-way concurrent burst — fine for staggered use, not parallel.
+- opencode via pi (deepseek-v4-flash-free, big-pickle, mimo): same — work staggered, rate-limit under burst. Direct API calls blocked by Cloudflare (403 code 1010); pi's patched transport is required.
+
+**Result: 3,691 of 4,150 junk "(not listed in source extract)" options replaced with real distractors (89%).** Remaining 434: validation-rejected near-duplicates (e.g. distractor 'Polycarboxylate cement' vs option 'Polycarboxylate') or parse-failed retries — honest, they keep the marker. Apply validation is answer-safe (never touches answer index, rejects dupes/substrings/near-word-sets). Gates green (G-PLACEHOLDER etc.), tree committed + pushed `fe6ade2`.
+
+**To finish the last 434 later:** bump retry max_tokens + rerun `--retry-junk` with 4 shards (~1-2 min).
