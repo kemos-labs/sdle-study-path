@@ -5571,7 +5571,7 @@
           ${banksBySort()}
         </div>`;
     } else if (pane === "mock") {
-      const inv = inventory();
+      const inv = bankInventory();
       const preferredN = inv.preferred || 0;
       const allN = inv.all || 0;
       const abtalN = inv.abtal || 0;
