@@ -22,6 +22,7 @@ import re
 import time
 import urllib.request
 import urllib.error
+import zlib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -38,6 +39,30 @@ PROVIDERS = [
      "key": "4ea3822302844e2ca6837e1db7c85e55.IAd0YoFVPgKwYcCC",
      "model": "glm-4.5-flash"},
 ]
+
+# pi CLI models (pi handles cline/opencode auth + Cloudflare). ID must contain "pi:"
+PI_MODELS = {
+    "pi:cline/deepseek/deepseek-v4-flash": "cline/deepseek/deepseek-v4-flash",
+    "pi:cline/cline-free/glm-5.2": "cline/cline-free/glm-5.2",
+    "pi:cline/stepfun/step-3.7-flash": "cline/stepfun/step-3.7-flash",
+    "pi:opencode/deepseek-v4-flash-free": "opencode/deepseek-v4-flash-free",
+    "pi:opencode/big-pickle": "opencode/big-pickle",
+    "pi:opencode/mimo-v2.5-free": "opencode/mimo-v2.5-free",
+}
+
+def call_pi(model_id, prompt, timeout=180):
+    """Run one batch through pi --print (free cline/opencode models)."""
+    import subprocess
+    cmd = ["pi", "--model", model_id, "--print", prompt]
+    try:
+        r = subprocess.run(cmd, capture_output=True, timeout=timeout, stdin=subprocess.DEVNULL)
+        if r.returncode != 0:
+            return f"__PIERR{r.returncode}:{r.stderr.decode()[:80]}"
+        return r.stdout.decode()
+    except subprocess.TimeoutExpired:
+        return "__PITIMEOUT"
+    except Exception as e:
+        return f"__PIEXC{type(e).__name__}"
 
 SYSTEM = ("You are a dental board examiner writing ONE wrong-answer distractor for a recall question. "
           "You receive: QID, stem, three real options, the correct option letter+text, and a short explanation. "
@@ -86,6 +111,17 @@ def call_api(provider, prompt):
     except Exception as e:
         return f"__ERR{type(e).__name__}"
 
+def dispatch(provider, prompt):
+    if provider.startswith("pi:"):
+        model = PI_MODELS.get(provider)
+        if not model:
+            return f"__NOMODEL{provider}"
+        return call_pi(model, prompt)
+    p = next((x for x in PROVIDERS if x["name"] == provider), None)
+    if not p:
+        return f"__NOPROV{provider}"
+    return call_api(p, prompt)
+
 def parse(resp, qids):
     m = re.search(r"\[.*\]", resp, re.S)
     if not m:
@@ -108,6 +144,11 @@ def main():
     ap.add_argument("--batch", type=int, default=25)
     ap.add_argument("--stats", action="store_true")
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--provider", default="deepseek")
+    ap.add_argument("--shard", default="0/1")
+    ap.add_argument("--checkpoint", default=str(CHECKPOINT))
+    ap.add_argument("--merge", action="store_true")
+    ap.add_argument("--retry-junk", action="store_true")
     args = ap.parse_args()
 
     if args.apply:
@@ -136,20 +177,49 @@ def main():
         print(f"applied {n} distractor replacements")
         return 0
 
+    if args.merge:
+        import glob
+        merged, count = [], 0
+        for f in sorted(glob.glob(str(OUT / "distractors.*.jsonl"))):
+            for line in open(f, encoding="utf-8"):
+                try:
+                    rec = json.loads(line)
+                    if rec.get("qid") and rec.get("distractor"):
+                        merged.append(rec); count += 1
+                except Exception:
+                    pass
+        with open(CHECKPOINT, "w", encoding="utf-8") as f:
+            for rec in merged:
+                f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+        print(f"merged {count} distractors into {CHECKPOINT.name}")
+        return 0
+
     bank, _, _, _ = load_bank()
     todo = [q for q in bank if q.get("usable") is not False and isinstance(q.get("options"), list) and len(q.get("options")) > 3 and junk(q["options"][3])]
-    if args.resume:
-        done = done_ids()
-        todo = [q for q in todo if q["id"] not in done]
-    print(f"junk-option questions: {len(todo) + len(done_ids())} | remaining: {len(todo)}")
+    if args.retry_junk:
+        todo = [q for q in todo if q["options"][3] == "(not listed in source extract)"]
+    k, n = (int(x) for x in args.shard.split("/"))
+    todo = [q for q in todo if zlib.crc32(q["id"].encode()) % n == k]
+    done = done_ids() if args.resume else set()
+    CHECK = Path(args.checkpoint)
+    if args.resume and CHECK.exists():
+        for line in open(CHECK, encoding="utf-8"):
+            try:
+                done.add(json.loads(line)["qid"])
+            except Exception:
+                pass
+    todo = [q for q in todo if q["id"] not in done]
+    print(f"shard {args.shard} ({args.provider}) | assigned {len(todo) + len([q for q in []])} | remaining {len(todo)}")
 
     if args.stats:
         return 0
 
+    provider = args.provider
     pi = 0
     ok = err = 0
     t0 = time.time()
-    with open(CHECKPOINT, "a", encoding="utf-8") as ckpt:
+    CHECK = Path(args.checkpoint)
+    with open(CHECK, "a", encoding="utf-8") as ckpt:
         for start in range(0, len(todo), args.batch):
             batch = todo[start:start + args.batch]
             parts = []
@@ -160,14 +230,20 @@ def main():
                 parts.append(
                     f"QID:{q['id']}\nQ: {q['q'][:180]}\nREAL OPTIONS:\n{opts}\nCORRECT: {ans}\nEXPLANATION: {expl}\n=====")
             prompt = "\n".join(parts)
+            if args.retry_junk:
+                prompt = ("You are a dental board examiner. For EACH question write ONE short wrong distractor (3-9 words) "
+                          "that belongs to a COMPLETELY DIFFERENT dental concept/category than ALL three real options and the "
+                          "correct answer — different diagnosis, different material, different number range, different term. "
+                          "A previous distractor was rejected for being too similar, so pick something from a totally different "
+                          "field. Never rephrase or contain any real option. Reply with ONLY a JSON array "
+                          '[{"qid":...,"distractor":...}] in the same order.\n\n' + prompt)
             resp = ""
-            for _ in range(len(PROVIDERS)):
-                provider = PROVIDERS[pi % len(PROVIDERS)]
-                pi += 1
-                resp = call_api(provider, prompt)
+            for attempt in range(3):
+                resp = dispatch(provider, prompt)
                 if not resp.startswith("__"):
                     break
-                print(f"  [{provider['name']}] failed {resp[:40]} — next")
+                print(f"  [{provider}] attempt {attempt+1} failed {resp[:40]}")
+                time.sleep(5)
             if resp.startswith("__"):
                 err += 1
                 print(f"[batch {start // args.batch}] ALL FAILED {resp[:50]}")
@@ -183,9 +259,9 @@ def main():
                 ckpt.write(json.dumps(v, ensure_ascii=False) + "\n")
             ckpt.flush()
             ok += 1
-            print(f"[batch {start // args.batch}] {len(batch)}Q done | total {len(done_ids())} | {time.time() - t0:.0f}s")
-            time.sleep(1.5)
-    print(f"DONE ok={ok} err={err} | total distractors: {len(done_ids())}")
+            print(f"[batch {start // args.batch}] {provider} {len(batch)}Q done | shard total {len(done) + ok * args.batch} | {time.time() - t0:.0f}s", flush=True)
+            time.sleep(1.0)
+    print(f"SHARD DONE ok={ok} err={err} | distractors in this shard: {ok * args.batch}", flush=True)
     return 0
 
 if __name__ == "__main__":
