@@ -504,7 +504,14 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 545 | rafi_11_77a2047b00 | latex delayed → **Nickel delayed** (amalgam type IV) | oral med |
 | 546 | rafi_11_01d445a67d | increases INR → **Decreases INR** (aspirin) | med |
 | 547 | rafi_11_92b6ad1676 | antibiotics → **Aspiration** (pre-biopsy) | OMS |
-| 548 | rafi_11_f434294a7d | reactive → **Malignant** (reverse smoker palate) | oral path || 549 | rafi_11_93592163d1 | hypertension → **Myocardial infarction** (ibuprofen in IHD) | med |
+| 548 | rafi_11_f434294a7d | reactive → **Malignant** (reverse smoker palate) | oral path || 549 | rafi_11_93592163d1 | hypertension → **Myocardial infarction** (ibuprofen in IHD) | med || 550 | rafi_12_390aafbab5 | 15 → **20 cm** (ceph pt-film) | ortho |
+| 551 | rafi_12_1253268514 | varnish → **Prophy+fluoride+sealant** (9yo) | pedo |
+| 552 | rafi_12_fa02b690c0 | defame → **Avoid criticism** (colleague) | ethics |
+| 553 | rafi_12_141891294c | refuse → **Different room** (COVID+) | ethics |
+| 554 | rafi_12_8681aa2585 | non-maleficence → **Informed consent** (x-ray refusal) | ethics |
+| 555 | rafi_12_7fb01494c1 | diamond → **Wedding ring** (remove all rings) | ethics |
+| 556 | rafi_12_1dd04bff93 | substitute → **Protect employees** (hierarchy) | ethics |
+
 
 
 
@@ -954,6 +961,19 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_11_8977a7c9d9 — severe COPD: main concern = SUPINE position (avoid; semi-upright) — marked "place supine" = the concern (keep)
 - rafi_11_3ababa8f90 — palate + dull pain + bone erosion = ADENOID CYSTIC (perineural pain; PA does NOT erode bone — model wrong)
 - rafi_11_3ce7e8d6bb — painless palate swelling + bone erosion = MUCOEPIDERMOID (malignancy confirmed by erosion; consistent w/ 3ababa8f90's ACC differing by pain)
+- rafi_12_2e688da802 — ANTERIOR crossbite = immediate treatment (functional shift/TMJ risk; model agreed, wrong index)
+- rafi_12_b423f62601 — ankylosed primary 2nd molar, NO successor → extract + space maintainer (model said wait)
+- rafi_12_74fb78d444 — IAN injury during 3M extraction = known COMPLICATION (model's own reason agrees)
+- rafi_12_bbf7a475a4 — explaining complications = informed consent rooted in AUTONOMY (marked; model said veracity)
+- rafi_12_543337a34c — dentist persuading mother to change material → autonomy (model's own reason agrees)
+- rafi_12_a0e2d38ba8 — pt refuses x-ray → AUTONOMY respected (model agrees; consistent w/ 8681aa2585 compromised-wording)
+- rafi_12_62e092c162 — nurse follows the doctor's direction (marked; model reason agrees)
+- rafi_12_6b65352ba5 — family refuses amputation → COURT decides (best interest; marked)
+- rafi_12_3bf4e06a59 — coma + advance directive/wife → wife decides (model agrees)
+- rafi_12_0e6e53892b — Down syndrome pt → consent from relatives/guardian (model's reason mismatched retrieval)
+- rafi_12_2f3a7d7f55 — gloves: change BETWEEN patients (not offered; marked "after long time" — broken, register)
+- rafi_12_4a73854221 — spit on chair = LOW-level disinfection (model agrees)
+- rafi_12_03d10027b4 — lens splash: REMOVE CONTACT LENSES first (model agrees)
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
