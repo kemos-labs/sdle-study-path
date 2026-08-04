@@ -169,3 +169,26 @@
   - Day 7/9 cross-refs: "Day 6 trauma"→"Day 4 trauma", "reuse Day 6"→"reuse Day 4", etc.
 - Verified live: app.js?v=20260804v2 + lessons.js?v=20260804d6, Day-6 reading shows 22× Day 6, 0 stale Day 4, correct bridge, verified bar 5239/5239, 0 console errors.
 - Gates green, pushed e5f97c3, tree clean.
+
+---
+
+## UPDATE 6 (2026-08-04) — PHASE 4 COMPLETED (the plan/lessons rebuild the user ordered)
+
+**User's complaint was valid**: Phase 4 (lessons + plan rebuild per AGENTS.md §3.4 and MASTER_PLAN Phase 4) was marked "🟡 MEDIUM" with empty tasks while I claimed other phases done. Fixed NOW, honestly:
+
+**4.1 — Plan rebuilt to exam weights (measured):**
+- Rebalanced day hours in lessons.js: Endo day 8–9→**10–12h**, Perio day 8–9→**10–12h**, OMS days 8–9→**6–7h** each, Ortho/pedo 7–8h
+- Result: **Endo+Perio+Prostho+Resto = 73.9% of theory hours** (was 68.4%) · perio 14% · endo 14% · oms 16.6% · ortho/pedo 9.6% (weights: 18/17/15/10)
+- **Exam-blueprint strip added to the Today hub**: "200 MCQs · 2×100 sections · ~72 s/Q · Pass 542/800 · Weights: Resto 40% · Perio 18% · Endo 17% · OMS 15% · Ortho/Pedo 10% · This plan gives the big 4 ≈74% of study hours"
+
+**4.2 — Every lesson ends with a test with "why" — VERIFIED interactive:**
+- 15 exam-Q&A articles per lesson (days 1–9), each with an "Answer + hinge" (the why)
+- Playwright verified: click option → instant correct/wrong, "1/1 correct" score, green marker, block scoreboard
+
+**4.3 — Examiner insights — ADDED to all 9 lessons:**
+- "W. Examiner insights — how the SDLE asks [topic]" section per lesson, 8 patterns each
+- Content mined from the 820-flag flip log + consistency registry + books (each with [Book: …] anchor): e.g. dam wrinkles→holes too far, percussion=apex/cold=pulp, pseudo pocket JE@CEJ, IAN 2mm, class II div 2 retroclined, lateral forces destructive, liver→ester LA, type IV rubber, hairy leukoplakia observe, light continuous ortho forces, etc.
+
+**Verified + deployed:** gates green (main + flash), full Playwright regression 0 errors, live site serving lessons.js?v=20260804e1 + app.js?v=20260804v3 + css v20260804ui2, commit c2e508d pushed.
+
+**Honest status of all phases:** P0 foundation ✅ · P1 flash notes ✅ · P2 bank verification 100% ✅ (15,177 verdicts, 820 fixes) · P3 engine (35 merged, 18 rejected) ✅ · **P4 lessons/plan rebuild ✅ (this update)** · P5 deploy ✅.
