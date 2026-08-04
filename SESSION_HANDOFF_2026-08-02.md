@@ -142,3 +142,15 @@
 1. ~20 usable-with-caveat needs-review items (Ante-law garbled numbering, implant-tooth 1.5–2mm, ovate pontic material, ZOE setting time, etc.) — registered in `docs/FLIP_REVIEW_LOG.md`; safe to leave.
 2. GitHub Pages re-deploy + announce (deploy from `sdle-prep` only; run `work/shot9.js`-style regression against the live URL).
 3. 4 error verdicts + 2,019 uncertain verdicts could be spot-checked later if desired (already book_verified via audit/other passes).
+
+
+---
+
+## UPDATE 4 (2026-08-04) — Student-friendly UI redesign (LIVE)
+
+- **Nav redesign**: 8 tabs now emoji + bilingual — 🏠 اليوم Today · 📖 الدروس Learn · 🎯 تدرب Practice · 💬 سؤال وجواب Q&A · 🃏 فلاش Flash · 📝 ملاحظات Notes · 📈 تقدمي Progress · 💬 رأيك Feedback
+- **Header**: logo tagline "SDLE · Study Path · مسارك لامتحان SDLE"; logo gradient accent
+- **Welcome banner** (first visit only, dismissible): "👋 أهلاً بك في مسار SDLE!" with 3 simple steps (read → drill → flash) in Arabic + English
+- **CSS polish**: bigger touch targets, pill buttons with icons, hover/active states, warm gradient accents; mobile verified (390px, no overflow)
+- Full regression: 8/8 tabs OK, flash quiz 40Q 0-fakes, mobile OK, 0 console errors; gates green
+- **DEPLOYED LIVE**: https://kemos-labs.github.io/sdle-study-path/ serving app.js?v=20260804ui + app.css?v=20260804ui (commit 197db0c)
