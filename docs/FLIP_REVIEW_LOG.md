@@ -530,7 +530,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 581 | rafi_15_759d932d04 | PRR → **Fissure sealants** (incipient caries) | pedo |
 | 582 | rafi_15_309fd80f14 | occlusal prep → **Crown size** (SSC high+overhang) | pedo |
 | 583 | rafi_15_281ba6e68a | articaine → **Procaine** (cirrhosis — ester) | med |
-| 584 | rafi_15_f066a3574c | stop warfarin → **Continue** (INR 3.5 minor) | OMS |
+| 584 | rafi_15_f066a3574c | stop warfarin → **Continue** (INR 3.5 minor) | OMS || 585 | rafi_15_33ba424719 | candidiasis → **Methotrexate** (oral ulcers) | oral med |
+
 
 
 
@@ -1051,6 +1052,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_15_feba16ce4a — 11yo open bite + tongue-forward swallow pattern = IMMATURE SWALLOW (stem describes tongue, not thumbs; model said thumb sucking)
 - rafi_15_b15d9b9c26 — #21 unerupted at 8 (contralateral erupted) = fibrous tissue impediment (marked; model said slow eruption)
 - rafi_15_5994e0ef69 — WHO soap+water hand hygiene = 40-60 s (ABHR = 20-30 s; model confused the two)
+- rafi_15_036b848b55 — infection to thorax = ALAR/danger space (deep pharyngeal; model said submandible)
+- rafi_15_f9c08694f9 — hematoma prevention = ASPIRATION before deposition (marked; model's slow-injection less specific)
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
