@@ -640,7 +640,13 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 708 | rafi_03_2f0ce184d9 | soft palate → **Buccal mucosa** (PV) | oral path |
 | 709 | rafi_04_9670943691 | cusp-cusp → **MB groove** (Class I) | ortho || 710 | rafi_04_432b6955b5 | occlusal → **Periapical 2nd** (canine loc.) | ortho |
 | 711 | rafi_04_c70e459733 | cleft palate → **Maxillary hypoplasia** (open bite) | ortho |
-| 712 | rafi_04_5864bd40bf | follow-up → **Leave apical segment** (primary root fx) | pedo |
+| 712 | rafi_04_5864bd40bf | follow-up → **Leave apical segment** (primary root fx) | pedo || 713 | rafi_04_bb40a4a759 | 3-5y → **8-12 years** (trauma peak) | pedo |
+| 714 | rafi_04_80b276ac77 | edge-to-edge → **Maxillary distal** (distal step) | pedo |
+| 715 | rafi_04_7f05c5a1a6 | long working → **Short setting** (GIC cement) | pedo |
+| 716 | rafi_04_630d624eb9 | neg reinforcement → **Negative correction** | pedo |
+| 717 | rafi_04_88d95b09b2 | rule-based → **All of the above** (deontology) | ethics |
+| 718 | rafi_04_b0b0aa745e | mirror → **Band remover** (disinfection only) | ethics |
+
 
 
 
@@ -1325,6 +1331,15 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_924c8e4392 — skeletal maturity: hand-wrist radiograph (marked; comparable to ceph)
 - rafi_04_b98403bcbe — ortho patients: CHARTERS brushing (model's own reason agrees)
 - rafi_04_5998fc98b2 — 8yo pulp-involved crown fx = CERVICAL PULPOTOMY (apexogenesis; marked correct)
+- rafi_04_5ff5aa4f2a — distal shoe (un-erupted first molar guidance; marked)
+- rafi_04_99f051f8f0 — distal shoe CONTRAINDICATED in SBE (surgical/bacteremia; marked)
+- rafi_04_dc9d21c3e5 — primary pulpotomy: formocresol (classic; MTA not offered — consistent w/ rafi_10_b0ca969537)
+- rafi_04_130cf3321a — all lower primary molars lost → LINGUAL ARCH (consistent w/ rafi_08_dccb40e25b)
+- rafi_04_763c117f58 — Nance follow-up 6 months (marked; model reason mismatched retrieval)
+- rafi_04_1d327b4c67 — upper canine in lower lateral-canine embrasure = CLASS I (marked; model reason mismatched)
+- rafi_04_ec8176a637 — post-endo pain factor: mesiodistal diameter (marked; model reason mismatched)
+- rafi_04_b722df180e — unnecessary referral = nonmaleficence (consistent majority w/ rafi_10_67314fc890 + rafi_14_85f9d151b4)
+- rafi_04_ed9cca1303 — autoclave 121°C = 30 min (model agrees)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
