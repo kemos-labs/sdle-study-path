@@ -705,7 +705,14 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 786 | rafi_06_6cce53fcc3 | Van der Woude → **Albright** (nevi) | oral path || 787 | rafi_06_e151e1268c | Caldwell-Luc → **Observation** (0.5mm OAC) | OMS |
 | 788 | rafi_06_a9573d5b97 | extract + retrieve → **Flap + enucleation** (cyst) | OMS |
 | 789 | rafi_06_eaf5e93dfe | wheel-axle → **Lever** (Cryer elevator) | OMS |
-| 790 | rafi_06_9b2df7bbbb | buccal → **Palatal space** (root displacement) | OMS |
+| 790 | rafi_06_9b2df7bbbb | buccal → **Palatal space** (root displacement) | OMS || 791 | rafi_06_e738b1ebc8 | medial pterygoid → **Buccinator** (no displacement) | OMS |
+| 792 | rafi_06_f67daac0c1 | Lefort III → **Le Fort I** (sinus) | OMS |
+| 793 | rafi_06_830c6dd55e | bleeding time → **Platelet count** (oozing) | med |
+| 794 | rafi_06_0ec7c233f8 | stroke+aspirin → **Bronchial asthma** (no coag test) | med |
+| 795 | rafi_06_1ec7476bb2 | Dilantin → **Adrenaline** (no hyperplasia) | oral med |
+| 796 | rafi_06_f16f3f8c36 | cidal+cidal → **Cidal+static** (antagonism) | med |
+| 797 | rafi_06_8e09802c9b | extrinsic+PT → **INR 3 caveat** (not-true) | med |
+
 
 
 
@@ -1480,6 +1487,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_06_590ea7c668 — lupus + cortisone + extraction → DOUBLE the dose on the day (consistent steroid series)
 - rafi_06_f8f84ccb5c — aplastic anemia EXCEPT = cold hemoglobinuria (hemolytic; model agrees)
 - rafi_06_ec9b271b83 — syphilitic lesion → penicillin only (marked)
+- rafi_06_abb0d6157f — worldwide most common mandible fracture = condyle (consistent w/ rafi_10_4f7633d67e)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
