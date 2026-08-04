@@ -6614,6 +6614,10 @@
     const t = String((q && q.topic) || "").toLowerCase();
     const st = (q && q.subtopics) || [];
     const has = (s) => st.includes(s);
+    /* Main topic wins over polluted subtopics: an endo/oms/perio/ortho/ethics question never
+       matches a different department's subtopic-based pool (e.g. endo tagged 'implant'). */
+    const OTHER_TOPICS = ["endo", "perio", "oms", "ortho_pedo", "ethics"];
+    const mismatchTopic = (wanted) => OTHER_TOPICS.includes(t) && t !== wanted;
 
     if (dept === "endo") return t === "endo" || d === "endo";
     if (dept === "perio") return t === "perio" || d === "perio";
@@ -6622,6 +6626,7 @@
     if (dept === "ethics") return t === "ethics" || d === "ethics";
     if (dept === "mixed") return t === "mixed" || d === "mixed";
     if (dept === "operative") {
+      if (mismatchTopic("operative")) return false;
       if (d === "operative" || has("operative")) return true;
       if (String((q && q.source) || "") === "premium_operative") return true;
       if (t === "restorative" && !has("fixed") && !has("rpd") && !has("implant") && d !== "fixed" && d !== "rpd") {
@@ -6630,13 +6635,14 @@
       }
       return false;
     }
-    if (dept === "fixed") return d === "fixed" || has("fixed");
-    if (dept === "rpd") return d === "rpd" || has("rpd");
-    if (dept === "implant") return d === "implant" || has("implant");
-    if (dept === "materials") return has("materials") || d === "materials";
-    if (dept === "complete_denture") return has("complete_denture");
+    if (dept === "fixed") { if (mismatchTopic("fixed")) return false; return d === "fixed" || has("fixed"); }
+    if (dept === "rpd") { if (mismatchTopic("rpd")) return false; return d === "rpd" || has("rpd"); }
+    if (dept === "implant") { if (mismatchTopic("implant")) return false; return d === "implant" || has("implant"); }
+    if (dept === "materials") { if (mismatchTopic("materials")) return false; return has("materials") || d === "materials"; }
+    if (dept === "complete_denture") { if (mismatchTopic("complete_denture")) return false; return has("complete_denture"); }
     if (dept === "restorative") {
       if (t === "restorative") return true;
+      if (OTHER_TOPICS.includes(t)) return false; // main topic wins — no cross-topic leak
       if (["operative", "fixed", "rpd", "implant"].includes(d)) return true;
       if (st.some((s) => ["operative", "fixed", "rpd", "implant", "materials", "complete_denture", "restorative_general"].includes(s)))
         return true;
