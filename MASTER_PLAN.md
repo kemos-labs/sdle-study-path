@@ -51,7 +51,7 @@
 |---|---|---|
 | 2.1 | Build a clean per-topic retrieval index from the 31 canonical `.txt` books (chapter-level) | ✅ done — `scripts/verify_bank_batch.py` loads the corpus into per-topic passages (endo 16k, perio 74k, restorative 28k, …), keyword-retrieves top passages per question |
 | 2.2 | Batch verification pass #1 (endo, perio, restorative = the 70%) | ✅ **COMPLETE 2026-08-03** — 8,523 verdicts (6,594 supported / 1,154 uncertain / 771 contradicted); apply pass refreshed `book_support` on 5,508 Q |
-| 2.3 | Batch verification pass #2 (oms 3,765, ortho_pedo 1,476, ethics 892, mixed 488 = 6,621 Q) | ✅ **COMPLETE 2026-08-03** — **100% of the usable bank verified** (15,177 verdicts, deduped; final 18 engine stragglers 15 supported/3 uncertain) |
+| 2.3 | Batch verification pass #2 (oms 3,765, ortho_pedo 1,476, ethics 892, mixed 488 = 6,621 Q) | ✅ **COMPLETE 2026-08-03** — **100% of the usable bank verified** (15,177 verdicts; 0 error rows — 4 API-failed retried: 1 supported/1 uncertain/2 contradicted→kept; final 18 engine stragglers verified) |
 | 2.4 | Adjudicate flags | ✅ **813 book-verified fixes applied** (log `docs/FLIP_REVIEW_LOG.md` — 806 numbered + 7 pre-numbered; 1,535 contradicted verdicts, ALL human/AI-reviewed, index-verified vs option TEXT, no auto-flips; ~720 keeps documented; 12 broken hidden `usable:false` + `_repair_pending`) |
 | 2.5 | Apply verified verdicts to `questions.js` | ✅ done — supported→book_support refreshed on **9,742 Q** (pass 1 + pass 2), flips applied manually with `[Book: …]` evidence |
 | 2.6 | Regenerate `topics.js` / lessons counts from verified data | ⬜ next |
@@ -93,7 +93,7 @@
 
 | # | Task |
 |---|---|
-| 5.1 | Cache-bust + deploy to GitHub Pages (from `sdle-prep`, never the archive) | ✅ **DONE 2026-08-03** — sw.js v48, script bumps (questions v20260803v2, flash_notes v20260803fn6), pushed `db4ed56` |
+| 5.1 | Cache-bust + deploy to GitHub Pages (from `sdle-prep`, never the archive) | ✅ **DONE 2026-08-03** — sw.js v48, script bumps (questions v20260803v2, flash_notes v20260803fn6), pushed `db4ed56`; **live site verified serving v48 + new hashes, footer stats render, 0 errors** |
 | 5.2 | Playwright full regression suite (all tabs, quiz flow, flash flow, progress persistence) | ✅ **DONE** — 8/8 tabs OK, flash quiz 40Q 0-fakes, practice quiz 3,090Q scored (correct/wrong verified), 0 console errors |
 | 5.3 | Performance: bank loads fast; app.js stays maintainable (no 10k-line monolith growth — extract modules if needed) | 🟡 fine as-is |
 | 5.4 | Final honest stats in the footer (verified / awaiting) | ✅ **DONE** — live-computed: "15,166 MCQs (100% textbook-verified) · Flash Notes 4,451 recall items · 7 topics · free forever" |
