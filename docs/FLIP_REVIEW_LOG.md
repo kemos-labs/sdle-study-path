@@ -691,7 +691,19 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 771 | rafi_06_e3d8b91d72 | scleroderma → **Paget** (hypercementosis) | oral path |
 | 772 | rafi_06_acd20d1e88 | thrombocytopenia → **Plummer-Vinson** | oral med |
 | 773 | rafi_06_4300335db7 | ectodermal → **Hypophosphatasia** (no cementum) | pedo |
-| 774 | rafi_06_b857a0236f | 0.25 → **0.5 mg/day** (F supplement) | pedo |
+| 774 | rafi_06_b857a0236f | 0.25 → **0.5 mg/day** (F supplement) | pedo || 775 | rafi_06_6c83382f57 | zoster → **Erythema multiforme** (target) | oral med |
+| 776 | rafi_06_c39864b777 | HSV-1 → **Hand-foot-mouth** | pedo |
+| 777 | rafi_06_7aec0be245 | candidiasis → **Geographic tongue** | oral med |
+| 778 | rafi_06_6d19455a55 | recurrent herpes → **Recurrent aphthous** | oral med |
+| 779 | rafi_06_e40a0395bb | trigeminal → **Glossopharyngeal neuralgia** | med |
+| 780 | rafi_06_8efe0f8805 | syphilitic → **Tubercular ulcer** | oral path |
+| 781 | rafi_06_c3aa3a6168 | xerostomia → **Vitamin B deficiency** | oral med |
+| 782 | rafi_06_9f8ef07001 | herpetic gingivostomatitis → **Herpangina** | pedo |
+| 783 | rafi_06_d68bcfb2f2 | papilloma → **Condyloma acuminatum** | oral path |
+| 784 | rafi_06_f1d5a719d2 | fibroma → **Parulis** (draining sinus) | oral path |
+| 785 | rafi_06_3e2aed41cf | sebaceous cyst → **Lipoma** (slip sign) | oral path |
+| 786 | rafi_06_6cce53fcc3 | Van der Woude → **Albright** (nevi) | oral path |
+
 
 
 
