@@ -615,7 +615,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 678 | rafi_01_195747b202 | phenytoin → **Cyclosporine** (transplant) | oral med |
 | 679 | rafi_01_0bfc8e6644 | hematoma → **Bone necrosis** (zoledronate) | oral med || 680 | rafi_01_9fd55bea4f | max lateral → **Mand 2nd premolar** (missing; consistent) | ortho |
 | 681 | rafi_02_b44a1fd39c | SSC → **Antibiotics** (dental allergy) | med |
-| 682 | rafi_02_54c8478ee4 | 12 wk → **4 weeks** (neonatal teeth) | pedo |
+| 682 | rafi_02_54c8478ee4 | 12 wk → **4 weeks** (neonatal teeth) | pedo || 683 | rafi_02_764dbc0930 | socket wall → **Wheel and axis** (elevator) | OMS |
+| 684 | rafi_02_800e179d03 | reduces toxicity → **Increase duration** (vasoconstrictor) | LA |
+
 
 
 
@@ -1277,6 +1279,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_01_3bbedc0d34 — MASSETER palpated over lateral ramus (temporalis = temple; marked correct)
 - rafi_01_f86d7fdc01 — 32-week pregnancy → SIDE position (avoid supine hypotensive syndrome; marked correct)
 - rafi_01_f444221982 — type IV contact allergy appears 1-2 days (marked; model's own reason agrees)
+- rafi_02_9d6a976a64 — miconazole (azole) targets ERGOSTEROL (cell membrane); "cell wall" marked (closest option)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
