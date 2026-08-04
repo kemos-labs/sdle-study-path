@@ -539,7 +539,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 593 | rafi_16_65a7a21da4 | overdose → **Hypotension** (perindopril) | med || 594 | rafi_16_450a2b2acf | reduced → **Increased INR** (amox+APAP) | med |
 | 595 | rafi_16_231061cd65 | O2 93 → **SOB at rest** (respiratory distress) | med |
 | 596 | rafi_16_a30ecdb6c2 | sialadenosis → **Mucus plug** (meal-time swelling) | OMS |
-| 597 | rafi_16_e61f79770d | oncocytosis → **Warthin** (bilateral parotid) | oral path |
+| 597 | rafi_16_e61f79770d | oncocytosis → **Warthin** (bilateral parotid) | oral path || 598 | rafi_16_cde5d90336 | extract all same visit → **1 tooth/2wk** (BP staged) | OMS |
+| 599 | rafi_16_db12f0955e | treat+monitor → **Reschedule** (unstable routine) | med |
+
 
 
 
@@ -1094,6 +1096,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_16_798bb20897 — ACTIVE TB + urgent pain → infiltration mask (consistent w/ TB series)
 - rafi_16_5c9c8be1aa — pericoronitis → third molar EXTRACTION (definitive; marked correct)
 - rafi_16_dab2f34dad — TB 4yrs ago + negative + physician OK → mask (consistent; model said normal)
+- rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
+- rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
+- rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
