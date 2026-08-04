@@ -98,7 +98,7 @@ def call_api(provider, prompt):
             {"role": "user", "content": prompt},
         ],
         "temperature": 0.4,
-        "max_tokens": 3000,
+        "max_tokens": 6000,
     }).encode()
     req = urllib.request.Request(provider["url"], data=body,
         headers={"Content-Type": "application/json", "Authorization": f"Bearer {provider['key']}"})
