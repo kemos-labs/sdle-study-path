@@ -638,7 +638,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 706 | rafi_03_c68a4f7122 | too lateral → **Too medial** (IANB facial n.) | LA |
 | 707 | rafi_03_722492e732 | 6 → **9 cartridges** (50kg lidocaine+epi) | LA |
 | 708 | rafi_03_2f0ce184d9 | soft palate → **Buccal mucosa** (PV) | oral path |
-| 709 | rafi_04_9670943691 | cusp-cusp → **MB groove** (Class I) | ortho |
+| 709 | rafi_04_9670943691 | cusp-cusp → **MB groove** (Class I) | ortho || 710 | rafi_04_432b6955b5 | occlusal → **Periapical 2nd** (canine loc.) | ortho |
+| 711 | rafi_04_c70e459733 | cleft palate → **Maxillary hypoplasia** (open bite) | ortho |
+| 712 | rafi_04_5864bd40bf | follow-up → **Leave apical segment** (primary root fx) | pedo |
+
 
 
 
@@ -1318,6 +1321,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_03_a3c396eeed — cardiac epi limit 0.04 mg (2 cartridges; model's own reason agrees)
 - rafi_03_e727eb5805 — 20kg lidocaine without epi: 4.4×20 = 88 mg (marked correct; model's 5mg/kg math off)
 - rafi_04_a352a9fa28 — quad helix wire = 0.038" (38 mil) SS (marked correct; model pedantic 40 vs 38)
+- rafi_04_b53d927682 — bone loss → CReR moves APICALLY (marked option 2 correct; model said crown)
+- rafi_04_924c8e4392 — skeletal maturity: hand-wrist radiograph (marked; comparable to ceph)
+- rafi_04_b98403bcbe — ortho patients: CHARTERS brushing (model's own reason agrees)
+- rafi_04_5998fc98b2 — 8yo pulp-involved crown fx = CERVICAL PULPOTOMY (apexogenesis; marked correct)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
