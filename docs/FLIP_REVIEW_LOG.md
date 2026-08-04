@@ -510,7 +510,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 553 | rafi_12_141891294c | refuse → **Different room** (COVID+) | ethics |
 | 554 | rafi_12_8681aa2585 | non-maleficence → **Informed consent** (x-ray refusal) | ethics |
 | 555 | rafi_12_7fb01494c1 | diamond → **Wedding ring** (remove all rings) | ethics |
-| 556 | rafi_12_1dd04bff93 | substitute → **Protect employees** (hierarchy) | ethics |
+| 556 | rafi_12_1dd04bff93 | substitute → **Protect employees** (hierarchy) | ethics || 557 | rafi_12_159ba1327f | only if infected → **Before extraction** (bisphosphonate) | OMS |
+| 558 | rafi_12_338df27b01 | short-acting β2 → **Call ER** (inhaler ineffective) | med |
+| 559 | rafi_12_59cec84ed2 | laser → **Electrocautery** (pacemaker) | med |
+
 
 
 
@@ -974,6 +977,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_12_2f3a7d7f55 — gloves: change BETWEEN patients (not offered; marked "after long time" — broken, register)
 - rafi_12_4a73854221 — spit on chair = LOW-level disinfection (model agrees)
 - rafi_12_03d10027b4 — lens splash: REMOVE CONTACT LENSES first (model agrees)
+- rafi_12_73851fcf7d — AFRICAN child + malignant jaw swelling = endemic BURKITT lymphoma (EBV); model said HHV-8/Kaposi (wrong population)
+- rafi_12_5e70dd4ad2 — ACTIVE TB + severe pain → treat urgently with filtration (N95) mask (consistent w/ rafi_12_8af7b3c00c; model said postpone)
+- rafi_12_8af7b3c00c — ACTIVE TB urgent → outpatient + airborne precautions (re-flagged; consistency maintained)
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
