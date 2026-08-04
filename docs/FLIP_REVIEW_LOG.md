@@ -702,7 +702,11 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 783 | rafi_06_d68bcfb2f2 | papilloma → **Condyloma acuminatum** | oral path |
 | 784 | rafi_06_f1d5a719d2 | fibroma → **Parulis** (draining sinus) | oral path |
 | 785 | rafi_06_3e2aed41cf | sebaceous cyst → **Lipoma** (slip sign) | oral path |
-| 786 | rafi_06_6cce53fcc3 | Van der Woude → **Albright** (nevi) | oral path |
+| 786 | rafi_06_6cce53fcc3 | Van der Woude → **Albright** (nevi) | oral path || 787 | rafi_06_e151e1268c | Caldwell-Luc → **Observation** (0.5mm OAC) | OMS |
+| 788 | rafi_06_a9573d5b97 | extract + retrieve → **Flap + enucleation** (cyst) | OMS |
+| 789 | rafi_06_eaf5e93dfe | wheel-axle → **Lever** (Cryer elevator) | OMS |
+| 790 | rafi_06_9b2df7bbbb | buccal → **Palatal space** (root displacement) | OMS |
+
 
 
 
@@ -1472,6 +1476,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_06_56821862f6 — 7yo fluoride: first molars (marked)
 - rafi_06_335dcdba19 — fluoride varnish = 5% NaF (model's own reason agrees)
 - rafi_06_806685b4cb — 2% NaF ≈ 9,000 ppm F (marked; model pedantic 9,200)
+- rafi_06_d4b25f3571 — swollen lips EXCEPT = Peutz-Jeghers (pigmentation, not swelling; model agrees)
+- rafi_06_590ea7c668 — lupus + cortisone + extraction → DOUBLE the dose on the day (consistent steroid series)
+- rafi_06_f8f84ccb5c — aplastic anemia EXCEPT = cold hemoglobinuria (hemolytic; model agrees)
+- rafi_06_ec9b271b83 — syphilitic lesion → penicillin only (marked)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
