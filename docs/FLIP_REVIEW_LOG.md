@@ -522,7 +522,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 571 | rafi_14_640dfe4121 | biohazard → **Normal seal bag** (impressions) | ethics |
 | 572 | rafi_14_3c5250c79b | condylar → **Angle** (adult mandible) | OMS |
 | 573 | rafi_14_7aee387fdd | scurvy → **Von Willebrand** (DDAVP response) | med |
-| 574 | rafi_14_67e246bf78 | aerobic → **Both** (odontogenic mixed flora) | OMS |
+| 574 | rafi_14_67e246bf78 | aerobic → **Both** (odontogenic mixed flora) | OMS || 575 | rafi_14_dbc718d753 | Stafne → **Simple bone cyst** (dome around vital teeth) | oral path |
+| 576 | rafi_14_83f27487ba | 4 days → **1 month** (HBV surfaces) | ethics |
+| 577 | rafi_15_850b765a73 | orthognathic → **Refer ortho** (10yo canines) | ortho |
+
 
 
 
@@ -1024,6 +1027,20 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_14_f6156d0799 — HIV lateral tongue white lesion → FOLLOW UP (hairy leukoplakia; consistent w/ ab2_776a5e5fe8)
 - rafi_14_2ac40261de — articaine = category C in pregnancy (model's own reason agrees; wrong index)
 - rafi_14_df584aa880 — single tooth absent pulp/dentin = REGIONAL ODONTODYSPLASIA (ghost tooth; DI = generalized — model wrong)
+- rafi_14_9b7b523a82 — blue-grey tooth discoloration (pedo): amoxicillin defensible (tetracycline not offered — model said green stain)
+- rafi_14_16900f92d3 — lidocaine max 4.4 mg/kg without epi (marked = conservative limit)
+- rafi_14_67ced0bc80 — liver disease → PROCAINE (ester) (consistent w/ rafi_12_46ab522415)
+- rafi_14_46a1541d22 — vesiculobullous → PERILESIONAL biopsy (immunofluorescence; model said incisional)
+- rafi_14_c0bbf5e9be — alveolar fracture after extraction: upper lateral region (thin plate; marked)
+- rafi_14_71805e0906 — MCV<80 microcytic + scenario = Plummer-Vinson (iron-deficiency; marked correct)
+- rafi_14_48a6e24725 — bilateral meal-time pain/swelling, no stone = SIALADENOSIS (model's own reason agrees)
+- rafi_14_7593854056 — preauricular pain + clicking, no trismus = osteoarthritis (marked; disc displacement not offered)
+- rafi_14_192f52cc77 — water fluoridation: 0.7-1.2 ppm; 0.5 closest offered (marked; broken-ish)
+- rafi_14_ba7c3da805 — red + white borders on lateral tongue = GEOGRAPHIC TONGUE (erythema migrans; model's own reason agrees)
+- rafi_14_9db926402c — trigger-zone pain on washing = trigeminal neuralgia (not offered; herpes zoster marked — broken-ish, keep)
+- rafi_14_341dce8389 / rafi_14_cf29a5cb0b — upper premolar/molar LA next-day numbness → sinus/GP-foramen (consistent pair; kept)
+- rafi_14_5f47caca30 — child fluoride ingestion → GIVE MILK (calcium binds fluoride; marked correct)
+- rafi_14_2d43b5018e — pregnancy ABx: clindamycin (B) safe (tetracycline D; model said azithromycin — both OK, marked kept)
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
