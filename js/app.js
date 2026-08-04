@@ -2146,7 +2146,7 @@
         <summary style="cursor:pointer;padding:10px 12px;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:8px">
           <span>${escapeHtml(DEPT_LABEL[d] || d)} <span class="muted" style="font-size:0.74rem;font-weight:400">· ${escapeHtml(d)}</span></span>
           <span style="display:flex;gap:6px;align-items:center">
-            <span class="badge" style="font-size:0.66rem;background:#e63946;color:#fff">${list.length} miss${list.length>1?'es':''}</span>
+            <span class="badge" style="font-size:0.66rem;background:#C22F3B;color:#fff">${list.length} miss${list.length>1?'es':''}</span>
             <button type="button" class="btn sm" data-wb-drill="${d}">▶ Drill ${Math.min(50, list.length)}</button>
           </span>
         </summary>
@@ -2161,7 +2161,7 @@
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
           <h1 style="margin:0;font-size:1.3rem">📕 Wrong Book by Department</h1>
           <div style="display:flex;gap:6px;align-items:center">
-            <span class="badge" style="background:#e63946;color:#fff">${total} open</span>
+            <span class="badge" style="background:#C22F3B;color:#fff">${total} open</span>
             <button type="button" class="btn sm ghost" id="wb-back">← Back</button>
           </div>
         </div>
@@ -4155,7 +4155,7 @@
       if (noIdx > 0) issues.push(`⚠️ ${noIdx} verified MCQs missing answerIdx`);
       const statusLine = issues.length === 0
         ? `<span style="color:#1b7a3d;font-weight:600">✅ CLEAN — ${overall}% resolved (${verified} verified + ${ref} ref + ${unknown} unknown)</span>`
-        : `<span style="color:#e63946;font-weight:600">❌ ${issues.length} issue(s) found</span>`;
+        : `<span style="color:#C22F3B;font-weight:600">❌ ${issues.length} issue(s) found</span>`;
       panel.innerHTML = `
         <table style="width:100%;border-collapse:collapse;margin-bottom:6px">
           <thead><tr style="border-bottom:1px solid var(--border);color:var(--text)"><th style="text-align:left;padding:2px 6px">Department</th><th style="text-align:right;padding:2px 6px">✅</th><th style="text-align:right;padding:2px 6px">📝</th><th style="text-align:right;padding:2px 6px">❓</th><th style="text-align:right;padding:2px 6px">Resolved</th></tr></thead>
@@ -4740,7 +4740,7 @@
             const deptRef = deptItems.filter(i => i.marker === 'ref').length;
             const deptUnk = deptItems.filter(i => i.marker === 'unknown').length;
             const pct = n > 0 ? Math.round((deptVer + deptRef) / n * 100) : 0;
-            const dotColor = pct >= 80 ? '#1b7a3d' : (pct >= 50 ? '#e6a817' : '#e63946');
+            const dotColor = pct >= 80 ? '#1b7a3d' : (pct >= 50 ? '#e6a817' : '#C22F3B');
             return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-fn-dept="${d.id}" style="padding:3px 10px;font-size:0.74rem"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:${dotColor};margin-right:4px"></span>${escapeHtml(d.label)} <span class="muted" style="font-size:0.66rem">${n}</span></button>`;
           }).join("")}
           <button type="button" class="btn sm ${fnDisputedMode ? "warn" : "ghost"}" data-fn-disputed style="padding:3px 10px;font-size:0.74rem" title="Review all items where AI flagged the marked answer as likely wrong">⚠ Disputed <span class="muted" style="font-size:0.66rem">${FN.aiStats?.disputed || 0}</span></button>

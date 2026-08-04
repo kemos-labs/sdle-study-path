@@ -13,15 +13,16 @@
     <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
     <title>SDLE Study Path — KSA</title>
-    <!-- Substack-like longform: Spectral (falls back offline to Charter/Georgia) -->
+    <!-- Reading serif: Spectral (falls back offline to Charter/Georgia) -->
+    <!-- UI sans + friendly Arabic: Cairo (rounded, readable for non-tech users) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Cairo:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- ?v= busts CDN/browser cache after feedback fix -->
-    <link rel="stylesheet" href="css/app.css?v=20260804ui2" />
+    <!-- ?v= busts CDN/browser cache (warm paper theme 2026-08-05) -->
+    <link rel="stylesheet" href="css/app.css?v=20260805ui3" />
     <link rel="stylesheet" href="css/print.css?v=20260730fn13" media="print" />
   </head>
   <body class="path-app simple-ui">
@@ -84,6 +85,6 @@
       } catch (e) { /* footer stats are non-critical */ }
     })();
     </script>
-    <script src="js/app.js?v=20260804v5"></script>
+    <script src="js/app.js?v=20260805v6"></script>
   </body>
 </html>
