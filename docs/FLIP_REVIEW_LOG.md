@@ -669,7 +669,15 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 746 | rafi_06_1372f78c89 | mand incisor prox → **Lingual pits + buccal** (rampant) | pedo |
 | 747 | rafi_06_9368f9ac61 | rapid → **Slower resorption** (no successor) | pedo |
 | 748 | rafi_06_2c780a2aad | extraction → **Endo** (preserve primary) | pedo |
-| 749 | rafi_06_71fe8d8727 | extract+retainer → **Pulpotomy + wait** (35 missing) | pedo |
+| 749 | rafi_06_71fe8d8727 | extract+retainer → **Pulpotomy + wait** (35 missing) | pedo || 750 | rafi_06_c8c2f558fb | sinus → **Spontaneous pain** (pulpotomy) | pedo |
+| 751 | rafi_06_e6d1a66e1d | exact level → **Below amputation** (dentin bridge) | endo |
+| 752 | rafi_06_25ac3485f6 | MB 1st → **MB of 2nd molar** (pulp horn) | pedo |
+| 753 | rafi_06_b85a8cc0b4 | consent → **Autonomy** (bodily integrity) | ethics |
+| 754 | rafi_06_40461d6163 | malpractice → **Negligence** (unqualified) | ethics |
+| 755 | rafi_06_6f83b1aaa3 | heat → **High-level disinfection** (retractor) | ethics |
+| 756 | rafi_06_4bb1c54076 | daily → **Weekly** (autoclave spore) | ethics |
+| 757 | rafi_06_fd066eb0c3 | Crouzon → **Apert** (syndactyly) | pedo |
+
 
 
 
@@ -1411,6 +1419,17 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_06_ae6124ec0f — Frankl scale: "indifferent" NOT included (model agrees)
 - rafi_06_d6b9e44944 — 12yo fractured incisor: pulpectomy + SSC (marked; athlete — trauma-prone)
 - rafi_06_f33e98647e — missing incisor adolescent: resin-bonded prosthesis (model agrees)
+- rafi_06_62c4a14024 — 2.5yo thumb sucking: psychological/ignore (normal at this age; marked)
+- rafi_06_0fac236493 — 13yo avulsion 30 min ago → REIMPLANT (marked correct)
+- rafi_06_bd54805fd1 — 10yo spacing (physiologic diastema) → no treatment (marked)
+- rafi_06_61c1b7d7f4 — painful grossly carious primary incisor → extraction (marked; model reason mismatched)
+- rafi_06_878c69e2c4 — crown fracture + fragment in lip: RCT + surgical removal + reattach (marked)
+- rafi_06_72c88164d3 — 5yo 85 extraction → space maintainer (marked)
+- rafi_06_b5d9d3af5e — SSC prep: PROXIMAL reduction greater (marked correct)
+- rafi_06_a46680dbaa — crown modification: cut buccal + overlap margins (marked; ambiguous)
+- rafi_06_9ff873b18e — parent presence impairs dentist-child communication (marked)
+- rafi_06_c38566922c — sublingual major duct = BARTHOLIN (marked correct)
+- rafi_06_a0fdeddedd — CCD: Jerusalem approach (marked; model said open exposure)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
