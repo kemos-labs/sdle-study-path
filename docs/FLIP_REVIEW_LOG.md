@@ -1377,6 +1377,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_4fb85ae0c5 — dry socket = medicated gauze (model agrees)
 - rafi_04_5c9dbc8d6c — post-MI analgesic w/ APAP allergy = naproxen (model agrees)
 - rafi_04_288033d8c6 — post-extraction "6mm height loss yr 1" = the FALSE statement (model agrees)
+- rafi_04_a9ccc6fe8d — dose-dependent bacteriostatic→bactericidal = erythromycin (marked; model said tetracycline)
+- rafi_04_ced0a30289 — cavernous sinus thrombosis spreads via ANGULAR vein (danger triangle; marked classic)
+- rafi_04_ecf8bf52e2 — 5 mg/kg fluoride ingestion → give calcium (milk; marked)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
