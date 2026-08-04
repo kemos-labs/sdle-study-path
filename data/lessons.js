@@ -441,6 +441,21 @@ window.LESSONS = [
     <li><b>Block C:</b> 100 Operative Mega — endurance training</li>
   </ul>
   <p class="muted">✅ All 5,235 restorative questions have 📖 book_verified=true citations from 22 PDF textbooks in the knowledge base.</p>
+<h3>W. Examiner insights — how the SDLE asks operative</h3>
+<div class="examiner-insight">
+  <p><b>How the exam asks it:</b> rarely "name Black's Class II" — it is a mini-vignette (caries, dam, composite, pulp) with one best next step. The hinge is almost always a single classic rule.</p>
+  <ul>
+    <li><b>Wrinkled dam between teeth → holes too far apart</b> (not too close; that causes tearing/leak risk). Book: Sturdevant dam setup.</li>
+    <li><b>Food packing after a filling/crown → open contact</b> — adjust/remake the contact, do not "scale" first. Book: Sturdevant contact principles.</li>
+    <li><b>Critical pH: enamel ≈ 5.5, dentin ≈ 6.5</b> — the bank swaps these; the dentin number is higher. Book: caries science.</li>
+    <li><b>Caries risk is driven by sugar FREQUENCY</b>, not one "big amount" story. Book: Sturdevant caries risk.</li>
+    <li><b>Microfill = polish, not strength</b> → hybrid/nanohybrid for load-bearing posterior. Book: Sturdevant composites.</li>
+    <li><b>Eugenol under planned composite/resin → inhibits polymerization</b> — clean or use non-eugenol temporization. Book: operative bonding.</li>
+    <li><b>Clean controllable direct pulp exposure → MTA/bioceramic cap</b> when indications fit — not ZOE as a permanent strategy. Book: pulp protection.</li>
+    <li><b>Instrument processing order always: clean → disinfect → sterilize</b> (debris first; dirty→autoclave is a wrong order trap). Book: infection control.</li>
+  </ul>
+</div>
+
 </div>`,
     videos: [{"file":"operative/lec.19/محاضره التاسعه عشر الجزء الاول.mp4","label":"1/7 · Operative lec 19 · part 1 · VERIFIED"},{"file":"operative/lec.19/المحاضره التاسعه عشر الجزء الثاني.mp4","label":"2/7 · Operative lec 19 · part 2 · VERIFIED"},{"file":"operative/lec.20/المحاضره العشرون.mp4","label":"3/7 · Operative lec 20 · part 1 · VERIFIED"},{"file":"operative/lec.20/المحاضره العشرون الجزء الثاني.mp4","label":"4/7 · Operative lec 20 · part 2 · VERIFIED"},{"file":"operative/lec.20/المحاضره العشرون الجزظء الثالث.mp4","label":"5/7 · Operative lec 20 · part 3 (disk typo: جزظء) · VERIFIED"},{"file":"operative/lec.21/المحاضره الواحد والعشرون الجزء الاول.mp4","label":"6/7 · Operative lec 21 · part 1 · VERIFIED"},{"file":"operative/lec.21/المحاضره الواحد والعشرون الجزء الثاني.mp4","label":"7/7 · Operative lec 21 · part 2 · VERIFIED"}],
     videoNote: "YES — كورس 46 operative lec.19–21 only. All 7 files verified under prometric/operative/. Watch in listed order (19→20→21). Do not watch prostho/endo today.",
@@ -1393,6 +1408,21 @@ window.LESSONS = [
   <p><b>Key verified topics:</b> crown preparation taper (10-20 deg), ferrule height (>=1.5-2mm), margin placement (supra vs subgingival), implant abutment selection, crestal bone loss (<=1.5mm first year), IAN safety distance (>=2mm).</p>
   <p><b>Practice:</b> Practice → Restorative tab → Fixed/Implant sets. All verified questions show 📖 badge after answering.</p>
   <p class="muted">✅ Textbook citations available for every answer — explanations reference specific book chapters.</p>
+<h3>W. Examiner insights — how the SDLE asks fixed & implants</h3>
+<div class="examiner-insight">
+  <p><b>How the exam asks it:</b> a cemented-crown complaint stem (contact, occlusion, margin, fracture) or an implant planning number. One classic rule decides it.</p>
+  <ul>
+    <li><b>New crown + food packing → open/light proximal contact</b> until proven otherwise — the #1 fixed-prostho stem. Book: Rosenstiel.</li>
+    <li><b>Pain on biting after cementation → adjust occlusion first</b> — not "check the endo" or "start a root canal". Book: Rosenstiel delivery.</li>
+    <li><b>Ferrule 1.5–2 mm of sound tooth; a post does NOT replace ferrule</b> — root fracture after fat post + no ferrule is the classic trap. Book: Rosenstiel posts.</li>
+    <li><b>Implant distances: IAN ≈ 2 mm · implant–tooth ≈ 1.5–2 mm · implant–implant ≈ 3 mm.</b> Book: implant prosthetics.</li>
+    <li><b>Mucositis = soft tissue only · peri-implantitis = inflammation + progressive bone loss.</b> Book: implant complications.</li>
+    <li><b>Uncontrolled DM → control disease first; removable (RPD) safer for elective replacement</b> — "implant anyway for quality of life" is the wrong first answer. Book: medical compromise.</li>
+    <li><b>Eugenol temporary → resin-cement bond failure</b> next visit (inhibition) — the bank asks this repeatedly. Book: cementation.</li>
+    <li><b>Biologic width violation → chronic marginal redness/bleeding around a deep margin</b> — fix margin position/lengthening, not "more mouthwash". Book: biologic width.</li>
+  </ul>
+</div>
+
 </div>`,
     videos: [{"file":"prostho/lec.9/المحاصضره التاسعه الجزء الول.mp4","label":"1/8 · Prostho lec 9 · part 1 (disk typos in name) · VERIFIED"},{"file":"prostho/lec.9/المحاضره التاسعه الجزء الثاني.mp4","label":"2/8 · Prostho lec 9 · part 2 · VERIFIED"},{"file":"prostho/lec.9/المحاضره التاسعه الجزء الثالث.mp4","label":"3/8 · Prostho lec 9 · part 3 · VERIFIED"},{"file":"prostho/lec.10/المحاضره العاشره الجزء الاول.mp4","label":"4/8 · Prostho lec 10 · part 1 · VERIFIED"},{"file":"prostho/lec.10/المحاضره العاشره الجزء الثاني.mp4","label":"5/8 · Prostho lec 10 · part 2 · VERIFIED"},{"file":"prostho/lec.11/المحاضره الحاديه عشر الجزء الاول.mp4","label":"6/8 · Prostho lec 11 · part 1 · VERIFIED"},{"file":"prostho/lec.11/المحاضره الحاديه عشر الجزء الثاني.mp4","label":"7/8 · Prostho lec 11 · part 2 · VERIFIED"},{"file":"prostho/lec.11/المحاضره الحاديه عشر الجزء الثالث.mp4","label":"8/8 · Prostho lec 11 · part 3 · VERIFIED"}],
     videoNote: "YES — prostho lec.9–11 (fixed/implant). All 8 files verified. Order: 9 p1–3 → 10 p1–2 → 11 p1–3. Day 3 is RPD/CD.",
@@ -2196,6 +2226,21 @@ If any line fails, bold re‑pass H–J before videos.</p>
   <p><b>5,235 restorative MCQs</b> include RPD, complete denture, and dental materials questions verified against standard textbooks.</p>
   <p><b>Key verified concepts:</b> Kennedy Class I = bilateral distal extension, Class II = unilateral distal, Class III = unilateral bounded. Circumferential clasp needs rest + retentive arm + reciprocal arm + encirclement. Gypsum: Type I = impression plaster, Type III = dental stone, Type IV = high strength, Type V = high strength high expansion.</p>
   <p class="muted">✅ Every answer in this day's topic has a 📖 book_verified citation from McCracken, Rosenstiel, and materials texts.</p>
+<h3>W. Examiner insights — how the SDLE asks RPD, CD & materials</h3>
+<div class="examiner-insight">
+  <p><b>How the exam asks it:</b> Kennedy class by the most posterior edentulous space, one RPI component, a CD seal problem, or an impression/gypsum material choice.</p>
+  <ul>
+    <li><b>Kennedy: I = bilateral free-end · II = unilateral free-end · III = bounded · IV = anterior crossing midline</b> — classify by the most posterior edentulous space. Book: McCracken.</li>
+    <li><b>RPI for distal extension = mesial rest + distal proximal plate + I-bar retentive arm</b> — not "ring clasp no rest". Book: McCracken RPI.</li>
+    <li><b>Lateral/horizontal forces are the most destructive to RPD abutments</b> — a repeated free-point. Book: McCracken.</li>
+    <li><b>Lingual bar if adequate floor depth; lingual plate when floor is shallow</b> (or weak premolars) — connector rigidity is the rule. Book: McCracken.</li>
+    <li><b>Upper CD drops on speech/sounds → check post dam / posterior palatal seal + borders + occlusion</b> — not "remake teeth first". Book: Complete Dentures.</li>
+    <li><b>Sore spot after insertion → mark (PIP) and relieve the denture base</b> + check occlusion; reline = new tissue surface, rebase = replace base keeping teeth. Book: CD maintenance.</li>
+    <li><b>Alginate = preliminary, pour soon · PVS/polyether = definitive fixed · Type IV = high-strength die stone.</b> Book: materials.</li>
+    <li><b>Acrylic porosity classic from curing too hot/too fast</b> (gaseous porosity) — not from cold cure. Book: dental materials.</li>
+  </ul>
+</div>
+
 </div>`,
     videos: [{"file":"prostho/lec.12/المحاضره الثانيه عشر  الجزء الاول.mp4","label":"1/7 · Prostho lec 12 · part 1 · VERIFIED"},{"file":"prostho/lec.12/المحاضره الثانيه عشر الجزء الثاني.mp4","label":"2/7 · Prostho lec 12 · part 2 · VERIFIED"},{"file":"prostho/lec.13/المحاضره الثالثه شر الجزء الاول.mp4","label":"3/7 · Prostho lec 13 · part 1 (disk: شر typo) · VERIFIED"},{"file":"prostho/lec.13/المحاضره الثالثه شر الجزء الثاني.mp4","label":"4/7 · Prostho lec 13 · part 2 · VERIFIED"},{"file":"prostho/lec.14/المحاضره الرابعه عشر الجزء الاول.mp4","label":"5/7 · Prostho lec 14 · part 1 · VERIFIED"},{"file":"prostho/lec.14/المحاضره الرابعه عشر الجزء الثاني.mp4","label":"6/7 · Prostho lec 14 · part 2 · VERIFIED"},{"file":"prostho/lec.14/المحاضره الرابعه عشر الجزء الثالث.mp4","label":"7/7 · Prostho lec 14 · part 3 · VERIFIED"}],
     videoNote: "YES — prostho lec.12–14 (RPD/CD/materials). All 7 files verified. Order: 12 → 13 → 14.",
@@ -2735,6 +2780,18 @@ If any line fails, bold re‑pass H–J before videos.</p>
   <p><b>5,235 restorative questions</b> verified — today you mix operative, fixed, RPD, and materials. Every answer has a textbook citation you can trace.</p>
   <p><b>Mock tip:</b> The timed restorative mock pulls from the verified pool. Track which topics you miss and drill those specific verified sets.</p>
   <p class="muted">✅ 100% of restorative usable questions have book_verified=true</p>
+<h3>W. Examiner insights — how the tri-core mega-day is examined</h3>
+<div class="examiner-insight">
+  <p><b>How the exam asks it:</b> the real exam interleaves endo + perio + restorative in the same hour. The stem names ONE domain (open contact, CAL, percussion) — identify it before recalling the rule.</p>
+  <ul>
+    <li><b>Cross-domain stems:</b> crown + food packing = fixed contact · crown + red gums = biologic width/contour/cement · implant + soft-tissue-only = mucositis · implant + progressive bone = peri-implantitis.</li>
+    <li><b>Medical free points hide inside restorative stems:</b> asthma → paracetamol · uncontrolled DM → defer elective implants · enlargement drugs → nifedipine/phenytoin/cyclosporine.</li>
+    <li><b>72 seconds per question average</b> (200 Q / ~4 h) — flag hard items by ~90 s, answer every item, change answers only with a found rule.</li>
+    <li><b>Two sections of 100 Q each, ~30 min break</b> — stamina is trained on the mock days, not invented on exam day.</li>
+    <li><b>Classic bank rule beats exotic specialty lore</b> when two options both sound right — banks reward automatic classics (open contact, 2 mm IAN, Kennedy I, clean→disinfect→sterilize).</li>
+  </ul>
+</div>
+
 </div>`,
     videos: [{"file":"operative/lec.20/المحاضره العشرون.mp4","label":"1/8 · INTEGRATION · Op lec 20 · part 1 · VERIFIED"},{"file":"operative/lec.20/المحاضره العشرون الجزء الثاني.mp4","label":"2/8 · INTEGRATION · Op lec 20 · part 2 · VERIFIED"},{"file":"operative/lec.20/المحاضره العشرون الجزظء الثالث.mp4","label":"3/8 · INTEGRATION · Op lec 20 · part 3 · VERIFIED"},{"file":"prostho/lec.10/المحاضره العاشره الجزء الاول.mp4","label":"4/8 · INTEGRATION · Fixed/implant lec 10 · part 1 · VERIFIED"},{"file":"prostho/lec.10/المحاضره العاشره الجزء الثاني.mp4","label":"5/8 · INTEGRATION · Fixed/implant lec 10 · part 2 · VERIFIED"},{"file":"prostho/lec.14/المحاضره الرابعه عشر الجزء الاول.mp4","label":"6/8 · INTEGRATION · Materials/CD lec 14 · part 1 · VERIFIED"},{"file":"prostho/lec.14/المحاضره الرابعه عشر الجزء الثاني.mp4","label":"7/8 · INTEGRATION · Materials/CD lec 14 · part 2 · VERIFIED"},{"file":"prostho/lec.14/المحاضره الرابعه عشر الجزء الثالث.mp4","label":"8/8 · INTEGRATION · Materials/CD lec 14 · part 3 · VERIFIED"}],
     videoNote: "Day 6 = integration rewatch (not new lectures). Op lec.20 + Fixed lec.10 + Materials lec.14. Skip any lecture you already own cold — prioritize timed MCQs + wrong book.",
@@ -2753,8 +2810,8 @@ If any line fails, bold re‑pass H–J before videos.</p>
     day: 5,
     title: "Periodontics",
     focus: "perio",
-    goal: "Stage/grade, furcation, drugs, peri-implant. Quiz ≥75%.",
-    hours: "8–9 hours",
+    goal: "Stage/grade, furcation, drugs, peri-implant. Quiz ≥75% — Perio ≈18% of the exam, practice a full 100Q block.",
+    hours: "10–12 hours",
     reading: `
 <div class="where-read">
   <strong>ADHD Day‑5 system (read this first — 2 min)</strong>
@@ -3477,6 +3534,21 @@ If any line fails, bold re‑pass H–J before videos.</p>
   <p><b>Key verified topics:</b> Peri-implantitis = inflammatory disease resulting in progressive bone loss. Plaque biofilm = primary etiology. Furcation classifications. Surgical vs non-surgical therapy.</p>
   <p><b>Practice:</b> Practice → Perio tab → all questions 📖 verified. After answering, check the green Verified badge.</p>
   <p class="muted">✅ All 1,447 perio questions cite Carranza, Lindhe, or standard perio textbooks.</p>
+<h3>W. Examiner insights — how the SDLE asks perio</h3>
+<div class="examiner-insight">
+  <p><b>How the exam asks it:</b> CAL vs probing depth, pocket type, furcation class, stage vs grade, drug-induced enlargement, or implant soft-tissue vs bone disease. Discriminators, not deep theory.</p>
+  <ul>
+    <li><b>Clinical attachment level (CAL) is measured from the CEJ</b> to the base of the pocket — not from the gingival margin. Book: Carranza.</li>
+    <li><b>Pocket 6 mm + junctional epithelium at the CEJ = PSEUDO pocket</b> (no attachment loss — gingival enlargement). Book: Carranza pocket types.</li>
+    <li><b>Furcation: Class I = probe enters · Class II = enters but not through · Class III = through-and-through.</b> Book: Carranza.</li>
+    <li><b>Stage = severity/extent · Grade = progression risk</b> (e.g., % bone loss ÷ age, smoking, diabetes). The bank loves the swap trap. Book: 2017 classification.</li>
+    <li><b>Gingival enlargement triad → nifedipine, phenytoin, cyclosporine</b> — a medical free point inside perio stems. Book: drug-induced enlargement.</li>
+    <li><b>Supragingival calculus: white-yellowish, easily detached, salivary component · subgingival: dark, hard, firmly attached.</b> Book: calculus.</li>
+    <li><b>Molar–incisor pattern + localized (≥30% sites) vs generalized</b> — staging language the exam reuses. Book: Carranza staging.</li>
+    <li><b>2–3 teeth involved, papillary+marginal+attached = localized diffuse gingivitis</b> — not generalized. Book: gingival disease classification.</li>
+  </ul>
+</div>
+
 </div>`,
     videos: [{"file":"perio/lec.5/المحاضرة الخامسة البريو.mp4","label":"1/8 · Perio lec 5 · VERIFIED"},{"file":"perio/lec.6/المحاضره السادسه كورس 46.mp4","label":"2/8 · Perio lec 6 · VERIFIED"},{"file":"perio/lec.7/المحاضره السابعه الجزء الاول.mp4","label":"3/8 · Perio lec 7 · part 1 · VERIFIED"},{"file":"perio/lec.7/المحاضره السابعه الجزء الثاني.mp4","label":"4/8 · Perio lec 7 · part 2 · VERIFIED"},{"file":"perio/lec.7/المحاضره السابعه الجزء الثالث.mp4","label":"5/8 · Perio lec 7 · part 3 · VERIFIED"},{"file":"perio/lec.8/المحاضره الثامنه الجزء الاول.mp4","label":"6/8 · Perio lec 8 · part 1 · VERIFIED"},{"file":"perio/lec.8/المحاضره الثامنه الجزء الثاني.mp4","label":"7/8 · Perio lec 8 · part 2 · VERIFIED"},{"file":"perio/lec.8/الجزء الثالث.mp4","label":"8/8 · Perio lec 8 · part 3 · VERIFIED"}],
     videoNote: "YES — perio lec.5–8 only. All 8 files verified. Order: 5 → 6 → 7 p1–3 → 8 p1–3.",
@@ -3491,8 +3563,8 @@ If any line fails, bold re‑pass H–J before videos.</p>
     day: 4,
     title: "Endodontics + dental trauma",
     focus: "endo",
-    goal: "Diagnosis, irrigants, mishaps, trauma table fluent. ≥75%.",
-    hours: "8–9 hours",
+    goal: "Diagnosis, irrigants, mishaps, trauma table fluent. ≥75% — Endo ≈17% of the exam, practice a full 100Q block.",
+    hours: "10–12 hours",
     reading: `
 <div class="where-read">
   <strong>ADHD Day‑4 system (read this first — 2 min)</strong>
@@ -4318,6 +4390,21 @@ If any blank, bold re‑pass B–D before Block B.</p>
   <p><b>Key verified topics:</b> Smear layer = surface film of debris after instrumentation (AAE 2003). NaOCl = tissue dissolution + antimicrobial. Rubber dam = standard of care (prevents aspiration). Ledge management = small curved file bypass.</p>
   <p><b>Practice:</b> Practice → Endo tab → 📖 verified on every question.</p>
   <p class="muted">✅ All 1,841 endo questions verified against Cohen's Pathways of the Pulp.</p>
+<h3>W. Examiner insights — how the SDLE asks endo & trauma</h3>
+<div class="examiner-insight">
+  <p><b>How the exam asks it:</b> a pain/diagnosis pair (cold vs percussion), an irrigant chemistry fact, a file-mishap, or a trauma algorithm. Diagnosis first, then treatment logic.</p>
+  <ul>
+    <li><b>Tender to percussion + normal cold → apical periodontitis</b> (not reversible pulpitis). Percussion = apex, cold = pulp. Book: Cohen.</li>
+    <li><b>Lingering cold + spontaneous night pain + exaggerated vital response → irreversible pulpitis</b> — "composite and hope" is the wrong next step. Book: Cohen diagnosis.</li>
+    <li><b>Narrowest canal = apical constriction</b> — the working-length landmark. Book: Cohen WL.</li>
+    <li><b>NaOCl dissolves organic tissue · EDTA removes mineral smear · NEVER mix NaOCl + CHX (toxic precipitate)</b> — sequence with water/saline. Book: irrigants.</li>
+    <li><b>File separation → torsional fatigue (tip lock in curved canal)</b> — the bank's classic breakage cause. Book: endo mishaps.</li>
+    <li><b>Post-op pain persisting with one NSAID → combine NSAID + acetaminophen</b> (multi-modal), not "switch to one drug alone". Book: pain management.</li>
+    <li><b>Permanent avulsion: replant, flexible splint ≈ 2 weeks · PRIMARY avulsion: do NOT replant</b> (protect the permanent successor). Book: IADT/trauma.</li>
+    <li><b>Necrotic immature permanent → MTA/bioceramic apexification</b>; vital immature → apexogenesis. Book: immature endo.</li>
+  </ul>
+</div>
+
 </div>`,
     videos: [{"file":"endo/lec.1/المحاضره الاولي كورس 46.mp4","label":"1/4 · Endo lec 1 · VERIFIED"},{"file":"endo/lec.2/محاضره الثانيه كورس 46.mp4","label":"2/4 · Endo lec 2 · VERIFIED"},{"file":"endo/lec.3/المحاضره الثالثه كورس 46.mp4","label":"3/4 · Endo lec 3 · VERIFIED"},{"file":"endo/lec.4/محاضره الرابعه كورس 46.mp4","label":"4/4 · Endo lec 4 · VERIFIED"}],
     videoNote: "YES — endo lec.1–4 only. All 4 files verified. Watch 1→2→3→4.",
@@ -4332,8 +4419,8 @@ If any blank, bold re‑pass B–D before Block B.</p>
     day: 7,
     title: "Oral surgery + local anesthesia",
     focus: "oms",
-    goal: "Extractions, complications, LA cautions. Practice pace ~72 sec/Q.",
-    hours: "8–9 hours",
+    goal: "Extractions, complications, LA cautions. Practice pace ~72 sec/Q — OMS ≈15% of the exam.",
+    hours: "6–7 hours",
     reading: `
 <div class="where-read">
   <strong>ADHD Day‑7 system (read this first — 2 min)</strong>
@@ -5144,6 +5231,21 @@ If any blank, bold re‑pass A–D before Block B.</p>
   <p><b>Key verified topics:</b> Zygomatic fracture → diplopia. Odontogenic infections → mixed aerobic/anaerobic. MRONJ staging. Space infections → Ludwig's angina = airway emergency.</p>
   <p><b>Practice:</b> Practice → OMS tab → all 📖 verified.</p>
   <p class="muted">✅ 3,766 OMS questions have textbook citations.</p>
+<h3>W. Examiner insights — how the SDLE asks OMS & local anesthesia</h3>
+<div class="examiner-insight">
+  <p><b>How the exam asks it:</b> a trauma/fracture site, a nerve-injury complication, an MRONJ story, or an LA safety fact. Numbers and "most common" answers dominate.</p>
+  <ul>
+    <li><b>Mandible: condyle is the most common fracture overall; angle is the most common in adults with a third molar</b> — the bank asks both framings. Book: Hupp.</li>
+    <li><b>Zygomatic fracture → diplopia</b> (floor involvement). Book: Hupp trauma.</li>
+    <li><b>Most common serious complication of third-molar extraction → IAN damage</b> (edema is the most common minor post-op event — the bank swaps these). Book: Hupp.</li>
+    <li><b>MRONJ = bisphosphonate/denosumab + invasive dental history + exposed bone</b> — prevention: atraumatic care, drug history. Book: Hupp/MRONJ.</li>
+    <li><b>Odontogenic infection flora = mixed (aerobes + anaerobes)</b> — "mixed" is the free-point answer. Book: Hupp infection.</li>
+    <li><b>COPD patient → semi-supine position</b> (avoid full supine). Book: Malamed medical emergencies.</li>
+    <li><b>Liver disease → prefer ester LA (e.g., procaine)</b>; amides are hepatically metabolized — the bank's repeated liver-LA pair. Book: Malamed LA.</li>
+    <li><b>Refractory asthma during treatment (bronchodilator no effect) → activate the medical emergency protocol</b> — not "another puffer only". Book: emergencies.</li>
+  </ul>
+</div>
+
 </div>`,
     videos: [{"file":"surgery/lec.15/المحاضره الخامسه عشر الجزء الاول.mp4","label":"1/10 · Surgery lec 15 · part 1 · VERIFIED"},{"file":"surgery/lec.15/المحاضره الخامسه عشر الجزء الثاني.mp4","label":"2/10 · Surgery lec 15 · part 2 · VERIFIED"},{"file":"surgery/lec.16/المحاضره السادسه عشر الجزء الاول.mp4","label":"3/10 · Surgery lec 16 · part 1 · VERIFIED"},{"file":"surgery/lec.16/المحاضره السادسه عشر الجزء الثاني.mp4","label":"4/10 · Surgery lec 16 · part 2 · VERIFIED"},{"file":"surgery/lec.16/المحاضره السادسه عشر الجزء الثالث.mp4","label":"5/10 · Surgery lec 16 · part 3 · VERIFIED"},{"file":"surgery/lec.17/المحاضره السابعه عشر الجزء الاول.mp4","label":"6/10 · Surgery lec 17 · part 1 · VERIFIED"},{"file":"surgery/lec.17/المحاضره السابعه عشر الجزء الثاني.mp4","label":"7/10 · Surgery lec 17 · part 2 · VERIFIED"},{"file":"surgery/lec.17/المحاضره السابعه عشر الجزء الثالث.mp4","label":"8/10 · Surgery lec 17 · part 3 · VERIFIED"},{"file":"surgery/lec.18/المحاضره الثامنه عشر الجزء الاول.mp4","label":"9/10 · Surgery lec 18 · part 1 · VERIFIED"},{"file":"surgery/lec.18/المحاضره الثامنه عشر الجزء الثاني.mp4","label":"10/10 · Surgery lec 18 · part 2 · VERIFIED"}],
     videoNote: "YES — surgery lec.15–18 only. All 10 files verified. Order: 15→16→17→18 (parts in order).",
@@ -5158,8 +5260,8 @@ If any blank, bold re‑pass A–D before Block B.</p>
     day: 8,
     title: "Oral medicine, pathology + ethics",
     focus: "oms",
-    goal: "Lesions, biopsy choice, infection control free points locked.",
-    hours: "8–9 hours",
+    goal: "Lesions, biopsy choice, infection control free points locked — ethics/IC free points carry exams.",
+    hours: "6–7 hours",
     reading: `
 <div class="where-read">
   <strong>ADHD Day‑8 system (read this first — 2 min)</strong>
@@ -5945,6 +6047,20 @@ If any blank, bold re‑pass A–D before Block B.</p>
   <p><b>Key verified topics:</b> COPD management → semi-supine + cautious anxiolysis. Anticoagulation → INR 2-2.5 for extractions. Aspirin-exacerbated respiratory disease → use paracetamol. Spaulding classification → critical = heat sterilization.</p>
   <p><b>Practice:</b> Practice → Ethics tab → 📖 verified.</p>
   <p class="muted">✅ Ethics and oral medicine questions cite SCFHS references and infection control standards.</p>
+<h3>W. Examiner insights — how the SDLE asks oral medicine, pathology & ethics</h3>
+<div class="examiner-insight">
+  <p><b>How the exam asks it:</b> a white/red lesion story, an HIV-related finding, or an ethics principle applied to a scenario. The ethics questions test principle-vs-action, not vocabulary.</p>
+  <ul>
+    <li><b>Non-maleficence = do no harm</b> · veracity = honesty · beneficence = act for good · justice = fairness — the bank confuses honesty with non-maleficence. Book: ethics handbook.</li>
+    <li><b>Reverse-smoking white lesion on the hard palate → high malignant potential</b> (nicotine stomatitis/leukoplakia) — biopsy/refer, not "watch". Book: Neville.</li>
+    <li><b>HIV + bilateral lateral-tongue white lesion → hairy leukoplakia → reassure/monitor</b> (not antifungals; it is EBV-related). Book: Neville/oral med.</li>
+    <li><b>Rubber dam contact swelling → delayed type IV hypersensitivity</b> (not type II). Book: allergy/immunology.</li>
+    <li><b>Sick clinician with fever → stay home, return a day after the fever resolves</b> — do not treat patients while febrile. Book: infection control.</li>
+    <li><b>Transplant/immunosuppressed + elective care → defer elective treatment; liaise with physician</b> — a repeated free point. Book: med compromise.</li>
+    <li><b>Erythroplakia carries a higher malignant risk than leukoplakia</b> — the classic swap. Book: Neville.</li>
+  </ul>
+</div>
+
 </div>`,
     videos: [{"file":"مدسن وباثولوجي/lec.23/المحاضره الثالثه والعشرون الجزء الاول.mp4","label":"1/6 · Path/med lec 23 · part 1 · VERIFIED"},{"file":"مدسن وباثولوجي/lec.23/المحاضره الثالثه والعشرون الجزء الثاني.mp4","label":"2/6 · Path/med lec 23 · part 2 · VERIFIED"},{"file":"مدسن وباثولوجي/lec.24/محاضره الخامسه والعشرين الجزء الاول.mp4","label":"3/6 · Path/med lec.24 folder · part 1 (filename says 25th) · VERIFIED"},{"file":"مدسن وباثولوجي/lec.24/محاضره الخامسه وعشرون الجزء الثاني.mp4","label":"4/6 · Path/med lec.24 folder · part 2 · VERIFIED"},{"file":"مدسن وباثولوجي/lec.24/محاضره الخامسه وعشرين الجزء الثالث.mp4","label":"5/6 · Path/med lec.24 folder · part 3 · VERIFIED"},{"file":"ethics/محاضره الثلاثين الجزء الثاني.mp4","label":"6/6 · Ethics lec 30 · part 2 only (only ethics file on disk) · VERIFIED"}],
     videoNote: "YES — path folder lec.23–24 + ethics. All 6 verified. Order: 23 p1–2 → 24-folder p1–3 → ethics. Disk: lec.24 filenames say 25th; ethics is part-2-only file.",
@@ -6789,6 +6905,21 @@ If any blank, bold re‑pass A–D before Block B.</p>
   <p><b>Key verified topics:</b> Pseudo Class III → retraction of upper incisors. Maxillary constriction in 11yo → Haas/hyrax RPE. Facemask for maxillary deficiency. Apexification for immature traumatic exposure. Space maintainer after premature loss.</p>
   <p><b>Practice:</b> Practice → Ortho/Pedo tab → 📖 verified.</p>
   <p class="muted">✅ 1,476 ortho/pedo questions cite Proffit, McDonald, or standard ortho-pedo texts.</p>
+<h3>W. Examiner insights — how the SDLE asks ortho & pedo</h3>
+<div class="examiner-insight">
+  <p><b>How the exam asks it:</b> a force/direction fact, a Class II division discriminator, a serial-extraction sequence, or a pediatric trauma/drug decision. Short factual hinges under speed.</p>
+  <ul>
+    <li><b>Orthodontic tooth movement is best with LIGHT CONTINUOUS forces</b> — not heavy intermittent. Book: Proffit.</li>
+    <li><b>Class II division 2: maxillary incisors RETROCLINED, decreased overjet, increased overbite</b> (division 1 = proclined + increased overjet). Book: Proffit.</li>
+    <li><b>Conventional serial extraction: primary canines, then primary molars, then premolars</b> — sequence question. Book: Proffit extraction.</li>
+    <li><b>Leeway space (Nance): mandibular ≈ 1.7 mm per side</b> — the number the bank asks. Book: Proffit arch length.</li>
+    <li><b>Primary tooth avulsion → do NOT replant</b> (protect the permanent successor). Book: McDonald & Avery.</li>
+    <li><b>Large primary molar caries → stainless steel crown</b> (not amalgam/composite as the first best answer). Book: pedo restorative.</li>
+    <li><b>Mesiodens → remove early/immediately</b> (midline supernumerary causing delayed/rotated eruption). Book: pedo.</li>
+    <li><b>Fluoride toothpaste: smear for <3 years, pea-size for 3–6</b> — and fluoridated paste is recommended for toddlers at caries risk. Book: pedo fluoride.</li>
+  </ul>
+</div>
+
 </div>`,
     videos: [{"file":"ortho and pedo/lec.22/المحاضره الثانيه والعشرون الجزء الاول.mp4","label":"1/2 · FULL SET · Ortho/pedo lec 22 · part 1 · VERIFIED on disk+Drive"},{"file":"ortho and pedo/lec.22/المحاضره الثانيه والعشرون الجزء الثاني.mp4","label":"2/2 · FULL SET · Ortho/pedo lec 22 · part 2 · VERIFIED on disk+Drive"}],
     videoNote: "FULL local/Drive ortho+pedo library = lec.22 only (2 parts). No lec.23+ in this course tree. Order: part 1 → part 2. Folder name has a space: ortho and pedo. After videos → Ortho/Pedo ALL MCQs.",

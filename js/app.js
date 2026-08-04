@@ -2571,6 +2571,12 @@
           </div>
           <div class="hub-welcome-en" dir="ltr" lang="en">Every day: 1) Read today's lesson · 2) Drill MCQs · 3) Review Flash notes — then mark steps done below.</div>
         </div>` : ""}
+        <div class="exam-blueprint">
+          <span class="eb-title">📝 SDLE exam shape:</span>
+          <span class="eb-item">200 MCQs</span>·<span class="eb-item">2 × 100 sections</span>·<span class="eb-item">~72 s/Q</span>·<span class="eb-item">Pass 542/800</span>
+          <span class="eb-w">Weights: <b>Resto 40%</b> · <b>Perio 18%</b> · <b>Endo 17%</b> · OMS 15% · Ortho/Pedo 10%</span>
+          <span class="eb-note">This plan gives Endo + Perio + Prostho + Resto <b>≈74% of study hours</b> — matching the exam.</span>
+        </div>
         <p class="hub-kicker">Today’s topic</p>
         <h1 class="hub-title">${escapeHtml(subject)}</h1>
         <p class="hub-sub">${escapeHtml(goalLine)}${qLine}</p>

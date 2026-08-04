@@ -179,6 +179,41 @@ a {
   /* never: display:none; visibility:hidden; opacity:0; height:0; max-height:0; pointer-events:none */
 }
 
+/* Exam blueprint strip (Today hub) — how the exam works, mapped to the plan */
+.exam-blueprint {
+  margin: 0 0 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #3a5068;
+  background: linear-gradient(135deg, #14222e, #1c222d);
+  font-size: 0.85rem;
+  color: var(--text);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+}
+.exam-blueprint .eb-title { font-weight: 700; color: var(--accent); }
+.exam-blueprint .eb-item { font-weight: 600; }
+.exam-blueprint .eb-w { width: 100%; color: var(--muted); }
+.exam-blueprint .eb-w b { color: var(--text); }
+.exam-blueprint .eb-note { width: 100%; color: var(--muted); font-size: 0.8rem; }
+.exam-blueprint .eb-note b { color: var(--accent2); }
+
+/* Examiner insights (lesson sections) */
+.examiner-insight {
+  margin: 10px 0 14px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #3a5068;
+  background: #182230;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+.examiner-insight p:first-child { margin-top: 0; }
+.examiner-insight ul { margin: 6px 0 0; padding-left: 18px; }
+.examiner-insight li { margin: 4px 0; }
+
 /* Friendly welcome banner (first visit only) */
 .hub-welcome {
   position: relative;

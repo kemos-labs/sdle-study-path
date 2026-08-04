@@ -79,13 +79,13 @@
 
 ---
 
-## PHASE 4 — Lessons & study path rebuild (endo/perio/prostho/resto ≈ 70%) 🟡 MEDIUM
+## PHASE 4 — Lessons & study path rebuild (endo/perio/prostho/resto ≈ 70%) ✅ **DONE 2026-08-04**
 
-| # | Task |
-|---|---|
-| 4.1 | Rebuild the 14-day plan + Topics micro-lessons so the 70% topics get 70% of days/hours (currently day 1–4 resto, day 5 perio, day 6 endo — good start; add explicit prostho days and per-question "why" MCQs after each lesson) |
-| 4.2 | Every lesson ends with a **test** (10–20 MCQs with "why we chose this answer") |
-| 4.3 | "Examiner insights" sections — patterns from the community recalls mapped to book facts (e.g. formocresol pH was wrong in the bank and fixed) |
+| # | Task | Status |
+|---|---|---|
+| 4.1 | Rebuild the 14-day plan so the 70% topics get 70% of days/hours | ✅ **DONE** — hours rebalanced: Endo day 8–9→**10–12h**, Perio day 8–9→**10–12h**, OMS days 8–9→**6–7h** each; measured: **Endo+Perio+Prostho+Resto = 73.9% of theory hours** (was 68.4%); perio 14%·endo 14%·oms 16.6%·ortho/pedo 9.6% ≈ weights 18/17/15/10; Today hub now shows an **exam-blueprint strip** (200 MCQs · 2×100 · ~72s/Q · pass 542/800 · weights) |
+| 4.2 | Every lesson ends with a **test** (10–20 MCQs with "why we chose this answer") | ✅ verified interactive — 15 exam-Q&A articles per lesson (days 1–9), each with hinge-line "why", instant correct/wrong + block score; Playwright: clicked option → "1/1 correct" + green marker |
+| 4.3 | "Examiner insights" sections — patterns from the community recalls mapped to book facts | ✅ **DONE** — added a book-grounded "W. Examiner insights" section to ALL 9 lessons (8 patterns each, mined from the 820-flag flip log + consistency registry, each with [Book: …] anchor) |
 
 ---
 
