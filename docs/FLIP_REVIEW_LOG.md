@@ -654,7 +654,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 726 | rafi_04_56deb7075d | anteriors first → **Posteriors first** (extraction seq) | OMS |
 | 727 | rafi_04_16883c1b13 | 12 → **16 years** (aspirin/Reye) | pedo |
 | 728 | rafi_04_14a2bfc91c | Adson → **Allis forceps** (epulis) | OMS |
-| 729 | rafi_04_80ed2a0132 | IAN → **Lingual nerve** (3rd molar surgery) | OMS |
+| 729 | rafi_04_80ed2a0132 | IAN → **Lingual nerve** (3rd molar surgery) | OMS || 730 | rafi_04_5f9117824b | desquamation → **All of the above** (alcohol rinse) | oral med |
+
 
 
 
@@ -1363,6 +1364,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_04_9b6824fe3e — maxillary extraction sequence 3-6-8-7-5-4-2-1 (marked; model index = marked)
 - rafi_04_e7b5277f72 — DD type II: pulp chamber abnormalities (model agrees)
 - rafi_04_ea7910a955 — mental nerve injury = PARASYMPHYSEAL (consistent w/ rafi_08_9f7f834311)
+- rafi_04_3a118fa6d9 — pre-chemo extraction 14 days (consistent w/ rafi_16_93e393c347; model contradicted itself)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
