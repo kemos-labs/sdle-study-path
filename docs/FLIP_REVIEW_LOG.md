@@ -533,7 +533,11 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 584 | rafi_15_f066a3574c | stop warfarin → **Continue** (INR 3.5 minor) | OMS || 585 | rafi_15_33ba424719 | candidiasis → **Methotrexate** (oral ulcers) | oral med || 586 | rafi_15_a3aff5fb70 | stroke → **Hypoglycemia** (carbamazepine+diabetic) | med |
 | 587 | rafi_15_656b21f07a | excision → **Resection** (ameloblastoma) | oral path |
 | 588 | rafi_16_ec5162d216 | daily → **Once weekly** (quad helix) | ortho |
-| 589 | rafi_16_97cc152cf7 | reassure child → **Reassure parent** (crib injury) | pedo |
+| 589 | rafi_16_97cc152cf7 | reassure child → **Reassure parent** (crib injury) | pedo || 590 | rafi_16_055571a9e3 | mouthguard → **Face mask** (Class III maxilla) | ortho |
+| 591 | rafi_16_6907f43b09 | bitewing → **Periapical** (primary pulp) | pedo |
+| 592 | rafi_16_855f9273c0 | tell patient only → **Inform referring doctor** | ethics |
+| 593 | rafi_16_65a7a21da4 | overdose → **Hypotension** (perindopril) | med |
+
 
 
 
@@ -1068,6 +1072,20 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_15_ea62afb65d — HTN + CABG + lip swelling = ACE-inhibitor ANGIODEMA (model's own reason agrees)
 - rafi_16_1133df3bca — chronologic hypoplasia (incisor tips + molar cusps) = FLUOROSIS (marked correct)
 - rafi_16_c43b2e8498 — deep bite + maxillary excess = VERTICAL MAXILLARY EXCESS (model agrees)
+- rafi_16_c920d051db — 4yo malaligned + unerupted canine → expansion (model reason mismatched retrieval)
+- rafi_16_0c85c47e7d — deep bite + 100% incisor display → upper anterior intrusion (marked defensible)
+- rafi_16_4b6e2710dc — untreated caries + pain + fever = NEGLECT (model reason mismatched retrieval)
+- rafi_16_27d16e9813 — black chemical indicator = successful cycle (marked; spores killed)
+- rafi_16_741c637d3e — ABHR on washed hands: dry hands first (marked)
+- rafi_16_eabf174084 — autoclave 126°C = 20 psi (121°C = 15 psi; model wrong)
+- rafi_16_6a8a6d92e9 — disinfect impressions to PROTECT LAB PERSONNEL (marked classic)
+- rafi_16_1e3879feff — dry heat 320°F/2h (model's own reason agrees — 2h = 120 min)
+- rafi_16_6b4c71fa0c — prosthesis → glutaraldehyde (heat-sensitive chemical disinfection; marked)
+- rafi_16_ff83fc6185 — VACCINATED (immune) doctor + HBV needlestick → nothing needed (marked; HBIG only if not immune)
+- rafi_16_182dca7940 — diabetic palate gangrene = MUCORMYCOSIS (fungus; model said bacteria)
+- rafi_16_8d7fabf18a — most common mandible fracture = ANGLE (consistent w/ rafi_11_beb727976e + rafi_14_3c5250c79b)
+- rafi_16_c4ce35bdf8 — active TB emergency → filtration (N95) mask (consistent w/ TB pair)
+- rafi_16_c5cd57d1ce — generalized discoloration + premolar brown = FLUOROSIS (premolars most susceptible; consistent w/ rafi_08_658d91ffb8)
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
