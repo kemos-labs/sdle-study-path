@@ -613,7 +613,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 675 | rafi_01_566abfb333 | Class I → **Class II** (MB cusp mesial) | ortho || 676 | rafi_01_42c5b394d1 | curettage → **Marginal resection** (multilocular) | oral path |
 | 677 | rafi_01_89446f8f78 | aspirin → **LA with vasoconstrictor** (SCD) | med |
 | 678 | rafi_01_195747b202 | phenytoin → **Cyclosporine** (transplant) | oral med |
-| 679 | rafi_01_0bfc8e6644 | hematoma → **Bone necrosis** (zoledronate) | oral med |
+| 679 | rafi_01_0bfc8e6644 | hematoma → **Bone necrosis** (zoledronate) | oral med || 680 | rafi_01_9fd55bea4f | max lateral → **Mand 2nd premolar** (missing; consistent) | ortho |
+| 681 | rafi_02_b44a1fd39c | SSC → **Antibiotics** (dental allergy) | med |
+| 682 | rafi_02_54c8478ee4 | 12 wk → **4 weeks** (neonatal teeth) | pedo |
+
 
 
 
@@ -1273,6 +1276,7 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_01_ba29ac39d1 — persistent red patch = ERYTHROPLAKIA (model agrees; premalignant)
 - rafi_01_3bbedc0d34 — MASSETER palpated over lateral ramus (temporalis = temple; marked correct)
 - rafi_01_f86d7fdc01 — 32-week pregnancy → SIDE position (avoid supine hypotensive syndrome; marked correct)
+- rafi_01_f444221982 — type IV contact allergy appears 1-2 days (marked; model's own reason agrees)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
