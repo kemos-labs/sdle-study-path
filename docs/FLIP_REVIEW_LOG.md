@@ -530,7 +530,11 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 581 | rafi_15_759d932d04 | PRR → **Fissure sealants** (incipient caries) | pedo |
 | 582 | rafi_15_309fd80f14 | occlusal prep → **Crown size** (SSC high+overhang) | pedo |
 | 583 | rafi_15_281ba6e68a | articaine → **Procaine** (cirrhosis — ester) | med |
-| 584 | rafi_15_f066a3574c | stop warfarin → **Continue** (INR 3.5 minor) | OMS || 585 | rafi_15_33ba424719 | candidiasis → **Methotrexate** (oral ulcers) | oral med |
+| 584 | rafi_15_f066a3574c | stop warfarin → **Continue** (INR 3.5 minor) | OMS || 585 | rafi_15_33ba424719 | candidiasis → **Methotrexate** (oral ulcers) | oral med || 586 | rafi_15_a3aff5fb70 | stroke → **Hypoglycemia** (carbamazepine+diabetic) | med |
+| 587 | rafi_15_656b21f07a | excision → **Resection** (ameloblastoma) | oral path |
+| 588 | rafi_16_ec5162d216 | daily → **Once weekly** (quad helix) | ortho |
+| 589 | rafi_16_97cc152cf7 | reassure child → **Reassure parent** (crib injury) | pedo |
+
 
 
 
@@ -1054,6 +1058,16 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_15_5994e0ef69 — WHO soap+water hand hygiene = 40-60 s (ABHR = 20-30 s; model confused the two)
 - rafi_15_036b848b55 — infection to thorax = ALAR/danger space (deep pharyngeal; model said submandible)
 - rafi_15_f9c08694f9 — hematoma prevention = ASPIRATION before deposition (marked; model's slow-injection less specific)
+- rafi_15_f765f396c9 — normal MCV + SOB = normocytic (G6PD; consistent w/ rafi_12_8512f7c49f)
+- rafi_15_c955532753 — dilated pupils + tingling + irritability + ↑HR = HYPERVENTILATION (model agrees)
+- rafi_15_b3797f50a1 — SLE + rubs-off white lesion = candidiasis → NYSTATIN (model agrees)
+- rafi_15_ac38883302 — rapidly enlarging pigmentation → MELANOMA until proven (marked; model said melanoacanthoma)
+- rafi_15_e9494fb47f — ZINC CHLORIDE retraction cord = escharotic (necrosis; model said epinephrine)
+- rafi_15_27388ceccd — zometa (IV BP) + non-restorable asymptomatic → coronectomy+RCT (avoids ONJ; marked)
+- rafi_15_a809c9e8e2 — BP patient multiple extractions → STAGED (1 tooth/2wk; model said don't extract — extraction already indicated)
+- rafi_15_ea62afb65d — HTN + CABG + lip swelling = ACE-inhibitor ANGIODEMA (model's own reason agrees)
+- rafi_16_1133df3bca — chronologic hypoplasia (incisor tips + molar cusps) = FLUOROSIS (marked correct)
+- rafi_16_c43b2e8498 — deep bite + maxillary excess = VERTICAL MAXILLARY EXCESS (model agrees)
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
