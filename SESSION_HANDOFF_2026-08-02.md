@@ -125,3 +125,20 @@
 1. Let verification finish (~14h remaining) → run `apply_bank_verification.py` → review `work/flips_review.json` (expect ~300 contradicted flags; ~30-40% real after filtering) → apply confirmed flips only.
 2. Finish engine topics; re-run engine with verbatim gate; review staged pool; merge engine_v1 questions after human/AI review.
 3. Phase 5: deploy from sdle-prep + full regression + honest stats.
+
+---
+
+## UPDATE 3 — FINAL (2026-08-03) — Phase 2 100% + Phase 5 DEPLOYED
+
+- **Bank verification = 100% of usable bank**: 15,177 verdict rows (deduped) — 11,621 supported / 1,533 contradicted / 2,019 uncertain / 4 error. Final 18 engine stragglers verified (15 supported / 3 uncertain).
+- **813 book-verified fixes** total (flip log rows 1–819 incl. 6 repairs; ALL 1,533 contradicted verdicts human/AI-reviewed — 0 unreviewed, ~720 false-positive keeps documented).
+- **6 needs-review items REPAIRED** (book-passage backed): GIC = fluoridated cement ×2, NSAID+acetaminophen combination (post-RCT pain), high-copper = 12% (book: 12–30% Cu), occlusion rim anterior width = 6–8mm (book verbatim), 2–3-teeth gingivitis = localized diffuse. Remaining ~20 stay usable-with-caveat (registered in log).
+- **Phase 5 DEPLOYED**: sw.js `sdle-shell-v48`, script bumps (questions.js v20260803v2, flash_notes.js + verdicts v20260803fn6), honest LIVE footer stats: "15,166 MCQs (100% textbook-verified) · Flash Notes 4,451 recall items · 7 topics · free forever".
+- **Playwright regression clean**: 8/8 tabs render, flash quiz 40Q → 32 MCQ + 8 Q&A, 0 fake Reveal, 0 console/page errors; practice quiz 3,090Q session answered with correct/wrong marking verified; gates (`gate_no_slack`, `gate_flash_notes`) all green.
+- Pushed: `200fa5f` (docs), `db4ed56` (deploy), working tree clean.
+- Repo state: `/data/prometric/sdle-prep` @ 392 commits.
+
+### Remaining (low priority)
+1. ~20 usable-with-caveat needs-review items (Ante-law garbled numbering, implant-tooth 1.5–2mm, ovate pontic material, ZOE setting time, etc.) — registered in `docs/FLIP_REVIEW_LOG.md`; safe to leave.
+2. GitHub Pages re-deploy + announce (deploy from `sdle-prep` only; run `work/shot9.js`-style regression against the live URL).
+3. 4 error verdicts + 2,019 uncertain verdicts could be spot-checked later if desired (already book_verified via audit/other passes).
