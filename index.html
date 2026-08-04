@@ -21,7 +21,7 @@
       rel="stylesheet"
     />
     <!-- ?v= busts CDN/browser cache after feedback fix -->
-    <link rel="stylesheet" href="css/app.css?v=20260730fn13" />
+    <link rel="stylesheet" href="css/app.css?v=20260804ui" />
     <link rel="stylesheet" href="css/print.css?v=20260730fn13" media="print" />
   </head>
   <body class="path-app simple-ui">
@@ -29,18 +29,21 @@
       <div class="chrome-row">
         <div class="logo" title="SDLE Study Path">
           <span class="logo-text">SDLE</span>
+          <span class="logo-sub">Study Path · مسارك لامتحان SDLE</span>
         </div>
         <div class="top-stats" id="top-stats" hidden></div>
         <div id="pomo-bar" class="pomo-bar" aria-label="Focus timer" hidden></div>
       </div>
       <!-- paintMainNav() fills this: Simple = 4 tabs; Coach = full set -->
       <nav class="nav simple-nav" id="main-nav" aria-label="Main plan tabs">
-        <button type="button" data-view="today" class="active" title="Today’s lesson">Today</button>
-        <button type="button" data-view="practice" title="MCQs · Flashcards · Mock">تدرب</button>
-        <button type="button" data-view="recentqa" title="Recent textbook-verified Q&A">Recent Q&A</button>
-        <button type="button" data-view="notes" title="Review all notes">Notes</button>
-        <button type="button" data-view="progress" title="Scores & settings">Progress</button>
-        <button type="button" data-view="feedback" title="Send feedback">Feedback</button>
+        <button type="button" data-view="today" class="active" title="Today’s lesson · درس اليوم">🏠 <span class="nav-ar" dir="rtl">اليوم</span> <span class="nav-en">Today</span></button>
+        <button type="button" data-view="topics" title="Micro-lessons by topic · الدروس">📖 <span class="nav-ar" dir="rtl">الدروس</span> <span class="nav-en">Learn</span></button>
+        <button type="button" data-view="practice" title="MCQs · Flashcards · Mock · تدرب">🎯 <span class="nav-ar" dir="rtl">تدرب</span> <span class="nav-en">Practice</span></button>
+        <button type="button" data-view="recentqa" title="Recent textbook-verified Q&A · سؤال وجواب">💬 <span class="nav-ar" dir="rtl">سؤال وجواب</span> <span class="nav-en">Q&amp;A</span></button>
+        <button type="button" data-view="marjune" title="Flash Notes — جميع المواد">🃏 <span class="nav-ar" dir="rtl">فلاش</span> <span class="nav-en">Flash</span></button>
+        <button type="button" data-view="notes" title="Review all notes · الملاحظات">📝 <span class="nav-ar" dir="rtl">ملاحظات</span> <span class="nav-en">Notes</span></button>
+        <button type="button" data-view="progress" title="Scores & settings · تقدمي">📈 <span class="nav-ar" dir="rtl">تقدمي</span> <span class="nav-en">Progress</span></button>
+        <button type="button" data-view="feedback" title="Send feedback · اقتراحات">💬 <span class="nav-ar" dir="rtl">رأيك</span> <span class="nav-en">Feedback</span></button>
       </nav>
     </header>
 
@@ -81,6 +84,6 @@
       } catch (e) { /* footer stats are non-critical */ }
     })();
     </script>
-    <script src="js/app.js?v=20260803p4"></script>
+    <script src="js/app.js?v=20260804ui"></script>
   </body>
 </html>

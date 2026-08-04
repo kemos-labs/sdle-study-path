@@ -99,6 +99,61 @@ a {
 .logo-text {
   color: var(--text);
   letter-spacing: 0.02em;
+  background: linear-gradient(135deg, #6ecf8e, #5eb3d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #6ecf8e;
+}
+
+.logo-sub {
+  font-size: 0.66rem;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+/* Friendly nav: bigger touch targets, emoji + bilingual labels */
+.simple-nav button {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--muted);
+  padding: 9px 13px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.86rem;
+  line-height: 1.15;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.simple-nav button .nav-en {
+  font-size: 0.72rem;
+  font-weight: 500;
+  opacity: 0.75;
+}
+
+.simple-nav button .nav-ar {
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.simple-nav button:hover {
+  background: var(--bg3);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.simple-nav button.active {
+  background: linear-gradient(135deg, #1e3a4a, #243040);
+  color: var(--accent);
+  font-weight: 700;
+  border-color: #3a5068;
+  box-shadow: 0 0 0 1px rgba(94, 179, 212, 0.25);
 }
 
 .logo-badge {
@@ -124,28 +179,53 @@ a {
   /* never: display:none; visibility:hidden; opacity:0; height:0; max-height:0; pointer-events:none */
 }
 
-.simple-nav button {
-  background: transparent;
-  border: 1px solid transparent;
-  color: var(--muted);
-  padding: 8px 14px;
-  border-radius: 999px;
-  cursor: pointer;
-  font-size: 0.88rem;
-  line-height: 1.2;
-  font-weight: 500;
-}
-
-.simple-nav button:hover {
-  background: var(--bg3);
+/* Friendly welcome banner (first visit only) */
+.hub-welcome {
+  position: relative;
+  margin: 0 0 14px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #2d5a3d;
+  background: linear-gradient(135deg, #16241c, #1c222d);
   color: var(--text);
 }
-
-.simple-nav button.active {
-  background: #243040;
-  color: var(--accent);
+.hub-welcome-title {
+  font-size: 1.05rem;
   font-weight: 700;
-  border-color: #3a5068;
+  margin-bottom: 8px;
+}
+.hub-welcome-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  font-size: 0.92rem;
+  margin-bottom: 6px;
+}
+.hub-welcome-steps span {
+  background: #1e2a22;
+  border: 1px solid #2d5a3d;
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+.hub-welcome-en {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.hub-welcome-x {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.hub-welcome-x:hover {
+  color: var(--text);
+  background: var(--bg3);
 }
 
 /* Simple mode: compact plan + primary CTAs + collapsed advanced packs */

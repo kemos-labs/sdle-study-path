@@ -1600,14 +1600,14 @@
     applyChromeMode();
     if (isSimpleMode()) {
       nav.innerHTML = `
-        <button type="button" data-view="today" title="Today's lesson">Today</button>
-        <button type="button" data-view="topics" title="Micro-lessons by topic">Topics</button>
-        <button type="button" data-view="practice" title="MCQs · Flashcards · Mock">تدرب</button>
-        <button type="button" data-view="recentqa" title="Recent textbook-verified Q&A">Recent Q&A</button>
-        <button type="button" data-view="notes" title="Review all notes">Notes</button>
-        <button type="button" data-view="marjune" title="Flash Notes — جميع المواد">📚 Flash</button>
-        <button type="button" data-view="progress" title="Scores & settings">Progress</button>
-        <button type="button" data-view="feedback" title="Send feedback">Feedback</button>`;
+        <button type="button" data-view="today" title="Today's lesson · درس اليوم">🏠 <span class="nav-ar" dir="rtl">اليوم</span> <span class="nav-en">Today</span></button>
+        <button type="button" data-view="topics" title="Micro-lessons by topic · الدروس">📖 <span class="nav-ar" dir="rtl">الدروس</span> <span class="nav-en">Learn</span></button>
+        <button type="button" data-view="practice" title="MCQs · Flashcards · Mock · تدرب">🎯 <span class="nav-ar" dir="rtl">تدرب</span> <span class="nav-en">Practice</span></button>
+        <button type="button" data-view="recentqa" title="Recent textbook-verified Q&A · سؤال وجواب">💬 <span class="nav-ar" dir="rtl">سؤال وجواب</span> <span class="nav-en">Q&amp;A</span></button>
+        <button type="button" data-view="marjune" title="Flash Notes — جميع المواد">🃏 <span class="nav-ar" dir="rtl">فلاش</span> <span class="nav-en">Flash</span></button>
+        <button type="button" data-view="notes" title="Review all notes · الملاحظات">📝 <span class="nav-ar" dir="rtl">ملاحظات</span> <span class="nav-en">Notes</span></button>
+        <button type="button" data-view="progress" title="Scores & settings · تقدمي">📈 <span class="nav-ar" dir="rtl">تقدمي</span> <span class="nav-en">Progress</span></button>
+        <button type="button" data-view="feedback" title="Send feedback · اقتراحات">💬 <span class="nav-ar" dir="rtl">رأيك</span> <span class="nav-en">Feedback</span></button>`;
     } else {
       nav.innerHTML = `
         <button type="button" data-view="today" title="Today">Today</button>
@@ -2562,6 +2562,15 @@
 
     app.innerHTML = `
       <div class="today-hub">
+        ${!store.get("sdle3_welcome_done", false) ? `
+        <div class="hub-welcome" dir="rtl" lang="ar">
+          <button type="button" class="hub-welcome-x" id="hub-welcome-x" aria-label="إغلاق · Close">✕</button>
+          <div class="hub-welcome-title">👋 أهلاً بك في مسار SDLE!</div>
+          <div class="hub-welcome-steps">
+            <span>١) اقرأ <b>درس اليوم</b></span><span>٢) تدرب على <b>الأسئلة</b></span><span>٣) راجع <b>الفلاش</b></span>
+          </div>
+          <div class="hub-welcome-en" dir="ltr" lang="en">Every day: 1) Read today's lesson · 2) Drill MCQs · 3) Review Flash notes — then mark steps done below.</div>
+        </div>` : ""}
         <p class="hub-kicker">Today’s topic</p>
         <h1 class="hub-title">${escapeHtml(subject)}</h1>
         <p class="hub-sub">${escapeHtml(goalLine)}${qLine}</p>
@@ -2595,6 +2604,9 @@
           ${sdleGptButtonHtml("link")}
         </p>
       </div>`;
+
+    const wx = $("#hub-welcome-x");
+    if (wx) wx.onclick = () => { store.set("sdle3_welcome_done", true); renderTodayHub(L); };
 
     $("#hub-read") &&
       ($("#hub-read").onclick = () => {
