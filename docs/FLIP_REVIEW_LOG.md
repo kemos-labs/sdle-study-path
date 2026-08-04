@@ -722,7 +722,9 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 808 | rafi_19_9aa6df20be | type II → **Type IV** (rubber dam) | oral med |
 | 809 | rafi_01_54f01d797c | facemask → **Cervical headgear** (Class II) | ortho |
 | 810 | rafi_01_c061856991 | Haas → **Bonded expander** (tissue-borne) | ortho |
-| 811 | rafi_01_1f25fbf958 | dentist → **Patient bites** (band seating) | pedo |
+| 811 | rafi_01_1f25fbf958 | dentist → **Patient bites** (band seating) | pedo || 812 | rafi_04_542821024e | short β2 → **Medical emergency** (refractory asthma) | med |
+| 813 | rafi_06_10406e922c | power supply → **Focusing cup** (X-ray tube) | radiology |
+
 
 
 
@@ -1519,6 +1521,13 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_01_fbf95bfbab — abuse suspicion: story vs severity (marked; ambiguous)
 - rafi_01_238f1131c5 — F supplement: source of fluids (water F; model agrees)
 - rafi_01_a1e23c10a6 — fall protection = BENEFICENCE (consistent w/ rafi_03_ecf2a75eee)
+- abtal_pack_a77ba5d6cb — HIV lateral tongue → observe (re-flag; consistent)
+- eng_ort_b1253154f3 — 30kg ibuprofen 300mg (re-flag; within 4-10mg/kg)
+- rafi_02_9b28255754 — strep detection: catalase test (marked; distinguishes staph)
+- rafi_02_351663f9c7 — 2-day rapid swelling = pyogenic granuloma (marked; model said giant cell — slower)
+- rafi_04_74d85d038b — phobia: generalization (marked; classical conditioning)
+- rafi_04_b6ab1ae6bc — AIDS virus 1983 name = LAV (marked)
+- rafi_06_93949526ff — radiation direct effect (marked; ambiguous)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
