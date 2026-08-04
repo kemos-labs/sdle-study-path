@@ -515,7 +515,15 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 559 | rafi_12_59cec84ed2 | laser → **Electrocautery** (pacemaker) | med || 560 | rafi_12_46ab522415 | xylocaine → **Procaine (ester)** (cirrhosis) | med || 561 | rafi_12_109d7dbc1d | latex delayed → **Latex immediate** (rhinitis/tearing type I) | oral med || 562 | rafi_13_cfddc6d57c | hemangioma → **Pyogenic granuloma** (granulation+vessels) | oral path |
 | 563 | rafi_13_c650454c34 | postpone → **Upright position** (dyspnea now) | med |
 | 564 | rafi_13_d0362e7891 | acyclovir → **Benzocaine** (aphthous ulcer) | oral med |
-| 565 | rafi_13_d35abe253c | intralesional steroid → **Biopsy first** (immunosuppressed) | oral med || 566 | rafi_13_583c1160ad | giant cell arteritis → **Osteoarthritis** (osteophytes) | OMS |
+| 565 | rafi_13_d35abe253c | intralesional steroid → **Biopsy first** (immunosuppressed) | oral med || 566 | rafi_13_583c1160ad | giant cell arteritis → **Osteoarthritis** (osteophytes) | OMS || 567 | rafi_14_78cfbb4128 | extract permanent canine → **Extract primary + follow up** | pedo |
+| 568 | rafi_14_54eb62fb34 | fluoride varnish abutment → **Restore + other abutment** (rest seat) | McCracken |
+| 569 | rafi_14_a91bf42137 | GIC → **SSC** (primary molar caries) | pedo |
+| 570 | rafi_14_cf899c3d65 | 21 → **25** (3rd molar root complete) | ortho |
+| 571 | rafi_14_640dfe4121 | biohazard → **Normal seal bag** (impressions) | ethics |
+| 572 | rafi_14_3c5250c79b | condylar → **Angle** (adult mandible) | OMS |
+| 573 | rafi_14_7aee387fdd | scurvy → **Von Willebrand** (DDAVP response) | med |
+| 574 | rafi_14_67e246bf78 | aerobic → **Both** (odontogenic mixed flora) | OMS |
+
 
 
 
@@ -1007,6 +1015,15 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_13_8493a0416a — generalized occlusal wear → evaluate gastric status/diet (etiology first; marked correct)
 - rafi_13_bcfa013bc8 — smokeless tobacco + trismus + buccal lesion = ORAL SUBMUCOUS FIBROSIS → intralesional steroids (marked correct)
 - rafi_13_9ef0706e07 — uncertainty re medical status → another consultation + labs before extraction (marked; model misread "confirmed")
+- rafi_14_bc4cb26070 — leeway space mandible = 1.7 mm/side (Nance classic; model's 2.5 not offered)
+- rafi_14_87662a1fbb — ENAMELOPLASTY increases fissure-sealant retention (marked; model said bonding)
+- rafi_14_85f9d151b4 — unnecessary referral = nonmaleficence (consistent w/ rafi_10_67314fc890; model said justice)
+- rafi_14_cb54a5d931 — same scenario marked VERACITY (bank inconsistency w/ 85f9d151b4; registered — both kept)
+- rafi_14_0978b84f4a — vomit on chair = INTERMEDIATE-level (consistent w/ rafi_10_23ef393899; model said high)
+- rafi_14_fe0373b678 — corrugated white lesion (unknown etiology) → biopsy (marked; model said monitor)
+- rafi_14_f6156d0799 — HIV lateral tongue white lesion → FOLLOW UP (hairy leukoplakia; consistent w/ ab2_776a5e5fe8)
+- rafi_14_2ac40261de — articaine = category C in pregnancy (model's own reason agrees; wrong index)
+- rafi_14_df584aa880 — single tooth absent pulp/dentin = REGIONAL ODONTODYSPLASIA (ghost tooth; DI = generalized — model wrong)
 - HIDDEN: ab2_1322508f3e — stem "Which time of abuse?" has NO scenario (unanswerable)
 - rafi_04_d3defe2714 — partial veneer NON-FUNCTIONAL cusp = **1mm** (Fixed book: "1 mm on non-functional, 1.5 mm on functional") → REGISTER RESOLVED (marked correct)
 - saud_delta_160 — GIC finish/polish = **24h** (classic: final set 24h, varnish + polish next appointment) → REGISTER RESOLVED (marked correct; no longer a flag)
