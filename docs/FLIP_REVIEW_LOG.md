@@ -723,7 +723,13 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 809 | rafi_01_54f01d797c | facemask → **Cervical headgear** (Class II) | ortho |
 | 810 | rafi_01_c061856991 | Haas → **Bonded expander** (tissue-borne) | ortho |
 | 811 | rafi_01_1f25fbf958 | dentist → **Patient bites** (band seating) | pedo || 812 | rafi_04_542821024e | short β2 → **Medical emergency** (refractory asthma) | med |
-| 813 | rafi_06_10406e922c | power supply → **Focusing cup** (X-ray tube) | radiology |
+| 813 | rafi_06_10406e922c | power supply → **Focusing cup** (X-ray tube) | radiology || 814 | rafi_13_77c5e2df19 | repaired: option3 junk → **GIC** (fluoridated cement) | restorative |
+| 815 | rafi_20_ea75e896e9 | repaired: option3 junk → **GIC** (fluoride influx cement) | restorative |
+| 816 | rafi_02_7c8b59c400 | repaired: option3 junk → **Combine ibuprofen+acetaminophen** (post-RCT pain) | endo |
+| 817 | rafi_08_3805600b25 | repaired: option3 'all' → **12%** (high-Cu; book 12-30%) | restorative |
+| 818 | rafi_04_aa416d3290 | repaired: option2 → **6-8mm** (occlusion rim; book) | restorative |
+| 819 | rafi_06_d778c91850 | generalized diffuse → **Localized diffuse** (2-3 teeth) | perio |
+
 
 
 
