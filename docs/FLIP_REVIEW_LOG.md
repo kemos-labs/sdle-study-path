@@ -718,7 +718,12 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 802 | rafi_07_545f1f2bf0 | as soon as heat gone → **A day after** (sick doctor) | ethics |
 | 803 | rafi_07_3fa124ad09 | be honest → **Do not harm** (non-maleficence) | ethics || 804 | rafi_07_77f5d87816 | hypoglycemic → **Syncope** (controlled diabetic) | med |
 | 805 | rafi_07_f46c408fe1 | antifungal → **Reassure** (HL bilateral) | oral med |
-| 806 | rafi_14_795e9da617 | edema → **IAN damage** (3rd molar) | OMS |
+| 806 | rafi_14_795e9da617 | edema → **IAN damage** (3rd molar) | OMS || 807 | rafi_16_00bd1854d2 | non-fluoridated → **Smear fluoridated** (2yo) | pedo |
+| 808 | rafi_19_9aa6df20be | type II → **Type IV** (rubber dam) | oral med |
+| 809 | rafi_01_54f01d797c | facemask → **Cervical headgear** (Class II) | ortho |
+| 810 | rafi_01_c061856991 | Haas → **Bonded expander** (tissue-borne) | ortho |
+| 811 | rafi_01_1f25fbf958 | dentist → **Patient bites** (band seating) | pedo |
+
 
 
 
@@ -1503,6 +1508,17 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - rafi_14_614caa0d3e — vaccinated dentist → highest risk = hepatitis C (model agrees; consistent w/ rafi_17_3fce17f48d)
 - rafi_14_f3b62601e8 — stylomandibular ligament limits PROTRUSION (marked; model said muscle)
 - rafi_14_7101d0fb0f — parotid pain on eating + negative XR = sialolithiasis (marked)
+- rafi_16_f2815e61f9 — serial extraction: canines + primary molars (marked)
+- abtal_pack_333235b206 — Class II div 2: retroclined uppers (all options garbled w/ notes; marked kept, broken-ish)
+- abtal_pack_2a2dde7e08 / a77ba5d6cb — HIV lateral tongue → observe (consistent HL series)
+- abtal_pack_c6fb39842a — 6mm pocket + JE at CEJ = PSEUDO pocket (consistent w/ rafi_20_cf3bbcba5a)
+- abtal_pack_288981b0bf — deep bite tx → necrotic central = intrusion injury (marked; model reason mismatched)
+- abtal_pack_f94bf19215 — stomatitis type (truncated stem; marked kept)
+- eng_oms_b79ac3f281 — CKD bone: ↓GFR → ↓phosphate excretion → ↑PTH cascade (marked correct)
+- eng_ort_eae904a1b0 / b1253154f3 — ibuprofen 4-10mg/kg dosing (marked within range)
+- rafi_01_fbf95bfbab — abuse suspicion: story vs severity (marked; ambiguous)
+- rafi_01_238f1131c5 — F supplement: source of fluids (water F; model agrees)
+- rafi_01_a1e23c10a6 — fall protection = BENEFICENCE (consistent w/ rafi_03_ecf2a75eee)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
