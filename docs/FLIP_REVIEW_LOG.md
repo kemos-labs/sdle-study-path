@@ -601,7 +601,10 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 659 | abtal_pack_9ce059e15d | short β2 → **Emergency response** (refractory asthma) | med |
 | 660 | abtal_pack_178afb5b6f | DPC → **Extraction** (necrotic+furcation) | endo |
 | 661 | abtal_pack_18d6b0dd01 | perforation → **Ledge** (nothing visible) | endo |
-| 662 | abtal_pack_6ae2a2263d | upper intrusion → **Lower intrusion** (deep bite) | ortho |
+| 662 | abtal_pack_6ae2a2263d | upper intrusion → **Lower intrusion** (deep bite) | ortho || 663 | abtal_pack_df55e86a2b | rest in amalgam → **Replace + sound structure** | McCracken |
+| 664 | abtal_pack_ec92f0db38 | proceed → **Epi + call ER** (anaphylaxis) | med |
+| 665 | abtal_pack_c8dd9adb56 | antiviral → **Corticosteroids** (GCA) | oral med |
+
 
 
 
@@ -1225,6 +1228,18 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - abtal_pack_5fa2cef47c — papilla regrowth: 4.4 mm tooth-implant (marked; 3.4 = implant-implant)
 - abtal_pack_d7d388ed9d — instruments → immerse in solution until cleaning (consistent w/ rafi_13_7fa2167c38)
 - abtal_pack_8ea596ed39 — cervical trauma splint 4 weeks (marked; distinct from 4-month cervical root fracture above)
+- rafi_18_e895d1bf74 — anti-HBs positive = immune → treat normal (re-flag; same decision as rafi_18_209cd80ef9)
+- abtal_pack_b2ce97a852 — hairy leukoplakia → monitoring (consistent HL series)
+- abtal_pack_74dea675a1 — friend queue-jump → expedite by NEED (justice; marked)
+- abtal_pack_50158ccc89 — delayed avulsion replantation: 2% sodium FLUORIDE soak (IADT; marked)
+- abtal_pack_3f67bc105e — BP + non-restorable root → RCT + grind subgingival (consistent w/ rafi_15_27388ceccd + rafi_17_e4afc48524)
+- abtal_pack_da492a5535 — multiple maxillary cysts → hyperparathyroidism not offered; diabetes marked (broken-ish)
+- abtal_pack_376eee7ec9 — insurance exhausted → treat + honest billing (marked)
+- abtal_pack_1dba4dc66f — x-ray refusal → AUTONOMY (consistent w/ rafi_12_a0e2d38ba8)
+- abtal_pack_1fdaf88efa — grade III furcation → TUNNELING (model agrees)
+- abtal_pack_68b0555ae3 — taurodontism → dentin DYSPLASIA (consistent w/ rafi_18_fb9563be2a; model said AI)
+- abtal_pack_7e0568d3ba — ESRF oral problem = candidiasis (model agrees)
+- abtal_pack_27c8ee79dd — poor OH: IMPLANT more inflammation-susceptible (marked; no PDL seal)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
