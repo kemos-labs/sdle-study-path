@@ -1244,7 +1244,7 @@ window.LESSONS = [
 <h4>K2. Video and MCQ strategy for fixed day</h4>
 <ul>
 <li>Videos: pause when lecturer states a number (mm distances, ferrule, TOC ideas) and say it out loud.</li>
-<li>Learn mode first for accuracy; timed later in the week when Day 4 integrates.</li>
+<li>Learn mode first for accuracy; timed later in the week when Day 6 integrates.</li>
 <li>When you miss open contact, write: “Food after crown → open contact (not perio surgery first).”</li>
 <li>When you miss implant spacing, write the full chain: “2 IAN / 1.5 tooth / ~3 implant.”</li>
 <li>Mix some operative bleed so Day 1 eugenol/dam/open contact rules stay warm — same open contact logic bridges both days.</li>
@@ -1447,7 +1447,7 @@ window.LESSONS = [
 <li>Every partial stem → <b>class</b> (I–IV + mods if given) → <b>main problem</b> (support vs stability vs retention vs torque on abutment) in one breath.</li>
 <li>Every complete denture complaint → <b>seal / borders / occlusion / VDO / base extension</b> differential, not random grinding.</li>
 <li>Every materials stem → <b>use case + killer property</b> (pour soon, wet field, undercuts, die strength, heat cycle).</li>
-<li>Goal is not encyclopedic theory. Goal is free points under time pressure so Day 4 integration and later mocks do not collapse on “I mixed up Kennedy II and III again.”</li>
+<li>Goal is not encyclopedic theory. Goal is free points under time pressure so Day 6 integration and later mocks do not collapse on “I mixed up Kennedy II and III again.”</li>
 </ul>
 <h4>A3. Exam stem patterns (why this day exists)</h4>
 <ul>
@@ -2174,7 +2174,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
   </article>
 </section>
 
-<p><em>Bridge to Day 4:</em> tomorrow is integration — no new encyclopedia. Your wrong book from Days 1–3 is the real textbook. Keep Kennedy drawings and RPI in working memory so mixed restorative sets do not re‑teach Day 3 from zero.</p>
+<p><em>Bridge to Day 4:</em> tomorrow is Endodontics + dental trauma — pulp and apical diagnosis, irrigants (NaOCl/EDTA), and trauma classification. Your wrong book from Days 1–3 stays the foundation; the restorative integration mega‑day comes on Day 6. Keep Kennedy drawings and RPI in working memory so the Day‑6 mixed sets do not re‑teach Day 3 from zero.</p>
 <div class="where-read textbook-grounded">
   <strong>From Appendix C books (cleaned)</strong>
   <p>Grounded in <b>McCracken RPD</b> + <b>Complete Dentures (Rahn)</b>. Study aid only.</p>
@@ -2215,8 +2215,8 @@ If any line fails, bold re‑pass H–J before videos.</p>
     reading: `
 <div class="where-read">
   <strong>ADHD Day‑6 system (read this first — 2 min)</strong>
-  <p><b>Exam fact:</b> SDLE = <b>200 MCQs</b>, ~4 hours, two sections of ~100 Q × 120 min each, often with a break between. Restorative ≈ <b>40%</b> of the blueprint weight. Day 4 is <b>integration + timed practice</b> — not a fourth theory dump. You re‑lock Days 1–3 traps until they fire under 72‑second pace, then run volume.</p>
-  <p><b>Your day target:</b> this full A–J page once actively · wrong‑book rebuild · <b>≥150–200 restorative‑heavy MCQs</b> with at least one true timed block · ≥75% goal on timed restorative‑heavy set · top‑3 weak topics written for Days 5+. Videos only if one specific weak lecture from Days 1–3 still bleeds points — not “all videos again.”</p>
+  <p><b>Exam fact:</b> SDLE = <b>200 MCQs</b>, ~4 hours, two sections of ~100 Q × 120 min each, often with a break between. Restorative ≈ <b>40%</b> of the blueprint weight. Day 6 is <b>integration + timed practice</b> — not a fourth theory dump. You re‑lock Days 1–3 traps until they fire under 72‑second pace, then run volume.</p>
+  <p><b>Your day target:</b> this full A–J page once actively · wrong‑book rebuild · <b>≥150–200 restorative‑heavy MCQs</b> with at least one true timed block · ≥75% goal on timed restorative‑heavy set · top‑3 weak topics written for Days 7+. Videos only if one specific weak lecture from Days 1–3 still bleeds points — not “all videos again.”</p>
   <p><b>How ADHD brains pass integration days:</b> practice &gt; new reading · one short warm‑up · long timed sets · review only misses · no “I’ll re‑read everything.” Phone away. Timer visible. Wrong book open. If you feel the urge to open a random PDF mid‑set, you are avoiding retrieval — close it.</p>
   <p><b>Pomodoro map (practice‑heavy ≈9h — HONEST times):</b></p>
   <ol>
@@ -2230,23 +2230,23 @@ If any line fails, bold re‑pass H–J before videos.</p>
     <li><b>Block E 45–60 min PRACTICE</b> — Deep review of every miss from timed 100 (rules, not vibes)</li>
     <li><b>Block F 90–120 min PRACTICE</b> — ENDURANCE 150 or second timed 50–100 on weakest subtopic after triage</li>
     <li><b>Block G 20 min</b> — Cards always‑comes + restorative deck</li>
-    <li><b>Block H 20 min</b> — Final wrong‑book merge · triage sticky for later days · tick Day 4 done</li>
+    <li><b>Block H 20 min</b> — Final wrong‑book merge · triage sticky for later days · tick Day 6 done</li>
   </ol>
   <p><b>Success criteria today:</b> ≥75% on timed restorative‑heavy set · every miss = one written rule · pace felt (~72 s) · weak‑topic list ranked · no new theory encyclopedia · timed volume actually completed (not “almost”).</p>
   <p><b>Write gate after Block A (before any quiz):</b> on scratch paper list (1) 72‑sec rule, (2) five operative traps, (3) five fixed/implant traps, (4) five RPD/CD/materials traps, (5) wrong‑book format in one line. If you cannot, re‑skim E and H only — not the whole textbook history of dentistry.</p>
 </div>
 
-<h3>A. Why Day 4 exists (integration, not more theory)</h3>
+<h3>A. Why Day 6 exists (integration, not more theory)</h3>
 <ul>
-<li>Days 1–3 built operative, fixed/implant, removable/materials. Day 4 forces <b>mixed retrieval under time</b> — what the real exam does. The exam does not hand you a pure “amalgam only” booklet; it shuffles open contact, dam hole spacing, Kennedy class, IAN 2 mm, and eugenol‑under‑resin in the same hour.</li>
+<li>Days 1–3 built operative, fixed/implant, removable/materials. Day 6 forces <b>mixed retrieval under time</b> — what the real exam does. The exam does not hand you a pure “amalgam only” booklet; it shuffles open contact, dam hole spacing, Kennedy class, IAN 2 mm, and eugenol‑under‑resin in the same hour.</li>
 <li>Score collapses when you “know it” slowly. Integration day builds automaticity: <b>stem → category → hinge fact → rule → click</b>. That pipeline must fit inside ~72 seconds average.</li>
-<li>If you only re‑read, you feel productive and stay weak. Re‑reading produces recognition; timed MCQs produce retrieval. <b>Timed volume + wrong book</b> is the product of Day 4. Recognition without speed fails the Prometric clock.</li>
-<li>Restorative remains the largest slice (~40%). A strong Day 4 multiplies Days 1–3; a lazy Day 4 wastes them. You are not “behind on theory” if Days 1–3 were done — you are behind if traps still take 3 minutes to recall.</li>
-<li><b>What Day 4 is not:</b> not Day 1 redo, not a new materials encyclopedia, not optional “if energy left.” It is the conversion day from notes into exam behavior.</li>
+<li>If you only re‑read, you feel productive and stay weak. Re‑reading produces recognition; timed MCQs produce retrieval. <b>Timed volume + wrong book</b> is the product of Day 6. Recognition without speed fails the Prometric clock.</li>
+<li>Restorative remains the largest slice (~40%). A strong Day 6 multiplies Days 1–3; a lazy Day 6 wastes them. You are not “behind on theory” if Days 1–3 were done — you are behind if traps still take 3 minutes to recall.</li>
+<li><b>What Day 6 is not:</b> not Day 1 redo, not a new materials encyclopedia, not optional “if energy left.” It is the conversion day from notes into exam behavior.</li>
 <li><b>ADHD trap of the day:</b> opening Day‑1 video “just to refresh one thing” and disappearing for 90 minutes. Allowed exception: one named weak lecture after triage proves a bucket is &lt;60%. Not before the first timed 100.</li>
 <li><b>Emotional contract:</b> feeling stupid on a timed set is data, not a verdict. Write the rule. Move. Feeling clever after only re‑reading is a false positive.</li>
 </ul>
-<p class="adhd-stop"><b>STOP 30 sec:</b> Day 4 product = timed volume + wrong book + triage. Not a fourth textbook. Stem → category → rule → click.</p>
+<p class="adhd-stop"><b>STOP 30 sec:</b> Day 6 product = timed volume + wrong book + triage. Not a fourth textbook. Stem → category → rule → click.</p>
 
 <h3>B. Full restorative integration checklist (Days 1–3 before each practice block)</h3>
 <ul>
@@ -2278,7 +2278,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
 <li><b>Pass structure:</b> First pass — answer all you can at speed. Second pass — flags only with fresh eyes. Third — remaining empties. Standard one‑best‑answer strategy with no negative marking teaching: <b>answer everything</b>; blank is worse than an educated guess.</li>
 <li><b>Long clinical vignette method:</b> read the <b>last sentence / lead‑in question first</b>, then scan the stem for the hinge (age, uncontrolled DM, “food packing,” “wrinkled dam,” distances, Kennedy clues, “what is the next step”). Do not narrate the whole story like a novel if the ask is one fact.</li>
 <li><b>When to change an answer:</b> only when you find a concrete rule you misread (“I missed open contact in the stem”) — not when anxiety says “maybe B feels safer.” Anxiety changes usually net loss.</li>
-<li><b>Section fatigue:</b> accuracy drops late. Stand during breaks. Caffeine plan practiced on Day 4, not invented on exam morning. If you crash at Q 80 in practice, that is a stamina training signal, not “I’m dumb.”</li>
+<li><b>Section fatigue:</b> accuracy drops late. Stand during breaks. Caffeine plan practiced on Day 6, not invented on exam morning. If you crash at Q 80 in practice, that is a stamina training signal, not “I’m dumb.”</li>
 <li><b>Flag discipline:</b> flag means “return with remaining time,” not “this item owns my nervous system for 5 minutes now.” Hard item early: pick best guess, flag, move. Protect average pace.</li>
 <li><b>Pace checkpoints (use in timed 100):</b> at 30 min ≈ Q 25 done · at 60 min ≈ Q 50 · at 90 min ≈ Q 75 · at 110 min finish last items / start flag pass. If you are at Q 40 after 60 min, you are behind — tighten easy items harder, not harder items longer.</li>
 <li><b>Stem patterns that steal time:</b> multi‑paragraph medical history when the ask is pure contact/occlusion; photo descriptions that do not change the classic rule; two correct‑sounding options where one is “always‑comes” and one is rare specialty path — pick always‑comes under speed.</li>
@@ -2293,7 +2293,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
 <li><b>Start of each section — 30‑second mental scratch sheet</b> (or real scratch if allowed in your practice setup): open contact=food · IAN 2 mm · Kennedy I bilateral free end · dam holes far=wrinkle · MTA cap path · clean→disinfect→sterilize · ferrule 1.5–2 · asthma=paracetamol · enlargement triad. Writing once primes automaticity for 100 items.</li>
 <li>Do not review Section 1 answers during the break in a way that panics you into changing sleep/caffeine mid‑day — log misses after the full simulation block you planned. Panic mid‑break destroys Section 2.</li>
 <li>If the app only offers 50s: chain two 50s with a 5‑min stand as “section glue,” then one full 100 timed. The point is continuous cognitive load, not perfect software cloning.</li>
-<li><b>Software fatigue is real:</b> scrolling, flag UI, font strain. Day 4 is a good day to use the same app environment you will use for remaining mocks so navigation is automatic on exam day.</li>
+<li><b>Software fatigue is real:</b> scrolling, flag UI, font strain. Day 6 is a good day to use the same app environment you will use for remaining mocks so navigation is automatic on exam day.</li>
 <li><b>Nutrition rule:</b> heavy greasy meal between sections → sleepiness. Light protein + water beats a sugar crash at Q 120 of the day.</li>
 <li><b>ADHD section tip:</b> if attention collapses mid‑section, stand for 10 seconds (if practice allows), three breaths, then resume at next item — do not open phone “for a second.”</li>
 </ul>
@@ -2455,7 +2455,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
 <li>Do not restart Day 1 from page one if only Class II matrix/overhang is weak — drill that trap set. Surgical learning: smallest unit that fixes the miss pattern.</li>
 <li>If everything is ~70% flat: you need more timed volume and wrong‑book density, not more passive reading.</li>
 <li>If one topic is 40%: stop mega mixes for one block; do pure that topic until ~70%, then re‑mix (interleaving after competence). Interleaving too early on a broken foundation just confuses.</li>
-<li>Write <b>top 3 weak topics</b> on a sticky for Days 5–9 morning warm‑ups (10–15 Q each). Day 5 is perio — still keep 10–15 restorative Q daily so the 40% slice does not decay while you learn perio.</li>
+<li>Write <b>top 3 weak topics</b> on a sticky for Days 7–11 morning warm‑ups (10–15 Q each). Day 7 is oral surgery — still keep 10–15 restorative Q daily so the 40% slice does not decay while you learn OMS.</li>
 <li><b>Triage anti‑patterns:</b> ranking by emotional shame instead of miss counts · calling “everything weak” so you do nothing focused · using triage as an excuse to skip the endurance block.</li>
 <li><b>Stem pattern for triage:</b> if you miss three different open‑contact stems, the topic is not “fixed prostho whole chapter” — it is contact/occlusion automaticity. Label narrowly so drills stay short.</li>
 </ul>
@@ -2584,7 +2584,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
   </article>
   <article class="eq" data-id="d4b5">
     <span class="eq-num">B5</span>
-    <p class="exam-stem">After a timed restorative set you miss five items. The wrong‑book method that multiplies Day 4 is:</p>
+    <p class="exam-stem">After a timed restorative set you miss five items. The wrong‑book method that multiplies Day 6 is:</p>
     <ol class="exam-opts" type="a">
       <li>Ignore misses and only celebrate correct answers</li>
       <li>Copy the full textbook chapter for every miss without a one‑line rule</li>
@@ -2594,7 +2594,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
     <details class="exam-ans"><summary>Answer + hinge (tap after you choose)</summary>
       <p class="ans-line"><b>Answer:</b> c — One hinge rule per miss → drill</p>
       <p class="hinge-line"><b>Hinge:</b> Wrong book = stem hinge → rule. Integration day fails if you only re‑read theory. Volume + written hinges win SDLE.</p>
-      <p class="src-line">Pattern: wrong‑book method (Day 4 core).</p>
+      <p class="src-line">Pattern: wrong‑book method (Day 6 core).</p>
     </details>
   </article>
 </section><section class="exam-form" data-day="6" data-block="C"> <h4>How SDLE asks Block C (tri-core traps — Endo · Perio · Resto)</h4> <ul> <li><b>Shape:</b> weighted-topic stems mixing endo/perio/restorative; one best hinge from days 1–6.</li> <li><b>What they test:</b> cross-topic judgment — diagnosis first, then treatment logic, then material choice.</li> <li><b>Distractors:</b> neighboring concept swaps (percussion vs cold; probing depth vs CAL; hybrid layer vs smear layer).</li> <li><b>Bank signal:</b> percussion/palpation, CAL/furcation, NaOCl/EDTA, composite increments, ferrule — tri-core always-comes.</li> <li><b>Your job now:</b> 5 timed-style items. Cover answers. Misses → wrong-book one-liner.</li> </ul> </section> <section class="exam-qa" data-day="6" data-block="C" data-count="5"> <h4>Exam Q&amp;A — Block C (tri-core self-test)</h4> <p class="exam-qa-hint">Cover each green box. Pick a/b/c/d out loud. Then expand Answer + hinge. Target ≥4/5.</p> <article class="eq" data-id="d6c1"> <span class="eq-num">C1</span> <p class="exam-stem">A patient has a tooth that is tender to percussion but responds normally to cold. The most likely diagnosis is:</p> <ol class="exam-opts" type="a"> <li>Reversible pulpitis</li> <li>Apical periodontitis</li> <li>Dentinal hypersensitivity</li> <li>Normal pulp</li> </ol> <details class="exam-ans"><summary>Answer + hinge (tap after you choose)</summary> <p class="ans-line"><b>Answer:</b> b — Apical periodontitis</p> <p class="hinge-line"><b>Hinge:</b> Percussion tests the periapical tissues; cold tests the pulp. Normal cold + percussion pain = apical problem (Cohen's Pathways: percussion tenderness signals apical periodontitis).</p> <p class="src-line">Cohen's Pathways of the Pulp — pulp vs apical diagnosis.</p> </details> </article> <article class="eq" data-id="d6c2"> <span class="eq-num">C2</span> <p class="exam-stem">In a patient with generalized chronic periodontitis, clinical attachment level (CAL) is measured from the:</p> <ol class="exam-opts" type="a"> <li>Free gingival margin to the base of the pocket</li> <li>CEJ to the base of the pocket</li> <li>CEJ to the free gingival margin</li> <li>Base of the pocket to the alveolar crest</li> </ol> <details class="exam-ans"><summary>Answer + hinge (tap after you choose)</summary> <p class="ans-line"><b>Answer:</b> b — CEJ to the base of the pocket</p> <p class="hinge-line"><b>Hinge:</b> Probing depth is margin→base; CAL is CEJ→base (Carranza). CAL is the true measure of attachment loss — recession + probing depth.</p> <p class="src-line">Carranza Periodontology — clinical attachment level.</p> </details> </article> <article class="eq" data-id="d6c3"> <span class="eq-num">C3</span> <p class="exam-stem">After acid etching of dentin in a deep Class II composite restoration, which layer is produced when the adhesive resin monomer infiltrates and polymerizes within the demineralized collagen network?</p> <ol class="exam-opts" type="a"> <li>Intact enamel prisms</li> <li>Demineralized dentin after acid etching</li> <li>The smear layer without etching</li> <li>Pulp tissue via dentinal tubules</li> </ol> <details class="exam-ans"><summary>Answer + hinge (tap after you choose)</summary> <p class="ans-line"><b>Answer:</b> b — Demineralized dentin after acid etching</p> <p class="hinge-line"><b>Hinge:</b> Etching removes the smear layer and demineralizes superficial dentin; resin monomer infiltrates the collagen mesh and polymerizes into the hybrid layer (Sturdevant).</p> <p class="src-line">Sturdevant Operative 5e — hybrid layer / adhesion.</p> </details> </article> <article class="eq" data-id="d6c4"> <span class="eq-num">C4</span> <p class="exam-stem">A furcation defect in which a probe enters the furcation but does not pass through to the opposite side is classified as:</p> <ol class="exam-opts" type="a"> <li>Class I</li> <li>Class II</li> <li>Class III</li> <li>Class IV</li> </ol> <details class="exam-ans"><summary>Answer + hinge (tap after you choose)</summary> <p class="ans-line"><b>Answer:</b> a — Class I</p> <p class="hinge-line"><b>Hinge:</b> Class I = early/slight horizontal loss, probe engages but does not pass through; Class II = through-and-through probe on one side but not the other opening; Class III = through-and-through (Carranza/Hamp).</p> <p class="src-line">Carranza Periodontology — furcation classification.</p> </details> </article> <article class="eq" data-id="d6c5"> <span class="eq-num">C5</span> <p class="exam-stem">Which irrigant is the primary tissue-dissolving and antibacterial agent used during root canal preparation?</p> <ol class="exam-opts" type="a"> <li>Ethylenediaminetetraacetic acid (EDTA)</li> <li>Sodium hypochlorite (NaOCl)</li> <li>Chlorhexidine (CHX)</li> <li>Hydrogen peroxide</li> </ol> <details class="exam-ans"><summary>Answer + hinge (tap after you choose)</summary> <p class="ans-line"><b>Answer:</b> b — Sodium hypochlorite (NaOCl)</p> <p class="hinge-line"><b>Hinge:</b> NaOCl is the main irrigant: tissue dissolution + broad antimicrobial. EDTA chelates the smear layer only; CHX is an alternate final rinse (Cohen's).</p> <p class="src-line">Cohen's Pathways of the Pulp — irrigation.</p> </details> </article> </section>
@@ -2614,7 +2614,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
 <li><b>Cards 20 min:</b> always‑comes deck + any deck matching top weak bucket. Rapid fire, out loud if alone.</li>
 <li><b>Stop rule:</b> when rules are written and energy is garbage, finishing a sloppy 200th question without review teaches guessing. Quality review beats empty volume at the margin.</li>
 <li><b>App hygiene:</b> use restorative‑heavy filters when available; if forced mixed bank, still log only restorative misses into today’s primary wrong book and note non‑resto for later days.</li>
-<li><b>Honest practice vs fake practice:</b> fake = untimed with notes open, looking up every stem. Real = closed notes, timer on, review after. Day 4 fails if you only do fake practice then feel “busy.”</li>
+<li><b>Honest practice vs fake practice:</b> fake = untimed with notes open, looking up every stem. Real = closed notes, timer on, review after. Day 6 fails if you only do fake practice then feel “busy.”</li>
 <li><b>Stem patterns to expect in volume sets:</b>
   <ul>
     <li>“Most likely cause of …” → classic failure mode (open contact, high bite, seal failure)</li>
@@ -2630,7 +2630,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
 
 <h3>J. Exam traps meta + finish criteria</h3>
 <ol>
-<li>Reading all day without a timed 100 → <b>failed Day 4 design</b>.</li>
+<li>Reading all day without a timed 100 → <b>failed Day 6 design</b>.</li>
 <li>Re‑watching all videos “just in case” → avoidance disguised as diligence. One weak file only after triage.</li>
 <li>Ignoring open contact / dam / MTA / IAN 2 mm / Kennedy I — free if automatic, fatal if fuzzy under speed.</li>
 <li>Changing 15 answers on second pass from anxiety → usually net loss. Change only with a found rule.</li>
@@ -2639,20 +2639,20 @@ If any line fails, bold re‑pass H–J before videos.</p>
 <li>Studying only pure operative because it feels familiar → fixed/RPD still ~big part of the 40% restorative world.</li>
 <li>Comparing your raw score to a friend mid‑day → attention hijack. Compare only to your last timed set.</li>
 <li>Leaving blanks because “I’m not sure” → wrong strategy under standard no‑penalty teaching; answer and flag.</li>
-<li>Calling Day 4 done after warm‑up 50 only → that is Day‑6 theater, not Day 4.</li>
+<li>Calling Day 6 done after warm‑up 50 only → that is practice theater, not the real product.</li>
 </ol>
 <ol>
 <li>Finish A–J read actively (Block A) + bold skim (Block B).</li>
 <li>Warm‑up 50 → timed 100 → review → endurance/weak drill.</li>
 <li>Merge wrong book; list top 3 weak topics on sticky.</li>
-<li>Tick Day 4 done only if <b>timed set completed and rules written</b>.</li>
-<li>Tomorrow is perio (Day 5) — keep 10–15 restorative Q as daily maintenance so 40% slice does not decay.</li>
-<li>Sleep: wrong book next to bag for morning 5‑min skim before Day 5 theory blocks.</li>
+<li>Tick Day 6 done only if <b>timed set completed and rules written</b>.</li>
+<li>Tomorrow is oral surgery + local anesthesia (Day 7) — keep 10–15 restorative Q as daily maintenance so 40% slice does not decay.</li>
+<li>Sleep: wrong book next to bag for morning 5‑min skim before Day 7 theory blocks.</li>
 </ol>
-<p class="adhd-stop"><b>STOP 30 sec:</b> Day 4 product = timed volume + wrong book + triage list. Not a fourth textbook. Tick only after timed work is real.</p>
+<p class="adhd-stop"><b>STOP 30 sec:</b> Day 6 product = timed volume + wrong book + triage list. Not a fourth textbook. Tick only after timed work is real.</p>
 <p><em>Optional if timed restorative ≥80% and wrong book thin:</em> short operative‑only 50 to keep Day 1 edges sharp — still stop at a hard time box. If timed &lt;70%, optional is cancelled; pure weak drill is mandatory.</p>
-<p><b>Final write gate Day 4:</b> one sticky with (1) score on timed set (2) top 3 weak topics (3) three rules you will not miss again. That sticky is your bridge into Day 5 mornings.</p>
-<p><b>Bridge to Day 5:</b> Periodontics ≈ 18%. You will learn stage vs grade, CAL, Glickman, SRP re‑eval, enlargement triad, peri‑implant disease. Restorative always‑comes still get 10–15Q maintenance so integration gains stick.</p>
+<p><b>Final write gate Day 6:</b> one sticky with (1) score on timed set (2) top 3 weak topics (3) three rules you will not miss again. That sticky is your bridge into Day 7 mornings.</p>
+<p><b>Bridge to Day 7:</b> Oral surgery + local anesthesia ≈ 15%. You will learn third‑molar surgery, MRONJ precautions, local‑anesthesia toxicity, and emergency protocols. Restorative always‑comes still get 10–15Q maintenance so integration gains stick.</p>
 
 <h3>Appendix — rapid mixed stem drills (say answer before reading rule)</h3>
 <ul>
@@ -2678,7 +2678,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
 <li><b>Stem:</b> Second pass, change five answers because “B feels safer.” <b>First think:</b> change only with a concrete misread rule.</li>
 </ul>
 <p class="adhd-stop"><b>STOP 30 sec:</b> Drill 5 stems out loud right now without looking at rules. Integration = speed + classics.</p>
-<p><b>Last honest check before you close Day 4:</b> Did you complete a true timed block? Are rules written? Is the top‑3 sticky real? If any answer is no, Day 4 is not done — finish the product, not the clock on the wall alone.</p>
+<p><b>Last honest check before you close Day 6:</b> Did you complete a true timed block? Are rules written? Is the top‑3 sticky real? If any answer is no, Day 6 is not done — finish the product, not the clock on the wall alone.</p>
 
 <h3>Appendix B — domain picker under 10 seconds (integration muscle)</h3>
 <ul>
@@ -2715,7 +2715,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
 <li>Lucky guess on open contact → still write the rule → luck is not knowledge under speed.</li>
 </ul>
 <p><b>Write gate final:</b> copy five templates into your real wrong book in the next 5 minutes. If you skip this, the appendix was entertainment — and entertainment does not raise SDLE scores.</p>
-<p class="adhd-stop"><b>STOP end of Day 4 page:</b> Product = timed volume + wrong book + triage sticky. Block A was the only full read. Everything else is practice. Go practice.</p>
+<p class="adhd-stop"><b>STOP end of Day 6 page:</b> Product = timed volume + wrong book + triage sticky. Block A was the only full read. Everything else is practice. Go practice.</p>
 <div class="where-read textbook-grounded">
   <strong>From Appendix C books (cleaned — restorative mega-day)</strong>
   <p>Sturdevant + Rosenstiel + McCracken/Rahn anchors compressed. Study aid only.</p>
@@ -2737,7 +2737,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
   <p class="muted">✅ 100% of restorative usable questions have book_verified=true</p>
 </div>`,
     videos: [{"file":"operative/lec.20/المحاضره العشرون.mp4","label":"1/8 · INTEGRATION · Op lec 20 · part 1 · VERIFIED"},{"file":"operative/lec.20/المحاضره العشرون الجزء الثاني.mp4","label":"2/8 · INTEGRATION · Op lec 20 · part 2 · VERIFIED"},{"file":"operative/lec.20/المحاضره العشرون الجزظء الثالث.mp4","label":"3/8 · INTEGRATION · Op lec 20 · part 3 · VERIFIED"},{"file":"prostho/lec.10/المحاضره العاشره الجزء الاول.mp4","label":"4/8 · INTEGRATION · Fixed/implant lec 10 · part 1 · VERIFIED"},{"file":"prostho/lec.10/المحاضره العاشره الجزء الثاني.mp4","label":"5/8 · INTEGRATION · Fixed/implant lec 10 · part 2 · VERIFIED"},{"file":"prostho/lec.14/المحاضره الرابعه عشر الجزء الاول.mp4","label":"6/8 · INTEGRATION · Materials/CD lec 14 · part 1 · VERIFIED"},{"file":"prostho/lec.14/المحاضره الرابعه عشر الجزء الثاني.mp4","label":"7/8 · INTEGRATION · Materials/CD lec 14 · part 2 · VERIFIED"},{"file":"prostho/lec.14/المحاضره الرابعه عشر الجزء الثالث.mp4","label":"8/8 · INTEGRATION · Materials/CD lec 14 · part 3 · VERIFIED"}],
-    videoNote: "Day 4 = integration rewatch (not new lectures). Op lec.20 + Fixed lec.10 + Materials lec.14. Skip any lecture you already own cold — prioritize timed MCQs + wrong book.",
+    videoNote: "Day 6 = integration rewatch (not new lectures). Op lec.20 + Fixed lec.10 + Materials lec.14. Skip any lecture you already own cold — prioritize timed MCQs + wrong book.",
     quizTopic: "restorative",
     quizCount: 150,
     quizSets: [{"topic":"restorative","count":50,"label":"Warm-up 50","mode":"learn"},{"topic":"restorative","count":100,"label":"Main 100","mode":"learn"},{"topic":"restorative","count":150,"label":"ENDURANCE 150","mode":"learn"},{"topic":"operative","count":50,"label":"Operative review 50","mode":"learn"},{"topic":"unseen","count":100,"label":"Unseen mixed 100","mode":"learn"},{"topic":"weak","count":50,"label":"Weak pack 50","mode":"learn"},{"topic":"wrong","count":50,"label":"Wrong book 50","mode":"learn"}],
@@ -2976,7 +2976,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
     <li>“Primary etiology of plaque‑induced gingival disease” → biofilm/plaque</li>
     <li>“Role of calculus” → plaque retention / harbors biofilm</li>
     <li>“Why two patients with similar plaque differ in bone loss” → host susceptibility / risk factors</li>
-    <li>“Open contact + papilla inflammation” → food impaction local factor (ties to Day 4 open contact rule)</li>
+    <li>“Open contact + papilla inflammation” → food impaction local factor (ties to Day 2 open contact rule)</li>
   </ul>
 </li>
 </ul>
@@ -3237,7 +3237,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
 <li>Primary trauma = excess force + normal support; secondary = reduced support.</li>
 <li>Old aggressive ≈ Grade C rapid pattern + stage by severity; molar‑incisor extent possible.</li>
 <li>Pseudopockets in drug enlargement ≠ automatic severe stage without CAL/RBL.</li>
-<li>Open contact / overhang = local perio risk factor (Day 4 crossover free points).</li>
+<li>Open contact / overhang = local perio risk factor (Day 6 crossover free points).</li>
 <li>Surgery without plaque control → predictable failure; OH is not optional.</li>
 <li>Maintenance after active therapy is part of treatment, not an afterthought.</li>
 </ol>
@@ -3344,7 +3344,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
 <li>Tick reading step done → perio videos lec 5–8 only (no random YouTube spiral).</li>
 <li>Cards: stage/grade, Glickman, drugs, mucositis/itis, SRP sequence.</li>
 <li>Multi‑block quizzes aim <b>100–150Q</b> perio. Wrong book one rule per miss.</li>
-<li>Night: 10–15 restorative maintenance Q (open contact, IAN 2 mm, Kennedy I) so Day 4 does not decay.</li>
+<li>Night: 10–15 restorative maintenance Q (open contact, IAN 2 mm, Kennedy I) so Day 6 does not decay.</li>
 <li>Tick Day 5 done only if: stage≠grade cold · Glickman cold · triad cold · timed/learn perio volume done · wrong book updated.</li>
 </ol>
 <ul>
@@ -3365,12 +3365,12 @@ If any line fails, bold re‑pass H–J before videos.</p>
     <li>“Mobility reduced support” → secondary trauma</li>
   </ul>
 </li>
-<li><b>If Block F score &lt;70%:</b> do not jump to Day 6 endo pride. Pure drill stage/grade + furcation + drugs 30Q, then remixed 50. Competence before interleaving — same rule as Day 4 triage.</li>
+<li><b>If Block F score &lt;70%:</b> do not jump to Day 6 endo pride. Pure drill stage/grade + furcation + drugs 30Q, then remixed 50. Competence before interleaving — same rule as Day 6 triage.</li>
 <li><b>If Block F ≥80%:</b> still finish wrong book; add one mixed 50 including resto maintenance. Speed with accuracy.</li>
 </ul>
 <p><em>Optional tonight:</em> one‑page personal perio cheat: stage table sketch · Glickman · triad · mucositis/itis · SRP sequence. Core = this page + videos + in‑app MCQs — not a new PDF rabbit hole.</p>
 <p class="adhd-stop"><b>STOP 30 sec final:</b> Stage≠grade · CAL · Glickman I–IV · triad · SRP→re‑eval · mucositis vs implantitis · abx adjunct · secondary trauma = reduced support. Day 5 product = those automatic + 100–150Q + wrong book.</p>
-<p><b>Bridge to Day 6:</b> Endodontics ≈17%. Pulp/apical diagnoses, irrigants (NaOCl/EDTA/CHX never mix NaOCl+CHX), mishaps, trauma. Keep perio cards 5 min daily so 18% does not evaporate while you learn canals.</p>
+<p><b>Bridge to Day 6:</b> Restorative mega + tri‑core review — the integration day that mixes operative, fixed, RPD, materials, endo and perio under time. Keep perio cards 5 min daily so 18% does not evaporate.</p>
 
 <h3>Appendix — dense stage/grade decision examples (exam logic)</h3>
 <ul>
@@ -3518,7 +3518,7 @@ If any line fails, bold re‑pass H–J before videos.</p>
   <p><b>Success criteria today:</b> irreversible vs necrosis vs abscess automatic · NaOCl ≠ EDTA ≠ CHX · never NaOCl+CHX · avulsion = medium + dry time + flexible ~2 wk · apexogenesis vital grow vs apexification MTA barrier · ≥75% on endo quizzes · videos done · wrong book written.</p>
 </div>
 
-<h3>A. Why Day 6 pays free points</h3>
+<h3>A. Why Day 4 pays free points</h3>
 <h4>A1. Blueprint and bank reality</h4>
 <ul>
 <li>Endodontics is roughly <b>17%</b> of SDLE — large enough that weak diagnosis language costs many items even if your restorative is strong.</li>
@@ -5071,7 +5071,7 @@ If any blank, bold re‑pass A–D before Block B.</p>
 <li>Step 2: watch listed <b>surgery videos lec 15–18</b> only (pause on bold rules).</li>
 <li>Step 3 cards → Step 4 multi‑block OMS quizzes (aim <b>150Q</b> total across sets). Wrong book = one rule line per miss.</li>
 </ol>
-<p><em>Optional:</em> ethics/medical 40Q if energy remains; re‑skim Day 6 trauma if avulsion still weak (OMS trauma overlaps). Core path = this page + surgery videos + in‑app OMS MCQs.</p>
+<p><em>Optional:</em> ethics/medical 40Q if energy remains; re‑skim Day 4 trauma if avulsion still weak (OMS trauma overlaps). Core path = this page + surgery videos + in‑app OMS MCQs.</p>
 <p class="adhd-stop"><b>Final 60 sec gate:</b> “Dry socket 2–4d · warfarin continue + local · Winter angulation · Pell 1–3 + A–C · Class3+C hard · Ludwig airway · ZMC diplopia · MRONJ drugs · lido+epi ~7 mg/kg · toxicity metallic/tinnitus · epi hyperthyroid/cardiac · asthma paracetamol · anaphylaxis IM epi · syncope supine legs up.”</p>
 
 <h3>M. Rapid retrieval cards (speak once — 5 min)</h3>
@@ -6472,7 +6472,7 @@ If any blank, bold re‑pass A–D before Block B.</p>
 <h4>G6. Extraction and immature permanent</h4>
 <ul>
 <li><b>Extract</b> when non-restorable, advanced pathologic root resorption, severe infection with poor prognosis, ortho plan needs space, or medical/behavior precludes pulp therapy success — then space maintenance decision tree (Section D).</li>
-<li><b>Immature permanent:</b> reuse Day 6 — apexogenesis (vital, keep root growing), partial pulpotomy, regenerative approaches, MTA apexification barrier if necrotic immature. Do not treat immature permanent like primary formocresol pulpotomy blindly without diagnosis.</li>
+<li><b>Immature permanent:</b> reuse Day 4 — apexogenesis (vital, keep root growing), partial pulpotomy, regenerative approaches, MTA apexification barrier if necrotic immature. Do not treat immature permanent like primary formocresol pulpotomy blindly without diagnosis.</li>
 </ul>
 <h4>G7. Exam stem patterns (pedo pulp)</h4>
 <ul>
@@ -6482,7 +6482,7 @@ If any blank, bold re‑pass A–D before Block B.</p>
 <li>“Uncontrollable bleed from canals after coronal pulp removal” → not simple pulpotomy success → pulpectomy/XO.</li>
 <li>“After primary pulpotomy best final restoration often” → SSC.</li>
 </ul>
-<p class="adhd-stop"><b>STOP 40 sec:</b> “IPT = deep, no irreversible signs. Pulpotomy = coronal pulp out, roots OK + SSC. Pulpectomy = primary root canal with resorbable fill. Extract if hopeless. Immature permanent = Day 6 rules.”</p>
+<p class="adhd-stop"><b>STOP 40 sec:</b> “IPT = deep, no irreversible signs. Pulpotomy = coronal pulp out, roots OK + SSC. Pulpectomy = primary root canal with resorbable fill. Extract if hopeless. Immature permanent = Day 4 rules.”</p>
 <p class="adhd-stop"><b>WRITE GATE:</b> IPT when → ___; pulpotomy when → ___; pulpectomy when → ___; after pulp therapy restore with → ___; primary canal fill must → ___ (resorb).</p>
 
 <h3>H. SSC &amp; pedo restorative</h3>
@@ -6733,7 +6733,7 @@ If any blank, bold re‑pass A–D before Block B.</p>
     </ol>
     <details class="exam-ans"><summary>Answer + hinge (tap after you choose)</summary>
       <p class="ans-line"><b>Answer:</b> a — Micrognathia + glossoptosis + airway (± cleft)</p>
-      <p class="hinge-line"><b>Hinge:</b> Natal vs neonatal teeth timing. Primary avulsion not reimplanted (re‑lock Day 6). Syndromic free points are easy if triad is cold.</p>
+      <p class="hinge-line"><b>Hinge:</b> Natal vs neonatal teeth timing. Primary avulsion not reimplanted (re‑lock Day 4). Syndromic free points are easy if triad is cold.</p>
       <p class="src-line">Pattern: Pierre Robin triad.</p>
     </details>
   </article>

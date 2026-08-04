@@ -1286,7 +1286,7 @@
     if (compact) {
       return `
       <section class="plan-chooser plan-chooser-compact" aria-label="Study plan">
-        <p class="plan-model-line"><b>Same 14 lessons</b> · plan only changes calendar speed, hours, and Q goal. 📖 ${(window.QUESTION_BANK || []).filter(q => q.book_verified === true).length} MCQs textbook-verified</p>
+        <p class="plan-model-line"><b>Same 14 lessons</b> · plan only changes calendar speed, hours, and Q goal. 📖 ${(window.QUESTION_BANK || []).filter(q => q.usable !== false && q.book_verified === true).length} MCQs textbook-verified</p>
         <div class="plan-compact-row">
           <span class="muted">Plan:</span>
           ${opts
@@ -1304,7 +1304,7 @@
         <p class="lead plan-chooser-lead">
           Same 14 lessons — <b>hours, focus timer, MCQ goal, and step order</b> change with plan length.
         </p>
-        <p class="muted" style="margin:4px 0 12px">📖 <strong>${(window.QUESTION_BANK || []).filter(q => q.book_verified === true).length}/${(window.QUESTION_BANK || []).filter(q => q.usable !== false).length}</strong> usable MCQs are textbook-verified · All 7 topics at 100%</p>
+        <p class="muted" style="margin:4px 0 12px">📖 <strong>${(window.QUESTION_BANK || []).filter(q => q.usable !== false && q.book_verified === true).length}/${(window.QUESTION_BANK || []).filter(q => q.usable !== false).length}</strong> usable MCQs are textbook-verified · All 7 topics at 100%</p>
         <div class="plan-template-grid plan-chooser-grid">
           ${opts
             .map(
@@ -1374,8 +1374,8 @@
       typeof window.bookRefsHtml === "function"
         ? window.bookRefsHtml({ topic: bookTopic, q: L.title || "", explanation: focus }, { limit: 2 })
         : "";
-    // Verified question count for this focus topic
-    const focusVerified = (window.QUESTION_BANK || []).filter(q => q.topic === focus && q.book_verified === true).length;
+    // Verified question count for this focus topic (usable + verified only — never exceeds total)
+    const focusVerified = (window.QUESTION_BANK || []).filter(q => q.topic === focus && q.usable !== false && q.book_verified === true).length;
     const focusTotal = (window.QUESTION_BANK || []).filter(q => q.topic === focus && q.usable !== false).length;
     const verifiedBar = focusTotal > 0
       ? `<div class="verified-bar muted" style="margin:8px 0;font-size:0.85rem">📖 <strong>${focusVerified}/${focusTotal}</strong> textbook-verified MCQs available for this topic · Practice tab → topic quizzes</div>`
@@ -2966,7 +2966,7 @@
         ${modeCoachHtml(L)}
         <div class="meta">
           <span class="badge blue">Focus: ${escapeHtml(L.focus)}</span>
-          <span class="badge green" title="Textbook-verified questions for this topic">📖 ${(window.QUESTION_BANK || []).filter(q => q.topic === L.focus && q.book_verified === true).length} verified</span>
+          <span class="badge green" title="Textbook-verified questions for this topic">📖 ${(window.QUESTION_BANK || []).filter(q => q.topic === L.focus && q.usable !== false && q.book_verified === true).length} verified</span>
           <span class="badge ${dayComplete ? "green" : "yellow"}">${dayComplete ? "Day complete" : "In progress"}</span>
           <span class="badge ${state.sessionAnswered >= state.dailyGoal ? "green" : "yellow"}">MCQ ${state.sessionAnswered}/${state.dailyGoal}</span>
         </div>
@@ -6343,7 +6343,7 @@
 
         <section class="simple-panel">
           <h3 class="section-label">Bank health</h3>
-          <p class="muted">${window.QUESTION_BANK ? window.QUESTION_BANK.filter(q => q.book_verified === true).length + "/" + window.QUESTION_BANK.filter(q => q.usable !== false).length + " usable questions textbook-verified" : "Loading…"} · ${window.QUESTION_BANK ? window.QUESTION_BANK.filter(q => q.usable === false).length + " non-usable (community-sourced, needs expert review)" : ""}</p>
+          <p class="muted">${window.QUESTION_BANK ? window.QUESTION_BANK.filter(q => q.usable !== false && q.book_verified === true).length + "/" + window.QUESTION_BANK.filter(q => q.usable !== false).length + " usable questions textbook-verified" : "Loading…"} · ${window.QUESTION_BANK ? window.QUESTION_BANK.filter(q => q.usable === false).length + " non-usable (community-sourced, needs expert review)" : ""}</p>
         </section>
 
         <section class="simple-panel">
