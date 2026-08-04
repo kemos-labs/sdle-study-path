@@ -229,3 +229,18 @@
 **Result: 3,691 of 4,150 junk "(not listed in source extract)" options replaced with real distractors (89%).** Remaining 434: validation-rejected near-duplicates (e.g. distractor 'Polycarboxylate cement' vs option 'Polycarboxylate') or parse-failed retries — honest, they keep the marker. Apply validation is answer-safe (never touches answer index, rejects dupes/substrings/near-word-sets). Gates green (G-PLACEHOLDER etc.), tree committed + pushed `fe6ade2`.
 
 **To finish the last 434 later:** bump retry max_tokens + rerun `--retry-junk` with 4 shards (~1-2 min).
+
+---
+
+## UPDATE 9 (2026-08-04) — Junk-option cleanup 100% COMPLETE + full regression green
+
+**The last 434 junk options are gone — 0 "(not listed)" remain in the entire usable bank.**
+
+- Root cause of earlier retry failures: (1) deepseek truncated long 25-Q retry prompts → switched to single-question calls; (2) model returns a BARE `{...}` object, not `[...]` → order-independent parser (`"qid"` + `"distractor"` extracted by regex anywhere in response).
+- **4,125/4,150 fixed** (3,478 main pass + 213 batch retry + 291 + 143 single-call passes). Remaining 25 were the batch-fix leftovers, all resolved.
+- **Bonus data-quality fix**: found 30 questions with EXACTLY duplicated option text (e.g. "Cobalt chrome" as both a correct answer and another option) via `scripts/fix_exact_dups.py` — replaced the dup with a real different-concept distractor. **Correction logged**: my first normalization stripped `>/<` and wrongly replaced 3 LEGITIMATE options (`>5` vs `<5` etc.) — restored from git HEAD, conservative norm now (case/whitespace/unicode only). Final state: 0 exact-text dup options, 0 bad answer indices.
+- **Full Playwright regression green** (`work/regression_junk.js`): 8/8 tabs render (no `[object Object]`), 10-Q quiz answered with **0 junk options seen**, flash counter labeled "4451 items", blueprint strip + welcome banner present, **mock exam works** (blueprint mix · 200 Q · 239:59 timer · the old `inventory is not defined` crash is dead), footer "15166 MCQs (100% textbook-verified)".
+- **LIVE verified** at kemos-labs.github.io/sdle-study-path — serves `questions.js?v=20260804v6` (cache-buster bumped so returning users get the clean bank), quiz answered live with 0 junk options, 0 console/page errors.
+- Gates: **9/9 main + flash gate green** (G-VERIFIED 15,166/15,166 · G-CITE 15,166/15,166 · G-HINGE thin 0 · G-PLACEHOLDER 0).
+- Commits: `509171c` (data+scripts), `ab48acb` (deploy bump). @reboot junk-watchdog cron removed (job done).
+- **Model comparison recap**: deepseek direct = star (8× parallel did the whole job in ~4 min); cline/opencode free models work via pi staggered (25 Q in ~40s) but rate-limit under 6-way burst; zai returns empty content often.
