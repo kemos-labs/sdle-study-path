@@ -515,7 +515,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 559 | rafi_12_59cec84ed2 | laser → **Electrocautery** (pacemaker) | med || 560 | rafi_12_46ab522415 | xylocaine → **Procaine (ester)** (cirrhosis) | med || 561 | rafi_12_109d7dbc1d | latex delayed → **Latex immediate** (rhinitis/tearing type I) | oral med || 562 | rafi_13_cfddc6d57c | hemangioma → **Pyogenic granuloma** (granulation+vessels) | oral path |
 | 563 | rafi_13_c650454c34 | postpone → **Upright position** (dyspnea now) | med |
 | 564 | rafi_13_d0362e7891 | acyclovir → **Benzocaine** (aphthous ulcer) | oral med |
-| 565 | rafi_13_d35abe253c | intralesional steroid → **Biopsy first** (immunosuppressed) | oral med |
+| 565 | rafi_13_d35abe253c | intralesional steroid → **Biopsy first** (immunosuppressed) | oral med || 566 | rafi_13_583c1160ad | giant cell arteritis → **Osteoarthritis** (osteophytes) | OMS |
+
 
 
 
