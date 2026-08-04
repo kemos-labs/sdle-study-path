@@ -603,7 +603,8 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 | 661 | abtal_pack_18d6b0dd01 | perforation → **Ledge** (nothing visible) | endo |
 | 662 | abtal_pack_6ae2a2263d | upper intrusion → **Lower intrusion** (deep bite) | ortho || 663 | abtal_pack_df55e86a2b | rest in amalgam → **Replace + sound structure** | McCracken |
 | 664 | abtal_pack_ec92f0db38 | proceed → **Epi + call ER** (anaphylaxis) | med |
-| 665 | abtal_pack_c8dd9adb56 | antiviral → **Corticosteroids** (GCA) | oral med |
+| 665 | abtal_pack_c8dd9adb56 | antiviral → **Corticosteroids** (GCA) | oral med || 666 | abtal_pack_d67bbf4cef | sufficient heat → **Spores killed** (spore test) | ethics |
+
 
 
 
@@ -1240,6 +1241,13 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - abtal_pack_68b0555ae3 — taurodontism → dentin DYSPLASIA (consistent w/ rafi_18_fb9563be2a; model said AI)
 - abtal_pack_7e0568d3ba — ESRF oral problem = candidiasis (model agrees)
 - abtal_pack_27c8ee79dd — poor OH: IMPLANT more inflammation-susceptible (marked; no PDL seal)
+- abtal_pack_83bd082bbb — LA allergy = ESTER (procaine) (consistent w/ rafi_08_b57823ab6a)
+- abtal_pack_8250ec5c09 — emergency + parents unreachable → DOCTOR proceeds (model agrees)
+- abtal_pack_7b2818fc7b — abnormal PDL-pulp communication = VRF (marked; perforation iatrogenic, accessory canals normal)
+- abtal_pack_68b12642c3 — spontaneous diastema closure ≤2-3 mm (marked 3; model's 2 not offered)
+- abtal_pack_f9b9d852ff — child brushing damage → neglect (not offered); physical marked (broken-ish, keep)
+- abtal_pack_41ddd52224 — adrenal suppression thresholds: none of the small doses cause it (marked kept, broken-ish)
+- abtal_pack_6e6c53a38d — full-thickness lip laceration = 3-LAYER closure (marked; model reason mismatched cleft lip)
 - rafi_16_4ef07a7249 — TMJ pain + restricted movement, no clicking = MPDS (marked; model said DDWOR)
 - rafi_16_140815856b — transplant + ulceration/dysphagia non-keratinized = candidiasis → antifungal mouthwash (marked; model said steroids)
 - rafi_16_5c0de9b377 — MI 3yr ago + severe pain: model reason mismatched (cited INR from another question) — marked kept
