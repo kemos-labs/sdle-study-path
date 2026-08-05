@@ -363,3 +363,22 @@ popup (no click needed) showing the highlighted answer + page number.
   no fake pages where a passage can't be found (items stay plain-reference).
 - Verified: gates green, click test 25/25, contrast 0, LIVE (2,086 flash pages,
   hover popup shows "Sturdevant 5e p. 110 …", 0 errors). Commit `b71e2b8`.
+
+---
+
+## UPDATE 17 (2026-08-06) — Book-reference popup: WHERE + device fixes (user: "where? its not working")
+
+User couldn't find/trigger the hover popup. Root cause: hover only worked on a small
+button (hard to find) and doesn't exist on touch screens. Fixed:
+
+- **Q&A tab**: the WHOLE reference line is now the hover/click target (dotted
+  underline, teal pill) — not a small button. Hover → popup with book + p. N +
+  highlighted answer. Tap/click → full modal. 364/439 items have real pages.
+- **Flash deck**: every card now shows a non-spoiler "📖 Book · p. N" badge BEFORE
+  flipping. Hover → mini popup (book + page + "flip to see highlighted answer").
+  After flipping → full passage button with highlighted answer (hover + click).
+- **Hints** added to Q&A + Flash tabs: "move your mouse over 📖 — popup shows the
+  book page with the answer highlighted; on a phone, tap it."
+- sw.js cache bumped v48→v49 (forces fresh app.js for all users).
+- Live verified: v10 assets, Q&A hover popup OK, pre-flip badge OK, hints OK,
+  0 errors. Commit `226c74a`.
