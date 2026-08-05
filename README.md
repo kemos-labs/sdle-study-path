@@ -5,8 +5,8 @@ Free, open-source browser coach for the **Saudi Dental Licensure Examination (SD
 
 | | |
 |--|--|
-| **Live app** | https://xxxova2.github.io/sdle-study-path/ |
-| **Source code** | https://github.com/xxxova2/sdle-study-path |
+| **Live app** | https://kemos-labs.github.io/sdle-study-path/ |
+| **Source code** | https://github.com/kemos-labs/sdle-study-path |
 | **Intro letter** | [INTRO.md](./INTRO.md) · [EN + AR post](./docs/INTRO_POST_EN_AR.md) |
 | **AI / agent map** | [AGENTS.md](./AGENTS.md) · [docs/AGENT_APP_MAP.md](./docs/AGENT_APP_MAP.md) |
 | **Owner feedback inbox** | [ntfy topic](https://ntfy.sh/sdle-study-path-feedback-xxxova2-k7m9) (no login for students) |
@@ -22,7 +22,7 @@ This app is a step-by-step path so you do not wander between random PDFs.
 1. Pick a plan (14–90 days) on **Today**  
 2. **Read** the lesson in the app  
 3. **Watch** only the listed videos (Drive)  
-4. **Cards + MCQs** until accuracy trends **≥80%**  
+4. **Flashcards + MCQs** until accuracy trends **≥80%**  
 5. Use **Feedback** if something is wrong — the maintainer can read it and fix it  
 
 Full welcome letter: **[INTRO.md](./INTRO.md)**
@@ -31,17 +31,20 @@ Full welcome letter: **[INTRO.md](./INTRO.md)**
 
 ## Tabs
 
-**Simple mode (default):** **Today · Practice · Progress · More**  
-Same content. Fewer choices so first-time students are not lost.
+Bilingual (العربية + English) with emoji for non-technical students. All tabs are always visible on desktop and mobile.
 
 | Tab | Purpose |
 |-----|---------|
-| **Today** | Day path (read → video → cards → quiz) |
-| **Practice** | Extra volume by subject |
-| **Progress** | Score, wrong book, history |
-| **More** | Days, Pass, Always, MCQs hub, Feedback, switch to **Coach mode** |
+| 🏠 **Today** | Your day path (read lesson → drill MCQs → flashcards → mock) + exam blueprint strip |
+| 📖 **Learn** | Micro-lessons by topic |
+| 🎯 **Practice** | MCQs by subject/source, flashcards, mock exams |
+| 💬 **Q&A** | Recent textbook-verified Q&A |
+| 🃏 **Flash** | Flash Notes recall deck (4,451 items) |
+| 📝 **Notes** | Study notes by department |
+| 📈 **Progress** | Scores, wrong book, history |
+| 💬 **Feedback** | Send a note — no login needed |
 
-**Coach mode** (More → “full Coach”): all original tabs (Days, Pass, Always, Extra, MCQs, Feedback) plus volume packs expanded.
+*(The older “More → Coach mode” full tab set still exists behind the scenes; the simple 8-tab layout is the default.)*
 
 ---
 
@@ -58,7 +61,7 @@ Same content. Fewer choices so first-time students are not lost.
 ## Run on your computer
 
 ```bash
-git clone https://github.com/xxxova2/sdle-study-path.git
+git clone https://github.com/kemos-labs/sdle-study-path.git
 cd sdle-study-path
 python3 -m http.server 8765
 ```

@@ -164,7 +164,7 @@ That file is the source of truth for agents: stack, globals, plan tracks, MCQ sc
 
 ## Non-negotiables
 
-1. **Working tree:** Prefer `/data/prometric/sdle-prep` (pushes to `xxxova2/sdle-study-path`). Sibling `sdle-study-path/` may be stale.
+1. **Working tree:** Prefer `/data/prometric/sdle-prep` (pushes to `kemos-labs/sdle-study-path`). Sibling `sdle-study-path/` may be stale.
 2. **Stack:** Vanilla HTML/CSS/JS only. No React/Next unless the user explicitly asks.
 3. **MCQ truth:** Community أبطال ✅ marks are **often wrong**. Prefer clinical/board-standard answers + real hinges. Never reintroduce “Extracted from أبطال… Community bank…” placeholder Why text.
 4. **Surgical changes:** Touch only what the task needs. Don’t reformat all of `app.js` or invent features.
@@ -181,7 +181,7 @@ That file is the source of truth for agents: stack, globals, plan tracks, MCQ sc
 | Plan length / day map | `data/plan_tracks.js` |
 | UI / tabs / quiz player | `js/app.js` |
 | Styles | `css/app.css` |
-| Deploy | `git push origin main` · live https://xxxova2.github.io/sdle-study-path/ |
+| Deploy | `git push origin main` · live https://kemos-labs.github.io/sdle-study-path/ |
 
 ## Local verify
 

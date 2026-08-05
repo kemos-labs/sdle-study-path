@@ -29,9 +29,9 @@
 | 1.1 | Fix `startFlashQuiz()` conversion bug in `js/app.js` | ✅ done — MCQ-format items → real MCQs; recall items → honest Q&A card; garbage/orphan/merged items excluded from quiz; 0 fake "Reveal answer" options (was 3,029) |
 | 1.2 | Fix `[object Object]` source chips bug | ✅ done — renders `s.label`; verified gone in browser |
 | 1.3 | Filter garbage/broken stems out of the study deck | ✅ done — `isGarbageStem` + `_is_option` + `_data_quality: garbage` excluded from quiz; kept in data honestly flagged |
-| 1.4 | Split the 170 merged items (>6 options) | ⬜ next — script: detect repeated `A.` labels / numbered stems, split into items |
+| 1.4 | Split the 170 merged items (>6 options) | ✅ split via `scripts/split_merged_flash.py` — 169/170 split; **1 remaining blob** (`merged_options_review`, 7 options) is flagged `_data_quality` and excluded from quizzes, pending a future split |
 | 1.5 | Repair recoverable broken stems | 🟡 partial — `scripts/repair_flash_stems.py` cleaned 249 stems + recovered 4 inline answers (dry-runnable, idempotent) |
-| 1.6 | Dedupe normalized stems across the 9 sources | ⬜ next — keep best copy, merge `sources` provenance |
+| 1.6 | Dedupe normalized stems across the 9 sources | ✅ done — `scripts/dedupe_flash.py` + stem repairs (`repair_flash_stems.py`); 4,451 unique items, G-DUP norm_stem_extras 0 |
 | 1.7 | Honest badges | ✅ already honest: 📖 evidence candidate / ✅ community / 📝 recall / ⚠ AI disputes |
 | 1.8 | Re-run `gate_flash_notes.py` + Playwright regression | ✅ green (all 7 FN gates) + tabs OK + quiz 0 fake reveals |
 
@@ -54,7 +54,7 @@
 | 2.3 | Batch verification pass #2 (oms 3,765, ortho_pedo 1,476, ethics 892, mixed 488 = 6,621 Q) | ✅ **COMPLETE 2026-08-03** — **100% of the usable bank verified** (15,177 verdicts; 0 error rows — 4 API-failed retried: 1 supported/1 uncertain/2 contradicted→kept; final 18 engine stragglers verified) |
 | 2.4 | Adjudicate flags | ✅ **813 book-verified fixes applied** (log `docs/FLIP_REVIEW_LOG.md` — 806 numbered + 7 pre-numbered; 1,535 contradicted verdicts, ALL human/AI-reviewed, index-verified vs option TEXT, no auto-flips; ~720 keeps documented; 12 broken hidden `usable:false` + `_repair_pending`) |
 | 2.5 | Apply verified verdicts to `questions.js` | ✅ done — supported→book_support refreshed on **9,742 Q** (pass 1 + pass 2), flips applied manually with `[Book: …]` evidence |
-| 2.6 | Regenerate `topics.js` / lessons counts from verified data | ⬜ next |
+| 2.6 | Regenerate `topics.js` / lessons counts from verified data | ✅ done — counts are live-computed from `questions.js` (Practice tab shows Resto 5,246 · Perio 1,452 · Endo 1,845 · OMS 3,777 · Ortho/Pedo 1,484 · Ethics 892); footer 15,166 verified |
 | 2.7 | Gates + spot-check | ✅ gates green after every fix batch + Playwright clean (40Q quiz, 0 fakes) |
 
 **Pilot findings (150 sampled):** 63% supported · 27% uncertain (honest needs-review) · 10% contradicted flags → after human review ~3% real errors (~300-450 across the 15k bank). Retrieval mismatches are the main false-positive cause — every contradicted flag needs human/AI review.
@@ -73,7 +73,7 @@
 | 3.2 | Focus weighting | ✅ endo/perio/restorative default; scenario-based examiner style (pain management, pathogen ID, best-first-step) |
 | 3.3 | Quality gates for generated questions | ✅ validate() + staged to `data/generated/engine_out/` (never auto-merged) |
 | 3.4 | Human-review export | ✅ `--review` shows staged questions |
-| 3.5 | Merge into bank | ⬜ after review — source tag `engine_v1` |
+| 3.5 | Merge into bank | ✅ **DONE** — 35 `engine_v1` items merged with audit + truth_pass/book_verified stamps (2026-08-04) |
 
 **Pilot:** 16 questions generated (endo analgesic strategy, perio pathogens) — 8 passed strict validation. Scale up + review next pass.
 
@@ -89,7 +89,7 @@
 
 ---
 
-## PHASE 5 — App hardening & polish 🟢 LOW
+## PHASE 5 — App hardening & polish ✅ **DONE**
 
 | # | Task |
 |---|---|
@@ -107,3 +107,18 @@
 3. **Batch API calls** — never 1 call per question; 50–200 questions per call with book context.
 4. **Books are the only authority**; community files are sources to mine, never citations.
 5. **Never break the app**: surgical edits, cache-bust, regression test before claiming done.
+
+---
+
+## PHASE 6 — UI/UX redesign for non-technical students ✅ **DONE 2026-08-05**
+
+| # | Task | Status |
+|---|---|---|
+| 6.1 | Web research first (WCAG 2.2 contrast, color theory for reading, UWorld/AMBOSS/Duolingo patterns) | ✅ done — 4.5:1 body / 3:1 large; off-white paper reduces glare; warm ink reduces halation; color never alone (✓/✗ icons) |
+| 6.2 | Replace AI-slop dark navy theme with warm paper light theme | ✅ done — `#FAF7F2` paper · `#2B2620` ink · deep teal `#0B6B59` primary · Cairo font (friendly bilingual) |
+| 6.3 | Fix all hardcoded dark-mode colors (127 hex + 10 rgba + inline JS) | ✅ done |
+| 6.4 | Programmatic WCAG contrast audit — 0 violations across all 10 views | ✅ done — `work/contrast_audit.js` (alpha-blended background math) |
+| 6.5 | Full click-through test — 25/25 steps pass (every tap/click) | ✅ done — `work/clicktest_full.js` |
+| 6.6 | Mobile 390px no overflow + live deploy verified | ✅ done — `app.css?v=20260805ui3`, `app.js?v=20260805v6`, live quiz answered, 0 errors |
+
+**Phase 6 exit criteria:** all interactive elements clickable (25/25) ✅ · contrast 0 violations ✅ · live serving latest assets with 0 junk options ✅ · gates green (9/9 + flash) ✅
