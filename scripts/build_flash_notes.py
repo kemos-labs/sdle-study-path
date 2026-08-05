@@ -44,7 +44,9 @@ SOURCES = [
     ("SDLE_May_2026",  REF / "focus"     / "SDLE_May_2026.md", "numbered"),
     ("Saud_Talkhees",  REF / "focus"     / "تلخيص_سعود__20251130_154203_٠٠٠٠.md", "sectioned"),
     ("Rafi_Maqam_19",  REF / "focus"     / "رفيع_المقام_19_-___دعواتكم__.md", "sectioned"),
-    ("Rafi_Maqam_16",  REF / "focus"     / "رفيع_المقام_١٦.md", "sectioned"),
+    # Rafi 16 uses the FULL pdftotext extraction (2,013 Q). The markitdown
+    # md of the same PDF was a broken partial extract (~68 Q) - do not revert.
+    ("Rafi_Maqam_16",  ROOT / "sdle-prep" / "data" / "raw" / "rafi" / "rafi_part_16.txt", "sectioned"),
     ("Saud_Masahhah",  None, "sectioned"),  # mojibake name, resolved below
     ("June_July2023",  REF / "focus_new"  / "June_July2023_abtal.md", "table"),
     ("GoldenFile2",    REF / "focus_new"  / "Golden_File_2_2021.md", "numbered"),
