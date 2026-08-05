@@ -2259,7 +2259,7 @@
       const list = byDept[d] || [];
       const drills = list.slice(0, 50).map((q) => {
         const ans = (q.options && q.answer != null && q.options[q.answer] != null) ? String(q.options[q.answer]) : "(no text)";
-        const ref = q.book_support ? `<details style="margin:4px 0"><summary class="muted" style="font-size:0.74rem;cursor:pointer">📖 book support${q._page ? ' · p. ' + q._page : ''}</summary><p style="font-size:0.72rem;margin:2px 0 0 12px;color:var(--accent)">${escapeHtml(String(q.book_support)).slice(0,300)}</p>${q._page ? `<button type="button" class="btn sm ghost" data-bookref style="font-size:0.68rem;padding:1px 8px;margin:4px 0 0 12px" data-book="${escapeHtml(String(q.book_support).match(/^\[Book: ([^\]]*)/)?.[1] || 'Book')}" data-page="${escapeHtml(q._page)}" data-ctx="${escapeHtml(q._context || '')}" data-phrase="${escapeHtml(String((q.options && q.options[q.answer]) || q.q).slice(0,90))}">📖 Open passage · p. ${escapeHtml(q._page)}</button>` : ''}</details>` : '';
+        const ref = q.book_support ? `<details style="margin:4px 0"><summary class="muted" style="font-size:0.74rem;cursor:pointer">📖 book support${q._page ? ' · p. ' + q._page : ''}</summary><p style="font-size:0.72rem;margin:2px 0 0 12px;color:var(--accent)">${escapeHtml(String(q.book_support)).slice(0,300)}</p>${q._page ? `<button type="button" class="btn sm ghost" data-bookref style="font-size:0.68rem;padding:1px 8px;margin:4px 0 0 12px" data-book="${escapeHtml(String(q.book_support).match(/^\[Book: ([^\]]*)/)?.[1] || 'Book').replace(/_/g, ' ')}" data-page="${escapeHtml(q._page)}" data-ctx="${escapeHtml(q._context || '')}" data-phrase="${escapeHtml(String((q.options && q.options[q.answer]) || q.q).slice(0,90))}">📖 Open passage · p. ${escapeHtml(q._page)}</button>` : ''}</details>` : '';
         return `<li style="font-size:0.8rem;margin:4px 0;border-bottom:1px dashed var(--border);padding-bottom:4px">
           <b style="color:var(--accent)">✓ ${escapeHtml(ans).slice(0,90)}</b> · ${escapeHtml(String(q.q||'').slice(0,150))}
           ${ref}
@@ -4041,6 +4041,18 @@
     }
   }
 
+  /** Book reference line for quiz feedback: hover/click opens the passage + page. */
+  function bookRefLine(item) {
+    if (!item || !item.book_support) return "";
+    const bs = String(item.book_support || "");
+    const book = (bs.match(/^\[Book: ([^\]]*)/)?.[1] || "Book").replace(/_/g, " ");
+    if (item._page) {
+      const phrase = (item.options && item.options[item.answer]) || item.q || "";
+      return `<p style="margin:6px 0 0"><a href="#" class="bookref-link" data-bookref data-book="${escapeHtml(book)}" data-page="${escapeHtml(item._page)}" data-ctx="${escapeHtml(item._context || '')}" data-phrase="${escapeHtml(String(phrase).slice(0,90))}">📖 ${escapeHtml(book)} — p. ${escapeHtml(item._page)}</a></p>`;
+    }
+    return `<p style="margin:6px 0 0"><span class="muted" style="font-size:0.72rem">📚 ${escapeHtml(bs.slice(0,160))}</span></p>`;
+  }
+
   function formatWhy(item) {
     const body = hingeOnly(item);
     const placeholder = isPlaceholderExplanation(body);
@@ -4072,7 +4084,7 @@
       : `<span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--muted)" title="Community source — not yet textbook-checked">📝 community</span>`;
     return `<div class="explain"><strong>Why:</strong> ${escapeHtml(whyBody)} ${verifiedBadge}</div>
       ${footer}
-      ${scfhsShort}${bookHtml}`;
+      ${scfhsShort}${bookHtml}${bookRefLine(item)}`;
   }
 
   function examPacksMeta() {
