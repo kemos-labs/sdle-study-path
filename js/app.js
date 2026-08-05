@@ -7554,16 +7554,13 @@
         if (m) ansText = m[2].replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim();
       }
       if (!ansText) ansText = "(no marked answer in source — see notes)";
-      const optList = cleanOpts.length > 1
-        ? "\n\nOptions: " + cleanOpts.map((o, i) => String.fromCharCode(65 + i) + ") " + o).join(" · ")
-        : "";
-
+      const whyTxt = why ? "\n\n" + why.slice(0, 300) : "";
       return {
         id: it.id || "fn_" + dept + "_" + Math.random().toString(36).slice(2, 8),
         q: stem,
-        options: [],
+        options: cleanOpts.length > 1 ? cleanOpts.slice(0, 6) : [],
         answer: 0,
-        explanation: "Answer: " + ansText + optList + (why ? "\n\n" + why.slice(0, 300) : ""),
+        explanation: "Answer: " + ansText + whyTxt,
         topic: dept || it.dept || "",
         source: "flash_notes",
         _fnRecall: true
@@ -7618,9 +7615,17 @@
     if (item._fnRecall) {
       const rv = !!qz.revealed && qz.revealed[qz.i];
       const showNext = rv || qz.mode === "learn";
+      const hasPickOpts = (item.options || []).length >= 2;
+      const pickedIdx = (qz.recallPick && qz.recallPick[qz.i] != null) ? qz.recallPick[qz.i] : null;
+      const optsHtml = hasPickOpts
+        ? `<div style="display:flex;flex-direction:column;gap:6px;margin-top:10px">${(item.options||[]).map((o,i)=>{
+            const letter = String.fromCharCode(65+i);
+            const isPicked = pickedIdx === i;
+            return `<button type="button" data-recall-opt="${i}" style="text-align:left;padding:9px 12px;border-radius:8px;cursor:pointer;font-size:0.86rem;line-height:1.45;background:var(--bg1);border:${isPicked?'2px solid var(--accent)':'1px solid var(--border)'};color:var(--text)"><b style="display:inline-block;min-width:1.4em">${letter}.</b> ${escapeHtml(o)}${isPicked?' · your pick':''}</button>`;
+          }).join('')}</div>` : '';
       const ansHtml = rv
         ? `<div class="explain"><strong>Answer</strong></div><div class="q-feedback" style="padding:10px 14px;background:var(--bg1);border:1px solid var(--border);border-radius:var(--radius);font-size:0.92rem;line-height:1.6;white-space:pre-wrap">${escapeHtml(item.explanation || "")}</div>`
-        : `<p class="muted q-feedback-hint">Recall Q&A — tap <b>Show answer</b> to reveal. No scoring; use it to self-test recall.</p>`;
+        : `<p class="muted q-feedback-hint">${hasPickOpts ? 'Answer not book-verified — pick your best to self-test, then <b>Show answer</b> (no scoring).' : 'Recall Q&A — tap <b>Show answer</b> to reveal. No scoring; use it to self-test recall.'}</p>`;
       app.innerHTML = `
         ${backBarHtml("← Back (previous screen)")}
         <div class="q-card q-card-wide">
@@ -7631,6 +7636,7 @@
             ${qz.seconds != null ? `<span class="timer" id="quiz-timer">${formatTime(qz.seconds)}</span>` : ""}
           </div>
           <h2 class="q-stem">${escapeHtml(item.q)}</h2>
+          ${optsHtml}
           <div class="q-layout"><div id="feedback" class="q-feedback">${ansHtml}</div></div>
           <div class="quiz-actions quiz-actions-sticky">
             <button class="btn ghost" id="fn-reveal" ${rv ? "hidden" : ""}>🔍 Show answer</button>
@@ -7640,6 +7646,11 @@
         </div>
       `;
       bindBackBar();
+      app.querySelectorAll("[data-recall-opt]").forEach(b => b.onclick = () => {
+        if (!qz.recallPick) qz.recallPick = [];
+        qz.recallPick[qz.i] = +b.dataset.recallOpt;
+        renderQuizUI();
+      });
       const revealBtn = $("#fn-reveal");
       if (revealBtn) revealBtn.onclick = () => {
         if (!qz.revealed) qz.revealed = [];
