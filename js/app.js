@@ -1422,6 +1422,50 @@
     return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   }
 
+  function showBookRef(book, page, context, phrase) {
+    let el = document.getElementById('bookref-modal');
+    if (!el) {
+      el = document.createElement('div');
+      el.id = 'bookref-modal';
+      el.style.cssText = 'position:fixed;inset:0;background:rgba(20,16,10,.5);z-index:999;display:flex;align-items:center;justify-content:center;padding:16px';
+      el.addEventListener('click', (e) => { if (e.target === el) el.style.display = 'none'; });
+      document.body.appendChild(el);
+    }
+    const ctx = escapeHtml(context || '');
+    const hl = escapeHtml((phrase || '').slice(0, 90));
+    let body = ctx;
+    if (hl && ctx) {
+      // lenient: try full phrase, then 40/28-char prefixes, whitespace-tolerant
+      let markLen = -1, mi = -1;
+      for (const L of [90, 40, 28, 18]) {
+        const sub = hl.slice(0, L);
+        if (!sub) continue;
+        const i = ctx.toLowerCase().indexOf(sub.toLowerCase());
+        if (i >= 0) { mi = i; markLen = sub.length; break; }
+      }
+      if (mi >= 0 && markLen > 0) {
+        body = ctx.slice(0, mi) + '<mark style="background:#ffe58a;color:#3b2f14;padding:0 3px;border-radius:3px">' + ctx.slice(mi, mi + markLen) + '</mark>' + ctx.slice(mi + markLen);
+      }
+    }
+    el.innerHTML = `<div style="background:var(--bg2,#fffdf8);max-width:680px;width:100%;border-radius:14px;padding:20px 22px;max-height:82vh;overflow:auto;box-shadow:0 12px 44px rgba(0,0,0,.35);cursor:default">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px">
+        <strong style="font-size:1rem;color:var(--accent,#0b6b59)">📖 ${escapeHtml(book || 'Book')}${page ? ' <span class="badge" style="font-size:0.72rem;background:var(--accent,#0b6b59);color:#fff">p. ' + page + '</span>' : ''}</strong>
+        <button type="button" class="btn sm ghost" style="padding:2px 12px;font-size:0.75rem">✕ Close</button>
+      </div>
+      ${page ? '<p style="font-size:0.75rem;color:var(--muted);margin:0 0 8px">Open your book PDF to <b>page ' + page + '</b> for the full passage.</p>' : ''}
+      <div style="font-size:0.86rem;line-height:1.75;background:var(--bg1,#faf7f2);border-left:4px solid var(--accent,#0b6b59);border-radius:0 8px 8px 0;padding:12px 14px;color:var(--text,#2b2620);max-height:52vh;overflow:auto;white-space:pre-wrap">${body || '<span class="muted">No passage text available.</span>'}</div>
+    </div>`;
+    el.style.display = 'flex';
+    el.querySelector('button').onclick = () => { el.style.display = 'none'; };
+  }
+  // delegated: any element with [data-bookref] opens the book-reference modal
+  app.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-bookref]');
+    if (!b) return;
+    e.preventDefault();
+    showBookRef(b.dataset.book, b.dataset.page, b.dataset.ctx, b.dataset.phrase);
+  });
+
   function shuffle(a) {
     const arr = a.slice();
     for (let i = arr.length - 1; i > 0; i--) {
@@ -2136,7 +2180,7 @@
       const list = byDept[d] || [];
       const drills = list.slice(0, 50).map((q) => {
         const ans = (q.options && q.answer != null && q.options[q.answer] != null) ? String(q.options[q.answer]) : "(no text)";
-        const ref = q.book_support ? `<details style="margin:4px 0"><summary class="muted" style="font-size:0.74rem;cursor:pointer">📖 book support</summary><p style="font-size:0.72rem;margin:2px 0 0 12px;color:var(--accent)">${escapeHtml(String(q.book_support)).slice(0,300)}</p></details>` : '';
+        const ref = q.book_support ? `<details style="margin:4px 0"><summary class="muted" style="font-size:0.74rem;cursor:pointer">📖 book support${q._page ? ' · p. ' + q._page : ''}</summary><p style="font-size:0.72rem;margin:2px 0 0 12px;color:var(--accent)">${escapeHtml(String(q.book_support)).slice(0,300)}</p>${q._page ? `<button type="button" class="btn sm ghost" data-bookref style="font-size:0.68rem;padding:1px 8px;margin:4px 0 0 12px" data-book="${escapeHtml(String(q.book_support).match(/^\[Book: ([^\]]*)/)?.[1] || 'Book')}" data-page="${escapeHtml(q._page)}" data-ctx="${escapeHtml(q._context || '')}" data-phrase="${escapeHtml(String(q.q).slice(0,90))}">📖 Open passage · p. ${escapeHtml(q._page)}</button>` : ''}</details>` : '';
         return `<li style="font-size:0.8rem;margin:4px 0;border-bottom:1px dashed var(--border);padding-bottom:4px">
           <b style="color:var(--accent)">✓ ${escapeHtml(ans).slice(0,90)}</b> · ${escapeHtml(String(q.q||'').slice(0,150))}
           ${ref}
@@ -4325,7 +4369,7 @@
           <ul style="list-style:none;padding:0;margin:8px 0">${optHtml}</ul>
           <p style="margin:8px 0 4px;color:var(--accent);font-weight:600">Answer: ${escapeHtml(item.answerText || "")}</p>
           <p style="margin:6px 0;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;font-size:0.82rem"><b>📖 Why:</b> ${escapeHtml(item.why || "")}</p>
-          <p class="muted" style="font-size:0.72rem;margin-top:4px">📚 ${escapeHtml(item.reference || "")}</p>
+          <p style="margin:6px 0 0">${item._page ? `<button type="button" class="btn sm ghost" data-bookref style="font-size:0.72rem;padding:1px 10px" data-book="${escapeHtml(item.reference || '')}" data-page="${escapeHtml(item._page)}" data-ctx="${escapeHtml(item._context || '')}" data-phrase="${escapeHtml(item.answerText || item.answer || '')}">📖 ${escapeHtml(item.reference || 'Book')} — p. ${escapeHtml(item._page)}</button>` : `<span class="muted" style="font-size:0.72rem">📚 ${escapeHtml(item.reference || '')}</span>`}${item._verified === "recall" ? ' <span class="badge" style="font-size:0.6rem;background:var(--bg3);color:var(--muted)">recall — no verbatim passage</span>' : ''}</p>
         </article>`;
       } else {
         return `<article class="simple-note note-full" style="margin-bottom:12px">
@@ -4336,7 +4380,7 @@
           <p class="note-stem"><strong>Q:</strong> ${escapeHtml(item.stem)}</p>
           <p style="margin:8px 0;padding:10px 12px;background:var(--bg2);border-radius:var(--radius);color:var(--accent2)"><b>Answer:</b> ${escapeHtml(item.answer || "")}</p>
           <p style="margin:6px 0;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;font-size:0.82rem"><b>📖 Why:</b> ${escapeHtml(item.why || "")}</p>
-          <p class="muted" style="font-size:0.72rem;margin-top:4px">📚 ${escapeHtml(item.reference || "")}${item._verified === "recall" ? ' <span class="badge" style="font-size:0.6rem;background:var(--bg3);color:var(--muted)">recall — no verbatim passage</span>' : ''}</p>
+          <p style="margin:6px 0 0">${item._page ? `<button type="button" class="btn sm ghost" data-bookref style="font-size:0.72rem;padding:1px 10px" data-book="${escapeHtml(item.reference || '')}" data-page="${escapeHtml(item._page)}" data-ctx="${escapeHtml(item._context || '')}" data-phrase="${escapeHtml(item.answer || '')}">📖 ${escapeHtml(item.reference || 'Book')} — p. ${escapeHtml(item._page)}</button>` : `<span class="muted" style="font-size:0.72rem">📚 ${escapeHtml(item.reference || '')}</span>`}${item._verified === "recall" ? ' <span class="badge" style="font-size:0.6rem;background:var(--bg3);color:var(--muted)">recall — no verbatim passage</span>' : ''}</p>
         </article>`;
       }
     }
@@ -4476,6 +4520,24 @@
     if (fnSrc) {
       fnListRaw = fnListRaw.filter(it => (it.sources || []).includes(fnSrc));
     }
+    const fnQ = (state._fnSearch || "").trim().toLowerCase();
+    if (fnQ) {
+      // search across ALL departments
+      const archiveMode = !!state._fnArchive;
+      const allDeptItems = [];
+      Object.keys(FN.byDept || {}).forEach(did => {
+        (FN.byDept[did] || []).forEach(it => {
+          if (it._merged_into) return;
+          const isArchive = it._raw_recall || it._unverified || it._data_quality === 'merged_options_review';
+          if (archiveMode !== isArchive) return;
+          allDeptItems.push(it);
+        });
+      });
+      fnListRaw = allDeptItems.filter(it => {
+        const hay = [it.stem, it.answer, it.why, (it.options || []).join(" "), it._embedded_answer, it.reference].join(" ").toLowerCase();
+        return hay.includes(fnQ);
+      });
+    }
     const fnList = fnListRaw;
     if (!state._fnStudyIdx || state._fnStudyIdx >= fnList.length) state._fnStudyIdx = 0;
     const fnTotal = fnList.length;
@@ -4560,7 +4622,8 @@
       // needs-review keyword hits as textbook evidence.
       let bookHtml = '';
       if (hasBookEvidence && typeof bookExp === 'object' && bookExp.passage) {
-        bookHtml = `<details style="margin:8px 0 0;font-size:0.78rem"><summary style="cursor:pointer;font-weight:600;color:var(--accent)">📖 Candidate book evidence: ${escapeHtml(bookExp.book||'')} ${escapeHtml(bookExp.chapter||'')}</summary><p class="muted" style="margin:6px 0 0 8px;font-size:0.72rem">Automated match — not a final answer judgment.</p><p style="margin:6px 0 0 8px;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;color:var(--text);line-height:1.5">${escapeHtml((bookExp.passage||'').slice(0,400))}</p></details>`;
+        const bPage = bookExp.page || (it._page) || '';
+        bookHtml = `<details style="margin:8px 0 0;font-size:0.78rem"><summary style="cursor:pointer;font-weight:600;color:var(--accent)">📖 Candidate book evidence: ${escapeHtml(bookExp.book||'')} ${escapeHtml(bookExp.chapter||'')}${bPage ? ' · p. ' + escapeHtml(bPage) : ''}</summary><p class="muted" style="margin:6px 0 0 8px;font-size:0.72rem">Automated match — not a final answer judgment.</p><p style="margin:6px 0 0 8px;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;color:var(--text);line-height:1.5">${escapeHtml((bookExp.passage||'').slice(0,400))}</p>${bPage ? `<button type="button" class="btn sm ghost" data-bookref style="font-size:0.68rem;padding:1px 8px;margin:6px 0 0 8px" data-book="${escapeHtml(bookExp.book||'')}" data-page="${escapeHtml(bPage)}" data-ctx="${escapeHtml(bookExp.context || bookExp.passage || '')}" data-phrase="${escapeHtml((it.answer || '') || '')}">📖 Open passage · p. ${escapeHtml(bPage)}</button>` : ''}</details>`;
       } else if (hasBookEvidence && typeof bookExp === 'string' && bookExp.trim()) {
         bookHtml = `<p style="margin:8px 0 0;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;font-size:0.82rem;color:var(--text)"><b style="color:var(--accent)">📖 Candidate book evidence:</b> ${escapeHtml(bookExp).slice(0,320)}</p>`;
       }
@@ -4738,6 +4801,8 @@
         <!-- Source pills -->
         <div style="display:flex;flex-wrap:wrap;gap:3px;margin-bottom:6px" id="fn-source-pills-study">${sourceChipsHtml}</div>
 
+        <input type="search" id="fn-search" placeholder="Search flashcards · ابحث (question, answer, option…)" value="${escapeHtml(state._fnSearch || "")}" style="width:100%;box-sizing:border-box;padding:8px 12px;border-radius:10px;border:1px solid var(--border);background:var(--bg1);color:var(--text);font-size:0.85rem;margin-bottom:6px" aria-label="Search flashcards" />
+
         <!-- Dept filter + study card -->
         <div style="display:flex;gap:4px;flex-wrap:wrap;align-items:center;margin-bottom:6px">
           <span style="font-size:0.8rem;font-weight:600;color:var(--text)">📓</span>
@@ -4873,6 +4938,21 @@
     app.querySelectorAll("[data-fn-disputed]").forEach(b => {
       b.onclick = () => { state._fnDisputed = !state._fnDisputed; state._fnStudySource = ""; state._fnStudyIdx = 0; renderMarJune(); };
       app.querySelectorAll("[data-fn-archive]").forEach(b => b.onclick = () => { state._fnArchive = !state._fnArchive; state._fnDisputed = false; state._fnStudySource = ""; state._fnStudyIdx = 0; renderMarJune(); });
+      const fnSearch = document.getElementById("fn-search");
+      if (fnSearch) {
+        let t;
+        fnSearch.oninput = () => {
+          clearTimeout(t);
+          t = setTimeout(() => {
+            state._fnSearch = fnSearch.value.trim();
+            state._fnStudyIdx = 0;
+            renderMarJune();
+            const el = document.getElementById("fn-search");
+            if (el) { el.focus(); el.setSelectionRange(el.value.length, el.value.length); }
+          }, 180);
+        };
+        fnSearch.addEventListener("keydown", (e) => { if (e.key === "Enter") e.preventDefault(); });
+      }
     });
     app.querySelectorAll("[data-fn-src]").forEach(b => {
       b.onclick = () => { state._fnStudySource = b.dataset.fnSrc; state._fnStudyIdx = 0; renderMarJune(); };
