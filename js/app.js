@@ -4712,8 +4712,24 @@
       } else if (it.answer) {
         ansText = String(it.answer).slice(0, 200);
       } else if (!ansLetter) { ansText = fnInlineAns(it); }
-      const optsHtml = (it.options||[]).length
-        ? `<ul class="fn-opts" style="list-style:none;margin:8px 0;padding:0;display:flex;flex-direction:column;gap:4px">${(it.options||[]).map(o=>{const isA=o.startsWith((ansLetter||"_")+".")||o.startsWith((ansLetter||"_").toLowerCase()+".");return `<li style="padding:6px 10px;border-radius:6px;background:var(--bg1);border:1px solid var(--border);font-size:0.82rem${isA?';background:rgba(27,122,61,.14);border-color:#1b7a3d;font-weight:600':''}">${escapeHtml(o)}${isA?' ✓':''}</li>`;}).join("")}</ul>` : "";
+      const hasOpts = (it.options||[]).length > 0 && (it.answerIdx != null || it.answerLetter);
+      const picked = state._fnPicked;
+      const revealed = !!state._fnRevealed;
+      const correctIdx = it.answerIdx != null ? it.answerIdx : (ansLetter ? String(ansLetter).toUpperCase().charCodeAt(0) - 65 : -1);
+      // OPTIONS — always visible as clickable choices (exam-style: pick one)
+      const optsHtml = hasOpts
+        ? `<div style="margin:10px 0 2px;display:flex;flex-direction:column;gap:6px">${(it.options||[]).map((o,i)=>{
+            const letter = String.fromCharCode(65+i);
+            let style = 'background:var(--bg1);border:1px solid var(--border);color:var(--text);';
+            let tag = '';
+            if (revealed) {
+              if (i === correctIdx) { style = 'background:rgba(27,122,61,.16);border:1px solid #1b7a3d;color:var(--text);font-weight:700;'; tag = ' ✓'; }
+              else if (i === picked) { style = 'background:rgba(192,57,43,.12);border:1px solid #c0392b;color:var(--text);'; tag = ' ✗'; }
+            } else if (i === picked) { style = 'border:2px solid var(--accent);background:var(--bg3);color:var(--text);'; tag = ' · your pick'; }
+            const text = String(o).replace(/^[a-z][).]\s*/i, '').replace(/[✅🟢🟡✳🔵🔁●]/g, '').trim();
+            return `<button type="button" data-fn-opt="${i}" style="text-align:left;padding:9px 12px;border-radius:8px;cursor:pointer;font-size:0.86rem;line-height:1.45;${style}"><b style="display:inline-block;min-width:1.4em">${letter}.</b> ${escapeHtml(text)}${tag}</button>`;
+          }).join('')}</div>` : '';
+      const revealHint = (hasOpts && !revealed) ? '<p style="margin:8px 0 0;font-size:0.74rem;color:var(--muted)">👆 Pick an option — or press <b>🔍 Show answer</b> to reveal the correct one.</p>' : '';
       const ansLine = (ansLetter||ansText)
         ? `<p style="margin:8px 0 4px;color:var(--text);font-size:0.95rem"><b style="color:var(--muted);font-size:0.72rem;text-transform:uppercase;letter-spacing:.04em">Answer</b> ${ansLetter?`<span style="display:inline-block;min-width:1.4em;padding:1px 7px;margin:0 4px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;text-align:center;font-size:0.8rem">${escapeHtml(ansLetter)}</span>`:''}${ansText?`<span style="color:var(--accent);font-weight:600">${escapeHtml(ansText)}</span>`:''}</p>`
         : '<p class="muted" style="margin:8px 0 4px;font-size:0.8rem;color:var(--muted)">no marked answer</p>';
@@ -4783,7 +4799,6 @@
             ? ''
             : ' <span class="badge" style="font-size:0.58rem;background:var(--bg3);color:var(--muted)">🤖 AI: unknown</span>')
         : '';
-      const hasOpts = (it.options||[]).length > 0 && (it.answerIdx != null || it.answerLetter);
       const hasCommunity = !!((it._verified_explanation || '').trim());
       const marker = fnMarkerBadge(it.marker, hasOpts, hasBookEvidence, hasCommunity);
       // Card label: evidence candidate > community > MCQ > recall
@@ -4804,10 +4819,11 @@
       const preFlipBadge = (it._page && bookExp && typeof bookExp === 'object' && bookExp.book)
         ? `<a href="#" class="bookref-link bookref-mini" data-bookref data-mini="1" data-book="${escapeHtml(bookExp.book)}" data-page="${escapeHtml(it._page)}" style="display:inline-block;margin:6px 0 0">📖 ${escapeHtml(bookExp.book)} · p. ${escapeHtml(it._page)}</a>`
         : '';
-      return `<div class="fn-study-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;min-height:150px;cursor:pointer" onclick="var b=this.querySelector('.fn-study-body');if(b){b.style.display='block'};var r=document.getElementById('fn-reveal');if(r){r.textContent='🔍 Answer shown';r.disabled=true}">${preFlipBadge}
+      return `<div class="fn-study-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;min-height:150px">${preFlipBadge}
         <div style="margin-bottom:4px">${cardLabel}</div>
         <div class="fn-study-q" style="font-size:1.05rem;line-height:1.6;color:var(--text)">${q}${imgFlag}${qualityFlag}${disputedFlag}${aiBadge}${repairedFlag}</div>
-        <div class="fn-study-body" style="display:none;margin-top:10px;padding-top:10px;border-top:1px dashed var(--border)">${ansLine}${aiAnsHtml}${embHtml}${disputeHtml}${optsHtml}${bookHtml}${commHtml}${srcHtml}</div>
+        ${optsHtml}${revealHint}
+        <div class="fn-study-body" style="${revealed ? '' : 'display:none;'}margin-top:10px;padding-top:10px;border-top:1px dashed var(--border)">${ansLine}${aiAnsHtml}${embHtml}${disputeHtml}${bookHtml}${commHtml}${srcHtml}</div>
         <div style="margin-top:10px;font-size:0.72rem;color:var(--muted)">${marker}</div>
       </div>`;
     };
@@ -5019,14 +5035,14 @@
 
     // Study-deck source cards + type filter + reset
     app.querySelectorAll("[data-fn-src]").forEach(b => {
-      b.onclick = () => { state._fnStudySource = b.dataset.fnSrc; state._fnStudyIdx = 0; renderMarJune(); };
+      b.onclick = () => { state._fnStudySource = b.dataset.fnSrc; state._fnStudyIdx = 0; state._fnPicked = null; state._fnRevealed = false; renderMarJune(); };
     });
     app.querySelectorAll("[data-fn-type]").forEach(b => {
-      b.onclick = () => { state._fnType = b.dataset.fnType; state._fnStudyIdx = 0; renderMarJune(); };
+      b.onclick = () => { state._fnType = b.dataset.fnType; state._fnStudyIdx = 0; state._fnPicked = null; state._fnRevealed = false; renderMarJune(); };
     });
     const fnResetBtn = document.getElementById("fn-reset");
     if (fnResetBtn) fnResetBtn.onclick = () => {
-      state._fnStudySource = ""; state._fnType = ""; state._fnDept = ""; state._fnArchive = false; state._fnDisputed = false; state._fnSearch = ""; state._fnStudyIdx = 0;
+      state._fnStudySource = ""; state._fnType = ""; state._fnDept = ""; state._fnArchive = false; state._fnDisputed = false; state._fnSearch = ""; state._fnStudyIdx = 0; state._fnPicked = null; state._fnRevealed = false;
       renderMarJune();
     };
 
@@ -5078,11 +5094,11 @@
 
     // Flash Notes: department chips + source chips + study widget controls
     app.querySelectorAll("[data-fn-dept]").forEach(b => {
-      b.onclick = () => { state._fnDept = b.dataset.fnDept; state._fnStudySource = ""; state._fnDisputed = false; state._fnStudyIdx = 0; renderMarJune(); };
+      b.onclick = () => { state._fnDept = b.dataset.fnDept; state._fnStudySource = ""; state._fnDisputed = false; state._fnStudyIdx = 0; state._fnPicked = null; state._fnRevealed = false; renderMarJune(); };
     });
     app.querySelectorAll("[data-fn-disputed]").forEach(b => {
-      b.onclick = () => { state._fnDisputed = !state._fnDisputed; state._fnStudySource = ""; state._fnStudyIdx = 0; renderMarJune(); };
-      app.querySelectorAll("[data-fn-archive]").forEach(b => b.onclick = () => { state._fnArchive = !state._fnArchive; state._fnDisputed = false; state._fnStudySource = ""; state._fnStudyIdx = 0; renderMarJune(); });
+      b.onclick = () => { state._fnDisputed = !state._fnDisputed; state._fnStudySource = ""; state._fnStudyIdx = 0; state._fnPicked = null; state._fnRevealed = false; renderMarJune(); };
+      app.querySelectorAll("[data-fn-archive]").forEach(b => b.onclick = () => { state._fnArchive = !state._fnArchive; state._fnDisputed = false; state._fnStudySource = ""; state._fnStudyIdx = 0; state._fnPicked = null; state._fnRevealed = false; renderMarJune(); });
       const fnSearch = document.getElementById("fn-search");
       if (fnSearch) {
         let t;
@@ -5104,20 +5120,32 @@
     });
     // Disputed-answer review list
     fnDisputeReview();
+    // Study widget: scroll the deck back into view after re-render
+    const scrollToStudy = () => {
+      const el = document.getElementById("fn-study-widget");
+      if (el) el.scrollIntoView({ block: "center", behavior: "smooth" });
+    };
+    // Study widget: pick an option (MCQs) -> instantly reveals the correct answer
+    app.querySelectorAll("[data-fn-opt]").forEach(b => {
+      b.onclick = () => {
+        state._fnPicked = +b.dataset.fnOpt;
+        state._fnRevealed = true;
+        renderMarJune();
+        scrollToStudy();
+      };
+    });
     // Study widget: reveal answer
     const revealBtn = document.getElementById("fn-reveal");
     if (revealBtn) revealBtn.onclick = () => {
-      const body = document.querySelector(".fn-study-body");
-      if (body) {
-        body.style.display = "block";
-        revealBtn.textContent = "🔍 Answer shown";
-        revealBtn.disabled = true;
-      }
+      state._fnRevealed = true;
+      renderMarJune();
+      scrollToStudy();
     };
     // Study widget: prev/next
     const goStudy = (delta) => {
       if (!fnTotal) return;
       state._fnStudyIdx = Math.max(0, Math.min(fnTotal - 1, (state._fnStudyIdx || 0) + delta));
+      state._fnPicked = null; state._fnRevealed = false;
       renderMarJune();
     };
     const prevBtn = document.getElementById("fn-prev");
