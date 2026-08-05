@@ -259,3 +259,21 @@
 - Nav active = solid teal pill + white text; touch targets 42–48px; visible focus rings; removed light-blue-on-paper invisibility, white-on-light step counter, muted-on-green chips, blue rgba selection tints (127 hex + 10 rgba replacements)
 - **Programmatic WCAG contrast audit** (`work/contrast_audit.js`): audits every visible text node in all 10 views with alpha-blended backgrounds → **0 violations**
 - Mobile 390px: no horizontal overflow anywhere; full regression green (8/8 tabs, 10-Q quiz 0 junk, mock, flash counter, blueprint, banner); live verified: `app.css?v=20260805ui3`, `app.js?v=20260805v6`, body bg rgb(250,247,242), Cairo, 0 console/page errors, live quiz answers with green/red feedback visible
+
+---
+
+## UPDATE 11 (2026-08-05) — Full completion audit: docs read + every tap/click tested (local AND live)
+
+**Docs read to verify completion state (README.md, AGENTS.md, MASTER_PLAN.md, SESSION_HANDOFF UPDATEs 1–10, FLIP_REVIEW_LOG):**
+- Phase 0–6 all ✅ (foundation · flash notes · 100% bank verification · question engine merge · lessons/plan 73.9% big-4 · hardening · UI warm-paper theme)
+- **Doc drift fixed**: README + AGENTS referenced dead `xxxova2` repo URL → `kemos-labs`; README described obsolete "Simple/Coach mode" → now documents the real 8 bilingual tabs; MASTER_PLAN Phase 3.5 (engine merge), 2.6 (counts live-computed), 1.4 (flash split — **corrected to honest status**: 169/170 split, 1 blob quarantined `merged_options_review` + excluded from quiz), 1.6 (dedupe) statuses synced; new Phase 6 row added.
+- **Data truth-check**: flash 4,451 items · 0 fake "Reveal answer" · 1,877 MCQ · 1,745 recall Q&A · 829 single-answer recall · max options 6 except 1 quarantined blob.
+
+**Every tap & click tested — new `work/clicktest_full.js` (25 steps):**
+- Plan picker (all 5 durations) · welcome banner dismiss · blueprint strip · 6 clickable day steps · start lesson · lesson reading · lesson quiz + feedback · next day · all 11 pool chips open size selectors · 5-Q quiz flow with feedback · mock start + timer + **auto-advance (exam mode by design)** · flash counter "4451 items" + dept cards + flash quiz (MCQ + recall) + reveal · Q&A 62 items · notes · progress · feedback textarea · search returns results
+- Native `confirm()` on leaving timed mocks confirmed as intentional guard (dialog handler in test)
+- **25/25 PASS locally AND on the live site** (kemos-labs.github.io/sdle-study-path) · 0 console/page errors both
+
+**Recent-vs-old data verified live:** serves `questions.js?v=20260804v6` (0 "(not listed)" options in live bank) · `app.js?v=20260805v6` · `app.css?v=20260805ui3` (warm paper) · `lessons.js?v=20260804e1` · `plan_tracks.js?v=20260803p4` · `flash_notes.js?v=20260803fn6` — no stale assets.
+
+**Remaining honest backlog (registered, not blocking):** 1 quarantined flash blob · ~20 usable-with-caveat needs-review items (FLIP_REVIEW_LOG) · 2,019 "uncertain" verdicts spot-check (low priority).
