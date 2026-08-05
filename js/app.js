@@ -1468,6 +1468,24 @@
     hideBookTip();
     tipEl = document.createElement('div');
     tipEl.className = 'bookref-tip';
+    if (b.dataset.mini) {
+      tipEl.innerHTML = `<div style="background:var(--bg2,#fffdf8);max-width:320px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.28);border:1px solid var(--border);padding:12px 14px;cursor:default">
+        <strong style="font-size:0.82rem;color:var(--accent,#0b6b59)">📖 ${escapeHtml(b.dataset.book || 'Book')} <span class="badge" style="font-size:0.66rem;background:var(--accent,#0b6b59);color:#fff">p. ${escapeHtml(b.dataset.page || '?')}</span></strong>
+        <div style="font-size:0.72rem;color:var(--muted);margin-top:6px;line-height:1.5">Flip the card (Show answer) to see this passage with the highlighted answer.</div>
+      </div>`;
+      document.body.appendChild(tipEl);
+      const r = b.getBoundingClientRect();
+      const tw = tipEl.offsetWidth, th = tipEl.offsetHeight;
+      let x = Math.min(Math.max(8, r.left + r.width / 2 - tw / 2), window.innerWidth - tw - 8);
+      let y = r.top - th - 8;
+      if (y < 8) y = r.bottom + 8;
+      tipEl.style.left = x + 'px';
+      tipEl.style.top = y + 'px';
+      tipEl.style.position = 'fixed';
+      tipEl.style.zIndex = '1001';
+      tipEl.style.pointerEvents = 'none';
+      return;
+    }
     const ctx = escapeHtml(b.dataset.ctx || '');
     const hl = escapeHtml((b.dataset.phrase || '').slice(0, 90));
     let body = ctx;
@@ -1508,6 +1526,7 @@
     const b = e.target.closest('[data-bookref]');
     if (!b) return;
     e.preventDefault();
+    if (b.dataset.mini) return; // pre-flip badge: hover info only, no spoiler on tap
     showBookRef(b.dataset.book, b.dataset.page, b.dataset.ctx, b.dataset.phrase);
   });
   app.addEventListener('mouseover', (e) => {
@@ -4429,7 +4448,7 @@
           <ul style="list-style:none;padding:0;margin:8px 0">${optHtml}</ul>
           <p style="margin:8px 0 4px;color:var(--accent);font-weight:600">Answer: ${escapeHtml(item.answerText || "")}</p>
           <p style="margin:6px 0;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;font-size:0.82rem"><b>📖 Why:</b> ${escapeHtml(item.why || "")}</p>
-          <p style="margin:6px 0 0">${item._page ? `<button type="button" class="btn sm ghost" data-bookref style="font-size:0.72rem;padding:1px 10px" data-book="${escapeHtml(item.reference || '')}" data-page="${escapeHtml(item._page)}" data-ctx="${escapeHtml(item._context || '')}" data-phrase="${escapeHtml(item.answerText || item.answer || '')}">📖 ${escapeHtml(item.reference || 'Book')} — p. ${escapeHtml(item._page)}</button>` : `<span class="muted" style="font-size:0.72rem">📚 ${escapeHtml(item.reference || '')}</span>`}${item._verified === "recall" ? ' <span class="badge" style="font-size:0.6rem;background:var(--bg3);color:var(--muted)">recall — no verbatim passage</span>' : ''}</p>
+          <p style="margin:6px 0 0">${item._page ? `<a href="#" class="bookref-link" data-bookref data-book="${escapeHtml(item.reference || '')}" data-page="${escapeHtml(item._page)}" data-ctx="${escapeHtml(item._context || '')}" data-phrase="${escapeHtml(item.answerText || item.answer || '')}">📖 ${escapeHtml(item.reference || 'Book')} — p. ${escapeHtml(item._page)}</a>` : `<span class="muted" style="font-size:0.72rem">📚 ${escapeHtml(item.reference || '')}</span>`}${item._verified === "recall" ? ' <span class="badge" style="font-size:0.6rem;background:var(--bg3);color:var(--muted)">recall — no verbatim passage</span>' : ''}</p>
         </article>`;
       } else {
         return `<article class="simple-note note-full" style="margin-bottom:12px">
@@ -4440,13 +4459,14 @@
           <p class="note-stem"><strong>Q:</strong> ${escapeHtml(item.stem)}</p>
           <p style="margin:8px 0;padding:10px 12px;background:var(--bg2);border-radius:var(--radius);color:var(--accent2)"><b>Answer:</b> ${escapeHtml(item.answer || "")}</p>
           <p style="margin:6px 0;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;font-size:0.82rem"><b>📖 Why:</b> ${escapeHtml(item.why || "")}</p>
-          <p style="margin:6px 0 0">${item._page ? `<button type="button" class="btn sm ghost" data-bookref style="font-size:0.72rem;padding:1px 10px" data-book="${escapeHtml(item.reference || '')}" data-page="${escapeHtml(item._page)}" data-ctx="${escapeHtml(item._context || '')}" data-phrase="${escapeHtml(item.answer || '')}">📖 ${escapeHtml(item.reference || 'Book')} — p. ${escapeHtml(item._page)}</button>` : `<span class="muted" style="font-size:0.72rem">📚 ${escapeHtml(item.reference || '')}</span>`}${item._verified === "recall" ? ' <span class="badge" style="font-size:0.6rem;background:var(--bg3);color:var(--muted)">recall — no verbatim passage</span>' : ''}</p>
+          <p style="margin:6px 0 0">${item._page ? `<a href="#" class="bookref-link" data-bookref data-book="${escapeHtml(item.reference || '')}" data-page="${escapeHtml(item._page)}" data-ctx="${escapeHtml(item._context || '')}" data-phrase="${escapeHtml(item.answer || '')}">📖 ${escapeHtml(item.reference || 'Book')} — p. ${escapeHtml(item._page)}</a>` : `<span class="muted" style="font-size:0.72rem">📚 ${escapeHtml(item.reference || '')}</span>`}${item._verified === "recall" ? ' <span class="badge" style="font-size:0.6rem;background:var(--bg3);color:var(--muted)">recall — no verbatim passage</span>' : ''}</p>
         </article>`;
       }
     }
 
     app.innerHTML = `
       <div class="simple-hub">
+        <p style="font-size:0.72rem;color:var(--muted);margin:0 0 8px">💡 <b>Book links:</b> move your mouse over any <b>📖 book link</b> — a popup shows the book page with the answer highlighted. On a phone, <b>tap</b> it instead.</p>
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
           <h1 style="margin:0;font-size:1.4rem">📖 Recent Q&A <span style="font-size:0.8rem;color:var(--muted);font-weight:400">أسئلة وأجوبة جديدة</span></h1>
           <span style="color:var(--accent2);font-weight:600">${items.length} items</span>
@@ -4729,7 +4749,10 @@
       } else {
         cardLabel = '<span class="badge" style="font-size:0.6rem;background:var(--bg3);color:var(--muted)">📝 recall</span>';
       }
-      return `<div class="fn-study-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;min-height:150px;cursor:pointer" onclick="var b=this.querySelector('.fn-study-body');if(b){b.style.display='block'};var r=document.getElementById('fn-reveal');if(r){r.textContent='🔍 Answer shown';r.disabled=true}">
+      const preFlipBadge = (it._page && bookExp && typeof bookExp === 'object' && bookExp.book)
+        ? `<a href="#" class="bookref-link bookref-mini" data-bookref data-mini="1" data-book="${escapeHtml(bookExp.book)}" data-page="${escapeHtml(it._page)}" style="display:inline-block;margin:6px 0 0">📖 ${escapeHtml(bookExp.book)} · p. ${escapeHtml(it._page)}</a>`
+        : '';
+      return `<div class="fn-study-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;min-height:150px;cursor:pointer" onclick="var b=this.querySelector('.fn-study-body');if(b){b.style.display='block'};var r=document.getElementById('fn-reveal');if(r){r.textContent='🔍 Answer shown';r.disabled=true}">${preFlipBadge}
         <div style="margin-bottom:4px">${cardLabel}</div>
         <div class="fn-study-q" style="font-size:1.05rem;line-height:1.6;color:var(--text)">${q}${imgFlag}${qualityFlag}${disputedFlag}${aiBadge}${repairedFlag}</div>
         <div class="fn-study-body" style="display:none;margin-top:10px;padding-top:10px;border-top:1px dashed var(--border)">${ansLine}${aiAnsHtml}${embHtml}${disputeHtml}${optsHtml}${bookHtml}${commHtml}${srcHtml}</div>
@@ -4862,6 +4885,7 @@
         <div style="display:flex;flex-wrap:wrap;gap:3px;margin-bottom:6px" id="fn-source-pills-study">${sourceChipsHtml}</div>
 
         <input type="search" id="fn-search" placeholder="Search flashcards · ابحث (question, answer, option…)" value="${escapeHtml(state._fnSearch || "")}" style="width:100%;box-sizing:border-box;padding:8px 12px;border-radius:10px;border:1px solid var(--border);background:var(--bg1);color:var(--text);font-size:0.85rem;margin-bottom:6px" aria-label="Search flashcards" />
+        <p style="font-size:0.72rem;color:var(--muted);margin:0 0 6px">💡 <b>Book links:</b> hover over <b>📖</b> — a popup shows the book page with the answer highlighted. On a phone, <b>tap</b> it.</p>
 
         <!-- Dept filter + study card -->
         <div style="display:flex;gap:4px;flex-wrap:wrap;align-items:center;margin-bottom:6px">

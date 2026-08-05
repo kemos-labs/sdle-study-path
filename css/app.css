@@ -4071,3 +4071,22 @@ a:hover { text-decoration-color: var(--accent); }
 /* book reference hover popup */
 .bookref-tip { animation: tipIn 0.14s ease-out; }
 @keyframes tipIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+/* clickable/hoverable book reference link */
+.bookref-link {
+  color: var(--accent, #0b6b59);
+  text-decoration: underline dotted rgba(11,107,89,.5);
+  text-underline-offset: 3px;
+  cursor: pointer;
+  font-size: 0.74rem;
+  background: var(--bg1, #faf7f2);
+  padding: 1px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border, #e3dccb);
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+.bookref-link:hover {
+  background: var(--accent, #0b6b59);
+  color: #fff;
+  border-color: var(--accent, #0b6b59);
+}
+.bookref-mini { font-size: 0.7rem; }
