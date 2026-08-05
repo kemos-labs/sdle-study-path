@@ -122,3 +122,16 @@
 | 6.6 | Mobile 390px no overflow + live deploy verified | ✅ done — `app.css?v=20260805ui3`, `app.js?v=20260805v6`, live quiz answered, 0 errors |
 
 **Phase 6 exit criteria:** all interactive elements clickable (25/25) ✅ · contrast 0 violations ✅ · live serving latest assets with 0 junk options ✅ · gates green (9/9 + flash) ✅
+
+---
+
+## PHASE 7 — Backlog completion (books-only re-verification + repairs) ✅ **DONE 2026-08-06**
+
+| # | Task | Status |
+|---|---|---|
+| 7.1 | Re-verify all 2,020 'uncertain' verdicts against OFFICIAL books only (4 parallel shards, 2 passes) | ✅ **DONE** — `scripts/verify_uncertain.py`; corpus = `data/raw/books/text/*.txt` + `sdle-ref/books/*.md` (factpacks/community excluded). **265 questions upgraded to real verbatim [Book:] passages** (134 + 131); **93 contradicted logged** (`docs/FLIP_REVIEW_LOG.md` — pending review, never auto-applied); **1,662 honestly remain uncertain** (facts not in the books — kept as factpack-ref, not claimed verbatim) |
+| 7.2 | Repair the needs-review questions with book passages | ✅ **DONE** — 17 items repaired with passages (firm-ridge closed-mouth, 3-month crown lengthening ×2, indirect retainer, 4-week lateral luxation, philtrum midline, MTA 3:1, night-pain irreversible pulpitis, ZOE sealer, surgical crown lengthening, 0.2 mm/yr, PPS over-extension, ISO 15, silver-point corrosion, osteoclast, cool-slab ZOE, esthetic amalgam contraindication, plaque gingivitis); **11 hidden questions unhidden** (15,166 → 15,177 usable); every answer index-vs-text verified |
+| 7.3 | Split/fix quarantined flash merged blobs | ✅ **DONE** — 4,451 items, **0 merged blobs, 0 >6-option items**; flash gate green |
+| 7.4 | Final verify: gates + click test + contrast + live | ✅ gates 9/9 + flash · click 25/25 local+live · contrast 0 violations · live serving `questions.js?v=20260806v7` `flash_notes.js?v=20260806fn7` 15,177 usable · 0 junk · 0 errors |
+
+**Honest remaining (registered):** 1,662 recall questions whose facts are not found verbatim in the official books (kept usable, support = factpack summary ref, never claimed as verbatim passage) · 93 contradicted flags pending human review (never auto-applied).

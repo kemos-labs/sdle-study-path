@@ -292,3 +292,18 @@
 - **New audit `work/contrast_audit2.js`** — cannot silently skip again: it renders ALL 14 lessons (Next-day loop) + all 8 tabs + quiz + flash + micro-lessons, and adds a **human-eyes rule**: any text with luminance > 0.55 on bg luminance > 0.70 is flagged as LIGHT-ON-LIGHT, independent of the WCAG ratio math. Result: **0 violations local AND live**, 25/25 click test green, gates green.
 
 **Lesson for future agents (added to AGENTS.md mentally):** "test like a human" = render EVERY content view (not one), walk text nodes with a luminance rule, never rely on a selector that can silently fail (verify the view actually changed).
+
+---
+
+## UPDATE 13 (2026-08-06) — Backlog finished: books-only re-verify (2,020) + 17 repairs + flash split
+
+**User order honored:** official books ONLY (`/data/prometric/books` → corpus `data/raw/books/text/*.txt` + `sdle-ref/books/*.md`); rafi/abtal are question sources, never citations; factpacks never used as evidence.
+
+- **Uncertain verdicts (2,020)** — `scripts/verify_uncertain.py`, 4 parallel deepseek shards × 2 passes:
+  - **265 upgraded to real verbatim [Book:] passages** (was factpack-only refs)
+  - **93 contradicted** → logged to `docs/FLIP_REVIEW_LOG.md` (PENDING REVIEW — never auto-applied; known false-positive patterns apply)
+  - **1,662 honestly remain uncertain** — the facts are not in the official books; kept usable with factpack summary refs, never claimed as verbatim
+- **Needs-review items (17)** — `scripts/repair_items.py` + `scripts/apply_repairs.py`: every repair has a real passage (closed-mouth=firm ridge, crown lengthening=3 months ×2, RPD movement=add indirect retainer, lateral luxation=4 weeks, midline=philtrum, MTA=3:1, night pain=irreversible pulpitis, sealer=ZOE, BW violation=surgical crown lengthening, resorption=0.2mm/yr, gagging=PPS over-extension, ISO file=15, silver point=corrosion, bone resorption=osteoclast, ZOE working time=cool slab, amalgam contraindication=esthetic, gingivitis=plaque). **11 hidden questions unhidden** (15,166 → 15,177 usable). All answer indices verified vs option TEXT. **One crash caught & fixed**: the first --apply truncated questions.js (opened for write before regex) — restored from git, apply now atomic (tmp+replace).
+- **Flash blob** — quarantined `fn_restorative_0418` split into 2 clean recall items; `fn_perio_0491`/`fn_implant_0331` glove blob repaired/deduped; `fn_fixed_0048` trimmed. **0 merged blobs, 0 >6-option items**, 4,451 items, flash gate green.
+- **Verified**: gates 9/9 + flash · click test 25/25 local **and live** · contrast audit 0 violations · live `questions.js?v=20260806v7` (15,177 usable, 0 junk, 284 verbatim [Book:] supports) · `flash_notes.js?v=20260806fn7` · 0 errors.
+- Commits: `c0b3457` (+ docs).
