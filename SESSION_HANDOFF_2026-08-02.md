@@ -465,3 +465,35 @@ Honesty kept: 242 single-option items demoted to recall markers; options cleaned
 (community recall — book-check pending, never claimed verbatim); `build_flash_notes.py`
 now reads the full txt for Rafi 16 (no regression). Gates green, click test 25/25,
 contrast 0, LIVE verified (2,129 deck, 0 errors). Commit `4453d05`.
+
+---
+
+## UPDATE 22 (2026-08-06) — Full re-extract of the 5 exam-critical sources + MCQ-ify pass (user: "exam is 70% from these")
+
+User confirmed: the exam is ~70% from Rafi 16 + Rafi 19 + ملف سعود مصحّح + تلخيص سعود +
+Mar-June 2026 + July 2026 docx — "that's why I created the flash tab". And: single-answer
+questions should become MCQs solved from the official books with "why".
+
+**Re-extraction (extract_recall_full.py, full pdftotext):**
+- Rafi 19: 202 → 746 items (was also a broken partial like Rafi 16!)
+- Mar-June 2026: +268 → 1,483
+- تلخيص سعود: 38 → 291
+- ملف سعود مصحّح: +227 → 2,039
+- Flash total: 6,538 → **8,030**
+
+**MCQ-ify pass (mcqify_parallel.py + apply_mcqify.py):**
+- 2,852 single-answer/no-option items → proper 4-option MCQs with "Why:" + verbatim
+  book passage. Ran as 3 parallel deepseek sub-agents → **2,795 solved (98%)**:
+  **1,583 book-supported** (quoted passage, drives the 📖 hover/click popup) +
+  **1,212 honest recall** (no verbatim passage found — never guessed).
+- Free pi models (cline x4, kilo, opencode) tried as parallel workers per user request
+  — too slow/unreliable for strict JSON (0 valid in first batches); deepseek paid did
+  the work at ~40s/12 items. Scripts keep the model pool for future passes.
+- Every solved card now shows: 4 options with the correct one highlighted, the answer
+  letter, "Why: ..." and (when book-supported) the 📖 book passage with page.
+
+**Honest caveats:** LLM-solved answers can occasionally mis-apply a passage (e.g. APF
+2.4% vs the standard 1.23% — the app labels all of these "📖 evidence candidate — not a
+final answer judgment" and the dispute button lets students flag them; a future
+verification pass can re-check the 1,583). Gates green, click test 25/25, contrast 0,
+LIVE 8,030 items render, 0 errors. Commit `c4aedc6`.
