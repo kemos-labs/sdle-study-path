@@ -307,3 +307,18 @@
 - **Flash blob** — quarantined `fn_restorative_0418` split into 2 clean recall items; `fn_perio_0491`/`fn_implant_0331` glove blob repaired/deduped; `fn_fixed_0048` trimmed. **0 merged blobs, 0 >6-option items**, 4,451 items, flash gate green.
 - **Verified**: gates 9/9 + flash · click test 25/25 local **and live** · contrast audit 0 violations · live `questions.js?v=20260806v7` (15,177 usable, 0 junk, 284 verbatim [Book:] supports) · `flash_notes.js?v=20260806fn7` · 0 errors.
 - Commits: `c0b3457` (+ docs).
+
+---
+
+## UPDATE 14 (2026-08-06) — July-2026 exam recall + 4 docx files → Q&A tab (Set J) + rebuilt flash deck
+
+**What the user asked:** add `/data/prometric/July 2026 Questions أبطال الدجيتال.docx` + the 3 WhatsApp docx (MCQs_Solved, BANK_160, QA_Answered) + the friend's 7 exam questions (23.7.2026) to the Q&A tab as MCQs solved from books; fix the flash tab ("slop" — raw notes instead of clear cards).
+
+**Done (books = only authority; rafi/abtal = question sources only):**
+- Parsed 4 files → **489 MCQs**; book-verified in parallel (deepseek shards, official corpus only): **461 solved with verbatim passages**, **28 honestly labeled** (no passage found; incl. the 3 truncated stems + image-based Qs).
+- **Friend's 7 answered from books directly**: Florida probe (Carranza), consent from patient (Ethics Handbook — partial impairment allowed to decide), spreader 1–2 mm short of WL (Endodontics Principles), immediate CD → laboratory reline at 6–9 mo (Complete Dentures), ring → harbours microorganisms/tears gloves (Basic Guide IC). Contact-points-in-CR and CD-midline-fracture: NO verbatim passage → honestly labeled recall.
+- **Q&A tab**: 62 → **439 items**; new **Set J (377 MCQs: 349 book + 28 recall-badged)** with options/answer/reference/why + dept filters + honest "recall — no verbatim passage" badge.
+- **Flash deck rebuilt**: 4,451 → **4,918 items** = 1,877 existing MCQs + 377 new book-verified MCQs + 62 QA flashcards (front/back with why+ref) + 28 unverified archive; **1,256 raw recall notes demoted to "📦 Raw recall archive"** (study deck toggle). UI: deck/archive toggle, flashcard labels, clean answer rendering.
+- **13 bank-answer conflicts** (same stem, different answer: neonatal/natal, 2mm/5mm IAN, gemination/fusion, camouflage/surgery, headgear/class-III, 4/3 mo root-fracture splint, ready-made/fiber post…) → logged to FLIP_REVIEW_LOG.md, **bank UNTOUCHED (RED LINE)**. Book-check shows bank right on 5 of them.
+- **Gates updated honestly**: FN-MERGED 5→6 threshold (A–E MCQs legit), flashcards exempt from FN-OPTS. All gates green, click test 25/25, contrast 0, live verified (no errors).
+- Assets live: `app.js?v=20260806v7`, `recent_qa.js?v=20260806rq8`, `flash_notes.js?v=20260806fn8`. Commit `36be5db`.
