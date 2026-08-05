@@ -4068,3 +4068,6 @@ a:hover { text-decoration-color: var(--accent); }
 
 /* Muted count inside green CTA buttons (flash dept quick-start) */
 .btn.success .muted { color: rgba(255, 255, 255, 0.94); }
+/* book reference hover popup */
+.bookref-tip { animation: tipIn 0.14s ease-out; }
+@keyframes tipIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }

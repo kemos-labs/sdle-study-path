@@ -1458,6 +1458,51 @@
     el.style.display = 'flex';
     el.querySelector('button').onclick = () => { el.style.display = 'none'; };
   }
+  // ---- hover tooltip: little "book page" popup near the link ----
+  let tipEl = null, tipTimer = null;
+  function hideBookTip() {
+    clearTimeout(tipTimer);
+    if (tipEl) { tipEl.remove(); tipEl = null; }
+  }
+  function showBookTip(b) {
+    hideBookTip();
+    tipEl = document.createElement('div');
+    tipEl.className = 'bookref-tip';
+    const ctx = escapeHtml(b.dataset.ctx || '');
+    const hl = escapeHtml((b.dataset.phrase || '').slice(0, 90));
+    let body = ctx;
+    if (hl && ctx) {
+      let markLen = -1, mi = -1;
+      for (const L of [90, 40, 28, 18]) {
+        const sub = hl.slice(0, L);
+        if (!sub) continue;
+        const i = ctx.toLowerCase().indexOf(sub.toLowerCase());
+        if (i >= 0) { mi = i; markLen = sub.length; break; }
+      }
+      if (mi >= 0 && markLen > 0) {
+        body = ctx.slice(0, mi) + '<mark style="background:#ffe58a;color:#3b2f14;padding:0 3px;border-radius:3px">' + ctx.slice(mi, mi + markLen) + '</mark>' + ctx.slice(mi + markLen);
+      }
+    }
+    tipEl.innerHTML = `<div style="background:var(--bg2,#fffdf8);max-width:400px;min-width:240px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.28);border:1px solid var(--border);padding:12px 14px;cursor:default">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px">
+        <strong style="font-size:0.82rem;color:var(--accent,#0b6b59)">📖 ${escapeHtml(b.dataset.book || 'Book')}${b.dataset.page ? ' <span class="badge" style="font-size:0.66rem;background:var(--accent,#0b6b59);color:#fff">p. ' + escapeHtml(b.dataset.page) + '</span>' : ''}</strong>
+      </div>
+      <div style="font-size:0.76rem;line-height:1.6;background:var(--bg1,#faf7f2);border-left:3px solid var(--accent,#0b6b59);border-radius:0 6px 6px 0;padding:8px 10px;color:var(--text,#2b2620);max-height:180px;overflow:hidden;white-space:pre-wrap">${body || '<span class="muted">No passage text available.</span>'}</div>
+      <div style="font-size:0.64rem;color:var(--muted);margin-top:5px">Click the link to open the full passage ↩</div>
+    </div>`;
+    document.body.appendChild(tipEl);
+    // position above the link, clamped to the viewport
+    const r = b.getBoundingClientRect();
+    const tw = tipEl.offsetWidth, th = tipEl.offsetHeight;
+    let x = Math.min(Math.max(8, r.left + r.width / 2 - tw / 2), window.innerWidth - tw - 8);
+    let y = r.top - th - 8;
+    if (y < 8) y = r.bottom + 8;
+    tipEl.style.left = x + 'px';
+    tipEl.style.top = y + 'px';
+    tipEl.style.position = 'fixed';
+    tipEl.style.zIndex = '1001';
+    tipEl.style.pointerEvents = 'none';
+  }
   // delegated: any element with [data-bookref] opens the book-reference modal
   app.addEventListener('click', (e) => {
     const b = e.target.closest('[data-bookref]');
@@ -1465,6 +1510,21 @@
     e.preventDefault();
     showBookRef(b.dataset.book, b.dataset.page, b.dataset.ctx, b.dataset.phrase);
   });
+  app.addEventListener('mouseover', (e) => {
+    const b = e.target.closest('[data-bookref]');
+    if (!b) return;
+    clearTimeout(tipTimer);
+    tipTimer = setTimeout(() => showBookTip(b), 220);
+  });
+  app.addEventListener('mouseout', (e) => {
+    const t = e.target.closest('[data-bookref]');
+    if (!t) return;
+    const rt = e.relatedTarget;
+    if (rt && rt.closest && rt.closest('[data-bookref]')) return; // still inside the link
+    hideBookTip();
+  });
+  window.addEventListener('scroll', hideBookTip, { passive: true });
+  window.addEventListener('resize', hideBookTip, { passive: true });
 
   function shuffle(a) {
     const arr = a.slice();
@@ -2180,7 +2240,7 @@
       const list = byDept[d] || [];
       const drills = list.slice(0, 50).map((q) => {
         const ans = (q.options && q.answer != null && q.options[q.answer] != null) ? String(q.options[q.answer]) : "(no text)";
-        const ref = q.book_support ? `<details style="margin:4px 0"><summary class="muted" style="font-size:0.74rem;cursor:pointer">📖 book support${q._page ? ' · p. ' + q._page : ''}</summary><p style="font-size:0.72rem;margin:2px 0 0 12px;color:var(--accent)">${escapeHtml(String(q.book_support)).slice(0,300)}</p>${q._page ? `<button type="button" class="btn sm ghost" data-bookref style="font-size:0.68rem;padding:1px 8px;margin:4px 0 0 12px" data-book="${escapeHtml(String(q.book_support).match(/^\[Book: ([^\]]*)/)?.[1] || 'Book')}" data-page="${escapeHtml(q._page)}" data-ctx="${escapeHtml(q._context || '')}" data-phrase="${escapeHtml(String(q.q).slice(0,90))}">📖 Open passage · p. ${escapeHtml(q._page)}</button>` : ''}</details>` : '';
+        const ref = q.book_support ? `<details style="margin:4px 0"><summary class="muted" style="font-size:0.74rem;cursor:pointer">📖 book support${q._page ? ' · p. ' + q._page : ''}</summary><p style="font-size:0.72rem;margin:2px 0 0 12px;color:var(--accent)">${escapeHtml(String(q.book_support)).slice(0,300)}</p>${q._page ? `<button type="button" class="btn sm ghost" data-bookref style="font-size:0.68rem;padding:1px 8px;margin:4px 0 0 12px" data-book="${escapeHtml(String(q.book_support).match(/^\[Book: ([^\]]*)/)?.[1] || 'Book')}" data-page="${escapeHtml(q._page)}" data-ctx="${escapeHtml(q._context || '')}" data-phrase="${escapeHtml(String((q.options && q.options[q.answer]) || q.q).slice(0,90))}">📖 Open passage · p. ${escapeHtml(q._page)}</button>` : ''}</details>` : '';
         return `<li style="font-size:0.8rem;margin:4px 0;border-bottom:1px dashed var(--border);padding-bottom:4px">
           <b style="color:var(--accent)">✓ ${escapeHtml(ans).slice(0,90)}</b> · ${escapeHtml(String(q.q||'').slice(0,150))}
           ${ref}
@@ -4623,7 +4683,7 @@
       let bookHtml = '';
       if (hasBookEvidence && typeof bookExp === 'object' && bookExp.passage) {
         const bPage = bookExp.page || (it._page) || '';
-        bookHtml = `<details style="margin:8px 0 0;font-size:0.78rem"><summary style="cursor:pointer;font-weight:600;color:var(--accent)">📖 Candidate book evidence: ${escapeHtml(bookExp.book||'')} ${escapeHtml(bookExp.chapter||'')}${bPage ? ' · p. ' + escapeHtml(bPage) : ''}</summary><p class="muted" style="margin:6px 0 0 8px;font-size:0.72rem">Automated match — not a final answer judgment.</p><p style="margin:6px 0 0 8px;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;color:var(--text);line-height:1.5">${escapeHtml((bookExp.passage||'').slice(0,400))}</p>${bPage ? `<button type="button" class="btn sm ghost" data-bookref style="font-size:0.68rem;padding:1px 8px;margin:6px 0 0 8px" data-book="${escapeHtml(bookExp.book||'')}" data-page="${escapeHtml(bPage)}" data-ctx="${escapeHtml(bookExp.context || bookExp.passage || '')}" data-phrase="${escapeHtml((it.answer || '') || '')}">📖 Open passage · p. ${escapeHtml(bPage)}</button>` : ''}</details>`;
+        bookHtml = `<div style="margin:8px 0 0;font-size:0.78rem">${bPage ? `<button type="button" class="btn sm ghost" data-bookref style="font-size:0.7rem;padding:1px 10px;margin:0 0 4px" data-book="${escapeHtml(bookExp.book||'')}" data-page="${escapeHtml(bPage)}" data-ctx="${escapeHtml(bookExp.context || bookExp.passage || '')}" data-phrase="${escapeHtml((it.answer && typeof it.answer === 'string') ? it.answer : (it.options && it.options[it.answerIdx]) || '')}">📖 Book passage · p. ${escapeHtml(bPage)}</button>` : ''}<details><summary style="cursor:pointer;font-weight:600;color:var(--accent)">📖 Candidate book evidence: ${escapeHtml(bookExp.book||'')} ${escapeHtml(bookExp.chapter||'')}</summary><p class="muted" style="margin:6px 0 0 8px;font-size:0.72rem">Automated match — not a final answer judgment.</p><p style="margin:6px 0 0 8px;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;color:var(--text);line-height:1.5">${escapeHtml((bookExp.passage||'').slice(0,400))}</p></details></div>`;
       } else if (hasBookEvidence && typeof bookExp === 'string' && bookExp.trim()) {
         bookHtml = `<p style="margin:8px 0 0;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;font-size:0.82rem;color:var(--text)"><b style="color:var(--accent)">📖 Candidate book evidence:</b> ${escapeHtml(bookExp).slice(0,320)}</p>`;
       }
