@@ -4603,14 +4603,24 @@
       fnListRaw.sort((a, b) => (a.dept === b.dept ? a.id.localeCompare(b.id) : (a.dept || '').localeCompare(b.dept || '')));
     } else {
       const fnArchiveMode = !!state._fnArchive;
-      fnListRaw = (FN.byDept[fnDept] || []).filter(it => {
-        if (it._merged_into) return false;
-        const isArchive = it._raw_recall || it._unverified || it._data_quality === 'merged_options_review';
-        return fnArchiveMode ? isArchive : !isArchive;
-      });
-    }
-    if (fnSrc) {
-      fnListRaw = fnListRaw.filter(it => (it.sources || []).includes(fnSrc));
+      if (fnSrc) {
+        // source filter -> gather across ALL departments (user picks a source, not a dept)
+        fnListRaw = [];
+        Object.keys(FN.byDept || {}).forEach(did => {
+          (FN.byDept[did] || []).forEach(it => {
+            if (it._merged_into) return;
+            const isArchive = it._raw_recall || it._unverified || it._data_quality === 'merged_options_review';
+            if (fnArchiveMode !== isArchive) return;
+            if ((it.sources || []).includes(fnSrc)) fnListRaw.push(it);
+          });
+        });
+      } else {
+        fnListRaw = (FN.byDept[fnDept] || []).filter(it => {
+          if (it._merged_into) return false;
+          const isArchive = it._raw_recall || it._unverified || it._data_quality === 'merged_options_review';
+          return fnArchiveMode ? isArchive : !isArchive;
+        });
+      }
     }
     const fnQ = (state._fnSearch || "").trim().toLowerCase();
     if (fnQ) {
@@ -4634,10 +4644,21 @@
     if (!state._fnStudyIdx || state._fnStudyIdx >= fnList.length) state._fnStudyIdx = 0;
     const fnTotal = fnList.length;
     const fnCurr = fnList[state._fnStudyIdx] || null;
-    // source filter chips (from the 8 PDF sources)
+    // source filter chips (clickable — filter the study deck by source)
     const fnSourcesList = (window.FLASH_NOTES || {}).sources || [];
+    const fnSrcCount = (srcId) => {
+      if (!srcId) return "";
+      let n = 0;
+      Object.keys(FN.byDept || {}).forEach(did => { (FN.byDept[did] || []).forEach(it => { if ((it.sources || []).includes(srcId) && !it._merged_into) n++; }); });
+      return n;
+    };
     const sourceChipsHtml = fnSourcesList.length
-      ? fnSourcesList.map(s => `<span class="badge" style="font-size:0.58rem;background:var(--bg3);color:var(--muted)">${escapeHtml(s.label || s.id || s)}</span>`).join(' ')
+      ? `<button type="button" class="btn sm ${!fnSrc ? 'success' : 'ghost'}" data-fn-src="" style="padding:3px 9px;font-size:0.68rem">All sources</button>`
+        + fnSourcesList.map(s => {
+          const active = fnSrc === s.id;
+          const n = fnSrcCount(s.id);
+          return `<button type="button" class="btn sm ${active ? 'success' : 'ghost'}" data-fn-src="${escapeHtml(s.id)}" style="padding:3px 9px;font-size:0.68rem" title="${escapeHtml(s.file)}">${escapeHtml(s.label)}${s.recent ? ' ✨' : ''} <span class="muted" style="font-size:0.6rem">${n}</span></button>`;
+        }).join(' ')
       : '';
     const fnMarkerBadge = (m, hasOpts, hasBookEvidence, hasCommunity) => {
       if (hasBookEvidence) return '<span class="badge blue" style="font-size:0.62rem" title="Automated evidence candidate; not a final textbook judgment">📖 evidence candidate</span>';
