@@ -423,3 +423,21 @@ User authorized resolving the 13 logged bank-answer conflicts. Findings:
 - Gate FN-MERGED upgraded: fails on any ✅-glue in options (now 0); flash gate + main gate
   green, click test 25/25, contrast 0. LIVE: bank answers correct, 0 glue, 0 bad indices,
   0 errors. Commits `fdd85f6`, `d745c19`.
+
+---
+
+## UPDATE 20 (2026-08-06) — Flash source filter made real (user: "i want all rafi 16 / rafi 19 / july")
+
+The Flash study deck showed source chips (رفيع المقام 16/19, July 2026, Mar-June, etc.)
+but they were **static labels — not filters**. Fixed:
+
+- Chips are now real clickable filter buttons with item counts + active state:
+  All sources · Mar–June 2026 · SDLE May 2026 · تلخيص سعود · رفيع المقام 19 ·
+  رفيع المقام 16 · ملف سعود مصحّح · June–July 2023 · GoldenFile2 · July 2026.
+- Bug fixed: source filter previously only searched the CURRENT department (empty
+  lists when the source's items lived elsewhere) → now gathers across ALL departments.
+- Verified deck totals (non-archive study cards): Rafi 16 = 509, Rafi 19 = 183,
+  July 2026 = 328, Mar–June = 1,092; walking cards confirms membership; chips show
+  full source counts (incl. archive).
+- Gates green, click test 25/25, contrast 0, LIVE verified (10 chips, Rafi16=509,
+  July=328, 0 errors). Commit `19e675c`.
