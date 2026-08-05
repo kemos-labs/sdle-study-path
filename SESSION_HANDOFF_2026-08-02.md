@@ -441,3 +441,27 @@ but they were **static labels — not filters**. Fixed:
   full source counts (incl. archive).
 - Gates green, click test 25/25, contrast 0, LIVE verified (10 chips, Rafi16=509,
   July=328, 0 errors). Commit `19e675c`.
+
+---
+
+## UPDATE 21 (2026-08-06) — Rafi-16 re-extract: 1,094 questions were MISSING (user was right)
+
+User: "rafi 16 is 220 pages, how could it be only 509? re-extract the pdf."
+
+Root cause: the flash Rafi-16 source (`focus/رفيع المقام ١٦.md`) was a broken
+markitdown extraction with only ~68 numbered lines from the 220-page PDF. The
+full pdftotext extraction (`data/raw/rafi/rafi_part_16.txt`) has **2,013 questions**
+(1,958 with A–D options). Coverage before: 838 in bank + 531 in flash (overlap),
+**1,094 completely absent from the app**.
+
+Fix: `scripts/extract_rafi16_full.py` — parsed all 2,013 blocks (stem + options +
+✅ answer marker, dept from section headers Endo/Resto/Perio/Implant/Fixed/Removable/
+Ortho/Pedo/Prof/Oral), deduped by normalized stem, **merged 1,620 missing questions**
+into flash under source Rafi_Maqam_16. Result: **Rafi-16 deck 509 → 2,129 cards**
+(chip 2,149 incl. archive); flash total 4,918 → **6,538**.
+
+Honesty kept: 242 single-option items demoted to recall markers; options cleaned of
+✅/commentary glue; all 1,620 stamped `_verification_verdict: needs_review`
+(community recall — book-check pending, never claimed verbatim); `build_flash_notes.py`
+now reads the full txt for Rafi 16 (no regression). Gates green, click test 25/25,
+contrast 0, LIVE verified (2,129 deck, 0 errors). Commit `4453d05`.
