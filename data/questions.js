@@ -32503,13 +32503,13 @@ QUESTION_BANK = [
   "difficulty": "exam",
   "q": "What is the recommended minimum distance between a dental implant and an adjacent natural tooth?",
   "options": [
-   "0.5 mm",
-   "0 mm",
-   "5 mm",
-   "Systemic antibiotic only"
+   "1.0 mm",
+   "1.5–2 mm",
+   "3.0 mm",
+   "5.0 mm"
   ],
-  "answer": 2,
-  "explanation": "The minimum implant-to-tooth distance is 1.5–2 mm clinically; 0.5 mm is insufficient to preserve the periodontal ligament space and crestal bone, but no option in this set matches the correct range. [Book: Sturdevant / Rosenstiel / McCracken (FACTPACK fixed/operative/rpd): principle supporting «5 mm».]",
+  "answer": 1,
+  "explanation": "The implant should be placed 1.5–2 mm from an adjacent natural tooth (and 2–3 mm from an adjacent implant) to maintain an adequate biologic dimension. The old option set had no correct answer; repaired with the Carranza value. [Book: Carranza 2018]",
   "source": "gdoc",
   "subtopics": [
    "implant",
@@ -32520,7 +32520,7 @@ QUESTION_BANK = [
   "truth_wave": "grok_book:shard_00/batch_0012",
   "read_audit": true,
   "audit_confidence": "high",
-  "book_support": "Sturdevant / Rosenstiel / McCracken (FACTPACK fixed/operative/rpd): principle supporting «5 mm».",
+  "book_support": "[Book: Carranza 2018] The implant should be placed at a distance of 1.5 to 2 mm from an adjacent natural tooth and 2 to 3 mm from an adjacent implant to maintain an adequate biologic dimension.",
   "truth_judge": "grok_book",
   "usable": true,
   "book_verified": true
@@ -59381,15 +59381,15 @@ QUESTION_BANK = [
    "Morals, professionalism, and laws",
    "Professionalism, laws, and ethics"
   ],
-  "answer": 0,
-  "explanation": "A dentist must possess personal morals (character), professional ethics (code of conduct), and professionalism (professional obligations and demeanor) as the foundational triad of dental practice Best option: «Morals, ethics, and professionalism». [Book: CDC infection control + Ethics Handbook (FACTPACK_ethics): principle supporting «Morals, ethics, and professionalism».]",
+  "answer": 3,
+  "explanation": "SCFHS expects dentists to hold professionalism, laws, and ethics — professionalism and ethics are obligatory to meet professional standards, and practice must comply with Saudi law/regulations. (Wording-level call: July-2026 recall + ethics handbook.) [Book: Professionalism and Ethics Handbook for Residents]",
   "source": "stream_july2026",
   "truth_pass": true,
   "truth_confidence": "low",
   "truth_wave": "grok_book:shard_00/batch_0002",
   "read_audit": true,
   "audit_confidence": "high",
-  "book_support": "As health care practitioners professionalism and ethics are obligatory for the success of our careers in order to meet professional standards, not only clinical guidelines.",
+  "book_support": "[Book: Professionalism and Ethics Handbook for Residents] As health care practitioners, professionalism and ethics are obligatory for the success of our careers in order to meet professional standards, not only clinical guidelines.",
   "truth_judge": "grok_book",
   "usable": true,
   "book_verified": true,
@@ -247218,8 +247218,8 @@ QUESTION_BANK = [
    "Fiber post",
    "Prefabricated post"
   ],
-  "answer": 0,
-  "explanation": "From رفيع المقام part 8 · fixed. Community mark provisional — verify clinically.",
+  "answer": 2,
+  "explanation": "Fiber posts have an elastic modulus close to dentin, so stress is distributed through the post and it fails before the root — the LEAST likely post to cause tooth fracture. Rigid prefabricated and cast-metal posts concentrate stress at the root and cause more fractures. [Book: Shillingburg 5e]",
   "source": "rafi_08",
   "sourcePack": "rafi_08",
   "department": "fixed",
@@ -247229,7 +247229,9 @@ QUESTION_BANK = [
   "truth_confidence": "high",
   "truth_wave": "dept_restorative_0198",
   "exclude_reason": "duplicate_of:rafi_18_cc9788cade",
-  "duplicate_of": "rafi_18_cc9788cade"
+  "duplicate_of": "rafi_18_cc9788cade",
+  "book_support": "[Book: Shillingburg 5e] Glass fiber posts lead to lower stresses during in vitro testing, with less catastrophic failures: fractures may occur in posts rather than in the remaining tooth structure.",
+  "book_verified": true
  },
  {
   "id": "rafi_08_cc998e42a5",

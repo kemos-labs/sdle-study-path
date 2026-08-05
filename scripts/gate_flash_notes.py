@@ -105,10 +105,12 @@ def main() -> int:
     if not verified_ok:
         print(f"  ❌ FN-VERIFIED: only {verdict_coverage}/{total} items have verdicts")
 
-    # ── Gate FN-MERGED: long option lists must be visibly flagged ───────
-    merged = [it["id"] for it in all_items if len(it.get("options", [])) >= 6]
-    unflagged_merged = [it["id"] for it in all_items if len(it.get("options", [])) >= 6
-                        and it.get("_data_quality") != "merged_options_review"]
+    # ── Gate FN-MERGED: long option lists / ✅-glue must be visibly flagged ──
+    def _glued(it):
+        return any("✅" in str(o or "") for o in (it.get("options") or []))
+    unflagged_merged = [it["id"] for it in all_items
+                        if ((len(it.get("options", [])) >= 6 or _glued(it))
+                            and it.get("_data_quality") != "merged_options_review")]
     merged_ok = not unflagged_merged
     if not merged_ok:
         print(f"  ❌ FN-MERGED: {len(unflagged_merged)} long option lists are not flagged for source review")
@@ -122,7 +124,7 @@ def main() -> int:
         "FN-BOOKS": {"ok": books_ok, "canonical_txt_file_count": len(txt_files)},
         "FN-VERIFIED": {"ok": verified_ok, "verdict_coverage": f"{verdict_coverage}/{total}",
                         "supported": supported, "needs_review": needs_review},
-        "FN-MERGED": {"ok": merged_ok, "flagged_count": len(merged), "unflagged_count": len(unflagged_merged),
+        "FN-MERGED": {"ok": merged_ok, "flagged_count": len(unflagged_merged), "unflagged_count": len(unflagged_merged),
                       "sample": unflagged_merged[:20]},
     }
 
