@@ -62659,7 +62659,7 @@ window.FLASH_NOTES = {
      "Reciprocal arm above the survey line.                |     |     | | -------------------------------------------------------- | --- | --- | |",
      "Reciprocal arm contacts after the retentive arm.     |     |     | |",
      "Reciprocal arm contacts before the retentive arm.",
-     "|     |     | ● | 190.  Sterilization indicator placement: (previously mentioned)   |     |     | | ----------------------------------------------------------------- | --- | --- | In the center ✅"
+     "|     |     |  | 190.  Sterilization indicator placement: (previously mentioned)   |     |     | | ----------------------------------------------------------------- | --- | --- | In the center "
     ],
     "answerLetter": "C",
     "answerIdx": 3,
