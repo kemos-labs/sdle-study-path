@@ -339,3 +339,27 @@ User asked: (1) is practice search synced with the new work? (2) add search to f
   - Items without a locatable passage keep the plain reference (honest — no fake page).
 - `scripts/build_book_pages.py` + cached `work/corpus_idx.pkl` (fast locating); new scripts copied to `sdle-prep/scripts/`.
 - Verified: gates green · click test 25/25 · contrast 0 · LIVE (bank 15,521 usable, flash search, Set J, modal opens, 0 errors). Commit `36a2973`.
+
+---
+
+## UPDATE 16 (2026-08-06) — HOVER book-reference popup + page engine pass 2
+
+User asked: an engine that extracts the match/answer from the books, and a HOVER
+popup (no click needed) showing the highlighted answer + page number.
+
+**Done:**
+- **Hover popup**: moving the mouse over any 📖 book link now shows a little popup
+  like a mini page — book name, "p. N" badge, the book passage with the matched
+  answer text highlighted in yellow, plus "click to open full passage". Popup hides
+  when the mouse leaves; click still opens the full modal. Works in Q&A tab, flash
+  deck (after flipping the card), and bank quiz explanation.
+- **Page engine pass 2** (`scripts/build_book_pages2.py`): locates pages from the
+  stored book passages (`_book_explanation.passage`) using title→file word-overlap
+  + sliding 90-char windows. Coverage now: **flash 26 → 2,086 items, recentqa 311 → 364, bank 560 → 605** with page numbers.
+- Flash deck: "📖 Book passage · p. N" button moved outside the collapsed evidence
+  so it is always visible after revealing the answer; highlight targets the ANSWER
+  option text.
+- Books-only rule respected: bank pages only filled from verbatim `[Book:` support;
+  no fake pages where a passage can't be found (items stay plain-reference).
+- Verified: gates green, click test 25/25, contrast 0, LIVE (2,086 flash pages,
+  hover popup shows "Sturdevant 5e p. 110 …", 0 errors). Commit `b71e2b8`.
