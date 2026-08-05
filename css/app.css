@@ -768,7 +768,7 @@ button:focus-visible,
 }
 .badge.warn {
   background: rgba(201, 162, 39, 0.25);
-  color: #f0d78c;
+  color: #8A6416;
   border: 1px solid rgba(201, 162, 39, 0.4);
 }
 .hub-foot {
@@ -1736,7 +1736,7 @@ h3 {
 
 .step-body .reading b,
 .step-body .reading strong {
-  color: #f5f3ef;
+  color: #2B2620;
   font-weight: 600;
 }
 
@@ -1948,7 +1948,7 @@ button.btn.warn,
   min-width: 1.75rem;
   padding: 1px 6px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.16);
   font-size: 0.75rem;
   font-weight: 700;
   color: #fff;
@@ -2654,7 +2654,7 @@ body.focus-mode .plan-chooser:not(.plan-chooser-gate) {
 }
 .step-body .reading .exam-qa > h4 {
   margin: 0 0 6px;
-  color: #d4e86a;
+  color: #5A6B1E;
   font-size: 1rem;
 }
 .step-body .reading .exam-qa > .exam-qa-hint {
@@ -2681,7 +2681,7 @@ body.focus-mode .plan-chooser:not(.plan-chooser-gate) {
 }
 .step-body .reading .exam-qa .exam-stem {
   margin: 0 0 8px;
-  color: #f0e6a8;
+  color: #8A6416;
   font-weight: 600;
   font-family: var(--font-read);
   font-size: 1.05em;
@@ -2724,12 +2724,12 @@ body.focus-mode .plan-chooser:not(.plan-chooser-gate) {
 .step-body .reading .exam-qa ol.exam-opts li.eq-reveal {
   border-color: var(--accent2);
   background: #E7F4EB;
-  color: #d8f5e4;
+  color: #176B3C;
 }
 .step-body .reading .exam-qa ol.exam-opts li.eq-wrong {
   border-color: var(--danger);
   background: #FCEFEC;
-  color: #f0c8c8;
+  color: #B3402E;
 }
 .step-body .reading .exam-qa .exam-qa-score {
   display: flex;
@@ -2742,15 +2742,15 @@ body.focus-mode .plan-chooser:not(.plan-chooser-gate) {
   border: 1px solid #C2CDA6;
   border-radius: 8px;
   font-size: 0.9rem;
-  color: #d4e86a;
+  color: #5A6B1E;
 }
 .step-body .reading .exam-qa .exam-qa-score.eq-pass {
   border-color: #2E8B57;
-  color: #a8e6c3;
+  color: #176B3C;
 }
 .step-body .reading .exam-qa .exam-qa-score.eq-fail {
   border-color: #8a3d3d;
-  color: #f0c8c8;
+  color: #B3402E;
 }
 .step-body .reading .exam-qa .eq-score-text {
   flex: 1;
@@ -2768,11 +2768,11 @@ body.focus-mode .plan-chooser:not(.plan-chooser-gate) {
 }
 .step-body .reading .exam-qa .eq-result.ok {
   background: #E7F4EB;
-  color: #a8e6c3;
+  color: #176B3C;
 }
 .step-body .reading .exam-qa .eq-result.miss {
   background: #FBE9E6;
-  color: #f0a8a8;
+  color: #B3402E;
 }
 .step-body .reading .exam-qa article.eq.eq-ok {
   border-color: #176B3C;
@@ -2788,7 +2788,7 @@ body.focus-mode .plan-chooser:not(.plan-chooser-gate) {
 }
 .step-body .reading .exam-qa details.exam-ans summary {
   cursor: pointer;
-  color: #7dcea0;
+  color: #176B3C;
   font-weight: 600;
   list-style: none;
 }
@@ -2800,7 +2800,7 @@ body.focus-mode .plan-chooser:not(.plan-chooser-gate) {
 }
 .step-body .reading .exam-qa .ans-line {
   margin: 8px 0 4px;
-  color: #a8e6c3;
+  color: #176B3C;
 }
 .step-body .reading .exam-qa .hinge-line {
   margin: 4px 0;
@@ -3461,7 +3461,7 @@ body.simple-ui .step.open {
 .step-body .reading .exam-qa ol.exam-opts li.eq-wrong {
   background: #FCEFEC !important;
   border-color: #6a3030 !important;
-  color: #f0c8c8 !important;
+  color: #B3402E !important;
 }
 
 .step-body .reading .exam-qa .hinge-line,
