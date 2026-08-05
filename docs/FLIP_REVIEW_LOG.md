@@ -1550,3 +1550,101 @@ Rule: **never auto-apply** — every flip below was checked against the actual q
 - ~30-40% of contradicted flags are real; most false positives are negated-question
   misreads, wrong-passage-type retrieval, or the model answering a different question.
 - Stale verdicts (already-fixed questions) remain in the checkpoint — ignore.
+
+
+## 🔶 UNCERTAIN-PASS CONTRADICTED (2026-08-06, books-only re-verify) — PENDING REVIEW, NOT APPLIED
+
+These were flagged 'contradicted' when re-checking the 2,020 uncertain verdicts against verbatim book passages.
+Per RED LINE they are NEVER auto-applied — each needs a human/AI check of the question text vs the passage
+(the retrieval often pulls a related-but-different fact; known false-positive patterns apply).
+
+- rafi_08_6621f5a0b7 — passage: There are no other major disadvantages to lateral compaction, other than difficulties in obturating severely curved canals, an open apex, and canals w
+    reason: The passage states that lateral compaction has difficulties in curved canals, but the question asks about the McSpadden technique, which is not mentio
+- rafi_02_7c52b422a8 — passage: the papilla was always complete when the distance from the contact point to the crest of the bone was ≤5 mm.
+    reason: The passage states papilla is complete when distance is ≤5 mm, not 4.4 mm specifically, and the question asks about distance between base of proximal 
+- rafi_08_9ce888c5d7 — passage: Violet is used on yellow restorations and has the added effect of increasing the translucency. Gray is not encouraged because it tends to reduce trans
+    reason: The passage states violet increases translucency, not makes porcelain cloudy white, contradicting the marked answer.
+- rafi_10_1cd44f5150 — passage: cause a sensitivity reaction in a patient susceptible to monomer irritation
+    reason: The passage states PMMA can cause monomer irritation, not staining, so the marked answer is wrong.
+- rafi_14_0f7b92f670 — passage: If the composite has a tendency to stick to the instrument, a sparing amount of bonding adhesive can be
+    reason: The passage recommends using bonding adhesive, not alcohol, to prevent sticking.
+- rafi_11_4c2beb8ae9 — passage: The more serious oral conditions have diminished.34-38 Common oral
+    reason: The passage indicates HAART reduces oral manifestations, but does not support xerostomia as a condition developed; candidiasis is a common oral manife
+- rafi_17_18df541eb9 — passage: It is an error to surgically remove the frenum at an early age and then delay orthodontic treatment in the hope that the diastema will close spontaneo
+    reason: The passage indicates frenectomy should not be done before orthodontic treatment, contradicting the marked answer.
+- rafi_17_a6760cf65d — passage: Aplastic anemia is associated with bleeding issues, infection, and death.
+    reason: The passage lists bleeding, infection, and death, not nutritional deficiency, contradicting the marked answer.
+- rafi_18_13924b05f0 — passage: what matters is what the patient (the person concerned) believes to be harmful
+    reason: The passage states harm is defined by the patient's belief, not by evidence base.
+- rafi_18_a1be25bbac — passage: an inflammatory cellular infiltrate consisting predominantly of lymphocytes and plasma cells
+    reason: Healthy gingiva is expected to contain inflammatory cells, not none.
+- abtal_pack_fe4928174e — passage: There is some limited evidence to support the use of prophylactic antibiotics and chlorhexidine mouth rinse to decrease the risk of ARONJ for patients
+    reason: The passage supports using antibiotics preoperatively and during healing, not pre-op only.
+- abtal_pack_437668c00a — passage: Class III, unilateral complete cleft of the lip and palate.
+    reason: The marked answer 'unilateral complete cleft lip' is wrong; the passage describes Class III as unilateral complete cleft of the lip and palate.
+- ab2_c549534338 — passage: The cast from a disinfected impression does not need disinfecting.
+    reason: The passage indicates impressions should be disinfected, contradicting the claim that PVS is biocompatible with all disinfectants and needs no disinfe
+- rafi_16_773db185c1 — passage: Porphyromonas gingivalis and T. forsythia are often found in chronic periodontitis, whereas A. actinomycetemcomitans is often associated with aggressi
+    reason: The passage indicates A. actinomycetemcomitans is associated with aggressive periodontitis, not chronic periodontitis, and Treponema denticola is not 
+- rafi_15_4c9a66e927 — passage: The analysis concluded with a cost-effectiveness ranking of tetracycline fibers > chlorhexidine chips > minocycline microspheres.
+    reason: The passage ranks tetracycline fibers as most effective, contradicting the marked minocycline gel.
+- rafi_04_e38b0ecf98 — passage: A minimum of 1.0 mm
+    reason: The passage states a minimum of 1.0 mm cortical thickness, contradicting the marked 1.5 mm.
+- rafi_16_22ac94b668 — passage: A broken retentive clasp arm, regardless of its type, may be replaced with a wrought-wire retentive arm embedded in a resin base or attached to a meta
+    reason: The passage states a broken clasp arm should be replaced with a wrought-wire arm, not recast.
+- rafi_16_7e9aeb95ad — passage: Even less weight and bulk are possible when the denture bases are made of chrome or titanium alloys.
+    reason: The passage mentions titanium as a metal used in denture bases, not palladium.
+- rafi_18_c052a189b1 — passage: mandibular premolars may have multiple canals
+    reason: The passage states mandibular premolars may have multiple canals, contradicting the marked answer of only 1 canal.
+- rafi_16_6debc26888 — passage: Excisional biopsy is the preferred treatment method.
+    reason: The passage states excisional biopsy is preferred, contradicting observation.
+- rafi_17_47939698bb — passage: the patient take the usual daily dose of corticosteroids before the dental appointment
+    reason: The passage states the patient should take the usual daily dose, not double the dose.
+- rafi_18_cbd1c27cdc — passage: Patients with recently diagnosed, clinically active TB and positive sputum cultures should not be treated on an outpatient basis. Treatment is best re
+    reason: The passage states TB-positive patients should be treated in a hospital, not with an infiltration mask.
+- rafi_19_aba1537123 — passage: Shorter immersion times (12–90 minutes) are used to achieve high-level disinfection of semicritical instruments or items.
+    reason: The passage states immersion times of 12–90 minutes, not 5–10 minutes.
+- rafi_15_65d999ad96 — passage: the base of the sulcus remains in the same location on the tooth. This increases the dimension of the supracrestal connective tissue attachment area
+    reason: The passage states connective tissue attachment increases after bone loss without pocket deepening, contradicting the marked answer 'regress then expa
+- rafi_07_f9ef9fa8ed — passage: A broken retentive clasp arm, regardless of its type, may be replaced with a wrought-wire retentive arm embedded in a resin base
+    reason: The passage states a broken clasp arm should be replaced with a wrought wire, not merely smoothed.
+- rafi_04_74a4975299 — passage: canal leakage occurs when only 2 or 3 mm of gutta-percha is retained apically
+    reason: The passage indicates that retaining 2 or 3 mm is insufficient, implying more is needed, but does not specify 5 mm; the marked answer of 5 mm is not s
+- rafi_04_5111f73897 — passage: Bender IB, Seltzer S: The effect of periodontal disease on the pulp
+    reason: The passage cites Bender and Seltzer as authors of the study on periodontal disease effect on pulp, not Turner and Drew.
+- rafi_04_f6f068ce6c — passage: materials such as amalgam, gutta-percha, zinc oxide–eugenol, Cavit, calcium hydroxide, freeze-dried bone, and indium foil
+    reason: The passage lists amalgam among traditional repair materials but does not mention GIC; no passage supports GIC as best for supracrestal perforations.
+- rafi_19_21a482ef43 — passage: Use of the rubber dam when performing endodontics is considered the standard of care for all dentists.
+    reason: The passage states rubber dam is standard of care, but does not support dismissing the patient; referral is a reasonable option but not directly state
+- rafi_07_1b02897df5 — passage: In young patients with large pulp chambers, the metalceramic crown is also contraindicated because of the high risk of pulp exposure
+    reason: The passage indicates metal-ceramic crowns can cause pulp irritation, not all-ceramic.
+- rafi_10_4d206aa76c — passage: Although orthodontic tooth movement, or biomechanics, has been found to account for approximately one tenth to one third of the total variation in EAR
+    reason: Passage indicates biomechanics (including force magnitude) accounts for some variation, but does not state duration is the greatest influence; no pass
+- rafi_17_ce35e0ea2f — passage: C, Squamous cell carcinoma has eroded into the right mandible. Note the ragged appearance and lack of cortication. D, Intraosseous malignancy has comp
+    reason: Sun-ray appearance is characteristic of osteosarcoma, not acute osteomyelitis; the passage describes malignancy with bone destruction.
+- rafi_18_be44b11f67 — passage: chemical indicator (e.g., chemical indicator tape) should be used when the internal indicator cannot be seen from outside the package. For unwrapped l
+    reason: The passage indicates chemical indicators are placed inside the package or tray, not the center of the package.
+- rafi_18_fa7e75f7bf — passage: Patients who have extraoral swellings such as buccal space infections or submandibular space infections may
+    reason: The passage mentions both buccal and submandibular space infections may need extraoral drainage, but does not specify which is treated with extraoral 
+- rafi_18_7323254a63 — passage: maxillary teeth are usually removed by stronger buccal forces and less vigorous palatal forces
+    reason: The passage states maxillary teeth require stronger buccal forces, not lingual, so maxillary molars would not require more lingual force.
+- rafi_18_0d809b05ba — passage: enamel on the incisal or occlusal one-quarter to one-third of the crown
+    reason: The description of enamel hypoplasia on incisal third of anterior and cusp tips of posterior matches molar-incisor hypomineralization, not fluorosis.
+- rafi_12_d427a63d17 — passage: Any loss exceeding 0.2 mm per year is cause for concern.
+    reason: The passage states 0.2 mm per year is the threshold, not 2 mm.
+- rafi_12_c127fa9d64 — passage: the lateral incisors are 66% the width of the centrals and the canines are 84% the width of the lateral incisors
+    reason: The passage gives canine width as 84% of lateral incisor, not 60%.
+- rafi_13_bc584b6641 — passage: The four categories of materials are metals, ceramics, polymers,and composites.
+    reason: The passage lists composites as a material category, not alginate.
+- rafi_16_5ad08aa4ef — passage: Recall visits should be scheduled at least every 3 months during the first year.
+    reason: The passage indicates recall visits should be at least every 3 months, not 5-6 months.
+- rafi_17_88cec64de4 — passage: In the anterior maxilla, the gingival position is reasonably stable at 3 months.
+    reason: The passage indicates 3 months, not 6 months, for gingival stability in the anterior region.
+- rafi_18_1b258d6b60 — passage: Carbamide peroxide degrades into 3% hydrogen peroxide (active ingredient) and 7% urea.
+    reason: The ratio of hydrogen peroxide to urea is 3:7, not 1:3.
+- rafi_04_2208d81b06 — passage: GG drills are sized from 1 to 6 (with corresponding diameters of 0.5 to 1.5 mm)
+    reason: Size 4 corresponds to 1.0 mm, not 1.10 mm; option 3 (0.9 mm) is also wrong, but 1.10 mm is contradicted.
+- rafi_04_16e80f32fc — passage: Upper lateral and lower incisors, together with extremely thin biotype, are probably the only real aesthetic contraindication for metal or carbon fibe
+    reason: Lower incisors are mentioned as contraindication for posts, not upper incisors; no passage on post fracture incidence.
+- rafi_19_8174b41a48 — passage: These small particles (1–5 µm) can stay suspended in the air for hours
+    reason: Passage says hours, not specifically up to 4 hours, so the marked answer is not supported.

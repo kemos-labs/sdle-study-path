@@ -12514,36 +12514,51 @@ window.FLASH_NOTES = {
     "_dept": "restorative"
    },
    {
-    "stem": "Improper isolation\n10-Ur doing Cl II amalgam when placing Clamp dislodge multiple times?\nImproper clamp selection\nImproper position\n11-Chemo pt needs extraction of tooth\nHe finished 2nd cycle (will have 4 cycles)\nRbc normal\nPlatelets 100\nWbc 2\nNeurophils 15 (40-60%)\nanswers:\nBlood transfusion\nPlatelets transfusion\nDelay appoint\nAb prophy\n12-Child develops swelling to lower lip after multiple traum",
+    "stem": "Chemotherapy patient (platelets 100, WBC 2, neutrophils 15%) needs a tooth extraction. What is the appropriate management?",
     "options": [
-     "C. Frankle",
-     "A. 25",
-     "A. Refer him to Maxillofacial Surgery",
-     "B. Explain the situation to the patient and give option to refer to surgeon",
-     "A. Antibiotics ✅",
-     "B. Antifungal mouth wash",
-     "C. Reinforce OH"
+     "Blood transfusion",
+     "Platelet transfusion",
+     "Delay the appointment",
+     "Antibiotic prophylaxis ✅"
     ],
-    "answerLetter": "e",
-    "answerIdx": 4,
-    "marker": "verified",
-    "needsImage": true,
-    "raw": "Improper isolation 10-Ur doing Cl II amalgam when placing Clamp dislodge multiple times? Improper clamp selection Improper position 11-Chemo pt needs extraction of tooth He finished 2nd cycle (will have 4 cycles) Rbc normal Platelets 100 Wbc 2 Neurophils 15 (40-60%) answers: Blood transfusion Platelets transfusion Delay appoint Ab prophy 12-Child develops swelling to lower lip after multiple trauma what to do Excision Aspiration 13-Pedo pt will be sedated 2.5mg/kg of midzolam given after 10min pt started to have difficulty breathing , slurred speech & others i forget them Moderate sedation Ove",
+    "answerLetter": "D",
+    "answerIdx": 3,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "11-Chemo pt needs extraction of tooth; Wbc 2; Neutrophils 15 (40-60%); answers: Blood transfusion / Platelets transfusion / Delay appoint / Ab prophy",
     "dept": "restorative",
     "sources": [
      "Saud_Masahhah"
     ],
-    "id": "fn_restorative_0418",
-    "_verified_explanation": "Correct answer: a. Antibiotics",
-    "_verification_verdict": "supported",
-    "format": "mcq",
-    "_data_quality": "merged_options_review",
-    "_book_explanation": {
-     "book": "Periodontics MSI",
-     "chapter": "Ch 26",
-     "passage": "tissue coverage is advantageous to bone formation, especially in the case of GBR.\nIf healing abutments are placed at the time of implant insertion, the flaps are\nclosely approximated around the healing abutments in a way similar to adaptation\naround teeth.\n\nWritten postoperative instructions should be clearly explained and given to all\npatients. Failure to adhere to the postoperative protocol coul",
-     "status": "automated_evidence_candidate"
-    },
+    "id": "fn_restorative_0418a",
+    "note": "split from merged blob fn_restorative_0418 (Q11)",
+    "_verification_verdict": "needs_review",
+    "_verified_explanation": "",
+    "_model_judgment": "",
+    "_dept": "restorative"
+   },
+   {
+    "stem": "Child develops swelling of the lower lip after multiple trauma episodes. Best management?",
+    "options": [
+     "Refer him to Maxillofacial Surgery",
+     "Explain the situation to the patient and give option to refer to surgeon",
+     "Antibiotics ✅",
+     "Antifungal mouth wash"
+    ],
+    "answerLetter": "C",
+    "answerIdx": 2,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "12-Child develops swelling to lower lip after multiple trauma; answers: A. Antibiotics ✅ / B. Antifungal mouth wash / C. Reinforce OH / Refer surgeon",
+    "dept": "restorative",
+    "sources": [
+     "Saud_Masahhah"
+    ],
+    "id": "fn_restorative_0418b",
+    "note": "split from merged blob fn_restorative_0418 (Q12)",
+    "_verification_verdict": "needs_review",
+    "_verified_explanation": "",
+    "_model_judgment": "",
     "_dept": "restorative"
    },
    {
@@ -45277,58 +45292,27 @@ window.FLASH_NOTES = {
     "_dept": "perio"
    },
    {
-    "stem": "in your way to the clinic you had your finger cut and bleed , what should the doctor do when he comes to the clinic Wear double gloves. Wear triple gloves Wear single gloves. Cover with a waterproof plaster 48-Clinical attachment loss 4mm and supration of implant d.x? 49-What is the classification of the curate? رركم 50-distal of molars what gracey curette area specific we use? 51-after SRP p.t ca",
+    "stem": "You have a cut on your finger that is bleeding. What should you do when you come to the clinic to treat a patient?",
     "options": [
-     "a. peri implantitis",
-     "b. per implant mucositis",
-     "c. universal curate and area specific",
-     "d. Columbia and something",
-     "e. 13-14"
+     "Wear double gloves ✅",
+     "Wear triple gloves",
+     "Wear single gloves",
+     "Cover the cut and wear single gloves"
     ],
-    "answerLetter": null,
-    "answerIdx": null,
+    "answerLetter": "A",
+    "answerIdx": 0,
     "marker": "ref",
     "needsImage": false,
-    "raw": "49-What is the classification of the curate? رركم -universal curate and area specific -Columbia and something 50-distal of molars what gracey curette area specific we use? -13-14 51-after SRP p.t came back with pain and swelling, what is the cause? -After detachment of calculus from root with using scaler, it went in the deep pocket -You didn’t remove all the calculus -Rough root surface because you didn’t do good root planning -didn’t remove the plaque 52- p.t with appliance and little plaque when should be the recall visit -every 6 months -ever 1 year 53-you suspect biological width violatio",
+    "raw": "finger cut and bleed — what should the doctor do? Wear double gloves.",
     "dept": "perio",
     "sources": [
      "Saud_Masahhah"
     ],
     "id": "fn_perio_0491",
-    "ref": "Universal and area specific",
-    "verified_by": "ai",
-    "_verification_verdict": "supported",
-    "format": "mcq",
-    "_model_judgment": {
-     "verdict": "supported",
-     "confidence": "low",
-     "reason": "The marked answer correctly identifies common causes of post-SRP pain and swelling, including calculus fragments displaced into deep pockets, residual calculus, and rough root surfaces.",
-     "models": [
-      "kilo/kilo-auto/free",
-      "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
-     ]
-    },
-    "_embedded_answer": "51-after SRP p.t ca",
-    "_repaired_2026": true,
-    "_repair_source": "parse_saud_fixed",
-    "_data_quality": "merged_options_review",
-    "_model_suggested_answer": {
-     "letter": "A",
-     "answerIdx": 0,
-     "confidence": "high",
-     "reason": "chment loss but it might still be mucositis vs peri-implantitis depending on bone loss.\n\nActually, looking at this more ; ontal charting? \"Clinical attachment loss 4mm and supration of implant d.x?\" Might be about peri-implantitis vs mucositi",
-     "models": [
-      "opencode/nemotron-3-ultra-free",
-      "kilo/inclusionai/ling-3.0-flash:free",
-      "kilo/openrouter/free"
-     ]
-    },
-    "_book_explanation": {
-     "book": "McDonald Child & Adolescent",
-     "chapter": "Ch 17",
-     "passage": "ig. 28.11 Series of radiographs demonstrating the case of an immature necrotic tooth treated with the endodontic regeneration approach according\n to the recent guidelines of the American Association of Endodontists. (A) Immature permanent upper right lateral incisor with pulpal necrosis and peri-\n apical abscess secondary to dental trauma. The pulp chamber was accessed, canal length was establishe",
-     "status": "automated_evidence_candidate_ai_confirmed"
-    },
+    "note": "repaired from corrupted merged blob (gloves/infection control)",
+    "_verification_verdict": "needs_review",
+    "_verified_explanation": "",
+    "_model_judgment": "",
     "_dept": "perio"
    },
    {
@@ -52559,11 +52543,9 @@ window.FLASH_NOTES = {
     "options": [
      "a. Reciprocal arm above the survey line.                |     |     | | -------------------------------------------------------- | --- | --- | |",
      "b. Reciprocal arm contacts after the retentive arm.     |     |     | |",
-     "c. Reciprocal arm contacts before the retentive arm. ✅  |     |     | ● | 190.  Sterilization indicator placement: (previously mentioned)   |     |     | | ----------------------------------------------------------------- | --- | --- | In the center ✅",
-     "a. |",
-     "b. Two indicators on opposite si"
+     "c. Reciprocal arm contacts before the retentive arm. ✅  |     |     | ● | 190.  Sterilization indicator placement: (previously mentioned)   |     |     | | ----------------------------------------------------------------- | --- | --- | In the center ✅"
     ],
-    "answerLetter": "c",
+    "answerLetter": "C",
     "answerIdx": 2,
     "marker": "verified",
     "needsImage": false,
@@ -52582,8 +52564,8 @@ window.FLASH_NOTES = {
     },
     "_verification_verdict": "supported",
     "format": "mcq",
-    "_data_quality": "merged_options_review",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "note": "trimmed garbage options from merged blob"
    },
    {
     "stem": "A patient wants clear aligners, but has a severely rotated tooth. What is the best treatment?",
@@ -69389,46 +69371,6 @@ window.FLASH_NOTES = {
     "_verification_verdict": "needs_review",
     "format": "recall",
     "_dept": "implant"
-   },
-   {
-    "stem": "in your way to the clinic you had your finger cut and bleed , what should the doctor do when he comes to the clinic Wear double gloves. Wear triple gloves Wear single gloves. Cover with a waterproof plaster 48-Clinical attachment loss 4mm and supration of implant d.x? 49-What is the classification of the curate? رركم 50-distal of molars what gracey curette area specific we use? 51-after SRP p.t ca",
-    "options": [
-     "a. peri implantitis",
-     "b. per implant mucositis",
-     "c. universal curate and area specific",
-     "d. Columbia and something",
-     "e. 13-14"
-    ],
-    "answerLetter": null,
-    "answerIdx": null,
-    "marker": "ref",
-    "needsImage": false,
-    "raw": "- Wash with soap and water then alcohol-based hand rub 47- in your way to the clinic you had your finger cut and bleed , what should the doctor do when he comes to the clinic Wear double gloves. Wear triple gloves Wear single gloves. Cover with a waterproof plaster 48-Clinical attachment loss 4mm and supration of implant d.x?",
-    "dept": "implant",
-    "sources": [
-     "Saud_Masahhah"
-    ],
-    "id": "fn_implant_0331",
-    "ref": "Soap, water, alcohol rub",
-    "verified_by": "ai",
-    "_verification_verdict": "needs_review",
-    "format": "mcq",
-    "_repaired_2026": true,
-    "_repair_source": "parse_saud_fixed",
-    "_data_quality": "merged_options_review",
-    "_model_suggested_answer": {
-     "letter": "A",
-     "answerIdx": 0,
-     "confidence": "high",
-     "reason": "ves. Cover with a waterproof plaster\"\n\nThis seems like a question about infection control: If you have a cut finger blee; UNKNOWN",
-     "models": [
-      "opencode/nemotron-3-ultra-free",
-      "kilo/nvidia/nemotron-3-super-120b-a12b:free",
-      "kilo/kilo-auto/free"
-     ]
-    },
-    "_dept": "implant",
-    "_merged_into": "fn_perio_0491"
    },
    {
     "stem": "request the physician to do blood test or blood count for the patient\n89-Peg lateral comes at what stage?\n-Morphodifferentiation\n90-21 years old p.t after extraction of #21 and want a treatment for it. What is the\nmost conservative treatment for tooth #21 (no other info were given in the\nquestion!!!) “and implant were not in the options”\n-FPD from tooth #22 to #11\n-extract #11 and place fpd from",
