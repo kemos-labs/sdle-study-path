@@ -277,3 +277,18 @@
 **Recent-vs-old data verified live:** serves `questions.js?v=20260804v6` (0 "(not listed)" options in live bank) · `app.js?v=20260805v6` · `app.css?v=20260805ui3` (warm paper) · `lessons.js?v=20260804e1` · `plan_tracks.js?v=20260803p4` · `flash_notes.js?v=20260803fn6` — no stale assets.
 
 **Remaining honest backlog (registered, not blocking):** 1 quarantined flash blob · ~20 usable-with-caveat needs-review items (FLIP_REVIEW_LOG) · 2,019 "uncertain" verdicts spot-check (low priority).
+
+---
+
+## UPDATE 12 (2026-08-06) — Light-on-white lesson text FIXED (user caught what automation missed)
+
+**User's catch (correct):** lesson lines rendered light-white on the paper background. Root causes:
+1. **9 hardcoded light text colors** designed for the OLD dark theme survived the theme flip — `#f5f3ef` (lesson bold!), exam-QA block colors (`#d4e86a` h4, `#f0e6a8` stem, `#d8f5e4` correct, `#f0c8c8` wrong, `#a8e6c3` pass/ans-line, `#f0a8a8` miss), `#7dcea0` Answer+hinge summary, `#f0d78c` badge.warn, `#f0e8a8` etc.
+2. **First audit's blind spot:** its lesson step silently failed — the "Start today's lesson" selector used a straight apostrophe but the button text has a curly one (U+2019), so the lesson reading was NEVER audited; the `vol-meta` chip (white text on rgba(255,255,255,.25) over teal = 3.75:1) was also missed.
+
+**Fixes (committed `2ebe81f`, live `app.css?v=20260806ui4`):**
+- All 9 light text colors → dark ink equivalents (#2B2620, #5A6B1E, #8A6416, #176B3C, #B3402E)
+- `vol-meta` chips → rgba(0,0,0,.16) so white count text clears AA
+- **New audit `work/contrast_audit2.js`** — cannot silently skip again: it renders ALL 14 lessons (Next-day loop) + all 8 tabs + quiz + flash + micro-lessons, and adds a **human-eyes rule**: any text with luminance > 0.55 on bg luminance > 0.70 is flagged as LIGHT-ON-LIGHT, independent of the WCAG ratio math. Result: **0 violations local AND live**, 25/25 click test green, gates green.
+
+**Lesson for future agents (added to AGENTS.md mentally):** "test like a human" = render EVERY content view (not one), walk text nodes with a luminance rule, never rely on a selector that can silently fail (verify the view actually changed).
