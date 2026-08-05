@@ -322,3 +322,20 @@
 - **13 bank-answer conflicts** (same stem, different answer: neonatal/natal, 2mm/5mm IAN, gemination/fusion, camouflage/surgery, headgear/class-III, 4/3 mo root-fracture splint, ready-made/fiber post…) → logged to FLIP_REVIEW_LOG.md, **bank UNTOUCHED (RED LINE)**. Book-check shows bank right on 5 of them.
 - **Gates updated honestly**: FN-MERGED 5→6 threshold (A–E MCQs legit), flashcards exempt from FN-OPTS. All gates green, click test 25/25, contrast 0, live verified (no errors).
 - Assets live: `app.js?v=20260806v7`, `recent_qa.js?v=20260806rq8`, `flash_notes.js?v=20260806fn8`. Commit `36be5db`.
+
+---
+
+## UPDATE 15 (2026-08-06) — Practice search synced +344 new MCQs · flash search · book-reference modal with PAGE NUMBERS
+
+User asked: (1) is practice search synced with the new work? (2) add search to flash tab, (3) make references clickable → show the book passage highlighted + page number.
+
+**Done:**
+- **Practice tab**: bank now has the **344 new book-verified MCQs** (source `july2026_files`) — 15,177 → **15,521 usable**; verified the search bar finds them (e.g., "destructive force" → new j26 item is hit #1). All gates green after adding (G-VERIFIED/CITE/READ/TRUTH/DUP; removed 1 self-duplicate j26_0327).
+- **Flash tab search**: free-text box searches across ALL departments (stem/answer/options/why/reference); works with deck & archive modes.
+- **Book-reference trick — POSSIBLE & DONE**: the corpus `.txt` files preserve page breaks (`\f` from pdftotext), so each passage was located and given a **real page number**:
+  - 311 Q&A-tab items, 1,434 flash cards, 560 bank questions got `{book, page, context}`.
+  - Clicking **📖 (reference)** opens a modal: **book name + "p. N" badge** + the passage with the **matched text highlighted in yellow** + a hint "Open your book PDF to page N".
+  - Works in: Q&A tab (Set A–J), flash cards (Candidate book evidence), bank quiz explanation ("book support · p. N" + "Open passage" button).
+  - Items without a locatable passage keep the plain reference (honest — no fake page).
+- `scripts/build_book_pages.py` + cached `work/corpus_idx.pkl` (fast locating); new scripts copied to `sdle-prep/scripts/`.
+- Verified: gates green · click test 25/25 · contrast 0 · LIVE (bank 15,521 usable, flash search, Set J, modal opens, 0 errors). Commit `36a2973`.
