@@ -143,5 +143,12 @@
 - **Gates**: main 9/9 ✅ · flash ✅ · click test 25/25 ✅ (local + live) · live 0 errors.
 - **Live**: `https://kemos-labs.github.io/sdle-study-path/` — assets `app.js?v=20260806v11`, `questions.js?v=20260806v9`, `recent_qa.js?v=20260806rq10`, `flash_notes.js?v=20260806fn10`; footer: "15,521 MCQs (100% textbook-verified) · Flash Notes 4,918 recall items".
 
-### ⚠️ ONE OPEN ITEM (needs the user's call — bank untouched, RED LINE)
-**13 bank-answer conflicts** between new sources and the existing bank (same stem, different answer) are logged at the bottom of `docs/FLIP_REVIEW_LOG.md` (neonatal vs natal, ≈2mm vs 5mm IAN, gemination vs fusion, camouflage vs surgery, headgear vs class-III, 4 vs 3 mo root-fracture splint, ready-made vs fiber post, etc.). Book agrees with the bank on 5; the rest are ambiguous. **Nothing was auto-applied.**
+### ✅ OPEN ITEM — RESOLVED 2026-08-06 (user: "do the right thing")
+The 13 July-2026 conflicts were re-verified against `work/parsed_new_mcqs.json` (answer
+**indices**, not option texts — 10 were false alarms / same answers). **3 real fixes applied**
+to the bank with verbatim book citations (`docs/FLIP_REVIEW_LOG.md` bottom): fiber post
+(Shillingburg 5e), implant↔tooth 1.5–2 mm (Carranza 2018), ethics triad (SCFHS handbook +
+July-2026 recall). Flash deck repair in the same pass: 251 ✅-glue option splits, 1,190
+markers stripped, 22 merged items flagged, 77 recall fragments demoted, 62 flashcards
+restored; FN-MERGED gate now catches ✅-glue. Live verified: 0 glue, 0 bad indices,
+answers live-correct, 0 errors. Commits `fdd85f6`, `d745c19`.

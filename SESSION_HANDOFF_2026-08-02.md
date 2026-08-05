@@ -398,3 +398,28 @@ existed in the Wrong-Book review, NOT in the quiz answers.
 - Book names prettified (Sturdevant_Operative_5e → Sturdevant Operative 5e).
 - Live verified: search "xylitol" in Practice → 4th hit → answer → "📖 Sturdevant
   Operative 5e — p. 131" + hover popup OK, 0 errors. Commit `f5d7eb4`.
+
+---
+
+## UPDATE 19 (2026-08-06) — "Do the right thing": July-2026 conflicts RESOLVED + flash merge repair
+
+User authorized resolving the 13 logged bank-answer conflicts. Findings:
+
+- **The conflict log was misleading**: it compared option TEXTS across differently-ordered
+  option sets → 10 of 13 were actually same-answer or bank-right (verified against
+  `work/parsed_new_mcqs.json` answer indices + corpus).
+- **3 real fixes applied** (bank edited, index-vs-text verified, verbatim citations):
+  1. `rafi_08_63329a0c57` tooth-fracture post → **Fiber post** (Shillingburg 5e: fiber posts
+     fail before the root).
+  2. `gd_cd9dad4cf7` implant↔tooth distance → **1.5–2 mm** + repaired the option set that
+     had NO correct answer (Carranza 2018).
+  3. `stream_j26_052` dentist-possess triad → **Professionalism, laws, and ethics**
+     (July-2026 recall majority + SCFHS Ethics Handbook).
+- **Flash deck repair** (the real "slop"): 251 "option ✅ answer" glue items split into
+  proper options with answerIdx from the ✅ text (240 fixes); 1,190 trailing-✅ stripped;
+  28 citations moved to reference; 22 merged/multi-question items flagged
+  `merged_options_review` → archive; 77 single-option fragments demoted; 62 flashcards
+  restored to verified. `qa_j_0025` merged blob repaired (4 months, book-cited).
+- Gate FN-MERGED upgraded: fails on any ✅-glue in options (now 0); flash gate + main gate
+  green, click test 25/25, contrast 0. LIVE: bank answers correct, 0 glue, 0 bad indices,
+  0 errors. Commits `fdd85f6`, `d745c19`.
