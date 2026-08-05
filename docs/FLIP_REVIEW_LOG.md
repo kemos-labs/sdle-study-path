@@ -1696,3 +1696,39 @@ Same stem exists in the bank with a different answer. Book-grounded verdict need
 - `nm_0098` (new source) vs `abtal_pack_bfd9b2274d` (bank) — new: “3” | bank: “4” — stem: Cervical root fracture, the splinting time, how many months?
 - `nm_0408` (new source) vs `rafi_08_63329a0c57` (bank) — new: “fiber post” | bank: “ready-made post” — stem: Teeth with RCT and you want to use post, which post is the least cause
 - `nm_0428` (new source) vs `rafi_06_5423a2aade` (bank) — new: “1/3 intercuspal distance” | bank: “1/3 inter cuspal distance” — stem: In cavity preparation, the width of the cavity is:
+
+---
+
+## ✅ JULY-2026 CONFLICTS — RESOLVED 2026-08-06 (user: "do the right thing")
+
+The earlier conflict log compared option **texts** across differently-ordered option sets,
+which overstated 10 of 13 as "conflicts". Re-verified against `work/parsed_new_mcqs.json`
+(answer **indices**) + the official corpus. Outcome:
+
+### APPLIED (3 real fixes, bank edited, index-vs-text verified)
+| id | Was | Now | Evidence |
+|---|---|---|---|
+| `rafi_08_63329a0c57` (least cause of tooth fracture) | Ready-made post (unverified rafi) | **Fiber post** | Shillingburg 5e: "Glass fiber posts lead to lower stresses during in vitro testing, with less catastrophic failures: fractures may occur in posts rather than in the remaining tooth structure." |
+| `gd_cd9dad4cf7` (implant↔natural tooth distance) | "5 mm" (option set had NO correct answer; bank admitted it) | **1.5–2 mm** (options repaired) | Carranza 2018: "The implant should be placed at a distance of 1.5 to 2 mm from an adjacent natural tooth and 2 to 3 mm from an adjacent implant…" |
+| `stream_j26_052` (a dentist should possess) | Morals, ethics, and professionalism | **Professionalism, laws, and ethics** | July-2026 recall majority + 2 flash items mark it; SCFHS Ethics Handbook: "professionalism and ethics are obligatory… to meet professional standards." Wording-level call, logged. |
+
+### NO ACTION (10 — same answer or bank right; option-text mis-map)
+- `nm_0004` natal→**neonatal** (new src ALSO says Neonatal tooth; McDonald: natal=at birth, neonatal=within 30 days → day-1 infant = neonatal). Bank right.
+- `nm_0011` IAN implant distance → **≈2 mm** (new src says "2 mm"; Periodontics MSI: "minimal space (e.g., 2 mm) between the apical extent of the osteotomy and any vital structure, such as the mandibular canal").
+- `nm_0013` light handle → both "barrier and/or disinfect after each patient" (same meaning).
+- `nm_0026` gemination vs fusion → **Gemination** (new src agrees; bifid crown + single canal = gemination).
+- `nm_0035` rapid correction → **Camouflage treatment** (new src answerIdx=2 = Camouflage treatment — conflict log text-mapped wrongly; Proffit lists camouflage vs surgery for adults).
+- `nm_0058` image osteotomy → **BSSO** (new src answerIdx=1 = BSSO — same as bank; Hupp).
+- `nm_0067` Class II appliance → **Headgear** (new src "facemask therapy" = Class III appliance, wrong for maxillary protrusion; flash marker ✅ Headgear).
+- `nm_0073` partial-thickness flap → **Epithelium + connective tissue only** (new src was parse garbage: ansIdx=5 pointed into a merged "Pernicious anemia… vitamin B12" blob; Carranza: split-thickness flap leaves periosteum on bone).
+- `nm_0098` cervical root fracture splint → **4 months** (bank; pedo text: "cervical third root fractures… flexible splint for 3 to 4 months" — 4 inside range; IADT ~4 mo; flash marker ✅ 4).
+- `nm_0428` cavity width → **1/3 intercuspal distance** (same answer, spacing typo).
+
+### FLASH-DECK DATA REPAIR (same pass)
+- 251 "option ✅ answer" glue items split into proper options + answerIdx set from the ✅ text (240 index fixes) — all re-verified against option text.
+- 1,190 trailing-✅ markers stripped; 28 glued book citations moved to `reference`.
+- 22 genuinely-merged/multi-question items flagged `merged_options_review` (→ archive toggle, honest).
+- 77 single-option recall fragments demoted to archive (`_unverified`); 62 flashcards restored to verified.
+- `fn_oms_0445` repaired (canine space infection); `fn_fixed_0048` flagged.
+- Gate FN-MERGED upgraded: also fails on ✅-glue in options (0 remaining).
+- `qa_j_0025` (recentqa) repaired from a 9-option merged blob → 4 month options, answer 4 (index 3, book-cited).
