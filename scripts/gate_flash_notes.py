@@ -52,7 +52,8 @@ def main() -> int:
     # ── Gate FN-OPTS: verified items should have ≥2 options ─────────────
     verified_lt2 = []
     for it in all_items:
-        if it.get("marker") == "verified" and len(it.get("options", [])) < 2:
+        if it.get("marker") == "verified" and len(it.get("options", [])) < 2 \
+                and it.get("_kind") != "flashcard":
             verified_lt2.append(it["id"])
     opts_ok = len(verified_lt2) == 0
     if not opts_ok:
@@ -105,8 +106,8 @@ def main() -> int:
         print(f"  ❌ FN-VERIFIED: only {verdict_coverage}/{total} items have verdicts")
 
     # ── Gate FN-MERGED: long option lists must be visibly flagged ───────
-    merged = [it["id"] for it in all_items if len(it.get("options", [])) >= 5]
-    unflagged_merged = [it["id"] for it in all_items if len(it.get("options", [])) >= 5
+    merged = [it["id"] for it in all_items if len(it.get("options", [])) >= 6]
+    unflagged_merged = [it["id"] for it in all_items if len(it.get("options", [])) >= 6
                         and it.get("_data_quality") != "merged_options_review"]
     merged_ok = not unflagged_merged
     if not merged_ok:

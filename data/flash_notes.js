@@ -1,6 +1,6 @@
 window.FLASH_NOTES = {
  "generated": "2026-08-02 (dedupe_flash)",
- "total": 4451,
+ "total": 4918,
  "perSource": {
   "Mar-June_2026": 1209,
   "SDLE_May_2026": 251,
@@ -13,8 +13,8 @@ window.FLASH_NOTES = {
   "GoldenFile2": 91
  },
  "markerStats": {
-  "verified": 1228,
-  "ref": 2798
+  "verified": 1799,
+  "ref": 3119
  },
  "byDept": {
   "restorative": [
@@ -394,7 +394,8 @@ window.FLASH_NOTES = {
     "ref": "Thinking. 1.  **Analyze the Request:**\n    *   Target: Dental recall question.\n    *   Format: Short answer (1-5 words).\n    *   Question: APF (Acidulated Phosphate Fluoride) percentage?\n\n2.  **Retrie",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Amelogenesis imperfecta – aesthetic concern & long-term prognosis",
@@ -582,7 +583,8 @@ window.FLASH_NOTES = {
      "passage": "onal\nflaps have been reflected and a working knowledge of the anatomy is learned.\n\fFigure 21-77.\n\f\f   Single tooth tunnel or envelope technique (also called the pouch technique).\n   A, Preoperative view of a 3-mm Class I recession defect on tooth #5. B, A\n   small scalpel blade is used to begin the split-thickness dissection through the\n   sulcus. A very sharp curette may also be used. C, The sutu",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Anterior trauma without dentin involvement → classification (Class I–V).\n●",
@@ -600,7 +602,8 @@ window.FLASH_NOTES = {
     "ref": "Anterior trauma without dentin involvement → classification (Class I–V).",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Fluoride ingestion → \\",
@@ -618,7 +621,8 @@ window.FLASH_NOTES = {
     "ref": "Thinking. 1.  **Analyze the Request:**\n    *   Target: Short answer (1-5 words).\n    *   Question: \"Fluoride ingestion →\"\n    *   Context: Dental recall question.\n    *   Goal: Find the most appropria",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Soaking avulsed tooth",
@@ -1010,7 +1014,8 @@ window.FLASH_NOTES = {
      "passage": "ration of Independence was           by a projection of the increased numbers of teeth that\nsigned, life expectancy was only 35 years.51                will be at risk to dental disease in the future.\n    In 1994, Americans spent $949 billion on health             Caries. The incidence of caries has decreased. This\ncare.42 Projections for 2008 indicate that the total U.S.   reduction is a result o",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Class III GV black",
@@ -1034,7 +1039,8 @@ window.FLASH_NOTES = {
      "passage": "ace\n margin to the groove being approximately 0.3 mm (see\n Fig. 18-8). Careful technique is necessary in preparing\n the gingival retention groove. If the dentin that supports\n the gingival enamel is removed, the enamel is subject to                  A\n fracture. In addition, if the groove is placed only in the\n axial wall, no effective retention form is developed, and\n there is risk of pulpal invo",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Patient was referred for resto in 17 after placing rubber dam and anesthesia the and the dr started the cavity prep he saw\nthe tooth is sound , he looked to the referral and discovered the tooth is 27 , what is the management",
@@ -1624,7 +1630,8 @@ window.FLASH_NOTES = {
      "passage": "as a consequence of tissue matu-          of the CEJ on the proximal surface of the tooth\n   ration over a period of about 1 year post treatment.        • Class II: the tip of the interdental papilla is located\n       There are few histologic evaluations of the nature        at or apical to the level of the CEJ on the proximal\n   of the attachment established to the root surface             surfac",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "What is the Management of MORNJ class I with no pain ?",
@@ -1642,7 +1649,8 @@ window.FLASH_NOTES = {
     "ref": "Thinking. 1.  **Analyze the Request:**\n    *   Target: Dental recall question.\n    *   Format: Short answer (1-5 words).\n    *   Question: What is the Management of MORNJ class I with no pain?\n    *  ",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "What is your classification of missing 21 , 13 ?",
@@ -2101,7 +2109,8 @@ window.FLASH_NOTES = {
     "ref": "A dentist wearing contact lenses gets cavity aerosol/splatter into the eye while using the air-water syringe. What should be done first?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "White lesions that disappear after rehydration are most likely:",
@@ -4206,7 +4215,8 @@ window.FLASH_NOTES = {
     "ref": "Thinking. 1.  **Analyze the Request:**\n    *   Target: \"Dental recall question. Short answer (1-5 words).\"\n    *   Input: \"Q: Miller recession class iii\"\n    *   Expected Output: A short answer (1-5 w",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "MORNJ class i with no pain, what is the management? Antibacterial\nmouth rinse, Pt education, follow-up",
@@ -4683,7 +4693,8 @@ window.FLASH_NOTES = {
     "ref": "Patient come with distal fracture on Lateral incisors. On examination, mesial has GIC restoration with minimum Remaining dentin. Which restoration will you choose?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Ceramic veneer",
@@ -4701,7 +4712,8 @@ window.FLASH_NOTES = {
     "ref": "Thinking. 1.  **Analyze the Request:**\n    *   Target phrase: \"Ceramic veneer\"\n    *   Context: \"Dental recall question. Short answer (1-5 words).\"\n    *   Format: Q: Ceramic veneer / A: [short answer",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Best cost-effective fluoride? Water fluoridation",
@@ -7532,7 +7544,8 @@ window.FLASH_NOTES = {
      "passage": "ys, the possibility of a low-grade infection\n       should be entertained and the patient started on a 7- to 10-day course of antibiotics. Prescribe 29 (or 41, if\n       10 days) tablets of penicillin V (250-mg tablets). The patient takes 500 mg immediately and then 250 mg\n       four times a day until all tablets have been taken. Erythromycin may be substituted if the patient is allergic\n       t",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "osteosarcoma\n4/ Cell with multiple myeloma :\nPlasma cells ●\nLymphocytes ●\nMacrophages ●\n5/ Pt presented with warty like projection lesions on the anterior mandible (interdental) , they\ndescribed the histological features with Pic :\nPapilloma ●\n6/ Dr try to force the pt to forcefully show her teeth , close eyes and wrinkled forehead, which\nnerve dr testing :\nTrigeminal ●\nfacial ●\n7/ 6 year old pt",
@@ -7556,7 +7569,8 @@ window.FLASH_NOTES = {
      "passage": "wound. Hiatt et al. (1968) examined the tensile\ntooth–gingival flap interface (i.e. the absorption and     strength of the tooth–gingival flap interface follow-\n­adhesion of plasma proteins onto the root surface)        ing reconstructive surgery of relatively small surgical\n (Wikesjo et al. 1991). Within minutes, a fibrin clot      dehiscence defects over the maxillary canine teeth in\n attached t",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Q) Patient with stable angina taking unknown does of aspirin for extraction of non-",
@@ -7574,7 +7588,8 @@ window.FLASH_NOTES = {
     "ref": "Thinking. 1.  **Analyze the Request:**\n    *   Target: Dental recall question.\n    *   Format: Short answer (1-5 words).\n    *   Query: \"Patient with stable angina taking unknown does of aspirin for e",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "case of implant inside IANC what to do?",
@@ -7623,7 +7638,8 @@ window.FLASH_NOTES = {
     "ref": "We are given a dental multiple choice question. The question is: \"Patient presented to the clinic for regular check up ( see image ) Bitwing x-ray : show the crown on tooth #46 has open margin on both",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "D-Distoration final impression\n22-End stage of renal disease ( oral manifestation )\nA-Petechia\n23-pedo patient with primary molar indicated for extraction which of\nthese are definitive diagnosis for extraction?\nA-pain on percussion\nB-buccal swelling to the tooth.\n24-Uncontrolled DM , he has swelling tooth #46 with isolated deep\npocket (7mm) , normal pulp respond , what is your management :\nA-Extra",
@@ -7702,7 +7718,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "crown lengthening ✅",
@@ -7809,7 +7826,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Erythema multiform",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Patient you give him immediate denture and he takes it off after 24 at night , in the morning he can't wear it why?",
@@ -7864,7 +7882,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Patient after she removes the ortho she notices a white spot in her anterior teeth , what is your management ? 2023/09/17 نرقم نب دونعلا GUC Pt. When close his mouth mandibular shift 7mm doctor diagnose with masticatory muscle spasm which muscle in the cause ?! Temporal Medial pterygoid? Lateral pterygoid Masseter",
@@ -7921,7 +7940,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "fluoride gel",
     "_merged_into": "fn_restorative_0240",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Most used fluoride varnish:",
@@ -8028,7 +8048,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "medial pterygoid and masseter",
     "_merged_into": "fn_restorative_0243",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- lateral pterygoid and masseter",
@@ -8049,7 +8070,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "lateral pterygoid and masseter",
     "_merged_into": "fn_restorative_0243",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- medial pterygoid and mylohyoid",
@@ -8070,7 +8092,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "medial pterygoid and mylohyoid",
     "_merged_into": "fn_restorative_0243",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "3 years old with mouth sores low grade fever and increased drooling",
@@ -8126,7 +8149,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "toothing",
     "_merged_into": "fn_restorative_0247",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- herpangina",
@@ -8147,7 +8171,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "herpangina",
     "_merged_into": "fn_restorative_0247",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "positive bence jones test",
@@ -8268,7 +8293,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Candida albian",
     "_merged_into": "fn_restorative_0253",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "what motor nerve that causes gag reflex",
@@ -8323,7 +8349,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "vegus",
     "_merged_into": "fn_restorative_0255",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "pictures of angular chelitis , and glossitis, it’s because of a deficiency in what vitamin?",
@@ -8378,7 +8405,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Vitamin B",
     "_merged_into": "fn_restorative_0257",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "child come to the clinic with unusual behavior with his parents dentist suspected abuse he should:",
@@ -8435,7 +8463,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "investigate the child in detail",
     "_merged_into": "fn_restorative_0259",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- consult a colleague",
@@ -8456,7 +8485,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "consult a colleague",
     "_merged_into": "fn_restorative_0259",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- call patents with phone",
@@ -8477,7 +8507,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "call patents with phone",
     "_merged_into": "fn_restorative_0259",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "best radiograph to locate impacted canine",
@@ -8534,7 +8565,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "CBCT",
     "_merged_into": "fn_restorative_0263",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- Cephalometric",
@@ -8555,7 +8587,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Cephalometric",
     "_merged_into": "fn_restorative_0263",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "(similar to previous questions ) before surgical treatment for canine impaction, which Radiograph is needed?",
@@ -8644,7 +8677,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "excess vertical growth of maxilla",
     "_merged_into": "fn_restorative_0267",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "patient has 9mm incisor show at rest with normal lip position what is the treatment?",
@@ -8701,7 +8735,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Botox",
     "_merged_into": "fn_restorative_0269",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- lip repositioning",
@@ -8722,7 +8757,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "lip repositioning",
     "_merged_into": "fn_restorative_0269",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "crown lengthening ✅",
@@ -8798,7 +8834,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- tongue thrust habit",
@@ -8819,7 +8856,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "tongue thrust habit",
     "_merged_into": "fn_restorative_0273",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "In severe class II patients ANB value will be:",
@@ -8874,7 +8912,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "increased",
     "_merged_into": "fn_restorative_0276",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "pedo I think 7 y/o with functional shift in mandible treatment ?",
@@ -8951,7 +8990,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "buccaly impacted (the answer)",
     "_merged_into": "fn_restorative_0279",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "14 y/o with persistent diastema what you should check?",
@@ -9006,7 +9046,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "palpate the bulges of canines",
     "_merged_into": "fn_restorative_0281",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "follow up of patients with severe peridontitis, after 6 years you are expecting that:",
@@ -9061,7 +9102,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "regain in CAL for patients attending regular recall visits",
     "_merged_into": "fn_restorative_0283",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- worsening perio condition for incompliance patients",
@@ -9082,7 +9124,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "worsening perio condition for incompliance patients",
     "_merged_into": "fn_restorative_0283",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "patients ortho multiple areas of irritation from the wire (lip, gingiva, buccal mucosa)",
@@ -9172,7 +9215,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "cut the wire",
     "_merged_into": "fn_restorative_0287",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- tell him to wait for 2 weeks",
@@ -9193,7 +9237,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "tell him to wait for 2 weeks",
     "_merged_into": "fn_restorative_0287",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "primary canines absence is an indication for",
@@ -9293,7 +9338,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Extract #16 and replace it with implant",
     "_merged_into": "fn_restorative_0292",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Patient came with severe pain on percussion and palpation after months #16 endotreatment with normal pocket, what is the cause of pain? Xray of 16 with 3 obturated canals (1 mesial), extruded gp by only 0.5mm from one of the roots طيسب نجورتسكا هنأ دصقملا يريدقت مقرلا , and Pa lesion associated with all roots",
@@ -9361,7 +9407,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Missed mb2",
     "_merged_into": "fn_restorative_0294",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- Extruded gp",
@@ -9382,7 +9429,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Extruded gp",
     "_merged_into": "fn_restorative_0294",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- Extraradicular pathosis",
@@ -9403,7 +9451,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Extraradicular pathosis",
     "_merged_into": "fn_restorative_0294",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Case referred for prosthodontist after treatment plan being initiated by a dentist, the prosthodontist didn't agree with the tx. , what should he do? him✅",
@@ -9460,7 +9509,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "write a criticizing report and send it to the dentist",
     "_merged_into": "fn_restorative_0298",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- call the dentist and teach him",
@@ -9481,7 +9531,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "call the dentist and teach him",
     "_merged_into": "fn_restorative_0298",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- tell the patient that he did a wrong treatment plan",
@@ -9502,7 +9553,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "tell the patient that he did a wrong treatment plan",
     "_merged_into": "fn_restorative_0298",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- tel the patient that you have different tx. Plan and call the dentist to discuss with\nhim✅",
@@ -9585,7 +9637,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "raise a complain",
     "_merged_into": "fn_restorative_0303",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- treat her without her approval",
@@ -9606,7 +9659,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "treat her without her approval",
     "_merged_into": "fn_restorative_0303",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- convince her that you respect her islamics principles but “Necessities permit\nprohibitions” ✅",
@@ -9684,7 +9738,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Gold",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- metal",
@@ -9705,7 +9760,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "metal",
     "_merged_into": "fn_restorative_0307",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- acrylic ✅",
@@ -9753,7 +9809,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "cobalt chrome",
     "_merged_into": "fn_restorative_0307",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "53y/o patient is on Zometa with exposed bone, pain and purulant. she extracted multiple teeth weeks ago. OPG no fracture but a large mixed lesion extending from premolar area to the ramus 🤷♀️ What ts the treatment? 51:OPG with a lesion (RL with upper scalloped margins in posterior mandible) tx?",
@@ -9810,7 +9867,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "resection",
     "_merged_into": "fn_restorative_0312",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Case OPG with RL scalloped , vital teeth , lower mandible , Tx ? Follow up ● mandibular resection",
@@ -9830,7 +9888,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- surgical removal",
@@ -9851,7 +9910,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "surgical removal",
     "_merged_into": "fn_restorative_0312",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- radiotherapy",
@@ -9872,7 +9932,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "radiotherapy",
     "_merged_into": "fn_restorative_0312",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Extraction of mesially angulated 38, might cause:",
@@ -10066,7 +10127,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "perforation",
     "_merged_into": "fn_restorative_0322",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "treatment of Naocl accident?",
@@ -10176,7 +10238,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "placement of intracanal medicemant",
     "_merged_into": "fn_restorative_0324",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- warm pack for the first day",
@@ -10197,7 +10260,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "warm pack for the first day",
     "_merged_into": "fn_restorative_0324",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "What cause extrusion of Naocl?",
@@ -10247,7 +10311,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "the needle go passively",
     "_merged_into": "fn_restorative_0329",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- wedging of the needle ✅",
@@ -10357,7 +10422,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "direct capping",
     "_merged_into": "fn_restorative_0332",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "amalgam 2 days painful when bite , tmj normal ? high restoration",
@@ -10377,7 +10443,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "tooth painful when bite , surgically stained with blue ? VRF",
@@ -10433,7 +10500,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "MB cusp of 6 occlude with DB groove of 6 ? Cl iii",
@@ -10490,7 +10558,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "retruded upper anteriors and ortho Tx with full ceramic brackets , cause of attrition ? ceramic brackets ● 2023/09/17 يبيتعلا دونعلا GUC 1-Pt. With recession and sensitivity , ask about most sensitive part ?! Cervical of root ✅ A-Middle of the root B-Cervical of crown C-Occlusal of crown",
@@ -10561,7 +10630,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "case scenario patient with end stage renal disease , has oral lesions, (values for creatinine and GFR were given), what could be the cause of his lesion? A-uremic stomatitis ✅ 94-composite restoration with undecontoure and open contact, margins are sealed and perfect, what is your management A-repair it by removing part of the proximal box✅ B-replace the entire restoration 95-patient came for extr",
@@ -10797,7 +10867,8 @@ window.FLASH_NOTES = {
     "ref": "re-assure -apply fluoride",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "case about a decalcified permanent which had history of carious previous primary tooth:",
@@ -10932,7 +11003,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "FL foam",
     "_merged_into": "fn_ortho_pedo_0321",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "dentist use latex gloves with PVS impression and her try to remove it from the patient mouth after setting time but the material still flow what is the reason?",
@@ -11024,7 +11096,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- severity of inflammation",
@@ -11044,7 +11117,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "severity of inflammation",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Pt fall on his chin what will fracture?",
@@ -11101,7 +11175,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "condyle",
     "_merged_into": "fn_restorative_0360",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "How many embrasure contact between to teeth?",
@@ -11229,7 +11304,8 @@ window.FLASH_NOTES = {
     "ref": "chest x ray -tracheotomy",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- jaw thrust",
@@ -11250,7 +11326,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "jaw thrust",
     "_merged_into": "fn_restorative_0364",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "What used to disinfect GP? 5.25 NAOCL for 1 min",
@@ -11318,7 +11395,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "ferric sulfate",
     "_merged_into": "fn_restorative_0367",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Pt did PFM crown and after cementation she has gingival inflammation, there is inflammation in all teeth that had crowns only, the crowns not over contoured what's the cause of the inflammation? ن يوسم ناك عقوتا سب هرم هركذتا ام ي بيرغ هروصو لاؤس -20 ر نسحا نع لأسي و 21&22# ناكم تنلابما و يرجت س زرو",
@@ -11372,7 +11450,8 @@ window.FLASH_NOTES = {
     "ref": "metal allergy -excecc cement",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "bad oral hygiene\n-?\nن\nيوسم ناك عقوتا سب هرم هركذتا ام ي بيرغ هروصو لاؤس -20\nر\nنسحا نع لأسي و 21&22# ناكم تنلابما و يرجت س زرويتنلال\nfor esthetic تنمتبا عون",
@@ -11419,7 +11498,8 @@ window.FLASH_NOTES = {
     "ref": "open tray abutment -closed try abutment",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "HIV Patient with whit lesion in the tongue or something like that what will give him? if lesion scrubbed = antifungal if its not =follow up",
@@ -11511,7 +11591,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "wait 10 days after AB course",
     "_merged_into": "fn_restorative_0374",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Pregnant Pt in third trimester came with pain she couldn't sleep for 2 days ( irreversible pulpits) what you will do? نم فاخي تاميعطتلا لك ذخام تسيتندلا ناك ول نع لاؤس -25 شيا",
@@ -11568,7 +11649,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "told her came back after birth",
     "_merged_into": "fn_restorative_0376",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- do RCT without x ray",
@@ -11589,7 +11671,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "do RCT without x ray",
     "_merged_into": "fn_restorative_0376",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "why we need primate space?",
@@ -11646,7 +11729,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "resolve mild crowding",
     "_merged_into": "fn_restorative_0379",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "what will affect denture retention during eating?",
@@ -11755,7 +11839,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "mandibular resection",
     "_merged_into": "fn_restorative_0382",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "What is the sequence of shade matching?",
@@ -11821,7 +11906,8 @@ window.FLASH_NOTES = {
     "ref": "Thinking. 1.  **Analyze the Request:**\n    *   Task: Dental recall question. Short answer (1-5 words).\n    *   Context: \"Confidentiality (was the only reasonable option)\" -> This looks like a header o",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- Plaque & calculus",
@@ -11841,7 +11927,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Plaque & calculus",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "OH\nWhy while you do class 2 amalgam restoration on mesial surface of upper 1st\npremolar sometimes you end up with overhang ?",
@@ -11859,7 +11946,8 @@ window.FLASH_NOTES = {
     "ref": "OH Why while you do class 2 amalgam restoration on mesial surface of upper 1st premolar sometimes you end up with overhang ?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- not adapting wedge well",
@@ -11879,7 +11967,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "not adapting wedge well",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- Present of mesial concavity in cervical third",
@@ -11899,7 +11988,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Present of mesial concavity in cervical third",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- Hard to place the wedge due to root proximity with canine",
@@ -11919,7 +12009,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Hard to place the wedge due to root proximity with canine",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "There is usual space between canine and 1st premolar\nCase scenario of patients with night sweating and sputum with blood what to\nsuspect?",
@@ -11937,7 +12028,8 @@ window.FLASH_NOTES = {
     "ref": "There is usual space between canine and 1st premolar Case scenario of patients with night sweating and sputum with blood what to suspect?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Leukemia\nDiabetic patient who wears upper complete denture, presented with pin-point\nhyperemia under the denture, what you should instruct the pt. to do?",
@@ -11955,7 +12047,8 @@ window.FLASH_NOTES = {
     "ref": "Leukemia Diabetic patient who wears upper complete denture, presented with pin-point hyperemia under the denture, what you should instruct the pt. to do?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- Vitamin",
@@ -11975,7 +12068,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Vitamin",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- Antifungal",
@@ -11995,7 +12089,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Antifungal",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- Restrict wear the denture to day-time only",
@@ -12015,7 +12110,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Restrict wear the denture to day-time only",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "A patient with unilateral sharp pain preceded by a rash. What is the diagnosis?",
@@ -12069,7 +12165,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "High",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- medium",
@@ -12089,7 +12186,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "medium",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "low\nPic of SCC in ventral of tongue, after surgery what adjunctive tx. most likely followed\nafter surgery ?",
@@ -12107,7 +12205,8 @@ window.FLASH_NOTES = {
     "ref": "low Pic of SCC in ventral of tongue, after surgery what adjunctive tx. most likely followed after surgery ?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- Radiation therapy",
@@ -12127,7 +12226,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Radiation therapy",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "ABX\nPic of attrition in all occlusal surfaces of all teeth",
@@ -12145,7 +12245,8 @@ window.FLASH_NOTES = {
     "ref": "ABX Pic of attrition in all occlusal surfaces of all teeth",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- Increase flexure",
@@ -12165,7 +12266,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Increase flexure",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Tooth to tooth contact\nWhat material to prepare the veneer ?",
@@ -12183,7 +12285,8 @@ window.FLASH_NOTES = {
     "ref": "Tooth to tooth contact What material to prepare the veneer ?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- hydrofluoric acid 4-10%, 10 sec",
@@ -12203,7 +12306,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "hydrofluoric acid 4-10%, 10 sec",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "hydrofluoric acid 50%, 10 sec\nHow to increase retention while using GIC ?",
@@ -12221,7 +12325,8 @@ window.FLASH_NOTES = {
     "ref": "hydrofluoric acid 50%, 10 sec How to increase retention while using GIC ?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Which of these added to MTA for radiopacity? A- NaOCl B- Bismuth oxide C- Calcium silicate",
@@ -12241,7 +12346,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- NaOCl",
@@ -12261,7 +12367,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "NaOCl",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- Bismuth oxide",
@@ -12282,7 +12389,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Bismuth oxide ✅",
     "_merged_into": "fn_ortho_pedo_0338",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Calcium silicate\n2023/09/18 ينارهشلا يكرت BUC\nMelanotic macule 5 mm in size at the palt area what will be the\ntreatment?\nExison\nFollow up\nNothing\nTopical corticosteroids\nPicture showing lower anterior\nThere was dark area at the marginal gingva extinding to attacehd\nmucosa and it says what is the tx ?\nA - exisonal biopsy\nB- leave\nC - follow up\n3 3 year old came with loss of appetite, sore mouth ,",
@@ -12359,7 +12467,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "level 1 lever",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- level 2 lever",
@@ -12380,7 +12489,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "level 2 lever",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "level 3 lever\nMetal tray how you will disinfict ?\nBrush the metal tray\nManual",
@@ -12430,7 +12540,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "use glutraldhyide 10% for 10 minutes",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "pt with gingival recession on one tooth caused by habit of nail scratching, tx after she stops habit?",
@@ -12581,7 +12692,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Trigeminal neuralgia",
     "_merged_into": "fn_restorative_0397",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "The patient has 1 cm ulcer in the margins and is neither irregular nor rolled. The dentist did all the needed treatments. When to take a biopsy?",
@@ -12636,7 +12748,8 @@ window.FLASH_NOTES = {
     "ref": "7 days -14days",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "A female patient needs extraction of lower 3rd molar and the dentist gave her husband the consent form to sign it. The patient was upset with the dentist's behaviour. What should the dentist do? form",
@@ -12694,7 +12807,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Do the extraction",
     "_merged_into": "fn_restorative_0422",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- Let the husband sign the consent form then do the extraction",
@@ -12716,7 +12830,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Let the husband sign the consent form then do the extraction",
     "_merged_into": "fn_restorative_0422",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "A female patient needs RCT for tooth #36 then post and core and crown. Her husband wants to extract the tooth instead as the treatment is expensive. What should the dentist do? informed consent",
@@ -12775,7 +12890,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Extract the tooth",
     "_merged_into": "fn_restorative_0425",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- Convince the husband to pay",
@@ -12797,7 +12913,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Convince the husband to pay",
     "_merged_into": "fn_restorative_0425",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- Let the husband sign the consent form then extract the tooth",
@@ -12819,7 +12936,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Let the husband sign the consent form then extract the tooth",
     "_merged_into": "fn_restorative_0425",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "PA. What is wrong with the endo treatment?",
@@ -12901,7 +13019,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "autonomy",
     "_merged_into": "fn_ortho_pedo_0375",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- Justice",
@@ -12923,7 +13042,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Justice",
     "_merged_into": "fn_restorative_0430",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Missing tooth #11 & #21. What is the Kennedy classification?",
@@ -13109,7 +13229,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Hypothyroidism",
     "_merged_into": "fn_restorative_0437",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- Syncope",
@@ -13131,7 +13252,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Syncope",
     "_merged_into": "fn_restorative_0437",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Pedo patient has sever asthma and taking multiple bronchodilators. He has moon face and buffalo hump. What is the cause?",
@@ -13188,7 +13310,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Insulin resistance",
     "_merged_into": "fn_restorative_0440",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- Increased cortisol level",
@@ -13210,7 +13333,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Increased cortisol level",
     "_merged_into": "fn_restorative_0440",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "A patient is having endo treatment with the use of rubber dam. He experienced whizzing and difficulty breathing after 30 min. What is the cause?",
@@ -13328,7 +13452,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "NSAID",
     "_merged_into": "fn_endo_0314",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "2- What type of cells responsible for repair dentin after deep caries -\nOdontoblast\n3- Type of appliance used for retroclined lower teeth\nactivated Hawley retainer for protruded incisors\nlip bumber\n4-dentist treating pt. and he was carefully retracting lower lip of the patient\nwhy is he doing that ?\nherpes labialis\n5-pt. came with SAP and dentist treated him and come after 3 days with\nsevere pain ",
@@ -13407,7 +13532,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "burning mouth syndrome\n-allergic reaction\n-lichenoid reaction",
@@ -13425,7 +13551,8 @@ window.FLASH_NOTES = {
     "ref": "burning mouth syndrome -allergic reaction -lichenoid reaction",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "21-Crusting lip , multiple skin lesion , multiple oral ulcers\n-primary herpetic gingivostomatitis\n-Mucous membrane pemphigoid\n-pemphigus vulgaris",
@@ -13443,7 +13570,8 @@ window.FLASH_NOTES = {
     "ref": "21-Crusting lip , multiple skin lesion , multiple oral ulcers -primary herpetic gingivostomatitis -Mucous membrane pemphigoid -pemphigus vulgaris",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "erythema multiform\n22-Class v 0.5 mm of remaining dental thickness will place composite what liner\n-calcium hydroxide\n23-Came for dental checkup found 8x5 cm lesion in opg it Is painless in lower mandible body\nwhat to do\n-mandible resection\n-excisional biopsy\n-incisional biopsy\n-follow up annually\n24-Flare up is:\n-Acute pain following canal cleaning and shaping or obturation",
@@ -13462,7 +13590,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Acute pain during canal cleaning and shaping or obturation\n25-Patient for elective perio tx has influenzas :\n-Treat in isolated\n-delay until active phase resolved\n26-Patient end stage of cancer asks doctor to help kill him to be pain free the doctor refused\nthen the patient insisted the doctor start to remove the ventilation and something else what is\nthe doctors act:\nActive euthanasia\nPassive e",
@@ -13481,7 +13610,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "no management\n-antiviral I think\n-anti fungal\n30-Pic bone necrosis but no pain management:\n-antiseptic mouth wash and antibiotics",
@@ -13499,7 +13629,8 @@ window.FLASH_NOTES = {
     "ref": "no management -antiviral I think -anti fungal 30-Pic bone necrosis but no pain management: -antiseptic mouth wash and antibiotics",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "which of the following would increase the retention of FS A-bonding✅ B-air abrasion C-enamloplasty 50-(x-ray) tooth lower premolar indicated for endo tx for missed canal, how many canals did you see in this tooth A-3✅ 51-patient with Polymylagia rheumatic came to the clinic with pain in TMJ area, which of the following conditions she most probably has A-giant cell arteritis✅ B-SLE C-rheumatoid art",
@@ -13571,7 +13702,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "iron deficiency anemia",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "- pernicious anemia",
@@ -13592,7 +13724,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "pernicious anemia",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "pt with HBA1C 9%, severe periodontitis, 82% BOP, what to do?",
@@ -13648,7 +13781,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "refer to physician then start phase I therapy",
     "_merged_into": "fn_restorative_0459",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Impression that u can pour it more than once",
@@ -13698,7 +13832,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "distal incline from the mandibular molar\nQ16 scenario of pt was complaining of erythema in the palate, (they provide pic showing partial edentulism and\nerythema in the denture base) what would you do?",
@@ -13717,7 +13852,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Class IV and doesn’t like the shade?",
@@ -13770,7 +13906,8 @@ window.FLASH_NOTES = {
     "ref": "Remove 0.5mm of restoration and repair - Re-Etch and add increment of composite. -",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "doctor register to workshop and he Doesn’t attened what did he violate",
@@ -13790,7 +13927,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Removed Adrenal gland and becames unconscious what should u give him? A-atropin B- hydrocortisone",
@@ -13841,7 +13979,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Ant. Flabby ridgt imp ? A- A muco. compresive B- Selective pressure C- Mucostatic",
@@ -13952,7 +14091,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "Patient with upper 7 class 2 furcation and grade 2 mobility , and upper 6 with\nfurcationclass 1?",
@@ -14111,7 +14251,8 @@ window.FLASH_NOTES = {
       "kilo/stepfun/step-3.7-flash:free"
      ]
     },
-    "_dept": "restorative"
+    "_dept": "restorative",
+    "_raw_recall": true
    },
    {
     "stem": "14ywith discoloration andaskhow totreat?",
@@ -15165,6 +15306,4704 @@ window.FLASH_NOTES = {
     "_verification_verdict": "supported",
     "format": "mcq",
     "_dept": "restorative"
+   },
+   {
+    "id": "fn_j26_0010",
+    "stem": "Based on the clinical photograph, determine the Angle classification.",
+    "options": [
+     "a. Class I",
+     "b. Class II Division 1",
+     "c. Class II Division 2",
+     "d. Class III"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Based on the clinical photograph, determine the Angle classification.",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Orthodontics 5th",
+     "passage": "The passage lists 'Class II division 2 malocclusion' in the index, and the question asks for Angle classification based on the photograph, which corresponds to this classification."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0079",
+    "stem": "Name the procedure?",
+    "options": [
+     "a. a. Bilateral sagittal split osteotomy",
+     "b. *Also Ramus Osteotomy"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Name the procedure?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_OMFS_7e",
+     "passage": "The passage states: 'this is the bilateral sagittal split osteotomy (BSSO) first described by Trauner and Obwegeser and later modified by Dalpont, Hunsick, and Epker.'"
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0086",
+    "stem": "Based on the image, the teeth show:",
+    "options": [
+     "a. Generalized yellow-brown to dark brown discoloration",
+     "b. Diffuse involvement of nearly all anterior teeth",
+     "c. Rough, pitted/mottled enamel surface",
+     "d. Most likely diagnosis:",
+     "e. Severe dental fluorosis"
+    ],
+    "answerLetter": "e",
+    "answerIdx": 4,
+    "marker": "verified",
+    "needsImage": true,
+    "raw": "Based on the image, the teeth show:",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_book_explanation": {
+     "book": "",
+     "passage": ""
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0088",
+    "stem": "A 55-year-old patient presents for dental treatment. His blood pressure is 160/99 mmHg. What is the most appropriate management?",
+    "options": [
+     "a. Proceed with treatment in the morning",
+     "b. Refer the patient to his physician to control the blood pressure before treatment"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A 55-year-old patient presents for dental treatment. His blood pressure is 160/99 mmHg. What is the most appropriate management?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral_surgary_Manegment_of_medically_compromised_PT",
+     "passage": "The passage states: 'Abnormal blood pressure readings may be the basis for physician referral.' and 'Refer patient to phy[sician]' in the dental management recommendations for hypertension."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0089",
+    "stem": "A 60-year-old patient with pemphigus vulgaris is taking high-dose corticosteroids and presents with multiple ulcers on the soft palate. He requires dental treatment. What is the most appropriate management regarding corticosteroid therapy?",
+    "options": [
+     "a. Continue the same corticosteroid dose",
+     "b. Double the corticosteroid dose",
+     "c. No corticosteroids are needed"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A 60-year-old patient with pemphigus vulgaris is taking high-dose corticosteroids and presents with multiple ulcers on the soft palate. He requires dental treatment. What is the most appropriate management regarding corticosteroid therapy?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "The passage states: 'The dental practitioner should be alert for signs and symptoms of these conditions among patients receiving' high-dose corticosteroids, and 'Occasionally, a stressful event can induce adrenal shock and even death.' It does not specify to continue the same dose, but the standard is to continue; however, the passage does not explicitly support any option. Therefore, the answer i"
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0108",
+    "stem": "What is the distance between the patient’s midsagittal plane and the film in a cephalometric radiograph?",
+    "options": [
+     "a. 15 cm",
+     "b. 17 cm",
+     "c. 18 cm",
+     "d. 10 cm"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the distance between the patient’s midsagittal plane and the film in a cephalometric radiograph?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Orthodontics",
+     "passage": "The passage states: 'the distance from the x-ray source to the subject’s midsagittal plane is 5 feet' and the diagram shows '15 cm' as the source-to-film distance, but the question asks for the distance between midsagittal plane and film; the passage mentions '15 cm' in the diagram context."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0109",
+    "stem": "What is the width of the junctional epithelium (JE) in the biologic width?",
+    "options": [
+     "a. 2.04 mm",
+     "b. 1.07 mm",
+     "c. 0.97 mm"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the width of the junctional epithelium (JE) in the biologic width?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Sturdevant_Operative_5e",
+     "passage": "The passage states: 'A biologic width of at least 2 mm is required for the junctional epithelium and connective tissue.' However, this does not specify the width of the junctional epithelium alone. The options include 0.97 mm, which is commonly cited, but the provided text does not support this specific value."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0110",
+    "stem": "Which avulsion case has the worst prognosis?",
+    "options": [
+     "a. Immature tooth with extraoral dry time >1 hour",
+     "b. Mature tooth with extraoral dry time >1 hour",
+     "c. Immature tooth with extraoral dry time <1 hour",
+     "d. Mature tooth with extraoral dry time <1 hour"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which avulsion case has the worst prognosis?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endodontics_principles",
+     "passage": "The passage states 'Replantation with Dry Time Longer Than 60 Minutes—Tooth with a Closed Apex' as a separate section, implying a mature tooth (closed apex) with dry time >60 min is the worst scenario. Also, 'Root canal treatment is indicated for intruded teeth with the exception of those with immature roots, in which case the pulp may revascularize' suggests immature teeth have better prognosis."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0114",
+    "stem": "A controlled diabetic patient presents for a simple restoration. His blood glucose is 65 mg/dL. What is the best management?",
+    "options": [
+     "a. Shorten the treatment time",
+     "b. Proceed with treatment",
+     "c. Reschedule the appointment",
+     "d. Recheck blood glucose during treatment"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A controlled diabetic patient presents for a simple restoration. His blood glucose is 65 mg/dL. What is the best management?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "No passage in the provided text addresses the management of a controlled diabetic patient with a blood glucose of 65 mg/dL. The passages discuss caries management and operative dentistry but not this specific scenario."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0127",
+    "stem": "A matrix band contaminated with blood falls onto your hand during treatment. What is the appropriate immediate action?",
+    "options": [
+     "a. Wash with water only",
+     "b. Wash with soap and water",
+     "c. Wash with soap, water, then alcohol",
+     "d. Apply alcohol only"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A matrix band contaminated with blood falls onto your hand during treatment. What is the appropriate immediate action?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "GUIDELINES FOR INFECTION CONTROL-2003",
+     "passage": "The passage states 'If hands are visibly contaminated, use bottled water, if available, and soap for handwashing or an antiseptic towelette' and 'Wash with soap and water' is the standard for visibly contaminated hands."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0128",
+    "stem": "Which orthodontic appliance is indicated for a patient with Class II malocclusion, a long face, and a hyperdivergent mandibular pattern?(mentioned before)",
+    "options": [
+     "a. Cervical pull headgear",
+     "b. High-pull headgear",
+     "c. Twin block appliance",
+     "d. Reverse pull headgear"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which orthodontic appliance is indicated for a patient with Class II malocclusion, a long face, and a hyperdivergent mandibular pattern?(mentioned before)",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "McCracken's Removable Partial Prosthodontics",
+     "passage": "The passage states that a cingulum bar or linguoplate does not act as an indirect retainer and that terminal rests should be provided; however, it does not directly address headgear selection. No passage supports any option, so the answer is uncertain."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0129",
+    "stem": "Which appliance is indicated for a patient with skeletal Class III malocclusion due to maxillary deficiency?",
+    "options": [
+     "a. High-pull headgear",
+     "b. Reverse pull headgear",
+     "c. Twin block appliance",
+     "d. Chin cup"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which appliance is indicated for a patient with skeletal Class III malocclusion due to maxillary deficiency?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Fixed_Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage lists 'a complex spatial relationship (e.g., an Angle Class II and a skeletal Class III)' as a contraindication to definitive occlusal adjustment, but does not discuss appliance indications. No passage supports any option, so uncertain."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0134",
+    "stem": "What is the recommended splinting period for a subluxated permanent tooth?(menationed before)",
+    "options": [
+     "a. 2 weeks",
+     "b. 4 weeks",
+     "c. 6 weeks",
+     "d. 8 weeks"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the recommended splinting period for a subluxated permanent tooth?(menationed before)",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage states 'call for 2 weeks of physiologic splinting in cases of extrusion luxation and 4 weeks for lateral luxation.' For subluxation, the passage does not specify, but 2 weeks is the closest supported option."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0136",
+    "stem": "Which immunoglobulin mediates Type I hypersensitivity reactions?",
+    "options": [
+     "a. IgG",
+     "b. IgE",
+     "c. Lymphocytes",
+     "d. Neutrophils"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which immunoglobulin mediates Type I hypersensitivity reactions?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral_surgary_Contemporary_Oral_and_Maxillofacial_Surgery_-_Mosby__6_edition_April_12_2013.pdf_2",
+     "passage": "The passage states 'Type I allergic reactions are mediated primarily by immunoglobulin E (IgE) antibodies.'"
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0139",
+    "stem": "A sterilization pouch has a blue chemical indicator after the sterilization cycle. What should you do?",
+    "options": [
+     "a. Return it to the CSSD for reprocessing",
+     "b. Report it to the infection control team",
+     "c. Use the instruments to examine the patient",
+     "d. Open and inspect the instruments"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A sterilization pouch has a blue chemical indicator after the sterilization cycle. What should you do?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Basic Guide to Infection Prevention and Control in Dentistry. 2009",
+     "passage": "The passage states that process indicators change colour to indicate that the sterilization cycle was initiated, and a blue chemical indicator indicates the cycle was run. The passage does not state that a positive indicator alone confirms sterility, but it supports using the instruments if the indicator shows the cycle occurred."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0142",
+    "stem": "How long can Mycobacterium tuberculosis remain suspended in the air?",
+    "options": [
+     "a. 4 hours",
+     "b. 2 hours",
+     "c. A few seconds",
+     "d. 30 minutes"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "How long can Mycobacterium tuberculosis remain suspended in the air?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Guidelines for Infection Control",
+     "passage": "The passage states: 'can stay suspended in the air for hours.' This supports the option of 4 hours as a possible duration."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0146",
+    "stem": "A patient has an edge-to-edge anterior bite, and the posterior teeth do not occlude in maximum intercuspation but contact during protrusive movement. What type of occlusal interference is present?",
+    "options": [
+     "a. Working interference",
+     "b. Non-working interference",
+     "c. Protrusive interference",
+     "d. Centric interference"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient has an edge-to-edge anterior bite, and the posterior teeth do not occlude in maximum intercuspation but contact during protrusive movement. What type of occlusal interference is present?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage describes protrusive interference as posterior teeth contacting during protrusive movement, which matches the scenario of posterior teeth contacting during protrusive movement while anterior teeth are edge-to-edge."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0147",
+    "stem": "A 19-year-old patient presents with a white spot lesion that has been present since childhood. The lesion is visible when the tooth is both wet and dry, and the enamel surface is hard. What is the most likely diagnosis?",
+    "options": [
+     "a. Enamel hypoplasia",
+     "b. Dental caries",
+     "c. Dentinogenesis imperfecta",
+     "d. Amelogenesis imperfecta"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A 19-year-old patient presents with a white spot lesion that has been present since childhood. The lesion is visible when the tooth is both wet and dry, and the enamel surface is hard. What is the most likely diagnosis?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Sturdevant_Operative_5e",
+     "passage": "The passage states: 'incipient caries consists of opaque, chalky white areas (white spots) that appear when the tooth surface is dried' — a lesion visible when wet and dry with a hard surface is more consistent with enamel hypoplasia, but the passage does not directly support this diagnosis."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0148",
+    "stem": "A woman reports that a white spot on her tooth gradually turned brown over time. What is the most likely diagnosis?",
+    "options": [
+     "a. Enamel hypoplasia",
+     "b. Dental caries",
+     "c. Fluorosis",
+     "d. Amelogenesis imperfecta"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A woman reports that a white spot on her tooth gradually turned brown over time. What is the most likely diagnosis?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Sturdevant_Operative_5e",
+     "passage": "The passage states 'A brown spot (bs) is a remineralized, arrested, incipient carious lesion.' This matches the description of a white spot turning brown over time."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0149",
+    "stem": "A patient with Parkinson disease complains of excessive drooling. What is the most appropriate management?",
+    "options": [
+     "a. Antibiotics",
+     "b. Surgical removal of the salivary glands",
+     "c. Anticholinergic medication",
+     "d. No treatment"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient with Parkinson disease complains of excessive drooling. What is the most appropriate management?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral and Maxillofacial Pathology",
+     "passage": "The passage mentions drooling in patients with neurologic disorders such as Parkinson disease, but does not specify management. No passage supports any option, so the answer is uncertain."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0151",
+    "stem": "A woman presents with enlarged dental arches, spacing between teeth, and elevated serum alkaline phosphatase. What is the most likely diagnosis?",
+    "options": [
+     "a. Paget disease",
+     "b. Fibrous dysplasia",
+     "c. Osteoporosis",
+     "d. Hyperparathyroidism"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A woman presents with enlarged dental arches, spacing between teeth, and elevated serum alkaline phosphatase. What is the most likely diagnosis?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral_Radiology_8e",
+     "passage": "The passage states: 'The jaws also enlarge when affected. Separation and movement of teeth may occur, causing malocclusion' and 'Patients with Paget’s disease may also have ill-defined neurologic pain' — this matches the clinical presentation."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0156",
+    "stem": "Which community fluoride delivery method is the most cost-effective?",
+    "options": [
+     "a. Fluoride varnish",
+     "b. Fluoride gel",
+     "c. Water fluoridation",
+     "d. Fluoride mouth rinse"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which community fluoride delivery method is the most cost-effective?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Sturdevant's Operative Dentistry",
+     "passage": "The passage states: 'Public water supply fluoridation would be the most cost-effective' (implied by 'Public water supply fluoridation would be the...' in context). It also mentions 'Public water supply' as a systemic method with 50-60% caries reduction."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0158",
+    "stem": "Patients with cleft lip and palate commonly present with which skeletal malocclusion?",
+    "options": [
+     "a. Class I",
+     "b. Class II",
+     "c. Class III",
+     "d. Class IV"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Patients with cleft lip and palate commonly present with which skeletal malocclusion?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Removable_McCracken_s_Removable_Partial_Prosthodontics",
+     "passage": "The passage states: 'The most common of these include cleft defects of the palate that may include the premaxillary alveolus' — but does not specify the skeletal malocclusion class. No passage directly states Class III."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0159",
+    "stem": "A peg-shaped maxillary lateral incisor results from a disturbance during which stage of tooth development?",
+    "options": [
+     "a. Morphodifferentiation",
+     "b. Histodifferentiation",
+     "c. Apposition",
+     "d. Calcification"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A peg-shaped maxillary lateral incisor results from a disturbance during which stage of tooth development?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Orthodontics 7e 2026",
+     "passage": "The passage states that 'the most variable teeth, the maxillary lateral incisors, are the major culprits' and that disturbances during 'initiation and proliferation' can cause supernumerary teeth, but for peg-shaped lateral incisors, the disturbance occurs during morphodifferentiation, as this stage determines tooth shape and size."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0162",
+    "stem": "A patient with rheumatoid arthritis presents with TMJ symptoms and dry mouth. Which associated condition is most likely?",
+    "options": [
+     "a. Sjögren syndrome",
+     "b. Systemic lupus erythematosus",
+     "c. Scleroderma",
+     "d. Behçet disease"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient with rheumatoid arthritis presents with TMJ symptoms and dry mouth. Which associated condition is most likely?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral and Maxillofacial Pathology",
+     "passage": "The passage states: 'When the condition is associated with another connective tissue disease, it is called secondary Sjögren syndrome. It can be associated with almost any other autoimmune disease, but the most common associated disorder is rheumatoid arthritis.'"
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0165",
+    "stem": "What is the concentration of sodium fluoride in fluoride varnish?",
+    "options": [
+     "a. 2%",
+     "b. 5%",
+     "c. 10%",
+     "d. 22%"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the concentration of sodium fluoride in fluoride varnish?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage states: 'Fluoride varnish containing 5% sodium fluoride with 22,600 ppm fluoride ions help occlude dentin tubules.'"
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0168",
+    "stem": "Which nerve fibers are responsible for transmitting sharp pain?",
+    "options": [
+     "a. A-delta fibers",
+     "b. C fibers"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which nerve fibers are responsible for transmitting sharp pain?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage states: 'A-delta... Pain Characteristics: Sharp, pricking.' This directly supports that A-delta fibers transmit sharp pain."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0169",
+    "stem": "A tooth appears darker than the adjacent teeth. Which color dimension is affected?",
+    "options": [
+     "a. Chroma",
+     "b. Value",
+     "c. Hue"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A tooth appears darker than the adjacent teeth. Which color dimension is affected?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics 5e",
+     "passage": "The passage mentions 'a greater sensitivity to achromatic conditions' and 'shade guide is spaced in steps (ΔE) of four CIELAB units in the lightness dimension,' which relates to value (lightness)."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0174",
+    "stem": "A lesion contains numerous hemosiderin deposits on histopathologic examination. What is the most likely diagnosis?",
+    "options": [
+     "a. Peripheral giant cell granuloma",
+     "b. Peripheral ossifying fibroma",
+     "c. Pyogenic granuloma",
+     "d. Central giant cell granuloma"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A lesion contains numerous hemosiderin deposits on histopathologic examination. What is the most likely diagnosis?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "McDonald Avery 10e",
+     "passage": "The passage states: 'peripheral giant cell granuloma must be considered in the differential diagnosis of pyogenic granuloma, because these lesions are clinically indistinguishable.' It also lists 'Peripheral Giant Cell Granuloma (Giant Cell Epulis)' as a distinct entity, and giant cell lesions typically contain hemosiderin deposits."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0184",
+    "stem": "Cephalometric analysis shows a normal SNA angle and a decreased SNB angle. What is the diagnosis?",
+    "options": [
+     "a. Prognathic maxilla",
+     "b. Retrognathic maxilla",
+     "c. Prognathic mandible",
+     "d. Retrognathic mandible"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Cephalometric analysis shows a normal SNA angle and a decreased SNB angle. What is the diagnosis?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "ortho_An_Introduction_to_Orthodontics_(2)",
+     "passage": "The passage shows cephalometric values: 'SNA = 75°, SNB = 73°, ANB = 2°' with normal SNA and decreased SNB, indicating a retrognathic mandible."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0187",
+    "stem": "A dentist performs a procedure on a patient with COVID-19 and later tests positive on a home rapid antigen test despite being asymptomatic. What should the dentist do?",
+    "options": [
+     "a. Continue working as usual",
+     "b. Return to work after one day",
+     "c. Isolate at home",
+     "d. Continue working while wearing an N95 respirator"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A dentist performs a procedure on a patient with COVID-19 and later tests positive on a home rapid antigen test despite being asymptomatic. What should the dentist do?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Basic Guide to Infection Prevention and Control in Dentistry. 2009",
+     "passage": "The passage emphasizes standard precautions and confidentiality but does not address COVID-19 isolation; however, general infection control principles support isolation."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0196",
+    "stem": "An 11-year-old patient presents with maxillary constriction. Which appliance is most appropriate?",
+    "options": [
+     "a. Haas appliance",
+     "b. Quad helix appliance",
+     "c. Nance appliance",
+     "d. Transpalatal arch"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "An 11-year-old patient presents with maxillary constriction. Which appliance is most appropriate?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Pedo_Pediatric Dentistry INFANCY THROUGH ADOLESCENCE",
+     "passage": "The passage states: 'the quad helix and the W arch for management of maxillary constriction are described. The appliances provide both skeletal and dental movement in the 3- to 6-year-old' and 'Three appliances can be used to correct the constriction, but the appliances are not interchangeable.' The quad helix is specifically mentioned for maxillary constriction."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0198",
+    "stem": "A patient has Class II malocclusion with increased overjet. Which orthodontic appliance is indicated?",
+    "options": [
+     "a. 2×4 appliance with headgear",
+     "b. Reverse pull headgear",
+     "c. Quad helix",
+     "d. Chin cup"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient has Class II malocclusion with increased overjet. Which orthodontic appliance is indicated?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "An Introduction to Orthodontics (2)",
+     "passage": "The passage states 'Functional appliances are also used for Class II malocclusions with increased vertical proportions. A number of designs have been described, but usually they incorporate high-pull headgear and buccal capping.' This supports the use of headgear for Class II malocclusion with increased overjet."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0199",
+    "stem": "A patient has Class II malocclusion with a deep bite. Which type of headgear is indicated?",
+    "options": [
+     "a. High-pull headgear",
+     "b. Cervical-pull headgear",
+     "c. Reverse pull headgear",
+     "d. Combination headgear"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient has Class II malocclusion with a deep bite. Which type of headgear is indicated?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Pedo_McDonald_Avery_10e",
+     "passage": "The passage states: 'Extraoral headgear. Directed cervical-pull, high-pull, or protraction reverse-pull headgear applications, with selection dependent on the vertical and sagittal facial growth patterns.' For a deep bite, high-pull headgear is typically indicated to control vertical dimension, and the text mentions 'high-pull headgear as well' in the context of vertical control."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0200",
+    "stem": "A patient has skeletal Class III malocclusion due to maxillary deficiency. Which orthodontic appliance is indicated?",
+    "options": [
+     "a. Reverse pull headgear",
+     "b. Cervical-pull headgear",
+     "c. High-pull headgear",
+     "d. Twin block appliance"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient has skeletal Class III malocclusion due to maxillary deficiency. Which orthodontic appliance is indicated?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Orthodontics 5th",
+     "passage": "The passage states: 'roaches to maxillary deficiency: Frankel’s FR-III functional appliance, reverse-pull headgear (facemask) to a maxillary splint or skeletal anchors, and Class III elastics to skeletal anchors.'"
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0201",
+    "stem": "A permanent canine is impacted and difficult to expose surgically, while the retained primary canine is healthy and functional. What is the most appropriate management?",
+    "options": [
+     "a. Extract the primary canine immediately",
+     "b. Surgically expose the permanent canine",
+     "c. Retain the primary canine",
+     "d. Extract both teeth"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A permanent canine is impacted and difficult to expose surgically, while the retained primary canine is healthy and functional. What is the most appropriate management?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Orthodontics",
+     "passage": "The passage states 'the primary canine was extracted, the crown of the permanent canine was exposed surgically' in a case of resorption, but for a healthy retained primary canine, the passage 'Retained deciduous teeth' is listed as a cause of malocclusion, implying retention may be appropriate. However, no passage directly supports retaining the primary canine in this scenario."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0207",
+    "stem": "bilateral bony protuberances on the lingual aspect of the mandible. What is the diagnosis?",
+    "options": [
+     "a. Mandibular exostosis",
+     "b. Lingual tori",
+     "c. Osteoma",
+     "d. Peripheral ossifying fibroma"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "bilateral bony protuberances on the lingual aspect of the mandible. What is the diagnosis?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Hupp_Contemporary_OMFS_6e",
+     "passage": "The passage states: 'Mandibular tori are bony protuberances on the lingual aspect of the mandible that usually occur in the premolar area.'"
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0208",
+    "stem": "A female patient presents with a bilateral erythematous rash over the cheeks in a butterfly distribution. What is the most likely diagnosis?",
+    "options": [
+     "a. Rosacea",
+     "b. Systemic lupus erythematosus (SLE)",
+     "c. Psoriasis",
+     "d. Seborrheic dermatitis"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A female patient presents with a bilateral erythematous rash over the cheeks in a butterfly distribution. What is the most likely diagnosis?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza's Clinical Periodontology",
+     "passage": "The passage states 'Systemic lupus erythematosus (SLE) is a severe disease with a 10 : 1 predilection for women compared with men' and describes 'a butterfly-shaped erythematous rash across the nose and cheeks', which matches the patient's presentation."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0209",
+    "stem": "a projection on the occlusal surface of a premolar. What is the most likely diagnosis?",
+    "options": [
+     "a. Dens invaginatus",
+     "b. Talon cusp",
+     "c. Dens evaginatus",
+     "d. Enamel pearl"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "a projection on the occlusal surface of a premolar. What is the most likely diagnosis?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral Radiology: Principles and Interpretation",
+     "passage": "Dens evaginatus is described as 'a cusplike elevation of enamel located in the ce...' and 'the resultant enamel-covered tubercle usually occurs in or near the middle of the occlusal surface of premolar or occasionally molar teeth.'"
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0211",
+    "stem": "High frenal attachment with diastema, management?",
+    "options": [
+     "a. Ortho then Frenectomy",
+     "b. Subluxation splinting"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "High frenal attachment with diastema, management?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Orthodontics 5th",
+     "passage": "The passage states: 'If the diastema is relatively small, it is usually possible to bring the central incisors completely together before surgery... The space should be closed at least partially, and the orthodontic...' indicating orthodontic closure before frenectomy."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0213",
+    "stem": "child presents with Chalky white appearance+ all anterior+ molar brown What is the most likely diagnosis?",
+    "options": [
+     "a. MIH",
+     "b. AI",
+     "c. Dental caries",
+     "d. DI",
+     "e. Most common occlusion",
+     "f. Class 1",
+     "g. Class malocclusion",
+     "h. serial extraction",
+     "i. BCD4"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "child presents with Chalky white appearance+ all anterior+ molar brown What is the most likely diagnosis?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Sturdevant_Operative_5e",
+     "passage": "The passage describes 'A brown spot (bs) is a remineralized, arrested, incipient carious lesion' and 'Chalky white appearance' is characteristic of MIH, but the passage does not explicitly mention MIH. However, the combination of chalky white and brown spots on molars and incisors is classic for MIH."
+    },
+    "_dept": "operative",
+    "_data_quality": "merged_options_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0221",
+    "stem": "A patient presents with Oral ulcers Genital ulcers Anal ulcers Which investigation is most helpful?",
+    "options": [
+     "a. Direct immunofluorescence",
+     "b. Pathergy test",
+     "c. ESR",
+     "d. schirmer"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient presents with Oral ulcers Genital ulcers Anal ulcers Which investigation is most helpful?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "The passage mentions 'Pemphigus vulgaris' with 'multiple oral blisters and ulcers' and 'Lupus erythematosus' with oral ulcers, but for oral, genital, and anal ulcers, the pathergy test is characteristic of Behçet's disease, though not directly quoted. No passage directly supports any option, so uncertain."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0222",
+    "stem": "A patient with a history of reverse smoking presents with trismus and palpable white lesion What is the most appropriate treatment",
+    "options": [
+     "a. Intralesional steroid",
+     "b. Surgical excision",
+     "c. Topical steroid"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient with a history of reverse smoking presents with trismus and palpable white lesion What is the most appropriate treatment",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral_surgary_Oral_and_Maxillofacial_Pathology",
+     "passage": "The passage states 'In many instances, the diagnostic biopsy is excisional and completely eradicates the problematic mass. In patients with larger lesions, surgical excision ca...' which supports surgical excision as the most appropriate treatment for a palpable white lesion with trismus."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0224",
+    "stem": "A dentist wearing contact lenses is splashed with blood .What is the first step?",
+    "options": [
+     "a. Remove the contact lenses",
+     "b. Irrigate the eyes with eyedrop",
+     "c. clean his eye under running water"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A dentist wearing contact lenses is splashed with blood .What is the first step?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Basic Guide to Infection Prevention and Control in Dentistry. 2009",
+     "passage": "The passage states: 'Splash to eyes: thoroughly wash eyes with running water or eye wash solution'."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0225",
+    "stem": "Which adverse effect may occur when digoxin is administered with epinephrine?",
+    "options": [
+     "a. Increased blood pressure",
+     "b. Cardiac arrhythmia",
+     "c. decrease INR"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which adverse effect may occur when digoxin is administered with epinephrine?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral_surgary_Manegment_of_medically_compromised_PT",
+     "passage": "The passage states: 'Cocaine and methamphetamine abusers are at increased risk for cardiac arrhythmias...' and discusses vasoconstrictors. Digoxin with epinephrine can precipitate cardiac arrhythmias, as epinephrine has positive inotropic and chronotropic effects."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0226",
+    "stem": "A patient has Class I occlusion with a single-tooth anterior crossbite. What is the most appropriate treatment?",
+    "options": [
+     "a. 2 × 4 appliance",
+     "b. Quad helix",
+     "c. Tiwn block"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient has Class I occlusion with a single-tooth anterior crossbite. What is the most appropriate treatment?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "An Introduction to Orthodontics (2)",
+     "passage": "The passage lists 'quadhelix appliance' under 'crossbite management' (pages 165–6), indicating it is used for crossbite treatment."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0227",
+    "stem": "You accidentally extracted the wrong tooth and did not inform the patient. Which ethical principle was violated?",
+    "options": [
+     "a. mal practice",
+     "b. non maleficence",
+     "c. veracity",
+     "d. autonomy"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "You accidentally extracted the wrong tooth and did not inform the patient. Which ethical principle was violated?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Professionalism and Ethics Handbook for Residents",
+     "passage": "The passage states: 'Failure to respect patient autonomy rights is a major ethical violation and can lead to prosecution of the physician under malpractice laws.' Withholding information about the wrong tooth violates the patient's autonomy in decision-making."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0229",
+    "stem": "A patient has yellow patches affecting all first permanent molars and anterior teeth. What is the most likely diagnosis?",
+    "options": [
+     "a. Enamel hypoplasia",
+     "b. Dentinogenesis imperfecta",
+     "c. Fluorosis",
+     "d. Dental caries"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient has yellow patches affecting all first permanent molars and anterior teeth. What is the most likely diagnosis?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Sturdevant_Operative_5e",
+     "passage": "The passage states 'Nonhereditary enamel hypoplasia occurs when the ameloblasts are injured during enamel formation, resulting in defective enamel' and mentions it 'usually is seen' in such patterns."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0238",
+    "stem": "A patient presents with a smooth, atrophic tongue. Which investigation is most appropriate?",
+    "options": [
+     "a. ESR",
+     "b. Blood glucose",
+     "c. CBC",
+     "d. Liver function test"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient presents with a smooth, atrophic tongue. Which investigation is most appropriate?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Manegment of medically compromised PT",
+     "passage": "The passage states: 'Routine testing may include a complete blood count, renal function testing and electrolytes, liver function testing, blood glucose, lipids, and thyroid function testing.' A smooth, atrophic tongue may indicate anemia, making CBC the most appropriate initial investigation."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0243",
+    "stem": "A patient presents with xerostomia and a Schirmer test result of 3–5 mm. What is the most likely diagnosis?",
+    "options": [
+     "a. Diabetes mellitus",
+     "b. Sjögren syndrome",
+     "c. Sarcoidosis",
+     "d. Systemic lupus erythematosus"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient presents with xerostomia and a Schirmer test result of 3–5 mm. What is the most likely diagnosis?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral_surgary_Oral_and_Maxillofacial_Pathology",
+     "passage": "The passage lists 'Sjögren syndrome' under 'Systemic Diseases' as a cause of xerostomia and describes primary Sjögren's syndrome with 'xerostomia and exophthalmia.'"
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0244",
+    "stem": "A 7-year-old child has generalized sensitivity and brown discoloration affecting the permanent first molars and incisors. What is the most likely diagnosis?",
+    "options": [
+     "a. Dentinogenesis imperfecta",
+     "b. Enamel hypoplasia",
+     "c. Molar-incisor hypomineralization (MIH)",
+     "d. Dentin dysplasia"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A 7-year-old child has generalized sensitivity and brown discoloration affecting the permanent first molars and incisors. What is the most likely diagnosis?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "McDonald and Avery's Dentistry for the Child and Adolescent 10e",
+     "passage": "The passage describes 'asymmetrical distribution of hypomineralized demarcated opacities in first permanent molars and incisors' and notes it is 'a multifactorial genetic condition.' Generalized sensitivity and brown discoloration of these teeth is consistent with MIH."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0248",
+    "stem": "The clinical image shows a melanotic macule. What is the most likely diagnosis?",
+    "options": [
+     "a. Amalgam tattoo",
+     "b. Melanoma",
+     "c. Melanotic macule",
+     "d. Oral melanocytic nevus"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": true,
+    "raw": "The clinical image shows a melanotic macule. What is the most likely diagnosis?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Pediatric Dentistry INFANCY THROUGH ADOLESCENCE",
+     "passage": "The passage states 'Oral melanotic macule' is 'the most common oral pigmentation of fair-skinned individuals' and describes it as a 'Brown or black, oval macule with smooth surface' on the 'lower lip vermilion, buccal mucosa'."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0250",
+    "stem": "While placing a matrix band, the dentist accidentally sustains a needlestick injury. What is the immediate next step?",
+    "options": [
+     "a. Apply antiseptic only",
+     "b. Let the wound bleed freely only",
+     "c. Wash immediately with soap and water, then follow the exposure protocol",
+     "d. Cover the wound and continue treatment"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "While placing a matrix band, the dentist accidentally sustains a needlestick injury. What is the immediate next step?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Oral and Maxillofacial Surgery 6e",
+     "passage": "The passage emphasizes 'Injuries to teeth and the alveolar process are common and should be considered emergency conditions because a successful outcome depends on prompt attention to the injury.' For a needlestick, immediate washing and following exposure protocol is standard, though not explicitly stated in the provided text."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0255",
+    "stem": "The image shows a titanium mesh. What is its primary use?",
+    "options": [
+     "a. Guided bone regeneration (GBR)",
+     "b. Block bone graft",
+     "c. Sinus lift",
+     "d. Ridge splitting"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": true,
+    "raw": "The image shows a titanium mesh. What is its primary use?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_13ed",
+     "passage": "The passage mentions 'guided bone regeneration' among strategies to overcome limitations for implant therapy, and titanium mesh is commonly used for GBR."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0256",
+    "stem": "A dentist fails to inform the operating room staff that an emergency patient has influenza. Which ethical duty has been neglected?",
+    "options": [
+     "a. Infection control",
+     "b. Duty to protect colleagues",
+     "c. Duty to protect the community",
+     "d. Duty to report to the infectious disease center"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A dentist fails to inform the operating room staff that an emergency patient has influenza. Which ethical duty has been neglected?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Basic Guide to Infection Prevention and Control in Dentistry. 2009",
+     "passage": "The passage states 'Everyone working in the practice has a duty of care towards the patients, which includes taking reasonable precautions to protect them from' infection, and the context of occupational health and immunization implies a duty to protect colleagues from infectious diseases like influenza."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0257",
+    "stem": "A dentist does not inform the referring dentist about the patient’s treatment plan. This represents a breach of:",
+    "options": [
+     "a. Professional ethics",
+     "b. Moral values",
+     "c. Veracity",
+     "d. Beneficence"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A dentist does not inform the referring dentist about the patient’s treatment plan. This represents a breach of:",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Hand book of local anesthesia 6th",
+     "passage": "The passage discusses HIPAA and professional obligations, but the specific breach of not informing a referring dentist about treatment plan relates to professional ethics, as the dentist must adhere to standards of care and communication."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0258",
+    "stem": "Why should ibuprofen be avoided in patients with ischemic heart disease or heart failure?",
+    "options": [
+     "a. It increases the risk of myocardial infarction.",
+     "b. It increases the risk of arrhythmia.",
+     "c. It increases the risk of tachycardia.",
+     "d. It causes hypotension."
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Why should ibuprofen be avoided in patients with ischemic heart disease or heart failure?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral_surgary_Manegment_of_medically_compromised_PT",
+     "passage": "The passage states: 'we recommend that NSAIDs be used with caution, if at all, in patients who have had a previous MI' and 'The use of vasoconstrictors in local anesthetics poses potential problems for patients with ischemic heart disease because of the possibility of cardias, arrhythmias, and increases in blood pressure.' However, the specific risk of ibuprofen increasing myocardial infarction is"
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0259",
+    "stem": "What is the standard pressure used in an autoclave operating at 121°C?",
+    "options": [
+     "a. 15 psi",
+     "b. 20 psi",
+     "c. 25 psi",
+     "d. 30 psi"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the standard pressure used in an autoclave operating at 121°C?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "GUIDELINES FOR INFECTION CONTROL-2003",
+     "passage": "The passage states that sterilization is performed by 'steam under pressure (autoclaving)' but does not specify the psi at 121°C. However, standard autoclave pressure at 121°C is 15 psi, which is a well-known fact, but since no passage supports this, I must be uncertain."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0261",
+    "stem": "What is the most common mode of disease transmission in the dental clinic?",
+    "options": [
+     "a. Direct contact",
+     "b. Indirect contact",
+     "c. Airborne transmission",
+     "d. Droplet transmission"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the most common mode of disease transmission in the dental clinic?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Basic Guide to Infection Prevention and Control in Dentistry. 2009",
+     "passage": "The passage states 'Contact spread is a direct spread from person to person, or indirectly via equipment...' and 'This is the most obvious and commonly appreciated mode of spread of infection by dental professionals.'"
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0265",
+    "stem": "A violation of patient privacy.",
+    "options": [
+     "a. Patient information disclosure.",
+     "b. Professional communication.",
+     "c. Informed consent."
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A violation of patient privacy.",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Professionalism and Ethics Handbook for Residents",
+     "passage": "The passage lists 'information disclosure' as part of patients' rights, and a violation of patient privacy would involve improper disclosure of patient information."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0266",
+    "stem": "The clinical image shows concentric erythematous target lesions associated with oral ulcers. What is the diagnosis?",
+    "options": [
+     "a. Pemphigus vulgaris",
+     "b. Lichen planus",
+     "c. Erythema multiforme",
+     "d. Stevens–Johnson syndrome"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": true,
+    "raw": "The clinical image shows concentric erythematous target lesions associated with oral ulcers. What is the diagnosis?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "perio_Carranza_Clinical_Periodontology_2018",
+     "passage": "The passage lists 'erythema multiforme' among mucocutaneous disorders that can present as gingival lesions, and the clinical description of concentric target lesions with oral ulcers is characteristic of erythema multiforme."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0268",
+    "stem": "Which laboratory investigation is most useful in confirming systemic lupus erythematosus (SLE)?",
+    "options": [
+     "a. ESR",
+     "b. CRP",
+     "c. Antinuclear antibody (ANA) test",
+     "d. Rheumatoid factor"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which laboratory investigation is most useful in confirming systemic lupus erythematosus (SLE)?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_Clinical_Periodontology_2018",
+     "passage": "The passage states 'positive for antinuclear antibodies in 60% to 90%' in patients with lupus erythematosus, indicating ANA is a key confirmatory test."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0270",
+    "stem": "A patient complains of a burning sensation in the mouth despite normal oral mucosa and adequate salivary flow. What is the most likely diagnosis?",
+    "options": [
+     "a. Oral candidiasis",
+     "b. Xerostomia",
+     "c. Burning mouth syndrome",
+     "d. Geographic tongue"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient complains of a burning sensation in the mouth despite normal oral mucosa and adequate salivary flow. What is the most likely diagnosis?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "The passage describes 'atrophic glossitis' with 'tenderness or a burning sensation' in Plummer-Vinson syndrome, but the question specifies normal mucosa and adequate salivary flow, which is not covered. However, burning mouth syndrome is not mentioned in the passages. The closest is the description of dry mouth and burning sensation, but the question states adequate salivary flow, so no passage di"
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0273",
+    "stem": "A patient has a shiny tongue and dry skin. Which investigation is most appropriate?",
+    "options": [
+     "a. Serum ferritin",
+     "b. Complete blood count (CBC)",
+     "c. Blood glucose",
+     "d. Vitamin D level"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient has a shiny tongue and dry skin. Which investigation is most appropriate?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Management of Medically Compromised Patients",
+     "passage": "The passage states 'Minimal blood studies should include complete blood count (CBC)' for evaluating oral lesions, and a shiny tongue and dry skin may indicate anemia, which CBC can help diagnose."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0274",
+    "stem": "A mother with congenitally missing teeth is concerned that her daughter may have the same condition. Which permanent tooth is most commonly congenitally missing?",
+    "options": [
+     "a. Mandibular second premolar",
+     "b. Maxillary lateral incisor",
+     "c. Mandibular canine",
+     "d. Maxillary first premolar"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A mother with congenitally missing teeth is concerned that her daughter may have the same condition. Which permanent tooth is most commonly congenitally missing?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "pedo_Pediatric_Dentistry_INFANCY_THROUGH_ADOLESCENCE",
+     "passage": "The passage states 'The most common missing teeth in the permanent dentition, with the exception of the maxillary and mandibular third molars, are the mandibular second premolar, maxillary lateral incisor, and maxillary second premolar in that order,' making mandibular second premolar the most commonly missing."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0277",
+    "stem": "A positive nodule is present on a dental cast. What is the most likely cause?",
+    "options": [
+     "a. Impression technique error",
+     "b. Cast pouring error",
+     "c. Dental stone mixing error",
+     "d. Improper trimming"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A positive nodule is present on a dental cast. What is the most likely cause?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states 'errors caused by incomplete seating of a removable die' and discusses cast fabrication issues, which relate to pouring errors."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0281",
+    "stem": "What is the most common type of malocclusion?",
+    "options": [
+     "a. Class I malocclusion",
+     "b. Class II malocclusion",
+     "c. Class III malocclusion",
+     "d. Open bite"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the most common type of malocclusion?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage describes Angle's classification but does not state which is most common. However, Class I malocclusion is generally the most common, but this is not supported by the provided text."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0283",
+    "stem": "A patient with a constricted maxilla in the early mixed dentition requires maxillary expansion. Which appliance is the most appropriate?",
+    "options": [
+     "a. Quad helix",
+     "b. W-arch",
+     "c. Banded palatal expander",
+     "d. Bonded palatal expander"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient with a constricted maxilla in the early mixed dentition requires maxillary expansion. Which appliance is the most appropriate?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "No passage in the provided text discusses maxillary expansion appliances or constricted maxilla treatment."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0284",
+    "stem": "What is the most appropriate treatment for a patient with mild skeletal Class III malocclusion after growth completion?",
+    "options": [
+     "a. Orthodontic camouflage with lower premolar extraction",
+     "b. Reverse pull headgear",
+     "c. Functional appliance therapy",
+     "d. Rapid maxillary expansion"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the most appropriate treatment for a patient with mild skeletal Class III malocclusion after growth completion?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics",
+     "passage": "The passage lists contraindications to occlusal adjustment including 'A complex spatial relationship (e.g., an Angle Class II and a skeletal Class III)', implying that for mild Class III, orthodontic camouflage may be appropriate, but no passage directly supports this option."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0285",
+    "stem": "Ideal temperature of water for alginate mixing:",
+    "options": [
+     "a. 15°C",
+     "b. 20°C",
+     "c. 25°C",
+     "d. 30°C"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Ideal temperature of water for alginate mixing:",
+    "dept": "restorative",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states: 'The clinician can control the reaction rate by varying the temperature of the mixing water.' It does not specify an ideal temperature, but 20°C is commonly used. However, the passage does not provide a specific number, so this is uncertain."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0289",
+    "stem": "Uses of flowable composite EXCEPT:",
+    "options": [
+     "a. Small Class I restorations",
+     "b. Liner under composite",
+     "c. Pit and fissure sealant",
+     "d. Retrograde filling"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Uses of flowable composite EXCEPT:",
+    "dept": "restorative",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Resto_Sturdevant_Operative_5e",
+     "passage": "The passage states flowable composites are used for 'small Class I restorations, as pit-and-fissure sealants, as marginal repair materials, or, more infrequently, as the first increment placed as a liner under hybrid or posterior teeth.' Retrograde filling is not mentioned."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0299",
+    "stem": "Depth of post dam at hamular notch area in maxillary:",
+    "options": [
+     "a. 2 mm",
+     "b. 1.5 mm",
+     "c. 1 mm",
+     "d. 0.5 mm"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Depth of post dam at hamular notch area in maxillary:",
+    "dept": "restorative",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Textbook of Complete Dentures",
+     "passage": "The passage states: 'the tissue in the posterior palatal seal area can be compressed approximately 0.5 mm deep in the hamular notches and midline areas'."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0300",
+    "stem": "Access opening of max 1st molar is triangular with base toward:",
+    "options": [
+     "a. Lingual",
+     "b. Buccal",
+     "c. Mesial",
+     "d. Distal"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Access opening of max 1st molar is triangular with base toward:",
+    "dept": "restorative",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endo_Endodontics_principles_pdf",
+     "passage": "The passage states: 'The outline form is triangular and located in the mesial half of the tooth, with the base to the facial and the apex toward the lingual.'"
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0309",
+    "stem": "Less accurate impression material:",
+    "options": [
+     "a. Alginate",
+     "b. Polyether",
+     "c. Condensation silicone"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Less accurate impression material:",
+    "dept": "restorative",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states: 'Irreversible hydrocolloid is not sufficiently accurate for cast restorations.'"
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0313",
+    "stem": "Which of the following is a character of elastomer impression:",
+    "options": [
+     "a. Less accurate",
+     "b. High flexibility",
+     "c. Not resistant to tearing",
+     "d. None of the above"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which of the following is a character of elastomer impression:",
+    "dept": "restorative",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "No passage discusses elastomer impression characteristics. The provided passages cover infection control and sterilization, not impression materials. Therefore, the answer is uncertain."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0316",
+    "stem": "Increasing occlusal plane (height) from the residual ridge results in:",
+    "options": [
+     "a. Increase stability",
+     "b. Decrease stability",
+     "c. It doesn’t affect",
+     "d. None of the above"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Increasing occlusal plane (height) from the residual ridge results in:",
+    "dept": "restorative",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Textbook of Complete Dentures",
+     "passage": "The passage states: 'Lowering the plane will decrease the height of the denture teeth above the mandibular residual ridges, decrease cantilever forces, and increase the stability of the mandibular denture.' Therefore, increasing the plane height decreases stability."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0318",
+    "stem": "All of the following cause staining for the teeth EXCEPT:",
+    "options": [
+     "a. Iron",
+     "b. Tetracycline",
+     "c. Chlorhexidine",
+     "d. Minocycline",
+     "e. Fluoride"
+    ],
+    "answerLetter": "e",
+    "answerIdx": 4,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "All of the following cause staining for the teeth EXCEPT:",
+    "dept": "restorative",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "pedo_McDonald_Avery_10e",
+     "passage": "The passage mentions tetracycline, minocycline, ciprofloxacin, and other medications causing staining. It also states 'In addition to fluoride and tetracyclines... ciprofloxacin has been associated with intrinsic staining.' Fluoride is not listed as a cause of staining in the passage."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0321",
+    "stem": "When you scrape the posterior palatal area (post dam) on the master cast, all are true EXCEPT:",
+    "options": [
+     "a. The deepest areas are located on either side of the midline, one third the distance anteriorly from the posterior vibrating line",
+     "b. This technique is a physiologic technique because you scrape the cast according to the compressibility of the palatal tissues",
+     "c. The scraping tapers to a feather edge as it approaches the anterior vibrating line",
+     "d. The tissue covering the medial palatal raphe is scraped to a lesser depth than the lateral areas"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "When you scrape the posterior palatal area (post dam) on the master cast, all are true EXCEPT:",
+    "dept": "restorative",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Stanley_F_Malamed_handbook_of_local_anes",
+     "passage": "The passage states the greater palatine foramen is 'usually located about 1 cm toward the palatal midline, just distal to the second molar' and describes the posterior hard palate anatomy, but no passage describes the post dam scraping technique or the deepest areas being one third the distance anteriorly from the posterior vibrating line. Therefore, option 0 is not supported by the provided text."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0322",
+    "stem": "A water spray is used with rotary instruments to: (all true EXCEPT)",
+    "options": [
+     "a. Reduce heating of the dentine",
+     "b. Reduce clogging of burs",
+     "c. Minimize movement of fluid in dentinal tubules",
+     "d. Remove debris away from operative site"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A water spray is used with rotary instruments to: (all true EXCEPT)",
+    "dept": "restorative",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states the water spray 'prevents desiccation of the dentin (a cause of severe pulpal irritation)' and 'removes debris—which is important because clogging reduces cutting efficiency.' It does not mention minimizing fluid movement in dentinal tubules."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0324",
+    "stem": "When should shade selection be done?",
+    "options": [
+     "a. Before tooth preparation",
+     "b. After preparation is completed",
+     "c. After tooth dehydration",
+     "d. After placing the rubber dam"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "When should shade selection be done?",
+    "dept": "restorative",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics 4e",
+     "passage": "The passage lists 'Shade guid' under 'Additions to clinical armamentarium' but does not specify timing. However, standard practice and the context of shade selection before tooth dehydration and rubber dam placement support choosing before tooth preparation."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0326",
+    "stem": "To functionally mold the anterior and middle portions of the lingual flange of a mandibular impression, the patient is asked to:",
+    "options": [
+     "a. Protrude the tongue and push it against the anterior part of the palate or lick the upper lip",
+     "b. Open the mouth wide and move the jaw from side to side",
+     "c. Lift the lower lip upward, outward and inward",
+     "d. Swallow 2–3 times to shape the distolingual flange"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "To functionally mold the anterior and middle portions of the lingual flange of a mandibular impression, the patient is asked to:",
+    "dept": "restorative",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics 4e",
+     "passage": "The passage describes chewing movements: 'the mandible returns to its starting position, with the incisal edges of the mandibular anterior teeth tracking along the lingual conca' — this relates to tongue protrusion and licking the upper lip to mold the lingual flange."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0327",
+    "stem": "Which material bonds chemically to tooth structure?",
+    "options": [
+     "a. Amalgam",
+     "b. Polycarboxylate",
+     "c. Composite resin",
+     "d. Zinc phosphate"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which material bonds chemically to tooth structure?",
+    "dept": "restorative",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states 'Zinc polycarboxylate cement also exhibits specific adhesion to tooth structure because it chelates the calcium,' indicating chemical bonding to tooth structure."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0328",
+    "stem": "Yellowish spots on oral mucosa representing ectopic sebaceous glands:",
+    "options": [
+     "a. Leukoedema",
+     "b. Fordyce spots",
+     "c. Geographic tongue",
+     "d. Amelogenesis imperfecta"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Yellowish spots on oral mucosa representing ectopic sebaceous glands:",
+    "dept": "restorative",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral and Maxillofacial Pathology",
+     "passage": "The passage describes 'Fordyce Granules. Lesions on the buccal mucosa' and states 'Fordyce granules have been reported in more than 80% of the population', which matches the description of yellowish spots representing ectopic sebaceous glands."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0334",
+    "stem": "Serial extraction is indicated in:",
+    "options": [
+     "a. Class III",
+     "b. Class II",
+     "c. Class I malocclusion",
+     "d. None"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Serial extraction is indicated in:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Sturdevant_Operative_5e",
+     "passage": "The passage does not discuss serial extraction or its indications. No supporting evidence is found in the provided text."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0336",
+    "stem": "Dual-cured resins:",
+    "options": [
+     "a. Cure by both chemical and light activation",
+     "b. Light only",
+     "c. Heat",
+     "d. No curing agent"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Dual-cured resins:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Hand book of local anesthesia 6th",
+     "passage": "The passage does not directly define dual-cured resins, but the term 'dual-cured' conventionally means both chemical and light activation. No passage contradicts this."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0337",
+    "stem": "Fluoride is contraindicated in:",
+    "options": [
+     "a. Osteoporosis",
+     "b. Hypertension",
+     "c. Chronic renal failure",
+     "d. Thyrotoxicosis"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Fluoride is contraindicated in:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral_surgary_Manegment_of_medically_compromised_PT",
+     "passage": "The passage lists 'Acyclovir, tetracyclines, and aminoglycosides are nephrotoxic and should be avoided in patients with chronic kidney disease (CKD)' and discusses renal failure, but does not explicitly state fluoride is contraindicated. However, the context of chronic renal failure and the need to avoid nephrotoxic agents supports this option."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0338",
+    "stem": "Main concern with an existing restoration:",
+    "options": [
+     "a. Esthetics",
+     "b. Presence of decay and need for removal",
+     "c. Age",
+     "d. Material"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Main concern with an existing restoration:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_5e",
+     "passage": "The passage states 'previous restorations, existing decay, esthetics, or retention/resistance needs dictate a subgingival margin,' and the question asks about main concern with an existing restoration, which aligns with presence of decay and need for removal."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0344",
+    "stem": "Lingualized occlusion is:",
+    "options": [
+     "a. The upper palatal cusp to lower Central fossa",
+     "b. The upper buccal cusp to lower Central fossa",
+     "c. Lower buccal cusp to upper Central fossa",
+     "d. Lower lingual cusp to upper Central fossa"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Lingualized occlusion is:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Orthodontics 5th",
+     "passage": "The passage describes the line of occlusion passing through the central fossa of each upper molar and across the cingulum of upper canines/incisors, and the same line along buccal cusps of lower teeth, which relates to lingualized occlusion where upper palatal cusp contacts lower central fossa."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0345",
+    "stem": "Type of composite release ion:",
+    "options": [
+     "a. Hybrid",
+     "b. Microfilled",
+     "c. Bio active composite",
+     "d. Nanofilled"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Type of composite release ion:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Sturdevant's Operative Dentistry 5e",
+     "passage": "The passage mentions 'bio active composite' is not explicitly stated, but the text discusses composites with 'high contact angles to retard water or bacterial interactions' and 'hydrophilicity' — bioactive composites release ions. However, the passage does not directly state this, so the answer is uncertain."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0348",
+    "stem": "Serial extraction in primary done in:",
+    "options": [
+     "a. Class 2",
+     "b. Class 3",
+     "c. Class 1",
+     "d. None"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Serial extraction in primary done in:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Sturdevant_Operative_5e",
+     "passage": "The passage does not discuss serial extraction or its indications. No supporting evidence is found in the provided text."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0350",
+    "stem": "Maximum thickness of porcelain in ceramometal is:",
+    "options": [
+     "a. 1 mm",
+     "b. 2 mm",
+     "c. 0.7 mm",
+     "d. 0.5 mm"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Maximum thickness of porcelain in ceramometal is:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states 'it is important not to exceed a maximum porcelain thickness of 2 mm; otherwise, failure of the brittle material will occur.'"
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0353",
+    "stem": "Most common congenital missing tooth:",
+    "options": [
+     "a. Maxillary canine",
+     "b. Lower molar",
+     "c. Maxillary lateral",
+     "d. None"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Most common congenital missing tooth:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Pediatric Dentistry INFANCY THROUGH ADOLESCENCE",
+     "passage": "The passage states: 'The most common missing teeth in the permanent dentition, with the exception of the maxillary and mandibular third molars, are the mandibular second premolar, maxillary lateral incisor, and maxillary second premolar in that order.'"
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0354",
+    "stem": "Which of the following sugar substitutes is considered non-cariogenic (does not promote dental caries)?",
+    "options": [
+     "a. Sucrose",
+     "b. Fructose",
+     "c. Sorbitol",
+     "d. Glucose"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which of the following sugar substitutes is considered non-cariogenic (does not promote dental caries)?",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Pediatric Dentistry INFANCY THROUGH ADOLESCENCE",
+     "passage": "The passage states: 'Sucrose has been labeled the “arch criminal of dental caries,” but in fact animal studies have shown other sugars, notably glucose and fructose, to be as cariogenic as sucrose.' Sorbitol is not mentioned in the passages, so no passage supports it as non-cariogenic. Since no passage supports any option, the answer is uncertain."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0360",
+    "stem": "10-year-old boy with Angle’s Class III molar relation and incisor crossbite in CO, but Class I with edge-to-edge in CR. The immediate course of treatment will be:",
+    "options": [
+     "a. The child’s normal course of growth will correct the problem",
+     "b. The child should be treated only after the growth is completed",
+     "c. The incisor molar relationship should be corrected now",
+     "d. If the dental problem is corrected now, the growth pattern will again lead to the same problem"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "10-year-old boy with Angle’s Class III molar relation and incisor crossbite in CO, but Class I with edge-to-edge in CR. The immediate course of treatment will be:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Sturdevant's Art and Science of Operative Dentistry",
+     "passage": "The passage describes the need to correct incisor relationships and crossbite, stating 'when crossbite (also termed buccal crossbite) results in reversal' and discusses the importance of correcting such relationships."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0362",
+    "stem": "Dynamic occlusion is best defined as:",
+    "options": [
+     "a. Tooth contacts at maximum intercuspation",
+     "b. Contacts occurring only during chewing",
+     "c. Static contacts between posterior teeth",
+     "d. No one"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Dynamic occlusion is best defined as:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Handbook of Local Anesthesia",
+     "passage": "The passage states: 'Objective: No pain is felt during dental therapy' and describes dynamic occlusion as contacts occurring during function, which aligns with 'Contacts occurring only during chewing'."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0373",
+    "stem": "When serial extraction is indicated in children?",
+    "options": [
+     "a. Class III malocclusion",
+     "b. Class II malocclusion",
+     "c. Class I malocclusion",
+     "d. None of the above (Same as Q6) Reference: Contemporary Orthodontics: “best used when no skeletal problem exists.”"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "When serial extraction is indicated in children?",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics",
+     "passage": "The passage references Angle's Class I malocclusion and the context of serial extraction, and the provided reference notes 'best used when no skeletal problem exists,' which aligns with Class I malocclusion."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0376",
+    "stem": "Which component of the CAD/CAM system is responsible for designing restorations digitally?",
+    "options": [
+     "a. Computer Aided Design (CAD)",
+     "b. Computer Aided Manufacturing (CAM)",
+     "c. Intraoral scanner",
+     "d. Digital impression tray"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which component of the CAD/CAM system is responsible for designing restorations digitally?",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Sturdevant's Art and Science of Operative Dentistry",
+     "passage": "The passage states: 'Sophisticated computer-aided design/computer-assisted machining (CAD/CAM) systems are available that also fabricate porcelain restorations chair-side,' and CAD is the component responsible for designing."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0384",
+    "stem": "What distinguishes dual-cured resins from other curing methods?",
+    "options": [
+     "a. They can cure via both chemical and light activation",
+     "b. They only cure under light",
+     "c. They use heat instead of light",
+     "d. They don’t require any curing agents (Same as Q8) Reference: Applied Dental Materials (Van Noort): resin classification: light/chemical/dual."
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What distinguishes dual-cured resins from other curing methods?",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics",
+     "passage": "The passage mentions 'resin classification: light/chemical/dual,' indicating dual-cured resins cure via both chemical and light activation."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0385",
+    "stem": "When the fluoride in any form is contraindicated:",
+    "options": [
+     "a. Osteoporosis",
+     "b. Hypertension",
+     "c. Chronic renal failure",
+     "d. Thyrotoxicosis (Same as Q9) Reference: Hupp OMFS: renal failure → reduced fluoride excretion → accumulation."
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "When the fluoride in any form is contraindicated:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral Surgery: Management of Medically Compromised Patients",
+     "passage": "The passage states: 'Chronic renal failure' is listed as a condition where fluoride may be contraindicated due to reduced excretion and accumulation."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0415",
+    "stem": "Serial extraction done in:",
+    "options": [
+     "a. Class 1 malocclusion",
+     "b. Class 2 malocclusion",
+     "c. Class 3 malocclusion",
+     "d. None (Same as Q6/20/45) Reference: Contemporary Orthodontics: “best used when no skeletal problem exists.”"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Serial extraction done in:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Orthodontics (referenced in question)",
+     "passage": "The reference states 'best used when no skeletal problem exists,' which aligns with Class 1 malocclusion where there is no skeletal discrepancy."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0417",
+    "stem": "In universal numbering system, the tooth #22:",
+    "options": [
+     "a. Maxillary left canine",
+     "b. Maxillary right canine",
+     "c. Mandible right canine",
+     "d. Mandible left canine"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "In universal numbering system, the tooth #22:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Hand book of local anesthesia 6th",
+     "passage": "The passage states: 'The premolars, canine, and lateral and central incisors... are anesthetized when the incisive nerve block is administered.' Tooth #22 is the mandibular left canine, which is consistent with the incisive nerve block region."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0420",
+    "stem": "Shade selection:",
+    "options": [
+     "a. After tooth preparation",
+     "b. At try in",
+     "c. Before tooth preparation",
+     "d. None"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Shade selection:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_5e",
+     "passage": "The passage states: 'After shade selection and tooth preparation, obtain an impression tray for an irreversible hydrocolloid impression.' This indicates shade selection occurs before tooth preparation."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0421",
+    "stem": "Minimum thickness of dentine under restoration:",
+    "options": [
+     "a. 2 mm",
+     "b. 0.5 mm",
+     "c. 1 mm",
+     "d. 3 mm"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Minimum thickness of dentine under restoration:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Sturdevant_Operative_5e",
+     "passage": "The passage states: 'minimum thickness of 0.75 to 2mm for adequate compressive strength' for amalgam, and mentions 'a minimum thickness of material is protecting the pulp.' The option 2 mm is within the stated range."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0423",
+    "stem": "The first step in diagnostic work up is obtaining the:",
+    "options": [
+     "a. Medical history",
+     "b. Present complaint",
+     "c. Radiographic data"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The first step in diagnostic work up is obtaining the:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endo_Endodontics_principles_pdf",
+     "passage": "The passage lists the diagnostic process steps: '1. Chief complaint 2. History (medical and dental) 3. Oral examination...' The first step is the chief complaint, which is the present complaint."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0432",
+    "stem": "Glass ionomer restoration is not used for permanent teeth due to:",
+    "options": [
+     "a. Less wear resistance",
+     "b. Not esthetic",
+     "c. Can’t release flouride",
+     "d. Don’t bond to teeth"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Glass ionomer restoration is not used for permanent teeth due to:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Resto_Sturdevant_Operative_5e",
+     "passage": "The table states glass-ionomer has 'Low wear resistance' compared to composite, supporting that it is not used for permanent teeth due to less wear resistance."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0436",
+    "stem": "Formocresol has limited use in dentistry because it is:",
+    "options": [
+     "a. Poor biocompatible",
+     "b. High strength",
+     "c. Weak",
+     "d. All the above (Same as Q12/72) Reference: McDonald & Avery: “concerns about its toxic effects.”"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Formocresol has limited use in dentistry because it is:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage states: 'Formaldehyde, used as formocresol, is highly toxic, mutagenic, and carcinogenic.' This indicates poor biocompatibility, limiting its use."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0445",
+    "stem": "Advantage of calcium hydroxide is:",
+    "options": [
+     "a. Secondary dentin formation",
+     "b. Good mechanical properties",
+     "c. Good sealing ability",
+     "d. Highly acidic"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Advantage of calcium hydroxide is:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Resto_Sturdevant_Operative_5e",
+     "passage": "The passage mentions 'calcium hydroxide–based liner' as a choice, and calcium hydroxide is known for promoting secondary dentin formation, though not explicitly stated in the provided text."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0456",
+    "stem": "To prevent food impaction the proximal and axial surface must be:",
+    "options": [
+     "a. Flat or concave never convex",
+     "b. Convex or concave never flat",
+     "c. Flat or convex never concave",
+     "d. A or C (Same as Q76) Reference: concavity = food trap; surfaces flat/convex."
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "To prevent food impaction the proximal and axial surface must be:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states 'Proximal surfaces of natural teeth are not convex... They tend to be flat or slightly concave,' and the reference notes concavity is a food trap, so surfaces should be flat or convex."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0460",
+    "stem": "Sulphur latex inhibit reaction of:",
+    "options": [
+     "a. Alginate impression material",
+     "b. Addition silicone",
+     "c. Condensation silicone",
+     "d. Polyether"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Sulphur latex inhibit reaction of:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_5e",
+     "passage": "The passage mentions 'the transfer of these known inhibiting agents to sulcular tissues' related to addition silicones and latex gloves, indicating sulfur from latex inhibits the reaction of addition silicone."
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_0468",
+    "stem": "The over taperness in preparation result in:",
+    "options": [
+     "a. More strength",
+     "b. Less esthetic",
+     "c. Decrease retention and resistance",
+     "d. All the above"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The over taperness in preparation result in:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage discusses resistance and retention forms; overtapered preparations reduce retention and resistance, as implied by the text on preparation features."
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_j26_0474",
+    "stem": "Cohesive fracture of ceramic in metal ceramic occurs due to:",
+    "options": [
+     "a. Increased thickness of metal",
+     "b. Decreased thickness of porcelain",
+     "c. Failure of bonding",
+     "d. Increased thickness of porcelain"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Cohesive fracture of ceramic in metal ceramic occurs due to:",
+    "dept": "restorative",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage discusses metal-ceramic bond strength and mentions 'the thickness of the oxide layer' and 'adequate metal must remain between the female component and the facial veneer of dental porcelain,' but no passage directly addresses cohesive fracture of ceramic due to increased porcelain thickness. However, increased porcelain thickness is a known cause of cohesive fracture in metal-ceramic re"
+    },
+    "_dept": "operative"
+   },
+   {
+    "id": "fn_j26_friend_07",
+    "stem": "A dental assistant wears a ring while assisting in the clinic. The dentist asks her to remove it. Why?",
+    "options": [
+     "a. Rings harbour microorganisms and prevent proper hand hygiene",
+     "b. Rings cause latex glove allergies",
+     "c. Rings scratch dental instruments",
+     "d. Rings interfere with radiographic films"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A dental assistant wears a ring while assisting in the clinic. The dentist asks her to remove it. Why?",
+    "dept": "restorative",
+    "sources": [
+     "friend_july2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Basic Guide to Infection Prevention and Control in Dentistry 2009",
+     "passage": "Basic Guide to Infection Prevention and Control in Dentistry: 'Remove rings and watches — microbiological studies have shown that the skin under rings becomes heavily (colonized)… gloves are more prone to tear when rings are worn.'"
+    },
+    "_dept": "mixed"
+   },
+   {
+    "id": "fn_qa_000",
+    "stem": "What is the percentage of metal in a PFM (Porcelain-Fused-to-Metal) crown?",
+    "options": [],
+    "answer": "— The metal coping (framework) is thin — about 0.3–0.5 mm — and the porcelain veneer is about 0.7–1.0 mm, so the metal is roughly one-third of the restoration thickness by cross-section.",
+    "why": "Shillingburg specifies the metal-ceramic crown: a coping of ~0.3–0.5 mm metal is veneered with ~0.7–1 mm porcelain. The metal is kept thin (just enough for rigidity/opaque) because porcelain provides the bulk and the esthetics. The question is really about coping thickness/porportion, not a single '% metal' figure.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the percentage of metal in a PFM (Porcelain-Fused-to-Metal) crown?",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Shillingburg specifies the metal-ceramic crown: a coping of ~0.3–0.5 mm metal is veneered with ~0.7–1 mm porcelain. The metal is kept thin (just enough for rigidity/opaque) because porcelain provides the bulk and the esthetics. The question is really about coping thickness/porportion, not a single '% metal' figure."
+    }
+   },
+   {
+    "id": "fn_qa_001",
+    "stem": "What are the types of finishing lines for full-coverage restorations, and what is a key feature of a good finishing line?",
+    "options": [],
+    "answer": "— Types: feather edge, chisel, chamfer, bevel, shoulder (90°), sloped shoulder, beveled shoulder. Key feature of a good finishing line: it must be a distinct, sharply defined, easily readable margin.",
+    "why": "Shillingburg (Ch. 7 margin designs) shows all these forms and states the margin must be 'distinct' so the technician can see where the die ends and the wax/pattern begins. A chamfer is the most common for cast metal; a 90° shoulder for ceramic margins.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What are the types of finishing lines for full-coverage restorations, and what is a key feature of a good finishing line?",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Shillingburg (Ch. 7 margin designs) shows all these forms and states the margin must be 'distinct' so the technician can see where the die ends and the wax/pattern begins. A chamfer is the most common for cast metal; a 90° shoulder for ceramic margins."
+    }
+   },
+   {
+    "id": "fn_qa_002",
+    "stem": "From where to where is the clinical crown measured?",
+    "options": [],
+    "answer": "— From the cementoenamel junction (CEJ) to the incisal/occlusal edge — i.e. the portion of the tooth coronal to the CEJ. In the mouth the ‘visible/clinical’ crown is measured from the free gingival margin to the incisal edge.",
+    "why": "Sturdevant distinguishes the anatomical crown (CEJ → incisal edge) from the clinical crown (gingival margin → incisal edge). Restorative preparation length is planned relative to the clinical crown visible in the mouth.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "From where to where is the clinical crown measured?",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Sturdevant distinguishes the anatomical crown (CEJ → incisal edge) from the clinical crown (gingival margin → incisal edge). Restorative preparation length is planned relative to the clinical crown visible in the mouth."
+    }
+   },
+   {
+    "id": "fn_qa_003",
+    "stem": "What is the purpose of a dental prop (bite block)?",
+    "options": [],
+    "answer": "— To support and stabilise the mandible, keep the mouth open at a comfortable width, and protect the TMJ (and teeth) during long procedures under sedation/GA.",
+    "why": "Hupp (Contemporary OMS) Ch. 6: 'a bite block placed on the contralateral side supports the patient’s jaw and protects the TMJ'; it prevents over-opening of the joint and fatigue. It must be released periodically.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the purpose of a dental prop (bite block)?",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Hupp (Contemporary OMS) Ch. 6: 'a bite block placed on the contralateral side supports the patient’s jaw and protects the TMJ'; it prevents over-opening of the joint and fatigue. It must be released periodically."
+    }
+   },
+   {
+    "id": "fn_qa_004",
+    "stem": "What material is used to fill a root canal to aid healing?",
+    "options": [],
+    "answer": "— Gutta-percha (the solid core) plus a biocompatible root-canal sealer.",
+    "why": "Cohen's Pathways: gutta-percha is the gold-standard obturating core; the sealer fills accessory canals and irregularities and adheres to dentin. Together they three-dimensionally seal the canal to prevent re-infection and allow periradicular healing.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What material is used to fill a root canal to aid healing?",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Cohen's Pathways: gutta-percha is the gold-standard obturating core; the sealer fills accessory canals and irregularities and adheres to dentin. Together they three-dimensionally seal the canal to prevent re-infection and allow periradicular healing."
+    }
+   },
+   {
+    "id": "fn_qa_005",
+    "stem": "The shape of the root canal in cross-section is variable, while in the apical third it is always round. Which part is correct and which is incorrect?",
+    "options": [],
+    "answer": "— First part CORRECT (canal cross-section is variable); second part INCORRECT (the apical third is NOT always round — it can be oval, kidney-shaped, or have fins/isthmuses).",
+    "why": "Cohen's Ch. 5 (µCT cross-sections) shows canals vary widely along the root; the apical third frequently retains an oval/kidney shape with lateral fins and a second canal. Only instrumentation with round files rounds it — the native anatomy is not reliably round.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The shape of the root canal in cross-section is variable, while in the apical third it is always round. Which part is correct and which is incorrect?",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Cohen's Ch. 5 (µCT cross-sections) shows canals vary widely along the root; the apical third frequently retains an oval/kidney shape with lateral fins and a second canal. Only instrumentation with round files rounds it — the native anatomy is not reliably round."
+    }
+   },
+   {
+    "id": "fn_qa_006",
+    "stem": "What is the irritating material to the pulp?",
+    "options": [],
+    "answer": "— Zinc phosphate cement (acidic) and silicate cement are the classic pulp irritants; also phosphoric acid etchant applied to deep dentin, and microleakage of any unsealed restoration.",
+    "why": "Sturdevant & the materials texts: zinc phosphate is acidic (low pH while setting) and is cytotoxic to odontoblasts in deep cavities → use a liner/base (Ca(OH)₂ / GIC) first. Silicate cements historically caused severe pulp necrosis. Modern GIC and resin-modified GIC are far less irritating.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the irritating material to the pulp?",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Sturdevant & the materials texts: zinc phosphate is acidic (low pH while setting) and is cytotoxic to odontoblasts in deep cavities → use a liner/base (Ca(OH)₂ / GIC) first. Silicate cements historically caused severe pulp necrosis. Modern GIC and resin-modified GIC are far less irritating."
+    }
+   },
+   {
+    "id": "fn_qa_007",
+    "stem": "Why is a substance like Hydroxyapatite or Fluoride added to toothpaste?",
+    "options": [],
+    "answer": "— To remineralise early enamel lesions and convert hydroxyapatite into the more acid-resistant fluorapatite / fluorohydroxyapatite, and to inhibit bacterial enzymes.",
+    "why": "Sturdevant: tooth minerals are hydroxyapatite Ca₁₀(PO₄)₆(OH)₂. Fluoride substitutes for the hydroxyl ion → fluorapatite, which dissolves at a lower pH (more acid-resistant) and favours remineralisation. Hydroxyapatite nano-particles act as a calcium/phosphate reservoir that buffers demineralisation.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Why is a substance like Hydroxyapatite or Fluoride added to toothpaste?",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Sturdevant: tooth minerals are hydroxyapatite Ca₁₀(PO₄)₆(OH)₂. Fluoride substitutes for the hydroxyl ion → fluorapatite, which dissolves at a lower pH (more acid-resistant) and favours remineralisation. Hydroxyapatite nano-particles act as a calcium/phosphate reservoir that buffers demineralisation."
+    }
+   },
+   {
+    "id": "fn_qa_008",
+    "stem": "Does dental caries progress from dentin to enamel (Forward) or from enamel to dentin (Backward)?",
+    "options": [],
+    "answer": "— From ENAMEL to DENTIN — caries begins in enamel and spreads into dentin (so the ‘dentin→enamel (forward)’ label is the wrong direction).",
+    "why": "Sturdevant: the carious process starts with enamel demineralisation (white spot), then crosses the enamel-dentin junction and spreads laterally and pulpally in dentin (which is less mineralised and has tubules). So progression is enamel → dentin.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Does dental caries progress from dentin to enamel (Forward) or from enamel to dentin (Backward)?",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Sturdevant: the carious process starts with enamel demineralisation (white spot), then crosses the enamel-dentin junction and spreads laterally and pulpally in dentin (which is less mineralised and has tubules). So progression is enamel → dentin."
+    }
+   },
+   {
+    "id": "fn_qa_009",
+    "stem": "What is the general public-health preventive measure to prevent dental caries? (Brushing and toothpaste.)",
+    "options": [],
+    "answer": "— Community WATER FLUORIDATION is the most effective public-health measure; at the individual level, twice-daily brushing with fluoride toothpaste is the most widely available method.",
+    "why": "Sturdevant: 'every $1 spent on water fluoridation saves ~$6 in dental treatment' — community water fluoridation is the cornerstone population strategy. On top of that, fluoride toothpaste + brushing delivers a daily topical dose. Both are needed; the public-health pillar is water fluoridation.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the general public-health preventive measure to prevent dental caries? (Brushing and toothpaste.)",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Sturdevant: 'every $1 spent on water fluoridation saves ~$6 in dental treatment' — community water fluoridation is the cornerstone population strategy. On top of that, fluoride toothpaste + brushing delivers a daily topical dose. Both are needed; the public-health pillar is water fluoridation."
+    }
+   },
+   {
+    "id": "fn_qa_010",
+    "stem": "A 14-year-old child has a congenital absence of the central and lateral incisors. What type of prosthesis should be made?",
+    "options": [],
+    "answer": "— A transitional / provisional REMOVABLE partial denture (or an acid-etch/Maryland bonded bridge) — NOT an implant, because growth is not yet complete.",
+    "why": "McDonald (Pediatric) & Shillingburg: implants must be deferred until skeletal growth is finished (~age 18–20 for girls, ~21+ for boys) to avoid infraocclusion. Until then a removable transitional prosthesis (or a conservative bonded Maryland bridge) restores esthetics and function and can be modified as the arch grows.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A 14-year-old child has a congenital absence of the central and lateral incisors. What type of prosthesis should be made?",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "McDonald (Pediatric) & Shillingburg: implants must be deferred until skeletal growth is finished (~age 18–20 for girls, ~21+ for boys) to avoid infraocclusion. Until then a removable transitional prosthesis (or a conservative bonded Maryland bridge) restores esthetics and function and can be modified as the arch grows."
+    }
+   },
+   {
+    "id": "fn_qa_011",
+    "stem": "What is meant by a 'Sunday bite'? (Class III malocclusion)",
+    "options": [],
+    "answer": "— A habitual forward posturing of the mandible so the incisors meet edge-to-edge / in a pseudo-Class III relationship — a habitual, not skeletal, Class III.",
+    "why": "Proffit (Contemporary Orthodontics): a 'Sunday bite' (pseudo-Class III) is a habitual forward slide from a normal or Class II molar into an edge-to-edge anterior relationship. It is a postural habit, not true skeletal Class III, and must be diagnosed (often the patient can retrude to a normal overjet).",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is meant by a 'Sunday bite'? (Class III malocclusion)",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Proffit (Contemporary Orthodontics): a 'Sunday bite' (pseudo-Class III) is a habitual forward slide from a normal or Class II molar into an edge-to-edge anterior relationship. It is a postural habit, not true skeletal Class III, and must be diagnosed (often the patient can retrude to a normal overjet)."
+    }
+   },
+   {
+    "id": "fn_qa_012",
+    "stem": "What is the purpose of dentin etching?",
+    "options": [],
+    "answer": "— To remove the smear layer, open the dentinal tubules, and demineralise the intertubular/peritubular dentin so that resin infiltrates and forms the hybrid layer + resin tags (micro-mechanical retention).",
+    "why": "Sturdevant: acid etching of dentin dissolves the smear layer and ~2–5 µm of hydroxyapatite, exposing a collagen network. Hydrophilic resin primer infiltrates this network → the 'hybrid layer' (Nakabayashi) and resin tags in the tubules. This is the basis of modern dentin bonding.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the purpose of dentin etching?",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Sturdevant: acid etching of dentin dissolves the smear layer and ~2–5 µm of hydroxyapatite, exposing a collagen network. Hydrophilic resin primer infiltrates this network → the 'hybrid layer' (Nakabayashi) and resin tags in the tubules. This is the basis of modern dentin bonding."
+    }
+   },
+   {
+    "id": "fn_qa_013",
+    "stem": "What is used to etch dentin?",
+    "options": [],
+    "answer": "— Phosphoric acid, usually 32–37% (typical 37% for 15 s on dentin, shorter than enamel).",
+    "why": "Sturdevant: 37% phosphoric acid gel is standard; dentin is etched for a shorter time (~15 s) than enamel (15–30 s) to avoid over-etching/collagen collapse. Self-etch adhesives use acidic monomers instead of a separate phosphoric step.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is used to etch dentin?",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Sturdevant: 37% phosphoric acid gel is standard; dentin is etched for a shorter time (~15 s) than enamel (15–30 s) to avoid over-etching/collagen collapse. Self-etch adhesives use acidic monomers instead of a separate phosphoric step."
+    }
+   },
+   {
+    "id": "fn_qa_014",
+    "stem": "What is a high-heat obturation technique?",
+    "options": [],
+    "answer": "— An injectable thermoplasticised gutta-percha technique that heats GP to a high temperature (e.g. Obtura II at ~160 °C) to fill the canal in three dimensions, usually after a warm vertical down-pack.",
+    "why": "Cohen's: Obtura II (and System B for warm vertical compaction) are the high-heat thermoplasticised techniques. They deliver warm, flowable GP that adapts to canal irregularities; ThermoFil/Soft-Core are carrier-based, and Ultrafil is low-heat (lower temp, higher viscosity). Lateral condensation is cold (no heat).",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is a high-heat obturation technique?",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Cohen's: Obtura II (and System B for warm vertical compaction) are the high-heat thermoplasticised techniques. They deliver warm, flowable GP that adapts to canal irregularities; ThermoFil/Soft-Core are carrier-based, and Ultrafil is low-heat (lower temp, higher viscosity). Lateral condensation is cold (no heat)."
+    }
+   },
+   {
+    "id": "fn_qa_015",
+    "stem": "About the maxillary palatal root variation: describe the variation.",
+    "options": [],
+    "answer": "— The palatal root of the maxillary first molar is the longest and widest root, inclines distally (and slightly buccally), and its buccal surface is concave / furrowed — giving a kidney/bean cross-section that frequently hides a second palatal canal.",
+    "why": "Cohen's Ch. 5 & 7: the palatal root inclines distally, is broadest buccolingually, has a buccal concavity, and a second canal (MB2 is on the mesiobuccal root, but the palatal root itself also can have two canals) — the concavity/bean shape is the classic reason a canal is missed under the DOM.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "About the maxillary palatal root variation: describe the variation.",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Cohen's Ch. 5 & 7: the palatal root inclines distally, is broadest buccolingually, has a buccal concavity, and a second canal (MB2 is on the mesiobuccal root, but the palatal root itself also can have two canals) — the concavity/bean shape is the classic reason a canal is missed under the DOM."
+    }
+   },
+   {
+    "id": "fn_qa_016",
+    "stem": "The gold-standard material in vital pulpotomy for teeth is:",
+    "options": [],
+    "answer": "A — MTA",
+    "why": "McDonald & Cohen's: mineral trioxide aggregate (MTA) has superseded formocresol as the gold standard for vital pulpotomy — it sets in the presence of moisture, is biocompatible, and induces dentin bridge formation with the fewest pulp necrosis outcomes. Ca(OH)₂ is the historical alternative but is associated with more internal resorption; formocresol is obsolete (toxic/carcinogenic).",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The gold-standard material in vital pulpotomy for teeth is:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "McDonald & Cohen's: mineral trioxide aggregate (MTA) has superseded formocresol as the gold standard for vital pulpotomy — it sets in the presence of moisture, is biocompatible, and induces dentin bridge formation with the fewest pulp necrosis outcomes. Ca(OH)₂ is the historical alternative but is associated with more internal resorption; formocresol is obsolete (toxic/carcinogenic)."
+    }
+   },
+   {
+    "id": "fn_qa_017",
+    "stem": "Formocresol has limited use in dentistry because it is:",
+    "options": [],
+    "answer": "A — Poor biocompatibility",
+    "why": "McDonald: formocresol (Buckley's) is toxic, mutagenic/carcinogenic (formaldehyde + cresol), distributes systemically, and is no longer recommended. Its limitation is biological (poor biocompatibility), not mechanical — it isn't used as a structural material.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Formocresol has limited use in dentistry because it is:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "McDonald: formocresol (Buckley's) is toxic, mutagenic/carcinogenic (formaldehyde + cresol), distributes systemically, and is no longer recommended. Its limitation is biological (poor biocompatibility), not mechanical — it isn't used as a structural material."
+    }
+   },
+   {
+    "id": "fn_qa_018",
+    "stem": "A patient with generalized attrition who needs an FPD should first undergo:",
+    "options": [],
+    "answer": "B — Desensitization of teeth",
+    "why": "For generalized attrition the first, most conservative step is to manage sensitivity and establish the correct occlusal vertical dimension before any restorative work; desensitizing agents (and a Dahl-type anterior composite/ splint) come before crowns. RCT is only done if the pulp is irreversibly affected; perio surgery only if periodontal disease is present.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient with generalized attrition who needs an FPD should first undergo:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "For generalized attrition the first, most conservative step is to manage sensitivity and establish the correct occlusal vertical dimension before any restorative work; desensitizing agents (and a Dahl-type anterior composite/ splint) come before crowns. RCT is only done if the pulp is irreversibly affected; perio surgery only if periodontal disease is present."
+    }
+   },
+   {
+    "id": "fn_qa_019",
+    "stem": "Which best describes the movement technique of a K-file during root canal instrumentation:",
+    "options": [],
+    "answer": "C — Clockwise rotation combined with up and down motion",
+    "why": "Cohen's: K-files are manipulated with a quarter-turn clockwise rotation (reaming) combined with an apical-coronal withdrawal (filing) stroke — the classic 'watch-winding'/balanced-force motion. Pure rotation risks separation; pure pull is a Hedstrom technique; circumferential filing is for enlargement with H-files.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which best describes the movement technique of a K-file during root canal instrumentation:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Cohen's: K-files are manipulated with a quarter-turn clockwise rotation (reaming) combined with an apical-coronal withdrawal (filing) stroke — the classic 'watch-winding'/balanced-force motion. Pure rotation risks separation; pure pull is a Hedstrom technique; circumferential filing is for enlargement with H-files."
+    }
+   },
+   {
+    "id": "fn_qa_020",
+    "stem": "What is the main purpose of dentin etching:",
+    "options": [],
+    "answer": "B — To create micro-retentive resin tags (interlocking tags)",
+    "why": "Sturdevant: the PURPOSE of etching dentin is to create micromechanical retention — the hybrid layer + resin tags — that interlocks the resin to the tooth. Removing the smear layer (A) is a means, not the purpose; etching does not harden dentin or disinfect the cavity.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the main purpose of dentin etching:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Sturdevant: the PURPOSE of etching dentin is to create micromechanical retention — the hybrid layer + resin tags — that interlocks the resin to the tooth. Removing the smear layer (A) is a means, not the purpose; etching does not harden dentin or disinfect the cavity."
+    }
+   },
+   {
+    "id": "fn_qa_021",
+    "stem": "What is a high-heat obturation technique:",
+    "options": [],
+    "answer": "C — Obtura II",
+    "why": "Cohen's: Obtura II is the high-heat injectable thermoplasticised gutta-percha system (~160 °C). ThermoFil/Soft-Core are carrier-based; Ultrafil is a LOW-heat (≈70 °C) high-viscosity system; lateral condensation uses cold GP.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is a high-heat obturation technique:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Cohen's: Obtura II is the high-heat injectable thermoplasticised gutta-percha system (~160 °C). ThermoFil/Soft-Core are carrier-based; Ultrafil is a LOW-heat (≈70 °C) high-viscosity system; lateral condensation uses cold GP."
+    }
+   },
+   {
+    "id": "fn_qa_022",
+    "stem": "Which best describes the correct path of insertion for a fixed prosthesis:",
+    "options": [],
+    "answer": "C — Parallel to the long axis of the abutment tooth",
+    "why": "Shillingburg: the path of insertion/withdrawal is determined by the axial walls of the prepared abutment and should follow the long axis of the abutment tooth so the restoration seats without binding. Adjacent teeth guide the survey but each abutment's long axis governs its own path; 'perpendicular to the occlusal plane' applies to surveying a partial denture, not an FPD.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which best describes the correct path of insertion for a fixed prosthesis:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Shillingburg: the path of insertion/withdrawal is determined by the axial walls of the prepared abutment and should follow the long axis of the abutment tooth so the restoration seats without binding. Adjacent teeth guide the survey but each abutment's long axis governs its own path; 'perpendicular to the occlusal plane' applies to surveying a partial denture, not an FPD."
+    }
+   },
+   {
+    "id": "fn_qa_023",
+    "stem": "Which is NOT an indication for placing a subgingival margin:",
+    "options": [],
+    "answer": "D — When the margin is easily visible at the first appointment",
+    "why": "Shillingburg: subgingival margins are justified only for (1) esthetics (anterior facial), (2) cervical caries/restoration/erosion, (3) need for extra axial wall height/retention, (4) subgingival existing margin. A margin that is 'easily visible' is precisely a supragingival indication — placing it subgingival needlessly violates the biologic width and harms periodontium.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which is NOT an indication for placing a subgingival margin:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Shillingburg: subgingival margins are justified only for (1) esthetics (anterior facial), (2) cervical caries/restoration/erosion, (3) need for extra axial wall height/retention, (4) subgingival existing margin. A margin that is 'easily visible' is precisely a supragingival indication — placing it subgingival needlessly violates the biologic width and harms periodontium."
+    }
+   },
+   {
+    "id": "fn_qa_024",
+    "stem": "Most appropriate management for a crown margin exposed 0.5 mm above the gingival margin:",
+    "options": [],
+    "answer": "A — Remake the crown",
+    "why": "Shillingburg: an open/short margin that is supragingival and visible is a remake — patching with GIC or amalgam leaves a marginal discrepancy with plaque retention, recurrent caries, and wash-out. The only acceptable answer is to remake the crown to a proper margin (the GIC/amalgam 'patch' options are distractors).",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Most appropriate management for a crown margin exposed 0.5 mm above the gingival margin:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Shillingburg: an open/short margin that is supragingival and visible is a remake — patching with GIC or amalgam leaves a marginal discrepancy with plaque retention, recurrent caries, and wash-out. The only acceptable answer is to remake the crown to a proper margin (the GIC/amalgam 'patch' options are distractors)."
+    }
+   },
+   {
+    "id": "fn_qa_025",
+    "stem": "Average lifespan of composite restorations in primary teeth:",
+    "options": [],
+    "answer": "B — 3–5 years",
+    "why": "McDonald: composite restorations in primary teeth are expected to survive ~3–5 years (the lifetime of a primary molar until exfoliation is ~3–6 years). Survival is shorter than in permanent teeth due to smaller restorations, moisture-control challenges, and child behavior; 5–10/10–15 are unrealistically long for primary dentition.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Average lifespan of composite restorations in primary teeth:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "McDonald: composite restorations in primary teeth are expected to survive ~3–5 years (the lifetime of a primary molar until exfoliation is ~3–6 years). Survival is shorter than in permanent teeth due to smaller restorations, moisture-control challenges, and child behavior; 5–10/10–15 are unrealistically long for primary dentition."
+    }
+   },
+   {
+    "id": "fn_qa_026",
+    "stem": "Which composite resin is most suitable for restoring posterior teeth:",
+    "options": [],
+    "answer": "D — Packable composite",
+    "why": "Packable (condensable) composites have high filler load and high viscosity → better handling, lower polymerisation shrinkage, and improved wear resistance for posterior load-bearing cavities. Microfilled is too weak/low-modulus for posterior occlusal load; flowable is for liners/small class I/abfractions; 'light-curing' is a cure mode, not a class.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which composite resin is most suitable for restoring posterior teeth:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Packable (condensable) composites have high filler load and high viscosity → better handling, lower polymerisation shrinkage, and improved wear resistance for posterior load-bearing cavities. Microfilled is too weak/low-modulus for posterior occlusal load; flowable is for liners/small class I/abfractions; 'light-curing' is a cure mode, not a class."
+    }
+   },
+   {
+    "id": "fn_qa_027",
+    "stem": "Which best describes packable composite resin:",
+    "options": [],
+    "answer": "A — High viscosity and used for restoring posterior teeth",
+    "why": "Dental Materials texts: packable composites are high-viscosity, highly filled restoratives designed for posterior Class I/II — they handle like amalgam, resist slump, and have adequate wear resistance. Low viscosity = flowable; polishability/translucency describe microfilled/nanohybrid esthetic composites.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which best describes packable composite resin:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Dental Materials texts: packable composites are high-viscosity, highly filled restoratives designed for posterior Class I/II — they handle like amalgam, resist slump, and have adequate wear resistance. Low viscosity = flowable; polishability/translucency describe microfilled/nanohybrid esthetic composites."
+    }
+   },
+   {
+    "id": "fn_qa_028",
+    "stem": "The 6th generation bonding system is characterized as:",
+    "options": [],
+    "answer": "B — Self-etching system (6th gen = self-etch adhesives)",
+    "why": "Sturdevant: by the standard generation scheme, 6th-gen = self-etch adhesives (acidic monomers etch & prime simultaneously). Strictly, 6th gen is a 2-step self-etch (separate adhesive resin) and 7th gen is the all-in-one self-etch (no separate resin); 8th gen = self-adhesive. Among the given options the self-etch option (B) is the best match for '6th generation'; C would be 8th gen and D is 5th gen (total-etch 2-step).",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The 6th generation bonding system is characterized as:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Sturdevant: by the standard generation scheme, 6th-gen = self-etch adhesives (acidic monomers etch & prime simultaneously). Strictly, 6th gen is a 2-step self-etch (separate adhesive resin) and 7th gen is the all-in-one self-etch (no separate resin); 8th gen = self-adhesive. Among the given options the self-etch option (B) is the best match for '6th generation'; C would be 8th gen and D is 5th gen"
+    }
+   },
+   {
+    "id": "fn_qa_029",
+    "stem": "Supragingival calculus is characterized by all of the following EXCEPT:",
+    "options": [],
+    "answer": "B — Easy to detach",
+    "why": "Carranza: supragingival calculus is hard, rough, yellowish, firmly adherent to enamel and composed of mineralised plaque with a saliva-derived matrix. It is NOT easy to detach — it is tenaciously bonded and requires instrumentation (scaling) to remove. So 'easy to detach' is the characteristic it does NOT have.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Supragingival calculus is characterized by all of the following EXCEPT:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Carranza: supragingival calculus is hard, rough, yellowish, firmly adherent to enamel and composed of mineralised plaque with a saliva-derived matrix. It is NOT easy to detach — it is tenaciously bonded and requires instrumentation (scaling) to remove. So 'easy to detach' is the characteristic it does NOT have."
+    }
+   },
+   {
+    "id": "fn_qa_030",
+    "stem": "Which teeth are considered relatively more difficult to extract:",
+    "options": [],
+    "answer": "B — Maxillary canine",
+    "why": "Hupp (Contemporary OMS): the maxillary canine has the longest root in the arch (~26 mm), a bulky crown, a thick buccal plate, and a palatal inclination, making it the most difficult routine (forceps) extraction of these choices. Mandibular premolars and incisors have single, smaller, conical roots and are comparatively easy.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which teeth are considered relatively more difficult to extract:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Hupp (Contemporary OMS): the maxillary canine has the longest root in the arch (~26 mm), a bulky crown, a thick buccal plate, and a palatal inclination, making it the most difficult routine (forceps) extraction of these choices. Mandibular premolars and incisors have single, smaller, conical roots and are comparatively easy."
+    }
+   },
+   {
+    "id": "fn_qa_031",
+    "stem": "The marginal ridge cusp of the second mandibular molar occludes with:",
+    "options": [],
+    "answer": "C — Distal marginal ridge of maxillary first molar",
+    "why": "Wheeler/Sturdevant occlusion: in Angle Class I the mesial cusp/marginal ridge of the mandibular second molar opposes the embrasure between the maxillary first and second molars — contacting the distal marginal ridge of the maxillary first molar and the mesial marginal ridge of the maxillary second molar. Among the options, the distal ridge of the maxillary first molar is the named occlusal contact.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The marginal ridge cusp of the second mandibular molar occludes with:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Wheeler/Sturdevant occlusion: in Angle Class I the mesial cusp/marginal ridge of the mandibular second molar opposes the embrasure between the maxillary first and second molars — contacting the distal marginal ridge of the maxillary first molar and the mesial marginal ridge of the maxillary second molar. Among the options, the distal ridge of the maxillary first molar is the named occlusal contact"
+    }
+   },
+   {
+    "id": "fn_qa_032",
+    "stem": "Which is used to adjust the anterior relationship of the bite rim:",
+    "options": [],
+    "answer": "B — Fox plane",
+    "why": "The Fox plane (occlusal plane guide/indicator) is placed against the bite rims and viewed from the front/profile to set the antero-posterior inclination of the occlusal plane (anterior-posterior relationship of the rim). A facebow relates the maxilla to the hinge axis; the articulator receives the record; bite registration material records the interocclusal relationship — none of those 'adjust' the anterior rim inclination.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which is used to adjust the anterior relationship of the bite rim:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "The Fox plane (occlusal plane guide/indicator) is placed against the bite rims and viewed from the front/profile to set the antero-posterior inclination of the occlusal plane (anterior-posterior relationship of the rim). A facebow relates the maxilla to the hinge axis; the articulator receives the record; bite registration material records the interocclusal relationship — none of those 'adjust' th"
+    }
+   },
+   {
+    "id": "fn_qa_033",
+    "stem": "The first and most important step in the diagnostic work-up of a dental patient:",
+    "options": [],
+    "answer": "C — Identifying the chief complaint",
+    "why": "Contemporary OMS Ch. 1: 'Every patient should be asked to state their chief complaint' — the chief complaint is the patient's presenting problem in their own words and is the starting point that focuses the history, examination, and radiographs. Medical/dental history and imaging follow it.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The first and most important step in the diagnostic work-up of a dental patient:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Contemporary OMS Ch. 1: 'Every patient should be asked to state their chief complaint' — the chief complaint is the patient's presenting problem in their own words and is the starting point that focuses the history, examination, and radiographs. Medical/dental history and imaging follow it."
+    }
+   },
+   {
+    "id": "fn_qa_034",
+    "stem": "The factor that increases cohesive fracture in PFM (Porcelain-Fused-to-Metal) crowns is:",
+    "options": [],
+    "answer": "A — Increased oxide layer",
+    "why": "Dental materials: the metal-porcelain bond depends on a thin, controlled oxide layer. An EXCESSIVE (thick) oxide layer is brittle and weakly adherent → cohesive fracture within the oxide/porcelain and porcelain chipping. A thin, uniform oxide (and matched CTE) optimises bonding; thick metal or appropriately thick porcelain are not fracture-promoting factors.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The factor that increases cohesive fracture in PFM (Porcelain-Fused-to-Metal) crowns is:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Dental materials: the metal-porcelain bond depends on a thin, controlled oxide layer. An EXCESSIVE (thick) oxide layer is brittle and weakly adherent → cohesive fracture within the oxide/porcelain and porcelain chipping. A thin, uniform oxide (and matched CTE) optimises bonding; thick metal or appropriately thick porcelain are not fracture-promoting factors."
+    }
+   },
+   {
+    "id": "fn_qa_035",
+    "stem": "A correct comparison between all-ceramic jackets and PFM crowns is:",
+    "options": [],
+    "answer": "B — The lingual wall is more conservative in a PFM crown",
+    "why": "Shillingburg: a PFM crown's lingual/palatal surface can be restored in metal only, so its lingual reduction is conservative (~0.7–1 mm) versus an all-ceramic crown which needs uniform 1.2–1.5 mm reduction all around plus a 90° shoulder — they do NOT share the same finish line (all-ceramic = shoulder; PFM = chamfer or shoulder).",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A correct comparison between all-ceramic jackets and PFM crowns is:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Shillingburg: a PFM crown's lingual/palatal surface can be restored in metal only, so its lingual reduction is conservative (~0.7–1 mm) versus an all-ceramic crown which needs uniform 1.2–1.5 mm reduction all around plus a 90° shoulder — they do NOT share the same finish line (all-ceramic = shoulder; PFM = chamfer or shoulder)."
+    }
+   },
+   {
+    "id": "fn_qa_036",
+    "stem": "The first step in treating generalized attrition is:",
+    "options": [],
+    "answer": "A — Desensitizing agents",
+    "why": "Sturdevant/Shillingburg: generalized attrition is first managed conservatively — desensitise the exposed dentin and stabilise the occlusion (often a splint / Dahl concept) to determine the correct vertical dimension before any definitive restoration. Crowns and composite build-ups come after the occlusion and sensitivity are controlled.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The first step in treating generalized attrition is:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Sturdevant/Shillingburg: generalized attrition is first managed conservatively — desensitise the exposed dentin and stabilise the occlusion (often a splint / Dahl concept) to determine the correct vertical dimension before any definitive restoration. Crowns and composite build-ups come after the occlusion and sensitivity are controlled."
+    }
+   },
+   {
+    "id": "fn_qa_037",
+    "stem": "Which fluoride method is used for the general prevention of caries worldwide:",
+    "options": [],
+    "answer": "C — Toothpaste",
+    "why": "Sturdevant: fluoride toothpaste is the most widely available and universally used caries-prevention method across populations (twice-daily brushing). Water fluoridation (a systemic-with-topical-effect community measure) is the most cost-effective public-health pillar, but 'toothpaste' is the worldwide, individual-level general measure.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which fluoride method is used for the general prevention of caries worldwide:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Sturdevant: fluoride toothpaste is the most widely available and universally used caries-prevention method across populations (twice-daily brushing). Water fluoridation (a systemic-with-topical-effect community measure) is the most cost-effective public-health pillar, but 'toothpaste' is the worldwide, individual-level general measure."
+    }
+   },
+   {
+    "id": "fn_qa_038",
+    "stem": "A simple extraction uses an elevator only for:",
+    "options": [],
+    "answer": "B — Removing an erupted tooth",
+    "why": "Contemporary OMS: a straight elevator is used to luxate (loosen) an erupted tooth from its periodontal ligament before forceps delivery. Impacted teeth and teeth with bony ankylosis/bridging require surgical removal (ostectomy, sectioning) — an elevator alone is insufficient and would fracture bone/tooth.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A simple extraction uses an elevator only for:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Contemporary OMS: a straight elevator is used to luxate (loosen) an erupted tooth from its periodontal ligament before forceps delivery. Impacted teeth and teeth with bony ankylosis/bridging require surgical removal (ostectomy, sectioning) — an elevator alone is insufficient and would fracture bone/tooth."
+    }
+   },
+   {
+    "id": "fn_qa_039",
+    "stem": "About the maxillary palatal root variation:",
+    "options": [],
+    "answer": "A — Concave and kidney shape",
+    "why": "Cohen's: the palatal root is broad buccolingually with a buccal concavity/furrow, giving a kidney/bean cross-section that hides a second canal — this is the hallmark 'variation' tested. (The root is ALSO inclined distally and can have two canals, so B is false; A captures the distinctive morphology that explains missed canals.)",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "About the maxillary palatal root variation:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Cohen's: the palatal root is broad buccolingually with a buccal concavity/furrow, giving a kidney/bean cross-section that hides a second canal — this is the hallmark 'variation' tested. (The root is ALSO inclined distally and can have two canals, so B is false; A captures the distinctive morphology that explains missed canals.)"
+    }
+   },
+   {
+    "id": "fn_qa_040",
+    "stem": "The success of a root canal filling is best assessed by:",
+    "options": [],
+    "answer": "D — A and B (radiographs + clinical observation)",
+    "why": "Cohen's: endodontic outcome is judged by BOTH clinical signs/symptoms (no pain, no swelling, normal probing, function) AND radiographic healing (resolution of the periradicular radiolucency, intact lamina dura). The size of the GP cone used is irrelevant to success; radiographs alone are insufficient without clinical correlation.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The success of a root canal filling is best assessed by:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Cohen's: endodontic outcome is judged by BOTH clinical signs/symptoms (no pain, no swelling, normal probing, function) AND radiographic healing (resolution of the periradicular radiolucency, intact lamina dura). The size of the GP cone used is irrelevant to success; radiographs alone are insufficient without clinical correlation."
+    }
+   },
+   {
+    "id": "fn_qa_041",
+    "stem": "Inadequate incisal reduction during tooth preparation for a metal-ceramic restoration results in:",
+    "options": [],
+    "answer": "C — Poor incisal translucency in the final restoration",
+    "why": "Shillingburg: insufficient incisal reduction leaves inadequate space for the metal coping + porcelain veneer → the porcelain is too thin (or the coping shows through) → poor incisal translucency/esthetics and possibly a weak coping. It does not alter the path of insertion, and retention is an axial-wall issue, so 'all true' is wrong.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Inadequate incisal reduction during tooth preparation for a metal-ceramic restoration results in:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Shillingburg: insufficient incisal reduction leaves inadequate space for the metal coping + porcelain veneer → the porcelain is too thin (or the coping shows through) → poor incisal translucency/esthetics and possibly a weak coping. It does not alter the path of insertion, and retention is an axial-wall issue, so 'all true' is wrong."
+    }
+   },
+   {
+    "id": "fn_qa_042",
+    "stem": "During tooth preparation for a full metal crown, the amount of tooth structure that should be removed is:",
+    "options": [],
+    "answer": "C — 1–1.5 mm (occlusal clearance)",
+    "why": "Shillingburg: a full cast metal crown requires ~1.0–1.5 mm occlusal clearance and ~0.7–1 mm axial reduction with a 0.3–0.5 mm chamfer. The single 'amount removed' figure most often tested is the occlusal clearance of 1–1.5 mm (functional cusp 1.5 mm, non-functional 1 mm). 1.5–2 mm belongs to PFM/all-ceramic.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "During tooth preparation for a full metal crown, the amount of tooth structure that should be removed is:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Shillingburg: a full cast metal crown requires ~1.0–1.5 mm occlusal clearance and ~0.7–1 mm axial reduction with a 0.3–0.5 mm chamfer. The single 'amount removed' figure most often tested is the occlusal clearance of 1–1.5 mm (functional cusp 1.5 mm, non-functional 1 mm). 1.5–2 mm belongs to PFM/all-ceramic."
+    }
+   },
+   {
+    "id": "fn_qa_043",
+    "stem": "When using an inflexible file in a curved canal, what does it cause on the outer surface of the curve:",
+    "options": [],
+    "answer": "B — Zipping",
+    "why": "Cohen's: a stiff (large/inflexible) file tends to straighten in a curved canal and preferentially cuts the outer aspect toward the apex → apical transportation = 'zipping'. A ledge (A) is a stepped indentation coronally; an elbow (D) is the transition above the zip; perforation can follow if over-driven.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "When using an inflexible file in a curved canal, what does it cause on the outer surface of the curve:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Cohen's: a stiff (large/inflexible) file tends to straighten in a curved canal and preferentially cuts the outer aspect toward the apex → apical transportation = 'zipping'. A ledge (A) is a stepped indentation coronally; an elbow (D) is the transition above the zip; perforation can follow if over-driven."
+    }
+   },
+   {
+    "id": "fn_qa_044",
+    "stem": "The movements of a K-file in root canal treatment are:",
+    "options": [],
+    "answer": "A — Clockwise and anti-clockwise with pressure apically",
+    "why": "Cohen's: the K-file is used with a balanced-force / watch-winding motion — clockwise then anti-clockwise rotation with light apical pressure — which cuts dentin on both the clockwise (cutting) and anti-clockwise (release) strokes while centring the file in the canal. Pure unidirectional rotation risks separation.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The movements of a K-file in root canal treatment are:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Cohen's: the K-file is used with a balanced-force / watch-winding motion — clockwise then anti-clockwise rotation with light apical pressure — which cuts dentin on both the clockwise (cutting) and anti-clockwise (release) strokes while centring the file in the canal. Pure unidirectional rotation risks separation."
+    }
+   },
+   {
+    "id": "fn_qa_045",
+    "stem": "The marginal ridge of the mandibular second premolar occludes with the:",
+    "options": [],
+    "answer": "B — Mesial ridge of the maxillary second premolar",
+    "why": "Wheeler: the mandibular second premolar sits distal to the mandibular first premolar; in Class I occlusion its mesial cusp/marginal ridge engages the embrasure between the maxillary first and second premolars, contacting the distal ridge of the maxillary first premolar and the mesial ridge of the maxillary second premolar. Among the options, the mesial ridge of the maxillary second premolar is the named occlusal contact.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The marginal ridge of the mandibular second premolar occludes with the:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Wheeler: the mandibular second premolar sits distal to the mandibular first premolar; in Class I occlusion its mesial cusp/marginal ridge engages the embrasure between the maxillary first and second premolars, contacting the distal ridge of the maxillary first premolar and the mesial ridge of the maxillary second premolar. Among the options, the mesial ridge of the maxillary second premolar is the"
+    }
+   },
+   {
+    "id": "fn_qa_046",
+    "stem": "Ideally, the length of the post in a post-and-core restoration should be at least:",
+    "options": [],
+    "answer": "A — One-half of the root length",
+    "why": "Shillingburg: the ideal post length is ~2/3 of the root (or at least equal to the crown height) with at least ~4–5 mm of apical gutta-percha seal preserved; the MINIMUM acceptable is one-half of the root length. One-third is too short for retention; full length destroys the apical seal.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Ideally, the length of the post in a post-and-core restoration should be at least:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Shillingburg: the ideal post length is ~2/3 of the root (or at least equal to the crown height) with at least ~4–5 mm of apical gutta-percha seal preserved; the MINIMUM acceptable is one-half of the root length. One-third is too short for retention; full length destroys the apical seal."
+    }
+   },
+   {
+    "id": "fn_qa_047",
+    "stem": "The impression material which is more accurate when the pouring is done after a week is:",
+    "options": [],
+    "answer": "D — Addition silicone",
+    "why": "Dental materials: addition-cured silicone (polyvinyl siloxane, PVS) has the best dimensional stability — it can be poured up to a week later with negligible change because it polymerises by addition with no by-product. Polysulfide and polyether are less stable on delay; agar (reversible hydrocolloid) must be poured immediately.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The impression material which is more accurate when the pouring is done after a week is:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Dental materials: addition-cured silicone (polyvinyl siloxane, PVS) has the best dimensional stability — it can be poured up to a week later with negligible change because it polymerises by addition with no by-product. Polysulfide and polyether are less stable on delay; agar (reversible hydrocolloid) must be poured immediately."
+    }
+   },
+   {
+    "id": "fn_qa_048",
+    "stem": "The shape of canal preparation in cross-section is variable, and in the apical third, it is round:",
+    "options": [],
+    "answer": "C — First statement true, second false",
+    "why": "Cohen's: the canal SYSTEM is variable in cross-section throughout its length (true); the apical third is NOT reliably round — native anatomy is often oval/kidney with fins (false). Although round K-file instrumentation tends to create a rounder apical prep, the original canal anatomy and residual fins mean 'it is round' is an overstatement, so the second statement is the incorrect one.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The shape of canal preparation in cross-section is variable, and in the apical third, it is round:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Cohen's: the canal SYSTEM is variable in cross-section throughout its length (true); the apical third is NOT reliably round — native anatomy is often oval/kidney with fins (false). Although round K-file instrumentation tends to create a rounder apical prep, the original canal anatomy and residual fins mean 'it is round' is an overstatement, so the second statement is the incorrect one."
+    }
+   },
+   {
+    "id": "fn_qa_049",
+    "stem": "The impression material that is the least difficult to remove after setting is:",
+    "options": [],
+    "answer": "C — Silicone",
+    "why": "Dental materials: addition silicone has the highest elastic recovery and good tear strength → it recovers from undercuts and is the easiest to remove cleanly. Polyether is rigid and stiff (the MOST difficult to remove, especially from undercuts); compound is rigid; alginate is elastic but has low tear strength and dehydrates.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The impression material that is the least difficult to remove after setting is:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Dental materials: addition silicone has the highest elastic recovery and good tear strength → it recovers from undercuts and is the easiest to remove cleanly. Polyether is rigid and stiff (the MOST difficult to remove, especially from undercuts); compound is rigid; alginate is elastic but has low tear strength and dehydrates."
+    }
+   },
+   {
+    "id": "fn_qa_050",
+    "stem": "An indication for zirconia ceramic is for:",
+    "options": [],
+    "answer": "D — All of the above",
+    "why": "Yttria-stabilised zirconia (Y-TZP) is used for crowns/bridges, implant abutments, posts and cores, and orthodontic brackets (e.g. ceramic self-ligating brackets) because of its high flexural strength, fracture toughness, and biocompatibility.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "An indication for zirconia ceramic is for:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Yttria-stabilised zirconia (Y-TZP) is used for crowns/bridges, implant abutments, posts and cores, and orthodontic brackets (e.g. ceramic self-ligating brackets) because of its high flexural strength, fracture toughness, and biocompatibility."
+    }
+   },
+   {
+    "id": "fn_qa_051",
+    "stem": "The expected long life of a composite restoration is:",
+    "options": [],
+    "answer": "C — 9–11 years (the 'expected long life')",
+    "why": "Sturdevant: while the AVERAGE clinical survival of posterior composite is ~5–7 years, the EXPECTED (best-case, well-placed) long life is ~10 years (9–11). The question specifically asks for the 'expected long life', so the higher figure applies; 3–5 reflects average/wear-limited survival.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The expected long life of a composite restoration is:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Sturdevant: while the AVERAGE clinical survival of posterior composite is ~5–7 years, the EXPECTED (best-case, well-placed) long life is ~10 years (9–11). The question specifically asks for the 'expected long life', so the higher figure applies; 3–5 reflects average/wear-limited survival."
+    }
+   },
+   {
+    "id": "fn_qa_052",
+    "stem": "The first step in a diagnostic work-up is obtaining the:",
+    "options": [],
+    "answer": "B — Present complaint (chief complaint)",
+    "why": "Contemporary OMS: the diagnostic sequence starts with the chief/present complaint (why the patient came today), followed by medical and dental histories and examination. Biographical data is administrative; histories come after the presenting complaint is recorded.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The first step in a diagnostic work-up is obtaining the:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Contemporary OMS: the diagnostic sequence starts with the chief/present complaint (why the patient came today), followed by medical and dental histories and examination. Biographical data is administrative; histories come after the presenting complaint is recorded."
+    }
+   },
+   {
+    "id": "fn_qa_053",
+    "stem": "Heating techniques in gutta-percha obturation are called:",
+    "options": [],
+    "answer": "A — Thermoplasticized Gutta-Percha Techniques",
+    "why": "Cohen's: any obturation that heats GP — warm vertical condensation (Schilder/System B), injectable (Obtura II), carrier-based (ThermaFil) — falls under 'thermoplasticised gutta-percha techniques' (as opposed to cold lateral condensation).",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Heating techniques in gutta-percha obturation are called:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Cohen's: any obturation that heats GP — warm vertical condensation (Schilder/System B), injectable (Obtura II), carrier-based (ThermaFil) — falls under 'thermoplasticised gutta-percha techniques' (as opposed to cold lateral condensation)."
+    }
+   },
+   {
+    "id": "fn_qa_054",
+    "stem": "A characteristic of 6th generation dentin bonding agents is that they are:",
+    "options": [],
+    "answer": "A — Self-etching",
+    "why": "Sturdevant: 6th-generation adhesives are self-etching — acidic monomers simultaneously etch and prime the dentin (no separate phosphoric-acid step). (Strictly, 6th gen = 2-step self-etch with a separate resin; 7th gen = all-in-one self-etch.)",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A characteristic of 6th generation dentin bonding agents is that they are:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Sturdevant: 6th-generation adhesives are self-etching — acidic monomers simultaneously etch and prime the dentin (no separate phosphoric-acid step). (Strictly, 6th gen = 2-step self-etch with a separate resin; 7th gen = all-in-one self-etch.)"
+    }
+   },
+   {
+    "id": "fn_qa_055",
+    "stem": "Custom impression tray is used with putty wash technique rather than the others:",
+    "options": [],
+    "answer": "B — False",
+    "why": "The putty-wash (one-step double-mix) technique is typically done in a STOCK tray: heavy-body putty fills the stock tray and light-body wash is injected on the teeth. Custom trays are used with single-viscosity/heavy-and-light-body techniques and for a final wash in a two-step technique — so the statement is false.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Custom impression tray is used with putty wash technique rather than the others:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "The putty-wash (one-step double-mix) technique is typically done in a STOCK tray: heavy-body putty fills the stock tray and light-body wash is injected on the teeth. Custom trays are used with single-viscosity/heavy-and-light-body techniques and for a final wash in a two-step technique — so the statement is false."
+    }
+   },
+   {
+    "id": "fn_qa_056",
+    "stem": "When the opposing teeth occlude on the cervical fifth of the lingual surface, this is a contraindication of a metal-ceramic crown:",
+    "options": [],
+    "answer": "A — True",
+    "why": "Shillingburg: if the opposing teeth contact the cervical fifth of the lingual surface, the porcelain on the lingual of a metal-ceramic crown would be in direct occlusion and prone to fracture (the lingual of a PFM is often metal only / thin porcelain). This is a listed contraindication — a full metal or modified design is preferred so the contact falls on metal.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "When the opposing teeth occlude on the cervical fifth of the lingual surface, this is a contraindication of a metal-ceramic crown:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Shillingburg: if the opposing teeth contact the cervical fifth of the lingual surface, the porcelain on the lingual of a metal-ceramic crown would be in direct occlusion and prone to fracture (the lingual of a PFM is often metal only / thin porcelain). This is a listed contraindication — a full metal or modified design is preferred so the contact falls on metal."
+    }
+   },
+   {
+    "id": "fn_qa_057",
+    "stem": "Preservation of the periodontium is one of the principles of tooth preparation; to carry out this principle, the subgingival margins should be avoided as much as possible:",
+    "options": [],
+    "answer": "A — True",
+    "why": "Shillingburg's principles of tooth preparation include 'preservation of the periodontium' — keep margins supragingival whenever possible so the gingiva and biologic width are not violated; subgingival margins are reserved for specific indications (esthetics, cervical caries, retention) and otherwise avoided.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Preservation of the periodontium is one of the principles of tooth preparation; to carry out this principle, the subgingival margins should be avoided as much as possible:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Shillingburg's principles of tooth preparation include 'preservation of the periodontium' — keep margins supragingival whenever possible so the gingiva and biologic width are not violated; subgingival margins are reserved for specific indications (esthetics, cervical caries, retention) and otherwise avoided."
+    }
+   },
+   {
+    "id": "fn_qa_058",
+    "stem": "Porcelain veneer is made from:",
+    "options": [],
+    "answer": "D — All of the above",
+    "why": "Porcelain veneers can be fabricated from feldspathic porcelain (traditional, etchable, high esthetics), leucite-reinforced ceramic (Empress), or lithium-disilicate glass-ceramic (e.max) — all are valid veneer ceramics, chosen by strength/esthetic needs. So 'all of the above' is correct.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Porcelain veneer is made from:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Porcelain veneers can be fabricated from feldspathic porcelain (traditional, etchable, high esthetics), leucite-reinforced ceramic (Empress), or lithium-disilicate glass-ceramic (e.max) — all are valid veneer ceramics, chosen by strength/esthetic needs. So 'all of the above' is correct."
+    }
+   },
+   {
+    "id": "fn_qa_059",
+    "stem": "Root caries properties (all correct EXCEPT):",
+    "options": [],
+    "answer": "A — Rapidly very progression (EXCEPT)",
+    "why": "Root caries is characteristically SLOW and indolent (it progresses laterally in demineralised cementum/dentin), so 'rapidly very progression' is the property that does NOT fit. (Note: root caries is also shallow U/saucer shaped — not V — and has diffuse, ill-defined margins, so B and C are also non-characteristic, but A is the clearest single EXCEPT as the classic distractor.)",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Root caries properties (all correct EXCEPT):",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Root caries is characteristically SLOW and indolent (it progresses laterally in demineralised cementum/dentin), so 'rapidly very progression' is the property that does NOT fit. (Note: root caries is also shallow U/saucer shaped — not V — and has diffuse, ill-defined margins, so B and C are also non-characteristic, but A is the clearest single EXCEPT as the classic distractor.)"
+    }
+   },
+   {
+    "id": "fn_qa_060",
+    "stem": "Which one of these restorative methods will be LEAST compromised by a core:",
+    "options": [],
+    "answer": "d — Cast metal",
+    "why": "Shillingburg: a cast metal (cast gold) restoration/onlay/3/4 crown is rigid, ductile, and self-supporting — it is least compromised by the presence of a core buildup because it can be cast to engage remaining tooth structure and does not depend on the core for bulk/strength the way amalgam, composite, or GIC restorations do.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which one of these restorative methods will be LEAST compromised by a core:",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Shillingburg: a cast metal (cast gold) restoration/onlay/3/4 crown is rigid, ductile, and self-supporting — it is least compromised by the presence of a core buildup because it can be cast to engage remaining tooth structure and does not depend on the core for bulk/strength the way amalgam, composite, or GIC restorations do."
+    }
+   },
+   {
+    "id": "fn_qa_061",
+    "stem": "When you make an impression for a mandibular knife-edge (ridge):",
+    "options": [],
+    "answer": "A — Minimum pressure impression",
+    "why": "Textbook of Complete Dentures/McCracken: a knife-edge (sharp, flat) mandibular ridge is covered by a thin, easily displaced mucosa over a sharp crest — a minimum-pressure (mucostatic) impression avoids compressing and traumatizing this tissue and avoids ridge 'resorption' under load. Selective/maximum pressure is reserved for compressible tuberosity/flabby tissue, not a knife-edge crest.",
+    "reference": "",
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "When you make an impression for a mandibular knife-edge (ridge):",
+    "dept": "restorative",
+    "sources": [
+     "SDLE_QA_Answered"
+    ],
+    "_verification_verdict": "supported",
+    "_kind": "flashcard",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Textbook of Complete Dentures/McCracken: a knife-edge (sharp, flat) mandibular ridge is covered by a thin, easily displaced mucosa over a sharp crest — a minimum-pressure (mucostatic) impression avoids compressing and traumatizing this tissue and avoids ridge 'resorption' under load. Selective/maximum pressure is reserved for compressible tuberosity/flabby tissue, not a knife-edge crest."
+    }
+   },
+   {
+    "id": "fn_j26_0025",
+    "stem": "A periodontal flap is shown in the image. Which type of periodontal flap is being performed?",
+    "options": [
+     "a. Modified Widman flap",
+     "b. Apically positioned flap",
+     "c. Coronally positioned flap",
+     "d. Papilla preservation flap"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": true,
+    "raw": "A periodontal flap is shown in the image. Which type of periodontal flap is being performed?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0096",
+    "stem": "The width of the JE in the biological width",
+    "options": [
+     "a. 2.04mm",
+     "b. 1.07 mm",
+     "c. 0.97 mm",
+     "d. Patient after PFM crown had inflammation all around the crown he said that the dr used laser on his gum",
+     "e. Violation of BW"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "The width of the JE in the biological width",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0100",
+    "stem": "Edentulous patient with 6 mm class III and anterior cross bite , what should be done during the construction of the dentures?",
+    "options": [
+     "a. Use lingualized occlusion",
+     "b. Eliminate the premolars from the lower mandible",
+     "c. Use bigger mold of teeth in the mandible",
+     "d. Use smaller mold of teeth in the mandible",
+     "e. CBCT of block graft"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "Edentulous patient with 6 mm class III and anterior cross bite , what should be done during the construction of the dentures?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0101",
+    "stem": "Which of the following is seen with removable prosthesis?",
+    "options": [
+     "a. I forget it but something start with L",
+     "b. Neutofibroma",
+     "c. Fibrous polyp",
+     "d. Ossifying fibroma"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "Which of the following is seen with removable prosthesis?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0103",
+    "stem": "A patient came a few days after lower third molar extraction with extraoral swelling , what test?",
+    "options": [
+     "a. MRI",
+     "b. CBCT",
+     "c. CT with contrast",
+     "d. 12 years old patient has 3-4 clinical attachment loss and bone loss 20%",
+     "e. Class II grade B",
+     "f. Class II grade C"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "A patient came a few days after lower third molar extraction with extraoral swelling , what test?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true,
+    "_data_quality": "merged_options_review"
+   },
+   {
+    "id": "fn_j26_0119",
+    "stem": "patient visited the dental clinic and had a tooth extraction. The dentist prescribed amoxicillin. On the second day, the patient reported that after taking the antibiotic, he developed diarrhea. And vomiting and nauseaWhat should you do?",
+    "options": [
+     "a. Change the antibiotic to Metronidazole (Flagyl).",
+     "b. Change the antibiotic to Clindamycin.",
+     "c. Change the antibiotic to Doxycycline."
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "patient visited the dental clinic and had a tooth extraction. The dentist prescribed amoxicillin. On the second day, the patient reported that after taking the antibiotic, he developed diarrhea. And vomiting and nauseaWhat should you do?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0145",
+    "stem": "A patient with diabetic ketoacidosis is unconscious and has gangrene requiring amputation. The physician recommends amputation after the patient regains consciousness, but the patient’s family refuses despite understanding the risk of septicemia. Who has the a",
+    "options": [
+     "a. The physician",
+     "b. The family"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "A patient with diabetic ketoacidosis is unconscious and has gangrene requiring amputation. The physician recommends amputation after the patient regains consciousness, but the patient’s family refuses despite understanding the risk of septicemia. Who has the a",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0160",
+    "stem": "What is the analgesic of choice for a patient with inflammatory bowel disease?",
+    "options": [
+     "a. Ibuprofen",
+     "b. Diclofenac",
+     "c. Paracetamol",
+     "d. Aspirin"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "What is the analgesic of choice for a patient with inflammatory bowel disease?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0161",
+    "stem": "In the center of the edentulous space",
+    "options": [
+     "a. Against the gingiva",
+     "b. On the occlusal surface"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "In the center of the edentulous space",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0167",
+    "stem": "A patient had a myocardial infarction 3 weeks ago and now presents with a severe odontogenic infection. What is the most appropriate management?",
+    "options": [
+     "a. Immediate extraction",
+     "b. Monitor ECG, administer nitroglycerin, and prescribe antibiotics",
+     "c. Delay all treatment without medication",
+     "d. Refer for elective dental treatment"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "A patient had a myocardial infarction 3 weeks ago and now presents with a severe odontogenic infection. What is the most appropriate management?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0181",
+    "stem": "A patient is missing teeth #35 and #36. According to Kennedy classification, what is the classification?",
+    "options": [
+     "a. Class I",
+     "b. Class II",
+     "c. Class III",
+     "d. Class IV"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "A patient is missing teeth #35 and #36. According to Kennedy classification, what is the classification?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0190",
+    "stem": "A patient with hepatitis C requires tooth extraction. Which laboratory test should be obtained before the procedure?",
+    "options": [
+     "a. CBC",
+     "b. HbA1c",
+     "c. INR",
+     "d. aPTT"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "A patient with hepatitis C requires tooth extraction. Which laboratory test should be obtained before the procedure?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0203",
+    "stem": "A radiograph shows a pulp stone obstructing the pulp chamber. Which instrument is most appropriate for its removal?",
+    "options": [
+     "a. Gates-Glidden drill",
+     "b. Round bur",
+     "c. Ultrasonic tips",
+     "d. Barbed broach"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "A radiograph shows a pulp stone obstructing the pulp chamber. Which instrument is most appropriate for its removal?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0212",
+    "stem": "Patient with kidney failure has yellowish/whitish lesion in the mouth. What is your management?",
+    "options": [
+     "a. 4 mm from sinus",
+     "b. lateral sinus left",
+     "c. Distance between GM till anterior surface of MC 6 mm",
+     "d. Lingual bar",
+     "e. Lingual plate"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "Patient with kidney failure has yellowish/whitish lesion in the mouth. What is your management?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0214",
+    "stem": "Where we determine the VDO in class 1 ?",
+    "options": [
+     "a. Less than 1",
+     "b. Less than 3",
+     "c. Less and 5",
+     "d. Less than 4",
+     "e. Recommnded mouthwash and gel in milimeters",
+     "f. 10/50",
+     "g. 100/50",
+     "h. 150/200",
+     "i. 200/300"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "Where we determine the VDO in class 1 ?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true,
+    "_data_quality": "merged_options_review"
+   },
+   {
+    "id": "fn_j26_0220",
+    "stem": "A patient develops submandibular swelling after extraction of a third molar.What is the best investigation?",
+    "options": [
+     "a. MRI",
+     "b. CBCT+contrast",
+     "c. Biopsy",
+     "d. FNA"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "A patient develops submandibular swelling after extraction of a third molar.What is the best investigation?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0223",
+    "stem": "A patient with good oral hygiene received a ceramic crown on the mandibular second premolar and presents with gingival redness and swelling, an 8-mm periodontal pocket, an overcontoured irregular buccal crown margin, a tooth non-responsive to cold, slight tend",
+    "options": [
+     "a. Periapical abscess",
+     "b. Periodontitis",
+     "c. Periodontal abscess"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "A patient with good oral hygiene received a ceramic crown on the mandibular second premolar and presents with gingival redness and swelling, an 8-mm periodontal pocket, an overcontoured irregular buccal crown margin, a tooth non-responsive to cold, slight tend",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0230",
+    "stem": "A patient smokes 1 pack of cigarettes daily and requires an antibiotic. Which is the most appropriate prescription?",
+    "options": [
+     "a. Minocycline",
+     "b. Tetracycline",
+     "c. Chlorhexidine",
+     "d. Amoxicillin",
+     "e. Resective periodontal surgery",
+     "f. . Flap surgery with bone graft placement",
+     "g. . Flap surgery with osteoplasty",
+     "h. . Flap surgery with ostectomy",
+     "i. . Apically positioned flap without bone graft",
+     "j. relationship between the mandibular third molar and the inferior alveolar nerve canal (IANC)? panorama",
+     "k. Superimposition",
+     "l. Groving",
+     "m. Flat",
+     "n. Within the canal"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "A patient smokes 1 pack of cigarettes daily and requires an antibiotic. Which is the most appropriate prescription?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true,
+    "_data_quality": "merged_options_review"
+   },
+   {
+    "id": "fn_j26_0235",
+    "stem": "A patient taking zoledronic acid (Zometa) develops medication-related osteonecrosis of the mandible. What is the initial management?",
+    "options": [
+     "a. Resection",
+     "b. Debridement",
+     "c. Implant placement",
+     "d. Extraction of adjacent teeth"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "A patient taking zoledronic acid (Zometa) develops medication-related osteonecrosis of the mandible. What is the initial management?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0239",
+    "stem": "An edge-to-edge occlusion is associated with which type of occlusal interference?",
+    "options": [
+     "a. Centric interference",
+     "b. Protrusive interference",
+     "c. Working interference",
+     "d. Non-working interference"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "An edge-to-edge occlusion is associated with which type of occlusal interference?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0241",
+    "stem": "Which cement achieves better consistency when mixed slowly?",
+    "options": [
+     "a. Zinc phosphate cement",
+     "b. Zinc polycarboxylate cement",
+     "c. Glass ionomer cement",
+     "d. Resin cement"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "Which cement achieves better consistency when mixed slowly?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0242",
+    "stem": "During root canal treatment, a separated instrument is successfully bypassed. This event is classified as:",
+    "options": [
+     "a. Miss",
+     "b. Near miss",
+     "c. Sentinel event",
+     "d. Adverse event"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "During root canal treatment, a separated instrument is successfully bypassed. This event is classified as:",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0249",
+    "stem": "A dentist unnecessarily refers a patient to another dentist during a routine check-up. Which ethical principle is most compromised?",
+    "options": [
+     "a. Autonomy",
+     "b. Beneficence",
+     "c. Veracity",
+     "d. Justice"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "A dentist unnecessarily refers a patient to another dentist during a routine check-up. Which ethical principle is most compromised?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0263",
+    "stem": "A patient taking bisphosphonates requires multiple extractions. What is the recommended approach?",
+    "options": [
+     "a. Extract one tooth per visit.",
+     "b. Extract all teeth in one visit.",
+     "c. Extract one quadrant every 2 months.",
+     "d. Extract one tooth every 2 weeks."
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "A patient taking bisphosphonates requires multiple extractions. What is the recommended approach?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0264",
+    "stem": "Which analgesic is preferred for a patient with liver cirrhosis?",
+    "options": [
+     "a. Paracetamol",
+     "b. Ibuprofen",
+     "c. Diclofenac",
+     "d. Ketorolac",
+     "e. Posting a patient’s photograph on social media without consent is considered:"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "Which analgesic is preferred for a patient with liver cirrhosis?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0280",
+    "stem": "How often should a complete denture be cleaned?",
+    "options": [
+     "a. Once daily",
+     "b. Twice daily",
+     "c. After every meal",
+     "d. Before bedtime only"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "How often should a complete denture be cleaned?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0430",
+    "stem": "Zirconia in dentistry is used for following EXCEPT:",
+    "options": [
+     "a. Implants",
+     "b. Cantilever bridges",
+     "c. Onlays bridge ✅ (Same as Q63) Reference: inlay/onlay-retained (resin-bonded) bridges are not a standard zirconia indication (bonding difficulty)."
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "Zirconia in dentistry is used for following EXCEPT:",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_friend_02",
+    "stem": "How many occlusal contact points are present on the teeth in centric relation?",
+    "options": [
+     "a. 3",
+     "b. 4",
+     "c. 5",
+     "d. 6"
+    ],
+    "answerLetter": null,
+    "answerIdx": null,
+    "marker": "ref",
+    "needsImage": false,
+    "raw": "How many occlusal contact points are present on the teeth in centric relation?",
+    "dept": "restorative",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_unverified": true
    }
   ],
   "endo": [
@@ -15308,7 +20147,8 @@ window.FLASH_NOTES = {
      "passage": "pulp.               tissues.\n\n      T\n             he dental pulp is the loose connective tissue in the        practicable for a tooth that is only partially developed, and\n             center of the tooth. The primary function of the pulp is    special procedures are applied.\n1-1          to form and support the dentin that surrounds it and           Because endodontics involves the diagnosis and",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Another question answered: VRF (Vertical Root Fracture) ✅\n●\n●\n●",
@@ -17037,7 +21877,8 @@ window.FLASH_NOTES = {
      "passage": "debridement.138,139 After coronal flaring, the apical        is repeated with sequentially smaller files until the apical\n    canal diameter is determined with the initial apical file (the        portion of the canal is reached. The working length and the\n    first file that binds at the WL). Subsequent preparation to the       initial apical file (the first file that binds at working length)",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "What does apixification means?",
@@ -17313,7 +22154,8 @@ window.FLASH_NOTES = {
     "id": "fn_endo_0078",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "true combined\n\npatient with “shifted teeth” and father had the\nsame thing before and removed I think he means\ntumor or cyst there was OPG showing large cyst in\nthe symph area\na-Ectodermal\n\nb-Nevoid Basal cell",
@@ -17383,7 +22225,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Contents\nSDLE by\n\" رﻓﯿﻊ اﻟﻤﻘﺎم \"\nرﻓﯿﻊ اﻟﻤﻘﺎم\nContents\t.....................................................................................................................................................................................................................\t1\n-SDLE  part 19\nReferences\t........................................................................................................",
@@ -17402,7 +22245,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "id": "fn_endo_0083x1",
@@ -18402,7 +23246,8 @@ window.FLASH_NOTES = {
     "ref": "The squamous papilloma is a soft, painless, usually pedunculated, exophytic nodule with numerous fingerlike surface projections that impart a \"cauliflower\" or wartlike apperance",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Oral and MaxillofacialPathology page 332",
@@ -18421,7 +23266,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Cauliflower : site in > buccal mucosa or retromolar pad > SEBACEOUS HYPERPLASIA",
@@ -18440,7 +23286,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Cauliflower :site in > soft palate > SQUAMOUS PAPILLOMA",
@@ -18459,7 +23306,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "id": "fn_endo_0103x1",
@@ -18539,7 +23387,8 @@ window.FLASH_NOTES = {
     "ref": "Max .Amount of LA = weight X Lidocaine dose =20 x 4.4 = 88 mg",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "id": "fn_endo_0105x1",
@@ -18810,7 +23659,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "id": "fn_endo_0110x1",
@@ -19376,7 +24226,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Taper is 0.04  9 = 0.36",
@@ -19395,7 +24246,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "0.36+0.30 = 0.66",
@@ -19414,7 +24266,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "68.  cervical tooth fracture splint",
@@ -19458,7 +24311,8 @@ window.FLASH_NOTES = {
     "ref": "70.case endo perio with deep pocket and ask what management",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "id": "fn_endo_0124x1",
@@ -19547,7 +24401,8 @@ window.FLASH_NOTES = {
      "passage": "acement of an adjusted or different retainer.\n\n  STEP 12 (OPTIONAL): Applying Compound. If the\n  stability of the retainer is questionable, low-fusing\n  modeling compound may be applied. The assistant\n  heats the end of a stick of compound in an open\n  flame and tempers it by holding it in water for a few\n  seconds. While the assistant holds the unheated end,\n  the operator pinches off a sufficien",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "87.D9 of rotary file 10 Taper 0.02 ?\n●\n88.pic of short roots with bone replacement",
@@ -19651,7 +24506,8 @@ window.FLASH_NOTES = {
     "ref": "233. PA of central with open apex had trauma before and the last dentist did something what is it - there was something filling the root to the middle only",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "id": "fn_endo_0129x1",
@@ -20428,7 +25284,8 @@ window.FLASH_NOTES = {
      "passage": "children about their local anesthetic use. They\n   reaches overdose levels, the drug exerts unwanted and pos-               found that the lighter the weight of the patient, the more\n   sibly deleterious systemic actions that are consistent with              likely the doctor was to administer an overly large dose\n   its pharmacologic properties. Local anesthetic overdose pro-             of the",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Q) Buccal undercut in distal extension RPD, what clasp on #34",
@@ -20523,7 +25380,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "pt have white lesion with non homogeneous border 1 cm diameter (non ulcerated ) ,when you will take biopsy? A-7 days B-14 days C-21 days D-28 days 3-retentive arm is above survey line what will happen to the tooth ? A-Rotation B-Tipping",
@@ -20570,7 +25428,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Extraction ✅",
@@ -20614,7 +25473,8 @@ window.FLASH_NOTES = {
     "ref": "Combination Long cast about Pt having pain and deep pocket (see image) there is peri apical RL and asking the Tx?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "5 unit bridge with nonrigid connectors\n5 unit bridge with rigid connectors\nCantilever on 16\n29)how to assess vdr whilst the dentures are inside the patient’s mouth?\nLook at patient’s face\n30)best impression material for final crown?\nAlginate\nAgar\nPVS\n31)Patient on amoxicillin for space infection. 6 days later, she developed\ndiarrhea. What do you do?\nStop amoxicillin and give metronidazole\nContinue",
@@ -20671,7 +25531,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "which of the following trauma associated with high metallic sound A-intrusion ✅ B-lateral luxation C-concussion 55-Best storage media for avulsed tooth A-milk✅ B-saliva C-saline",
@@ -20742,7 +25603,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "faulty material",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- difficulty in isolation because of the surgery",
@@ -20763,7 +25625,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "difficulty in isolation because of the surgery",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "mobility 1.5mm what mobility grade. grade lll",
@@ -20783,7 +25646,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "picture of class IV furcation asking about which class.",
@@ -20804,7 +25668,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Case about HA1C: 8% and 25% bone loss, what is the prognosis:",
@@ -20860,7 +25725,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Trauma case with pinpoint exposure since 3 days: Partial pulpotomy",
@@ -20880,7 +25746,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Case referred by prosthodontist to you for RCT what is the prognosis of RCT (Pa shows almost remaining root with calcified canals and dilaceration)",
@@ -20991,7 +25858,8 @@ window.FLASH_NOTES = {
     "ref": "18: zinc phosphate should be: -mixed in small area -in warm glass slab -in one increment -in multiple increments",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "How long should you etch enamel for veneer cementation in seconds:",
@@ -21084,7 +25952,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "AB and defer Tx",
     "_merged_into": "fn_endo_0166",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Case with xray molar with 3 roots:",
@@ -21358,7 +26227,8 @@ window.FLASH_NOTES = {
     "ref": "65: Renal patient with ulcers and lesions: -Increased urea 66- Patient with “diffuse” redness after ortho: -allergy from Ni-Ti -Extended wire",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "dentin dysplasi\nDr will do rct (provide x ray of seperated instrument\nat the coronaal portion) the rotary file was placed in\nsodium hypclorite before the procedure . What is\nthe cause of fracture?\nA- flexural\nB- torsinal\nC- inadequate access\nD- used lubricant\nن",
@@ -21438,7 +26308,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Increase treatment duration",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Slower tooth movement than healthy",
@@ -21459,7 +26330,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Slower tooth movement than healthy",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Hard to a achieve good intercuspation with opposing\nWhat appliance for max expansion is tissue borne",
@@ -21477,7 +26349,8 @@ window.FLASH_NOTES = {
     "ref": "Hard to a achieve good intercuspation with opposing What appliance for max expansion is tissue borne",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- quadhelix",
@@ -21498,7 +26371,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "quadhelix",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Haas",
@@ -21519,7 +26393,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Haas",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- border tissue ( something like that)",
@@ -21540,7 +26415,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "border tissue ( something like that)",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- No tx",
@@ -21561,7 +26437,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "No tx",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "14 y/o patient have avulsion tooth while playing in bicycle, was managed\nproperly and ABX was prescribed, what is the ABX",
@@ -21579,7 +26456,8 @@ window.FLASH_NOTES = {
     "ref": "14 y/o patient have avulsion tooth while playing in bicycle, was managed properly and ABX was prescribed, what is the ABX",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- penicillin",
@@ -21601,7 +26479,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "penicillin",
     "_merged_into": "fn_restorative_0347",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Amoxicillin",
@@ -21622,7 +26501,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Amoxicillin",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Tetracycline",
@@ -21643,7 +26523,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Tetracycline",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Metronidazole\nPatient have #24 pain with percussion, tooth was restored, and pulp test was\ndone\nCold: negative\nEPT: positive\nPA was provided and there is recurrent caries and PARL ( there was canal\nobliteration in coronal third)\nWhat your pulpal Dx?",
@@ -21662,7 +26543,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- necrotic",
@@ -21683,7 +26565,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "necrotic",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Reversible pulpitis",
@@ -21704,7 +26587,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Reversible pulpitis",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Irreversible pulpitis",
@@ -21725,7 +26609,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Irreversible pulpitis",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Normal\nتانب لايع اننيب كرتشملا فلملا ةلئسا نع ةرابع لولأا نشكسلا\nريثك راركت\nWhat is the complication with this Cingulum rest on the canine ? ( they\nprovide a pic from textbook )",
@@ -21774,7 +26659,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Increase incsogingivaly thickness",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Increase buccolingual thickness",
@@ -21795,7 +26681,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Increase buccolingual thickness",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- You should put it more incsial",
@@ -21816,7 +26703,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "You should put it more incsial",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Improper location of rest\nPatient undergoing perio surgery, you asked the assistant for blade no. 11,\nwhat the safe way ?",
@@ -21834,7 +26722,8 @@ window.FLASH_NOTES = {
     "ref": "Improper location of rest Patient undergoing perio surgery, you asked the assistant for blade no. 11, what the safe way ?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- handle it to you with function hand",
@@ -21855,7 +26744,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "handle it to you with function hand",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Put it in working zone and inform you",
@@ -21876,7 +26766,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Put it in working zone and inform you",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Put it in neutral zone and inform you\nScenario about implant 2 stage, parallel\nChoose which pic, رركم\nScenario about 8 health providers got infection with MRSA",
@@ -21894,7 +26785,8 @@ window.FLASH_NOTES = {
     "ref": "Put it in neutral zone and inform you Scenario about implant 2 stage, parallel Choose which pic, رركم Scenario about 8 health providers got infection with MRSA",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- airborne",
@@ -21916,7 +26808,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Airborne",
     "_merged_into": "fn_endo_0172",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Direct-indirect\n-\nWhen doing scaling and root planing the the blade should be angled?",
@@ -21934,7 +26827,8 @@ window.FLASH_NOTES = {
     "ref": "Direct-indirect - When doing scaling and root planing the the blade should be angled?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- 45-90",
@@ -21955,7 +26849,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "45-90",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- 90-100",
@@ -21976,7 +26871,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "90-100",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "100-120\nAndrew gold criteria of ideal occlusion",
@@ -21994,7 +26890,8 @@ window.FLASH_NOTES = {
     "ref": "100-120 Andrew gold criteria of ideal occlusion",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- not present rotation of teeth",
@@ -22015,7 +26912,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "not present rotation of teeth",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Flat occlusal plane",
@@ -22036,7 +26934,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Flat occlusal plane",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- All Upper and lower crown mesially inclined",
@@ -22057,7 +26956,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "All Upper and lower crown mesially inclined",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "All upper and lower lingually inclined (if the question is except!!)\n9 Y/O patient and you will do space analysis",
@@ -22075,7 +26975,8 @@ window.FLASH_NOTES = {
     "ref": "All upper and lower lingually inclined (if the question is except!!) 9 Y/O patient and you will do space analysis",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Radiographic",
@@ -22096,7 +26997,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Radiographic",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Tanaka jonsen",
@@ -22117,7 +27019,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Tanaka jonsen",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Golden ratio",
@@ -22138,7 +27041,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Golden ratio",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Proportion table\nDiabetic patient with palatal perforation through nasal, what highly you\nsuspect?",
@@ -22156,7 +27060,8 @@ window.FLASH_NOTES = {
     "ref": "Proportion table Diabetic patient with palatal perforation through nasal, what highly you suspect?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Syphilis",
@@ -22177,7 +27082,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Syphilis",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "TB\n-\n36 extracted, sever tilted mesially #37, you will replace with FDP",
@@ -22195,7 +27101,8 @@ window.FLASH_NOTES = {
     "ref": "TB - 36 extracted, sever tilted mesially #37, you will replace with FDP",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- loop",
@@ -22216,7 +27123,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "loop",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Casted",
@@ -22237,7 +27145,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Casted",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Rigis",
@@ -22258,7 +27167,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Rigis",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "under hot water (correct)\nCases about vrf",
@@ -22276,7 +27186,8 @@ window.FLASH_NOTES = {
     "ref": "under hot water (correct) Cases about vrf",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Casses about neglect ( emotional, physical )\nCase about Orange peel appearance\n24 years old male came for check up not comlaning about any thing\nnor pain or swelling upon OpG taking there was larger radio lucent\nlesion that was extending from root of lower canine tell the second\npremloal\nwhat is the tx\n-radio therapy\n-rescction",
@@ -22295,7 +27206,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Follow up\n2023/09/18 فيرشلا ماسح BUC",
@@ -22313,7 +27225,8 @@ window.FLASH_NOTES = {
     "ref": "Follow up 2023/09/18 فيرشلا ماسح BUC",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Which of these added to MTA for radiopacity? A- NaOCl B- Bismuth oxide C- Calcium silicate",
@@ -22732,7 +27645,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "B- Heart failure\nC- Hypertension",
@@ -22750,7 +27664,8 @@ window.FLASH_NOTES = {
     "ref": "B- Heart failure C- Hypertension",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "56 y o female complaining from pain and dryness of the tongue, IOE showed moist tongue and nothing abnormal was detected? A- Leukoplakia B- Burning mouth syndrome C- Apthous ulcer",
@@ -22952,7 +27867,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Lentulo spiral can be used on post cementation in? A- Gutta percha removal B- Creating parallel walls C- For Coating to “something I can’t remember”",
@@ -23002,7 +27918,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Best position to treat COPD pt? A- Supine B- Semi-supine C- Upright",
@@ -23116,7 +28033,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Uncomplicated",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Patient came to the clinic with ANUG what you will do at the first visit",
@@ -23173,7 +28091,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "OHI , CHX Mouth wash",
     "_merged_into": "fn_endo_0251",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "what is hemi-section 20-broken file mid of root for 20 years mandibular molar no obturation in the same canal of broken instrument prognosis. 21-latex allergy pt what obturation 22-severely destructed molar equal to bone tx",
@@ -23230,7 +28149,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Fair",
@@ -23251,7 +28171,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Questionable",
@@ -23273,7 +28194,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "questionable",
     "_merged_into": "fn_endo_0158",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Poor\n21-latex allergy pt what obturation",
@@ -23291,7 +28213,8 @@ window.FLASH_NOTES = {
     "ref": "Poor 21-latex allergy pt what obturation",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Resilon",
@@ -23313,7 +28236,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Resilon",
     "_merged_into": "fn_endo_0253",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "multiple endo perio start with what first and how to diagnose :start Endo first then perio Tx.",
@@ -23334,7 +28258,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "lateral incisors lesion with sinus tract and ask about -ve to cold test Tx",
@@ -23427,7 +28352,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Quad helix",
     "_merged_into": "fn_endo_0261",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "12 years need expansion",
@@ -23483,7 +28409,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Rapid",
     "_merged_into": "fn_endo_0263",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "insertion angle of ( gracey curette )",
@@ -23539,7 +28466,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Carisolv",
@@ -23560,7 +28488,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Carisolv",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Acid aitch",
@@ -23581,7 +28510,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Acid aitch",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "What is the part that connect the fixture of implant with the crown",
@@ -23638,7 +28568,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "healing abutment",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Impression coping",
@@ -23660,7 +28591,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Impression coping",
     "_merged_into": "fn_endo_0269",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Abutment",
@@ -23682,7 +28614,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Abutment",
     "_merged_into": "fn_endo_0269",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Lower RPD , all molars are missing and All anterior are present with periodontal compromised , what part act like indirect retainer",
@@ -23740,7 +28673,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Rest #33",
     "_merged_into": "fn_endo_0273",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Rest #34",
@@ -23762,7 +28696,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Rest #34",
     "_merged_into": "fn_endo_0273",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Lingual plate",
@@ -23784,7 +28719,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Lingual plate",
     "_merged_into": "fn_endo_0273",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Asking about the Face-bow",
@@ -23842,7 +28778,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Non-critical cleaning and disinfect",
     "_merged_into": "fn_endo_0277",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Non-critical cleaning",
@@ -23864,7 +28801,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Non-critical cleaning",
     "_merged_into": "fn_endo_0277",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Semi-critical cleaning",
@@ -23886,7 +28824,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Semi-critical cleaning",
     "_merged_into": "fn_endo_0277",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "metal ceramic during try-in fracture ceramic",
@@ -23944,7 +28883,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "High occ force",
     "_merged_into": "fn_endo_0281",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Void ceramic",
@@ -23966,7 +28906,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Void ceramic",
     "_merged_into": "fn_endo_0281",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Contaminated",
@@ -23988,7 +28929,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Contaminated",
     "_merged_into": "fn_endo_0281",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Pedo pt limited mouth opening , no deviation , asymmetrical lower jaw to right side, Tx? ( on OPG there was suspectable Condyle ankylosis )",
@@ -24061,7 +29003,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Arthroplasty",
     "_merged_into": "fn_endo_0285",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Jaw exercise",
@@ -24083,7 +29026,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Jaw exercise",
     "_merged_into": "fn_endo_0285",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "A part of implant that used for 2 stage surgery",
@@ -24139,7 +29083,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "cover screw",
     "_merged_into": "fn_endo_0288",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "intraepithelial cleft and prickle cells",
@@ -24195,7 +29140,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Pemphigus Vulgaris",
     "_merged_into": "fn_endo_0290",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Most important thing about inform consent",
@@ -24251,7 +29197,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Written",
     "_merged_into": "fn_endo_0292",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "badly decayed needs endo cl prostho husband refuse and want extraction",
@@ -24331,7 +29278,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Explain to her that the advertisement was wrong",
     "_merged_into": "fn_endo_0295",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Convince her to do bleaching",
@@ -24353,7 +29301,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Convince her to do bleaching",
     "_merged_into": "fn_endo_0295",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Do it with life long insurance",
@@ -24375,7 +29324,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Do it with life long insurance",
     "_merged_into": "fn_endo_0295",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "11 indicated for implant which type of implant",
@@ -24465,7 +29415,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Extract 47 let 8 close space",
     "_merged_into": "fn_implant_0310",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "3x3 cm radiolucency on x-ray what you do",
@@ -24522,7 +29473,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Marsupialization",
     "_merged_into": "fn_endo_0302",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "you’re walking in hospital and pt lost you leave him without leading him , what did you violate?",
@@ -24578,7 +29530,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Non-maleficence",
     "_merged_into": "fn_endo_0304",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Doctor at beginning of the clinic he greets the patient and patient started to talk about he was traveling the south and taking about his family farm, doctor was interrupted him and ask about the specific complain. The doctor violate what ?",
@@ -24637,7 +29590,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Patient privacy",
     "_merged_into": "fn_endo_0306",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Informed consent",
@@ -24659,7 +29613,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Informed consent",
     "_merged_into": "fn_endo_0306",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Treat pt as person",
@@ -24681,7 +29636,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Treat pt as person",
     "_merged_into": "fn_endo_0306",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "dr taking implant from one company to take advantages 60 زلسبرتسلا لاؤس Can cause chemical mouth burn",
@@ -24760,7 +29716,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Extract",
     "_merged_into": "fn_ortho_pedo_0313",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Give prophy ab and extract",
@@ -24782,7 +29739,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Give prophy ab and extract",
     "_merged_into": "fn_endo_0311",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "safest analgesic for asthmatic patient",
@@ -24916,7 +29874,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Renal",
     "_merged_into": "fn_endo_0317",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "most flexible file :",
@@ -24973,7 +29932,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "H file",
     "_merged_into": "fn_endo_0319",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "k file",
@@ -24994,7 +29954,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "how to manage ledging",
@@ -25051,7 +30012,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "k file",
@@ -25072,7 +30034,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Rotary large file",
@@ -25094,7 +30057,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Rotary large file",
     "_merged_into": "fn_endo_0322",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Patient came to the cli nic with ANUG what you will do at the first visit",
@@ -25150,7 +30114,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "OHI and CHx",
     "_merged_into": "fn_endo_0326",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "disadvantage of silver point",
@@ -25228,7 +30193,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Turner syndrome",
     "_merged_into": "fn_endo_0329",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Turner tooth )this answer not written but according to reference\n\n2023/09/18 ديكلاا( روصنملا زيزعلادبع) BUC\n1- Pt in comma and living on machines, and his wife have signed paper, that\nauthorized her to make a decision of her husband in case he was unconscious,\nshe doesn’t want to continue with machines but the father’s pt disagree with\nher, who should make the final decision?\nA- Doctor\nB- Fathe",
@@ -25336,7 +30302,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "bilateral",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- mutually protected",
@@ -25358,7 +30325,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Mutually protected",
     "_merged_into": "fn_perio_0320",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "pt with upper cd and lower rpd (only anterior teeth are present)",
@@ -25450,7 +30418,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- unspaced perforated",
@@ -25472,7 +30441,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "unspaced perforated",
     "_merged_into": "fn_endo_0337",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- unspaced not perforated",
@@ -25494,7 +30464,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "unspaced not perforated",
     "_merged_into": "fn_endo_0337",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "pt has periodontitis and has palatal abscess related to (#12 or #13), what disease the patient might have? Asthma DM Epilepsy",
@@ -25547,7 +30518,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "glossopharyngeal",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Buccal",
@@ -25568,7 +30540,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "pt with tb and the test was negative three times, how would treat him?",
@@ -25626,7 +30599,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "last pt",
     "_merged_into": "fn_endo_0344",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- ventilation mask",
@@ -25648,7 +30622,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "ventilation mask",
     "_merged_into": "fn_endo_0344",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- defer tx",
@@ -25670,7 +30645,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "defer tx",
     "_merged_into": "fn_endo_0344",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "pt has slight undercut in tuberosities and anterior maxilla",
@@ -25728,7 +30704,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "surgical removal of both",
     "_merged_into": "fn_endo_0348",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "PIC of undercut gauge",
@@ -25749,7 +30726,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- no tx because it helps in retention",
@@ -25771,7 +30749,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "no tx because it helps in retention",
     "_merged_into": "fn_endo_0348",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "pt has dysphagia, glossitis and other signs (the q was descriping Plummer- Vinson Syndrome) What deficiency the pt has?",
@@ -25850,7 +30829,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "spray is toxic",
     "_merged_into": "fn_endo_0353",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- constant contact of instruments in immersion",
@@ -25872,7 +30852,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "constant contact of instruments in immersion",
     "_merged_into": "fn_endo_0353",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "heavy smoker for 30yr came to the clinic with pain and white in the buccal mucosa? اذك س وا - ulcerated fibroma ي",
@@ -25951,7 +30932,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "crack tooth syndrome",
     "_merged_into": "fn_endo_0357",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- caries",
@@ -25973,7 +30955,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "caries",
     "_merged_into": "fn_endo_0357",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "6yrs has bilateral crossbite",
@@ -26065,7 +31048,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Kennedy cl i max",
     "_merged_into": "fn_endo_0361",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Kennedy cl ii max",
@@ -26087,7 +31071,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Kennedy cl ii max",
     "_merged_into": "fn_endo_0361",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Kennedy cl i mand",
@@ -26109,7 +31094,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Kennedy cl i mand",
     "_merged_into": "fn_endo_0361",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "female pt came with her husband for examination and she told her husband to wait outside, the examination revealed limited viral infection in the mouth. How would you manage the diagnosis?",
@@ -26168,7 +31154,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "disclose with patient Confidentiality (it was written like this",
     "_merged_into": "fn_endo_0365",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- write it in the patient board",
@@ -26190,7 +31177,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "write it in the patient board",
     "_merged_into": "fn_endo_0365",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- inform the husband",
@@ -26212,7 +31200,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "inform the husband",
     "_merged_into": "fn_endo_0365",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "how far should be the patient in ceph xray",
@@ -26306,7 +31295,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "2months",
     "_merged_into": "fn_endo_0370",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- 3months",
@@ -26328,7 +31318,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "3months",
     "_merged_into": "fn_endo_0370",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- 4months",
@@ -26350,7 +31341,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "4months",
     "_merged_into": "fn_endo_0370",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "14yo pt had avulsion trauma to both centrals in 20 minutes, how long should you splint the teeth?",
@@ -26407,7 +31399,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- 4 weeks",
@@ -26429,7 +31422,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "4 weeks",
     "_merged_into": "fn_endo_0374",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- 6 weeks",
@@ -26451,7 +31445,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "6 weeks",
     "_merged_into": "fn_endo_0374",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "young pt with controlled asthma and takes corticosteroid inhaler, he is scheduled for biopsy for small lesion buccal mucosa 27-70yr #16 MB root has isolated deep pocket (9 or 10mm)",
@@ -26509,7 +31504,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "refer for consultation",
     "_merged_into": "fn_endo_0378",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- proceed and he brings his inhaler",
@@ -26531,7 +31527,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "proceed and he brings his inhaler",
     "_merged_into": "fn_endo_0378",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "prophylactic dose\n27-70yr #16 MB root has isolated deep pocket (9 or 10mm)",
@@ -26549,7 +31546,8 @@ window.FLASH_NOTES = {
     "ref": "prophylactic dose 27-70yr #16 MB root has isolated deep pocket (9 or 10mm)",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- hemi sectiom",
@@ -26571,7 +31569,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "hemi sectiom",
     "_merged_into": "fn_endo_0378",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- root amputation",
@@ -26593,7 +31592,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "root amputation",
     "_merged_into": "fn_endo_0378",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Pt went to a doctor for lesion in his mouth and the doctor told him this is cancer, he went for another doctor and he said this is abscess and the 2nd dr started talking badly about the previous doctor his/her colleagues",
@@ -26684,7 +31684,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "15 mins",
     "_merged_into": "fn_endo_0385",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Buccal",
@@ -26705,7 +31706,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "alginate impression was disinfectant with Naocl for 10 mins then left uncovered for 1 hr, what would you see?",
@@ -26763,7 +31765,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "cast will be smaller than pt mouth",
     "_merged_into": "fn_endo_0388",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- cast will be larger than pt mouth",
@@ -26785,7 +31788,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "cast will be larger than pt mouth",
     "_merged_into": "fn_endo_0388",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- no difference",
@@ -26807,7 +31811,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "no difference",
     "_merged_into": "fn_endo_0388",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "picture of peg lateral, what stage",
@@ -26863,7 +31868,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Histodifferentiation",
     "_merged_into": "fn_endo_0392",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "female pt complains of recurrent pyogenic granuloma that came with pervious pregnancies, what's the management fracture",
@@ -26921,7 +31927,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Surgical excision and ohi",
     "_merged_into": "fn_endo_0394",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Antibiotics",
@@ -26943,7 +31950,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Antibiotics",
     "_merged_into": "fn_endo_0394",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- 34- Pt got trauma and they provided pan xray (looks like this) what type of\nfracture",
@@ -26964,7 +31972,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "34- Pt got trauma and they provided pan xray (looks like this) what type of",
     "_merged_into": "fn_endo_0394",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Compound",
@@ -26986,7 +31995,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Compound",
     "_merged_into": "fn_endo_0394",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Comminuted",
@@ -27008,7 +32018,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Comminuted",
     "_merged_into": "fn_endo_0394",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Simple",
@@ -27030,7 +32041,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Simple",
     "_merged_into": "fn_endo_0394",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "what would happen if you prepare rest seat before guiding plane?",
@@ -27086,7 +32098,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Inadequate rest seat",
     "_merged_into": "fn_endo_0401",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "CanMEDS scenario",
@@ -27143,7 +32156,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Advocator",
     "_merged_into": "fn_endo_0403",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Manager",
@@ -27165,7 +32179,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Manager",
     "_merged_into": "fn_endo_0403",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Pt with heart pacemaker did dental tx and the next day he developed arrhythmia, what tx did he receive?",
@@ -27223,7 +32238,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "electrocautery",
     "_merged_into": "fn_endo_0406",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- high speed hand piece",
@@ -27245,7 +32261,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "high speed hand piece",
     "_merged_into": "fn_endo_0406",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- intra oral xrays",
@@ -27267,7 +32284,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "intra oral xrays",
     "_merged_into": "fn_endo_0406",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "dr during simple extraction of healthy pt, his hand got covered with blood, what should he do",
@@ -27324,7 +32342,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Wash with soap and water",
     "_merged_into": "fn_endo_0410",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Put his hand under running water",
@@ -27346,7 +32365,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Put his hand under running water",
     "_merged_into": "fn_endo_0410",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "pt with severe periodontitis, after completion of perio tx showed improvement in pd and bop 5 or less",
@@ -27399,7 +32419,8 @@ window.FLASH_NOTES = {
     "ref": "2023/09/18 دماحلا مير GUC rheumatoid arthritis seen with :",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "● 1- sjogren syndrome",
@@ -27421,7 +32442,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "1- sjogren syndrome",
     "_merged_into": "fn_restorative_0445",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "2-EM\nStable Angina relieved by",
@@ -27439,7 +32461,8 @@ window.FLASH_NOTES = {
     "ref": "2-EM Stable Angina relieved by",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "VRF",
@@ -27460,7 +32483,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "First sign of chemical burn",
@@ -27480,7 +32504,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "● epithelial desquamation",
@@ -27502,7 +32527,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "epithelial desquamation",
     "_merged_into": "fn_restorative_0445",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "● Necrosis",
@@ -27524,7 +32550,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Necrosis",
     "_merged_into": "fn_restorative_0445",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "overextension or something like this ? a picture of smooth wedge shaped lesion on the cervical third",
@@ -27732,7 +32759,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "odontoma",
@@ -27752,7 +32780,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Pt. consent confidentiality wasn’t in the options",
@@ -27773,7 +32802,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "nothing",
@@ -28281,7 +33311,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "5 y\\o child with cardiac disease and low caries risk, what is the appropriate\nregimen?\n· Fluoridated tooth paste twice daily and biannual fluoride varnish\napplication\n· Non-Fluoridated tooth paste twice daily and biannual fluoride varnish\napplication\n· Fluoridated tooth paste twice daily\n· Non-Fluoridated tooth paste twice daily\n*After washing and drying the impression before sending it to the la",
@@ -28375,7 +33406,8 @@ window.FLASH_NOTES = {
     "ref": "4-take second opinion 71-p.t is taking chemotherapy and has broken teeth. What is the apprprate management?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "extraction\n72-ulcer in eyes and genital and mouth what test you do?\nPathergy test\n73-p.t with diabetes mellites(didn’t mention if control or not) and take some\nmedications names that I don’t remember.\nand you have 1:80000 epinephrine\nand wants to extract the 18 17 16 15 and 47 46 so what will you do?\nExtract the upper in 2 visit and 1 visit for lower.\nExtract all in one visit\nExtract the upper in",
@@ -28425,7 +33457,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "see him as last patient",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- wear ventilation mask",
@@ -28446,7 +33479,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "wear ventilation mask",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- treat him is isolation room",
@@ -28467,7 +33501,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "treat him is isolation room",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "pt is coughing and has many symptoms that indicates TB and he just came from traveling\nwhat is the management\n-Defer the treatment\n-Treatment immediately\n-forgot the other options but they were irrelevant\n-you cemented #16 PFM crown after cementation there was little discomfort because of the\nhigh contact point and after a few days the discomfort was minimized. What's the reason?\nA-Pt adapted to",
@@ -28514,7 +33549,8 @@ window.FLASH_NOTES = {
     "ref": "Asthma -Diabetes -Crohn's disease 10-Electric probe -florida",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Staphy\n-Streptococci\n-enterococci\n12-Thin scalloped margin patient will do ortho tx why we would do gingival graft :\n-if he will do labial inclination",
@@ -28532,7 +33568,8 @@ window.FLASH_NOTES = {
     "ref": "Staphy -Streptococci -enterococci 12-Thin scalloped margin patient will do ortho tx why we would do gingival graft : -if he will do labial inclination",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "lingual inclination\n13-Minimum thickness of high noble metal in bonded fixed restoration\n-0.3\n-0.5\n-1\n14-Cut point of metal ceramic ,the ceramic should be how much mm away:\n-0.4imm intercuspation\n-0.6mm\n-0.8mm\n-1 mm\n15-Pic of straight sided 2 stage implant\n16-Reason of vertical root fracture pic of post\n-wide short post\n-short root\n-rct under obturated\n17-sinusitis best antibiotic:\n-penicillin\n-",
@@ -28551,7 +33588,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "pt came complaining of gumboil, #36 with -ve cold test, with sinus tract, cbct with RL all around the molar only, ther was deep poucket BUT it was written exactly ( excellent oral hygiene and no plaque and calculus present ) what to do?",
@@ -28727,7 +33765,8 @@ window.FLASH_NOTES = {
     "ref": "– Diabeteic pt with swelling Insucion and driange 35 and bone loss 30 Grade b Tooth #25 caries mesial and distal , tooth #26 pain on percussion it’s",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "photo of implant analog",
@@ -28747,7 +33786,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "12)-multiple VR.\n-13)large amalgam and pain in pressure release:\nCrack tooth.\nReference: Torabinejad's Endodontics Principles\n14)Pvs pouring:\n1 week.\n-15) fracture of dentroalveoar fixation time\n16)-type force of porcelain and metal in PFM: اذك بيرغ ءس\nي\n-compressive\n-tensile\n-shearing\nن\n-لخد هل لاو ارت قندوبلا نع بوم سب ناثلا تيسن\nي\nReference :Fundamentals of Fixed Prosthodontic\n16)-acrylic stage",
@@ -28766,7 +33806,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "caries activity\nocclusal force",
@@ -28790,7 +33831,8 @@ window.FLASH_NOTES = {
      "passage": "d\n  bacterial invasion has occurred. Demineralization of the underlying dentin is usually extensive by the time cavitation\n  has occurred.\n  Noncavitated (caries-free)\n  • No radiolucency below occlusal enamel\n  • Deep grooves may be present\n  • Superficial staining may be present in grooves\n  • Mechanical binding of explorer may occur\n  Cavitated (diseased)\n  • Chalkiness of enamel on walls and b",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "What is the disease associated with osteodystrophy",
@@ -28884,7 +33926,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "trephination",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "what is the most flexible file?",
@@ -28904,7 +33947,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "4 mm probing depth 2 mm probing depth\nThe cause of bleeding in Leukemic patients is from the\nThrombocytopenia (lack of blood platelets).\nCase\nCase\nCase of long scenario overdenture\nThe patient complained about loss the retention but the problem about\nabutment tooth cast post and core deboned 3 time but the retention and\nextension and esthetic of the denture is good( they provide photo of cast po",
@@ -28923,7 +33967,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "vertical root fracture Lond case with type II furcation what is the management ?",
@@ -28943,7 +33988,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "A1\n9 month child her\nwith lower back swelling\n17 years old will go under orthogenthic surgery but they want to make sure\n1-hand and wrist radiographs\n2-multiple ceph\n2 case about crcked tooth\nthe most common tumor of the parotid gland\n1-\nMucoepidermoid CarcinomaMuMucoepidermoid Mucoepidermoid\nCarcinoma CarcinomaMucoepidermoid\nPleomorphic adenoma\n2023/09/21 يريطملا دمحم BUC\nQ1 scenario about subm",
@@ -28962,7 +34008,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Extraoral incision RCT and AB",
@@ -28983,7 +34030,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Extraoral incision RCT and AB",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "intraoral incision RCT and AB\nQ2 veneer is debonened from the tooth with resin on the surface of the veneer and the tooth is cleaned. What is\nthe cause?",
@@ -29001,7 +34049,8 @@ window.FLASH_NOTES = {
     "ref": "intraoral incision RCT and AB Q2 veneer is debonened from the tooth with resin on the surface of the veneer and the tooth is cleaned. What is the cause?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Old saline",
@@ -29022,7 +34071,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Old saline",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Dentin substructure\nQ3 8 years old child got trauma 1 month ago he went to the dentist, and he managed it, the pt came to you for\ncheckup what did the previous dentist did?",
@@ -29040,7 +34090,8 @@ window.FLASH_NOTES = {
     "ref": "Dentin substructure Q3 8 years old child got trauma 1 month ago he went to the dentist, and he managed it, the pt came to you for checkup what did the previous dentist did?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Regeneration",
@@ -29061,7 +34112,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Regeneration",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Apexogensis",
@@ -29082,7 +34134,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Apexogensis",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Pulpotomy\nQ4 pt did bleaching and used whitening toothpaste clinical like this",
@@ -29100,7 +34153,8 @@ window.FLASH_NOTES = {
     "ref": "Pulpotomy Q4 pt did bleaching and used whitening toothpaste clinical like this",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "what is this ?",
@@ -29120,7 +34174,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Topical steroids",
@@ -29141,7 +34196,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Topical steroids",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Case referred for retreatment needs a post, PA shows void in mid canal, what is the reason for referral:",
@@ -29245,7 +34301,8 @@ window.FLASH_NOTES = {
     "ref": "FPD Q/ Picture of unilateral complete Clift lip and palate",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Q/ cephalometric anatomy ask about PNS\nQ/ Cephalometric tracing with angles and the SNB was 70 what is the diagnoses ?",
@@ -29263,7 +34320,8 @@ window.FLASH_NOTES = {
     "ref": "Q/ cephalometric anatomy ask about PNS Q/ Cephalometric tracing with angles and the SNB was 70 what is the diagnoses ?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "A patient with unilateral sharp pain preceded by a rash. What is the diagnosis?",
@@ -29319,7 +34377,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "ANB in class II ( كسفنب سلاك يا فرعت مزلاو كتمولافيس ةروص)",
@@ -29372,7 +34431,8 @@ window.FLASH_NOTES = {
     "ref": "Class II div 2 Q/ Case with radiograph and the tooth is lengring with abscess what is the diagnosis ?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Patient has 3cm * 3cm radiolucent lesion related to non vital tooth root\nManagement ?\nMarsupialization\nIncisional biopsy\nSurgical removal\nRCT + F/U\nThe most common cause of apertognathia :\nMandibular prognathism\nMaxillary excess\nMaxillary deficiency\nCleft palate\nAutoclave type :\nSteam\nDry\nChemical\nPatient has crhons disease need simple extraction of four premolars for ortho\ntreatment\nWhat should y",
@@ -29500,7 +34560,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "AB 1 weak",
     "_merged_into": "fn_endo_0494",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Case of odontogenic swelling and asking about what is the determent of location (something like that) A)Muscle attachment -test for sterilization :spore test -muscle for protrusive movement: A)Lateral pytrgoid B)masseter C)Medial pytrgoid -case about hand and foot -pic of gingival swelling and histo",
@@ -29551,7 +34612,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "hemorrhage",
     "_merged_into": "fn_ortho_pedo_0353",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Central incisor with poor endo-treated with open apex , slight extruded GP .. pain ob percussion ..\nconfined RL around the apex 5x5 mm .. 6 mm wide B pocket",
@@ -29569,7 +34631,8 @@ window.FLASH_NOTES = {
     "ref": "Central incisor with poor endo-treated with open apex , slight extruded GP .. pain ob percussion .. confined RL around the apex 5x5 mm .. 6 mm wide B pocket",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "● extraction and implant (poor prognosis)",
@@ -29590,7 +34653,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "extraction and implant (poor prognosis)",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "● Lesion appears as cyst and need surgical excision",
@@ -29611,7 +34675,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Lesion appears as cyst and need surgical excision",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Endo retreatment and re-eval for perio\nPregnant 5 month come with pain on tooth 16, I forget the details but I choose RCT\nPt came with insufficient free way space .. 1 mm , what is the preferred management",
@@ -29630,7 +34695,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "● selective grinding on the occlusal surfaces",
@@ -29651,7 +34717,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "selective grinding on the occlusal surfaces",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "● Reduce from the inner surface",
@@ -29672,7 +34739,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Reduce from the inner surface",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Remake\nPt. Came with 3x2 mm erythmatous area on the ridge with distal end of RPD .. how to find out the\nproblem",
@@ -29690,7 +34758,8 @@ window.FLASH_NOTES = {
     "ref": "Remake Pt. Came with 3x2 mm erythmatous area on the ridge with distal end of RPD .. how to find out the problem",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "● PIP in the infaligo surface of RPD",
@@ -29711,7 +34780,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "PIP in the infaligo surface of RPD",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "● Soft liner",
@@ -29732,7 +34802,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Soft liner",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Heavy PVS on the inner surface\nU will ansasthise #36 , What is the safe method to perform LA without needle stick?",
@@ -29750,7 +34821,8 @@ window.FLASH_NOTES = {
     "ref": "Heavy PVS on the inner surface U will ansasthise #36 , What is the safe method to perform LA without needle stick?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "● short needle",
@@ -29771,7 +34843,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "short needle",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "● Retract with mirror to improve visibility",
@@ -29792,7 +34865,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Retract with mirror to improve visibility",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Retract with your finger for better control\nYou will work in surgery.. ur gloved hand in the operation area and u cant see them, and u will work\non area with blood and sharps and anatomical space etc. to much details",
@@ -29811,7 +34885,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "● high-risk",
@@ -29832,7 +34907,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "high-risk",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Blood borne\nيقابلا تيسن ●\nSevere hemophilia B, what should u give him before the extraction by one hour",
@@ -29850,7 +34926,8 @@ window.FLASH_NOTES = {
     "ref": "Blood borne يقابلا تيسن  Severe hemophilia B, what should u give him before the extraction by one hour",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "● Desmopressen",
@@ -29871,7 +34948,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Desmopressen",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "● Factor VIII",
@@ -29893,7 +34971,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "factor VIII",
     "_merged_into": "fn_ortho_pedo_0360",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Blood transfusion\nClose to this",
@@ -29911,7 +34990,8 @@ window.FLASH_NOTES = {
     "ref": "Blood transfusion Close to this",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "- Bismuth",
@@ -29932,7 +35012,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Bismuth",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "● Pic of enlarged lesion on the palate related to #24 and asking what can exaggerate the lesion?\nDiabetes\n( I forgot the other options)",
@@ -29958,7 +35039,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Pic of enlarged lesion on the palate related to #24 and asking what can exaggerate the lesion?",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "●  Multiple cases of vertical root fracture\n| 2023/09/28  | ناميلسلا زيزعلادبع  | BUC  |\n| ----------- | ------------------- | ---- |\n| 2023/10/01  | Abdulaziz almasry  | BUC  |\n| ----------- | ------------------ | ---- |\n| 2023/10/08  | يبيتعلا زيزعلادبع  | BUC  |\n| ----------- | ------------------ | ---- |\n| 2023/10/08  | يناطف ردب  | BUC  |\n| ----------- | ---------- | ---- |\n| 2023/10/08  | مه",
@@ -29977,7 +35059,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "Smooth surfacecares incipient, how todiagnose?",
@@ -30024,7 +35107,8 @@ window.FLASH_NOTES = {
     "ref": "Picture of previously treated tooth with chronic apical abscess showed gutta percha tracingsinus",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "endo"
+    "_dept": "endo",
+    "_raw_recall": true
    },
    {
     "stem": "take cautioninprimary preparationbecause?",
@@ -30671,6 +35755,1544 @@ window.FLASH_NOTES = {
      ]
     },
     "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0080",
+    "stem": "Which of the following is a contraindication to rubber dam isolation during endodontic treatment? a. Controlled asthma",
+    "options": [
+     "a. b. Stage IV COPD",
+     "b. c. Hypertension",
+     "c. d. Diabetes mellitus"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which of the following is a contraindication to rubber dam isolation during endodontic treatment? a. Controlled asthma",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "perio_Carranza_Clinical_Periodontology_2018",
+     "passage": "The passage lists 'Chronic pulmonary disease: asthma, emphysema, cystic fibrosis, pneumonia' as contraindications, and Stage IV COPD is a severe chronic pulmonary disease."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0124",
+    "stem": "A tooth with a ceramic crown requires root canal treatment, and the patient refuses crown removal. Which bur should be used to prepare the access cavity?",
+    "options": [
+     "a. Metal bur",
+     "b. Transmetal bur",
+     "c. Diamond bur",
+     "d. Carbide bur"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A tooth with a ceramic crown requires root canal treatment, and the patient refuses crown removal. Which bur should be used to prepare the access cavity?",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endo_Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage states: 'A, A round diamond bur is used to penetrate the porcelain.' This supports using a diamond bur for access through ceramic crowns."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0131",
+    "stem": "A patient with diabetes (HbA1c = 8%) presents with swelling extending to the mucogingival junction. Periodontal probing depth is 10 mm on one surface, and the tooth is vital. What is the most likely diagnosis?",
+    "options": [
+     "a. Gingival abscess",
+     "b. Periodontal abscess",
+     "c. Vertical root fracture",
+     "d. Periapical abscess"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient with diabetes (HbA1c = 8%) presents with swelling extending to the mucogingival junction. Periodontal probing depth is 10 mm on one surface, and the tooth is vital. What is the most likely diagnosis?",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endo_Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage describes a suppurative process that may cause a sinus tract along the periodontal ligament space, resulting in a narrow opening into the gingival sulcus that can be probed, consistent with a periodontal abscess. The tooth is vital, ruling out a periapical abscess."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0143",
+    "stem": "A radiograph shows an odontoma preventing the eruption of a permanent tooth. What is the treatment of choice?",
+    "options": [
+     "a. Surgical enucleation",
+     "b. Observation",
+     "c. Root canal treatment",
+     "d. Extraction of the permanent tooth"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A radiograph shows an odontoma preventing the eruption of a permanent tooth. What is the treatment of choice?",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Pedo_McDonald_Avery_10e",
+     "passage": "The passage states that mesiodens (a type of odontoma/supernumerary tooth) 'commonly need surgical removal at some point during treatment because they often prevent eruption of adjacent permanent teeth.'"
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0155",
+    "stem": "What is the primary function of a barbed broach?",
+    "options": [
+     "a. Shape the root canal",
+     "b. Remove root canal contents",
+     "c. Enlarge the apical foramen",
+     "d. Condense gutta-percha"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the primary function of a barbed broach?",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endodontics_principles",
+     "passage": "The passage mentions 'Removal of Gutta-Percha' and 'barbed broach' is not directly described, but barbed broaches are commonly used to remove root canal contents. No passage explicitly supports this, so uncertain."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0170",
+    "stem": "A 70-year-old patient has a radiographic finding of hypercementosis affecting teeth #34 and #35. What is the appropriate management?",
+    "options": [
+     "a. Extraction",
+     "b. Root canal treatment",
+     "c. Follow-up",
+     "d. Apicoectomy"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A 70-year-old patient has a radiographic finding of hypercementosis affecting teeth #34 and #35. What is the appropriate management?",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "No specific passage",
+     "passage": "The provided passages do not directly address hypercementosis management. However, hypercementosis is typically a benign, non-inflammatory condition that requires no treatment unless symptomatic, so follow-up is the standard approach. No passage supports extraction, root canal treatment, or apicoectomy for this finding."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0172",
+    "stem": "A patient undergoing root canal treatment with a rubber dam develops wheezing and difficulty breathing after 30 minutes. What is the most likely cause?",
+    "options": [
+     "a. Allergic reaction",
+     "b. Asthma attack"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient undergoing root canal treatment with a rubber dam develops wheezing and difficulty breathing after 30 minutes. What is the most likely cause?",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage mentions 'Allergic responses to CHX are rare' and 'some allergic reactions such as anaphylaxis... have been reported,' which could cause wheezing and breathing difficulty."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0173",
+    "stem": "A radiograph shows a Stafne bone defect. What is the appropriate management?",
+    "options": [
+     "a. Surgical removal",
+     "b. Root canal treatment",
+     "c. No treatment",
+     "d. Biopsy"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A radiograph shows a Stafne bone defect. What is the appropriate management?",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage mentions 'continuous recall recommended' for osseous defects after root canal treatment, and Stafne bone defect is a developmental bone cavity typically requiring no treatment; however, no passage directly addresses Stafne defect. Based on general dental knowledge, no treatment is appropriate, but the provided text does not support this option."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0175",
+    "stem": "What is the prognosis of a separated endodontic file located in the middle third of the root canal?",
+    "options": [
+     "a. Good",
+     "b. Fair",
+     "c. Questionable",
+     "d. Poor"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the prognosis of a separated endodontic file located in the middle third of the root canal?",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage states that a separated instrument can be incorporated into root canal filling materials and that its presence 'should not affect the prognosis,' indicating a good prognosis."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0177",
+    "stem": "A newly erupted mandibular premolar in a young patient has dens invaginatus but is asymptomatic. What is the appropriate management?",
+    "options": [
+     "a. Root canal treatment",
+     "b. Extraction",
+     "c. No treatment",
+     "d. Surgical intervention"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A newly erupted mandibular premolar in a young patient has dens invaginatus but is asymptomatic. What is the appropriate management?",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endodontics_principles",
+     "passage": "The passage states that dens invaginatus is a variation that may render a case difficult to manage, but for an asymptomatic case, no treatment is appropriate; the text does not support immediate intervention for asymptomatic dens invaginatus."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0189",
+    "stem": "A diabetic patient presents with facial swelling and pus associated with a dental infection. What is the initial treatment?",
+    "options": [
+     "a. Antibiotics only",
+     "b. Incision and drainage",
+     "c. Extraction only",
+     "d. Root canal treatment"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A diabetic patient presents with facial swelling and pus associated with a dental infection. What is the initial treatment?",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_OMFS_7e",
+     "passage": "Odontogenic infections cause deep-seated abscesses, and they almost always require some form of surgical therapy. Treatments range from endodontic therapy and gingival curettage to extraction, incision, and drainage of the deep fascial spaces of the head and neck. Antibiotic therapy is usually only an adjunctive treatment to the required surgery."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0193",
+    "stem": "What is the recommended use of compomers in pediatric dentistry?",
+    "options": [
+     "a. Class II restorations in primary teeth",
+     "b. Class III and Class V restorations in primary teeth",
+     "c. Full-coverage restorations",
+     "d. Endodontic access restoration"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the recommended use of compomers in pediatric dentistry?",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohen's Pathways of the Pulp",
+     "passage": "The passage states 'Classically, direct composite restorations have been placed in anterior teeth...' and mentions 'adhesive restorations' in the context of primary teeth, but no specific passage directly addresses compomers. However, the passage 'med on carious coronal amalgam restorations were compared with extracoronal pulpal exposures in primary teeth' and 'Adhesive restorations' suggests adhe"
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0202",
+    "stem": "A tooth has a fracture involving enamel and dentin without pulp exposure. What is the injury called?",
+    "options": [
+     "a. Complicated crown fracture",
+     "b. Uncomplicated crown fracture",
+     "c. Crown-root fracture",
+     "d. Enamel infraction"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A tooth has a fracture involving enamel and dentin without pulp exposure. What is the injury called?",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endo_Endodontics_principles",
+     "passage": "The passage states: 'Uncomplicated crown fractures involve enamel and dentin without pulpal exposure.'"
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0204",
+    "stem": "A radiograph of a root canal-treated tooth shows empty spaces within the root canal filling. What is this finding called?",
+    "options": [
+     "a. Ledge",
+     "b. Strip perforation",
+     "c. Void",
+     "d. Transportation"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A radiograph of a root canal-treated tooth shows empty spaces within the root canal filling. What is this finding called?",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endo_Kenneth_M._Hargreaves__Louis_H._Berman_-_Cohen’s_Pathways_of_the_Pulp-Mosby_2016",
+     "passage": "The passage mentions 'root canal fillings with no voids' as a criterion for success, and 'voids in root canal filling material' as a finding. Empty spaces within the root canal filling are called voids."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0206",
+    "stem": "The radiograph shows inflammation around a dental implant with radiographic bone loss. What is the most likely diagnosis?",
+    "options": [
+     "a. Peri-implant mucositis",
+     "b. Peri-implantitis",
+     "c. Implant failure",
+     "d. Periapical abscess"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The radiograph shows inflammation around a dental implant with radiographic bone loss. What is the most likely diagnosis?",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endodontics_principles",
+     "passage": "The passage states: 'gentle probing has been shown to be an effective means to evaluate the stability of the peri-implant attachment and to detect peri-implantitis.' Inflammation around an implant with radiographic bone loss is characteristic of peri-implantitis."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0210",
+    "stem": "The periapical radiograph shows multiple tooth-like radiopaque structures What is the most likely diagnosis?",
+    "options": [
+     "a. Complex odontoma",
+     "b. Compound odontoma",
+     "c. Cementoblastoma",
+     "d. Ameloblastic fibro-odontoma",
+     "e. Panorama x-ray ask about age (it was 12 because upper canine erupted )",
+     "f. Pt has pain left side radiating to jaw",
+     "g. Aspirin 325",
+     "h. nitroglycerin 0.4 mg",
+     "i. Pt has lesion in tongue and he has severe epilepsy",
+     "j. chancre",
+     "k. Lichen planes",
+     "l. PV",
+     "m. Esionphilic ulcer",
+     "n. Analgesic for endo",
+     "o. Aspirin",
+     "p. Non steroid",
+     "q. Paracetamol",
+     "r. Pic of analog ask about what it is",
+     "s. central incisors is located at"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The periapical radiograph shows multiple tooth-like radiopaque structures What is the most likely diagnosis?",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral_surgary_Oral_Radiology_-_Principles_and_Interpretation_7E_2014_",
+     "passage": "The passage states: 'A toothlike appearance of the radiopaque structures within a well-defined lesion leads to easy recognition of a compound odontoma.' The radiograph shows multiple tooth-like radiopaque structures, which is characteristic of a compound odontoma."
+    },
+    "_dept": "endo",
+    "_data_quality": "merged_options_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0216",
+    "stem": "Best restorative treatment for crack tooth?",
+    "options": [
+     "a. Full crown",
+     "b. amalgam",
+     "c. composite",
+     "d. Senario pt has attresion and have deep caries and undermind enamel No crown lengthing in choices",
+     "e. crown",
+     "f. composite amalgam",
+     "g. RMGIC",
+     "h. Drug should avoid in pregnancy due to risk of developing malformation",
+     "i. aspirin",
+     "j. Nabroxin",
+     "k. Acetaminophen",
+     "l. ibuprofen",
+     "m. Pic of flap what is the complication",
+     "n. Poor access",
+     "o. Flap necrosis",
+     "p. Cause of Break of gypsum during flasking",
+     "q. Cause of Disdlogment of denture teeth",
+     "r. Muscle posterior to maxillary tuberosity when mandible move from side to side or during open or close the mouth( i forget )",
+     "s. Under cut represntied by red color",
+     "t. Orthodontics what happen to Ankylosed tooth",
+     "u. cannot be moved"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Best restorative treatment for crack tooth?",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endodontics_principles",
+     "passage": "The passage states: 'large, deep access preparations should be protected by an onlay or full crown. Large access preparations also require appropriate cusp protection.'"
+    },
+    "_dept": "endo",
+    "_data_quality": "merged_options_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0218",
+    "stem": "A maxillary central incisor has a large pulp chamber and a wide root canal. Which description of the pulp chamber shape is correct?",
+    "options": [
+     "a. Round triangle on the palatal aspect",
+     "b. Oval from the incisal aspect",
+     "c. trapezoidal access"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A maxillary central incisor has a large pulp chamber and a wide root canal. Which description of the pulp chamber shape is correct?",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage states: 'A single root is oval and wider buccolingually than mesiodistally. The canal or canals remain oval from the pulp chamber floor and taper rapidly to the apex.'"
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0233",
+    "stem": "What is the appliance of choice for a Class II patient with a high vertical growth pattern?",
+    "options": [
+     "a. Cervical headgear",
+     "b. Reverse pull headgear",
+     "c. High-pull headgear",
+     "d. Twin block",
+     "e. Excessive occlusal trauma causing the tooth to become ankylosed to the bone is most likely associated with:",
+     "f. Bone resorption only",
+     "g. PDL widening only",
+     "h. PDL necrosis with bone resorption",
+     "i. Hypercementosis"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the appliance of choice for a Class II patient with a high vertical growth pattern?",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Pedo_McDonald_Avery_10e",
+     "passage": "The passage states: 'Extraoral headgear. Directed cervical-pull, high-pull, or protraction reverse-pull headgear applications, with selection dependent on the vertical and sagittal facial growth patterns as well as the stage of development.' For a high vertical growth pattern, high-pull headgear is the appropriate choice."
+    },
+    "_dept": "endo",
+    "_data_quality": "merged_options_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0260",
+    "stem": "Which finding is least suggestive of pulpal disease?",
+    "options": [
+     "a. Physiologic exfoliation with increased mobility",
+     "b. Pathologic mobility",
+     "c. Tooth pain",
+     "d. Percussion tenderness"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which finding is least suggestive of pulpal disease?",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage states 'mobility can be significant during phases of active physiologic root resorption,' indicating physiologic exfoliation with increased mobility is a normal process, not suggestive of pulpal disease."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0267",
+    "stem": "A patient presents with gray-blue teeth and obliterated pulp chambers. What is the most likely diagnosis?",
+    "options": [
+     "a. Amelogenesis imperfecta",
+     "b. Dentinogenesis imperfecta",
+     "c. Dentin dysplasia",
+     "d. Dental fluorosis"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient presents with gray-blue teeth and obliterated pulp chambers. What is the most likely diagnosis?",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohen's Pathways of the Pulp",
+     "passage": "The passage mentions 'Dentinogenesis imperfecta' under intrinsic discoloration causes and states it is 'most commonly categorized into three subtypes: DGI type I, DGI type II, and DGI type III', which can present with gray-blue teeth and obliterated pulp chambers."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0272",
+    "stem": "A patient presents with necrotic interdental papillae, upper respiratory tract infection, and cervical lymphadenopathy. What is the most likely diagnosis?",
+    "options": [
+     "a. Necrotizing ulcerative gingivitis (NUG)",
+     "b. Streptococcal gingivostomatitis",
+     "c. Primary herpetic gingivostomatitis",
+     "d. Acute pericoronitis"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient presents with necrotic interdental papillae, upper respiratory tract infection, and cervical lymphadenopathy. What is the most likely diagnosis?",
+    "dept": "endo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "The passage mentions 'necrotizing ulcerative gingivitis' is not directly quoted, but the clinical features of necrotic interdental papillae, URTI, and lymphadenopathy are classic for NUG. However, the provided passages do not explicitly describe NUG. The passage lists 'recurrent oral aphthous stomatitis' and 'erythema multiforme' but not NUG."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0291",
+    "stem": "Function of sealer:",
+    "options": [
+     "a. Kill bacteria only",
+     "b. Fill only lateral canals",
+     "c. Seal space between gutta-percha and canal wall",
+     "d. Strengthen tooth"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Function of sealer:",
+    "dept": "endo",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage states: 'Root canal sealers are necessary to seal the space between the dentinal wall and the obturating core interface.'"
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0295",
+    "stem": "Relative contraindication of endodontic treatment:",
+    "options": [
+     "a. Leukemia",
+     "b. Subacute endocarditis",
+     "c. Nephritis",
+     "d. All"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Relative contraindication of endodontic treatment:",
+    "dept": "endo",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohen's Pathways of the Pulp",
+     "passage": "The passage states: 'Relatively few absolute contraindications to periradicular surgery exist for patients well enough to seek care in an ambulatory dental office.' It does not list specific conditions, but the question asks for relative contraindications; the passage implies that medical considerations may require modification, and all listed conditions are potential relative contraindications."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0303",
+    "stem": "In a primary molar with reversible pulpitis / hyperemia, the appropriate treatment is:",
+    "options": [
+     "a. Pulpotomy",
+     "b. Pulpectomy",
+     "c. Direct pulp capping",
+     "d. Extraction"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "In a primary molar with reversible pulpitis / hyperemia, the appropriate treatment is:",
+    "dept": "endo",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endodontics_principles",
+     "passage": "The passage states: 'Depending on the extent of pulp damage, pulp capping or shallow (partial) or conventional pulpotomy may be indicated.' For reversible pulpitis/hyperemia, pulpotomy is appropriate."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0308",
+    "stem": "All of the following statements are incorrect EXCEPT:",
+    "options": [
+     "a. CAD/CAM is computer aided design / computer aided manufacture",
+     "b. COVID-19 does not have effect on mouth tissue",
+     "c. Impression must be disinfected before pouring",
+     "d. Gutta-percha is soluble"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "All of the following statements are incorrect EXCEPT:",
+    "dept": "endo",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage repeatedly uses 'CAD-CAM, computer-aided design/computer-aided machined' in tables, confirming CAD/CAM is computer aided design/computer aided manufacture."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0311",
+    "stem": "Which of the following statements is true:",
+    "options": [
+     "a. CAD/CAM are computer aided design and computer aided manufacture",
+     "b. We can do endodontics without X-ray",
+     "c. COVID-19 has an effect on teeth",
+     "d. All of the above"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which of the following statements is true:",
+    "dept": "endo",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage defines 'CAD-CAM, computer-aided design/computer-aided machined' in the table, supporting that CAD/CAM are computer aided design and computer aided manufacture."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0312",
+    "stem": "Which of the following cause recession for the tooth EXCEPT:",
+    "options": [
+     "a. Hypersensitivity",
+     "b. Non-carious cervical lesion",
+     "c. Periapical lesion",
+     "d. Pulp hyperemia"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which of the following cause recession for the tooth EXCEPT:",
+    "dept": "endo",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohen's Pathways of the Pulp",
+     "passage": "The passage discusses periapical lesions as a result of pulp necrosis, not as a cause of recession. Recession is typically associated with periodontal issues, not periapical lesions."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0314",
+    "stem": "Vital tooth treatment with reversible pulpitis and open apex:",
+    "options": [
+     "a. Apexogenesis",
+     "b. Apexification",
+     "c. Pulpotomy",
+     "d. Direct pulp capping"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Vital tooth treatment with reversible pulpitis and open apex:",
+    "dept": "endo",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endo_Endodontics_principles",
+     "passage": "The passage states: 'If the pulpal diagnosis is reversible pulpitis, the appropriate treatment is vital pulp therapy, or apexogenesis, regardless of the degree of root development.'"
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0323",
+    "stem": "Restoring a vital lower first permanent molar with a deep carious cavity, to minimize the risk of bacteria reaching the pulp, you would:",
+    "options": [
+     "a. Carry out direct pulp capping",
+     "b. Remove caries from the cavity wall before the cavity floor",
+     "c. Remove caries from the floor before the walls",
+     "d. Give a course of antibiotics for a week"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Restoring a vital lower first permanent molar with a deep carious cavity, to minimize the risk of bacteria reaching the pulp, you would:",
+    "dept": "endo",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endodontics_principles",
+     "passage": "The passage states 'In deep lesions, partial caries removal may reduce the risk of further pulp pathology, which can arise from exposure during complete caries removal' and describes a technique where 'All the carious dentin and the pulp to the level of the radicular pulp are removed' for pulpotomy, but no passage specifies the order of caries removal from walls versus floor. Therefore, option 1 i"
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0339",
+    "stem": "Gold standard for vital pulp therapy in primary molars:",
+    "options": [
+     "a. Calcium hydroxide",
+     "b. Glass ionomer",
+     "c. MTA (Mineral Trioxide Aggregate)",
+     "d. Resin composite"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Gold standard for vital pulp therapy in primary molars:",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohen's Pathways of the Pulp 2016",
+     "passage": "The passage lists 'Mineral Trioxide Aggregate (MTA)' under 'Materials for Vital Pulp Therapy' and describes it as a calcium silicate cement, which is the current gold standard for vital pulp therapy."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0340",
+    "stem": "Which of the following factors limits the use of formocresol in pediatric endodontics?",
+    "options": [
+     "a. Poor biocompatibility",
+     "b. High cost",
+     "c. Difficulty in application",
+     "d. High fluoride release"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which of the following factors limits the use of formocresol in pediatric endodontics?",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage states 'the high incidence of internal resorption adds to broader concerns about the use of formocresol in pediatric endodontics', indicating poor biocompatibility as a limiting factor."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0352",
+    "stem": "Material commonly used to obturate root canals:",
+    "options": [
+     "a. Amalgam",
+     "b. Composite",
+     "c. Gutta percha",
+     "d. None"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Material commonly used to obturate root canals:",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage discusses obturation with gutta-percha and sealer, and mentions covering the floor of the pulp chamber after removal of excess gutta-percha, indicating gutta-percha is the material used to obturate root canals."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0355",
+    "stem": "The instrument shown in the image is used for removal of gutta-percha during endodontic retreatment. Identify the instrument:",
+    "options": [
+     "a. Gates-Glidden drill",
+     "b. K-file",
+     "c. Peeso reamer (Largo reamer)",
+     "d. Hedström file"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The instrument shown in the image is used for removal of gutta-percha during endodontic retreatment. Identify the instrument:",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endodontics: Principles and Practice",
+     "passage": "The passage states: 'Regular hand reamers, Hedstrom files, and Gates-Glidden drills are the instruments of choice to remove gutta-percha.'"
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0365",
+    "stem": "What is the primary purpose of preserving and improving hard and soft tissues in fixed prosthodontic treatment?",
+    "options": [
+     "a. To enhance chewing efficiency",
+     "b. To improve speech clarity",
+     "c. To increase patient comfort",
+     "d. To maintain oral health and prevent further damage ✅ (Same as Q3) Reference: Contemporary Fixed Prosthodontics: “Tissue preservation reduces the harmful pulpal effects… maintain optimum oral health.”"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the primary purpose of preserving and improving hard and soft tissues in fixed prosthodontic treatment?",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics",
+     "passage": "The passage states 'Tissue preservation reduces the harmful pulpal effects… maintain optimum oral health,' supporting that the primary purpose is to maintain oral health and prevent further damage."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0370",
+    "stem": "Tug-back during obturation refers to:",
+    "options": [
+     "a. Consistency of master cone",
+     "b. Apical seat fit of master cone",
+     "c. Length of master cone",
+     "d. Size of master cone"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Tug-back during obturation refers to:",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endodontics: Principles and Practice",
+     "passage": "The passage states: 'The master cone must have a positive apical stop at the working length before obturation.' Tug-back refers to the frictional fit of the master cone at the apical seat."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0371",
+    "stem": "In endodontic treatment biologic rationale dictates:",
+    "options": [
+     "a. Over instrumentation",
+     "b. Under instrumentation",
+     "c. That working length stop at the apical constriction",
+     "d. Partial pulpal removal over instrumentation"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "In endodontic treatment biologic rationale dictates:",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage states 'the working length of the instrumentation and obturation phases of nonsurgical endodontic treatment should be adjusted' in cases of root resorption, and elsewhere emphasizes the biologic objective of bacterial removal, supporting stopping at the apical constriction."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0380",
+    "stem": "Which radiographic feature is most indicative of periodontal issues?",
+    "options": [
+     "a. Lamina dura disturbance",
+     "b. Root canal morphology",
+     "c. Tooth alignment",
+     "d. Aesthetic preferences"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which radiographic feature is most indicative of periodontal issues?",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endodontics_principles",
+     "passage": "The passage states: 'Radiographic features range from interruption of the lamina dura (Fig. 4.18) to extensive destruction of periapical and interradicular tissues.' This indicates that lamina dura disturbance is a radiographic feature indicative of periodontal issues."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0381",
+    "stem": "What is the significance of a good apical seal in endodontically treated teeth?",
+    "options": [
+     "a. It enhances the aesthetic outcome",
+     "b. It prevents leakage and potential failure",
+     "c. It allows for easier access to the tooth",
+     "d. It has no significance"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the significance of a good apical seal in endodontically treated teeth?",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endodontics: Principles and Practice",
+     "passage": "The passage states: 'the failure in this case is not directly related to the root canal treatment... due to bacterial leakage associated with poor coronal restorations,' indicating that a good seal prevents leakage and failure."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0386",
+    "stem": "Endodontics is the specialty of endodontics is devoted to the anatomy, morphology, histology, physiology, pathology, and treatment of __ is often delegated:",
+    "options": [
+     "a. The dental pulp and associated periodontal tissue",
+     "b. The dental pulp and associated periradicular tissue",
+     "c. The hard tissue of the tooth and the surrounded bone",
+     "d. No one"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Endodontics is the specialty of endodontics is devoted to the anatomy, morphology, histology, physiology, pathology, and treatment of __ is often delegated:",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endodontics: Principles and Practice",
+     "passage": "The passage states: 'Endodontics is a discipline of dentistry that deals with the morphology, physiology, and pathology of the human dental pulp and periapical tissues, as well as the prevention and treatment of diseases and injuries related to these tissues.'"
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0387",
+    "stem": "Which of the following statements is incorrect?",
+    "options": [
+     "a. Periodontal problem should be treated before work-up the prosthesis",
+     "b. Whenever possible, an abutment should be endodontically treated ✅ (incorrect)",
+     "c. High caries index patient requires full coverage retainers",
+     "d. Low caries index patient, the partial coverage retainers are indicated"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which of the following statements is incorrect?",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage states that canals obturated with inappropriate filling material should be endodontically retreated before starting restorative therapy, implying that endodontic treatment should be completed before prosthodontic work, not that an abutment should be endodontically treated whenever possible as an incorrect statement."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0388",
+    "stem": "What does fixed prosthodontics primarily deal with?",
+    "options": [
+     "a. Removable dentures",
+     "b. Orthodontic appliances",
+     "c. Restorations that are permanently attached to the tooth",
+     "d. Endodontic procedures"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What does fixed prosthodontics primarily deal with?",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohen's Pathways of the Pulp",
+     "passage": "The passage states 'Replacement can be with an implant, a fixed partial denture, or a removable partial denture,' and fixed prosthodontics deals with restorations permanently attached to teeth, as implied by 'fixed partial denture'."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0389",
+    "stem": "In a multidisciplinary team, who is primarily responsible for endodontic treatment?",
+    "options": [
+     "a. General dentist",
+     "b. Orthodontist",
+     "c. Endodontist",
+     "d. Prosthodontist"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "In a multidisciplinary team, who is primarily responsible for endodontic treatment?",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage states: 'a general dentist and endodontist must each meet the same standard of care' and 'the endodontist’s standard of care cannot be met... the generalist should refer the patient to an endodontist', indicating the endodontist is primarily responsible for endodontic treatment."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0393",
+    "stem": "Which of the following materials is considered the gold standard for vital pulp therapy in primary molars?",
+    "options": [
+     "a. Calcium hydroxide",
+     "b. Glass ionomer cement",
+     "c. MTA (Mineral Trioxide Aggregate)",
+     "d. Resin composite (Same as Q11) Reference: McDonald & Avery: “MTA is the first choice for primary molar pulpotomies.”"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which of the following materials is considered the gold standard for vital pulp therapy in primary molars?",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endo_Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage mentions 'Mineral trioxide aggregate (MTA)' as a material for vital pulp therapy, and the reference states 'MTA is the first choice for primary molar pulpotomies.'"
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0399",
+    "stem": "What is the objective of orthodontic intervention in multidisciplinary cases?",
+    "options": [
+     "a. To extract teeth",
+     "b. To reposition teeth for better function and aesthetics",
+     "c. To perform root canal therapy",
+     "d. To provide nutritional guidance"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the objective of orthodontic intervention in multidisciplinary cases?",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "No passage directly addresses orthodontic intervention in multidisciplinary cases. The passages discuss endodontic treatment outcomes and factors, not orthodontic objectives."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0400",
+    "stem": "Which of the following factors limits the use of formocresol in pediatric endodontics?",
+    "options": [
+     "a. Poor biocompatibility",
+     "b. High cost",
+     "c. Difficulty in application",
+     "d. High fluoride release (Same as Q12) Reference: McDonald & Avery: “concerns about its toxic effects.”"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which of the following factors limits the use of formocresol in pediatric endodontics?",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohen's Pathways of the Pulp",
+     "passage": "The passage states: 'Formaldehyde, used as formocresol, is highly toxic, mutagenic, and carcinogenic' and 'concerns about the use of formocresol in pediatric endodontics' due to 'the high incidence of internal resorption.'"
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0403",
+    "stem": "Which of the following teeth is the least desirable to use as an abutment tooth for a FPD?",
+    "options": [
+     "a. Tooth with minimal coronal structure",
+     "b. Tooth with pulpal involvement",
+     "c. Tooth with short, tapered root with long clinical crowns",
+     "d. Rotated tooth"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which of the following teeth is the least desirable to use as an abutment tooth for a FPD?",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endo_Kenneth_M._Hargreaves__Louis_H._Berman_-_Cohen’s_Pathways_of_the_Pulp-Mosby_2016",
+     "passage": "The passage mentions 'poor crown-to-root ratio, and extensive periodontal defects or misalignment of teeth may have serious effects on the final restoration,' and a short, tapered root with long clinical crowns would result in a poor crown-to-root ratio, making it least desirable."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0409",
+    "stem": "The gold standard material in vital pulpotomy for teeth is:",
+    "options": [
+     "a. MTA",
+     "b. Ca(OH)2",
+     "c. GIC",
+     "d. Resin composite (Same as Q11) Reference: McDonald & Avery: “MTA is the first choice for primary molar pulpotomies” (also standard for permanent teeth)."
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The gold standard material in vital pulpotomy for teeth is:",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohen's Pathways of the Pulp",
+     "passage": "The passage states: 'The use of mineral trioxide aggregate in one-visit apexification treatment' and in the context of vital pulp therapy, MTA is referenced as a material with favorable outcomes in pulp capping investigations."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0422",
+    "stem": "During taking final impression, when we need accurate details we should use:",
+    "options": [
+     "a. Elastomer impression material",
+     "b. Reversible hydrocolloid impression material",
+     "c. Irreversible hydrocolloid impression material",
+     "d. Impression compound"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "During taking final impression, when we need accurate details we should use:",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endo_Endodontics_principles",
+     "passage": "The passage states: 'Rubber-base and hydrocolloid materials do not injure the pulp. However, temperatures of up to 52°C have been recorded in the pulp during impression...' Elastomer impression materials are accurate for final impressions, though the passage does not explicitly compare them; however, irreversible hydrocolloid is less accurate for final impressions."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0431",
+    "stem": "All the signs of reversible pulpitis except:",
+    "options": [
+     "a. Dull pain",
+     "b. Tenderness to percussion",
+     "c. No radiographic evidence of periapical lesion"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "All the signs of reversible pulpitis except:",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage states: 'Typically, there are minimal or no changes in the radiographic appearance of the periradicular bone' and 'The pain in these cases may be sharp or dull, localized, diffuse, or referred.' Tenderness to percussion is not listed as a sign of reversible pulpitis."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0435",
+    "stem": "In Multidisciplinary the person who is primarily responsible for endodontics treatment is:",
+    "options": [
+     "a. GP",
+     "b. Orthodontist",
+     "c. Endodontist",
+     "d. Oral surgeon (Same as Q61) Reference: Cohen’s Pathways of the Pulp: pulp therapy is the endodontist’s domain."
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "In Multidisciplinary the person who is primarily responsible for endodontics treatment is:",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endodontics_principles",
+     "passage": "The passage states: 'Because there are not enough endodontists to manage the endodontic needs of the public, general dentists must assist endodontists to preserve natural dentition.' This implies the endodontist is primarily responsible for endodontic treatment."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0438",
+    "stem": "The gold standard material in vital pulpotomy teeth is:",
+    "options": [
+     "a. MTA",
+     "b. Ca(OH)₂",
+     "c. GIC",
+     "d. Resin composite (Same as Q11/65/82) Reference: McDonald & Avery: “MTA is the first choice.”"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The gold standard material in vital pulpotomy teeth is:",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endo_Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage references 'McDonald and Avery’s dentistry for the child and adolescent' and states 'MTA is the first choice' for vital pulp therapy, making MTA the gold standard."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0451",
+    "stem": "The treatment of hopeless mobile tooth is:",
+    "options": [
+     "a. Endodontic",
+     "b. Extraction",
+     "c. Splint of tooth",
+     "d. Crowning of the teeth"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The treatment of hopeless mobile tooth is:",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endo_Endodontics_principles_pdf",
+     "passage": "The passage states treatment options after root canal failure include 'extraction and replacement' and that clinicians may 'extract hopeless teeth and replace them with fixed or removable prostheses.'"
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0457",
+    "stem": "Bite wing radiograph is used to detect:",
+    "options": [
+     "a. Proximal caries",
+     "b. Periapical lesion",
+     "c. Occlusal caries",
+     "d. Gingival status (Same as Q92) Reference: McDonald & Avery: “proximal surfaces… detected with the use of bitewing.”"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Bite wing radiograph is used to detect:",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endo_Endodontics_principles_pdf",
+     "passage": "The passage states 'bitewing projections are helpful in showing chamber size and location and the relative depths of caries and restorations,' and bitewing radiographs are commonly used to detect proximal caries."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0463",
+    "stem": "After removal of pulp chamber canal orifices are located by:",
+    "options": [
+     "a. Periodontal probe",
+     "b. Bone file",
+     "c. Endodontic explorer",
+     "d. Round bur"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "After removal of pulp chamber canal orifices are located by:",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage states 'a sharp endodontic explorer (DG-16) is used to locate canal orifices.'"
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0469",
+    "stem": "Selection of abutment teeth for FPD all correct except:",
+    "options": [
+     "a. The abutment teeth should have no mobility",
+     "b. Short roots with longer crown portion ✅ (exception)",
+     "c. Should not endodontically treated whenever possible",
+     "d. None of the above"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Selection of abutment teeth for FPD all correct except:",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endo_Kenneth_M._Hargreaves__Louis_H._Berman_-_Cohen’s_Pathways_of_the_Pulp-Mosby_2016",
+     "passage": "The passage states 'preparation of endodontically treated teeth is not different from that for vital teeth,' and there is no passage indicating that endodontically treated teeth should be avoided as abutments; short roots with longer crown portion is an exception to ideal abutment selection."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0470",
+    "stem": "When to obturate the canal except:",
+    "options": [
+     "a. No odour",
+     "b. The canal is enlarged to optimal size",
+     "c. The tooth is symptomatic ✅ (exception)",
+     "d. The tooth is asymptomatic"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "When to obturate the canal except:",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage discusses obturation timing but does not list specific criteria such as absence of odor or canal enlargement; however, it implies treatment is for asymptomatic cases, making a symptomatic tooth an exception."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0473",
+    "stem": "One of the following incorrect about abutment selection:",
+    "options": [
+     "a. Abutment should be vital whenever possible",
+     "b. The tooth should be endodontically treated as possible ✅ (incorrect)",
+     "c. Abutment should have good periodontal condition",
+     "d. Abutment should have no mobility (Same as Q59) Reference: Contemporary Fixed Prosthodontics: abutments should be vital whenever possible."
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "One of the following incorrect about abutment selection:",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endo_Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage states: 'If possible, root-treated teeth should be avoided as abutments for prostheses or in provision of occlusal guidance in excursive movements.' This implies that endodontically treated teeth are not preferred as abutments, making the statement 'The tooth should be endodontically treated as possible' incorrect."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_0481",
+    "stem": "Formocresol is used in primary teeth pulpotomy due to:",
+    "options": [
+     "a. Disinfect the cavity",
+     "b. Revascularization of pulp",
+     "c. Decrease the inflammation",
+     "d. None of the above"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Formocresol is used in primary teeth pulpotomy due to:",
+    "dept": "endo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage states that formocresol pulpotomy is a treatment choice for primary teeth with vital, carious exposures, but does not mention disinfection, revascularization, or decreasing inflammation as the reason for its use. Therefore, none of the options are supported."
+    },
+    "_dept": "endo"
+   },
+   {
+    "id": "fn_j26_friend_05",
+    "stem": "During lateral condensation of a root canal, where should the tip of the spreader stop?",
+    "options": [
+     "a. At the working length",
+     "b. 1–2 mm short of the working length",
+     "c. 3–4 mm beyond the working length",
+     "d. At the apical foramen"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "During lateral condensation of a root canal, where should the tip of the spreader stop?",
+    "dept": "endo",
+    "sources": [
+     "friend_july2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Endodontics Principles and Practice",
+     "passage": "Endodontics Principles and Practice: the spreader is placed '1 to 2 mm of the prepared length' (short of working length) so accessory cones can be placed beside the master cone during lateral condensation."
+    },
+    "_dept": "endo"
    }
   ],
   "perio": [
@@ -30827,7 +37449,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Periodontology:",
@@ -30935,7 +37558,8 @@ window.FLASH_NOTES = {
       "kilo/openrouter/free"
      ]
     },
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "A question about Sri Lankan tea and its effect on the progression of moderate periodontal disease.",
@@ -30982,7 +37606,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "A patient presents after placement of a dental implant at site #31. The adjacent tooth #32 shows deep periodontal pocketing, bleeding on probing, and clinical attachment loss. The tooth responds positively to vitality testing. What is the diagnosis of #32",
@@ -32912,7 +39537,8 @@ window.FLASH_NOTES = {
      "passage": "-tip stimulators.\n\n                                 2704\n\f   Wooden toothpicks are used either with or without a handle (see\nFig. 48.13A and B). Access is easier from the buccal surfaces for tips\nwithout handles but is limited primarily to the anterior and\nbicuspid areas. Wooden toothpicks on handles improve access to all\nareas and have been shown to be as effective as dental floss in\nreducing pla",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "gingival margin 2mm coronal to CEJ and probing depth 2mm how much CAL?",
@@ -33336,7 +39962,8 @@ window.FLASH_NOTES = {
      "passage": "D\n\nFig. 4-22\nPatient adaptability: None of the four patients described here expressed any concern about their occlusion. A, Anterior esthetics\nmotivated a 45-year-old woman to seek treatment, although loss of posterior occlusal contact probably contributed to the devel-\nopment of her anterior diastema. B, A 26-year-old woman had no complaints or neuromus",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "What is the treatment for periodontal abscess?",
@@ -33471,7 +40098,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Angle root planning insertion? 0 (Scaling 60-80, probe 10)",
@@ -33807,7 +40435,8 @@ window.FLASH_NOTES = {
     "ref": "Diabetic patient (8% hba1c), has swelling extended to mucogingival junction and pd on one side = 10mm, the tooth is vital A- gingival abscesses B- perio abscesses C- vertical fracture",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Friable, bleeding, spongy and plasma cell infiltration?",
@@ -34262,7 +40891,8 @@ window.FLASH_NOTES = {
     "ref": "🚨 pt is diagnosed with persistent generalized stage II",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "therapy there was generalized horizontal bone loss, the",
@@ -34281,7 +40911,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "?some areas, what is the rationale of his decision\n✅",
@@ -34329,7 +40960,8 @@ window.FLASH_NOTES = {
     "id": "fn_perio_0133",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- clasp\nconnecter-\n|     |     |     |     |     | -Base | (in | CD) |     |     |\n| --- | --- | --- | --- | --- | ----- | --- | --- | --- | --- |\n|     |     |     |     |     |       |     |     |     |     |\n🚨\n| patient |           | , did | direct |           | composite |        | veneers | with    | microfiler |\n| ------- | --------- | ----- | ------ | --------- | --------- | ------ | ------",
@@ -34346,7 +40978,8 @@ window.FLASH_NOTES = {
     "id": "fn_perio_0134",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "✅\nmucogingical deformity buccal recession -\nmucogingival deformity interproximal recession -\nmouth wash to control bleeding\n🚨\ntranexemic acid used with?\nstroke -\n✅\nhemophelia -\ndvt -\natrial valve something -\n🚨\nseverly autistic 20 yo came with his father and\nneeds extraction, who to take\nconsent from?",
@@ -34393,7 +41026,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "patient",
     "_merged_into": "fn_perio_0430",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "brother\n\n-father",
@@ -34479,7 +41113,8 @@ window.FLASH_NOTES = {
     "id": "fn_perio_0140",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- give full original",
@@ -34502,7 +41137,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "give full original",
     "_merged_into": "fn_ortho_pedo_0378",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- give some original\n✅",
@@ -34553,7 +41189,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "give full copy",
     "_merged_into": "fn_ortho_pedo_0378",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "give some copy\n\npt with beefy tongue (and other things) what to do?",
@@ -34980,7 +41617,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "doxycycline gel (Atridox)",
@@ -34999,7 +41637,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "minocycline microspheres (Arestin)",
@@ -35018,7 +41657,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "id": "fn_perio_0154x1",
@@ -35440,7 +42080,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "id": "fn_perio_0162x1",
@@ -38027,7 +44668,8 @@ window.FLASH_NOTES = {
      "passage": "he ideal material for\nthis is one that does not inhibit future access to the abutment screw\nand provides a seal to inhibit leakage into the abutment.\nTraditionally this has been done with a cotton pellet, a technique\nadapted from the temporary procedure used in endodontics.\nHowever, unlike a root canal temporary, the screw cover in an\nimplant abutment will be left in place for many years.\n   The c",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "19-Case of Radiotherapy cancer pt with stensen's duct and obstruction\nA- sialadenitis\nB-Viral sialadenitis\nC- Sialothisis\n20-During Esthetic procedure Doctor ask lab technician to come to the clinic\nand take the best shade for the pt , the pt went mad and refused to continue\nthe treatment what Doctor should done before Calling the technician :\nA - Inform the pt\nB- Take a written consent\nGates Glid",
@@ -38046,7 +44688,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Unilateral balanced",
@@ -38067,7 +44710,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Unilateral balanced",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Bilateral balanced",
@@ -38088,7 +44732,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Bilateral balanced",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Mutually balanced",
@@ -38109,7 +44754,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Mutually balanced",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "zinc phosphate should be:",
@@ -38166,7 +44812,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Upper 1st PMs",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Upper 2nd PMs",
@@ -38187,7 +44834,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Upper 2nd PMs",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Lower 1st PMs",
@@ -38208,7 +44856,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Lower 1st PMs",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Lower 2nd PMs\nWhat do we use to polish proximal surfaces that are\ninaccessible to other instruments",
@@ -38226,7 +44875,8 @@ window.FLASH_NOTES = {
     "ref": "Lower 2nd PMs What do we use to polish proximal surfaces that are inaccessible to other instruments",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Rubber cups",
@@ -38247,7 +44897,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Rubber cups",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Floss",
@@ -38268,7 +44919,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Floss",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Bristle wheels -Dental tape with prophy paste Not sure it could be D also What virus that has 30% risk of infection to the dentist due to needlestick injury? HIV Hep A Hep B Hep C Patient need extraction of #48 and limited mouth opening, what technique? IANB Gow gates Akinosi Mental block Patient ha",
@@ -38318,7 +44970,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Silver: 63-70%",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "● Tin: 26-28%",
@@ -38339,7 +44992,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Tin: 26-28%",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "● Copper: 2-5%",
@@ -38360,7 +45014,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Copper: 2-5%",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "What is the sequence of shade matching?",
@@ -38456,7 +45111,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "case about Pt came complaining from lower 3rd molar upon examination tooth 38 showed 10 mm probing depth in mesiolingual root tooth is negative to percussion(no pain) but when biting on cotton roll there was pain what is the most likely diagnosis )didn’t mention the pulp status ( A- Vertical root fracture B- Periodontits (Forgot other choices there was no crack among them)",
@@ -38477,7 +45133,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "(Forgot other choices there was no crack among them)",
@@ -38496,7 +45153,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "40 years old female Pt came complaining of spacing of teeth that started 1 year ago (picture was provided ) what is the most likely diagnosis? A- Pathological tooth migration B- Physiologic tooth movement C- Recession",
@@ -39060,7 +45718,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "A-Esthetic\nB-resective",
@@ -39078,7 +45737,8 @@ window.FLASH_NOTES = {
     "ref": "A-Esthetic B-resective",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "symptoms of anemia.. which deficiency: A- vit A B- vit B C- vit C D- vit D",
@@ -39098,7 +45758,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "drug that can cause midface deformity : A-aspirin B- ibuprofen C-fluconazole D-paracetamol",
@@ -39118,7 +45779,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "after scaling the bleeding doesn't stop what is the reason(leukemic patient) A- low platelet count B- more calcium in the blood C- something wrong about blood clotting D- decreased iron level",
@@ -39138,7 +45800,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "painless reticular lines in B mucosa A-Lichen planus B- MMP C- PV",
@@ -39158,7 +45821,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "saw tooth in histology? A-lichen planus",
@@ -39208,7 +45872,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "lesion of the jaw with pano RG what is the next step? A- CT B-CBCT C-FNA",
@@ -39258,7 +45923,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "most percentage in GP A- GP 20 B-zinc oxide C- resin",
@@ -39278,7 +45944,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "what take the more percentage in composite(maybe he means matrix or filler i didn't remember): A-bis-gma B-hema",
@@ -39298,7 +45965,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Best test for tooth with big amalgam(not for check the vitality): A-Cold test ( not sure) B- EPT C-cavity test",
@@ -39318,7 +45986,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "patient came after 5 years of fabricating lower denture , the upper arch is sound teeth. the lower denture restore molars and premolars bilaterally, the patient complaint about (reduce chewing function), you check the retention and it was good . what u will do A-reline B-rebase C-remake D-adjust occ Patient lost the 4 upper incisors and u will do RPD , the patient has low smile line. what teeth to",
@@ -39339,7 +46008,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "dentist want to remove metal therilled post that was done 8 years ago and replaced with fiber post, after removal of the post bleeding occur that was detected with paper points:",
@@ -39417,7 +46087,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "lab test given for a patient: § everything was normal except : APTT and bleeding time was increased (the patient family has history of bleeding disorder) A-Hemophilia A B- von willebrand",
@@ -39437,7 +46108,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Lab test : everything is normal except O2 saturation 90% the patient has chronic bronchitis and he start coughing a lot in the clinic and he need extraction (not ER) A-Extract as normal B- Extract in upright position C- Extract using pulse oximetry D- re-schedule “i think we should reschedule since O2 saturation level <95%” )91(",
@@ -39458,7 +46130,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "lab test: again… everything was normal except: respiratory rate 25 heart rate increased The patient has a history of using an inhaler. what is the diagnosis: A-asthma B- chronic bronchitis C-emphysema D-TB",
@@ -39542,7 +46215,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "2 Q About antibiotic in case of infection following Oro-antral communication A-penicillin B- amoxicillin C-amoxicillin-clavulanic acid D-metronidazole",
@@ -39568,7 +46242,8 @@ window.FLASH_NOTES = {
      "passage": "Macrolides (Erythromycin Family)\nAmoxicillin has the advantage of a longer serum half-life than\nampicillin and penicillin, making its effective duration and its          Older macrolide antibiotics such as erythromycin have lost much\ndosage interval longer. The costs of amoxicillin and penicillin are       of their effectiveness against the main pathogens of odontogenic\nsimilar. Although both p",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "ulcer in lower lip came usually before any exam for female patient , what is the treatment: (there was no history of herpes) A-antiviral B- CHx mouth wash C- antibiotic D-fluocinonide ointment",
@@ -39588,7 +46263,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Paul Bunnell positive? A-EBV B-HPV C-HSV D-SLE",
@@ -39638,7 +46314,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "RG showing tooth with no roots : A- dentinal dysplasia B- amelogenesis imperfecta C- taurodesim",
@@ -39658,7 +46335,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "isolated enamel projection in furcation area: A:Enamel pearl B-dens in dent C- enamel hypoplasia",
@@ -39678,7 +46356,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "multiple endo-perio /endo Dx cases",
@@ -39697,7 +46376,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "what is the most flexible file?",
@@ -39840,7 +46520,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "(tooth clinically sound have perio abscess) incision & drainage",
@@ -39866,7 +46547,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Case came to do ortho Tx, anteriors with PD more than 4 mm , what to do ? perio exam then refer to periodontist ● Refer to hygienist ● Scaling and refer back to Otho",
@@ -39886,7 +46568,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Refer to hygienist ●\nScaling and refer back to Otho",
@@ -39910,7 +46593,8 @@ window.FLASH_NOTES = {
      "passage": "me/dental_books_lib\n\foffices, because patients may have to be scheduled for more than one appointment\nin a 24-hour period.\n\nReferral to a Specialist\nThe decision to refer to a periodontist is an important one and should be based on a\nnumber of considerations. The best interest of the patient always should be the first\npriority. Whenever satisfactory results are not obtained, the patient should be",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "12 year old , unilateral cross bite, reduced facial hight ? rapid palatal expansion ● Slow expansion ● Anterior bite plane ● Posterior bite plane",
@@ -39936,7 +46620,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Cl III increased lower facial hight? high pull head gear",
@@ -39962,7 +46647,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "single anterior tooth with cross bite ? Z spring",
@@ -39988,7 +46674,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Ludwig Angina Sublingual, submandibular and sub-mental ✅ 17-patient with fair oral hygiene finish ortho treatment 1 week ago came to the clinic complaining from generalized White spot lesions A-Restore the lesions B-Apply fluoride gel C-Apply fluoride varnish D-Reinforce oral hygiene measures ✅ 18-patient with good oral hygiene and upper and lower veneers came to the clinic complaining from bleedi",
@@ -40134,7 +46821,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Crack",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Case with spontaneous bleeding in gingiva , fever, fatigue, petechia in skin:",
@@ -40311,7 +46999,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "hemophilia pt, having diastima caused by frenum",
@@ -40354,7 +47043,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "B- Pulpal disease\nC- Extended wires\nQ15( Pic of Naber’s prope",
@@ -40372,7 +47062,8 @@ window.FLASH_NOTES = {
     "ref": "B- Pulpal disease C- Extended wires Q15( Pic of Naber’s prope",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Pic of H File Q17( Pic of Stillman’s cleft",
@@ -40392,7 +47083,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Newborn presented with yellowish nodules located along the midpalatal raphe of the hard palate? A- Epstein’s Pearls B- Bohn’s Nodules C- Fordyce granules",
@@ -40626,7 +47318,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- liquefaction necrosis",
@@ -40647,7 +47340,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "liquefaction necrosis",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Anxious patient x",
@@ -40668,7 +47362,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Anxious patient x",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Metal crown x\nall the options are wrong they give false positive the answer (extremely\ncalcified, the teeth have been recently traumatized, and in teeth\nwith immature apices or recent orth tx. .)\n3- Patient wearing a maxillary expander (quad helix) came complaining of\nfissure tongue .",
@@ -40687,7 +47382,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Reassure patient",
@@ -40709,7 +47405,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Reassure patient",
     "_merged_into": "fn_perio_0317",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Patient wearing a maxillary expander (quad helix) came complaining of fissure tongue . 4-30 years old army with very stressful life and smoker pseudo grey like carter like in the interdental papilla",
@@ -40767,7 +47464,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "ANUG",
     "_merged_into": "fn_perio_0317",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- nicotinic stomatitis",
@@ -40789,7 +47487,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "nicotinic stomatitis",
     "_merged_into": "fn_perio_0317",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "13 extracted and restored with implant which occlusion",
@@ -40848,7 +47547,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Canine guidance",
     "_merged_into": "fn_perio_0320",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "child came to your clinic with overprotective parent how its effect the child behavior",
@@ -40905,7 +47605,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Worst behavior",
     "_merged_into": "fn_perio_0322",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- No change",
@@ -40927,7 +47628,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "No change",
     "_merged_into": "fn_perio_0322",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "How to confirm VRF",
@@ -40984,7 +47686,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Surgical exploratory",
     "_merged_into": "fn_perio_0325",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "A large open contacts how to clean",
@@ -41042,7 +47745,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Interdental brush",
     "_merged_into": "fn_perio_0327",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Conventional brush",
@@ -41064,7 +47768,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Conventional brush",
     "_merged_into": "fn_perio_0327",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Caries in pedo anterior mesial and not involving incisal edge 11-Class IV Mesial what contact point (i assume tooth #11or 21)",
@@ -41122,7 +47827,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Class I",
     "_merged_into": "fn_perio_0330",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "ANB in class II ( كسفنب سلاك يا فرعت مزلاو كتمولافيس ةروص)",
@@ -41181,7 +47887,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Class III",
     "_merged_into": "fn_perio_0330",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Caries in pedo anterior mesial and not involving incisal edge 11-Class IV Mesial what contact point (i assume tooth #11or 21)",
@@ -41241,7 +47948,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Incisal third",
     "_merged_into": "fn_perio_0330",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Middle third",
@@ -41263,7 +47971,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Middle third",
     "_merged_into": "fn_perio_0330",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Most common hypersensitivity with recession 13-Overgrowth between #33,34 histologically (hemosiderin)",
@@ -41321,7 +48030,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Cervical root",
     "_merged_into": "fn_perio_0337",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Mid root",
@@ -41343,7 +48053,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Mid root",
     "_merged_into": "fn_perio_0337",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Most common hypersensitivity with recession 13-Overgrowth between #33,34 histologically (hemosiderin)",
@@ -41402,7 +48113,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "incisional biopsy",
@@ -41423,7 +48135,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Pregnant women with large swelling and it interfere with the function",
@@ -41463,7 +48176,8 @@ window.FLASH_NOTES = {
     "ref": "Pregnant tumor 15- Difference between periapical abscess and periodontal abscess",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Pulp test",
@@ -41484,7 +48198,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Pulp test",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Xray",
@@ -41505,7 +48220,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Xray",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Probing\n16,17- Fracture not involving pulp",
@@ -41523,7 +48239,8 @@ window.FLASH_NOTES = {
     "ref": "Probing 16,17- Fracture not involving pulp",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "all teeth present except 2pm lower how old PT?",
@@ -41581,7 +48298,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "11years old",
     "_merged_into": "fn_perio_0348",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Periodontitis should have been addressed before implants placement",
@@ -41603,7 +48321,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Periodontitis should have been addressed before implants placement",
     "_merged_into": "fn_implant_0314",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "xray of lesion in #33-34, teeth are vital what would be the management (xrays show lateral periodontal cyst)",
@@ -41660,7 +48379,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "curretage",
     "_merged_into": "fn_perio_0351",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "mother came with 24months child regarding a cyst in the area of #64 and the child is unbothered by it",
@@ -41738,7 +48458,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "sharp tooth",
     "_merged_into": "fn_perio_0354",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "ART is",
@@ -41795,7 +48516,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "preventive tx",
     "_merged_into": "fn_perio_0356",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- aggressive tx",
@@ -41817,7 +48539,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "aggressive tx",
     "_merged_into": "fn_perio_0356",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "pt wants to place fpd, and he mentioned he grindes his teeth at night only, clinical examination revealed mild-moderate wearing facets, what would be your tx",
@@ -41910,7 +48633,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "mucogingical deformity buccal recession",
     "_merged_into": "fn_perio_0360",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "child extracted, acetaminophen 160mg/5ml, 20 kg dose? ?",
@@ -41968,7 +48692,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "low pain threshold",
     "_merged_into": "fn_perio_0362",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- incomplete rct",
@@ -41990,7 +48715,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "incomplete rct",
     "_merged_into": "fn_perio_0362",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "6 yo with down syndrome, learing difficulties, and high caries index, what is contraindicated?",
@@ -42048,7 +48774,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "flourise gel",
     "_merged_into": "fn_perio_0365",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- f toothpaste",
@@ -42070,7 +48797,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "f toothpaste",
     "_merged_into": "fn_perio_0365",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- f water",
@@ -42092,7 +48820,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "f water",
     "_merged_into": "fn_perio_0365",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "what increases risk of caries and perio problems?",
@@ -42150,7 +48879,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "open contact",
     "_merged_into": "fn_perio_0369",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- extracting the adjacent tooth",
@@ -42172,7 +48902,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "extracting the adjacent tooth",
     "_merged_into": "fn_perio_0369",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- florosis",
@@ -42194,7 +48925,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "florosis",
     "_merged_into": "fn_perio_0369",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "what age is recommended for ortho screening?",
@@ -42288,7 +49020,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "upper canine with 2 wall defect",
     "_merged_into": "fn_perio_0374",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- upper first premolar with furication invocment",
@@ -42310,7 +49043,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "upper first premolar with furication invocment",
     "_merged_into": "fn_perio_0374",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- lower molar with 6 mm pd",
@@ -42332,7 +49066,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "lower molar with 6 mm pd",
     "_merged_into": "fn_perio_0374",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "patient came with fallen button from surgically exposed canine, what is the reason?",
@@ -42390,7 +49125,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "expired composite material",
     "_merged_into": "fn_perio_0378",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- faulty surgery",
@@ -42412,7 +49148,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "faulty surgery",
     "_merged_into": "fn_perio_0378",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- dificulty to isolate during surgery",
@@ -42434,7 +49171,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "dificulty to isolate during surgery",
     "_merged_into": "fn_perio_0378",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "severe pain, diffuse swelling, 39 temp, tx?",
@@ -42491,7 +49229,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- rct in multiple visit",
@@ -42513,7 +49252,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "rct in multiple visit",
     "_merged_into": "fn_perio_0382",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "material used in pedo for its pharmacological benefit and bonding?",
@@ -42571,7 +49311,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "amalgam",
     "_merged_into": "fn_perio_0385",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- composite",
@@ -42593,7 +49334,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "composite",
     "_merged_into": "fn_perio_0385",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- componer",
@@ -42615,7 +49357,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "componer",
     "_merged_into": "fn_perio_0385",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "pt did perio treatment and got sensitivity, which is the most sensitive?",
@@ -42673,7 +49416,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "middle of crown",
     "_merged_into": "fn_perio_0389",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- cervical of root",
@@ -42695,7 +49439,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "cervical of root",
     "_merged_into": "fn_perio_0389",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- midroot",
@@ -42717,7 +49462,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "midroot",
     "_merged_into": "fn_perio_0389",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "gingival wart - like , histo with finger like projection and fibrous connective tissue, ddx? (pic was smooth, no projections)",
@@ -42786,7 +49532,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "gingival papilloma",
     "_merged_into": "fn_perio_0393",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- gingival fibroma",
@@ -42808,7 +49555,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "gingival fibroma",
     "_merged_into": "fn_perio_0393",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- pyogenic granulona",
@@ -42830,7 +49578,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "pyogenic granulona",
     "_merged_into": "fn_perio_0393",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "pedo with quadhelix complain of fissures in tongue?",
@@ -42888,7 +49637,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "remove quadhelix",
     "_merged_into": "fn_perio_0397",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- put wax",
@@ -42910,7 +49660,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "put wax",
     "_merged_into": "fn_perio_0317",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- re-assure that its normal",
@@ -42932,7 +49683,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "re-assure that its normal",
     "_merged_into": "fn_perio_0397",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "pt came with irritation form ortho debonded wire (band something) and his appt is in 2 weeks? non scapableا ,19- smoker for 20 years came with white gingival lesion",
@@ -42990,7 +49742,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "tell him to wait",
     "_merged_into": "fn_perio_0401",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- remove whole wire",
@@ -43012,7 +49765,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "remove whole wire",
     "_merged_into": "fn_perio_0401",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- cut extendded wire",
@@ -43034,7 +49788,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "cut extendded wire",
     "_merged_into": "fn_perio_0401",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "pt came with irritation form ortho debonded wire (band something) and his appt is in 2 weeks? non scapableا ,19- smoker for 20 years came with white gingival lesion",
@@ -43128,7 +49883,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "apertt",
     "_merged_into": "fn_perio_0406",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "crouzen\n21- least common in diabetic?",
@@ -43146,7 +49902,8 @@ window.FLASH_NOTES = {
     "ref": "crouzen 21- least common in diabetic?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- chelitis",
@@ -43168,7 +49925,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "chelitis",
     "_merged_into": "fn_perio_0411",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- xresostmoia",
@@ -43190,7 +49948,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "xresostmoia",
     "_merged_into": "fn_perio_0411",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "least common in diabetic? ز - burning tongue 22 implant platform related to cej of adjacent? in mm below",
@@ -43293,7 +50052,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "70% alcohol",
     "_merged_into": "fn_perio_0412",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "metalic sound after trauma?",
@@ -43406,7 +50166,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "doc mta",
     "_merged_into": "fn_perio_0416",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- partial pulpotomy mta",
@@ -43428,7 +50189,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "partial pulpotomy mta",
     "_merged_into": "fn_perio_0416",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- cervical pulpitomy forma",
@@ -43450,7 +50212,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "cervical pulpitomy forma",
     "_merged_into": "fn_perio_0416",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "tranexemic acid used with?",
@@ -43508,7 +50271,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "stroke",
     "_merged_into": "fn_perio_0420",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- hemophelia",
@@ -43530,7 +50294,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "hemophelia",
     "_merged_into": "fn_perio_0420",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "hypertensive pt bleeding control?",
@@ -43587,7 +50352,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "electrosurgery",
     "_merged_into": "fn_perio_0423",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "cabg? use retraction cord with phenylsomething",
@@ -43608,7 +50374,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "clinical supervisor’s friend wants an expedited appointment for elective treatment due to long waiting list, what to do?",
@@ -43666,7 +50433,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "report to patient relations",
     "_merged_into": "fn_perio_0426",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- give him expedited appointemrn",
@@ -43688,7 +50456,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "give him expedited appointemrn",
     "_merged_into": "fn_perio_0426",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- see him immediatly in ER",
@@ -43710,7 +50479,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "see him immediatly in ER",
     "_merged_into": "fn_perio_0426",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "severly autistic 20 yo came with his father and needs extraction, who to take consent from?",
@@ -43768,7 +50538,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "brother",
     "_merged_into": "fn_perio_0430",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- father",
@@ -43790,7 +50561,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "father",
     "_merged_into": "fn_perio_0430",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "why do we fully immerse instruments for disinfection better than spraying? spraying every 10 min is effective",
@@ -43870,7 +50642,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "centric interference",
     "_merged_into": "fn_perio_0434",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- non centric interefence",
@@ -43892,7 +50665,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "non centric interefence",
     "_merged_into": "fn_perio_0434",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "bruxism pt needs retiration, where to place contact with opposing to precent lateral defliecyion?",
@@ -43950,7 +50724,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "no contact",
     "_merged_into": "fn_perio_0437",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- light contact",
@@ -43972,7 +50747,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "light contact",
     "_merged_into": "fn_perio_0437",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- deep fossa",
@@ -43994,7 +50770,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "deep fossa",
     "_merged_into": "fn_perio_0437",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "large radiolucenxy in mandible, most import step before excision or treatment? if there is CT or CBCT it will be the answer",
@@ -44086,7 +50863,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "give acetaminophen",
     "_merged_into": "fn_perio_0442",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- take OPG",
@@ -44108,7 +50886,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "take OPG",
     "_merged_into": "fn_perio_0442",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "general dentist, impacted third molar close to nerve?",
@@ -44166,7 +50945,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "refer to OMFS",
     "_merged_into": "fn_perio_0445",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- extract because they will pay",
@@ -44188,7 +50968,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "extract because they will pay",
     "_merged_into": "fn_perio_0445",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- consultation from someone in the clinic",
@@ -44210,7 +50991,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "consultation from someone in the clinic",
     "_merged_into": "fn_perio_0445",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "time needed after extraction for chemotherapy in child?",
@@ -44266,7 +51048,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "21 days",
     "_merged_into": "fn_perio_0449",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "time hepatitis stays in normal temp?",
@@ -44324,7 +51107,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "few mins",
     "_merged_into": "fn_perio_0451",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- 4 hrs",
@@ -44346,7 +51130,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "4 hrs",
     "_merged_into": "fn_perio_0451",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- 8 months",
@@ -44368,7 +51153,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "8 months",
     "_merged_into": "fn_perio_0451",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Paul- Bunnel test +ve 69",
@@ -44425,7 +51211,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "epstien barr",
     "_merged_into": "fn_perio_0455",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "patient has smooth tongue and blood test MCV",
@@ -44482,7 +51269,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "iron defiecwncg",
     "_merged_into": "fn_perio_0457",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- folate anemia",
@@ -44504,7 +51292,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "folate anemia",
     "_merged_into": "fn_perio_0457",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "patient is very thin and anxious with exposed dentin and erosion on ligual surfaces",
@@ -44584,7 +51373,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "denture fit",
     "_merged_into": "fn_perio_0461",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- phonetics",
@@ -44606,7 +51396,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "phonetics",
     "_merged_into": "fn_perio_0461",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "safe to give during pregnancy?",
@@ -44696,7 +51487,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "diabetes",
     "_merged_into": "fn_perio_0465",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "pt took prophy ab before extraction and by the time he arrived to the clinic he was itchy and hoarse voice with inflammation, epi was given, what caused it?",
@@ -44717,7 +51509,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- lidocaine",
@@ -44738,7 +51531,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "lidocaine",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- prilocaine",
@@ -44759,7 +51553,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "prilocaine",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- procaine",
@@ -44780,7 +51575,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "procaine",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "general dentist, impacted third molar close to nerve?",
@@ -44876,7 +51672,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "dismiss pt",
     "_merged_into": "fn_perio_0472",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- tell patient in follow up app if there is complication",
@@ -44898,7 +51695,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "tell patient in follow up app if there is complication",
     "_merged_into": "fn_perio_0472",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "take consent from the Pt.",
@@ -44919,7 +51717,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Radiograph of nasopalatine cyst",
@@ -44940,7 +51739,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "pink mummery teeth?",
@@ -44997,7 +51797,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "internal resoption",
     "_merged_into": "fn_perio_0477",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "old patient came with unilateral pain and rash/ vesicles (not sure) in the same side 9 months ago",
@@ -45077,7 +51878,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "1 layer repar",
     "_merged_into": "fn_perio_0480",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- 2 layer repair",
@@ -45099,7 +51901,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "2 layer repair",
     "_merged_into": "fn_perio_0480",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- graft",
@@ -45121,7 +51924,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "graft",
     "_merged_into": "fn_perio_0480",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "pt with HBA1C 9%, severe periodontitis, 82% BOP, what to do?",
@@ -45182,7 +51986,8 @@ window.FLASH_NOTES = {
      "passage": "glass.\n   seals itself around the needle. When pressure is applied to       It is essential to suction the patient’s mouth thoroughly and\n   the plunger during injection, all of the solution is directed     consult with a physician or emergency department staff\n   into the lumen of the needle. If the cartridge is placed in a     about follow-up therapy before this patient is discharged.\n   breech-",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "3 wall defect\n1wall defect",
@@ -45200,7 +52005,8 @@ window.FLASH_NOTES = {
     "ref": "3 wall defect 1wall defect",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Allergy to ni-ti\nExtended wire\nTrauma\n15-Pt had radiotherapy and getting lesion frequently that is treated by Fluconazole\nand the pt want to prevent that\nPilocarpine\nClindamycin\nMetronidazole\n16-Advantage of Polycarboxylates over zinc phosphate\nStrength\nBetter Biologically\nFilm thickness\n18-Missing 17-14 , 34-37 and 44-47 all third molars are missing how should you\nrecord occlusion\nArbitrary mount",
@@ -45217,7 +52023,8 @@ window.FLASH_NOTES = {
     "id": "fn_perio_0487",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "pt with decreased keratinized gingiva in lower anterior area referd to the\nperiodontist, upon examination he notice a high frenum attachment and\ndecreased keratinized gingiva , what he will do?\n· Lateral pedicle flap\n· Connective tissue graft\n· Connective tissue graft with frenectomy\n· Free gingival graft with frenectomy\n*Pt underwent periodontal surgery and came complaining of pain in the\npalata",
@@ -45268,7 +52075,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Flare up happens… 1-During the endo treatment 2-following the endo treatment 3-before the endo treatment 8-The most common floride varnish is? 1-Sodium fluoride 5% 2-Sodium fluoride 2% 9-p.t came with pain in the throat and behind the angle of the mandible (nothing was provided other that) d.x: 1-trigeminal neuralgia 2-glossopharyngeal neuralgia 3-atypical odontalgia 4-other option didn’t correlat",
@@ -45289,7 +52097,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "You have a cut on your finger that is bleeding. What should you do when you come to the clinic to treat a patient?",
@@ -45434,7 +52243,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Ludwig Angina a- Treatment on hospital b- Treatment as regularly patient 17.Smoking patient came with generalized DP 4-6 mm and only bleeding on prope on #25 #24 and he has ganalized boen loss %25 He has no intention of stopping smoking what do ? a- Informed he need to stop smker first b- Give him nicotine medicine (I forgat how is write this) c- Scaling and perion tx… etc 18.Swelling in Sublingua",
@@ -45664,7 +52474,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "how to manage ledging",
@@ -45724,7 +52535,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "supine position & RD isolation",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- supine position & RD isolation & bite block",
@@ -45745,7 +52557,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "supine position & RD isolation & bite block",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- whatever position patient feel comfortable with & RD isolation & bite block",
@@ -45766,7 +52579,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "whatever position patient feel comfortable with & RD isolation & bite block",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- whatever position patient feel comfortable with & RD isolation\nيوش طبخلت مهتاهويرانيس ضعب نيز اهوركاذ ،ررييثك زنجيل ويرب ودنا ةلئسأ\n2023/09/20 Mohammed Almahmoud BUC",
@@ -45786,7 +52600,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "whatever position patient feel comfortable with & RD isolation & bite block",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "case with endodontic treated premolar, MOD amalgam, two isolated shallow pockets related to the tooth, what is the reason?",
@@ -45885,7 +52700,8 @@ window.FLASH_NOTES = {
     "ref": "Do #25 and refer #26 for endodontic evaluation Women somkless tobaco SSC or smokless tobacco keratosis",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Cases about diagnosis\n2023/09/20 دلاخلا ىركذ GUC\n1)Painless non tender fixed swelling at clavicle:\nMultiple myeloma\nNon Hodjkin lymphoma\nر\nتارايخلا قاب تيسن\nي\nReference : Oral and Maxillofacial Pathology\n2)Patient with impacted tooth with unicystic ameloblastic lining and lumen:\nEnculation and follow up\nSurgical resection or excision ( i forgot)\nMarginal resection\nReference : Oral and Maxillofacia",
@@ -45904,7 +52720,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "10 mm isolated pocket ML third molar , normal response to percussion, dull pain when bit cotton roll ( هيفام وتسر لاو تسوب لاو ودنا لا جلاع يا هلاوس هنا ركذامو هعشا يا ( ر",
@@ -45996,7 +52813,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Increase",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "x ray #34 endo treated one canal , need retreatmen (هصقان لانك هيف) How many canal ؟",
@@ -46088,7 +52906,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Bruxism",
     "_merged_into": "fn_perio_0516",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Case referred for prosthdontic after treatment plan being initiated by a dentist, the ptosthodontic didnt agree with the tx. , what should he do?",
@@ -46146,7 +52965,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- report it as adverse event",
@@ -46167,7 +52987,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "report it as adverse event",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "gap more than 0.5 amalgam restoration?",
@@ -46223,7 +53044,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "replaced the amalgam with new restoration",
     "_merged_into": "fn_perio_0521",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "prop go throw the furcation and recession ( no have pic or any details ) what is the treatment?",
@@ -46294,7 +53116,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "removed the affected root",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "pedo came after 2 week pain and noted abscess related to the tooth",
@@ -46353,7 +53176,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "reversible",
     "_merged_into": "fn_perio_0525",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Irreversible",
@@ -46375,7 +53199,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Irreversible",
     "_merged_into": "fn_perio_0525",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Normal",
@@ -46396,7 +53221,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Normal",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "patient 17 years old with avulsion #11 , what AB ?",
@@ -46486,7 +53312,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "decrease embrasure",
     "_merged_into": "fn_perio_0530",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "kertiaiezed tissue : 4mm and PD :5 ? ( هروص هيف ( 31-what from this not present when bleeding on probing ?",
@@ -46552,7 +53379,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Recession ✅",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Overgrowth gingiva",
@@ -46574,7 +53402,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Overgrowth gingiva",
     "_merged_into": "fn_perio_0532",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "kertiaiezed tissue : 4mm and PD :5 ? ( هروص هيف ( 31-what from this not present when bleeding on probing ?",
@@ -46684,7 +53513,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "extrusion with internal resorption",
     "_merged_into": "fn_perio_0536",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Extrusion with horizontal root fracture\n33- primary teeth intruded affect permanent?",
@@ -46702,7 +53532,8 @@ window.FLASH_NOTES = {
     "ref": "Extrusion with horizontal root fracture 33- primary teeth intruded affect permanent?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "primary teeth intruded affect permanent? 34-Hypoplasia only on the tip of the incisor, premolar and posterior occlusion. What is the cause?",
@@ -46760,7 +53591,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Fluorosis",
     "_merged_into": "fn_perio_0539",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Parenteral maldeficency",
@@ -46782,7 +53614,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Parenteral maldeficency",
     "_merged_into": "fn_perio_0539",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Amelogenesis",
@@ -46804,7 +53637,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Amelogenesis",
     "_merged_into": "fn_perio_0539",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Doctor telling pedo patient story during anaesthesia, what type of behavioural management that ? *Answer: Distraction* 36-Pic of short opturation and ask about the mishap",
@@ -46825,7 +53659,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- nurse",
@@ -46846,7 +53681,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "nurse",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "14 class II , retroclined lower incisors",
@@ -46902,7 +53738,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "frankel",
     "_merged_into": "fn_perio_0545",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "well control hypothyroidism and the patient take carbamazepine , patients feel dizzy and unconscious .",
@@ -46944,7 +53781,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Upper 1st PMs - Upper 2nd PMs - Lower 1st PMs - Lower 2nd PMs\nWhat sign is specific to facial fracture after trauma? A.Severe occular edema\nB.Change in occlusion C.Skin laceration\nWhat is the minimum time for Heat sterilization 121°C (In minutes)\nA- 2 B-\n3 C-\n4 D- 5\n-\nWHO probe, the ball length is\n0.5 ball",
@@ -47012,7 +53850,8 @@ window.FLASH_NOTES = {
     "ref": "Calculus Q14 You told the pt to say ahh and soft palate one said was not moving as the other, what are you examining?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Q23 question asking about the metal cap with Two-stage surgery..?",
@@ -47031,7 +53870,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "He has plaque accumulation and multiple incipient caries , which fluoride\nregimen you will provide the patient :\nNo need for fluoride\n22 % fluoride varnish every 3 months\n22 % fluoride varnish every 6 months\n22 % fluoride varnish every 12 months\nPatient has ortho appliance came complaining of pain\nExamination shows multiple ulcers ( tongue – buccal – lips ) also there is\nprotruded wire\nWhat you sh",
@@ -47050,7 +53890,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Sc and RP",
@@ -47072,7 +53913,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Sc and RP",
     "_merged_into": "fn_endo_0494",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Referral to hematology",
@@ -47094,7 +53936,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Referral to hematology",
     "_merged_into": "fn_endo_0494",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "14 only on tooth Xbite Z-spring",
@@ -47114,7 +53957,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Hawley with act.",
@@ -47134,7 +53978,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Fracture of all max. inc and u will extract #25 A- 3-3 B- 4-4 C- 5-5 D- 6-6",
@@ -47154,7 +53999,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "58 female pt after 4 days of CD insetion, she feels dysphaguea, nuesay while eating. A- Under extened of post palatal. B- Increase thickness of buccal flange C- abscence PPS D- Lack of adaptation",
@@ -47174,7 +54020,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Fasting and asks if LA لاو رطفي",
@@ -47195,7 +54042,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "A 78 Unilateral persitant throbbing pain, there is vesicles A- Post herpatin Nur B- Cluster C- Migrane",
@@ -47215,7 +54063,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Class IV and doesn’t like the shade?",
@@ -47275,7 +54124,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Replace",
     "_merged_into": "fn_restorative_0464",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Remove 0.5 and place",
@@ -47297,7 +54147,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Remove 0.5 and place",
     "_merged_into": "fn_restorative_0464",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Etch and add increm.",
@@ -47319,7 +54170,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Etch and add increm.",
     "_merged_into": "fn_restorative_0464",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Doesn’t attened the workshop",
@@ -47340,7 +54192,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Removed Adrenal gland and becames unconscious what should u give him? A-atropin B- hydrocortisone",
@@ -47360,7 +54213,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Keto",
@@ -47382,7 +54236,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Keto",
     "_merged_into": "fn_perio_0569",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "- Drug intraction",
@@ -47404,7 +54259,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Drug intraction",
     "_merged_into": "fn_perio_0569",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Removed Adrenal gland and becames unconscious what should u give him? 11)Takes Sulfunurya and u prescribe NSAID, 12)Ant. Flabby ridgt ? A- A muco. comp B- Selective pressure C- Mucostatic 13)ESR elevated, what should u give? 14)After injury with blood or impression with blood? A- HBV B- HCV C- HIV D- HHV 15)Metal strab on cast, what is the benefit? A- Soft-tissue quality B- Interocclusal space C- ",
@@ -47471,7 +54327,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "“Radiograph showing a bridge connecting 35 to 37 with supra- crestal perforation distal to the 35 and it looks small because only the file is visible” and asking about the prognosis for #35 ? A- Good B-Poor C-Fair",
@@ -47523,7 +54380,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "A-Calculus after scaling got dislodged into the pocket and caused\nit\nB-Because of the remaining subgingival calculus and there was\ntightening of the gingiva after removal of the supragingival\ncalculus",
@@ -47542,7 +54400,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "What indicate pathological occlusion “or something like that” A-Chipping of the anterior incisor",
@@ -47562,7 +54421,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "What is the worst thing in lateral movement in the posterior teeth A- Group function B- shallow cuspal inclines C- canine guidance D- edge to edge occlusion",
@@ -47582,7 +54442,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "11 with upper lip swelling with All anteriors normal to percussion and palpation “apical response of 11 wasn’t clear in the Qs they were Implying that 11 is Positive for percussion from my understanding ” radiograph showing minimal radiolucency around the apex of 11 A- Necrotic pulp W\\ AAP B- Necrotic pulp W\\ AAA",
@@ -47603,7 +54464,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "70 year old has a prosthetic heart valve and other cardiac problem what is the percentage of bacteremia ? A-0 B-Less than 5% C-Between 5-10% D-More than 10%",
@@ -47871,7 +54733,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Nosocomial infection transmitted by ? A-Direct B-Door handle C-Surfaces",
@@ -48044,7 +54907,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Pt with Sjogren syndrome 5 years ago what is the effect in the oral cavity? A-Root caries with normal gingiva B- Dental caries and gingival inflammation",
@@ -48314,7 +55178,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "let the patient speak and observe splent sounds",
     "_merged_into": "fn_perio_0600",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "how to evaluate a decreased free way space in a patient with complete denture 7-*patient with symptoms related to decreased free way space how would you manage?*",
@@ -48369,7 +55234,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "12 only one tooth over bite Z-spring",
@@ -48389,7 +55255,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Hawley with active labial .",
@@ -48409,7 +55276,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Fracture of all max. inc and u will extract #24 he placed conv RPD ask about number of rest and retentive arm A- 3-3 B-4-4 C- 5-5 D- 6-6",
@@ -48429,7 +55297,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Intern took Pic with pedo child and posted it what violation? 9-Periodontal medicament in the sulcus?",
@@ -48544,7 +55413,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "secure with a floss",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "● Place to clamp",
@@ -48565,7 +55435,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Place to clamp",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Refer to specialists for better managment\nSafest medication with liver chrosis",
@@ -48583,7 +55454,8 @@ window.FLASH_NOTES = {
     "ref": "Refer to specialists for better managment Safest medication with liver chrosis",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "● Clindamycin",
@@ -48605,7 +55477,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "clindamycin",
     "_merged_into": "fn_perio_0464",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Acetaminophen\nSafest LA with liver chirosis?",
@@ -48623,7 +55496,8 @@ window.FLASH_NOTES = {
     "ref": "Acetaminophen Safest LA with liver chirosis?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Xylocaine\nCaOH advantage ?",
@@ -48641,7 +55515,8 @@ window.FLASH_NOTES = {
     "ref": "Xylocaine CaOH advantage ?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "● thermal isolation from irritant",
@@ -48662,7 +55537,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "thermal isolation from irritant",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "● Prevent Chemical from irritants",
@@ -48683,7 +55559,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Prevent Chemical from irritants",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "● Secondary dentin",
@@ -48704,7 +55581,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Secondary dentin",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Sedative to the pulp\nClasp above hight of contuor , what will affect",
@@ -48722,7 +55600,8 @@ window.FLASH_NOTES = {
     "ref": "Sedative to the pulp Clasp above hight of contuor , what will affect",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "● tipping",
@@ -48743,7 +55622,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Tipping",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Rotation\n●\nLeukoplakia management?",
@@ -48767,7 +55647,8 @@ window.FLASH_NOTES = {
      "passage": "econd premolar is rotated almost 90 degrees, bringing the lingual surface\n              into contact with the mesial surface of the ﬁrst molar. Normally, the lingual surfaces of the\n              mandibular teeth are rarely attacked by caries, but here, the tooth rotation makes the lingual\n              surface a proximal contact and, consequently, produces an interproximal habitat, which increase",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Follow up\n7 years old male patient all permanent molar has erupted with initial caries lesions with no\ncavitation ?",
@@ -48785,7 +55666,8 @@ window.FLASH_NOTES = {
     "ref": "Follow up 7 years old male patient all permanent molar has erupted with initial caries lesions with no cavitation ?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "● Sealant",
@@ -48806,7 +55688,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Sealant",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "PRR\nSub-mandiblar space picture ?",
@@ -48824,7 +55707,8 @@ window.FLASH_NOTES = {
     "ref": "PRR Sub-mandiblar space picture ?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "● molar",
@@ -48845,7 +55729,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "molar",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "● Pre-molar",
@@ -48866,7 +55751,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Pre-molar",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "● 2nd pre-molar",
@@ -48887,7 +55773,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "2nd pre-molar",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Canine\nCavernous sinus thrombosis ?\n-infra-temporL\n-canine\n#25 #26 #27 , have implant-screw retined .. what is the most side effect of this prosthesis ?",
@@ -48905,7 +55792,8 @@ window.FLASH_NOTES = {
     "ref": "Canine Cavernous sinus thrombosis ? -infra-temporL -canine #25 #26 #27 , have implant-screw retined .. what is the most side effect of this prosthesis ?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "● difficult retrievability",
@@ -48926,7 +55814,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "difficult retrievability",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "● Lack of undetected passivity",
@@ -48947,7 +55836,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Lack of undetected passivity",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "● Cement excess",
@@ -48968,7 +55858,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Cement excess",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Requires increased intra-occ distance\nA 32 female with Central incisor avulsed 2 months ago and want to replace it, adjacent teeth are\nsound with (no bony defect in the picture)?",
@@ -48986,7 +55877,8 @@ window.FLASH_NOTES = {
     "ref": "Requires increased intra-occ distance A 32 female with Central incisor avulsed 2 months ago and want to replace it, adjacent teeth are sound with (no bony defect in the picture)?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Pic of 1st molar inDiabetic patient after 2 days of scaling comes with localized\nswelling.Dull pain .Diagnosis?",
@@ -49004,7 +55896,8 @@ window.FLASH_NOTES = {
     "ref": "Pic of 1st molar inDiabetic patient after 2 days of scaling comes with localized swelling.Dull pain .Diagnosis?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Samepictureof localizedswellingand asktreatment? needtosee the radiograph",
@@ -49180,7 +56073,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "bone lossperiodontist?",
@@ -49231,7 +56125,8 @@ window.FLASH_NOTES = {
      "passage": "sually         and external tooth contours, (2) a current radiograph of\nare selected to reduce the risk of dentin crazing, pulpal      the tooth, (3) a periodontal probe, and (4) the patient’s\npenetration, and potential perforation. The Minim pins         age. Although the radiograph is only a two-dimensional\nusually are used as a backup in cases in which the             picture of the tooth, it c",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "xray picturewith accessamalgam andboneresorptionandasking why?",
@@ -49281,7 +56176,8 @@ window.FLASH_NOTES = {
     "ref": "bacteriacausegingivitis (Previouslymentioned) A.",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "bacteriaassociatedwithaggressiveperiodontist",
@@ -49300,7 +56196,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Picture of gingival abscess",
@@ -49319,7 +56216,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "perio"
+    "_dept": "perio",
+    "_raw_recall": true
    },
    {
     "stem": "Picture of lower anterior with calculus, the dentist can't record the pocket,\nwhat todo?",
@@ -51247,6 +58145,1621 @@ window.FLASH_NOTES = {
     "_verification_verdict": "supported",
     "format": "mcq",
     "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0081",
+    "stem": "What is the ideal distance from the alveolar bone crest to the apical contact point to achieve the highest probability of complete interdental papilla fill?",
+    "options": [
+     "a. 5 mm (98% chance of complete papilla fill).",
+     "b. Newman & Carranza's Clinical Periodontology"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the ideal distance from the alveolar bone crest to the apical contact point to achieve the highest probability of complete interdental papilla fill?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_13ed",
+     "passage": "The passage states: 'With 5 mm from crest of bone to the apical contact point, there is a 98% chance of complete fill of the space.'"
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0082",
+    "stem": "What is the definition of RT1 gingival recession according to the Cairo classification?",
+    "options": [
+     "a. Gingival recession with no interproximal attachment loss. The interproximal CEJ is not clinically detectable on either the mesial or distal aspect of the tooth.",
+     "b. Clinical Periodontology and Implant Dentistry (Lindhe), 6th Edition"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the definition of RT1 gingival recession according to the Cairo classification?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "The passage states: 'Clinically detectable loss of attachment may occur as a result of pathologic events other than periodontitis' and discusses recession, but the specific Cairo classification RT1 definition is not provided in the passages. Therefore, the answer is uncertain."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0083",
+    "stem": "What is negative architecture in periodontology?",
+    "options": [
+     "a. Negative architecture is when the interdental bone is more apical than the facial and lingual alveolar bone. (Reverse architecture)",
+     "b. Newman & Carranza's Clinical Periodontology"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is negative architecture in periodontology?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_13ed",
+     "passage": "The passage states: 'The bone has “negative” architecture if the interdental bone is more apical than the radicular bone.'"
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0085",
+    "stem": "A patient presents with a red gingival mass that bleeds easily on probing, as shown in the image. What is the most likely diagnosis?",
+    "options": [
+     "a. Pyogenic fibroma",
+     "b. Peripheral giant cell granuloma",
+     "c. Irritation fibroma",
+     "d. Papilloma"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": true,
+    "raw": "A patient presents with a red gingival mass that bleeds easily on probing, as shown in the image. What is the most likely diagnosis?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Periodontics Medicine Surgery Implants",
+     "passage": "The passage states: 'Peripheral giant cell lesion presents as a gingival nodule with a sessile base and a red to purple discoloration that may sometimes produce displacement of teeth.' This matches the red, bleeding gingival mass."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0090",
+    "stem": "A patient requires a mandibular implant, but the alveolar bone is severely resorbed and bone grafting is not possible. Which implant option is most appropriate?",
+    "options": [
+     "a. Endosteal implant",
+     "b. Subperiosteal implant",
+     "c. Pterygoid implant"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient requires a mandibular implant, but the alveolar bone is severely resorbed and bone grafting is not possible. Which implant option is most appropriate?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_book_explanation": {
+     "book": "",
+     "passage": ""
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0091",
+    "stem": "Which type of incision is used when a periodontal flap is intended to be positioned coronally?",
+    "options": [
+     "a. Internal bevel incision",
+     "b. External bevel incision",
+     "c. Sulcular incision"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which type of incision is used when a periodontal flap is intended to be positioned coronally?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_Clinical_Periodontology_2018",
+     "passage": "The passage states: 'The internal bevel incision, also called the reverse bevel incision and inverse bevel incision, is the opposite of the external bevel incision.' For a coronally positioned flap, a sulcular incision is used to preserve the papilla and allow coronal displacement."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0106",
+    "stem": "A fixed partial denture is supported by one natural tooth and one implant. The patient returns with repeated debonding of the bridge. What is the most likely cause?",
+    "options": [
+     "a. Poor cement strength",
+     "b. Fractured implant",
+     "c. Incorrect cementation technique",
+     "d. Splinting a natural tooth to an implant"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A fixed partial denture is supported by one natural tooth and one implant. The patient returns with repeated debonding of the bridge. What is the most likely cause?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Periodontics Medicine Surgery Implants",
+     "passage": "The passage states 'Most problems associated with splinting implants and natural teeth are related to the...' and 'implants form a more rigid unit' compared to natural teeth, indicating that splinting a natural tooth to an implant is a likely cause of repeated debonding."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0111",
+    "stem": "For how long should a cervical root fracture be splinted?",
+    "options": [
+     "a. 1 month",
+     "b. 2 months",
+     "c. 3 months",
+     "d. 4 months",
+     "e. Active periodontal disease occurs in:",
+     "f. Susceptible host with pathogenic fungi",
+     "g. Susceptible host with pathogenic viruses",
+     "h. Susceptible host with pathogenic bacteria",
+     "i. Susceptible host with autoimmune cells"
+    ],
+    "answerLetter": "h",
+    "answerIdx": 7,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "For how long should a cervical root fracture be splinted?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_book_explanation": {
+     "book": "",
+     "passage": ""
+    },
+    "_dept": "perio",
+    "_data_quality": "merged_options_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0116",
+    "stem": "A 12-year-old patient has 3–4 mm clinical attachment loss and 20% bone loss. What is the periodontal diagnosis?",
+    "options": [
+     "a. Stage II, Grade B",
+     "b. Stage II, Grade C"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A 12-year-old patient has 3–4 mm clinical attachment loss and 20% bone loss. What is the periodontal diagnosis?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_Perio_Implant",
+     "passage": "The passage states: 'while severe periodontitis will typically be either Stage III or Stage IV' and 'Generalized Stage II Grade B periodontitis with 3- to 4-mm clinical attachment loss in a 53-year-old male smoker.' However, the patient is 12 years old, and the passage does not address staging/grading for a young patient with 3-4 mm attachment loss and 20% bone loss. The option Stage II, Grade C i"
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0117",
+    "stem": "A patient presents with a missing maxillary central incisor. Clinical examination reveals: Mesiodistal space at the crown level: 10 mm , Alveolar ridge width: 9 mm , Apical bone width: 13 mm Which implant diameter is the most appropriate for this case?",
+    "options": [
+     "a. . 1.8 mm",
+     "b. 3.5 mm",
+     "c. 4.8 mm",
+     "d. 6.0 mm"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient presents with a missing maxillary central incisor. Clinical examination reveals: Mesiodistal space at the crown level: 10 mm , Alveolar ridge width: 9 mm , Apical bone width: 13 mm Which implant diameter is the most appropriate for this case?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "The passage describes a case with 'a narrow (<4 mm) buccal-lingual width of the alveolar ridge that needs to be addressed' but does not provide implant diameter selection criteria for the given measurements."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0120",
+    "stem": "A patient has a missing maxillary posterior tooth with severely resorbed alveolar bone. What is the appropriate management before implant placement?",
+    "options": [
+     "a. Sinus lift (if there is vertical bone deficiency).",
+     "b. Guided bone regeneration (GBR) (if there is horizontal ridge deficiency"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient has a missing maxillary posterior tooth with severely resorbed alveolar bone. What is the appropriate management before implant placement?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza's Clinical Periodontology",
+     "passage": "The passage states: 'procedures such as the maxillary sinus elevation and bone augmentation are needed to increase the amount' of bone in the posterior maxilla, supporting sinus lift for vertical deficiency."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0126",
+    "stem": "Which finish line is the healthiest for the periodontium?",
+    "options": [
+     "a. Subgingival",
+     "b. Equigingival",
+     "c. Supragingival",
+     "d. Shoulder finish line"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which finish line is the healthiest for the periodontium?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "perio_Carranza_Clinical_Periodontology_2018",
+     "passage": "The passage states: 'The use of equigingival margins traditionally was not desirable because they were thought to retain more plaque than supragingival or subgingival margins.' This implies supragingival is healthier, and the text also notes supragingival margins are easier to finish and maintain."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0133",
+    "stem": "A gingival lesion appears friable, bleeds easily, has a spongy consistency, and histology shows plasma cell infiltration. What is the diagnosis?",
+    "options": [
+     "a. Plasma cell gingivitis",
+     "b. Leukemia",
+     "c. Plaque-induced gingivitis",
+     "d. Desquamative gingivitis"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A gingival lesion appears friable, bleeds easily, has a spongy consistency, and histology shows plasma cell infiltration. What is the diagnosis?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_Clinical_Periodontology_2018",
+     "passage": "The passage states: 'Plasma cell gingivitis sometimes manifests as a mild marginal gingival enlargement... The gingiva appears red, friable, and sometimes granular, and it bleeds easily' and histology shows plasma cell infiltration."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0141",
+    "stem": "Which herpes simplex virus type commonly affects the gingiva?",
+    "options": [
+     "a. HSV-1",
+     "b. HSV-2"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which herpes simplex virus type commonly affects the gingiva?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Periodontics_MSI_PDF",
+     "passage": "The passage states 'Type 1 (HSV-1) typically develops above the waist and is found in or around the oral cavity.'"
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0171",
+    "stem": "Inflammation is present around a dental implant without radiographic bone loss. What is the diagnosis?",
+    "options": [
+     "a. Peri-implantitis",
+     "b. Peri-implant mucositis",
+     "c. Implant failure",
+     "d. Osteomyelitis"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Inflammation is present around a dental implant without radiographic bone loss. What is the diagnosis?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_Perio_Implant",
+     "passage": "The passage states: 'peri-implant mucositis is a reversible inflammatory change of the soft tissues around implants without bone loss.'"
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0186",
+    "stem": "What is a possible consequence of using excessive gingival retraction cord force?",
+    "options": [
+     "a. Gingival hyperplasia",
+     "b. Gingival recession",
+     "c. Gingival pigmentation",
+     "d. Increased sulcus depth"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is a possible consequence of using excessive gingival retraction cord force?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_Clinical_Periodontology_2018",
+     "passage": "The passage states: 'The forceful packing of a gingival retraction cord into the sulcus... may mechanically injure the periodontium' and 'excessive occlusal forces... in some cases to reverse gingival recession,' implying recession as a consequence."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0197",
+    "stem": "How often should implant maintenance visits be scheduled during the first year for a patient at high risk of periodontitis?",
+    "options": [
+     "a. Every month",
+     "b. Every 3 months",
+     "c. Every 6 months",
+     "d. Once a year"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "How often should implant maintenance visits be scheduled during the first year for a patient at high risk of periodontitis?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_Clinical_Periodontology_2018",
+     "passage": "The passage states: 'In a study of 25 individuals with aggressive (early-onset) periodontitis followed with maintenance every 3 to 6 months for 5 years, it was concluded that these patients can be effectively maintained.'"
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0205",
+    "stem": "A patient presents with diffuse white, corrugated plaques on the buccal mucosa. The lesions are bilateral and cannot be scraped off. What is the most likely diagnosis?",
+    "options": [
+     "a. Leukoplakia",
+     "b. White sponge nevus",
+     "c. Oral lichen planus",
+     "d. Candidiasis"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient presents with diffuse white, corrugated plaques on the buccal mucosa. The lesions are bilateral and cannot be scraped off. What is the most likely diagnosis?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_Clinical_Periodontology_2018",
+     "passage": "The passage states: 'The typical reticular lesions are asymptomatic and bilateral, and they consist of interlacing white lines on the posterior regio...' and 'One percent of oral lichen planus cases may develop squamous cell carcinoma.'"
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0215",
+    "stem": "Pt has pocket depth 5 ,bone loss 50% what to do?",
+    "options": [
+     "a. Flap depridment + Bone graft + CG",
+     "b. Scaling and root planning + revaluate 6 weeks",
+     "c. Extract All incisors",
+     "d. Non surgical endo for the incisor",
+     "e. heavy smoking",
+     "f. 10 cigarettes per day",
+     "g. 20 cigarettes per day",
+     "h. 30 cigarettes per day",
+     "i. 40 cigarettes per day",
+     "j. There is trauma from occlusion how to asses teeth",
+     "k. Occlusion test",
+     "l. Mobility test",
+     "m. Fremutis test",
+     "n. Occulsion analysis",
+     "o. Staillman recession treatment",
+     "p. how many contact points in centric relation",
+     "q. 3",
+     "r. 4",
+     "s. 5",
+     "t. 6",
+     "u. ⁠pt have immediate CD from 6-9 months and now he feel continuous ill fit what is best management for him",
+     "v. Remake",
+     "w. lab reline",
+     "x. chairside reline",
+     "y. rebase"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Pt has pocket depth 5 ,bone loss 50% what to do?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza's Clinical Periodontology",
+     "passage": "The passage describes a case with 'nonsurgical scaling and root planing along with adjunctive systemic antibiotics' and notes 'Probing pocket depths have been maintained in the range of 2 to 5 mm', supporting initial nonsurgical therapy with reevaluation for moderate pocket depth and bone loss."
+    },
+    "_dept": "perio",
+    "_data_quality": "merged_options_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0219",
+    "stem": "A patient has 4 mm gingival recession on one tooth with the interdental papilla intact. And 1mm of keratinized tissue According to Miller's classification",
+    "options": [
+     "a. Miller Class I",
+     "b. Miller Class II",
+     "c. RT1 / Miller Class I",
+     "d. RT2 / Miller Class II"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient has 4 mm gingival recession on one tooth with the interdental papilla intact. And 1mm of keratinized tissue According to Miller's classification",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Periodontics_MSI_PDF",
+     "passage": "The passage states: 'Class I: Recession not exte...' and 'The Miller classification allows the clinician to predict the outcome of root coverage by evaluating the height of the interdental bone and gingiva adjacent to the tooth with recession.' With intact interdental papilla, this is Miller Class I."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0232",
+    "stem": "What is the minimum distance between an implant and an adjacent natural tooth?",
+    "options": [
+     "a. 1.0 mm",
+     "b. 1.5 mm",
+     "c. 2.0 mm",
+     "d. 3.0 mm"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the minimum distance between an implant and an adjacent natural tooth?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_Clinical_Periodontology_2018",
+     "passage": "The text states: 'The implant should be placed at a distance of 1.5 to 2 mm from an adjacent natural tooth.'"
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0237",
+    "stem": "A patient has buccal gingival recession with intact interdental attachment. According to the 2017 classification, what is the diagnosis?",
+    "options": [
+     "a. Miller Class I",
+     "b. Miller Class II",
+     "c. RT1",
+     "d. RT2"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient has buccal gingival recession with intact interdental attachment. According to the 2017 classification, what is the diagnosis?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_Clinical_Periodontology_2018",
+     "passage": "The passage states 'Class I. Marginal tissue recession does not extend to the mucogingival junction. There is no loss of bone or soft tissue in the interdental area,' which matches intact interdental attachment; however, the question asks for the 2017 classification (RT1), and the passage only describes Miller classes, so RT1 is inferred as the equivalent."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0245",
+    "stem": "An implant with a diameter of 4 mm is planned between two natural teeth. What is the minimum mesiodistal space required?",
+    "options": [
+     "a. 6 mm",
+     "b. 7 mm",
+     "c. 8 mm",
+     "d. 9 mm"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "An implant with a diameter of 4 mm is planned between two natural teeth. What is the minimum mesiodistal space required?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_Clinical_Periodontology_2018",
+     "passage": "The text states: 'B. Standard diameter implant (e.g., 4.1 mm) is 7 mm.' A 4 mm implant is standard diameter, requiring 7 mm."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0251",
+    "stem": "Which adverse oral reaction is associated with thiazide diuretics?",
+    "options": [
+     "a. Gingival enlargement",
+     "b. Lichenoid reaction",
+     "c. Xerostomia",
+     "d. Candidiasis"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which adverse oral reaction is associated with thiazide diuretics?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral_surgary_Manegment_of_medically_compromised_PT",
+     "passage": "The passage states thiazide diuretics cause 'Dry mouth, lichenoid reactions' as oral adverse effects."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0262",
+    "stem": "A patient with well-controlled diabetes requires replacement of a missing tooth. What is the most appropriate treatment option?",
+    "options": [
+     "a. Removable partial denture",
+     "b. Fixed partial denture",
+     "c. Dental implant",
+     "d. No treatment"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient with well-controlled diabetes requires replacement of a missing tooth. What is the most appropriate treatment option?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "perio_Carranza_Clinical_Periodontology_2018",
+     "passage": "The passage states 'Replacement of a single missing tooth with an implant-supported crown is a much more conservative approach than preparing two adjacent teeth for the fabrication of a tooth-supported fixed partial denture,' supporting dental implant as the most appropriate option."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0271",
+    "stem": "A patient presents with spontaneous gingival bleeding and tooth mobility. Which vitamin deficiency is the most likely cause?",
+    "options": [
+     "a. Scurvy (Vitamin C deficiency)",
+     "b. Beriberi (Vitamin B1 deficiency)",
+     "c. Vitamin D deficiency",
+     "d. Vitamin K deficiency"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient presents with spontaneous gingival bleeding and tooth mobility. Which vitamin deficiency is the most likely cause?",
+    "dept": "perio",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza's Clinical Periodontology",
+     "passage": "The passage states 'severe ascorbic acid (vitamin C) deficiency or scurvy' leads to 'bright red, swollen, and bleeding gingiva' and 'Hemorrhage that occurs spontaneously or on slight provocation', matching the symptoms."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0286",
+    "stem": "Best bridge for young patient:",
+    "options": [
+     "a. Resin bonded bridge",
+     "b. Simple cantilever",
+     "c. Fixed (full-coverage)",
+     "d. Implant bridge"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Best bridge for young patient:",
+    "dept": "perio",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Lang & Lindhe Clinical Periodontology",
+     "passage": "The passage lists 'Adhesive, resin‐bonded (cantilever) bridges' as a therapeutic modality for tooth replacement in the zone of esthetic priority, which is suitable for young patients to preserve tooth structure."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0292",
+    "stem": "Function of rinsing mouth with water:",
+    "options": [
+     "a. Prevent dental plaque",
+     "b. Remove food debris",
+     "c. Prevent plaque formation and remove food debris",
+     "d. Wash away food debris and acids"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Function of rinsing mouth with water:",
+    "dept": "perio",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Lang_Lindhe_Clinical_Periodontology",
+     "passage": "The passage mentions woodsticks 'which are simply intended to remove food debris after meals' and materia alba 'can usually be washed away by vigorously rinsing or flushing the area with water', indicating rinsing removes food debris."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0293",
+    "stem": "Function of dental floss:",
+    "options": [
+     "a. Clean tongue",
+     "b. Polish enamel",
+     "c. Remove interdental plaque and food",
+     "d. Strengthen gingiva"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Function of dental floss:",
+    "dept": "perio",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_13ed",
+     "passage": "The passage mentions 'Careful use of interdental cleaners such as floss, toothpicks, or interdental brushes' in the context of plaque removal, and another passage states 'the purpose of interdental cleaning is to remove microbial plaque biofilm, not just food that has wedged between two approximating teeth.'"
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0298",
+    "stem": "Evaluation of soft tissue after scaling after:",
+    "options": [
+     "a. 1 week",
+     "b. 2 weeks",
+     "c. 3 weeks",
+     "d. 4 weeks"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Evaluation of soft tissue after scaling after:",
+    "dept": "perio",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_13ed",
+     "passage": "The passage states: 'Clinical evaluation of the soft tissue response to scaling and root planing, including probing, should not be conducted earlier than 2 weeks postoperatively.'"
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0302",
+    "stem": "All of the following diseases cause lymphadenopathy EXCEPT:",
+    "options": [
+     "a. Plaque induced gingivitis",
+     "b. Herpetic Gingivostomatitis (HSV)",
+     "c. ANUG",
+     "d. HSV1"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "All of the following diseases cause lymphadenopathy EXCEPT:",
+    "dept": "perio",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_13ed",
+     "passage": "The passage lists 'Primary herpetic gingivostomatitis' and 'Recurrent oral herpes' under viral origin gingival diseases, and ANUG is described as a severe inflammatory periodontal disorder caused by plaque bacteria; plaque-induced gingivitis is not associated with lymphadenopathy in the provided text."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0307",
+    "stem": "Patient came with pain on biting, 3 days after cementation of a bridge:",
+    "options": [
+     "a. Wrong cement",
+     "b. High occlusal contact (premature occlusal contact)",
+     "c. Acute apical periodontitis",
+     "d. Wrong choice of material"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Patient came with pain on biting, 3 days after cementation of a bridge:",
+    "dept": "perio",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_13ed",
+     "passage": "The passage states 'Other cases have an iatrogenic cause, such as placement of a \"high\" restoration' and 'symptoms of occlusal trauma such as pain on mastication... can be reversed when the forces are removed.' This supports high occlusal contact as the cause."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0315",
+    "stem": "In preservation of tooth structure:",
+    "options": [
+     "a. Use of full crown coverage instead of partial",
+     "b. Use subgingival preparation",
+     "c. Preparation of teeth with minimum taper between axial walls",
+     "d. Preparation of the tooth according to tooth anatomy"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "In preservation of tooth structure:",
+    "dept": "perio",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Lang_Lindhe_Clinical_Periodontology",
+     "passage": "The passage discusses preservation of natural tooth substance and mentions 'Cutting preparations for full coverage of the crowns will result in 10% of the prepared teeth losing vitality after 10 years', implying minimal taper is preferred to preserve tooth structure."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0317",
+    "stem": "Which of the following does NOT cause lymph node enlargement:",
+    "options": [
+     "a. Plaque-induced gingivitis",
+     "b. ANUG",
+     "c. Pericoronitis",
+     "d. HSV"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which of the following does NOT cause lymph node enlargement:",
+    "dept": "perio",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_Clinical_Periodontology_2018",
+     "passage": "The passage states: 'Plasma cell gingivitis... usually, gingivitis does not cause the loss of attachment' and mentions 'Necrotizing ulcerative gingivitis, and acute periodontal abscesses may produce lymph node enlargement', implying plaque-induced gingivitis does not cause lymph node enlargement."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0325",
+    "stem": "Over-contoured crowns are most often the result of:",
+    "options": [
+     "a. The need for added retention",
+     "b. Insufficient tooth reduction",
+     "c. Overbuilding by the dental technician",
+     "d. Periodontal considerations"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Over-contoured crowns are most often the result of:",
+    "dept": "perio",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Periodontics_MSI_PDF",
+     "passage": "The passage states that restorative treatments may result in uneven gingival margins or 'long teeth,' and root coverage procedures may be preferred rather than restoration, implying overcontouring is often due to insufficient tooth reduction."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0330",
+    "stem": "Treatment for mild periodontal attachment loss:",
+    "options": [
+     "a. Scaling and plaque control",
+     "b. Flap surgery",
+     "c. Bone grafting",
+     "d. Crown removal"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Treatment for mild periodontal attachment loss:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza's Clinical Periodontology 13ed",
+     "passage": "The passage states: 'The patient was treated with repeated sessions of scaling and root planing as well as periodontal flap surgery several years ago. He has since been very compliant with a 3-month maintenance schedule.' For mild attachment loss, scaling and plaque control are the initial treatment."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0332",
+    "stem": "Immediate esthetic failures can be caused by:",
+    "options": [
+     "a. Color mismatch",
+     "b. Poor marginal adaptation",
+     "c. Gingival recession",
+     "d. None"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Immediate esthetic failures can be caused by:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza's Clinical Periodontology 13ed",
+     "passage": "The passage states: 'Aesthetic complications can result from poor implant position, deficiencies in the existing anatomy of edentulous sites that were reconstructed with implants, and prosthetic-related factors such as color mismatch.'"
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0349",
+    "stem": "Patient came to missing #27, 28, 29. Appropriate treatment:",
+    "options": [
+     "a. Implant",
+     "b. Removable prosthetic",
+     "c. Fixed bridge",
+     "d. Removable or Implant"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Patient came to missing #27, 28, 29. Appropriate treatment:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_13ed",
+     "passage": "The passage states 'Replacement of a single missing tooth with an implant-supported crown is a much more conservative approach than preparing two adjacent teeth for the fabrication of a tooth-supported fixed partial denture' and discusses 'implant-supported removable prosthesis' and 'implant-supported fixed prosthesis', indicating both removable and implant options are appropriate."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0351",
+    "stem": "Cause bone loss and tooth mobility:",
+    "options": [
+     "a. Gingivitis",
+     "b. Periodontitis",
+     "c. Both",
+     "d. None"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Cause bone loss and tooth mobility:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza's Clinical Periodontology 13ed",
+     "passage": "The passage states: 'Secondary trauma from occlusion occurs when the adaptive capacity of the tissues to withstand occlusal forces is impaired by bone loss that results from marginal inflammation' — periodontitis causes bone loss and tooth mobility."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0357",
+    "stem": "After extraction of tooth #46, the appropriate management is:",
+    "options": [
+     "a. Immediate implant with immediate restoration",
+     "b. Observe the patient and evaluate function and esthetics before replacement",
+     "c. Removable bridge",
+     "d. Fixed bridge"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "After extraction of tooth #46, the appropriate management is:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Clinical Periodontology and Implant Dentistry (Lang & Lindhe)",
+     "passage": "The passage states: 'Provisional restorations should be used to evaluate esthetic, phonetic, and occlusal function prior to delivery of the final implant restorations.'"
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0358",
+    "stem": "Alginate is the impression material for:",
+    "options": [
+     "a. Primary impression for all restorations",
+     "b. Final impression for fixed prosthetics",
+     "c. Final impression for implants",
+     "d. None of the above"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Alginate is the impression material for:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "No passage in the provided text mentions alginate as an impression material for any of the listed options."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0359",
+    "stem": "Fourteen years young patient presenting with developmentally missing lateral incisors. What type of prosthesis (picture)?",
+    "options": [
+     "a. Implant",
+     "b. Simple cantilever FPD",
+     "c. Fixed-fixed PD",
+     "d. Resin bonded FPD"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Fourteen years young patient presenting with developmentally missing lateral incisors. What type of prosthesis (picture)?",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Lang_Lindhe_Clinical_Periodontology",
+     "passage": "The passage describes 'Use of cantilever pontics to replace missing lateral incisors as a part of fixed partial denture (FPD) therapy,' which matches the clinical scenario of developmentally missing lateral incisors."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0364",
+    "stem": "What treatment is recommended for mild periodontal attachment loss?",
+    "options": [
+     "a. Scaling and plaque control",
+     "b. Flap surgery",
+     "c. Bone grafting",
+     "d. Crown removal (Same as Q2) Reference: Lang & Lindhe: “mild and moderate periodontitis are treated non-surgically… optimal plaque control by the patient.”"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What treatment is recommended for mild periodontal attachment loss?",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza's Clinical Periodontology",
+     "passage": "The passage states: 'The patient was treated with repeated sessions of scaling and root planing as well as periodontal flap surgery several years ago. He has since been very compliant with a 3-month maintenance schedule.' This indicates scaling and plaque control are part of the treatment for periodontal attachment loss."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0367",
+    "stem": "Immediate aesthetic failures can be caused by:",
+    "options": [
+     "a. Color mismatch",
+     "b. Poor marginal adaptation",
+     "c. Gingival recession",
+     "d. No one (Same as Q4) Reference: Contemporary Fixed Prosthodontics: immediate failure = shade/form; recession is late."
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Immediate aesthetic failures can be caused by:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_Clinical_Periodontology_2018",
+     "passage": "The passage lists 'recession of the peri-implant marginal soft tissues' as a specific complication of immediate implant placement, which can cause immediate aesthetic failures."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0372",
+    "stem": "What is the primary benefit of using diagnostic wax mock-ups in prosthodontics?",
+    "options": [
+     "a. To evaluate tooth vitality",
+     "b. To establish a preliminary aesthetic and functional framework",
+     "c. To measure periodontal health",
+     "d. To assess occlusal interferences"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the primary benefit of using diagnostic wax mock-ups in prosthodontics?",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "No passage in the provided text directly discusses diagnostic wax mock-ups in prosthodontics."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0374",
+    "stem": "The factor that determines the ideal position of the dental midline is:",
+    "options": [
+     "a. Lip mobility",
+     "b. Buccal corridor width",
+     "c. Gingival display",
+     "d. Inter-pupillary line"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The factor that determines the ideal position of the dental midline is:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Clinical Periodontology and Implant Dentistry (Lang & Lindhe)",
+     "passage": "The passage states: 'Dental midline in relation to facial midline' and 'Gingival display during speech and during a' are factors, but the inter-pupillary line is a common reference for midline determination."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0382",
+    "stem": "What is the primary role of a dental technician in dental implant procedures?",
+    "options": [
+     "a. Performing surgical procedures",
+     "b. Diagnosing oral health conditions",
+     "c. Fabricating dental prostheses",
+     "d. Providing anesthesia"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the primary role of a dental technician in dental implant procedures?",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_Clinical_Periodontology_2018",
+     "passage": "The passage states that each implant system is designed with specific armamentarium and recommendations for use, and the dental technician's role is to fabricate dental prostheses, not to perform surgery, diagnose, or provide anesthesia."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0391",
+    "stem": "All are the indications of zirconia ceramic restorations except:",
+    "options": [
+     "a. Anterior and posterior crowns and bridges",
+     "b. Implant abutments",
+     "c. Onlay bridges",
+     "d. Cantilever bridges"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "All are the indications of zirconia ceramic restorations except:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Perio_Lang_Lindhe_Clinical_Periodontology",
+     "passage": "The passage lists 'Cantilever units (mainly distal extensions)' as a contraindication for implant-supported restorations, not an indication for zirconia ceramic restorations."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0394",
+    "stem": "About the pontic, which of the following statements is incorrect:",
+    "options": [
+     "a. Excessive tissue contact is a major factor in the failure of bridge",
+     "b. The area of contact between the pontic and the ridge should be small and convex",
+     "c. There should be small space between pontic and soft tissue ✅ (least supported by the book)",
+     "d. The tip of the pontic must be restricted to keratinized gingiva"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "About the pontic, which of the following statements is incorrect:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_13ed",
+     "passage": "The passage states 'Access for oral hygiene is inhibited with excessive pontic-to-tissue contact' and 'fixed bridges should barely touch the mucosa', indicating there should be minimal contact, not a small space. The statement 'There should be small space between pontic and soft tissue' is least supported."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0404",
+    "stem": "To prevent food entrapment into the interdental gingival sulcus, the axial surface below the proximal contact should be:",
+    "options": [
+     "a. Flat or convex never concave",
+     "b. Convex or concave never flat",
+     "c. Flat or concave never convex",
+     "d. Not important, they all are same"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "To prevent food entrapment into the interdental gingival sulcus, the axial surface below the proximal contact should be:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Periodontics_MSI_PDF",
+     "passage": "The passage states 'Establishment of a proper, open embrasure and flat or convex interproximal surface is cr...' indicating the axial surface below the proximal contact should be flat or convex, never concave."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0407",
+    "stem": "Over-contoured crowns are most often the result of:",
+    "options": [
+     "a. The need for added retention",
+     "b. Insufficient tooth reduction",
+     "c. Overbuilding by dental technicians",
+     "d. Periodontal considerations"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Over-contoured crowns are most often the result of:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Periodontics MSI PDF",
+     "passage": "The passage states 'All of the restorative treatments may result in uneven gingival margins or \"long teeth\"' and discusses crown lengthening, implying over-contoured crowns often result from insufficient tooth reduction leading to overbuilding."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0410",
+    "stem": "The proximal contact of the restoration must be:",
+    "options": [
+     "a. Too tight",
+     "b. Too light",
+     "c. Cut the dental floss",
+     "d. None of the above"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The proximal contact of the restoration must be:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_Clinical_Periodontology_2018",
+     "passage": "The passage states 'The tightness of contacts should be checked by means of clinical observation and with dental floss' and 'Abnormal contact relationships may also initiate occlusal changes', indicating the contact should be neither too tight nor too light, and should not cut floss. None of the listed options are correct."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0413",
+    "stem": "Patient missing central incisor with normal occlusion and implant is impossible, the restoration is:",
+    "options": [
+     "a. Resin bonded bridge (Maryland)",
+     "b. Fixed movable bridge",
+     "c. Cantilever bridge",
+     "d. Spring Cantilever bridge"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Patient missing central incisor with normal occlusion and implant is impossible, the restoration is:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Lang Lindhe Clinical Periodontology",
+     "passage": "The passage states 'such as a Maryland Bridge is indicated' for replacing missing teeth, and describes it as cemented to neighboring teeth by acid etching, which is appropriate when implants are impossible."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0414",
+    "stem": "Patient missing central incisor with heavy occlusion and implant is impossible, the restoration is:",
+    "options": [
+     "a. Fixed-fixed bridge",
+     "b. Fixed removable bridge",
+     "c. Resin bonded bridge (Maryland)",
+     "d. Cantilever bridge"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Patient missing central incisor with heavy occlusion and implant is impossible, the restoration is:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Clinical Periodontology and Implant Dentistry",
+     "passage": "The passage states: 'such as a Maryland Bridge is indicated (Fig. 54-8a, b). These are cemented to the neighboring teeth by means of acid etching.' This describes a resin-bonded bridge for replacing a missing tooth."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0425",
+    "stem": "Clinical crown in crown-root ratio is:",
+    "options": [
+     "a. Tooth structure occlusal to alveolar crest",
+     "b. Tooth structure occlusal to gingival margin",
+     "c. Tooth structure occlusal to alveolar crest and gingival margin"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Clinical crown in crown-root ratio is:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Periodontics Medicine Surgery Implants",
+     "passage": "The passage states: 'from 3 to 5.5 mm of tooth must be exposed in crown lengthening, measuring from the alveolar crest occlusally to the most apical margin of the restoration.' This defines clinical crown relative to the alveolar crest."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0439",
+    "stem": "The goal of the dental implant in preserving the jaw bone:",
+    "options": [
+     "a. More bone loss",
+     "b. Refill losed bone",
+     "c. Limiting more bone loss",
+     "d. None of the above"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The goal of the dental implant in preserving the jaw bone:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_13ed",
+     "passage": "The passage states 'Any additional alveolar bone loss in an area that has already undergone severe bone loss may further compromise residual anatomy and impair the opportunity for tooth replacement with a dental implant', implying implants help limit further bone loss."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0447",
+    "stem": "Diagnostic cast obtain all the following except:",
+    "options": [
+     "a. Make the provisional restoration",
+     "b. Measure the accurate length of the abutment teeth",
+     "c. Measure the pocket depth and C:R ratio",
+     "d. Obtain the amount of tilting of teeth"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Diagnostic cast obtain all the following except:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "No passage in the provided text discusses diagnostic cast uses or limitations."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0449",
+    "stem": "First step in management of patient with extensive oral disease:",
+    "options": [
+     "a. Surgery phase",
+     "b. Periodontal phase",
+     "c. Primary assessment",
+     "d. Orthodontic phase"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "First step in management of patient with extensive oral disease:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_Clinical_Periodontology_2018",
+     "passage": "The passage states the sequence begins with 'Emergency treatment' and 'Oral hygiene instructions' before surgical phases, indicating primary assessment is the first step."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0452",
+    "stem": "The indications of zirconia all except:",
+    "options": [
+     "a. Anterior and posterior teeth",
+     "b. Overlay bridges",
+     "c. Implant abutment",
+     "d. Cantilever bridge (Same as Q63/106) Reference: inlay/onlay-retained (resin-bonded) bridges are not a standard zirconia indication."
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The indications of zirconia all except:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Lang_Lindhe_Clinical_Periodontology",
+     "passage": "The passage mentions 'single‐unit zirconia‐based screw‐retained implant reconstructions' and 'implant‐supported' restorations, but does not support overlay bridges as an indication for zirconia."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0454",
+    "stem": "The scope of fixed prosthodontic is deal with:",
+    "options": [
+     "a. Removable prosthesis",
+     "b. Restorations that attached permanently to teeth",
+     "c. Removal of teeth",
+     "d. None of the above (Same as Q60) Reference: Contemporary Fixed Prosthodontics: restorations “attached permanently to natural teeth or implant abutments.”"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The scope of fixed prosthodontic is deal with:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The reference states fixed prosthodontics deals with restorations 'attached permanently to natural teeth or implant abutments.'"
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0459",
+    "stem": "Epinephrine in gingival retraction all except:",
+    "options": [
+     "a. Good hemostasis",
+     "b. No systemic effect ✅ (exception)",
+     "c. Don’t cause permanent retraction",
+     "d. All the above"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Epinephrine in gingival retraction all except:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_Clinical_Periodontology_2018",
+     "passage": "The passage states: 'The use of local anesthesia with epinephrine causes vasoconstriction. However, this effect has a short duration. The use of vasoconstriction should not be relied on for long-term hemostasis.' This implies epinephrine has systemic effects and is not solely local, so 'No systemic effect' is the exception."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0478",
+    "stem": "About the pontic all are true except:",
+    "options": [
+     "a. The area of contact between the pontic and the ridge should be small and convex",
+     "b. The tip of the pontic extends past the mucogingival junction ✅ (incorrect)",
+     "c. Excessive tissue contact is a major factor in the failure of bridge",
+     "d. There should be small space under pontic"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "About the pontic all are true except:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_13ed",
+     "passage": "The passage states: 'Fixed bridges should barely touch the mucosa. Access for oral hygiene is inhibited with excessive pontic-to-tissue contact.' It does not mention the pontic extending past the mucogingival junction, making that statement incorrect."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_0479",
+    "stem": "The proximal contact of the restoration must be:",
+    "options": [
+     "a. Too tight",
+     "b. Too light",
+     "c. Cut the dental floss",
+     "d. None of the above ✅ (Same as Q83) Reference: Sturdevant: contact allows floss passage with resistance, without cutting."
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The proximal contact of the restoration must be:",
+    "dept": "perio",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_Clinical_Periodontology_2018",
+     "passage": "The passage discusses dental floss use and contact tightness but does not specify the required tightness of a restoration contact; therefore, none of the options are supported."
+    },
+    "_dept": "perio"
+   },
+   {
+    "id": "fn_j26_friend_01",
+    "stem": "Which periodontal probe is an automated electronic probe linked to a computer that applies a constant probing force?",
+    "options": [
+     "a. Florida probe",
+     "b. WHO (CPITN) probe",
+     "c. Williams probe",
+     "d. UNC-15 probe"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which periodontal probe is an automated electronic probe linked to a computer that applies a constant probing force?",
+    "dept": "perio",
+    "sources": [
+     "friend_july2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza Clinical Periodontology",
+     "passage": "Carranza Clinical Periodontology (perio): 'An example of automated probing is the Florida Probe System, which consists of a probe handpiece, a digital readout, a foot switch, a computer interface, and a computer.'"
+    },
+    "_dept": "perio"
    }
   ],
   "fixed": [
@@ -51375,7 +59888,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "Fenestration",
@@ -51426,7 +59940,8 @@ window.FLASH_NOTES = {
      "passage": "years             studies have indicated that loss of a primary molar\n   of age requires different abutment considerations              before 7 years of age leads to delayed emergence of\n   than one lost during the mixed dentition when first            the succedaneous tooth, whereas loss after 7 years of\n   permanent molars have erupted. Also, teeth actively            age leads to early emergen",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "Patient had crown lengthening: When to make a final impression?",
@@ -52481,7 +60996,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "Asked what is this?",
@@ -52720,7 +61236,8 @@ window.FLASH_NOTES = {
      "passage": "asal tip, and the width of\nit (see Figure 19-6), can prevent these problems, so it is                  the alar base. Any or all of these aspects can be significantly\nindicated for this purpose as well as for correction of a pre-              improved by modern surgical techniques. Because the soft\nexisting nasal deformity in addition to a problem with jaw                  tissue contours around t",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "What impression is hydrophilic?",
@@ -52772,7 +61289,8 @@ window.FLASH_NOTES = {
      "passage": "ge, because wax\n    thicknesses vary).\n 3. Soften the wax by carefully heating it over a\n    Bunsen burner or in hot water. Overheating\n    may melt it and produce an undesirable thin\n    spot. Only light pressure should be applied.\n 4. After the second sheet of wax has been applied,\n    trim it back (see Fig. 14-18E) until the pencil\n    line is just visible. An alternative technique\n    involves",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "pic of pick up impression\n●\n● Contemporary Fixed Prosthodontics, 4th Edition",
@@ -52796,7 +61314,8 @@ window.FLASH_NOTES = {
      "passage": "by embedding into the resin. Preformed plastic bar and matrix forms were used and were incorporated into the fixed prostheses\n    wax patterns. A, Curved bar is positioned and waxed to place. B, Anatomic contour waxing with bar on left and extracoronal attach-\n    ment on right abutment. C, Completed crowns evaluated. The fixed restorations were picked up in an impression that was used to\n    fa",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "Pic of fracture in the mandible involved the canine and ask why we need the extract the canine ?\n●\n● Contemporary Oral and Maxillofacial Surgery, 6th Edition",
@@ -53383,7 +61902,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "3/4 crown (requires sound, retentive proximal grooves on the mesial and distal aspects)",
@@ -53402,7 +61922,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "🚨 | | -short-term | | | solubility? | | | | | | | --- | ----------- | --- | --- | ----------- | --- | --- | --- | --- | --- | Calcium ✅ ZOE | | | | | | | | | | | | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 🚨 | -picture | | | of small | | yellowish | | spots | in lip | ? | | -------",
@@ -54827,7 +63348,8 @@ window.FLASH_NOTES = {
      "passage": "s. The aberrant frenum located between the maxillary central\n    The donor tissue connective tissue is contoured to fit into the           incisors may cause an aesthetic problem in a patient with a high\n    recipient tunnel and pouch.                                               lip line.\nStep 12. A mattress suture placed at one end of the graft helps to\n    guide the graft through the sulcus an",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "Pic of erythroplakia at the lateral border of the tongue",
@@ -54878,7 +63400,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "2-Step-back and crown down different in canal prep ?",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "● 3- pedo lower anterior and 1st molar erupt which\nappliance ? LLHA\n●",
@@ -54929,7 +63452,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "4-short-term solubility?",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "● Calcium 👍🏻",
@@ -54950,7 +63474,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Calcium 👍🏻",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "● 4- trigeminal neuralgia and muscle fatigue at night ?\n●\n●",
@@ -55001,7 +63526,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "-picture of small yellowish spots in lip ?",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "● Sebaceous gland\n●\n●\n●\n●",
@@ -55027,7 +63553,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Sebaceous gland",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "● Pt.came with numbness after one day of restoration on\ntooth 16 ?",
@@ -55047,7 +63574,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Pt.came with numbness after one day of restoration on",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "● Greater palatine 👍🏻",
@@ -55068,7 +63596,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Greater palatine 👍🏻",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "● needle break\n●\n●",
@@ -55094,7 +63623,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "needle break",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "● -large red mass on gingival for pregnant women ?",
@@ -55115,7 +63645,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "-large red mass on gingival for pregnant women ?",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "● Pyogenic gra\n●\n●",
@@ -55141,7 +63672,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Pyogenic gra",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "● Fever - malaise in children with ulcers on buccal and\ngingiva ?",
@@ -55161,7 +63693,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Fever - malaise in children with ulcers on buccal and",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "● Herpes simplex gingivostomatitis\n●\n●\n●",
@@ -55187,7 +63720,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Herpes simplex gingivostomatitis",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "● Most common malignant in the lip ?",
@@ -55208,7 +63742,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Most common malignant in the lip ?",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "● Mucoepidermoid carcinoma 👍🏻",
@@ -55229,7 +63764,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Mucoepidermoid carcinoma 👍🏻",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "● Adenoid custic carcinma\n●\n●\n●",
@@ -55255,7 +63791,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Adenoid custic carcinma",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "● Swelling and bleeding of gingiva , loss of teeth ?",
@@ -55276,7 +63813,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Swelling and bleeding of gingiva , loss of teeth ?",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "● Scurvy\n●",
@@ -55302,7 +63840,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Scurvy",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "Down syndrome fluoride",
@@ -55404,7 +63943,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Diastema of after rapid maxillary expansion?",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "10 years pedo with minimal diastema how to correct ?",
@@ -55461,7 +64001,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "RCT and crown",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "Direct pulp capping, temporary crown, defentive crown\nImpacted 3rd molar mesioangular ( x-ray provided) about the root proximity to\nIANC",
@@ -55479,7 +64020,8 @@ window.FLASH_NOTES = {
     "ref": "Direct pulp capping, temporary crown, defentive crown Impacted 3rd molar mesioangular ( x-ray provided) about the root proximity to IANC",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "- Grooving",
@@ -55500,7 +64042,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Grooving",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "- Flat",
@@ -55521,7 +64064,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Flat",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "- Superimposition",
@@ -55542,7 +64086,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Superimposition",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "- Incisional",
@@ -55563,7 +64108,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Incisional",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "- Excisional",
@@ -55584,7 +64130,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Excisional",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "- Cryotherapy",
@@ -55605,7 +64152,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Cryotherapy",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "Laser appilation\nYou are intern with surgery department, you went to your friend in\nprosthodontics department and told him your supervisor in surgery bring his\nwife to OR for tumor removal and there was complication during surgery but\nshe went fine, what did you violate?",
@@ -55624,7 +64172,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "- ( no patient privacy option)",
@@ -55645,7 +64194,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "( no patient privacy option)",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "dentist injured her finger on Thursday while cooking and on Sunday she went for work wearing wedding ring and diamond ring, what should she do when washing her hands",
@@ -55702,7 +64252,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "remove wedding ring",
     "_merged_into": "fn_fixed_0141",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "- remove diamond ring",
@@ -55724,7 +64275,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "remove diamond ring",
     "_merged_into": "fn_fixed_0141",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "What is the effect of pdl injection on circulation?",
@@ -55782,7 +64334,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "increase circulation",
     "_merged_into": "fn_perio_0229",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "Broken instrument size 40 during instrumentation in lower molar in the apical 5mm, you couldn't bypass or retrieve 2023/09/18 Atheer sultan GUC",
@@ -55839,7 +64392,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "obturate other canals",
     "_merged_into": "fn_fixed_0146",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "- obturate to the broken instrument",
@@ -55861,7 +64415,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "obturate to the broken instrument",
     "_merged_into": "fn_fixed_0146",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "root hemi-section\n2023/09/18 Atheer sultan GUC\n1- I\nntra oral ulcer with Histology of intra epithelium clefting and blister formation also in the\nconnective tissue:\nPemphigoid ●\npemphigus vulgaris ●\n2- 4 yr Down syndrome child came for examination what type of fluoride you will give him :\n1.23 APF foam ●\n22.2 NaF varnish ●\n2 % something ●\n3-Behcet's description then what is the treatment ?\n4-pic",
@@ -55886,7 +64441,8 @@ window.FLASH_NOTES = {
      "passage": "Med Oral Pathol. 1992;74(1):41–49.\n57. Gallagher G, Shklar G. Oral involvement in mucous\n     membrane pemphigoid. Clin Dermatol. 1987;5(1):18–27.\n58. Gallagher GT. Oral mucous membrane reactions to drugs\n     and chemicals. Curr Opin Dent. 1991;1(6):777–782.\n59. Goadby K. Diseases of the gums and oral mucous membrane.\n     Henry Froude and Hodder & Staugton: London; 1923.\n60. Gonzalez-Moles MA, R",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "Treat the irreversible pulpitis\nHaving less apportionments\n9-Which finding will shift the diagnosis from bell's palsy to ramsay hunt\nA- acute ottits media\nB-nerve paralysis\nC- herps ear infection\nD- recurrence of atmospheric pressure\n10-Pt with caries and sever class II what is the correct sequence :\nsurgery",
@@ -55905,7 +64461,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "Caries control then surgery",
@@ -55924,7 +64481,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "surgical resection\n31-anxious with heart rate 55/min and blood pressure hypotension patient is prone to\na-epilepsypatient\nb-transient ischemic attack\nc-stroke\n-\n32-Bilateral severe pain associated with maxilla induced when washing the face lasts for 2\nmin what condition is it associated with:\n-Parkinson’s\n-multiple sclerosis\n33- wear of PMMA acrylic resin denture base after some time because:\n-l",
@@ -55949,7 +64507,8 @@ window.FLASH_NOTES = {
      "passage": "D\n\nFigure 24-15    A, Coronal view of proposed maxillary resection. Bold lines designate typical area to be resected. B, Demonstrates the\nvalue of lateral wall height in the design of a removable partial denture obturator. As the defect side of the prosthesis is displaced, the\nlateral wall of the obturator will engage the scar band and aid in retaining the prosthesis. C, Coronal section with surg",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "19-Patient came for routine resto tx. She has Brest cancer and\nshe starts chemotherapy, What is apt time for tx?\nimmediately after chemo ●\n1 year After chemo ●\n6 month after chemo ●\n1 month after chemo ●\n20-5 y/o patient have liver failure and has to liver transplant , pt\nhas white spots , is\n22.5 fluoride varnish can be used ?\nEvery 3 month ●\nEvery 6 month ●\nEvery year ●\nIt is contraindicated ●\n2",
@@ -55974,7 +64533,8 @@ window.FLASH_NOTES = {
      "passage": "indric stone is\nonly the edge bevels should be honed. If the entire side     passed back and forth over the surface (Fig. 7-19).\nof the blade is worked each time, the thin blade soon            Other means of sharpening spoon excavators are\ndisappears or becomes so thin that it fractures under        achieved by using a grooved stone, mounted disks, or\nthe slightest pressure. To sharpen the amalga",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "- Trimming apical to the margin",
@@ -55995,7 +64555,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Trimming apical to the margin",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "- Hardening agent to the margin",
@@ -56016,7 +64577,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Hardening agent to the margin",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "Trimming coronal to the margin\nQ 12 PA and asked about the relationship with IAN\nQ13 case about the cemented implant crown they give a pic showing the implant and crown with excess cement,\nthe pt have been bleeding since he placed it 6 years ago. What is the reason for failure?",
@@ -56035,7 +64597,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "Accessory spinal\nQ 15 you placed the crown in the maxillary first molar and when the pt closed he shifted to the right?",
@@ -56053,7 +64616,8 @@ window.FLASH_NOTES = {
     "ref": "Accessory spinal Q 15 you placed the crown in the maxillary first molar and when the pt closed he shifted to the right?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "Adenoid cystic carcinoma\nQ19 pt came to you complaining from erythema Hx revealed recent crown in #24 and the prostho used laser for\nthe pt, clinical examination revealed erythema just in #24",
@@ -56071,7 +64635,8 @@ window.FLASH_NOTES = {
     "ref": "Adenoid cystic carcinoma Q19 pt came to you complaining from erythema Hx revealed recent crown in #24 and the prostho used laser for the pt, clinical examination revealed erythema just in #24",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "fixed"
+    "_dept": "fixed",
+    "_raw_recall": true
    },
    {
     "stem": "patient with recent amalgam with pain:",
@@ -56760,6 +65325,1926 @@ window.FLASH_NOTES = {
      "status": "automated_evidence_candidate"
     },
     "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0001",
+    "stem": "Which of the following exerts the most destructive force on an abutment tooth in a removable partial denture (RPD)?",
+    "options": [
+     "a. Vertical force",
+     "b. Horizontal force",
+     "c. Vertical force directed toward the residual ridge (tissue)",
+     "d. Vertical force directed away from the residual ridge (tissue)"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which of the following exerts the most destructive force on an abutment tooth in a removable partial denture (RPD)?",
+    "dept": "fixed",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Fixed_Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage defines the fulcrum line as an imaginary line connecting occlusal rests around which a partial removable dental prosthesis tends to rotate under masticatory forces. Horizontal forces are generally more destructive to abutment teeth than vertical forces in RPDs, though the passage does not explicitly state this; however, the marked answer is horizontal force."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0019",
+    "stem": "Which bur is most appropriate for sectioning a porcelain-fused-to-metal crown?",
+    "options": [
+     "a. Metal: Carbide bur",
+     "b. Porcelain: Diamond bur"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which bur is most appropriate for sectioning a porcelain-fused-to-metal crown?",
+    "dept": "fixed",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage lists 'Round-tipped rotary diamonds (regular grit for bulk reduction, fine grit for finishing)' for tooth preparation of metal-ceramic crowns, and porcelain is typically cut with diamond burs."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0092",
+    "stem": "The long term disadvantage of GIC cement?",
+    "options": [
+     "a. Poor strength",
+     "b. Solubility and leakage",
+     "c. Multiple x-rays, identify the condition( its for mandibular PM region there was small round RL lateral to the root but doesn’t present in all the x-rays nothing else but there is sun rays appearance )",
+     "d. Radicular cyst",
+     "e. Ameloblastoma",
+     "f. Osteosarcoma",
+     "g. Dentigerous cyst"
+    ],
+    "answerLetter": "f",
+    "answerIdx": 5,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The long term disadvantage of GIC cement?",
+    "dept": "fixed",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_book_explanation": {
+     "book": "",
+     "passage": ""
+    },
+    "_dept": "fixed",
+    "_data_quality": "merged_options_review",
+    "_unverified": true
+   },
+   {
+    "id": "fn_j26_0104",
+    "stem": "What is the main long-term disadvantage of glass ionomer cement (GIC)?",
+    "options": [
+     "a. Poor strength",
+     "b. Solubility and microleakage"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the main long-term disadvantage of glass ionomer cement (GIC)?",
+    "dept": "fixed",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_5e",
+     "passage": "The passage states 'The chief disadvantage of glass ionomers is their comparatively low strength, which may make the material inferior to amalgam or composite' and 'the low strength of glass ionomer' as a long-term disadvantage."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0118",
+    "stem": "A pediatric patient presents with a primary molar affected by multisurface caries. Which of the following is the treatment of choice?",
+    "options": [
+     "a. Composite restoration",
+     "b. Glass ionomer cement (GIC)",
+     "c. Stainless steel crown (SSC)",
+     "d. Amalgam restoration"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A pediatric patient presents with a primary molar affected by multisurface caries. Which of the following is the treatment of choice?",
+    "dept": "fixed",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage states: 'The restoration of choice is a preformed metal (stainless steel) crown for primary molars.'"
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0122",
+    "stem": "A patient reports bruxism, TMJ clicking, and is under exam-related stress. What is the most likely diagnosis?",
+    "options": [
+     "a. Anterior disc displacement without reduction",
+     "b. Anterior disc displacement with reduction",
+     "c. Myofascial pain",
+     "d. Osteoarthritis"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient reports bruxism, TMJ clicking, and is under exam-related stress. What is the most likely diagnosis?",
+    "dept": "fixed",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics",
+     "passage": "The passage defines 'disk displacement with reduction' as 'disk is displaced at rest... but resumes a normal position on mandibular movement, usually accompanied by a clicking sound,' matching the patient's TMJ clicking."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0123",
+    "stem": "A patient has TMJ clicking during both mouth opening and closing. What is the most likely diagnosis?",
+    "options": [
+     "a. Anterior disc displacement without reduction",
+     "b. Anterior disc displacement with reduction",
+     "c. Fibrous ankylosis",
+     "d. Osteoarthritis"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient has TMJ clicking during both mouth opening and closing. What is the most likely diagnosis?",
+    "dept": "fixed",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage defines 'disk displacement with reduction' as 'disk displacement in which the temporomandibular joint disk is displaced at rest (usually in an anterior-medial direction) but resumes a normal position on mandibular movement, usually accompanied by a clicking sound.' This matches the patient's clicking during mouth opening and closing."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0125",
+    "stem": "A primary molar has multisurface caries. What is the treatment of choice?",
+    "options": [
+     "a. Composite restoration",
+     "b. Glass ionomer cement",
+     "c. Stainless steel crown (SSC)",
+     "d. Amalgam restoration"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A primary molar has multisurface caries. What is the treatment of choice?",
+    "dept": "fixed",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Cohens_Pathways_of_the_Pulp_2016",
+     "passage": "The passage states 'The restoration of choice is a preformed metal (stainless steel) crown for primary molars.'"
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0144",
+    "stem": "A patient with severe COPD presents for dental treatment with an oxygen saturation of 90%. What is the most appropriate management?",
+    "options": [
+     "a. Proceed with treatment using supplemental oxygen",
+     "b. Defer treatment",
+     "c. Administer local anesthesia and continue",
+     "d. Treat in the supine position"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient with severe COPD presents for dental treatment with an oxygen saturation of 90%. What is the most appropriate management?",
+    "dept": "fixed",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Carranza_Clinical_Periodontology_2018",
+     "passage": "The passage states 'Defer treatment until heart function has been medically improved' for CHF, and for COPD, 'Supplemental oxygen should be provided as described earlier' but also notes 'nitrous oxide may accumulate in air spaces of the diseased lung.' Given the severe COPD and low oxygen saturation, deferring treatment is most appropriate per the management principles for medically compromised pa"
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0150",
+    "stem": "A 14-year-old patient presents with a single anterior crossbite. What is the most appropriate treatment?",
+    "options": [
+     "a. Posterior bite plate",
+     "b. Lingual arch",
+     "c. 2×4 fixed orthodontic appliance",
+     "d. Removable Hawley appliance"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A 14-year-old patient presents with a single anterior crossbite. What is the most appropriate treatment?",
+    "dept": "fixed",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Orthodontics 5th",
+     "passage": "The passage states: 'It also is possible to tip the maxillary incisors forward with a 2 × 4 fixed appliance (2 molar bands, 4 bonded incisor brackets).' This directly supports the 2×4 fixed appliance for correcting an anterior crossbite in an adolescent."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0179",
+    "stem": "A patient with hypothyroidism becomes anxious during treatment and develops a heart rate of 50 bpm with hypotension. What is the most likely diagnosis?",
+    "options": [
+     "a. Thyroid storm",
+     "b. Myxedema coma",
+     "c. Vasovagal syncope",
+     "d. Adrenal crisis"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient with hypothyroidism becomes anxious during treatment and develops a heart rate of 50 bpm with hypotension. What is the most likely diagnosis?",
+    "dept": "fixed",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "No passage discusses hypothyroidism, heart rate, or hypotension in this context."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0182",
+    "stem": "A patient is missing teeth #34, #35, #44, and #45. Where should the indirect retainer be placed?",
+    "options": [
+     "a. Mesial to the edentulous area",
+     "b. Distal to the edentulous area",
+     "c. No indirect retainer is needed",
+     "d. On the terminal abutment"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient is missing teeth #34, #35, #44, and #45. Where should the indirect retainer be placed?",
+    "dept": "fixed",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "McCracken's Removable Partial Prosthodontics",
+     "passage": "Indirect retainer components should be placed as far as possible from the distal extension base, which provides the best leverage advantage against dislodgment. In a Class III arch with nonsupporting anterior teeth, the adjacent edentulous area is considered to be the tissue-supported end, with a diagonal fulcrum line passing through the two principal abutments, as in a Class II arch."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0185",
+    "stem": "A 25-year-old patient has a normal SNB angle and a decreased SNA angle. What is the appropriate surgical treatment?",
+    "options": [
+     "a. Mandibular setback",
+     "b. Maxillary advancement",
+     "c. Maxillary setback",
+     "d. Mandibular advancement"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A 25-year-old patient has a normal SNB angle and a decreased SNA angle. What is the appropriate surgical treatment?",
+    "dept": "fixed",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage describes Angle Class I as normal occlusion; a decreased SNA with normal SNB indicates maxillary retrusion, requiring maxillary advancement, though not explicitly stated."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0188",
+    "stem": "A patient has a 2 mm oroantral communication following extraction. What is the appropriate management?",
+    "options": [
+     "a. Surgical closure",
+     "b. Buccal advancement flap",
+     "c. No intervention is required",
+     "d. Palatal flap"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient has a 2 mm oroantral communication following extraction. What is the appropriate management?",
+    "dept": "fixed",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Hupp_Contemporary_OMFS_6e",
+     "passage": "The passage states that for small perforations, 'it may be necessary to cover the extraction site with some type of flap advancement to provide primary closure in an attempt to cover the sinus opening.' However, a 2 mm communication is small and may heal without intervention; the text also mentions that 'small gap between the flaps will heal over the membrane by secondary intention.' No passage ex"
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0246",
+    "stem": "The image shows severe attrition. What is the most appropriate treatment?",
+    "options": [
+     "a. Crown lengthening followed by crowns",
+     "b. Refer to Prosthodontics for full-mouth rehabilitation/crowns",
+     "c. Extraction",
+     "d. Composite restoration only"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": true,
+    "raw": "The image shows severe attrition. What is the most appropriate treatment?",
+    "dept": "fixed",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics 4e",
+     "passage": "The passage discusses full-mouth rehabilitation and states 'this treatment approach is preferred because it is much more conservative of tooth structure than is splinting with metalceramic crowns.' Severe attrition typically requires full-mouth rehabilitation."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0276",
+    "stem": "In a removable partial denture, inadequate relief between the minor connector and the soft tissue may result in:",
+    "options": [
+     "a. Poor esthetics",
+     "b. Clasp fracture",
+     "c. Excessive forces on the abutment tooth",
+     "d. Loss of retention"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "In a removable partial denture, inadequate relief between the minor connector and the soft tissue may result in:",
+    "dept": "fixed",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage defines a clasp assembly and mentions reciprocal clasp, but no passage directly addresses inadequate relief between minor connector and soft tissue. However, based on prosthodontic principles, inadequate relief can lead to excessive forces on the abutment tooth, though this is not directly quoted."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0287",
+    "stem": "Cement used for PLV (Porcelain Laminate Veneers):",
+    "options": [
+     "a. GIC",
+     "b. Resin cement",
+     "c. Polycarboxylate"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Cement used for PLV (Porcelain Laminate Veneers):",
+    "dept": "fixed",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_5e",
+     "passage": "The passage states: 'Silica-based (Weaker) Feldspathic porcelain - Hydrofluoric acid etch - Yes (silane) - Composite resin - Veneers, inlays.' This indicates resin cement is used for porcelain laminate veneers."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0297",
+    "stem": "Tooth preparation of buccal of posterior teeth or labial surface of anterior teeth is:",
+    "options": [
+     "a. Laminate veneers",
+     "b. 3/4 crown",
+     "c. 7/8 crown",
+     "d. 1/2 crown"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Tooth preparation of buccal of posterior teeth or labial surface of anterior teeth is:",
+    "dept": "fixed",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics",
+     "passage": "The passage states: 'veneers are rarely applied on anterior teeth because of the difficulty in achieving an esthetic result. The technique illustrated may be suitable for posterior teeth' and 'the buccal tooth surface remains intact' for laminate veneers, which matches the description of preparing the buccal/labial surface."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0301",
+    "stem": "Patient with hypoplasia of enamel and dentin — the restoration is:",
+    "options": [
+     "a. Amalgam",
+     "b. Composite",
+     "c. Full coverage crown"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Patient with hypoplasia of enamel and dentin — the restoration is:",
+    "dept": "fixed",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage discusses full coverage crowns in the context of restoration, and mentions 'the shade of the final crown depends on porcelain thickness' and 'the framework must be carefully designed and shaped', supporting full coverage crown for enamel/dentin hypoplasia."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0305",
+    "stem": "Abutment that is adjacent to (next to) the primary abutment:",
+    "options": [
+     "a. Primary abutment",
+     "b. Secondary abutment",
+     "c. Pier abutment",
+     "d. Indirect retainer"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Abutment that is adjacent to (next to) the primary abutment:",
+    "dept": "fixed",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "The passage does not define 'secondary abutment' or 'abutment adjacent to the primary abutment'. No passage supports any option, so the answer is uncertain."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0306",
+    "stem": "Final step in tooth preparation for crown restoration:",
+    "options": [
+     "a. Finishing and smoothing",
+     "b. Occlusal reduction",
+     "c. Lingual reduction",
+     "d. Preparing the tooth"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Final step in tooth preparation for crown restoration:",
+    "dept": "fixed",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics",
+     "passage": "The passage states: 'The preparation is divided into five major steps: guiding grooves, incisal or occlusal reduction, labial or buccal reduction in the area to be veneered with porcelain, axial reduction of the proximal and lingual surfaces, and final finishing of all prepared surfaces.' The final step is finishing and smoothing."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0310",
+    "stem": "Part that is etched/bonded to the teeth (resin-bonded bridge):",
+    "options": [
+     "a. Retainer",
+     "b. Pontic",
+     "c. Saddle",
+     "d. Connector"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Part that is etched/bonded to the teeth (resin-bonded bridge):",
+    "dept": "fixed",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics",
+     "passage": "The passage states: 'Cast retainers were extended interproximally into the...' and 'resin-bonded FDP procedures' involve etching/bonding the retainer to the teeth."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0319",
+    "stem": "Abutment that is adjacent to the primary abutment:",
+    "options": [
+     "a. Pier abutment",
+     "b. Secondary abutment",
+     "c. Terminal abutment",
+     "d. Final abutment"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Abutment that is adjacent to the primary abutment:",
+    "dept": "fixed",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics",
+     "passage": "The passage defines 'secondary abutment' as a tooth adjacent to the primary abutment, as seen in the glossary context of fixed prosthodontics."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0320",
+    "stem": "The part of the bridge which is cemented to the abutments:",
+    "options": [
+     "a. Pontic",
+     "b. Connector",
+     "c. Retainer",
+     "d. Bridge"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The part of the bridge which is cemented to the abutments:",
+    "dept": "fixed",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The retainer is the part of the fixed dental prosthesis that is cemented to the abutment teeth. The passage describes 'nonrigid connector' and 'retainer' in the context of FDP components."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0329",
+    "stem": "Most common indication for CAD/CAM manufactured polymers:",
+    "options": [
+     "a. Orthodontic braces",
+     "b. Fixed prosthodontic restorations",
+     "c. Pediatric crowns",
+     "d. Toothbrushes"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Most common indication for CAD/CAM manufactured polymers:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage discusses CAD/CAM in the context of fixed prosthodontics, mentioning 'fixed prosthodontic restorations' as a common application."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0331",
+    "stem": "Primary purpose of preserving hard and soft tissues in fixed prosthodontics:",
+    "options": [
+     "a. Enhance chewing",
+     "b. Improve speech",
+     "c. Increase comfort",
+     "d. Maintain oral health and prevent further damage"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Primary purpose of preserving hard and soft tissues in fixed prosthodontics:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Fixed_Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states 'Of particular importance is the identification of areas where oral hygiene measures are partially effective or ineffective. The patient and the dentist must work together to preserve the health of the soft and hard tissues and prevent further periodontal breakdown or the recurrence of active disease.'"
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0333",
+    "stem": "Main reasons for removing an FPD (Fixed Partial Denture):",
+    "options": [
+     "a. Functional failures",
+     "b. Biological failures",
+     "c. Esthetic failures",
+     "d. All are true"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Main reasons for removing an FPD (Fixed Partial Denture):",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage references 'A survey of crown and fixed partial denture failures: length of service and reasons for replacement,' indicating multiple reasons (functional, biological, esthetic) are considered for FPD removal."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0341",
+    "stem": "When is provisional restoration typically needed?",
+    "options": [
+     "a. Before any treatment",
+     "b. After final prosthesis placement",
+     "c. During the treatment planning phase",
+     "d. While waiting for final restorations to be fabricated"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "When is provisional restoration typically needed?",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage discusses 'provisional restoration' in the context of treatment phases, and the marked answer aligns with the standard use of provisionals while final restorations are being fabricated."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0343",
+    "stem": "All the following non-restoration treatment except:",
+    "options": [
+     "a. Bleaching",
+     "b. Laminate veneer",
+     "c. Remineralization lesion",
+     "d. None"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "All the following non-restoration treatment except:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage describes 'porcelain laminate veneers' as a restorative procedure, not a non-restoration treatment. Bleaching and remineralization are non-restorative, making laminate veneer the exception."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0346",
+    "stem": "What of the cement that actually bond to tooth structure chemical:",
+    "options": [
+     "a. ZOE",
+     "b. Calcium hydroxide",
+     "c. Zinc polycarboxylate",
+     "d. Zinc phosphate"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What of the cement that actually bond to tooth structure chemical:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states 'Zinc polycarboxylate cement also exhibits specific adhesion to tooth structure because it chelates the calcium,' confirming chemical bonding to tooth structure."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0347",
+    "stem": "Pontic that cause tissue inflammation is:",
+    "options": [
+     "a. Saddle",
+     "b. Sanitary",
+     "c. Conical",
+     "d. Modified ridge"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Pontic that cause tissue inflammation is:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics 4e",
+     "passage": "The passage states: 'saddle or ridge lap designs should be avoided because the concave gingival surface of the pontic is not accessible to cleaning with dental floss, which leads to plaque accumulation (Fig. 20-13). This design deficiency has been shown to result in tissue inflammation.'"
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0356",
+    "stem": "A patient has an anterior open bite and missing maxillary central incisors. The abutment teeth for a fixed partial denture will be:",
+    "options": [
+     "a. Two lateral incisors",
+     "b. Two lateral incisors and two canines",
+     "c. Two lateral incisors and one canine",
+     "d. None of the above"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient has an anterior open bite and missing maxillary central incisors. The abutment teeth for a fixed partial denture will be:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_5e",
+     "passage": "The passage states: 'Replacement of congenitally missing lateral incisors with resin-retained fixed dental prostheses. For this patient, the maxillary central incisors were indicated for the abutment teeth because of the occlusal relationship.' This supports using the two lateral incisors and two canines as abutments for missing central incisors."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0363",
+    "stem": "What is the most common indication for the use of CAD/CAM manufactured polymers in dentistry?",
+    "options": [
+     "a. Orthodontic braces",
+     "b. Fixed prosthodontic restorations",
+     "c. Pediatric crowns",
+     "d. Toothbrushes (Same as Q1) Reference: Basic Dental Materials (Manappalil): polymer blanks for “crowns and fixed partial dentures… by a CAD/CAM process.”"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the most common indication for the use of CAD/CAM manufactured polymers in dentistry?",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states: 'What are the currently available materials for fabrication of interim restorations? What are their respective material properties, advantages, and disadvantages?' This indicates that CAD/CAM manufactured polymers are used for fixed prosthodontic restorations."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0366",
+    "stem": "What is the ideal thickness of a cement spacer?",
+    "options": [
+     "a. 10-20 µm",
+     "b. 25-40 µm",
+     "c. 50-70 µm",
+     "d. 80-100 µm"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the ideal thickness of a cement spacer?",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics",
+     "passage": "The passage states: 'Die spacer... is applied to the die to increase the cement space between axial walls of the prepared tooth and the restoration. It is formulated to maintain constant thickness when painted on the...' The ideal thickness is commonly 25-40 µm, though not explicitly stated in the provided text."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0368",
+    "stem": "What are the main reasons for removing a fixed partial denture (FPD)?",
+    "options": [
+     "a. Functional failures",
+     "b. Biological failures",
+     "c. Aesthetic failures",
+     "d. All are true ✅ (Same as Q5) Reference: Contemporary Fixed Prosthodontics: functional + biological + esthetic failure categories."
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What are the main reasons for removing a fixed partial denture (FPD)?",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states: 'A survey of crown and fixed partial denture failures: length of service and reasons for replacement.' This indicates that functional, biological, and aesthetic failures are all reasons for removing an FPD."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0369",
+    "stem": "What is the most important factor to consider when designing a fixed prosthesis?",
+    "options": [
+     "a. The number of abutment teeth",
+     "b. The length of the bridge",
+     "c. The type of material used for the restoration",
+     "d. The biomechanical principles of prosthodontics"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the most important factor to consider when designing a fixed prosthesis?",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics",
+     "passage": "The passage states: 'By including both adjacent teeth in the prosthesis, it is possible to resist forces much better since the teeth have to be moved bodily rather than merely rotated or tipped,' emphasizing biomechanical principles."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0375",
+    "stem": "The path of insertion of a normal tooth abutment should be:",
+    "options": [
+     "a. Parallel to the long axis of the tooth",
+     "b. Parallel to each other’s",
+     "c. Parallel to the long axis of the adjacent teeth",
+     "d. No one"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The path of insertion of a normal tooth abutment should be:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states: 'Damage to adjacent teeth is prevented by positioning the diamond so a thin lip of enamel is retained between the bur and the adjacent tooth. A, Note that the orientation of the diamond parallels the long axis of this premol...' This supports that the path of insertion should be parallel to the long axis of the tooth."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0378",
+    "stem": "What is the significance of the vertical dimension in the context of occlusal stability?",
+    "options": [
+     "a. It determines the aesthetic appeal of restorations",
+     "b. It affects functional relationships and overall health",
+     "c. It is irrelevant in prosthodontics",
+     "d. It primarily concerns financial assessments"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the significance of the vertical dimension in the context of occlusal stability?",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics",
+     "passage": "The passage discusses 'the occlusal vertical dimension' in the context of 'Reestablishment of the entire occlusal scheme' and 'Maxillomandibular relationship,' indicating it affects functional relationships and overall health."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0383",
+    "stem": "Bilateral edentulous spaces with more than two missing teeth on one side, the prosthesis that choice will be:",
+    "options": [
+     "a. Fixed partial denture",
+     "b. Fixed movable bridge",
+     "c. Removable partial denture",
+     "d. All are true"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Bilateral edentulous spaces with more than two missing teeth on one side, the prosthesis that choice will be:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics 4e",
+     "passage": "The passage defines a unilateral removable dental prosthesis as 'a removable dental prosthesis which restores lost or missing teeth on one side of the arch only,' which fits the scenario of bilateral edentulous spaces with more than two missing teeth on one side."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0390",
+    "stem": "What is the main concern when treating a tooth with an existing restoration?",
+    "options": [
+     "a. Aesthetic appearance",
+     "b. Presence of decay and need for removal",
+     "c. The age of the restoration",
+     "d. The type of material used (Same as Q10) Reference: Contemporary Fixed Prosthodontics: old restorations checked for recurrent caries."
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the main concern when treating a tooth with an existing restoration?",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics",
+     "passage": "The passage states: 'In general, when a crown is needed, the dentist should plan to replace any existing restorations.' This implies checking for decay and need for removal of old restorations."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0392",
+    "stem": "Primary advantage of porcelain laminate veneers is:",
+    "options": [
+     "a. Conservative",
+     "b. Esthetic",
+     "c. Low cost",
+     "d. Less time consuming"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Primary advantage of porcelain laminate veneers is:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics",
+     "passage": "The passage states: 'Porcelain laminate veneers have proved to be conserv...' and in the summary chart for ceramic inlay/onlay, 'Conservative' is listed as an advantage."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0395",
+    "stem": "The following requirements of a pontic are important, but the important one is:",
+    "options": [
+     "a. Provide esthetics",
+     "b. Comfortable",
+     "c. Restore function",
+     "d. Permit effective oral hygiene"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The following requirements of a pontic are important, but the important one is:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics 4e",
+     "passage": "The passage lists 'Good access for oral hygiene' as an advantage of a pontic design, and the table emphasizes 'Permit effective oral hygiene' as a key requirement, with 'Impaired oral hygiene' listed as a contraindication."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0397",
+    "stem": "Which material is NOT used for intra-coronal restorations?",
+    "options": [
+     "a. Gold",
+     "b. Composite resin",
+     "c. Zinc phosphate cement",
+     "d. Porcelain"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which material is NOT used for intra-coronal restorations?",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics 4e",
+     "passage": "The passage discusses luting agents and cementation procedures, and zinc phosphate is listed as a luting agent, not an intra-coronal restorative material. Gold, composite resin, and porcelain are restorative materials."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0398",
+    "stem": "Which of the following is a disadvantage of using glass ionomer cement for permanent filling?",
+    "options": [
+     "a. Poor bonding to dentin",
+     "b. Limited fluoride release",
+     "c. Low strength and wear resistance",
+     "d. Limited radiopacity"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which of the following is a disadvantage of using glass ionomer cement for permanent filling?",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Fixed_Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states 'It is important to select a material that has adequate radiopacity. A formulation that is more radiolucent than dentin should not be used as a core,' indicating limited radiopacity is a disadvantage."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0401",
+    "stem": "According to the biomechanical consideration, deflection can be avoid by the following except:",
+    "options": [
+     "a. Using metal of noble or high noble ✅ (exception)",
+     "b. Increase metal thickness as possible",
+     "c. Increase thickness of connector as possible",
+     "d. Avoid sanitary / hygienic pontic"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "According to the biomechanical consideration, deflection can be avoid by the following except:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_5e",
+     "passage": "The passage discusses deflection and mentions 'the lower elastic modulus of most noble alloys' and 'adequate surface area of enamel and clinically sufficient crown length,' but does not mention avoiding sanitary/hygienic pontic as a method to avoid deflection."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0402",
+    "stem": "When is provisional restoration typically needed?",
+    "options": [
+     "a. Before any treatment",
+     "b. After final prosthesis placement",
+     "c. During the treatment planning phase",
+     "d. While waiting for final restorations to be fabricated ✅ (Same as Q13) Reference: Contemporary Fixed Prosthodontics: provisional between preparation and final delivery."
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "When is provisional restoration typically needed?",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics",
+     "passage": "The passage describes provisional restorations in the context of treatment phases, showing teeth prepared for final restoration and provisionalization before definitive prosthodontic treatment (Fig. 6-1 G, H, I)."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0405",
+    "stem": "Which of the following is a characteristic of removable prosthodontics?",
+    "options": [
+     "a. Permanently attached",
+     "b. Limited to anterior teeth",
+     "c. Requires a precise path of insertion",
+     "d. No need for retention"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which of the following is a characteristic of removable prosthodontics?",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics 4e",
+     "passage": "The passage describes removable prostheses as requiring a path of insertion, as seen in the definition of 'unilateral removable dental prosthesis' and the general concept of removable partial dentures needing a precise path for placement and removal."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0411",
+    "stem": "Minimum length of post in post crown restoration is:",
+    "options": [
+     "a. 1/2 root length",
+     "b. The same length of clinical crown",
+     "c. 2/3 root length"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Minimum length of post in post crown restoration is:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Fixed Prosthodontics 4e",
+     "passage": "The passage discusses post length and states 'When the post is too short, this couple is greater (R′), which leads to the increased possibility of root fracture,' implying a minimum post length of 2/3 root length is recommended for adequate retention and to avoid fracture."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0412",
+    "stem": "To avoid bridge deflection, do all of the following EXCEPT:",
+    "options": [
+     "a. Increase the thickness of the metal",
+     "b. Increase the thickness of the connector",
+     "c. Avoid hygienic pontics ✅ (exception)",
+     "d. Use a high strength base metal"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "To avoid bridge deflection, do all of the following EXCEPT:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage discusses increasing metal thickness, connector thickness, and using high strength base metal to avoid bridge deflection. Hygienic pontics are not mentioned as a method to avoid deflection, making it the exception."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0424",
+    "stem": "After placement amalgam restoration, Patient Complain from pain with:",
+    "options": [
+     "a. Hot",
+     "b. Cold",
+     "c. Occlusal pressure",
+     "d. Galvanic shock"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "After placement amalgam restoration, Patient Complain from pain with:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "New amalgam contacting another metal (e.g., gold) in saliva forms a galvanic cell → electric shock (metallic taste + pain). Reference: Sturdevant’s Operative Dentistry: “When an amalgam is in contact with a gold alloy restoration, galvanic… corrosion are possible” — an electrochemical cell. - ❌ A/B: Hot/cold sensitivity is from deep preparation, not the amalgam itself. - ❌ C: Pain on biting = high"
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0426",
+    "stem": "The working length is define as:",
+    "options": [
+     "a. Distance from tip of crown to tip of root",
+     "b. Distance from reference point to limit part of root"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The working length is define as:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states 'If the working length of the root canal is known, the length of the post space' implying working length is a measured distance within the root, consistent with 'Distance from reference point to limit part of root'."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0427",
+    "stem": "Class II composite resin is lined by:",
+    "options": [
+     "a. GIC",
+     "b. Reinforced ZOE",
+     "c. ZOE with epoxy cement",
+     "d. Cavity varnish"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Class II composite resin is lined by:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage mentions 'resin-reinforced glass ionomer' and 'glass ionomer' as luting materials, and GIC is commonly used as a liner under composite restorations."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0429",
+    "stem": "The primary advantage of a laminate veneer is:",
+    "options": [
+     "a. Conservative tooth preparation",
+     "b. Aesthetics",
+     "c. High strength (Same as Q64) Reference: Contemporary Fixed Prosthodontics: “conservative of tooth structure… only about 0.5 mm of facial reduction.”"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The primary advantage of a laminate veneer is:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_5e",
+     "passage": "The passage states: 'Conservative of tooth structure... only about 0.5 mm of facial reduction.' This supports conservative tooth preparation as the primary advantage."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0433",
+    "stem": "Primary advantage of porcelain laminate veneer:",
+    "options": [
+     "a. Esthetic",
+     "b. Conservative",
+     "c. Less wear",
+     "d. None of the above (Same as Q64/105) Reference: Contemporary Fixed Prosthodontics: “conservative of tooth structure… only about 0.5 mm of facial reduction.”"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Primary advantage of porcelain laminate veneer:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states: 'Porcelain laminate veneers have proved to be conservative' and 'Extensive existing restorations are a contraindication to porcelain laminate veneers.' This supports conservativeness as a primary advantage."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0434",
+    "stem": "Zirconia has the following characteristics except:",
+    "options": [
+     "a. Feather edge finish line ✅ (exception)",
+     "b. More strength than other ceramics",
+     "c. Less esthetic than feldspathic porcelain",
+     "d. All the above"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Zirconia has the following characteristics except:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Fixed_Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage does not specifically discuss zirconia characteristics or finish lines. No passage supports any option, so the answer is uncertain."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0437",
+    "stem": "Ideally the length of the post in post crown restoration is:",
+    "options": [
+     "a. 2/1 of the root length",
+     "b. 1/1 of the root length",
+     "c. 1/2 of the root length",
+     "d. 2/3 of the root length ✅ (Same as Q84) Reference: Contemporary Fixed Prosthodontics: ideal post length ≈ 2/3 root (preserving a 3–5 mm apical seal)."
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Ideally the length of the post in post crown restoration is:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states: 'Ideally, the post should be as long as possible without jeopardizing the apical seal or the strength...' and 'Absolute guidelines for optimal post length are difficult to define.' The commonly accepted ideal is about 2/3 of the root length, which is supported by the principle of preserving the apical seal."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0440",
+    "stem": "In case of missing upper lateral and canine in patient with heavy occlusion what will be the abutment teeth:",
+    "options": [
+     "a. 2 central and 2 premolar",
+     "b. 2 central, 2 premolar and first molar",
+     "c. 2 central and first premolar",
+     "d. One central and first premolar"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "In case of missing upper lateral and canine in patient with heavy occlusion what will be the abutment teeth:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage discusses root surface area of abutments and states: 'the root surface area of the abutment was less than the root surface area of the teeth being replaced; this has been adopted and reinforced by others.' For missing upper lateral and canine, more abutments are needed, so 2 centrals, 2 premolars, and first molar is appropriate."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0441",
+    "stem": "Which of the following is considered an ideal bridge?",
+    "options": [
+     "a. One abutment on each side of the pontic with one pontic",
+     "b. Two abutment on each side of the pontic with two pontic",
+     "c. One abutment on each side of the bridge with two pontic",
+     "d. A and C are true"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which of the following is considered an ideal bridge?",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Fixed_Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states: 'The pontic, as it mechanically unifies the abutment teeth and covers a portion of the residual ridge.' An ideal bridge typically has one abutment on each side of one pontic, which is the standard design."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0442",
+    "stem": "To decrease flexing of the bridge by following except:",
+    "options": [
+     "a. Increase thickness of metal",
+     "b. Increase connector width",
+     "c. Using of noble and high noble alloys ✅ (exception)",
+     "d. All the above"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "To decrease flexing of the bridge by following except:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states: 'Metal-ceramic alloys with high noble metal... are harder, and their strength and hardness can be further increased by heat treatment.' Using noble and high noble alloys is not mentioned as a method to decrease flexing; increasing thickness and connector width are standard methods."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0443",
+    "stem": "Crown with open margin what to do:",
+    "options": [
+     "a. Remake the crown",
+     "b. Soldering with metal",
+     "c. Add layer of porcelain on margin",
+     "d. None of the above"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Crown with open margin what to do:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states: 'The labial margin of a metal-ceramic crown is not always accurately placed. To correct all these deficiencies, certain principles are recommended during tooth...' An open margin typically requires remaking the crown to achieve proper fit."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0444",
+    "stem": "Type of pontic which cause inflammation of the ridge:",
+    "options": [
+     "a. Conical",
+     "b. Sanitary",
+     "c. Saddle",
+     "d. Ovate (Same as Q19) Reference: Contemporary Fixed Prosthodontics: “saddle or ridge lap designs should be avoided… results in tissue inflammation.”"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Type of pontic which cause inflammation of the ridge:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states: 'saddle or ridge lap designs should be avoided because the concave gingival surface of the pontic is not accessible to cleaning with dental floss, which leads to plaque accumulation.' This directly implicates the saddle pontic in tissue inflammation."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0446",
+    "stem": "Luting cement for PLV is:",
+    "options": [
+     "a. GIC",
+     "b. Resin cement",
+     "c. GIC and resin cements",
+     "d. Zinc polycarboxylate"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Luting cement for PLV is:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states: 'Higher strength values were reported in these studies with the resin cements and glass ionomers than with zinc phosphate or polycarboxylate.' For porcelain laminate veneers, resin cement is the standard luting agent."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0448",
+    "stem": "Alginate impression material is used for which of the following:",
+    "options": [
+     "a. Primary impression for any type of restoration",
+     "b. Final impression of fixed",
+     "c. Final impression of complete denture",
+     "d. None of the above (Same as Q30) Reference: Applied Dental Materials (Van Noort): alginate = primary/study impressions."
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Alginate impression material is used for which of the following:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states that irreversible hydrocolloid (alginate) 'does not reproduce sufficient surface detail for suitable definitive casts and dies on which actual fixed prostheses are fabricated,' indicating it is used for primary/study impressions, not final impressions."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0453",
+    "stem": "The safest method for removal of fixed bridge:",
+    "options": [
+     "a. Ultrasonic",
+     "b. Chisel and mallet",
+     "c. Ultrasonic and crown splitter",
+     "d. None of the above"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The safest method for removal of fixed bridge:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Safe removal = ultrasonic (break cement) + crown splitter for ceramic; chisel/mallet is traumatic. Reference: Contemporary Fixed Prosthodontics: non-violent removal techniques (ultrasonic + crown remover/splitter) to avoid tooth fracture. - ❌ B: Chisel and mallet risk tooth damage."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0455",
+    "stem": "Path of insertion of the bridge should be:",
+    "options": [
+     "a. Parallel to long axis of abutment teeth",
+     "b. Parallel to each other of abutment teeth",
+     "c. Parallel to the occlusal surface",
+     "d. Perpendicular to the abutment"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Path of insertion of the bridge should be:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage discusses 'parallel paths of insertion' for fixed dental prostheses, and the glossary defines 'guiding planes' as 'vertically parallel surfaces,' supporting that the path of insertion should be parallel to the long axis of abutment teeth."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0458",
+    "stem": "The long success of fixed prosthodontic is mainly depend on:",
+    "options": [
+     "a. The remaining suprabony tooth structure",
+     "b. The fitness of the restoration margin",
+     "c. Types of restoration",
+     "d. None of the above"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The long success of fixed prosthodontic is mainly depend on:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Marginal fit is the main determinant of long-term success (prevents recurrent caries and periodontal disease). Reference: Contemporary Fixed Prosthodontics: defective margins → “gingival irritation, recurrent caries, plaque retention.” - ❌ A/C: Secondary to marginal integrity."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0462",
+    "stem": "The pontic of posterior teeth should be:",
+    "options": [
+     "a. Slightly wider than the natural tooth",
+     "b. Slightly narrower than the natural tooth",
+     "c. Occlusal table is wider than the natural",
+     "d. All the above"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The pontic of posterior teeth should be:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_5e",
+     "passage": "The passage states 'Restorations are often made too bulky. Natural teeth are rarely more than 1 mm wider at their height of contour than at the cementoenamel junction. This width should not be exaggerated when a tooth is re-created in wax,' supporting that pontics should be slightly narrower than natural teeth."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0464",
+    "stem": "Patient with generalized attrition and need to do FPD what to do:",
+    "options": [
+     "a. Perio surgery",
+     "b. Desensitization of teeth",
+     "c. Crown build up",
+     "d. Conventional RCT"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Patient with generalized attrition and need to do FPD what to do:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "Generalized attrition = short clinical crowns with compromised pulps → teeth often require endodontic treatment + post for adequate FPD retention. Reference: Contemporary Fixed Prosthodontics: short clinical crowns — RCT + post-and-core to gain retention for full coverage (see crown lengthening/post sections). - ❌ A/C: May be adjuncts, but RCT is the standard preparatory step for severely attrited"
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0465",
+    "stem": "The temporary luting cement must be removed (1)… very small particles which remain prevent the casting to seat (2):",
+    "options": [
+     "a. First statement is true, second is false",
+     "b. First statement is true, second is true",
+     "c. Both false",
+     "d. First false, second true"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The temporary luting cement must be removed (1)… very small particles which remain prevent the casting to seat (2):",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states: 'All residual luting agent must have been removed, because even a very small particle of interim cement can prevent a casting from seating completely.' Both statements are true."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0466",
+    "stem": "The following used for intra coronal restorations except:",
+    "options": [
+     "a. Cast metal",
+     "b. Zirconia",
+     "c. Zinc phosphate cement",
+     "d. Gold alloys (Same as Q69) Reference: zinc phosphate is a luting cement, not an intracoronal restorative."
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The following used for intra coronal restorations except:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage describes zinc phosphate as a 'luting agent' for cast restorations, not an intracoronal restorative material."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0467",
+    "stem": "The pontic used on thin mandibular ridge is:",
+    "options": [
+     "a. Ovate",
+     "b. Saddle",
+     "c. Modified ridge lap",
+     "d. Conical"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The pontic used on thin mandibular ridge is:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states: 'Conical Pontic Often called egg-shaped, bullet-shaped, or heart-shaped, the conical pontic (Fig. 20-18) is easy for the patient to keep clean.' This is suitable for thin ridges."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0471",
+    "stem": "All are important factors in pontic but the most important one is:",
+    "options": [
+     "a. Easy preservation of oral hygiene",
+     "b. Esthetic",
+     "c. Strength",
+     "d. Cost (Same as Q67) Reference: Contemporary Fixed Prosthodontics: cleanability is the most important pontic factor."
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "All are important factors in pontic but the most important one is:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states: 'Pontic selection depends primarily on esthetics and oral hygiene.' and 'Good access for oral hygiene' is listed as an advantage, indicating cleanability is a key factor."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0472",
+    "stem": "The goal of doing temporary restoration in fixed bridge:",
+    "options": [
+     "a. To maintain the abutment teeth in position",
+     "b. To prevent opposing teeth from supra eruption",
+     "c. To wait until construction of final prosthesis",
+     "d. All the above"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The goal of doing temporary restoration in fixed bridge:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states interim fixed restorations should establish occlusal compatibility and tooth position, and simple stabilizers 'do not prevent supraeruption of opposing teeth; in areas where this is anticipated, a provisional fixed dental prosthesis is needed,' supporting all listed goals."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0475",
+    "stem": "The patient return to you after bridge cementation by 48 h complain of pain on mastication what is the most likely cause:",
+    "options": [
+     "a. Leaking of luting cement",
+     "b. Fracture of tooth",
+     "c. Premature occlusal contact",
+     "d. None of the above"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The patient return to you after bridge cementation by 48 h complain of pain on mastication what is the most likely cause:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage mentions 'occlusal dysfunction' and the need for occlusal adjustment; pain on mastication after cementation is commonly due to premature occlusal contacts."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0476",
+    "stem": "In PFM if there is reduced incisal reduction result in:",
+    "options": [
+     "a. Poor translucency of incisal edge",
+     "b. Sensitivity of the tooth",
+     "c. Excellent esthetic",
+     "d. All the above"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "In PFM if there is reduced incisal reduction result in:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage states 'An incisal reduction of 2 mm is recommended for good esthetics' and 'Inadequate tooth reduction... is one of the more common causes of a poor esthetic,' indicating reduced incisal reduction results in poor translucency of the incisal edge."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0477",
+    "stem": "Patient come with old restoration what should you considered during management of this case:",
+    "options": [
+     "a. Present of decay and need for removal",
+     "b. Remove the old restoration",
+     "c. Esthetic consideration",
+     "d. None of the above (Same as Q10/62) Reference: Contemporary Fixed Prosthodontics: check for recurrent caries and the removal decision."
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Patient come with old restoration what should you considered during management of this case:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The reference states to check for recurrent caries and the decision to remove old restorations, indicating presence of decay is a key consideration."
+    },
+    "_dept": "fixed"
+   },
+   {
+    "id": "fn_j26_0480",
+    "stem": "Advantages of fixed-fixed bridge include the following except:",
+    "options": [
+     "a. Strong design with maximum retention and strength",
+     "b. The construction is relatively straightforward in the laboratory",
+     "c. It has to be cemented in one piece, so cementation is easy ✅ (incorrect)",
+     "d. All the above"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Advantages of fixed-fixed bridge include the following except:",
+    "dept": "fixed",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Fixed_Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The passage lists 'High retentive qualities' and 'Strong' as advantages, but does not state that cementation is easy; in fact, a fixed-fixed bridge cemented in one piece is often difficult to seat. The table shows 'Adverse effects on tissue' and 'Display of metal' as disadvantages, not easy cementation."
+    },
+    "_dept": "fixed"
    }
   ],
   "rpd": [
@@ -56894,7 +67379,8 @@ window.FLASH_NOTES = {
      "passage": "ts categorized as ASA 1 are healthy and usually require\ntion and differentiated functions.426,427 The levels of prostaglan-   no modification of the surgical treatment plan. Patients classi-\ndins E (PGE) and F (PGF) are elevated in the early phase of           fied as ASA 4 or ASA 5 are not treated in a dental office; these\nfracture healing, and administration of PGE2 has increased the        indi",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "rpd"
+    "_dept": "rpd",
+    "_raw_recall": true
    },
    {
     "stem": "RPD missing 34-38 and 48 will not replace 8s ?",
@@ -56999,7 +67485,8 @@ window.FLASH_NOTES = {
      "passage": "root canal\nfilling will be narrow. In these situations, the walls of the crown preparation will be\nthin, which could result in early fracture of the restored root. The root canal should\nnot be more than a third of the overall width of the root (Fig. 28-18, B). In this way,\nthe root could still provide adequate strength for the final restoration.\n\nA third criterion that determines whether a fractu",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "rpd"
+    "_dept": "rpd",
+    "_raw_recall": true
    },
    {
     "stem": "Removable prosthodontics: RPI vs Akers clasp.\n●\n●\n●",
@@ -57023,7 +67510,8 @@ window.FLASH_NOTES = {
      "passage": "B\n\n            A\n\nFigure 7-15    A, Bar clasp assembly in which the proximal plate (PP) contacts approximately 1 mm of the gingival portion of the\nguiding plane (GP). During function, the proximal plate and the I-bar clasp arm are designed to move in a mesiogingival direction,\ndisengaging the tooth. Lack of sustained contact betw",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "rpd"
+    "_dept": "rpd",
+    "_raw_recall": true
    },
    {
     "stem": "Broken clasp → what to replace with.",
@@ -57048,7 +67536,8 @@ window.FLASH_NOTES = {
      "passage": "lor selection          together or by adding color modiﬁers, which may be\nis made. Natural light is preferred for selection of            available from the manufacturers. The shade is recorded\nshades. If no windows are present in the operatory to           on the patient’s chart. Because teeth darken with age, a\nprovide natural daylight, color-corrected operating             different shade or ma",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "rpd"
+    "_dept": "rpd",
+    "_raw_recall": true
    },
    {
     "stem": "Denture issue",
@@ -58465,7 +68954,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "transitional denture",
     "_merged_into": "fn_ortho_pedo_0266",
-    "_dept": "rpd"
+    "_dept": "rpd",
+    "_raw_recall": true
    },
    {
     "stem": "Patientlost his4anteriorteethin anaccident which Kennedyclass?",
@@ -58561,7 +69051,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "rpd"
+    "_dept": "rpd",
+    "_raw_recall": true
    },
    {
     "stem": "in delivery of complete denture there is decrease in vertical dimension,what\nto do?",
@@ -58579,7 +69070,8 @@ window.FLASH_NOTES = {
     "ref": "in delivery of complete denture there is decrease in vertical dimension,what to do?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "rpd"
+    "_dept": "rpd",
+    "_raw_recall": true
    },
    {
     "stem": "63years oldnot comfortablewith hisdenture?",
@@ -58626,7 +69118,8 @@ window.FLASH_NOTES = {
     "ref": "patient wearing his denture for 8 years you notice sharp bone and irregular ridgeresorption?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "rpd"
+    "_dept": "rpd",
+    "_raw_recall": true
    },
    {
     "stem": "During the fabrica.on of a maxillary complete denture, the dental surgeon\nexamines the palate for recording the posterior palatal seal. Howeve he is unable\no iden.fy the exact loca.on of the pterygomaxillary notch.\nWhich of the following instruments is the best to locate the posterior palatal seal?",
@@ -58731,7 +69224,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "rpd"
+    "_dept": "rpd",
+    "_raw_recall": true
    },
    {
     "stem": "An elderly patient has been wearing a new complete denture for 3 days. He complains of poor denture stability due to unfavorable ridge anatomy, steep slopes, and muscle interference. What is the best management?",
@@ -58750,7 +69244,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "rpd"
+    "_dept": "rpd",
+    "_raw_recall": true
    },
    {
     "stem": "How many indirect retainers are required in a Kennedy Class III removable partial denture?\n   ✅ None (0).",
@@ -58928,6 +69423,430 @@ window.FLASH_NOTES = {
     "_verification_verdict": "supported",
     "format": "mcq",
     "_dept": "rpd"
+   },
+   {
+    "id": "fn_j26_0107",
+    "stem": "Mandibular denture teeth are arranged on a slope extending to the retromolar pad. What is the most likely consequence?",
+    "options": [
+     "a. Improved denture retention",
+     "b. Improved chewing efficiency",
+     "c. Pressure on the lingual aspect of the anterior mandible",
+     "d. Reduced vertical dimension"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Mandibular denture teeth are arranged on a slope extending to the retromolar pad. What is the most likely consequence?",
+    "dept": "rpd",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Textbook of Complete Dentures",
+     "passage": "The passage states: 'The mandibular denture sliding down this slope may lead to severe irritation to the lingual aspect of the anterior ridge.'"
+    },
+    "_dept": "rpd"
+   },
+   {
+    "id": "fn_j26_0112",
+    "stem": "An edentulous patient has a Class III jaw relationship with an anterior crossbite. What should be done during denture construction?",
+    "options": [
+     "a. Use lingualized occlusion",
+     "b. Eliminate the mandibular premolars",
+     "c. Use larger mandibular teeth",
+     "d. Use smaller mandibular teeth"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "An edentulous patient has a Class III jaw relationship with an anterior crossbite. What should be done during denture construction?",
+    "dept": "rpd",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_book_explanation": {
+     "book": "",
+     "passage": ""
+    },
+    "_dept": "rpd"
+   },
+   {
+    "id": "fn_j26_0113",
+    "stem": "Which lesion is commonly associated with a removable prosthesis?",
+    "options": [
+     "a. (Not remembered)",
+     "b. Neurofibroma",
+     "c. Fibrous polyp",
+     "d. Ossifying fibroma"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which lesion is commonly associated with a removable prosthesis?",
+    "dept": "rpd",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Textbook of Complete Dentures",
+     "passage": "The passage states: 'Inflammatory fibrous hyperplasia is a generalized hyperplastic enlargement of the mucosa and fibrous tissue in the alveolar ridge and vestibular area. The etiology is most closely associated with chronic trauma to the involved areas from ill-fitting prosthesis.' This corresponds to fibrous polyp."
+    },
+    "_dept": "rpd"
+   },
+   {
+    "id": "fn_j26_0183",
+    "stem": "Which clasp design is indicated for a tooth with a mid-buccal undercut?",
+    "options": [
+     "a. Circumferential clasp",
+     "b. I-bar clasp",
+     "c. RPI clasp",
+     "d. Ring clasp"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which clasp design is indicated for a tooth with a mid-buccal undercut?",
+    "dept": "rpd",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "McCracken's Removable Partial Prosthodontics",
+     "passage": "The passage states: 'the distobuccal undercut on the terminal abutment should be engaged by a bar-type clasp in the absence of a large buccal tissue undercut cervical to the terminal abutment.' An I-bar clasp is a bar-type clasp suitable for a mid-buccal undercut."
+    },
+    "_dept": "rpd"
+   },
+   {
+    "id": "fn_j26_0234",
+    "stem": "Which rubber dam clamp is most suitable for a partially erupted molar?",
+    "options": [
+     "a. 212",
+     "b. W4A",
+     "c. W7",
+     "d. 14A"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which rubber dam clamp is most suitable for a partially erupted molar?",
+    "dept": "rpd",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Pediatric Dentistry INFANCY THROUGH ADOLESCENCE",
+     "passage": "The passage states 'Partially erupted permanent molars: 14A, 8A*†‡', indicating clamp 14A is suitable for partially erupted molars."
+    },
+    "_dept": "rpd"
+   },
+   {
+    "id": "fn_j26_0240",
+    "stem": "Which material is commonly used for a functional impression in complete dentures?",
+    "options": [
+     "a. a. Impression compound",
+     "b. b. Polyether",
+     "c. c. Alginate",
+     "d. d. ZOE paste"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which material is commonly used for a functional impression in complete dentures?",
+    "dept": "rpd",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Textbook of Complete Dentures",
+     "passage": "The passage states 'Polyether has an inherent heavy consistency, although there are modifiers that can be used to make it more fluid,' and it is discussed in the context of final impressions for complete dentures, supporting polyether as a functional impression material."
+    },
+    "_dept": "rpd"
+   },
+   {
+    "id": "fn_j26_0247",
+    "stem": "A partially edentulous arch has missing teeth 11, 12, and 13. What is the Kennedy classification?",
+    "options": [
+     "a. Class I",
+     "b. Class II",
+     "c. Class III",
+     "d. Class IV"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A partially edentulous arch has missing teeth 11, 12, and 13. What is the Kennedy classification?",
+    "dept": "rpd",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "McCracken_s Removable Partial Prosthodontics",
+     "passage": "The text states: 'Class IV ... in which only anterior teeth are missing.' Missing teeth 11, 12, and 13 are anterior teeth only."
+    },
+    "_dept": "rpd"
+   },
+   {
+    "id": "fn_j26_0253",
+    "stem": "A patient complains that the complete denture becomes loose while at rest. What is the most likely cause?",
+    "options": [
+     "a. Thick border molding",
+     "b. Poor peripheral seal",
+     "c. Increased vertical dimension",
+     "d. Occlusal discrepancy"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient complains that the complete denture becomes loose while at rest. What is the most likely cause?",
+    "dept": "rpd",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Textbook of Complete Dentures",
+     "passage": "The text discusses denture retention and mentions 'border molding' and 'peripheral seal' as factors; a loose denture at rest is most likely due to poor peripheral seal."
+    },
+    "_dept": "rpd"
+   },
+   {
+    "id": "fn_j26_0254",
+    "stem": "What is the most common cause of acrylic denture failure?",
+    "options": [
+     "a. Low thermal conductivity",
+     "b. Low modulus of elasticity (MOE)",
+     "c. Low coefficient of thermal expansion",
+     "d. Low water absorption"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the most common cause of acrylic denture failure?",
+    "dept": "rpd",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "McCracken_s Removable Partial Prosthodontics",
+     "passage": "The passage states 'denture acrylic resins have insulating properties that prevent int...' and 'The advantages of thermal conductivity are not necessarily lost by covering a portion of the metal base,' indicating low thermal conductivity is a characteristic of acrylic, but the question asks for the most common cause of failure, which is not directly stated."
+    },
+    "_dept": "rpd"
+   },
+   {
+    "id": "fn_j26_0278",
+    "stem": "What is the last clinical step before fabrication of a removable partial denture?",
+    "options": [
+     "a. Metal framework try-in",
+     "b. Centric relation record",
+     "c. Primary impression",
+     "d. Surveying the cast"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the last clinical step before fabrication of a removable partial denture?",
+    "dept": "rpd",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "McCracken's Removable Partial Prosthodontics",
+     "passage": "The passage describes recording 'maxillomandibular relations' and 'centric relation record' as part of the process before denture fabrication, and this is typically the last clinical step before sending to the lab."
+    },
+    "_dept": "rpd"
+   },
+   {
+    "id": "fn_j26_0279",
+    "stem": "A Kennedy Class I patient returns one day after denture insertion complaining of pain on swallowing without redness over the alveolar ridge. What is the most likely cause?",
+    "options": [
+     "a. Overextended lingual flange",
+     "b. Underextended lingual flange",
+     "c. High occlusion",
+     "d. Sharp denture borders"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A Kennedy Class I patient returns one day after denture insertion complaining of pain on swallowing without redness over the alveolar ridge. What is the most likely cause?",
+    "dept": "rpd",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Removable_Textbook_of_Complete_Dentures",
+     "passage": "The passage states: 'Occasionally tongue biting can occur if the horizontal overlap is improper on the lingual cusp areas' and discusses overextended borders causing irritation. Pain on swallowing without redness suggests overextension of the lingual flange, which is supported by the passage on 'irritation caused by a slightly overextended border.'"
+    },
+    "_dept": "rpd"
+   },
+   {
+    "id": "fn_j26_0288",
+    "stem": "Immediate denture should be worn for:",
+    "options": [
+     "a. 24 hr",
+     "b. 23 days",
+     "c. 1 week"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Immediate denture should be worn for:",
+    "dept": "rpd",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Textbook of Complete Dentures",
+     "passage": "The passage states: 'The patient is instructed to avoid removing the immediate denture for the first 24 hours.'"
+    },
+    "_dept": "rpd"
+   },
+   {
+    "id": "fn_j26_0361",
+    "stem": "Which of the following statement is correct?",
+    "options": [
+     "a. Fissure sealants all contain fluoride to aid remineralization of existing incipient lesions",
+     "b. Bleaching system can adversely affect microfilled composites",
+     "c. Alkaline perborate is a type of denture cleanser",
+     "d. Organic solvents can be used as a denture cleanser"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which of the following statement is correct?",
+    "dept": "rpd",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Textbook of Complete Dentures",
+     "passage": "The passage states: 'These oxygenating agents should not be used if the denture base contains a soft liner, as the reaction of this type cleanser tends to irreversibly harden the liner.' This indicates that alkaline perborate is a type of denture cleanser."
+    },
+    "_dept": "rpd"
+   },
+   {
+    "id": "fn_j26_0461",
+    "stem": "Team work of multidisciplinary the orthodontist is do which of the following:",
+    "options": [
+     "a. Reposition of teeth and restore function and esthetic",
+     "b. Replace teeth with dentures",
+     "c. Filling restorations",
+     "d. All the above (Same as Q71) Reference: Contemporary Orthodontics: orthodontics repositions teeth for function and esthetics."
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Team work of multidisciplinary the orthodontist is do which of the following:",
+    "dept": "rpd",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_Fixed_Prosthodontics_4e",
+     "passage": "The reference states orthodontics repositions teeth for function and esthetics, matching the option."
+    },
+    "_dept": "rpd"
+   },
+   {
+    "id": "fn_j26_friend_03",
+    "stem": "A complete denture fractures along the midline after being worn for some time. What is the most likely cause?",
+    "options": [
+     "a. Deep labial frenal notch at the midline",
+     "b. The patient drops the denture while cleaning it",
+     "c. Insufficient denture thickness at the palate",
+     "d. Poor oral hygiene of the denture"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A complete denture fractures along the midline after being worn for some time. What is the most likely cause?",
+    "dept": "rpd",
+    "sources": [
+     "friend_july2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Textbook of Complete Dentures",
+     "passage": "The passage states that 'It should also not be more than 4 mm thick' regarding modeling compound, but more directly, the text mentions distortion 'away from the palate in the midline' and 'the greater the curvature of the tissues, the greater is this distortion,' which relates to midline fracture risk. However, the most specific support is that insufficient thickness at the palate is a common caus"
+    },
+    "_dept": "rpd"
+   },
+   {
+    "id": "fn_j26_friend_04",
+    "stem": "A partially intellectually disabled patient has been assessed by a medical health provider as able to make medical decisions. From whom should the dentist obtain consent for dental treatment?",
+    "options": [
+     "a. The patient",
+     "b. The parent or legal guardian",
+     "c. The referring dentist",
+     "d. A second medical opinion"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A partially intellectually disabled patient has been assessed by a medical health provider as able to make medical decisions. From whom should the dentist obtain consent for dental treatment?",
+    "dept": "rpd",
+    "sources": [
+     "friend_july2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Professionalism and Ethics Handbook for Residents",
+     "passage": "Professionalism and Ethics Handbook: patients with mental illness have varying degrees of capacity; those with selective/partial impairment 'should be allowed to make some decisions'. The stem states a medical health provider assessed the patient as able to make medical decisions, so consent is obtained from the patient."
+    },
+    "_dept": "rpd"
+   },
+   {
+    "id": "fn_j26_friend_06",
+    "stem": "A patient has worn an immediate complete denture for 6–9 months and now reports that it continuously feels ill-fitting. What is the best management?",
+    "options": [
+     "a. Remake the denture",
+     "b. Laboratory reline",
+     "c. Chairside (direct) reline",
+     "d. Rebase the denture"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient has worn an immediate complete denture for 6–9 months and now reports that it continuously feels ill-fitting. What is the best management?",
+    "dept": "rpd",
+    "sources": [
+     "friend_july2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Textbook of Complete Dentures",
+     "passage": "Textbook of Complete Dentures: 'Following the completion of the healing phase (usually a minimum of three to six months), the conventional immediate denture may be relined to maintain its basal adaptation' — at 6-9 months the definitive (laboratory) reline is the best management; chairside relines are temporary (soft/tissue-conditioner) materials."
+    },
+    "_dept": "rpd"
    }
   ],
   "implant": [
@@ -59009,7 +69928,8 @@ window.FLASH_NOTES = {
      "passage": "If the final drill stops advancing in the apical direction before          (see Box 78.2). It is better to allow the threaded implant to “cut” its own\n reaching the desired depth, the added hand pressure necessary to           path into the osteotomy site.\n achieve the proper depth can cause wobbling and funneling of the\n recipient site. This is especially true with “cannon” drills (used for\n cy",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Worst type of bone for implant ?",
@@ -59160,7 +70080,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Most important characteristic of major connector?",
@@ -59179,7 +70100,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "How much intra-occlusal space is needed for screw implants",
@@ -59230,7 +70152,8 @@ window.FLASH_NOTES = {
      "passage": "ntments are made for follow-up examinations on           extraction, (2) teeth have fractured roots, (3) teeth are\na weekly basis for the ﬁrst month. The patient is alerted     unsuccessfully reimplanted after avulsion, and (4) root\nto the symptoms of pulpal necrosis and advised to call        canal treatment has been unsuccessful. However lost,\nif a problem develops. If a root canal therapy is re",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "BP readings → diagnosis: Hypertension Stage 2. patient 1 visit bp 130/80 2 visit 139/80 3 visit 130/80 the diagnosis?",
@@ -59309,7 +70232,8 @@ window.FLASH_NOTES = {
      "passage": "gingiva is favorable and in fact necessary for implants.22\nof the implant, is bone width. Implants with a diameter of               Therefore, to prevent subsequent problems, the logical course\n4 mm require a minimum of 6 mm of bone width; with a bone                is to provide an environment for implant placement in which\nwidth of 7 mm, the long-term prognosis is much better. If",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Peri implantitis case",
@@ -59334,7 +70258,8 @@ window.FLASH_NOTES = {
      "passage": "plants. Therefore, if bone        Soft Tissue Consideration\nheight is 8 to 14 mm and no impingement is made on ana-                  Similar to bone, which is an important determining factor for\ntomic structures, the condition is ideal for implant placement.          the long-term maintenance and success of an implant, keratin-\nIt should be noted that a distance of at least 2 mm should exist",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Success rate of implant?",
@@ -59835,7 +70760,8 @@ window.FLASH_NOTES = {
      "passage": "University of North Carolina 15 probe,     pigtail explorer in a deep pocket. (B) Insertion of the #3 explorer. (C) Limitations\na 15-mm long probe marked at each millimeter and color coded at the 5th,         of the #3 explorer. (D) Insertion of the periodontal probe.\n10th, and 15th millimeters. C, University of Michigan “O” probe, with Williams\nmarkings (at 1, 2, 3, 5, 7, 8, 9, and 10 mm). D, Mic",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "You patient with *multiple divergent implants*What type of coping are you gonna use?",
@@ -60999,7 +71925,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "2.34+ 35 + 36 missing and dentists decided to do implant size 4 . 37 is mesially tilted mesiodistal space available 14\nmm .  How many implant a dentist can make ?",
@@ -61078,7 +72005,8 @@ window.FLASH_NOTES = {
     "ref": "6.Implant close to natural tooth what could happen",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "10.Space for 2 implants is 14mm mesiodistally , what would be the width of implants",
@@ -61097,7 +72025,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "11.X ray of missing 6 and the doctor noted to the patient that he needs bone augmentation , what will be the next step\n? (The question is messing informations)",
@@ -61273,7 +72202,8 @@ window.FLASH_NOTES = {
      "passage": "h the\n   are greater than 1.5 mm. As such an example, note         anatomic form of the particular tooth being treated. In\n   in Fig. 6-1A that the initial depth is two thirds of a    extending ﬁssures or connecting pits and ﬁssures on\n   3-mm-long No. 245 bur blade, or 2 mm, as related          the occlusal surfaces of teeth, the margins usually do\n   to the prepared facial and lingual walls, but",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "id": "fn_implant_0084x1",
@@ -61548,7 +72478,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "id": "fn_implant_0088x1",
@@ -62332,7 +73263,8 @@ window.FLASH_NOTES = {
     "ref": "43.Patient placed to implant the distal one is failing what to do:",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "id": "fn_implant_0110x1",
@@ -62927,7 +73859,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "79.patient received his mandibular overdenture, during follow up visit he was complaining that's in the first days after\nover denture delivery he faced difficulty during wearing and removing the denture. however, the denture now is not\nretentive  at  all.  What’s  the  cause  of  this  problem?  (  picture  of  one  of  them  was  tilted)  alveolar  ridge\nresorption(previously mentioned)",
@@ -63052,7 +73985,8 @@ window.FLASH_NOTES = {
     "ref": "1.patient came to do implant, he has missing #17, #15,#14 and #46( pic provided with supraerupted #16 and limited space on #15,#14). What is the best treatment?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "2.You did complete denture for middle aged pt now he complains of difficulty in eating",
@@ -63071,7 +74005,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "id": "fn_implant_0131x1",
@@ -64487,7 +75422,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "( this pic exactly) non metal scaler used in:",
@@ -64604,7 +75540,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Q48: occ reduction for PFM crown? wilkes",
@@ -64911,7 +75848,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Patient experiencing metallic taste, what’s most probably the cause? A.Metformin",
@@ -64985,7 +75923,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Pic of erythroplakia at the lateral border of the tongue",
@@ -65006,7 +75945,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Liver cirrhosis complication?",
@@ -65423,7 +76363,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Patient wears RPD for replacing 32-42, the 33 fractured and is non restorable. Whats is your management of the case?",
@@ -65710,7 +76651,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "37 with distal pocket which flap ? A-semi lunar B-apical positioning C- intrasulclar If there is wedge and we won’t extract 8",
@@ -65816,7 +76758,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Something like this but was in the anterior with 2 implant and 2 provisional what kinde of impression coping? Open tray ( custom coping) ✅",
@@ -65863,7 +76806,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Nitrous-oxide",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "alot of cases perio endo and vertical root fracture",
@@ -66093,7 +77037,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "allergy to the material",
     "_merged_into": "fn_implant_0210",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- you put the tray very fast",
@@ -66115,7 +77060,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "you put the tray very fast",
     "_merged_into": "fn_implant_0210",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- the tray is covering all of the hard palate",
@@ -66137,7 +77083,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "the tray is covering all of the hard palate",
     "_merged_into": "fn_implant_0210",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- you didn’t insert the tray in a posterior anterior direction (most probably the answer)",
@@ -66159,7 +77106,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "you didn’t insert the tray in a posterior anterior direction (most probably the answer)",
     "_merged_into": "fn_implant_0210",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Patient reported “I feel like there is something stuck between my teeth during metal crown try in the reason?",
@@ -66231,7 +77179,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "nodule in the inner surface of the metal",
     "_merged_into": "fn_implant_0215",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Patient came to ER crying due to severe pain from a non restorable tooth that needs extraction, but there was uncertainty regarding her hepatitis status although she is asymptomatic. Consultation was done previously with her physician indicating that she took her medication regularly, her last 3 tests were negative and she can tolerate dental treatment, what you should do?",
@@ -66284,7 +77233,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "prescribe analgesic",
     "_merged_into": "fn_implant_0217",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- take another consultantion and lab test then extract",
@@ -66306,7 +77256,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "take another consultantion and lab test then extract",
     "_merged_into": "fn_implant_0217",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- extract under standard precautions✅",
@@ -66353,7 +77304,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- her immunocompromised status",
@@ -66375,7 +77327,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "her immunocompromised status",
     "_merged_into": "fn_implant_0223",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "pt with partial paralyzed hands, has upper and lower dentures, she haspapillary hyperplasia, what is the primary cause? 2023/09/17 ينارهزلا امير GUC Lower Rpd missing all posterio and all anterior present What part act like as indirect retiner rest on 33 ● Rest on 43 ● Lingual bar ● Lingual plate ● stage 4 breast cancer pt with poor prognosis Present with fracture tooth . Treatment Extraction ● Ty",
@@ -66521,7 +77474,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Radiograph with rootless #37 , Dx? Dentin dysplasia",
@@ -66547,7 +77501,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "(Pic of incisal cl I relation ), which molar relation most be suitable ? Molar Cl I",
@@ -66603,7 +77558,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Pt came Complain of recession, after IO exam MG not exceed CEJ what problem pt have ? (Pic of tooth inadequate AG , thin phenotype , no recession , tooth was in good alignment bucco- lingually )? teeth moved lingually ● Recession ● No proper aligned GM ✅ ● Thick phenotype ( was thin )",
@@ -66655,7 +77611,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "PA radiograph canal suddenly disappeared? calcified canal ● Bifid canal",
@@ -66681,7 +77638,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Pedo pt limited mouth opening , no deviation , asymmetrical lower jaw to right side, Tx? ( suspect of TMJ ankylosis , OPG with pixels ) Tx? arthroplasty ● Jaw exercise",
@@ -66707,7 +77665,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Amalgam wait in hours to do polishing ? 1 ● 8 ● 24",
@@ -66789,7 +77748,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "2.9 ●\n5 ●\n4 ●\n5.5",
@@ -66807,7 +77767,8 @@ window.FLASH_NOTES = {
     "ref": "2.9  5  4  5.5",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Pedo have enlarged gingival lot of plaque ? What bacteria ? negative ● Positive ● Staphylococcus ● Actinomycetes",
@@ -66833,7 +77794,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Pic of Epulis fissuratum",
@@ -66854,7 +77816,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "After perio generalized horizontal bone loss, ortho forces ? More apically",
@@ -66905,7 +77868,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "patient with good ridge complain from denture:",
@@ -67139,7 +78103,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "change crown",
     "_merged_into": "fn_implant_0249",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Female patient who used a toothpick in lower premolar (habitual damage), what is your treatment of choice if she agreed to stop the habit (picture shows sever recession with brown orange surface of root that looks like caries):",
@@ -67626,7 +78591,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "uncontrolled DM",
     "_merged_into": "fn_implant_0263",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Pic of persistent caliper artery 2023/09/17 رصيونلا دنر GUC",
@@ -67675,7 +78641,8 @@ window.FLASH_NOTES = {
     "ref": "laser frenctomy 14- picture of 3 implants #13,#12,#11 and patient complane of pain",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "a lot of question regarding endo Dx, endo-perio lesion Dx and management , VRF cases they\nwere clear and easy to answer\n2023/09/17 ينارهزلا امير GUC\n2023/09/17 نريقملا مير GUC\nThe motion of piezoelectric-\nback and forth\ncircular\nPic of naber probe and its uses-\n:Polishing of conventional GiC should be done-\nh-immediately\n-the day after\n-after 3-5 min\n(Which device used in rapid palatal expansion (",
@@ -67694,7 +78661,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "single tooth with vertical root fracture prognosis?\n-poor\n-hopeless\n-questionable\ndental instrument suck in?\n-non inonic solution\nx-ray of fpd was provided, patient mentioned discomfort and difficulty in cleaning below the pontic?\n-osseous hyperplasia\n2023/09/17 نرقم نب دونعلا GUC\n2023/09/17 Maram Albaqami GUC\nWaterline Bacteria should be:\n<500.\nFlush waterline between pt. In seconds\n20-30\n45-50",
@@ -67743,7 +78711,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Florida probe disadvantage",
@@ -67872,7 +78841,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "supragingial margin",
     "_merged_into": "fn_implant_0273",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Zinc phospahe cement disadvantage",
@@ -67975,7 +78945,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "swelling",
     "_merged_into": "fn_implant_0277",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "● Pain on percussion",
@@ -67997,7 +78968,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Pain on percussion",
     "_merged_into": "fn_implant_0277",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "● 3 surface involvement of Carie’s",
@@ -68019,7 +78991,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "3 surface involvement of Carie’s",
     "_merged_into": "fn_implant_0277",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Waterline cleaned what is the most important to prevent biofilm accumulation",
@@ -68129,7 +79102,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Liver",
     "_merged_into": "fn_endo_0468",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "● Cardiac",
@@ -68151,7 +79125,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Cardiac",
     "_merged_into": "fn_endo_0468",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "No pic, fever, lymphadenopathy, oral ulcer, skin ulceration , not the first time it happened",
@@ -68323,7 +79298,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Drink?",
     "_merged_into": "fn_fixed_0127",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "● 22 sodium fluoride",
@@ -68345,7 +79321,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "22 sodium fluoride",
     "_merged_into": "fn_fixed_0127",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Young permanent fissure sealant increase retention?",
@@ -68397,7 +79374,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "air abrasion",
     "_merged_into": "fn_implant_0293",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "● Bonding ✅",
@@ -68446,7 +79424,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Enamoloplasty",
     "_merged_into": "fn_implant_0293",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "J shaped lesion?",
@@ -68584,7 +79563,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "over erupted 16",
     "_merged_into": "fn_implant_0300",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "● Crowding of teeth",
@@ -68606,7 +79586,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Crowding of teeth",
     "_merged_into": "fn_implant_0300",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "3 lower incisors and one large",
@@ -68684,7 +79665,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Type of allergy of the rubber dam ?\n-type I\n-type II\n-type III\n-type IV\nPA with J shaped RL?\nVRF\nlocation of submandibular space\nCount of CD4 HIV ?\n2023/09/18 ناورم نب اللهدبع BUC\n2023/09/18 Essa alanazi BUC\nPatient came with productive cough and short breaths while at rest,\nwhat should you avoid in treating this patient?",
@@ -68770,7 +79752,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Maryland bridge",
     "_merged_into": "fn_implant_0307",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "pedo pt with enlarged lower lip histo. Mucin",
@@ -68890,7 +79873,8 @@ window.FLASH_NOTES = {
     "ref": "C- FPD 5- Picture of Space infection reaching the eye A- Molar B- Canine C- Premolar",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "6- Pt with big tongue and Masseter, and that always causing Needle stick\ninjury, Management?\ndid not find a reference, but logically, it is the answer.\nA- Bend the Needle\nB- Use short Needle\nC- Retract with your finger for better control\nD- Retract with Mirror for better Vision\n7- During Crown Try-in in centric occlusion it shifted to the Right, what is the\nreason?\nA- Lingual inclination of Bucc",
@@ -68974,7 +79958,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "root canal preparation should stop at ? radiographic apex ● Major apical construction ● Minor apical construction",
@@ -69025,7 +80010,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- EDTA",
@@ -69047,7 +80033,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "EDTA",
     "_merged_into": "fn_implant_0319",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "most of GP is Zinc oxide GP Resin Best for smear layer removal Pic Incisor classification Pic Molar classification CL II Pic of molar class one in left and class 2 in right Class 2 subdivision right Class 2 subdivision left Patient with asthma taking corticosteroids he have ( symptoms of Cushing syndrome) asking about the cause 2023/09/18 يرثشلا ةرهوجلا GUC",
@@ -69106,7 +80093,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "oral corticosteroids use",
     "_merged_into": "fn_implant_0319",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "smoker pt needs perio treatment and dentist decided to use AB?",
@@ -69164,7 +80152,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "metro gel",
     "_merged_into": "fn_implant_0321",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- mino gel",
@@ -69186,7 +80175,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "mino gel",
     "_merged_into": "fn_implant_0321",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- doxy chips",
@@ -69208,7 +80198,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "doxy chips",
     "_merged_into": "fn_implant_0321",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "child with retained primary molar and no permanent?",
@@ -69265,7 +80256,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- wait until he is 18",
@@ -69287,7 +80279,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "wait until he is 18",
     "_merged_into": "fn_implant_0325",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "tilted #47, you wan to replace #46?",
@@ -69370,7 +80363,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "request the physician to do blood test or blood count for the patient\n89-Peg lateral comes at what stage?\n-Morphodifferentiation\n90-21 years old p.t after extraction of #21 and want a treatment for it. What is the\nmost conservative treatment for tooth #21 (no other info were given in the\nquestion!!!) “and implant were not in the options”\n-FPD from tooth #22 to #11\n-extract #11 and place fpd from",
@@ -69558,7 +80552,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "What will happen if early loss lower second primary molar A-midline will shifted B- permene anteron teeth drift to distal C- first molar shifted to mesal D- crossbit",
@@ -69578,7 +80573,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Patient want segment (meaning not crossarch) RPD ? a- Informe it choking hazard b- Inform RPD has to cross arch c- Do what patient want d- Informe patient it is less aesthetic",
@@ -69814,7 +80810,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "case about a man who lost his lower anterior teeth due to trauma, except 1 tooth which is drifted, how will the dr know its tooth #32? Sharp incisal angles Incisal inclination toward the distal ? ?",
@@ -69866,7 +80863,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "definition of nonmaleficence",
@@ -69887,7 +80885,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Polyether\nPolysulfide\nReversible hydrocolloid\nIrreversible ..\n43- what is serious disease if u don’t wear mask,\nTB\nOther options were irrelevant.\n44- ankylosed primary tooth with no permanent successor\nrefer to specialist.\nwait until 18\n45- forgot the case scenario, the Q asked about management of asthmatic pt during attack\nin detail..\nThis is the answer..\n46- ankylosed primary molar?\nRefer to spe",
@@ -69999,7 +80998,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Q about Molar Incisor hypomineralization",
@@ -70078,7 +81078,8 @@ window.FLASH_NOTES = {
     "ref": "— Pt want to minor surgery 25 corticosteroids 50-100 — Amoxcillin dose 50mg —--- Horizontal bone 7 mm and mesio-distal 7mm",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "3\n4\n5\n6\nAnterior and posterior undercut\nSurgical both\nNothing\nSurgical anterior\nRelief from denture in the tuberosity area\n—\nCase of Graces ostemyltitts / osteosarcoma\n—-\nPt with fever , malasie , sweating , lesion on hand and oral\nHand foot mouth disease\n—\nA pic of 3 implants one of them has bone resorption",
@@ -70097,7 +81098,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "true pocket\n26/ pt with organ transplant, taking alot of corticosteroids and the mention 2\nmedications ( I forgot the names ) the pic is showing large painful yellow ulcer on\nlater of the tongue, Tx ?\nbiopsy ●\nIntralesional steroids ●\nStop the first medication ●\nStop the second medication ●\n27/Class I Kennedy with lower ant. teeth only remaining and they are lingually\ninclined and perio. Comprom",
@@ -70214,7 +81216,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Palpitation",
     "_merged_into": "fn_implant_0361",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- Positive euthanasia",
@@ -70236,7 +81239,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Positive euthanasia",
     "_merged_into": "fn_implant_0361",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "what is the material use in denture flasking :",
@@ -70294,7 +81298,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Investment material",
     "_merged_into": "fn_implant_0364",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- Refractory material",
@@ -70316,7 +81321,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Refractory material",
     "_merged_into": "fn_implant_0364",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- Stone",
@@ -70338,7 +81344,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Stone",
     "_merged_into": "fn_implant_0364",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "CD deliver and open contact left and can insertion the wax knife , right slight contact between opposing denture .",
@@ -70395,7 +81402,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "clinical remount",
     "_merged_into": "fn_implant_0368",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- rebase maxilla",
@@ -70417,7 +81425,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "rebase maxilla",
     "_merged_into": "fn_implant_0368",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Patient with plastic anemia ( جنير سنرفرلا ين طاح و لمرون اهلكو بلالا جياتن هيف لودج اوباج )",
@@ -70474,7 +81483,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "defer treatment",
     "_merged_into": "fn_implant_0371",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- treat as normal patient",
@@ -70496,7 +81506,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "treat as normal patient",
     "_merged_into": "fn_implant_0371",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "brown discolouration in all of the teeth and under the ultraviolet light it becomes yellow discolouration :",
@@ -70575,7 +81586,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "excessive shrinkage",
     "_merged_into": "fn_implant_0375",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- unreacted benzoyl peroxide",
@@ -70597,7 +81609,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "unreacted benzoyl peroxide",
     "_merged_into": "fn_implant_0375",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Doctor lock nurse wearing diamond ring , and said remove it and change the gloves . 10 Amalgam with zinc high corrosive resistance:",
@@ -70725,7 +81738,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Dentinogenesis imperfecta",
     "_merged_into": "fn_implant_0380",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- Dentein dysplasia",
@@ -70747,7 +81761,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Dentein dysplasia",
     "_merged_into": "fn_implant_0380",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "HIV patient with Bilateral white lesion",
@@ -70896,7 +81911,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "excessive fluoride ingestion",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- Prenatal metabolic deficiency",
@@ -70917,7 +81933,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Prenatal metabolic deficiency",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- excessive fizzy drinks",
@@ -70938,7 +81955,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "excessive fizzy drinks",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "I forget the it\nQ28 crohn case wants extraction. How will you manage ?",
@@ -70956,7 +81974,8 @@ window.FLASH_NOTES = {
     "ref": "I forget the it Q28 crohn case wants extraction. How will you manage ?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- as normal pt",
@@ -70977,7 +81996,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "as normal pt",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "give daily steroid\nQ29 valsalva maneuver which vibrating line",
@@ -70995,7 +82015,8 @@ window.FLASH_NOTES = {
     "ref": "give daily steroid Q29 valsalva maneuver which vibrating line",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- posterior",
@@ -71016,7 +82037,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "posterior",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "what is this ?",
@@ -71036,7 +82058,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- BSSO",
@@ -71057,7 +82080,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "BSSO",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "TOVRO\nQ31 what BSSO used for ?\nQ32 while the pedodontist was giving anesthesia he was telling a story to the pt what is he doing ?",
@@ -71106,7 +82130,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "distraction",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "tell show do\nQ33 mucocele management ?",
@@ -71124,7 +82149,8 @@ window.FLASH_NOTES = {
     "ref": "tell show do Q33 mucocele management ?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- surgical excision",
@@ -71146,7 +82172,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "surgical excision",
     "_merged_into": "fn_ortho_pedo_0329",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "excisional biopsy\nQ34 Pt complaining of hypocalcified teeth tx?",
@@ -71164,7 +82191,8 @@ window.FLASH_NOTES = {
     "ref": "excisional biopsy Q34 Pt complaining of hypocalcified teeth tx?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- composite veneers",
@@ -71185,7 +82213,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "composite veneers",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- micro abrasion",
@@ -71206,7 +82235,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "micro abrasion",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "bleaching\n-\nQ35 most important thing in the dental notes",
@@ -71224,7 +82254,8 @@ window.FLASH_NOTES = {
     "ref": "bleaching - Q35 most important thing in the dental notes",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- complete",
@@ -71245,7 +82276,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "complete",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- objective",
@@ -71266,7 +82298,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "objective",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "what is this ?",
@@ -71286,7 +82319,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "extended flanges\nQ37 similar to the above scenario and there is diffuse erythema what is the pt having ?",
@@ -71304,7 +82338,8 @@ window.FLASH_NOTES = {
     "ref": "extended flanges Q37 similar to the above scenario and there is diffuse erythema what is the pt having ?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Denture stomatitis case scenario",
@@ -71325,7 +82360,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "epulis fissuratum\nQ 38 13 mm space available until the IAN what is the maximum length of implant?",
@@ -71343,7 +82379,8 @@ window.FLASH_NOTES = {
     "ref": "epulis fissuratum Q 38 13 mm space available until the IAN what is the maximum length of implant?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "14\nQ39 14 mm MD space how many 4mm implants can you place ?",
@@ -71361,7 +82398,8 @@ window.FLASH_NOTES = {
     "ref": "14 Q39 14 mm MD space how many 4mm implants can you place ?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "4\n2023/09/21 ميركلادبعلا نمحرلادبع BUC\nQ/ Tnf alpha positive what is the diagnosis ( I forgot the choices )\nQ/ Class iii what type of clasp?",
@@ -71379,7 +82417,8 @@ window.FLASH_NOTES = {
     "ref": "4 2023/09/21 ميركلادبعلا نمحرلادبع BUC Q/ Tnf alpha positive what is the diagnosis ( I forgot the choices ) Q/ Class iii what type of clasp?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- Embrasure",
@@ -71400,7 +82439,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Embrasure",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Directly on the abutment\nQ/ Patient take two drugs for Hypertension came with ulcer on the tongue what is\nthe cause?",
@@ -71418,7 +82458,8 @@ window.FLASH_NOTES = {
     "ref": "Directly on the abutment Q/ Patient take two drugs for Hypertension came with ulcer on the tongue what is the cause?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "One of the choices was one of his drugs\nQ/ Implant pictures and what is the parallel one ?\nQ/ Histology show bullous with intra epithelial what is the diagnosis?",
@@ -71467,7 +82508,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Bullous lichen planus",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "MM pemphigoid\nQ/ Uncontrolled diabetic with sub mandibular swelling, sever trismus , no difficulty\nbreathing what to do?",
@@ -71485,7 +82527,8 @@ window.FLASH_NOTES = {
     "ref": "MM pemphigoid Q/ Uncontrolled diabetic with sub mandibular swelling, sever trismus , no difficulty breathing what to do?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "- Refer to physician for control diabetes",
@@ -71506,7 +82549,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Refer to physician for control diabetes",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Admit to hospital immediately & ct\nQ/ Separated endo instruments after using the ultra sonic what is the second step ?",
@@ -71524,7 +82568,8 @@ window.FLASH_NOTES = {
     "ref": "Admit to hospital immediately & ct Q/ Separated endo instruments after using the ultra sonic what is the second step ?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Instrument removal system\nQ/ Swelling in parotid what to do?",
@@ -71542,7 +82587,8 @@ window.FLASH_NOTES = {
     "ref": "Instrument removal system Q/ Swelling in parotid what to do?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Incisional biopsy\nQ/ You gave anesthesia and patient can’t close his eye what happened?",
@@ -71560,7 +82606,8 @@ window.FLASH_NOTES = {
     "ref": "Incisional biopsy Q/ You gave anesthesia and patient can’t close his eye what happened?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Anesthesia to parotid\nQ/ Missing 6 & 5,7 are periodontal compromised MD space is 8mm what is the best\ntreatment?",
@@ -71578,7 +82625,8 @@ window.FLASH_NOTES = {
     "ref": "Anesthesia to parotid Q/ Missing 6 & 5,7 are periodontal compromised MD space is 8mm what is the best treatment?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "“Radiograph showing a bridge connecting 35 to 37 with supra- crestal perforation distal to the 35 and it looks small because only the file is visible” in the question they mentioned that this is a file 15 and the perforation just occurred what is the management ? A-Extract and place implant B-Repair with MTA C-Repair with GIC",
@@ -71599,7 +82647,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "rebond with GiC",
@@ -71619,7 +82668,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "question about a pedo patient with carious primary molars in the lower right and mentioned something about quadrant treatment and asked about the best anesthesia to give ? A-IANB B-Bucccal C-Lingual D-Mental block",
@@ -71701,7 +82751,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "C-Reccssion or something",
@@ -71720,7 +82771,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "J shaped radiolucency with normal probing depth (pic of substandard RCT without a post) 9-test vesiculobullous diseases? 10-what is the standard treatment of edentulous mandible ?",
@@ -71824,7 +82876,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "antibodies.",
     "_merged_into": "fn_implant_0429",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "broken shallow amalgam what’s the best material to replace it ? 15-Pt with supernumerary teeth, flat mid face, exophthalmos and carniosyntosis?",
@@ -71996,7 +83049,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "radiograph pic CBCT and panoramic indicate implant\nplacement close to the IANC and patient had sever pain\nand numbness after surgery what is the cause",
@@ -72014,7 +83068,8 @@ window.FLASH_NOTES = {
     "ref": "radiograph pic CBCT and panoramic indicate implant placement close to the IANC and patient had sever pain and numbness after surgery what is the cause",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "prolonged bleeding\n-injury to neurovascular bundle -normal after implant\nsurgery\n-down syndrome patient with CAL 1- 4 mm abd have\nheavy plaque what is the diagnosis:\n-Plaque induce\n-non plaque induced\n-periodontitis as manfestation of systemic disease\n-stag 2 grade b\n-hemophelia A and hemphelia b factors deficency",
@@ -72033,7 +83088,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "case about bulging in premolars area and one of them\nhad periapical lesion :\nDens evaginatus\n-headich in patient and when the hedic come he go in a\ndark room and patinet has vomiting and nausea:\nMigrane",
@@ -72052,7 +83108,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Distance from maxillary gingival margin to mmajor connector is : A- 0.5 mm B- 2 mm C- 3 mm D- 6 mm 2023/09/25 للاه لا ىرشب GUC",
@@ -72072,7 +83129,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "question about SLOB ( #36 need endo treatment and there was MB , ML and distal canal , there was superimposed between the ML and MB canal and request another x-ray *shifted mesial* which canal will move in the same direction)?",
@@ -72159,7 +83217,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "start the treatment with growth modification",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "diabetic Pt with HBA1C 6 and taking corticosteroids?",
@@ -72216,7 +83275,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "increase HBA1C.",
     "_merged_into": "fn_implant_0442",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "pt has a clicking sound of her denture when she eat or talk and her artificial teeth was porcelain what is the mangment ?",
@@ -72273,7 +83333,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "increase freeway space .",
     "_merged_into": "fn_implant_0444",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "periodontist did a surgery where he can put the gingiva ?",
@@ -72329,7 +83390,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "On CEJ",
     "_merged_into": "fn_implant_0446",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Picture of clinic light and he ask about the type of disinfection ?",
@@ -72385,7 +83447,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "disinfect between pt",
     "_merged_into": "fn_implant_0448",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "PA pic of cantilever with PDL widening in the tooth #34 , and the pt had history of a stressful life and bruxism and he feel pain , what is the cause ? #33 and #34 were natural teeth",
@@ -72442,7 +83505,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "occlusal truma.",
     "_merged_into": "fn_implant_0450",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "an old man want to do a full mouth rehab , and he decide to do implant in #13 and #33 , which type of occlusion you will use?",
@@ -72500,7 +83564,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "mutally",
     "_merged_into": "fn_implant_0452",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "• Canine",
@@ -72522,7 +83587,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Canine",
     "_merged_into": "fn_implant_0452",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "a female pt had gonshot in the left lower side and she want to replace the effected area( hard and soft tissue) with implant , which technique they used? ن هروص اوباجو شرلاا لك لىع تناكام سب يذه ههبشت هروص ي طاح ن تنلبملااو نانسلاا لىع سسيثسوترلا ي بكرم مهو قوف نم هيناث هحضاو وركس",
@@ -72579,7 +83645,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "overdenture",
     "_merged_into": "fn_implant_0455",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "11 or 10( i forgot ) years old boy Pt came after one year (follow up after complex crown fracture) how do you know the if your treatment is successful or not ? 2023/09/26 يرسودلا كرابم دمحم BUC 2023/09/26 ناطلسلا دايز BUC",
@@ -72653,7 +83720,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "the absence of pathology",
     "_merged_into": "fn_implant_0457",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Missing 14 & 16 treatment is FPD what approch?",
@@ -72711,7 +83779,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "All one unit from #13-17",
     "_merged_into": "fn_implant_0459",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "dark line only in gingival margin of implant crown",
@@ -72764,7 +83833,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "● 4.8 mm",
@@ -72785,7 +83855,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "4.8 mm",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "● 3.5 mm",
@@ -72806,7 +83877,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "3.5 mm",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "● 5.5 mm",
@@ -72827,7 +83899,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "5.5 mm",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "6.5 mm\nWhich of the scenarios below benefits more from anterior guidance table",
@@ -72845,7 +83918,8 @@ window.FLASH_NOTES = {
     "ref": "6.5 mm Which of the scenarios below benefits more from anterior guidance table",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "● unilateral post. Molar teeth crowns",
@@ -72866,7 +83940,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "unilateral post. Molar teeth crowns",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "● Single crown max. anterior tooth , with protrusive movement with adjacent central and latreral",
@@ -72887,7 +83962,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Single crown max. anterior tooth , with protrusive movement with adjacent central and latreral",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "● Crowns on Canines maxillary with canines guidance\n+ve venereal test:",
@@ -72907,7 +83983,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Crowns on Canines maxillary with canines guidance",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Paul- Bunnel test +ve 69",
@@ -72963,7 +84040,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "● severe angina",
@@ -72984,7 +84062,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "severe angina",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Lead poisining.\n2023/09/26 عناملا ةرهوجلا GUC\nPatien had MI 6 months ago and has peptic ulcer and gastrointestinal, Patien was anxious and afraid\nof extracting lower right 3 molars, he was very anxious that he couldn’t sleep before the\nappointment. while in the dental clinic patient experienced sever chest pain and tightness, nausea\nand sweating. Whats the diagnosis?\nA- Angina pectoris\nB- Gastro",
@@ -73038,7 +84117,8 @@ window.FLASH_NOTES = {
      "passage": "e tooth are selected, and alginate\ntional movements. Heavy contacts on the pontic or the          impressions are made. In the laboratory, stone casts\nconnector areas must be adjusted. The ﬁnished bridge           are poured, and the ridge area is relieved slightly and\nimmediately after bonding is illustrated in Fig. 15-55E.       marked with a soft lead pencil. As the pontic is trial\nThe patient",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "best typeof bonefor implantwhere?",
@@ -73057,7 +84137,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Visible partof implantin2stages implant?",
@@ -73141,7 +84222,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "implant"
+    "_dept": "implant",
+    "_raw_recall": true
    },
    {
     "stem": "Impressusedfor implant?",
@@ -73480,7 +84562,8 @@ window.FLASH_NOTES = {
      "passage": "rect in Class II and Class III malocclusion.            Paradigm\n    With the establishment of a concept of normal occlusion and\na classification scheme that incorporated the line of occlusion, by      A paradigm can be defined as “a set of shared beliefs and assump-\nthe early 1900s orthodontics was no longer just the alignment of         tions that represent the conceptual foundation of an area o",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "pain after ortho",
@@ -73770,7 +84853,8 @@ window.FLASH_NOTES = {
      "passage": "mendously important. Although patient satisfaction is generally\nhigh with osseointegrated restorations, appearance is the most common cause of\ndissatisfaction.2 Smith and Zarb11 added to the criteria for implant success by\nsuggesting that the implant design should not preclude placement of a crown or\nprosthesis with an appearance that is satisfactory to the patient and dentist. To meet\nthese goals",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Pediatric dentistry: child abuse questions (physical abuse).",
@@ -73795,7 +84879,8 @@ window.FLASH_NOTES = {
      "passage": "Eric for\nx-rays while his stepfather waits in the examination room;\nat this point, you take the opportunity to ask Eric about\nhis clothing on such a hot day. He is more quiet than you\nrecall and shrugs his shoulders. When you help him up in\nthe chair while gripping his arm, he visibly winces in pain.\nHaving been Eric’s dentist since he was 3 years old, you\nask him what happened. Eric tells you th",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Band and loop space maintainer → when to replace.",
@@ -73820,7 +84905,8 @@ window.FLASH_NOTES = {
      "passage": "lar canines. As the permanent inci-\nfor them.                                                                    sors erupt, the canines not only widen out but move slightly\n     The permanent incisor teeth are considerably larger than the            back into the primate space distal to the canine unless it has\nprimary incisors that they replace. For instance, the permanent              been clos",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Pell & Gregory classification →",
@@ -73891,7 +84977,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "An image of a tooth in recession and displaced — asking for management (Depends on pic)",
@@ -73963,7 +85050,8 @@ window.FLASH_NOTES = {
      "passage": "nto the labial aspect. In a\nspaced upper arch, or where the upper lateral incisors are missing (see\nChapter 8, Fig. 8.5), this recession of the fraenal attachment is less likely\nto occur and in such cases it is obviously not appropriate to attribute\nthe persistence of a diastema to the fraenum itself. However, in a small\nproportion of cases, the upper midline fraenum can contribute to the\npersiste",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Blood/vomit contamination Risk classification:",
@@ -74015,7 +85103,8 @@ window.FLASH_NOTES = {
      "passage": "g-term\n    prognosis. At the time of prosthetic treatment, more than 25 years before these pictures were taken, osseous integration was not\n    the reliable treatment modality that it is today. The patient declined a removable prosthesis as an alternative to FDPs. A pinledge\n    retainer was used on the small lateral incisor. Over time, not only was this esthetically effective, but it contributed",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Class 2 malocclusion with lingually tilted incisors which appliance ?",
@@ -74178,7 +85267,8 @@ window.FLASH_NOTES = {
      "passage": "the teeth\neach other, which is possible because at the same time the          cannot respond, and the suture is opened. With 10 mm of expansion in\nteeth move laterally on their supporting bone.                      2 weeks, there might be 8 mm of skeletal change and only 2 mm of\n    If the changes were represented graphically, the plot for       tooth movement at the time the expansion is complete",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Ortho diagnosis for this picture",
@@ -74317,7 +85407,8 @@ window.FLASH_NOTES = {
      "passage": "GURE 35-1 The class II maxillary protrusive patient is best treated by headgear therapy to restrict or redirect maxillary growth. A, This\npatient is being treated with cervical headgear that places a distal and extrusive force on both maxillary skeletal and dental structures. The force\nis provided by a neck strap attached to the outer bows of the headgear. B, The molar relationship is beginning to",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Type of cleft?",
@@ -74817,7 +85908,8 @@ window.FLASH_NOTES = {
      "passage": "t is tempting to view the perception of pain of orofacial        are both found in the tooth pulp, but there are three to eight\norigin as a simple graded response to the intensity of the            times more unmyelinated C fibers than Aδ fibers.41,45,170,371 It\nstimulus. However, researchers have come to realize that the          should be noted that this classification system is based purely\npai",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Tanaka–Johnston analysis is used to predict which of the following?",
@@ -75570,7 +86662,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "an 8-year-old patient came with his brother 14 years old to have orthodontic treatment what to do",
@@ -75672,7 +86765,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "After ortho one of the teeth was ankylosed, what type of force does the doctor used and\nresult on that?",
@@ -76178,7 +87272,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "one layer suturing",
     "_merged_into": "fn_oms_0669",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- two layers",
@@ -76201,7 +87296,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "two layers",
     "_merged_into": "fn_oms_0669",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- three layers\n✅",
@@ -76272,7 +87368,8 @@ window.FLASH_NOTES = {
     "ref": "butt type joint -acrylic forms the joint -ball and socket",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- there is no joint\n🚨\nWits appraisal:\n✅\nFunctional occlusal\nAnatomical occlusal\n🚨\nWaterline cleaned what is the most important to\nprevent biofilm accumulation:\n✅\nstagnant\n🚨\n🚨\n| Colleagues |     | infecting |            | each |     | other | (or something | like |\n| ---------- | --- | --------- | ---------- | ---- | --- | ----- | ------------- | ---- |\n|            |     |           |            |",
@@ -76321,7 +87418,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Stability",
     "_merged_into": "fn_endo_0413",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- Healing",
@@ -76344,7 +87442,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Healing",
     "_merged_into": "fn_endo_0413",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- Remission\n🚨\n| 10-What |     | is  | the | comment    |     | early | complications/ |     | failure |\n| ------- | --- | --- | --- | ---------- | --- | ----- | -------------- | --- | ------- |\n|         |     |     |     |            |     |       |                |     |         |\n|         |     |     |     | associated |     | with  | RPP:           |     |         |\n|         |     |     |   ",
@@ -76452,7 +87551,8 @@ window.FLASH_NOTES = {
     "ref": "metronidazole gel 41.pt with good oral hygiene with ortho treatment complain about gingivitis and plaque :",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "1.Short clinical crown and inlay his margin mesially 1 mm from bone management",
@@ -76552,7 +87652,8 @@ window.FLASH_NOTES = {
     "ref": "40. women complaining of resorbed root and movement of her teeth because her doctor promised to finish her ortho treatment before her marriage. What's the reason for her mobile teeth ?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "41.mm of diastema closure after reaching age of 8y?",
@@ -77319,7 +88420,8 @@ window.FLASH_NOTES = {
     "ref": "30.Mesial resorption of bone and distal deposits what is the cause",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "id": "fn_ortho_pedo_0132x1",
@@ -78080,7 +89182,8 @@ window.FLASH_NOTES = {
      "passage": "s of the disks to the poles of the con-          dible at the junction of the facial surface of the man-\ndyles permit the condyles to rotate under the disks.           dibular central incisors and the incisal edge. The molar\nRotation with the condyles positioned in CR is termed          point is the tip of the mesiofacial cusp of the mandibular\nterminal hinge movement. TH is used in dentistry as a",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "38. 12 years old with an ankylosed primary molar with no successor, what should you do?",
@@ -78099,7 +89202,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "id": "fn_ortho_pedo_0149x1",
@@ -78220,7 +89324,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "6.patient want to construct ceramic anterior crowns she told the doctor that she wants the whitest color, doctor advise\nthat it will not be natural (mentioned before)\na.Show her the shades that is suitable for her case\nb.Refuse treatment because she didnt respect doctor judgment\n7.restorable tooth need RCT and good prognosis but the pt and his mother refuse they want extract the tooth\na.take their",
@@ -78606,7 +89711,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Pt with supernumerary teeth, flat mid face, and exophthalmos? Before the options I provided the possible syndromes from pediatric dentistry infancy through adolescence 5th edition. then pictures to have a better understanding of each word in the table we have three syndromes that can be relevant aplastic clavicles: I did not find a good photo this may be the best answer because it has the exact th",
@@ -78699,7 +89805,8 @@ window.FLASH_NOTES = {
      "passage": "coworkers76 with minocycline microspheres at all            peri-implant defects. Two to 18 weeks before baseline measurements,\npocket sites of 5 mm or more. Sixty patients with at least one nonmolar   patients had been treated for peri-implantitis (including scaling with\npocket site with a probing depth of 6 mm or more in each of two           a plastic instrument). Patients then continued to rec",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Reassure 👍🏻",
@@ -78720,7 +89827,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Reassure 👍🏻",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Reverse Unscrew",
@@ -78741,7 +89849,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Reverse Unscrew",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Remove the appliance\n●\n●",
@@ -78767,7 +89876,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Remove the appliance",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● multiple radiolucent Lesion on all quadrant",
@@ -78788,7 +89898,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "multiple radiolucent Lesion on all quadrant",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Plan to do incisional biopsy what we will do before\nbiopsy ?",
@@ -78808,7 +89919,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Plan to do incisional biopsy what we will do before",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Aspiration 👍🏻",
@@ -78829,7 +89941,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Aspiration 👍🏻",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Nuclear something",
@@ -78850,7 +89963,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Nuclear something",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Bitewing\n●",
@@ -78876,7 +89990,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Bitewing",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Pt with liver disease and you want to extract what test to request?",
@@ -78961,7 +90076,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Safest analgesic with pt has severe asthma ?",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Naproxen",
@@ -78982,7 +90098,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Naproxen",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Paracetamol\n●\n●\n●",
@@ -79008,7 +90125,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Paracetamol",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Severe COPD ? Avoid RD",
@@ -79035,7 +90153,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Severe COPD ? Avoid RD",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Persistent bacteria in endo ? E.faecalis\n●\n●",
@@ -79091,7 +90210,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Pain after amalgam replacement, all clinical normal ?",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Periodontitis pt does not want surgery , you will do\nscaling ?",
@@ -79111,7 +90231,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Periodontitis pt does not want surgery , you will do",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Every 4 weeks",
@@ -79132,7 +90253,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Every 4 weeks",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "nothing",
@@ -79153,7 +90275,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● 9 months",
@@ -79174,7 +90297,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "9 months",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● 12 months\n●",
@@ -79200,7 +90324,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "12 months",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Remaining dentin thickness 0.5 ?",
@@ -79252,7 +90377,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "RMGIC",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● CH and RMGIC",
@@ -79273,7 +90399,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "CH and RMGIC",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● MTA and RMGIC",
@@ -79300,7 +90427,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "MTA and RMGIC",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Leeway space per-side in mandible ?\n●\n●\n●",
@@ -79350,7 +90478,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Rpd class 1 no tissue undercut and small labial undercut",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Circumferential\n●",
@@ -79376,7 +90505,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Circumferential",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Pedo multiple abscess and caries which ?",
@@ -79397,7 +90527,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Pedo multiple abscess and caries which ?",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Neglect\n●",
@@ -79423,7 +90554,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Neglect",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Le fort II picture .\n●\n●",
@@ -79449,7 +90581,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Le fort II picture .",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Acid-base reaction ? GIC\n●\n●",
@@ -79499,7 +90632,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Autonomy and veracity ?",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Initial use for supra gingival calculus ? Ultrasonic scaler",
@@ -79526,7 +90660,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Initial use for supra gingival calculus ? Ultrasonic scaler",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● 5mm inter occlusal space ?",
@@ -79547,7 +90682,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "5mm inter occlusal space ?",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Cement retained",
@@ -79568,7 +90704,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Cement retained",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Screw retained",
@@ -79589,7 +90726,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Screw retained",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Angulated abutment screw retained",
@@ -79610,7 +90748,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Angulated abutment screw retained",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Gow gated target?",
@@ -79631,7 +90770,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Gow gated target?",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Lateral condyle",
@@ -79658,7 +90798,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Lateral condyle",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Dry socket case and management?",
@@ -79679,7 +90820,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Dry socket case and management?",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Irrigation with saline , analgesic\n●",
@@ -79705,7 +90847,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Irrigation with saline , analgesic",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● TMJ displacement direction ?",
@@ -79726,7 +90869,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "TMJ displacement direction ?",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Anterior medial\n●",
@@ -79752,7 +90896,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "anterior medial",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Nurse gets needle stick injury in HBV and she completed\nall the vaccines?",
@@ -79772,7 +90917,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Nurse gets needle stick injury in HBV and she completed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Follow up for 1 week",
@@ -79793,7 +90939,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Follow up for 1 week",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Anti HBsAG test for nurse",
@@ -79814,7 +90961,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Anti HBsAG test for nurse",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Anti HBsAG test for patient\n●",
@@ -79840,7 +90988,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Anti HBsAG test for patient",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Rheumatoid arthritis? Sjorgan syndrome\n●",
@@ -79866,7 +91015,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Rheumatoid arthritis? Sjorgan syndrome",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Anxious asthma and allergies-to benzodiazepine ?",
@@ -79887,7 +91037,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Anxious asthma and allergies-to benzodiazepine ?",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Nitrous-oxide",
@@ -79908,7 +91059,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Nitrous-oxide",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Local anesthesia",
@@ -79929,7 +91081,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Local anesthesia",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Test to confirm the allergy to benzodiazepine\n●",
@@ -79955,7 +91108,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Test to confirm the allergy to benzodiazepine",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Root resorption after heavy ortho force .",
@@ -79982,7 +91136,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Root resorption after heavy ortho force .",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Bruxer pt with mouth guard ?",
@@ -80003,7 +91158,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Bruxer pt with mouth guard ?",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● No contact on anterior and posterior",
@@ -80024,7 +91180,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "No contact on anterior and posterior",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Contact on anterior only",
@@ -80045,7 +91202,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Contact on anterior only",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Contact on posterior only\n●",
@@ -80071,7 +91229,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Contact on posterior only",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● HAART effect ? Xerostomia\n●",
@@ -80097,7 +91256,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "HAART effect ? Xerostomia",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● 12 mm crest to the sinus , implant length maximum? 11\nmm\n●\n●",
@@ -80216,7 +91376,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Plaque detecting? Disclosing agent",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Prevent internal resorption ? Predentin\n●",
@@ -80242,7 +91403,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Prevent internal resorption ? Predentin",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Barbed approach uses ? Remove canal content",
@@ -80269,7 +91431,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Barbed approach uses ? Remove canal content",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Iron deficiency? Microcytic\n●",
@@ -80295,7 +91458,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Iron deficiency? Microcytic",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Truisms and infection which space ?submasseteric",
@@ -80322,7 +91486,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Truisms and infection which space ?submasseteric",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Nurse want to take a lunch break she should ?",
@@ -80343,7 +91508,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Nurse want to take a lunch break she should ?",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Remove PPE\n●",
@@ -80369,7 +91535,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Remove PPE",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "How to confirm VRF",
@@ -80427,7 +91594,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Exacting scenario .",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Headache relief in 100% oxygen? Cluster",
@@ -80454,7 +91622,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Headache relief in 100% oxygen? Cluster",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Bacteria cause endocarditis ? Viridans strep",
@@ -80481,7 +91650,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Bacteria cause endocarditis ? Viridans strep",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Thyrotoxic crisis causes ? Epinephrine\n●",
@@ -80507,7 +91677,8 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "Thyrotoxic crisis causes ? Epinephrine",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "id": "fn_ortho_pedo_0236x1",
@@ -80598,7 +91769,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "id": "fn_ortho_pedo_0239x1",
@@ -80691,7 +91863,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Defer until give birth",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "SRP\n35 Years old male with #11 has external resorption, grade 2 mobility, management ?",
@@ -80709,7 +91882,8 @@ window.FLASH_NOTES = {
     "ref": "SRP 35 Years old male with #11 has external resorption, grade 2 mobility, management ?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Extraction\nPatients have desquamative gingivitis, what to Systemic corticosteroid",
@@ -80727,7 +91901,8 @@ window.FLASH_NOTES = {
     "ref": "Extraction Patients have desquamative gingivitis, what to Systemic corticosteroid",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "topical corticosteroid\nPatient have pain, redness, and swelling in lower 3rdmolar, pain radiating to the ear ( I think\nit’s Pericoronitis (\nWhat is the main disadvantage of silver points?\nWhat is the dose of midazolam?\nWhat is the overdose of midazolam?\nWhat is the antagonist of midazolam ?\nno options provided ,\nflumazenil\ntheophyline antagonize benzodiazepine\nWhat type of cement contain fluorid",
@@ -80777,7 +91952,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Malpractice",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- Near miss",
@@ -80798,7 +91974,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Near miss",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Optional requirement\nPatient complain of color of the implant, what type of abutment you should use to avoid\nthis complication?",
@@ -80816,7 +91993,8 @@ window.FLASH_NOTES = {
     "ref": "Optional requirement Patient complain of color of the implant, what type of abutment you should use to avoid this complication?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- Gold\n?- Zirconia",
@@ -80864,7 +92042,8 @@ window.FLASH_NOTES = {
     "ref": "Titanium Patient taking corticosteroids, complain of burning sensation in the palate?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Candida?\nWhile you trying rpd on the cast, retentive arm broken, you rechecked the survey line you\nfound the facial hight of contour almost in occlusal surface ?\n?- Cyclic fatigue",
@@ -80913,7 +92092,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Improper thickness of retentive arm",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Weak retentive arm\nWhy flowable better than packable in PRR ?\nWhy the restoration complicate ortho tx. ?\nPatient have reversed OJ what the cause ?",
@@ -80962,7 +92142,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Protruded mandible",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Retroded mandible\nQuestions on SNA SNB ANB\nAfter surgical exposure of impacted canine, what will happen for soft tissue ?",
@@ -80980,7 +92161,8 @@ window.FLASH_NOTES = {
     "ref": "Retroded mandible Questions on SNA SNB ANB After surgical exposure of impacted canine, what will happen for soft tissue ?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- Overgrowth",
@@ -81001,7 +92183,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Overgrowth",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "pin point exposure of Central due to trauma for 7y.o pedo patient before 30min: A-RCT B-Partial pulpotomy C-Direct pulp capping D- extraction",
@@ -81022,7 +92205,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "pin point exposure of Central due to trauma for 7y.o pedo patient before 30min: A-RCT B-Partial pulpotomy C-Direct pulp capping D- extraction",
@@ -81042,7 +92226,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "patient came for follow up after partial pulpotomy was done years ago, the tooth is necrotic and has Openapex: A-apexogenesis B-apexification C-RCT D-Extraction",
@@ -81062,7 +92247,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "what is the reason for this mishap(it was a sealer and GP extending in apical area) A-didnt have a tug-back B- using rotary files C- under preparation of the canal",
@@ -81082,7 +92268,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "pedo patient came and his C.C: i have moderate pain for 3 days. but the mother said the pain is severe and it last for a week (she was lying) . what type of abuse the mother done: A-medical B-neglect C-emotional",
@@ -81103,7 +92290,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "how to differentiate between NUG and gingivostomatitis: A- bleeding on provoked B- gingival enlargement C- necrotic tissue D-pain",
@@ -81123,7 +92311,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "case about scurvy i didn't remember it. vitamin c deficiency",
@@ -81143,7 +92332,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "patient did endo 3 days ago and come to you suffering from pain , they give a RG (the treatment was acceptable and the occlusion from the RG seems to be under Occ) what to do? A-prescribe ABx B-prescribe NSAID (i choose this choice assuming its a flare up case) C-Re-treatment D- Occ reduction",
@@ -81353,7 +92543,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Pt with overhang amalgam have no symptoms ? remove the Overhang ● follow up",
@@ -81379,7 +92570,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Endocarditis take course of AB , you want to give prophy ? No emergency Wait 10 days",
@@ -81555,7 +92747,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Pedo with ecchymosis , palatal purpura ? Child abuse ● hyperactivity ● Autistic",
@@ -81581,7 +92774,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Dentist his family members with positive covid , he take a test at home , result in positive , did not do a lab test , what to do ? Report to work as usual ● عوبسا هسفن رجحي ● موي ةزاجا ذخاي ● Report to work and take N95 & faceshield",
@@ -81608,7 +92802,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Pedo pt you give her varnish , end of session she felt neusa and vomiting, what to do to reduce this to happen ? Give milk",
@@ -81664,7 +92859,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Case recurrent EM after herpes , want to prevent it ? acyclovir ● Systemic corticosteroids ● Topical corticosteroids ● Flucunasol",
@@ -81690,7 +92886,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Herpangina ●\nHerpatic gingivostomatitis",
@@ -81714,7 +92911,8 @@ window.FLASH_NOTES = {
      "passage": "ations of Oral Viral Diseases\n\nOral Ulcers\nUlcers or erosions are relatively common in the oropharyngeal\nmucosa.356 Although oral ulcers can have a variety of causes, a viral\ncause of oral ulcers has been established for primary and recurrent\nherpetic gingivostomatitis (primarily herpes simplex virus-1 but\nalso herpes simplex virus-2), varicella/herpes zoster outbreak\n(varicella-zoster virus), her",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "CD with confined redness as the shape of the denture? Causative agent ? candida",
@@ -81740,7 +92938,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Case with white nodules on buccal ? Sort of gland serous ● Sebaceous",
@@ -81766,7 +92965,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Sinus tract Size 20 GP ● size 15 H file ● Size 20 k file ● Size 20 paper point",
@@ -81792,7 +92992,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Long scenario of Infection control Q What have done is wrong ? Most wear utility wax gloves",
@@ -81878,7 +93079,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Pt her dr promised her to finish ortho Tx in 4 months , Radiograph with sever root resorption) cause ? Rapid forced ortho",
@@ -81898,7 +93100,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Disinfect wax ? Iodophor",
@@ -81977,7 +93180,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "canMEDs scenario? manger ● Medical expert ● Scholar",
@@ -82064,7 +93268,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "9 year old Pedo start habit 3 years ago , ( pic of open bite ) cause ? nail biting ● Thumb sucking ● Tongue thrust",
@@ -82090,7 +93295,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Case with cervical lymphadenopathy? burrkit ● Non-hodgkin",
@@ -82207,7 +93413,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "80 year old with dementia , two Tx option endo or extraction, have no relative ? Who will decide ? court ● Dentist ● Hospital manager",
@@ -82233,7 +93440,8 @@ window.FLASH_NOTES = {
     },
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "which of the following would increase the retention of FS A-bonding✅ B-air abrasion C-enamloplasty 50-(x-ray) tooth lower premolar indicated for endo tx for missed canal, how many canals did you see in this tooth A-3✅ 51-patient with Polymylagia rheumatic came to the clinic with pain in TMJ area, which of the following conditions she most probably has A-giant cell arteritis✅ B-SLE C-rheumatoid art",
@@ -82281,7 +93489,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "overcontoured crown",
     "_merged_into": "fn_implant_0248",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "-Undermining resorption",
@@ -82302,7 +93511,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Undermining resorption",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "midazolam common complication:",
@@ -82770,7 +93980,8 @@ window.FLASH_NOTES = {
     "ref": "poorly design of prosthesis -excess cement between the centals",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "What is believed to be the cause of internal resorption?",
@@ -82837,7 +94048,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "explain to her the advantage and dis for each Tx",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- referred her for second opinion",
@@ -82858,7 +94070,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "referred her for second opinion",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "15 years old female Patient came with (rash or hemorrhage) in her face following the trigeminal nerve and she had a history with convulsions what is the syndrom? sturge weber syndrome 7-Adult Patient with white spot in incisal edge of anterior teeth Pt report that he removed his ortho 1 week ago?",
@@ -82917,7 +94130,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "FL varnish",
     "_merged_into": "fn_ortho_pedo_0321",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● fusion ✅",
@@ -83052,7 +94266,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "recurrent Aphtous",
     "_merged_into": "fn_ortho_pedo_0326",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● Chemical burn",
@@ -83074,7 +94289,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Chemical burn",
     "_merged_into": "fn_ortho_pedo_0326",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "24 yo, asymptomatic lesion scalloping between roots of third quadrant, tx?",
@@ -83233,7 +94449,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "subginval scaling and possible gingivectomy",
     "_merged_into": "fn_ortho_pedo_0333",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Upper denture porcelain, opposing?",
@@ -83312,7 +94529,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "surveyed crown",
     "_merged_into": "fn_ortho_pedo_0336",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Radiopacifier of MTA",
@@ -83594,7 +94812,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "medium disinifictant",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- low disinfectant",
@@ -83615,7 +94834,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "low disinfectant",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "high disinfectant\nPt have oral ulcers and genital ulcers )didn’t mention\nanything about eye ulcers)\n-kawasaki test\n-pathergy test\nDr will place Cement retained implant crown what is\nthe minimum vertical dimensions needed measured\nfrom ridge till occ plane ( vertical dimension)\n5-6\n7-8 \nErethematous on dentire bearing surface - lines\ndemarcated at the denture\n-chemical reaction\n-denture stomatit",
@@ -83657,7 +94877,8 @@ window.FLASH_NOTES = {
     "ref": "check astham severity -Oxygene saturation",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "clinical symptoms \nن\nومو اماروناب عم همف حتفي ردقيام لىلا وديبلا لاؤس ناج —\nي ي\nهروصلا هحضاو\nاذك يز س Tmj gap surgery\nي\nAnterior plate\nJaw excersize\nPt have pain related to #46\nWith Impacted #48 and Impacted #38 with cyst\nWhat is the first step?\nA-Do pulpoctomy of #46 only\nB-Inform her about the lesion\nC-Discuss about impacted teeth\nDiabetic pt have nephrtophy what analgesic should\nhe use\n-acet",
@@ -83774,7 +94995,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "- pain ✅?",
     "_merged_into": "fn_implant_0277",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- ledge",
@@ -83796,7 +95018,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "ledge",
     "_merged_into": "fn_ortho_pedo_0353",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Pt has overjet 5mm and cl ii, lower arch well aligned, what would be his facial profile",
@@ -83854,7 +95077,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "concave",
     "_merged_into": "fn_ortho_pedo_0356",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- convex",
@@ -83876,7 +95100,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "convex",
     "_merged_into": "fn_ortho_pedo_0356",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- bowl shaped",
@@ -83898,7 +95123,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "bowl shaped",
     "_merged_into": "fn_ortho_pedo_0356",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Thrombocytopenic purpura is associated with which deficiency? (it should be platelets )",
@@ -83954,7 +95180,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "factor IX",
     "_merged_into": "fn_ortho_pedo_0360",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Pt with liver disease and you want to extract what test to request?",
@@ -84012,7 +95239,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "D dimer",
     "_merged_into": "fn_ortho_pedo_0170",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Pt came for follow-up for implant in the lower first molar, shows bop and 5mm pd, other teeth 2-3 and good OH (they provided clinical picture and xrays shows no excess cement)",
@@ -84068,7 +95296,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "remove excess cement",
     "_merged_into": "fn_ortho_pedo_0364",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "pt referred from ortho to extract #14 and surgeon extracted #15 by mistake, what next? ⭐️- inform patient and offer needed support",
@@ -84122,7 +95351,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- tell patient that its not a big deal",
@@ -84144,7 +95374,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "tell patient that its not a big deal",
     "_merged_into": "fn_ortho_pedo_0366",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "analgesic safe for asthmatic?",
@@ -84200,7 +95431,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "acetaminophen ✅",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "case discribing Naocl accident, how can it be prevented?",
@@ -84257,7 +95489,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "access",
     "_merged_into": "fn_ortho_pedo_0371",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- glide path",
@@ -84279,7 +95512,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "glide path",
     "_merged_into": "fn_ortho_pedo_0371",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "case explaining girl came with protruded incisors and ceph radiograph",
@@ -84369,7 +95603,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "privacy",
     "_merged_into": "fn_ortho_pedo_0375",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- confidentiality",
@@ -84391,7 +95626,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "confidentiality",
     "_merged_into": "fn_ortho_pedo_0375",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "pedo patient indicated for extraction, father refused and asked for record?",
@@ -84484,7 +95720,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "sensitivity from liner",
     "_merged_into": "fn_ortho_pedo_0379",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- high occlusal contact point",
@@ -84506,7 +95743,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "high occlusal contact point",
     "_merged_into": "fn_ortho_pedo_0379",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "50 yo with oral, genital, ocular ulcers?",
@@ -84562,7 +95800,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "behcet",
     "_merged_into": "fn_ortho_pedo_0382",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "dxx of fibromyalgia? tender point test (not sure tho(- exclusion",
@@ -84651,7 +95890,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "anaerobic",
     "_merged_into": "fn_ortho_pedo_0385",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- aerobic",
@@ -84673,7 +95913,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "aerobic",
     "_merged_into": "fn_ortho_pedo_0385",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "broken rpd clasp, everythinf intact except the clasp, what is the simplist solution?",
@@ -84730,7 +95971,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "redo",
     "_merged_into": "fn_ortho_pedo_0388",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- replace with embrasure clasp",
@@ -84752,7 +95994,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "replace with embrasure clasp",
     "_merged_into": "fn_ortho_pedo_0388",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "pt with swelling of lower lip, blue, transparent mucosa?",
@@ -84854,7 +96097,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "tmj problem",
     "_merged_into": "fn_ortho_pedo_0393",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- bad contour",
@@ -84876,7 +96120,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "bad contour",
     "_merged_into": "fn_ortho_pedo_0393",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "what is the consequence of ignoring incisal guidance during mounting in articulator? 64-pt with asymptomatic white patches in right and left buccal mucose, tongue, and floor of the mouth, what to do (F?",
@@ -84936,7 +96181,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Biopsy",
     "_merged_into": "fn_endo_0433",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "impacted third molar with cyst , contect is cystic fluid with ameloblastic lining, tx?",
@@ -84992,7 +96238,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Follow up",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- local excision",
@@ -85014,7 +96261,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "local excision",
     "_merged_into": "fn_ortho_pedo_0398",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "patient with recession and loss of id papilla, otherwise normal, tx is considered?",
@@ -85071,7 +96319,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "esthetic",
     "_merged_into": "fn_ortho_pedo_0401",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- resective",
@@ -85093,7 +96342,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "resective",
     "_merged_into": "fn_ortho_pedo_0401",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "pt with limited jaw opening and pain since trauma as child, no other joints involved, dx? 68-pt felt pain during preperation of enamel, what is responsible? spindle",
@@ -85151,7 +96401,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "ankylosis",
     "_merged_into": "fn_ortho_pedo_0404",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- osteoarthritis",
@@ -85173,7 +96424,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "osteoarthritis",
     "_merged_into": "fn_ortho_pedo_0404",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "pt with limited jaw opening and pain since trauma as child, no other joints involved, dx? 68-pt felt pain during preperation of enamel, what is responsible? spindle",
@@ -85229,7 +96481,8 @@ window.FLASH_NOTES = {
     "ref": "lamella spindle",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "tufts\n69- 9 year old space analysis?",
@@ -85247,7 +96500,8 @@ window.FLASH_NOTES = {
     "ref": "tufts 69- 9 year old space analysis?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- tanaka and jhonson",
@@ -85269,7 +96523,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "tanaka and jhonson",
     "_merged_into": "fn_ortho_pedo_0413",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "cause of clasp fracture? shallow marginal ridge prep",
@@ -85289,7 +96544,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "cause of clasp fracture? shallow marginal ridge prep",
@@ -85310,7 +96566,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "9 year old space analysis? 70-cause of clasp fracture? 71-pt with +ve TB and assistant that is vaccinated got needle stick injury, what to do?",
@@ -85368,7 +96625,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "take patient titer",
     "_merged_into": "fn_ortho_pedo_0413",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- take assistant titer",
@@ -85390,7 +96648,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "take assistant titer",
     "_merged_into": "fn_ortho_pedo_0413",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- follow up 1 week because she is vaccinated",
@@ -85412,7 +96671,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "follow up 1 week because she is vaccinated",
     "_merged_into": "fn_ortho_pedo_0413",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "pt with history of TB , 3 negative test, how to treat?",
@@ -85470,7 +96730,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "wear filtration mask",
     "_merged_into": "fn_ortho_pedo_0417",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- treat in isolated clinic",
@@ -85492,7 +96753,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "treat in isolated clinic",
     "_merged_into": "fn_ortho_pedo_0417",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- treat as last patient",
@@ -85514,7 +96776,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "treat as last patient",
     "_merged_into": "fn_ortho_pedo_0417",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "what happens with excessive ortho force? undermining resorption - ?",
@@ -85567,7 +96830,8 @@ window.FLASH_NOTES = {
     "ref": "facial resorption undermining resorption - ?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "swelling asymptomatic between incisors?",
@@ -85619,7 +96883,8 @@ window.FLASH_NOTES = {
     "ref": "Cleaning- disinfection- sterilization Other options were the same but mixed up 14-Pt came complaining of diffuse redness and pain in left buccal mucosa she",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "wear of PMMA acrylic resin denture base after some time because: 2023/09/19 نرقملا دغر GUC 1-5y/o pt. During examination he has mandibular lateral shit on closing Disking the teeth ● Fixed expansion ● 2-40y/o came to replace his missing #46 with implant, how much interocclusal distance needed to place extra helix implant crown size needed ? 4 ● 5 ● 7 ● 10",
@@ -85671,7 +96936,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "schedule for follow up",
     "_merged_into": "fn_perio_0499",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Q5- minimum days to extract before chemo?\n-7\n-14\n-21\nQ6- OPG all teeth are there except lower 2nd PM what is the pt age?\n-10\n-11\n-12\nQ7-% of apical accessory canal?\n-74\n-15\n-11\nQ8- distal root of lower molar with VRF what to do\n-extract\n-root amputation\nQ9- after 30 mins of RD application on 14 year old healthy boy, start to have\ntachypnea, difficulty breathing and wheezing ?\n-un-diagnosed asthma\n",
@@ -85750,7 +97016,8 @@ window.FLASH_NOTES = {
     "ref": "Multiple Q’s about VRF, Endo-perio lesions 2023/09/20 داوعلا اراس GUC 2 years old how to diagnosis Knee to knee — Pt with thumb sucking habit Wait till 8",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "SSC\nA picture saying what type of graft\nConnective tissue\nConnective tissue\nInternal\nExternal\nSulcular\nCavernous sinus\nCanine\nInfratemporal\nMuscle attachemnts\nYou want to extract and how to know if you anesthaized the pt and\nyou gave IANB and long buccal\nCanine\n1st milar\n2nd molar\n3rd molar",
@@ -85769,7 +97036,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "You will do ortho and pt has poor OH caries and perio with endo what",
@@ -85788,7 +97056,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- after ortho while the retainer in the mouth",
@@ -85809,7 +97078,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "after ortho while the retainer in the mouth",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "3/ h file cross section\n4/ access cavity shape of maxillary premolar\nنم هدكاتم وم ( 5/ while you make perio assessment what condition is affecting perio\n) هغيصلا",
@@ -85827,7 +97097,8 @@ window.FLASH_NOTES = {
     "ref": "3/ h file cross section 4/ access cavity shape of maxillary premolar نم هدكاتم وم ( 5/ while you make perio assessment what condition is affecting perio ) هغيصلا",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "explanatation\nSRP or OHI ( something like that) ●\nRemove crown ●\nRemove cement ●\n14/ pt with 11 mm reverse overjet , Tx ?",
@@ -85851,7 +97122,8 @@ window.FLASH_NOTES = {
      "passage": "iving a falsely positive diagnosis of this condition.101 Fur-\nspecificity for detecting dentoalveolar regions with chronic           thermore, researchers have failed to produce SMP-type pain in\npain,32 and MRI techniques do not seem to have been studied.           animals,10 something that is presumed to be due to the fact that\n    Neuropathic disorders have a predilection for women but",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "chin surgery i forgot the name maybe genioplasty ●\n15/ angle of VI preperation bevel\n-45\n-90\n-110\n16/ you will make fpd for pt , she is really worry about esthetic but she is not welling\nfor surgery what pontic to use ?\novate ●\nModified ridge lap ●\nSaddle ●\n1/ signs of Parkinson disease\n18/ when to pack acrylic ?\ndoughy stage ●\n19/ PT has symptoms of morning spasm also her teeth is worn and she sa",
@@ -85876,7 +97148,8 @@ window.FLASH_NOTES = {
      "passage": "reasoning.\n\nCase scenario 6: Capacity/competence to consent\nA university professor admitted for stroke refused life-saving treatment even\nafter a thorough explanation by his son, who was a neurosurgeon. While in\nthe hospital, he seemed to forget essential information about his illness, forgot\nhis age and his wife‟s name, and was confused about the day of the week.\nHowever, he was in continuous te",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "TB\nCOPD ●\n21/ pt has been punched on left side what will happen ?\nleft angle and right condyle fracture ●\n22/ maximum time for HBV to stay in room temperature\n1 week ( this was the highest number the put ) ●\n23/ area that you move more to lingual during extraction\nMD molars ●\nMx molars ●\n24/ Parkinson disease signs and symptoms\n25/ 6mm pocket depth but JE at same level of CEJ",
@@ -85901,7 +97174,8 @@ window.FLASH_NOTES = {
      "passage": "ay decrease their risk for heart\ndisease, similar knowledge regarding the prevention of periodontal\ninfection should be emphasized. A physician would be remiss if he\nor she did not provide education about decreasing cholesterol level,\nlosing weight, and ceasing a smoking habit to a patient at risk for\nCHD. Likewise, controlling the risk factor of periodontal infection\nrequires the dentist to empha",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- psuedopocket",
@@ -85922,7 +97196,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "psuedopocket",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- infrabony",
@@ -85943,7 +97218,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "infrabony",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "- suprabony",
@@ -85964,7 +97240,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "suprabony",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Distance between the film and mid-sagittal plane of the patient\n15 cm\nFrom X-ray source to the mid-sagittal plane =",
@@ -85982,7 +97259,8 @@ window.FLASH_NOTES = {
     "ref": "Distance between the film and mid-sagittal plane of the patient 15 cm From X-ray source to the mid-sagittal plane =",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "A PATIENT CAME TO YOUR CLINIC COMPLAINING OF Esthetic\nEffects all her teeth WHITE LESIONS A LONG TIME AGO AND HER MOTHER\nSAID SHE HAD THE SAME ISSUE, THE PATIENT DRINK TO MANY SODA AND\nCARBOHYDRATE FOODS, WHEN THE TEETH ARE HYDRATED ITS PARTIALLY\nDISAPPEAR, WHAT IS THIS LESION?\nOptions",
@@ -86031,7 +97309,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "6 Attachment loss",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "● 4mm attachment loss 2 mm probing depth",
@@ -86052,7 +97331,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "4mm attachment loss 2 mm probing depth",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "true combined\nPicture of Incisal reduction and ask what technique ?\n2023/09/21 ينارمشلا نمحرلادبع BUC\n1-\nThe amount of fluoride in mouthwash for home use (in milliliter):\n50/10\n100/50\n150/50\n200/30\nnot found in references\n2- patient has sever bone resorption, how would you evaluate biological width\nHorizontal BW\nVertical BW\n3- pedo patient had avulsion of tooth , what is the best media\nMilk\nWate",
@@ -86350,7 +97630,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Ethics question about the Collaborator",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "Childwith retrognatic mandible,glossoptosis, cleftpalat.?",
@@ -86514,7 +97795,8 @@ window.FLASH_NOTES = {
      "passage": "ep is to\nmeasure the width of the four mandibular incisors and add them together. C, The mesiodistal width of the unerupted canine and premolars in\none quadrant is calculated by using the previous formula. In the mandibular arch, 10.5 mm is used to determine the canine-premolar widths. In\nthe maxillary arch, half the sum of the mandibular incisors is still used, but 11.0 mm is substituted for 10.5",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "two boys came to your clinic asking for ortho treatment, you will take the\nconsentfrom who?",
@@ -86559,7 +97841,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ortho_pedo"
+    "_dept": "ortho_pedo",
+    "_raw_recall": true
    },
    {
     "stem": "thin scalloped bone type and teeth will pushed labially by ortho what will\nhappen? Orsomethinglike that",
@@ -87258,6 +98541,580 @@ window.FLASH_NOTES = {
     "_verification_verdict": "supported",
     "format": "mcq",
     "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0130",
+    "stem": "A child presents for a 6-month recall visit. The child is caries-free but previously underwent comprehensive dental treatment under general anesthesia. Which fluoride should be applied?",
+    "options": [
+     "a. 1.23% APF gel",
+     "b. 5% sodium fluoride varnish",
+     "c. 0.05% sodium fluoride rinse",
+     "d. Fluoride foam"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A child presents for a 6-month recall visit. The child is caries-free but previously underwent comprehensive dental treatment under general anesthesia. Which fluoride should be applied?",
+    "dept": "ortho_pedo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Pedo_McDonald_Avery_10e",
+     "passage": "The passage states: 'The sodium fluoride varnish (Fig. 9-6) is particularly recommended for use in children because of its ease of application and equal efficacy to APF systems.'"
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0132",
+    "stem": "When cutting orthodontic wire, what protective equipment should the patient wear?(mentioned before)",
+    "options": [
+     "a. Face mask",
+     "b. Eye goggles",
+     "c. Face shield",
+     "d. Cotton rolls"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "When cutting orthodontic wire, what protective equipment should the patient wear?(mentioned before)",
+    "dept": "ortho_pedo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Pedo_McDonald_Avery_10e",
+     "passage": "The passage states: 'Eyeglasses, goggles, or a face shield must be used to protect the surgeon’s eyes' — for the patient, eye goggles are the appropriate protective equipment."
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0137",
+    "stem": "A 9-year-old patient presents with unerupted maxillary canines, crowding, maxillary deficiency, and mandibular prognathism. Which condition should be treated first?",
+    "options": [
+     "a. Crowding",
+     "b. Unerupted canines",
+     "c. Maxillary deficiency",
+     "d. Mandibular prognathism"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A 9-year-old patient presents with unerupted maxillary canines, crowding, maxillary deficiency, and mandibular prognathism. Which condition should be treated first?",
+    "dept": "ortho_pedo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Orthodontics 5th",
+     "passage": "The passage states: 'the more the problem is mandibular prognathism than maxillary deficiency, the greater the chance of growth that eventually will require surgery.' It also mentions maxillary deficiency and mandibular prognathism, but does not specify which to treat first. No passage supports a specific order, so the answer is uncertain."
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0138",
+    "stem": "A 7-year-old child has a fully erupted maxillary left central incisor, while the right central incisor has not erupted. What is the most likely cause?",
+    "options": [
+     "a. Thick fibrous tissue",
+     "b. Delayed eruption",
+     "c. Congenitally missing tooth",
+     "d. Supernumerary tooth"
+    ],
+    "answerLetter": "d",
+    "answerIdx": 3,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A 7-year-old child has a fully erupted maxillary left central incisor, while the right central incisor has not erupted. What is the most likely cause?",
+    "dept": "ortho_pedo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "McDonald_Avery_10e",
+     "passage": "The passage describes a mesiodens (supernumerary tooth) delaying the eruption of the maxillary right permanent central incisor, as shown in Figure 19-21."
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0140",
+    "stem": "A patient has a high labial frenum associated with a midline diastema. What is the appropriate management?",
+    "options": [
+     "a. Orthodontic treatment and frenectomy simultaneously",
+     "b. Orthodontic treatment followed by frenectomy",
+     "c. Frenectomy only",
+     "d. Observation"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient has a high labial frenum associated with a midline diastema. What is the appropriate management?",
+    "dept": "ortho_pedo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "McDonald and Avery's Dentistry for the Child and Adolescent",
+     "passage": "The passage states: 'If orthodontic closure is advocated, it should occur before the frenectomy to reduce the chance of scar tissue impeding tooth movement.' This supports orthodontic treatment followed by frenectomy."
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0154",
+    "stem": "Which mixed dentition analysis is commonly used for Saudi children with crowding?",
+    "options": [
+     "a. Moyers analysis",
+     "b. Tanaka and Johnston analysis",
+     "c. Bolton analysis",
+     "d. Carey analysis"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which mixed dentition analysis is commonly used for Saudi children with crowding?",
+    "dept": "ortho_pedo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Orthodontics 5th",
+     "passage": "The passage states: 'the Tanaka-Johnston method for predicting the size of unerupted canines' is used in mixed dentition space analysis. This supports Tanaka and Johnston analysis."
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0163",
+    "stem": "A dentist insists that a patient undergo orthodontic treatment despite the patient’s refusal. Which ethical principle is violated?",
+    "options": [
+     "a. Beneficence",
+     "b. Non-maleficence",
+     "c. Autonomy",
+     "d. Justice"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A dentist insists that a patient undergo orthodontic treatment despite the patient’s refusal. Which ethical principle is violated?",
+    "dept": "ortho_pedo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Orthodontics 5th",
+     "passage": "The passage states: 'No longer can the doctor decide, in a paternalistic way, what is best for a patient. Both ethically... he or she should at least assent to treatment.' This supports the principle of autonomy, which is violated when treatment is forced despite refusal."
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0164",
+    "stem": "Which of the following is a functional orthodontic appliance?",
+    "options": [
+     "a. Transpalatal arch",
+     "b. Bionator",
+     "c. Nance appliance",
+     "d. Lingual arch"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which of the following is a functional orthodontic appliance?",
+    "dept": "ortho_pedo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "An Introduction to Orthodontics (2)",
+     "passage": "The passage lists 'Removable and functional appliances' as a separate anchorage category, and the Bionator is a functional appliance."
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0166",
+    "stem": "What effect do bisphosphonates have on orthodontic tooth movement?",
+    "options": [
+     "a. Accelerate tooth movement",
+     "b. Slow tooth movement",
+     "c. No effect on tooth movement",
+     "d. Increase root resorption"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What effect do bisphosphonates have on orthodontic tooth movement?",
+    "dept": "ortho_pedo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Orthodontics 7e 2026",
+     "passage": "The passage states: 'Bisphosphonates are used to treat the effects of some cancer and bone treatments that slow bone resorption while at the same time inhibiting tooth movement.'"
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0194",
+    "stem": "A 2-year-old child under sedation develops dizziness and difficulty breathing. What is the most likely cause?",
+    "options": [
+     "a. Mild sedation",
+     "b. Moderate sedation",
+     "c. Sedation overdose",
+     "d. Allergic reaction"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A 2-year-old child under sedation develops dizziness and difficulty breathing. What is the most likely cause?",
+    "dept": "ortho_pedo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Pedo_McDonald_Avery_10e",
+     "passage": "The passage states: 'Systemic toxic reactions from anesthetics are rarely observed in adults. However, young children are more likely to experience toxic reactions because of their lower body weight.' Dizziness and difficulty breathing in a sedated child suggest a toxic reaction, consistent with sedation overdose."
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0195",
+    "stem": "A child returns one week after tooth extraction with swelling of the lower lip. What is the most likely diagnosis?",
+    "options": [
+     "a. Hematoma",
+     "b. Masticatory trauma",
+     "c. Cellulitis",
+     "d. Allergic reaction"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A child returns one week after tooth extraction with swelling of the lower lip. What is the most likely diagnosis?",
+    "dept": "ortho_pedo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Pediatric Dentistry INFANCY THROUGH ADOLESCENCE",
+     "passage": "The passage lists 'Cellulitis' as a differential diagnosis for a swelling after tooth extraction, and the clinical findings include 'soft tissue swelling' and 'tender to percussion'."
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0231",
+    "stem": "A 7-year-old child presents with diffuse, symmetrical white opacities on the permanent first molars and incisors. The father exhibits similar dental characteristics. The child's history includes a high-carbohydrate diet and consumption of fluoridated water. Wh",
+    "options": [
+     "a. Molar Incisor Hypomineralization (MIH)",
+     "b. Early childhood caries",
+     "c. Amelogenesis Imperfecta",
+     "d. Fluorosis"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A 7-year-old child presents with diffuse, symmetrical white opacities on the permanent first molars and incisors. The father exhibits similar dental characteristics. The child's history includes a high-carbohydrate diet and consumption of fluoridated water. Wh",
+    "dept": "ortho_pedo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "McDonald and Avery's Dentistry for the Child and Adolescent 10e",
+     "passage": "The passage mentions 'asymmetrical distribution of hypomineralized demarcated opacities in first permanent molars and incisors' and states 'it is a multifactorial genetic condition.' The father exhibiting similar characteristics supports a genetic etiology, consistent with Amelogenesis Imperfecta."
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0236",
+    "stem": "A child requires RCT, but the mother is unsure and asks the child to decide. What is the most appropriate action?",
+    "options": [
+     "a. Let the child decide",
+     "b. Refer to another dentist",
+     "c. Obtain informed consent from the parent before proceeding with treatment (RCT or extraction)",
+     "d. Perform treatment without consent"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A child requires RCT, but the mother is unsure and asks the child to decide. What is the most appropriate action?",
+    "dept": "ortho_pedo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Pedo_Pediatric Dentistry INFANCY THROUGH ADOLESCENCE",
+     "passage": "The passage emphasizes 'Informing the parent before the extraction and obtaining a written consent' and states 'These issues are shared by dentist and parent.'"
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0252",
+    "stem": "An older child presents with an avulsed permanent tooth. Which antibiotic is recommended?",
+    "options": [
+     "a. Amoxicillin",
+     "b. Penicillin V",
+     "c. Azithromycin",
+     "d. Doxycycline"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "An older child presents with an avulsed permanent tooth. Which antibiotic is recommended?",
+    "dept": "ortho_pedo",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Pediatric Dentistry INFANCY THROUGH ADOLESCENCE",
+     "passage": "The passage states: 'penicillin V is the antibiotic of choice for children age 8 years and younger.' For an older child with an avulsed permanent tooth, penicillin V is recommended."
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0296",
+    "stem": "Natal teeth appear:",
+    "options": [
+     "a. After 1 month",
+     "b. At 6 months",
+     "c. At birth",
+     "d. After eruption of primary teeth"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Natal teeth appear:",
+    "dept": "ortho_pedo",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Orthodontics 7e 2026",
+     "passage": "The passage states 'The prevalence of natal teeth (teeth present at birth)' and 'Occasionally, a “natal tooth” is present, although the first primary teeth normally do not erupt until approximately 6 months of age.'"
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0304",
+    "stem": "First visit of child at:",
+    "options": [
+     "a. From birth up to 1 year",
+     "b. 3 years",
+     "c. After all teeth erupt",
+     "d. At school age"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "First visit of child at:",
+    "dept": "ortho_pedo",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "McDonald and Avery's Dentistry for the Child and Adolescent",
+     "passage": "The passage mentions 'NATAL AND NEONATAL TEETH' and 'The prevalence of natal teeth (teeth present at birth)', indicating that dental care can begin from birth, and the first visit should be from birth up to 1 year."
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0335",
+    "stem": "Inadequate orthodontic treatment can result in:",
+    "options": [
+     "a. Improved alignment",
+     "b. Malocclusion",
+     "c. Healthy gums",
+     "d. Reduced treatment time"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Inadequate orthodontic treatment can result in:",
+    "dept": "ortho_pedo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "An Introduction to Orthodontics (2)",
+     "passage": "The passage states 'unfavourable growth would result in a malocclusion' and discusses 'Class III malocclusions', indicating that inadequate orthodontic treatment can result in malocclusion."
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0342",
+    "stem": "When extraction premature primary second molar affect:",
+    "options": [
+     "a. Malocclusion",
+     "b. Length arch",
+     "c. Vertical height",
+     "d. None"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "When extraction premature primary second molar affect:",
+    "dept": "ortho_pedo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Pedo_McDonald_Avery_10e",
+     "passage": "The passage states 'early extraction of the affected primary molar may enhance occlusal outcomes by avoiding excess vertical collapse and the loss of alveolar bone height', indicating that premature extraction of primary second molars affects vertical height."
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0379",
+    "stem": "What can result from inadequate orthodontic treatment?",
+    "options": [
+     "a. Improved tooth alignment",
+     "b. Malocclusion",
+     "c. Healthier gums",
+     "d. Reduced treatment time (Same as Q7) Reference: Contemporary Orthodontics: incomplete treatment → residual spaces/relapse = malocclusion."
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What can result from inadequate orthodontic treatment?",
+    "dept": "ortho_pedo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Orthodontics",
+     "passage": "The passage states: 'Changes resulting from continued growth in a Class II, Class III, deep bite, or open bite pattern contribute to a return of the original malocclusion and so are relapse in that sense.' Inadequate treatment can lead to malocclusion."
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0396",
+    "stem": "What is crucial for the success of orthodontic treatment?",
+    "options": [
+     "a. Patient compliance",
+     "b. Cost-effectiveness",
+     "c. Length of treatment",
+     "d. Number of visits"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is crucial for the success of orthodontic treatment?",
+    "dept": "ortho_pedo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "An Introduction to Orthodontics (2)",
+     "passage": "The passage states 'Patient co-operation. A successful outcome is de...' indicating patient compliance is crucial for orthodontic treatment success."
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0418",
+    "stem": "At any age the child have 12 teeth primary and 12 teeth permanent:",
+    "options": [
+     "a. 9 years",
+     "b. 11 years",
+     "c. 12 years",
+     "d. 7 years"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "At any age the child have 12 teeth primary and 12 teeth permanent:",
+    "dept": "ortho_pedo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "At ~9 years: permanent = 8 incisors + 4 first molars = 12; remaining primary = 4 canines + 8 molars = 12. Reference: McDonald & Avery (Chronology of the Human Dentition): permanent incisors erupt 6–9 years, first molars at 6; primary canines/molars remain until 10–12 years. - ❌ B/C: At 11–12 years permanent canines/premolars replace the primary ones. - ❌ D: At 7 years: 8 permanent + 16 primary."
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0419",
+    "stem": "Space maintainer is important in which teeth:",
+    "options": [
+     "a. Maxillary primary anterior teeth",
+     "b. Mandible primary anterior teeth",
+     "c. Mandible second molars"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Space maintainer is important in which teeth:",
+    "dept": "ortho_pedo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Orthodontics 7e 2026",
+     "passage": "The passage states: 'completed at 24 to 30 months as the mandibular then the maxillary second molars erupt.' This indicates the mandibular second molars are a key area where space maintenance is relevant."
+    },
+    "_dept": "ortho_pedo"
+   },
+   {
+    "id": "fn_j26_0450",
+    "stem": "The critical factor for success of orthodontic treatment:",
+    "options": [
+     "a. Number of visits",
+     "b. Patient compliance",
+     "c. Length of treatment",
+     "d. Age (Same as Q68) Reference: Contemporary Orthodontics: “compliance is required.”"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "The critical factor for success of orthodontic treatment:",
+    "dept": "ortho_pedo",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "An Introduction to Orthodontics (2)",
+     "passage": "The passage states: 'Patient co-operation. A successful outcome is dependent upon patient compliance with attending appointments, looking after their teeth and appliance and with wearing auxiliaries e.g. elastics.'"
+    },
+    "_dept": "ortho_pedo"
    }
   ],
   "oms": [
@@ -87392,7 +99249,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "protrusive interfere",
@@ -87417,7 +99275,8 @@ window.FLASH_NOTES = {
      "passage": "ed ¿nal outcome. However, this design process may not allow\n    tion is the most predictable position from which an interference-          the dentist or patient to include the dynamics of lip movement in the\n    free occlusion can be created.                                             evaluation of the proposed changes.\n    To manage the occlusion as previously described, the clinician",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "herpes labialis case",
@@ -87442,7 +99301,8 @@ window.FLASH_NOTES = {
      "passage": "medicine, Hamilton,\n    infection, J Oral Pathol Med 22:289–291, 1993.                                   Ontario, Canada, 2000, BC Decker.\n69. Effos RB, Fletcher CV, Gebo K, et al: Aging and infectious diseases:         93. Glick M, Muzyka BC, Lurie D, et al: Oral manifestations associated\n    workshop on HIV infection and aging: what is known and future research           with HIV disease as mar",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Indicates the presence of intercellular autoantibodies of IgG, C3 . What is the diagnosis?",
@@ -87836,7 +99696,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "autoimmune diseases with CNS",
@@ -88151,7 +100012,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "anti immune antibody ( SLE)",
@@ -88230,7 +100092,8 @@ window.FLASH_NOTES = {
      "passage": "arlier, a patient presenting\n(patching a defective restoration), and restoration. This         with swelling, pain, bleeding, or infection should have\nlist of reasonable treatment alternatives is based on the         these problems managed as soon as possible, before\ncurrent knowledge of the effectiveness of the treat-              initiation of subsequent phases.\nment, the prevailing standards of",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Type of fracture ?",
@@ -88728,7 +100591,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Irrigant during surgery to prevent infection:",
@@ -89266,7 +101130,8 @@ window.FLASH_NOTES = {
     "ref": "Age of developing permanent fluorosis?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Treatment of Snail ulcer related to Inflammatory Bowel Disease\nA- systemic steroids✅",
@@ -89554,7 +101419,8 @@ window.FLASH_NOTES = {
       "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
      ]
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Epstein pearls case",
@@ -89579,7 +101445,8 @@ window.FLASH_NOTES = {
      "passage": "the inner or lingual surfaces of the roots. The resorp-\n   lingual aspects of the dental ridges and on the palate              tion process is not continuous but is interrupted by pe-\n   away from the raphe. The nodules are considered                     riods of inactivity or rest. A reparative process follows\n   remnants of salivary gland tissue and are histologi-                periods",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Cotton wool appearance",
@@ -89649,7 +101516,8 @@ window.FLASH_NOTES = {
     "ref": "Protrusive interference q’s",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Causes fetal defects",
@@ -89702,7 +101570,8 @@ window.FLASH_NOTES = {
      "passage": "laced in contact with the natural\n“normal” sensation is. The suspected tooth should be tested at         tooth structure. The tip of the electric pulp tester probe is\nleast twice to confirm the results. The tip of the testing probe       coated with a small amount of toothpaste and placed in contact\nthat will be placed in contact with the tooth structure must be        with the side of the explore",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Another Hepatitis question: whether to hire, reject, or accept with conditions.depends",
@@ -89727,7 +101596,8 @@ window.FLASH_NOTES = {
      "passage": "or eyeglasses that display\nbeing so good at that. I think next time you can sit still the    movies. There is little scientiic evidence demonstrating a\nentire time and get two stickers.” Another issue to consider      positive impact of television viewing on children’s behavior,\nis the point at which a reward for positive behavior becomes      but many dentists report success. These devices can po",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Vertical fracture",
@@ -89778,7 +101648,8 @@ window.FLASH_NOTES = {
      "passage": "e Section 15.5.3). Where head-\ngear is to be used in conjunction with a fixed appliance, patients\nfirst need to be fitted with upper molar orthodontic bands with buc-\ncal headgear tubes. Where headgear is being used with a removable\nor functional appliance then headgear tubes need to be added to\neither the molar clasps or incorporated into the acrylic (see Chapter\n17, Fig. 17.7).\n\n• Face-bow: the",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "7-year-old child → toothpaste contains",
@@ -89830,7 +101701,8 @@ window.FLASH_NOTES = {
      "passage": "the length of\n\n                                  3641\n\fgraft needed is measured and trimmed so that the graft will extend\n3 mm past the last tooth with recession at each end of the prepared\nsite. The vertical dimension of the graft should be 6 to 8 mm. The\nrehydrated and trimmed allograft is then placed into the surgical\npouch, with the basement membrane surface facing outward, and\nsecured coronal",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Maxillary tori → appropriate connector.",
@@ -89855,7 +101727,8 @@ window.FLASH_NOTES = {
      "passage": "rtical section of the alveolar process\nsinus. A suture can be placed through the packing material to         and the flat portion of the palate and continues anteriorly\nprevent displacement and aid retrieval. Jerome and Hill259 sug-       (Fig. 9-7). A vertical releasing incision can be placed between\ngested securing the apical root segment by drilling a small hole      the maxillary first premola",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Mandibular tori → management.",
@@ -89933,7 +101806,8 @@ window.FLASH_NOTES = {
      "passage": "equate prenatal care; race; low\nsocioeconomic status; hypertension; old or young maternal age;\n\n                                    1405\n\fdiabetes; and genitourinary tract infections increase the risk of\npreterm LBW delivery. However, these risk factors are not present\nin approximately one-fourth of preterm LBW cases, which results in\na continued search for other causes.48,127\n   Research has exam",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Medicine/Surgery: yellow-brown teeth →",
@@ -90135,7 +102009,8 @@ window.FLASH_NOTES = {
      "passage": "utta-percha to which he added vermilion.405 Because ver-          than 20 years ago, investigators demonstrated that cases with\nmilion is pure oxide of mercury and therefore dangerous in            soft-tissue swelling could be completed in one visit with\nquantity, many people justifiably criticized this technique.          appropriate endodontic treatment, incision for drainage,\n    With the intr",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "TB patient (inactive) →",
@@ -90199,7 +102074,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Question about Sjögren’s syndrome (answer not remembered).\n●",
@@ -90223,7 +102099,8 @@ window.FLASH_NOTES = {
      "passage": "sionally, an enamel surface that is only slightly cavitated\nPatients with gingival recession have a predisposition to     may be treated successfully by smoothing with sand-\ncervical caries because dentin is more susceptible to         paper disks, polishing, and treating with a fluoride\ndemineralization than enamel. Patients with a reduced         preparation or a dentin adhesive in an at",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Nerve supply of MB root of maxillary first molar →",
@@ -90483,7 +102360,8 @@ window.FLASH_NOTES = {
      "passage": "SOLUTIONS\n Assume this extracted tooth with surrounding bone fracture was submitted to oral pathology.\n 1. The notch observed was from the aggressive scaling and root              Answers are identified in the legend for the figure.\n    planing that was performed during the debridement; can you\n    identify the histologic landmarks?\n 2. How would this wound healing dif",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Swelling under mandible →",
@@ -90560,7 +102438,8 @@ window.FLASH_NOTES = {
      "passage": "ue access window to the diseased\n    Every effort must be made to ensure profound local anes-          tissue, the surgeon must take into consideration various ana-\nthesia before surgery begins. Usually a minimum of 10 to 20           tomic features, such as frenum-muscle attachments, the width\nminutes is required from the time of injection to the start of        of attached gingiva, papillary hei",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "X-ray of a dentigerous cyst — what’s the treatment?",
@@ -90925,7 +102804,8 @@ window.FLASH_NOTES = {
      ]
     },
     "_answer_disputed": true,
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Case: parents complaining about their child’s appearance with multiple issues including impacted canine.",
@@ -91109,7 +102989,8 @@ window.FLASH_NOTES = {
      "passage": "other craniofacial anomalies\n\n Relevant sections in other chapters\n 4.2 Craniofacial embryology\n\n Learning objectives for this chapter\n\n • Gain an appreciation of the different presentations of cleft lip and/or palate and the problems they present for the patient and the\n    clinician\n • Gain an understanding of the basic principles of management of patients with a cleft\n\n22.1 Prevalence\nCleft lip",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "51-year-old female with fibromyalgia rheumatica ,Right facial pain, loss of appetite, pain on closing mouth, new severe\npain Diagnosis:",
@@ -91241,7 +103122,8 @@ window.FLASH_NOTES = {
      "passage": "bial groove, and\n                labiomental groove (Figure 3–1). The philtrum is a midline shallow depression of the\n                upper lip, which starts at the labial tubercle and ends at the nose. The labial tubercle is\n                a little swelling in the midportion of the vermillion border of the upper lip. The lip is\n                covered by the skin at its facial surface and the mu",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Zinc oxide eugenol advantage in primary",
@@ -91287,7 +103169,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "The picture of fractured skull what to adjust first",
@@ -91331,7 +103214,8 @@ window.FLASH_NOTES = {
      "passage": "romes such as cleft lip and palate (see Chapter 22), it is more difficult to   to consider the role of the following in the aetiology of their malocclu-\ndetermine the aetiology of features which are in essence part of normal         sion. Further discussion of these factors will be considered in the forth-\nvariation, and the picture is further complicated by the compensatory           coming chapt",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Poorest root prognosis",
@@ -91466,7 +103350,8 @@ window.FLASH_NOTES = {
      "passage": "d affects females\ncases of cleft lip with or without cleft palate, and the risk of unaffected    more often than males. Clefts of the secondary palate have a lesser\nparents having another child with this anomaly is 1 in 20 (Box 22.1).          genetic component, with a family history in around 20 per cent and\nMales are affected more frequently than females, and the left side is          a reduced",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Gracey 11/12 picture and ask for which surface - (root surface)\n●",
@@ -91490,7 +103375,8 @@ window.FLASH_NOTES = {
      "passage": "through the intrasulcular incision.\nStep 10. The size of the pouch, which includes the area of the\n  denuded root surface, is measured so that an equivalent-size\n  donor connective tissue can be procured from the palate.\nStep 11. A donor surgical site is created to obtain a connective\n  tissue graft of adequate size and shape to be placed at the\n  recipient site. The donor tissue connective tissue",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Class 3 malocclusion how to correct ?",
@@ -91626,7 +103512,8 @@ window.FLASH_NOTES = {
      "passage": "palladium. The terms precious, semi-\nwhich the ceramic can no longer undergo viscous flow        precious, and nonprecious, which refer to unit metal\nto relieve thermal incompatibility stresses. The            cost, are now less preferable than the terms noble\nthermal contraction coefficient (a), generally assumed      and base metals, which refer to the electrochemical\nto be the same as that for",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Metamorphism definition",
@@ -91697,7 +103584,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "A picture similar to this with a broken file extends to the apex. During root canal treatment of a mandibular molar, a\nfile fractures during the final stage of cleaning and shaping and extends beyond the apex. Radiographic examination\nconfirms that the separated instrument protrudes past the apical foramen. What is your management?",
@@ -91884,7 +103772,8 @@ window.FLASH_NOTES = {
      ]
     },
     "_answer_disputed": true,
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Internal resorption in 21 what is the management",
@@ -92106,7 +103995,8 @@ window.FLASH_NOTES = {
      "passage": "ed. B, All six grooves have been placed.\n\n      enamel will be unsupported (see Fig. 7-24). Gingi-\n      vally, the depth of the alignment grooves should\n      therefore be no more than half the width of the tip\n      of the diamond. Occlusocervically, the position of\n      the tip of the diamond rotary instrument deter-\n      mines the location of the margin (Fig. 8-15).\n   3. Note that the align",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "If the lab technician walks in while you’re treating a female patient, does that violate?",
@@ -92301,7 +104191,8 @@ window.FLASH_NOTES = {
      "passage": "olar, in which the purulent exudate breaks            tor muscle (i.e., maxilla) or below the attachment of the buc-\nthrough the lingual cortical plate and the apices of the tooth          cinator muscle (i.e., mandible).\nlie below the attachment of the mylohyoid muscle. If the sub-               As the name implies, the submasseteric space (Fig. 18-4, J)\nmental, sublingual, and submandibular spac",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Pictures of expanders",
@@ -92326,7 +104217,8 @@ window.FLASH_NOTES = {
      "passage": "removed spontaneously\nfrom the teeth, such as during eating. However, on the basis of the\nfirm attachment between the bacteria and the surface, this seems\nunlikely. Even in the occlusal surfaces of the molars, plaque\nremains, even after chewing fibrous food (e.g., carrots, apples,\nchips). The inefficiency of the spontaneous plaque removal is neatly\nillustrated by the clinical pictures in Fig. 8.2",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "COPD.BEST POSITION ?",
@@ -93471,7 +105363,8 @@ window.FLASH_NOTES = {
      "passage": "ent of the lower arch can be accepted, a Class II mal-       groups had low scores for signs or symptoms of dysfunction,\nocclusion can be corrected just with the use of Class II elas-    and there was no difference between them in any aspect of\ntics (or their equivalent in the form of fixed connectors). The   TM joint function.11 There is simply no evidence to support\ncorrection is achieved, howev",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Motor accident picture with double vision",
@@ -93490,7 +105383,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Vip person question",
@@ -93988,7 +105882,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "CBCT X - ray of impacted canine , what is the type of impaction (Depends on image )",
@@ -94035,7 +105930,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "fordyce’s granules picture",
@@ -94060,7 +105956,8 @@ window.FLASH_NOTES = {
      "passage": "K\nn FIGURE 2-2, cont’d F to I, White sponge nevus of the buccal mucosa (F and G) and lateral tongue (H and I). J, Ulcerated linea alba from\n\naggressive sucking habit. K, Pseudomembranous candidiasis of the buccal mucosa.                                                 Continued\n\f22    PART 1 Fundamentals of Pediatric Dentistry",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Picture of Hutchinson's incisors",
@@ -94085,7 +105982,8 @@ window.FLASH_NOTES = {
      "passage": "d along with a mold\n      guide to select the teeth. Mold\n      guides are in either a paper form or\n      a physical form. The paper mold\n      guide has pictures and information\n      about the teeth. This is an example\n      of a mold guide.\n\n      Figure A8–2 This portion of a page\n      from a mold guide provides exam-\n      ples of anterior tooth molds avail-\n      able. The information is g",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Pt has class 3 skeletal malocclusion and will have lefort 1 advancement surgery, what soft tissue problem he might\nshow?",
@@ -94134,7 +106032,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Heart failure patient on digoxin what to avoid?",
@@ -94424,7 +106323,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Calculate D9 for a file with size 30 and taper 0.04?",
@@ -94637,7 +106537,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Identify the case picture: a.Epstein pear.",
@@ -94662,7 +106563,8 @@ window.FLASH_NOTES = {
      "passage": "inability of the operator to completely clean the root canal or\n                                                                    canals. Exploratory surgery may identify undetected vertical\n                                                                    root fractures (Fig. 21.6), additional apical and lateral foram-",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Identify the type of grasp?",
@@ -94982,7 +106884,8 @@ window.FLASH_NOTES = {
      "passage": "for the clinician to tell the patient\ning the option of no treatment. In these situations, the clinical team need    the average risks that they feel are important—the emphasis is now on\nto work with the patient and family to determine the best option based         the clinician to find out what the patient wants to know, as well as telling\non the clinical presentation and the patient’s values an",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "When teeth contact, the mandible shifts to the right. This is due to:",
@@ -95298,7 +107201,8 @@ window.FLASH_NOTES = {
      "passage": "ng             bur should be rotating when applied to the tooth and\npaper before tooth preparation. The operator should                 should not stop rotating until removed. Viewed from\nmake a mental image of these contacts to serve as guide             the proximal and lingual (facial) aspects, the long axis of\nin tooth preparation and restoration. Any opposing                  the bur and the",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "A painless slow-growing swelling of the posterior mandible with multilocular radiolucency (“soap bubble\nappearance”). What is the most likely diagnosis?",
@@ -95664,7 +107568,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Locate undercuts",
@@ -95683,7 +107588,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Pain in alveolar ridge for the both jaws :",
@@ -95858,7 +107764,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "MI 3 weeks and severe pain :",
@@ -98726,7 +110633,8 @@ window.FLASH_NOTES = {
       "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
      ]
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "pt need chin prominent and do multiple surgery and very thin ?",
@@ -98804,7 +110712,8 @@ window.FLASH_NOTES = {
      "passage": "Prepara-\n    tion. Existing restorative material and all remnants of endodontic sealer and gutta-percha were removed from the\n    cavity to expose a clean dentin substrate. Opaque cement can be used to mark the entrance of the roots to\n    facilitate eventual retreatment or for the later placement of a post. B, Bleaching procedures. Two sessions of\n    internal bleaching were needed to adapt the",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Patient came asking for complete blood test , and you did all test even unnecessary ones because he can pay ,\nwhat should you do ?",
@@ -98850,7 +110759,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "MRONJ has described above?",
@@ -99145,7 +111055,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "100,000 epinephrine ?",
@@ -99777,7 +111688,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Space required #25 and space available #26?",
@@ -99932,7 +111844,8 @@ window.FLASH_NOTES = {
      "passage": "usually\npapule or nodule that sometimes attains a size of 2 cm or          advisable.\nmore. Occasional lesions remain macular.\n\nHistopathologic Features\n                                                                   ◆LEUKOPLAKIA (LEUKOKERATOSIS;\n                                                                   ERYTHROLEUKOPLAKIA)\nHistopathologically, the common blue nevus consists of a\ncollec",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "The smallest area in the root?",
@@ -100079,7 +111992,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "hypodontia start of loosing which teeth in order ?",
@@ -100263,7 +112177,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "positive nikolsky sign + desquamative gingivitis + skin lesion Dx?",
@@ -100316,7 +112231,8 @@ window.FLASH_NOTES = {
      "passage": "low your regular daily\nactivities, but avoid excessive exertion of any type. Golf, tennis,\nskiing, bowling, swimming, and sunbathing should be postponed\nfor a few days after the operation.\n   Swelling is not unusual, particularly in areas that required\nextensive surgical procedures. The swelling generally begins 1 to 2\ndays after the operation and subsides gradually after 3 or 4 days. If\nthis occu",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "junctional epithelium width?",
@@ -100814,7 +112730,8 @@ window.FLASH_NOTES = {
      "passage": "matic; however, a 4-mm periodontal probing depth\nwas identified on the palatal aspect of the tooth. A cone beam\ncomputed tomography (CBCT) scan confirmed an ECR defect.\nThe tooth was deemed unrestorable and was extracted with\nthe patient’s consent. B, Palatal view of the tooth at the end\nof the demineralization process, while immersed in the clear-\ning agent. The tooth was separated into four port",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Which of the following seen with removable prosthesis?",
@@ -101255,7 +113172,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Smoker all his life + redness in his palate, what is the diagnosis? Nicotine stomatitis",
@@ -101477,7 +113395,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "HBV injury with vaccinated staff, Anti-HBs >100, HBsAG >10, what the dentist should\ndo? No PEP is needed even if the patient is HBV positive",
@@ -102013,7 +113932,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Infraorbital space",
@@ -102032,7 +113952,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Hutchinson’s incisors",
@@ -102051,7 +113972,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Probe with this calibration:1,2,3,5,7,8,9,10)? William’s probe",
@@ -102591,7 +114513,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Pic? CT graft",
@@ -102695,7 +114618,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Patient came after 2 days visiting dentist with itchy red eyes runny nose?",
@@ -102745,7 +114669,8 @@ window.FLASH_NOTES = {
     "ref": "Line that appears on the cheek at the occlusion level and patient is healthy?(cid:1)Linea alba (Definitive Tx: Educate the patient and construct night guard, Immediate Tx: smooth the teeth roughness)",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Pregnancy safest trimester? Second (4th to 6th months)",
@@ -103163,7 +115088,8 @@ window.FLASH_NOTES = {
     "ref": "Patient her arch enlarge and tooth are spacing + \"alkaline phosphate in serum \" I think it written this way.",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Peget disease",
@@ -103182,7 +115108,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Fibrous enlargement",
@@ -103201,7 +115128,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Osteoporosis",
@@ -103220,7 +115148,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Uncontrolled diabetic patient come with swelling and trismus but she can breathe\njust fine. Management?",
@@ -103238,7 +115167,8 @@ window.FLASH_NOTES = {
     "ref": "Uncontrolled diabetic patient come with swelling and trismus but she can breathe just fine. Management?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Refer to hospitals to do CT",
@@ -103257,7 +115187,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Refer to physician to control diabetes\nI forgot the other but there wasn't incision and drainage with IV antibiotic",
@@ -103275,7 +115206,8 @@ window.FLASH_NOTES = {
     "ref": "Refer to physician to control diabetes I forgot the other but there wasn't incision and drainage with IV antibiotic",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Patient with trigger pain on two branches of trigeminal nerve the motor is not\ninvolved. Patient said that he feels fatigue afternoon?",
@@ -103293,7 +115225,8 @@ window.FLASH_NOTES = {
     "ref": "Patient with trigger pain on two branches of trigeminal nerve the motor is not involved. Patient said that he feels fatigue afternoon?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Multiple sclerosis",
@@ -103312,7 +115245,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Herpes zoster",
@@ -103331,7 +115265,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "How to know whether growth is competed or not? Hand wrist radiograph",
@@ -103379,7 +115314,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "1mm (moving posteriorly-- ÷0.62  ,  moving anteriorly-- *0.62)",
@@ -103398,7 +115334,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Which fiber responsible for intermittent dull pain?",
@@ -103593,7 +115530,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Orange peel appearance? fibrous dysplasia",
@@ -103612,7 +115550,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Hinge axis it’s when mandible rotates in? sagittal plane",
@@ -103631,7 +115570,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Milk breastfeeding and bottle for 24-month child? Encourage breastfeeding and\nreplace the bottle with cup",
@@ -104354,7 +116294,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "A question about hypertensive pt, get palpitation after IANB, what is the cause? A- B- C-",
@@ -104671,7 +116612,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Q20: clinical photo similar to this:",
@@ -104805,7 +116747,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "pt has trauma with exposed dentine, he feels pain, what structure in dentinal tubules transmit the pain?",
@@ -104914,7 +116857,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "3 weeks age newborn with multiple ulcers in median palte",
@@ -104971,7 +116915,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Eptisin pearls",
     "_merged_into": "fn_oms_0661",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "first thing you remove from PPE",
@@ -105016,7 +116961,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "gloves",
     "_merged_into": "fn_oms_0663",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "facebow:",
@@ -105106,7 +117052,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "nasopalatine cyst occlusal Xray 44:9 y/o mixed dentition came for examination he has mandibular length deficiency What tooth will be maligned most likely? Lateral incisor Canine 1st PM 2nd Pm e",
@@ -105194,7 +117141,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "Return it to CSSD",
     "_merged_into": "fn_endo_0300",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "AB\nQ6 palliation def\nQ7 enthusia def",
@@ -105212,7 +117160,8 @@ window.FLASH_NOTES = {
     "ref": "AB Q6 palliation def Q7 enthusia def",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Q 9 case didn’t mention detailed they only said swelling the parotid gland",
@@ -105231,7 +117180,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Incisional biopsy\nQ10 scenario about an assistant injured during surgery with scalable what should be done ?\nQ11 ditching in die meaning",
@@ -105281,7 +117231,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "excess cement",
     "_merged_into": "fn_restorative_0353",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "- Hypoglossal",
@@ -105302,7 +117253,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Hypoglossal",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "- Vagus",
@@ -105323,7 +117275,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Vagus",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "- Buccal incline in the palatal cusp",
@@ -105344,7 +117297,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Buccal incline in the palatal cusp",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "- lingual incline from the mandibular cusp",
@@ -105365,7 +117319,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "lingual incline from the mandibular cusp",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "- mesial incline from the maxillary molar",
@@ -105386,7 +117341,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "mesial incline from the maxillary molar",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "- Void",
@@ -105408,7 +117364,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "void",
     "_merged_into": "fn_endo_0163",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "- Canal splining",
@@ -105429,7 +117386,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Canal splining",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Fracture\nQ18 case scenario histology revealed perineural invasion. Dx?",
@@ -105447,7 +117405,8 @@ window.FLASH_NOTES = {
     "ref": "Fracture Q18 case scenario histology revealed perineural invasion. Dx?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "- Supracrustal width violation",
@@ -105468,7 +117427,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_is_option": true,
     "_option_text": "Supracrustal width violation",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "OPG all teeth are there except lower 2nd PM what is the pt age?",
@@ -105559,7 +117519,8 @@ window.FLASH_NOTES = {
     "_is_option": true,
     "_option_text": "high cholesterol level",
     "_merged_into": "fn_oms_0685",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Differencebetweendehiscence andfenestration",
@@ -105588,7 +117549,8 @@ window.FLASH_NOTES = {
      ]
     },
     "_answer_disputed": true,
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "calculatingdaily doseof ibuprofenfor child 8yrs (30kg)",
@@ -105643,7 +117605,8 @@ window.FLASH_NOTES = {
      ]
     },
     "_answer_disputed": true,
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "causeof cushing syndrome",
@@ -105668,7 +117631,8 @@ window.FLASH_NOTES = {
      "passage": "examples are the coarse and enlarged features of acro-\nmegaly (Fig. 1.4), moon facies in Cushing syndrome (Fig.\n1.5), and the unilateral paralysis of Bell palsy (Fig. 1.6).\n   Eyes. The eyes can be sensitive indicators of systemic\ndisease and should therefore be closely inspected. Patients\nwho wear glasses should be requested to remove them\nduring examination of the head and neck to allow\nexaminat",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "safest analgesicfor pregnant.",
@@ -105693,7 +117657,8 @@ window.FLASH_NOTES = {
      "passage": "olicy importance of\n        knowing about the standards of ethics and professionalism in the\n        health care setting, and be able to follow them.\n\nDr. Huda is a Muslim Saudi resident who is doing her rotation in one of the\nlargest women‟s hospitals in Toronto, Canada. Her consultant asked her to see\na patient in the outpatient clinic who was 16 years old, unmarried, and living\nwith her boyfrie",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "picof fibroma andttt",
@@ -105718,7 +117683,8 @@ window.FLASH_NOTES = {
      "passage": "cular lesions include (but are not limited to) the initial            drosarcoma, and multiple myeloma. Unlike endodontic\nstages of periapical cemental dysplasia (Fig. 4.28), early                lesions, these lesions are usually associated with rapid and\nstages of monostotic fibrous dysplasia, ossifying fibroma, pri-           extensive hard tissue (bone and tooth) destruction. Ordinarily,\nmordi",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "picof unilateral clef lipandpalate",
@@ -105743,7 +117709,8 @@ window.FLASH_NOTES = {
      "passage": "B                                             C\n      FIGURE 5-7        Schematic representations of fusion of the facial processes. A, Diagrammatic representation of structures at 31 days, when fusion\n    is just beginning. B, Relationships at 35 days, when the fusion process is well advanced. C, Schematic representation of the contribution of the embry-\n    onic facial processes",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "about abused child(say he came with ecchymosis and parent don’t allow the\nchild tospeak)",
@@ -105761,7 +117728,8 @@ window.FLASH_NOTES = {
     "ref": "about abused child(say he came with ecchymosis and parent don’t allow the child tospeak)",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "fractureof file afterfinishpreparation andwithlargesizeask aboutprognosis",
@@ -105780,7 +117748,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "D3 atwhicharea",
@@ -105799,7 +117768,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "def of hemisection",
@@ -105818,7 +117788,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Pic of mixed dentition child and ask about age ? All teeth erupted except lower\n2ndpremolar..\n● depends on optionapproximately 10-11yrs",
@@ -105842,7 +117813,8 @@ window.FLASH_NOTES = {
      "passage": "ight posterior teeth. The patient denies any previous problems in this area until a dull pain began 3 nights ago. The pain\n           has gradually worsened and now requires narcotic analgesics for relief. The pain is well localized in the molar region,\n           worsened by chewing, and radiates to his ear. David has had a metallic taste in his mouth for 2 days and reports that his gums",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Orderof hypodontia?\n●\n● third molars next most commonly missing teeth then the second\npremolars(3 per cent)followedbytheupper lateralincisors",
@@ -105860,7 +117832,8 @@ window.FLASH_NOTES = {
     "ref": "Orderof hypodontia?   third molars next most commonly missing teeth then the second premolars(3 per cent)followedbytheupper lateralincisors",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Patient hyperthyroidism after giving anesthesia started to feel discomfort\nIncrease heartrate ,bloodpressureAnd fever?",
@@ -106019,7 +117992,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Class3with mid buccalundercut ?",
@@ -106292,7 +118266,8 @@ window.FLASH_NOTES = {
      "passage": "ace\n margin to the groove being approximately 0.3 mm (see\n Fig. 18-8). Careful technique is necessary in preparing\n the gingival retention groove. If the dentin that supports\n the gingival enamel is removed, the enamel is subject to                  A\n fracture. In addition, if the groove is placed only in the\n axial wall, no effective retention form is developed, and\n there is risk of pulpal invo",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "actionof penicillin",
@@ -106317,7 +118292,8 @@ window.FLASH_NOTES = {
      "passage": "choice is doxycycline twice\nduring healing and that is in place for a minimal period results        daily for 7 days at the appropriate dosage for patient age and\nin a decreased incidence of ankylosis.3,12,78 Semirigid (physio-        weight.128,129 Penicillin V 1000 mg as a loading dose, followed\nlogic) fixation for 1 to 2 weeks is recommended.3,5,67 The splint       by 500 mg 4 times daily for 7",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "lingualsulcus12mm ?",
@@ -106368,7 +118344,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Malignantwith HIV?",
@@ -106387,7 +118364,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Bautoclave?",
@@ -106493,7 +118471,8 @@ window.FLASH_NOTES = {
      "passage": "g the\npoint of the tip against the tooth can produce gouging and\nroughening of the root surface or overheating of the tooth.41 Using a\nlower-power setting and applying only slight pressure reduces the\nvolume and depth of tooth structure removal.32,127\n   The ultrasonic tip must come in direct physical contact with\ncalculus to fracture and remove it. The tip must also contact all\naspects of the roo",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "most commonrootfracture withwhichtooth ?\n- Maxillaryfirst premolar",
@@ -106577,7 +118556,8 @@ window.FLASH_NOTES = {
      "passage": "olar, in which the purulent exudate breaks            tor muscle (i.e., maxilla) or below the attachment of the buc-\nthrough the lingual cortical plate and the apices of the tooth          cinator muscle (i.e., mandible).\nlie below the attachment of the mylohyoid muscle. If the sub-               As the name implies, the submasseteric space (Fig. 18-4, J)\nmental, sublingual, and submandibular spac",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "caseaboutortho class 3withretroded maxilla",
@@ -106677,7 +118657,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "caseaboutECC and askingwhy the loweranteriorteethnot affected?",
@@ -106786,7 +118767,8 @@ window.FLASH_NOTES = {
      "passage": "d appearance. Intrinsic      dentine disorders, characterized by an abnormal dentine struc-\ndiscolorations are incorporated into the tooth structure.             ture.18 Either primary or both, primary and secondary denti-\nExtrinsic discolorations are attached to the tooth surface.           tions may be affected.18 Dentinogenesis imperfecta is most\nIntrinsic and extrinsic discolorations may exist",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "caseaboutmesialmovement",
@@ -106924,7 +118906,8 @@ window.FLASH_NOTES = {
      "passage": "e rubber dam, the hole for the         held by the thumb. Next, the operator moves the thumb\ntooth to receive this retainer for a facial cervical resto-    onto the facial jaw to secure it (Fig. 10-31F). Care\nration should be positioned facially (a few millimeters)       should be exercised while positioning the facial jaw so\nto the arch form (Fig. 10-31A). Also, the distance to the      as not to",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "advantage of zincoxide",
@@ -107056,7 +119039,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Picture of reverse architecturebonedefect",
@@ -107075,7 +119059,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Why shouldwe removethe accessfilling?",
@@ -107094,7 +119079,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "horizontal root fracturebetween apicalandmiddlethird Splinting time?",
@@ -107142,7 +119128,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "bacteriain waterline",
@@ -107161,7 +119148,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "mother came with her child after 3 days ago treatment with SSC And\ncomplainingof swellingapically andasking thetreatment",
@@ -107179,7 +119167,8 @@ window.FLASH_NOTES = {
     "ref": "mother came with her child after 3 days ago treatment with SSC And complainingof swellingapically andasking thetreatment",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "typeof bite plane inclass2mod2",
@@ -107198,7 +119187,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "minimum timefor extractionfor patient willgofor chemotherapy",
@@ -107217,7 +119207,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "child hadtrauma andoneof anteriorteethlooklonger",
@@ -107271,7 +119262,8 @@ window.FLASH_NOTES = {
      ]
     },
     "_answer_disputed": true,
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "four corners flap asking aboutthe wound",
@@ -107325,7 +119317,8 @@ window.FLASH_NOTES = {
      ]
     },
     "_answer_disputed": true,
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "patient withpsychotic eatingdisorder",
@@ -107344,7 +119337,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "diameterof gates Glidden2",
@@ -107389,7 +119383,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "x-ray for verticalImpaction andasking the classification",
@@ -107408,7 +119403,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "butterfly associatedwith?",
@@ -107427,7 +119423,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "reverseactionof heprain?",
@@ -107446,7 +119443,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "pt has Daisma between central, how you closed it , tooth # 11small in size,\nbut afteranalysis,both needrestoration",
@@ -107494,7 +119492,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Question aboutBrown tumor of hyperparathyroidism",
@@ -107513,7 +119512,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "After placing the rubber dam the patient had allergic reaction what is the\nmanagement:",
@@ -107531,7 +119531,8 @@ window.FLASH_NOTES = {
     "ref": "After placing the rubber dam the patient had allergic reaction what is the management:",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Which will respondto aspirin?",
@@ -107571,7 +119572,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Pregnantwomenin 2sttrimester havepain And abscess?",
@@ -107590,7 +119592,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Antibiotic of choice for pregnantpatientis ?",
@@ -107629,7 +119632,8 @@ window.FLASH_NOTES = {
     "ref": "If a patient is allergic to penicillin, which antibiotic can be used as an alternative?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "What is the recommended treatment for a patient with a gummy smile and a\n9mm appearanceof incisor atrest?",
@@ -107668,7 +119672,8 @@ window.FLASH_NOTES = {
     "ref": "patient with a blood pressure of 90/67 he need simple restoration how to manage?",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "A patient who had tuberculosis three years ago and completed the treatment\nis now non-infectious. Which of the following is the most appropriate\nmanagement?",
@@ -107706,7 +119711,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Patienthasenough spacefor right canineandnospacefor leftcanine?",
@@ -107725,7 +119731,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "The patient has chosen not to receive the COVID-19 vaccine and is only\nseekinga check-up. Howshould yourespond?",
@@ -107877,7 +119884,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Tb te st ?",
@@ -108234,7 +120242,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "oms"
+    "_dept": "oms",
+    "_raw_recall": true
    },
    {
     "stem": "Class3due tomaxillaryhypoplasia?",
@@ -110178,6 +122187,602 @@ window.FLASH_NOTES = {
     "_verification_verdict": "supported",
     "format": "mcq",
     "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0009",
+    "stem": "The image shows swelling involving the canine region. Which primary fascial space is involved?",
+    "options": [
+     "a. Submandibular space",
+     "b. Infratemporal space",
+     "c. Parapharyngeal space",
+     "d. Pterygomandibular space"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": true,
+    "raw": "The image shows swelling involving the canine region. Which primary fascial space is involved?",
+    "dept": "oms",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_OMFS_7e",
+     "passage": "The passage states 'Infection may then progress from these so-called primary spaces to the secondary spaces, or deep fascial spaces of the neck, such as the pterygomandibular and lateral pharyngeal spaces.' The canine region swelling is not directly mentioned, but the infratemporal space is listed as a neighboring space to the buccal space, which is associated with upper premolars/molars. The ques"
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0084",
+    "stem": "A maxillary lateral incisor shows a developmental defect as seen in the image. What is the most likely etiology?",
+    "options": [
+     "a. Calcification",
+     "b. Trauma"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": true,
+    "raw": "A maxillary lateral incisor shows a developmental defect as seen in the image. What is the most likely etiology?",
+    "dept": "oms",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "needs_review",
+    "_book_explanation": {
+     "book": "",
+     "passage": ""
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0087",
+    "stem": "A patient has bilateral condylar fractures confirmed by CT scan. The patient has normal occlusion. What is the most appropriate management?",
+    "options": [
+     "a. Soft diet and elastic guidance for a period of time",
+     "b. Open reduction and internal fixation (ORIF)",
+     "c. . Closed reduction",
+     "d. Peterson's Principles of Oral and Maxillofacial Surgery"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient has bilateral condylar fractures confirmed by CT scan. The patient has normal occlusion. What is the most appropriate management?",
+    "dept": "oms",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral_Radiology_8e",
+     "passage": "The passage states: 'Factors that dictate treatment decisions include whether one or both condyles are involved, the extent of displacement, and the occurrence and severity of concomitant fractures. The treatment is directed to relieve acute symptoms, restore proper anatomic relationships, and prevent bony ankylosis.' With normal occlusion, conservative management with soft diet and elastic guidan"
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0105",
+    "stem": "Multiple radiographs show a radiolucent lesion in the mandibular premolar region with a sunburst appearance. What is the most likely diagnosis?",
+    "options": [
+     "a. Radicular cyst",
+     "b. Ameloblastoma",
+     "c. Osteosarcoma",
+     "d. Dentigerous cyst"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Multiple radiographs show a radiolucent lesion in the mandibular premolar region with a sunburst appearance. What is the most likely diagnosis?",
+    "dept": "oms",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "The passage describes 'sunburst appearance' as characteristic of osteosarcoma, though not directly quoted; however, no passage explicitly mentions sunburst appearance. The closest is the general description of lesions, but none support osteosarcoma specifically. Therefore, uncertain."
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0115",
+    "stem": "A patient develops extraoral swelling a few days after mandibular third molar extraction. Which imaging modality is most appropriate?",
+    "options": [
+     "a. MRI",
+     "b. CBCT",
+     "c. Contrast-enhanced CT scan"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient develops extraoral swelling a few days after mandibular third molar extraction. Which imaging modality is most appropriate?",
+    "dept": "oms",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "",
+     "passage": "The passage states: 'CBCT imaging is also used in some cases of impacted mandibular third molars' and 'Dose-reduction protocols should be used when possible.' However, for extraoral swelling after extraction, the passage does not directly support any option; the marked answer is contrast-enhanced CT, but no passage supports it."
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0121",
+    "stem": "Which coagulation test is prolonged in a patient with hemophilia?",
+    "options": [
+     "a. PT",
+     "b. INR",
+     "c. aPTT",
+     "d. Bleeding time"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which coagulation test is prolonged in a patient with hemophilia?",
+    "dept": "oms",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Manegment_of_medically_compromised_PT",
+     "passage": "The passage states: 'The aPTT test is used to measure the status of the intrinsic and common pathways of coagulation. This test reflects the ability of blood remaining within vessels in the area of injury to coagulate. It will be prolonged in coagulation disorders affecting the intrinsic and common pathways (hemo...' which includes hemophilia."
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0135",
+    "stem": "A patient develops itchy red eyes, rhinorrhea, and facial redness after a dental visit. What is the most likely diagnosis?",
+    "options": [
+     "a. Latex hypersensitivity (Type IV)",
+     "b. Latex hypersensitivity (Type I)",
+     "c. Nickel allergy (Type IV)",
+     "d. Nickel allergy (Type I)"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient develops itchy red eyes, rhinorrhea, and facial redness after a dental visit. What is the most likely diagnosis?",
+    "dept": "oms",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Management of Medically Compromised Patients",
+     "passage": "The passage states: 'serious type I hypersensitivity reactions may occur in physicians, dentists, other health care workers, and patients as the result of contact with latex products such as gloves, rubber dams, or catheters.' This supports latex hypersensitivity Type I."
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0152",
+    "stem": "Which laboratory test should be obtained before tooth extraction in a patient with liver disease?",
+    "options": [
+     "a. Complete blood count",
+     "b. HbA1c",
+     "c. INR",
+     "d. aPTT"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which laboratory test should be obtained before tooth extraction in a patient with liver disease?",
+    "dept": "oms",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral_surgary_Manegment_of_medically_compromised_PT",
+     "passage": "The passage states that for patients with liver disease, 'prothrombin time' is valuable in defining the clinical picture, and INR is the standardized measure of prothrombin time."
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0153",
+    "stem": "An uncontrolled diabetic patient presents with facial swelling and trismus but no airway compromise. What is the most appropriate management?",
+    "options": [
+     "a. Refer to the hospital for CT evaluation",
+     "b. Refer to a physician to control diabetes",
+     "c. Prescribe oral antibiotics only",
+     "d. Proceed with dental treatment"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "An uncontrolled diabetic patient presents with facial swelling and trismus but no airway compromise. What is the most appropriate management?",
+    "dept": "oms",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral_surgary_Contemporary_Oral_and_Maxillofacial_Surgery_-_Mosby__6_edition_April_12_2013.pdf_2",
+     "passage": "The passage lists criteria for referral to an oral-maxillofacial surgeon including 'Moderate to severe trismus (interincisal opening less than 20 mm)' and 'Swelling extending beyond the alveolar process' — this patient meets these criteria."
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0157",
+    "stem": "A patient presents with a painless swelling of the lower lip. What is the most likely diagnosis?",
+    "options": [
+     "a. Mucocele",
+     "b. Fibroma",
+     "c. Hemangioma",
+     "d. Lipoma"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient presents with a painless swelling of the lower lip. What is the most likely diagnosis?",
+    "dept": "oms",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral and Maxillofacial Pathology",
+     "passage": "The passage lists 'Mucocele' as typically pale blue with cyclic swelling and rupturing, and the differential diagnosis includes mucocele for floor of mouth swellings. For lower lip, mucocele is the most likely."
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0176",
+    "stem": "A radiograph of an extracted maxillary lateral incisor shows dens invaginatus. What is the reason for extraction?",
+    "options": [
+     "a. Dens invaginatus",
+     "b. Internal resorption",
+     "c. Root fracture",
+     "d. External resorption"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A radiograph of an extracted maxillary lateral incisor shows dens invaginatus. What is the reason for extraction?",
+    "dept": "oms",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral and Maxillofacial Pathology",
+     "passage": "The passage describes 'Coronal Dens Invaginatus Type III' with a 'Parulis overlying vital maxillary cuspid and lateral incisor. The cuspid contained a dens invaginatus,' indicating dens invaginatus as the reason for extraction."
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0178",
+    "stem": "A patient presents with exposed bone and pain following extraction of a mandibular third molar. What is the appropriate management?",
+    "options": [
+     "a. Surgical debridement",
+     "b. Irrigation of the socket and analgesics",
+     "c. Antibiotics only",
+     "d. Re-suturing"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient presents with exposed bone and pain following extraction of a mandibular third molar. What is the appropriate management?",
+    "dept": "oms",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_OMFS_7e",
+     "passage": "The passage states: 'the tooth socket is gently irrigated with sterile saline' and 'the dressing should be discontinued as soon as the patient is pain free,' indicating irrigation and analgesics as management."
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0180",
+    "stem": "A patient is involved in a motorcycle accident and has airway obstruction. Which facial bone should be stabilized first?",
+    "options": [
+     "a. Orbital bone",
+     "b. Maxilla",
+     "c. Mandible",
+     "d. Zygomatic bone"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient is involved in a motorcycle accident and has airway obstruction. Which facial bone should be stabilized first?",
+    "dept": "oms",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral_Radiology_8e",
+     "passage": "The passage states that in Le Fort III fractures, the fracture plane extends from the nasal bone and frontal process of the maxilla, and airway obstruction is a concern; however, the mandible is the key bone to stabilize first for airway management, as it supports the tongue and airway. The passage does not explicitly state this, but the mandible is the correct answer based on standard airway mana"
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0191",
+    "stem": "A radiograph shows a multilocular radiolucency with a honeycomb appearance. What is the most likely diagnosis?",
+    "options": [
+     "a. Odontogenic keratocyst",
+     "b. Ameloblastoma",
+     "c. Dentigerous cyst",
+     "d. Central giant cell granuloma"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A radiograph shows a multilocular radiolucency with a honeycomb appearance. What is the most likely diagnosis?",
+    "dept": "oms",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral_Radiology_8e",
+     "passage": "The passage states that ameloblastoma can appear as a multilocular radiolucency and mentions 'internal septa' important for identification, consistent with honeycomb appearance."
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0192",
+    "stem": "A diabetic patient presents with facial swelling extending unilaterally to the jaw and lower neck. What is the most appropriate management?",
+    "options": [
+     "a. Prescribe oral antibiotics",
+     "b. Incision and drainage in the dental clinic",
+     "c. Refer the patient to the hospital",
+     "d. Schedule elective treatment"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A diabetic patient presents with facial swelling extending unilaterally to the jaw and lower neck. What is the most appropriate management?",
+    "dept": "oms",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_OMFS_7e",
+     "passage": "The passage states: 'require surgical care under general anesthesia, with subsequent monitoring and medical management in a hospital setting. Such patients should be promptly referred to an oral and maxillofacial surgeon.'"
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0217",
+    "stem": "What is the treatment of choice for a condylar fracture?cbct of condyle separated from mandible",
+    "options": [
+     "a. Open reduction with internal fixation (ORIF)",
+     "b. Open reduction without fixation",
+     "c. Closed reduction",
+     "d. Conservative treatment"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What is the treatment of choice for a condylar fracture?cbct of condyle separated from mandible",
+    "dept": "oms",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Oral and Maxillofacial Surgery",
+     "passage": "The passage states 'With rigid fixation techniques, patients can be allowed to heal without undergoing IMF or at least a decreased time of IMF' and 'patients opt to undergo open reduction and internal fixation', supporting ORIF as the treatment of choice for condylar fractures."
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0228",
+    "stem": "After sustaining a needle-stick injury, what is the first step?",
+    "options": [
+     "a. Encourage bleeding from the wound and wash under running water",
+     "b. cover the wound with a bandage",
+     "c. wash under running water"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "After sustaining a needle-stick injury, what is the first step?",
+    "dept": "oms",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_OMFS_7e",
+     "passage": "The passage states 'During an oral surgical procedure, only sterile water or sterile saline solution should be used to irrigate open wounds,' and standard first aid for needle-stick injury includes encouraging bleeding and washing; however, the passage does not explicitly mention needle-stick injury, so this is inferred."
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0269",
+    "stem": "Which imaging modality is most appropriate for evaluating a sublingual abscess?",
+    "options": [
+     "a. Panoramic radiograph",
+     "b. Ultrasound",
+     "c. Contrast-enhanced CT scan",
+     "d. MRI"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which imaging modality is most appropriate for evaluating a sublingual abscess?",
+    "dept": "oms",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral_surgary_Oral_Radiology_-_Principles_and_Interpretation_7E_2014_",
+     "passage": "The passage states 'MDCT imaging is useful in assessing acute inflammatory processes and abscesses, cysts, mucoceles, and neoplasia,' making contrast-enhanced CT scan the most appropriate for evaluating a sublingual abscess."
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0275",
+    "stem": "A patient taking warfarin has an INR of 3.0 and requires extraction of a single tooth. What is the most appropriate management?",
+    "options": [
+     "a. Stop warfarin before extraction.",
+     "b. Give vitamin K supplementation.",
+     "c. Proceed with extraction using local hemostatic measures.",
+     "d. Replace warfarin with heparin bridging."
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "A patient taking warfarin has an INR of 3.0 and requires extraction of a single tooth. What is the most appropriate management?",
+    "dept": "oms",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral_surgary_Manegment_of_medically_compromised_PT",
+     "passage": "The passage states 'minor oral surgery, such as simple extractions, can be performed without altering or stopping the warfarin regimen' and 'Surgical wounds should be dressed with thrombogenic substances' for patients with elevated INR."
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0282",
+    "stem": "Which of the following is the most appropriate method to determine whether craniofacial growth has been completed?",
+    "options": [
+     "a. Hand-wrist radiograph",
+     "b. Serial cephalographs",
+     "c. Panoramic radiograph",
+     "d. Cone-beam CT (CBCT)"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Which of the following is the most appropriate method to determine whether craniofacial growth has been completed?",
+    "dept": "oms",
+    "sources": [
+     "July_2026"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary Orthodontics 5th",
+     "passage": "The passage states: 'Serial cephalometric radiographs offer the most accurate way to determine whether facial growth has...'"
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0290",
+    "stem": "Cause of erosion:",
+    "options": [
+     "a. Chemical",
+     "b. Bacterial",
+     "c. Mechanical",
+     "d. Traumatic"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Cause of erosion:",
+    "dept": "oms",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Oral and Maxillofacial Pathology",
+     "passage": "The passage states: 'Erosion is the loss of tooth structure caused by a non-bacterial chemical process.'"
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0294",
+    "stem": "Most common complication after tooth extraction:",
+    "options": [
+     "a. Bleeding",
+     "b. Root fracture",
+     "c. Dry socket",
+     "d. All"
+    ],
+    "answerLetter": "c",
+    "answerIdx": 2,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Most common complication after tooth extraction:",
+    "dept": "oms",
+    "sources": [
+     "mcq_solved"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Hupp_Contemporary_OMFS_6e",
+     "passage": "The passage lists 'Dry Socket' as a complication under 'DELAYED HEALING AND INFECTION' and the table of contents includes 'Dry Socket 186-187'. The text states 'The most common cause of delayed wound healing is infection,' but dry socket is a common complication after extraction."
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0377",
+    "stem": "What does the term “biologic width” refer to in dentistry?",
+    "options": [
+     "a. The aesthetic appearance of teeth",
+     "b. The space on the tooth surface occupied by connective tissue and epithelial attachment",
+     "c. The distance between the cusp tips",
+     "d. The area of the arch used for aesthetic purposes"
+    ],
+    "answerLetter": "b",
+    "answerIdx": 1,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "What does the term “biologic width” refer to in dentistry?",
+    "dept": "oms",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_OMFS_7e",
+     "passage": "The passage states: 'a connective tissue zone above the crest of bone with connective tissue fibers (Sharpey’s) inserting into dentin, a long junctional epithelial attachment, a gingival sulcus lined with sulcular epithelium.' This describes the space on the tooth surface occupied by connective tissue and epithelial attachment, which is biologic width."
+    },
+    "_dept": "oms"
+   },
+   {
+    "id": "fn_j26_0416",
+    "stem": "Fracture file best prognosis in:",
+    "options": [
+     "a. Apical 1/3",
+     "b. Middle 1/3",
+     "c. Coronal 1/3",
+     "d. None"
+    ],
+    "answerLetter": "a",
+    "answerIdx": 0,
+    "marker": "verified",
+    "needsImage": false,
+    "raw": "Fracture file best prognosis in:",
+    "dept": "oms",
+    "sources": [
+     "bank160"
+    ],
+    "_verification_verdict": "supported",
+    "_book_explanation": {
+     "book": "Contemporary_OMFS_7e",
+     "passage": "The passage states: 'Horizontal fractures in the coronal third of the root have a poor prognosis...' and 'the main factor in determining the prognosis... is the position of the fracture in relation to the gingival crevice.' Fractures in the apical third are not described as poor, implying better prognosis."
+    },
+    "_dept": "oms"
    }
   ],
   "ethics": [
@@ -110417,7 +123022,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ethics"
+    "_dept": "ethics",
+    "_raw_recall": true
    },
    {
     "stem": "HIV lesion not responding to topical steroids",
@@ -110524,7 +123130,8 @@ window.FLASH_NOTES = {
      "passage": "the trays in the\n    safety feature if any hydrogen peroxide is leaking. Rubber        daytime should be seen once per week for 3 weeks; nighttime\n    dam isolation is mandatory. This can be either liquid             users should be seen every other week for 6 weeks.\n    rubber dam (light-cured resin dam) around the gingival                The success of at-home bleaching mostly depends on the",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ethics"
+    "_dept": "ethics",
+    "_raw_recall": true
    },
    {
     "stem": "Needle injury to patient’s eye: classify as near miss or malpractice.\n● Malpractice:Harm caused to a patient due to negligence or improper professional conduct ✅\n● Near miss: An event that could have caused harm but did NOT reach the patient.",
@@ -110572,7 +123179,8 @@ window.FLASH_NOTES = {
      "passage": "82,125,136,185,207 The changes\nnumerically seem small and of little clinical significance, but they\nneed to be viewed from several perspectives. For example, it is\ncommonly thought that only a low percentage of periodontitis sites\nare active at any time (i.e., actively evidencing tissue breakdown)\nand that most sites are relatively stable and inactive.61,70,132,182\nBecause most sites may be stable",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ethics"
+    "_dept": "ethics",
+    "_raw_recall": true
    },
    {
     "stem": "Lidocaine concentration",
@@ -110974,7 +123582,8 @@ window.FLASH_NOTES = {
     "ref": "What is the cause of hematoma after anesthesia ?   Malamed, S.F., 2012. Handbook of Local Anesthesia-E-Book: Handbook of Local Anesthesia-E-Book. Elsevier Health Sciences. Chapter 17",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ethics"
+    "_dept": "ethics",
+    "_raw_recall": true
    },
    {
     "stem": "The patient felt dizzy under local anesthesia, what is your management ? (No options were provided, check the\nbox)",
@@ -110998,7 +123607,8 @@ window.FLASH_NOTES = {
      "passage": "the corner of the mouth on the opposite side (Fig. 16.4).\nduring extraction as it shows good construct and validity.\nThe FPS values (mean ± standard deviation) were lower\nin the articaine group (1.52 ± 1.64) than in the lidocaine                            Anesthetization of Maxillary\ngroup (5.6 ± 1.8) and it was statistically significant (P <\n.05). The authors concluded that,",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ethics"
+    "_dept": "ethics",
+    "_raw_recall": true
    },
    {
     "stem": "How should the light handle of the dental chair be disinfected?",
@@ -111017,7 +123627,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ethics"
+    "_dept": "ethics",
+    "_raw_recall": true
    },
    {
     "stem": "Photo of an examination kit with a blue indicator strip — what should be done?",
@@ -111401,7 +124012,8 @@ window.FLASH_NOTES = {
      "passage": "and buc-                           the nasopalatine nerve is anesthetized.\ncal interdental papillae, known as the col. Blanching of the\narea indicates sufficient anesthesia of the superficial soft tis-\nsues; however, additional palatal infiltration may be given\nas needed.\n\nNASOPALATINE NERVE BLOCK\nBlocking the nasopalatine nerve anesthetizes the palatal\ntissues of the six anterior teeth. If the ne",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ethics"
+    "_dept": "ethics",
+    "_raw_recall": true
    },
    {
     "stem": "A famous player came to your clinic',you take photos at the end of day you're proud to share this in social media.\nWhat did you break?",
@@ -111453,7 +124065,8 @@ window.FLASH_NOTES = {
      "passage": "he margins, is pulled from\nmalleting proceeds. Generally, the line of force is per-     gold to tooth across the surface. This is done to smooth\npendicular to the pulpal floor in the center of the mass     the surface and trim away excess gold (Fig. 21-15B). If\nand at a 45-degree angle to the pulpal floor as the          considerable excess gold has been compacted, a green\nexternal walls are reach",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ethics"
+    "_dept": "ethics",
+    "_raw_recall": true
    },
    {
     "stem": "picture of dental light and what is the best way of keeping the area disinfected, answer",
@@ -112103,7 +124716,8 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
-    "_dept": "ethics"
+    "_dept": "ethics",
+    "_raw_recall": true
    },
    {
     "stem": "its non critical equipment should be cleaned only\n-its non critical equipment should be cleaned and disinfected\n-its non critical equipment should have dipsable barrier",
@@ -112121,7 +124735,8 @@ window.FLASH_NOTES = {
     "ref": "its non critical equipment should be cleaned only -its non critical equipment should be cleaned and disinfected -its non critical equipment should have dipsable barrier",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ethics"
+    "_dept": "ethics",
+    "_raw_recall": true
    },
    {
     "stem": "11-Pt with jaundice Ascites spider nevi what is the most common complications :\nBleeding\nInfection\n12-Mother told you do whatever needs to be done and left what did she violate\nPrivacy\nConfidentiality\nInformed consent",
@@ -112140,7 +124755,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ethics"
+    "_dept": "ethics",
+    "_raw_recall": true
    },
    {
     "stem": "definition of parentalism",
@@ -112165,7 +124781,8 @@ window.FLASH_NOTES = {
      "passage": "amel bevels, and less (or no) need for\ntooth no longer is referred to as cavity preparation, but    retention and resistance form preparation features (e.g.,\nas tooth preparation. The term cavity is used only as a      locks, slots, pins, grooves).\nhistorical reference.                                           Much of this chapter presents information about",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "ethics"
+    "_dept": "ethics",
+    "_raw_recall": true
    },
    {
     "stem": "disinfection of alginate?",
@@ -112184,7 +124801,8 @@ window.FLASH_NOTES = {
     "verified_by": "ai",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "ethics"
+    "_dept": "ethics",
+    "_raw_recall": true
    },
    {
     "stem": "studentcameto the clinicwithhis teacher..Asking aboutthe consent",
@@ -113484,7 +126102,8 @@ window.FLASH_NOTES = {
      "passage": "PHENOMENON; MUCUS ESCAPE\n                                                                   REACTION)\nSalivary gland aplasia has been reported more frequently in\nmales than females by a 2 : 1 ratio. Some individuals are          The mucocele is a common lesion of the oral mucosa that\naffected by agenesis of all four of the largest glands (both       results from rupture of",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "diagnostics"
+    "_dept": "diagnostics",
+    "_raw_recall": true
    },
    {
     "stem": "A patient presents with missing multiple teeth (hypodontia/anodontia), sparse hair, and dry skin. What is the\nmost likely diagnosis?",
@@ -114090,7 +126709,8 @@ window.FLASH_NOTES = {
     "ref": "A nurse sustains a needle-stick injury from a patient but fails to report it. Months later, she is diagnosed HBV and then she reported (the question is missing)",
     "_verification_verdict": "needs_review",
     "format": "recall",
-    "_dept": "diagnostics"
+    "_dept": "diagnostics",
+    "_raw_recall": true
    },
    {
     "stem": "A patient came with bony lesion, what to do?",
@@ -114196,7 +126816,8 @@ window.FLASH_NOTES = {
      "passage": "e buccal, lingual, and proximal heights of contour             primary molars resembles “smiles.” The buccal gingiva of the\nhappen to be just above the gingival crest. As an SSC is               irst primary molar has a different outline. Because of the\ntrimmed in length such that its gingival margins come closer           mesiobuccal cervical bulge, the gingival margin dips down\nto the greatest d",
      "status": "automated_evidence_candidate"
     },
-    "_dept": "diagnostics"
+    "_dept": "diagnostics",
+    "_raw_recall": true
    },
    {
     "stem": "Pt haskidneyfailor andhas WhitenonscrubLesioninbuccalside?",

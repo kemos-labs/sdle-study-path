@@ -4336,7 +4336,7 @@
           <p class="note-stem"><strong>Q:</strong> ${escapeHtml(item.stem)}</p>
           <p style="margin:8px 0;padding:10px 12px;background:var(--bg2);border-radius:var(--radius);color:var(--accent2)"><b>Answer:</b> ${escapeHtml(item.answer || "")}</p>
           <p style="margin:6px 0;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;font-size:0.82rem"><b>📖 Why:</b> ${escapeHtml(item.why || "")}</p>
-          <p class="muted" style="font-size:0.72rem;margin-top:4px">📚 ${escapeHtml(item.reference || "")}</p>
+          <p class="muted" style="font-size:0.72rem;margin-top:4px">📚 ${escapeHtml(item.reference || "")}${item._verified === "recall" ? ' <span class="badge" style="font-size:0.6rem;background:var(--bg3);color:var(--muted)">recall — no verbatim passage</span>' : ''}</p>
         </article>`;
       }
     }
@@ -4466,7 +4466,12 @@
       });
       fnListRaw.sort((a, b) => (a.dept === b.dept ? a.id.localeCompare(b.id) : (a.dept || '').localeCompare(b.dept || '')));
     } else {
-      fnListRaw = (FN.byDept[fnDept] || []).filter(it => !it._merged_into);
+      const fnArchiveMode = !!state._fnArchive;
+      fnListRaw = (FN.byDept[fnDept] || []).filter(it => {
+        if (it._merged_into) return false;
+        const isArchive = it._raw_recall || it._unverified || it._data_quality === 'merged_options_review';
+        return fnArchiveMode ? isArchive : !isArchive;
+      });
     }
     if (fnSrc) {
       fnListRaw = fnListRaw.filter(it => (it.sources || []).includes(fnSrc));
@@ -4510,6 +4515,8 @@
       if (it.options && ansLetter) {
         const opt = it.options.find(o => o.startsWith(ansLetter + ".") || o.startsWith(ansLetter.toLowerCase() + "."));
         ansText = opt ? opt.replace(/^[a-z][).]\s*/i, "").replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim() : "";
+      } else if (it.answer) {
+        ansText = String(it.answer).slice(0, 200);
       } else if (!ansLetter) { ansText = fnInlineAns(it); }
       const optsHtml = (it.options||[]).length
         ? `<ul class="fn-opts" style="list-style:none;margin:8px 0;padding:0;display:flex;flex-direction:column;gap:4px">${(it.options||[]).map(o=>{const isA=o.startsWith((ansLetter||"_")+".")||o.startsWith((ansLetter||"_").toLowerCase()+".");return `<li style="padding:6px 10px;border-radius:6px;background:var(--bg1);border:1px solid var(--border);font-size:0.82rem${isA?';background:rgba(27,122,61,.14);border-color:#1b7a3d;font-weight:600':''}">${escapeHtml(o)}${isA?' ✓':''}</li>`;}).join("")}</ul>` : "";
@@ -4586,7 +4593,9 @@
       const marker = fnMarkerBadge(it.marker, hasOpts, hasBookEvidence, hasCommunity);
       // Card label: evidence candidate > community > MCQ > recall
       let cardLabel = '';
-      if (hasBookEvidence) {
+      if (it._kind === 'flashcard') {
+        cardLabel = '<span class="badge" style="font-size:0.6rem;background:var(--accent);color:#fff">📇 Flashcard</span>';
+      } else if (hasBookEvidence) {
         cardLabel = '<span class="badge blue" style="font-size:0.6rem">📖 evidence candidate</span>';
       } else if (hasOpts && hasCommunity) {
         cardLabel = '<span class="badge" style="font-size:0.6rem;background:var(--accent);color:#fff">✅ community MCQ</span>';
@@ -4744,6 +4753,7 @@
             return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-fn-dept="${d.id}" style="padding:3px 10px;font-size:0.74rem"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:${dotColor};margin-right:4px"></span>${escapeHtml(d.label)} <span class="muted" style="font-size:0.66rem">${n}</span></button>`;
           }).join("")}
           <button type="button" class="btn sm ${fnDisputedMode ? "warn" : "ghost"}" data-fn-disputed style="padding:3px 10px;font-size:0.74rem" title="Review all items where AI flagged the marked answer as likely wrong">⚠ Disputed <span class="muted" style="font-size:0.66rem">${FN.aiStats?.disputed || 0}</span></button>
+          <button type="button" class="btn sm ${state._fnArchive ? "warn" : "ghost"}" data-fn-archive style="padding:3px 10px;font-size:0.74rem" title="${state._fnArchive ? 'Showing raw recall notes archive' : 'Showing study deck (MCQs + flashcards) — toggle to see raw recall notes'}">${state._fnArchive ? "📦 Raw recall archive" : "🃏 Study deck"}</button>
 
         <div style="display:flex;gap:3px;flex-wrap:wrap;margin-bottom:6px">${sourceChipsHtml}</div>
 
@@ -4862,6 +4872,7 @@
     });
     app.querySelectorAll("[data-fn-disputed]").forEach(b => {
       b.onclick = () => { state._fnDisputed = !state._fnDisputed; state._fnStudySource = ""; state._fnStudyIdx = 0; renderMarJune(); };
+      app.querySelectorAll("[data-fn-archive]").forEach(b => b.onclick = () => { state._fnArchive = !state._fnArchive; state._fnDisputed = false; state._fnStudySource = ""; state._fnStudyIdx = 0; renderMarJune(); });
     });
     app.querySelectorAll("[data-fn-src]").forEach(b => {
       b.onclick = () => { state._fnStudySource = b.dataset.fnSrc; state._fnStudyIdx = 0; renderMarJune(); };

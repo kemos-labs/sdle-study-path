@@ -1648,3 +1648,51 @@ Per RED LINE they are NEVER auto-applied — each needs a human/AI check of the 
     reason: Lower incisors are mentioned as contraindication for posts, not upper incisors; no passage on post fracture incidence.
 - rafi_19_8174b41a48 — passage: These small particles (1–5 µm) can stay suspended in the air for hours
     reason: Passage says hours, not specifically up to 4 hours, so the marked answer is not supported.
+
+## 🔶 JULY-2026 NEW-SOURCE ANSWER CONFLICTS (2026-08-06) — bank UNTOUCHED, pending review
+Same stem exists in the bank with a different answer. Book-grounded verdict needed.
+- `nm_0004` (new source) vs `stream_j26_006` (bank) — new: “natal tooth” | bank: “neonatal tooth” — stem: A tooth erupts in a 1-day-old infant. What is this tooth called?
+- `nm_0011` (new source) vs `pass_fp_005` (bank) — new: “5 mm” | bank: “≈2 mm” — stem: When placing an implant near the inferior alveolar nerve, what minimum
+- `nm_0013` (new source) vs `pass_fp_027` (bank) — new: “cover with a barrier or disinfect after each patie” | bank: “barrier and/or disinfect after each patient” — stem: How should the dental operating light handle be managed between patien
+- `nm_0026` (new source) vs `stream_j26_029` (bank) — new: “fusion” | bank: “gemination” — stem: A tooth appears enlarged with a bifid crown and a single root canal. W
+- `nm_0035` (new source) vs `stream_j26_039` (bank) — new: “orthognathic surgery only” | bank: “camouflage treatment” — stem: A 30-year-old patient wants a rapid correction instead of lengthy orth
+- `nm_0046` (new source) vs `stream_j26_052` (bank) — new: “professionalism, laws, and ethics” | bank: “morals, ethics, and professionalism” — stem: A dentist should possess:
+- `nm_0056` (new source) vs `gd_cd9dad4cf7` (bank) — new: “1.5 mm” | bank: “5 mm” — stem: What is the recommended minimum distance between a dental implant and 
+- `nm_0058` (new source) vs `stream_j26_063` (bank) — new: “le fort i osteotomy (maxillary advancement)” | bank: “bilateral sagittal split osteotomy (bsso)” — stem: The procedure shown in the image is:
+- `nm_0067` (new source) vs `stream_j26_074` (bank) — new: “class iii malocclusion” | bank: “headgear” — stem: Which appliance is commonly used to correct a skeletal Class II malocc
+- `nm_0073` (new source) vs `pass_fp_050` (bank) — new: “vitamin b12” | bank: “epithelium and connective tissue only (periosteum ” — stem: A partial-thickness flap includes:
+- `nm_0098` (new source) vs `abtal_pack_bfd9b2274d` (bank) — new: “3” | bank: “4” — stem: Cervical root fracture, the splinting time, how many months?
+- `nm_0408` (new source) vs `rafi_08_63329a0c57` (bank) — new: “fiber post” | bank: “ready-made post” — stem: Teeth with RCT and you want to use post, which post is the least cause
+- `nm_0428` (new source) vs `rafi_06_5423a2aade` (bank) — new: “1/3 intercuspal distance” | bank: “1/3 inter cuspal distance” — stem: In cavity preparation, the width of the cavity is:
+
+## 🔶 JULY-2026 NEW-SOURCE ANSWER CONFLICTS (2026-08-06) — bank UNTOUCHED, pending review
+Same stem exists in the bank with a different answer. Book-grounded verdict needed.
+- `nm_0004` (new source) vs `stream_j26_006` (bank) — new: “natal tooth” | bank: “neonatal tooth” — stem: A tooth erupts in a 1-day-old infant. What is this tooth called?
+- `nm_0011` (new source) vs `pass_fp_005` (bank) — new: “5 mm” | bank: “≈2 mm” — stem: When placing an implant near the inferior alveolar nerve, what minimum
+- `nm_0013` (new source) vs `pass_fp_027` (bank) — new: “cover with a barrier or disinfect after each patie” | bank: “barrier and/or disinfect after each patient” — stem: How should the dental operating light handle be managed between patien
+- `nm_0026` (new source) vs `stream_j26_029` (bank) — new: “fusion” | bank: “gemination” — stem: A tooth appears enlarged with a bifid crown and a single root canal. W
+- `nm_0035` (new source) vs `stream_j26_039` (bank) — new: “orthognathic surgery only” | bank: “camouflage treatment” — stem: A 30-year-old patient wants a rapid correction instead of lengthy orth
+- `nm_0046` (new source) vs `stream_j26_052` (bank) — new: “professionalism, laws, and ethics” | bank: “morals, ethics, and professionalism” — stem: A dentist should possess:
+- `nm_0056` (new source) vs `gd_cd9dad4cf7` (bank) — new: “1.5 mm” | bank: “5 mm” — stem: What is the recommended minimum distance between a dental implant and 
+- `nm_0058` (new source) vs `stream_j26_063` (bank) — new: “le fort i osteotomy (maxillary advancement)” | bank: “bilateral sagittal split osteotomy (bsso)” — stem: The procedure shown in the image is:
+- `nm_0067` (new source) vs `stream_j26_074` (bank) — new: “class iii malocclusion” | bank: “headgear” — stem: Which appliance is commonly used to correct a skeletal Class II malocc
+- `nm_0073` (new source) vs `pass_fp_050` (bank) — new: “vitamin b12” | bank: “epithelium and connective tissue only (periosteum ” — stem: A partial-thickness flap includes:
+- `nm_0098` (new source) vs `abtal_pack_bfd9b2274d` (bank) — new: “3” | bank: “4” — stem: Cervical root fracture, the splinting time, how many months?
+- `nm_0408` (new source) vs `rafi_08_63329a0c57` (bank) — new: “fiber post” | bank: “ready-made post” — stem: Teeth with RCT and you want to use post, which post is the least cause
+- `nm_0428` (new source) vs `rafi_06_5423a2aade` (bank) — new: “1/3 intercuspal distance” | bank: “1/3 inter cuspal distance” — stem: In cavity preparation, the width of the cavity is:
+
+## 🔶 JULY-2026 NEW-SOURCE ANSWER CONFLICTS (2026-08-06) — bank UNTOUCHED, pending review
+Same stem exists in the bank with a different answer. Book-grounded verdict needed.
+- `nm_0004` (new source) vs `stream_j26_006` (bank) — new: “natal tooth” | bank: “neonatal tooth” — stem: A tooth erupts in a 1-day-old infant. What is this tooth called?
+- `nm_0011` (new source) vs `pass_fp_005` (bank) — new: “5 mm” | bank: “≈2 mm” — stem: When placing an implant near the inferior alveolar nerve, what minimum
+- `nm_0013` (new source) vs `pass_fp_027` (bank) — new: “cover with a barrier or disinfect after each patie” | bank: “barrier and/or disinfect after each patient” — stem: How should the dental operating light handle be managed between patien
+- `nm_0026` (new source) vs `stream_j26_029` (bank) — new: “fusion” | bank: “gemination” — stem: A tooth appears enlarged with a bifid crown and a single root canal. W
+- `nm_0035` (new source) vs `stream_j26_039` (bank) — new: “orthognathic surgery only” | bank: “camouflage treatment” — stem: A 30-year-old patient wants a rapid correction instead of lengthy orth
+- `nm_0046` (new source) vs `stream_j26_052` (bank) — new: “professionalism, laws, and ethics” | bank: “morals, ethics, and professionalism” — stem: A dentist should possess:
+- `nm_0056` (new source) vs `gd_cd9dad4cf7` (bank) — new: “1.5 mm” | bank: “5 mm” — stem: What is the recommended minimum distance between a dental implant and 
+- `nm_0058` (new source) vs `stream_j26_063` (bank) — new: “le fort i osteotomy (maxillary advancement)” | bank: “bilateral sagittal split osteotomy (bsso)” — stem: The procedure shown in the image is:
+- `nm_0067` (new source) vs `stream_j26_074` (bank) — new: “class iii malocclusion” | bank: “headgear” — stem: Which appliance is commonly used to correct a skeletal Class II malocc
+- `nm_0073` (new source) vs `pass_fp_050` (bank) — new: “vitamin b12” | bank: “epithelium and connective tissue only (periosteum ” — stem: A partial-thickness flap includes:
+- `nm_0098` (new source) vs `abtal_pack_bfd9b2274d` (bank) — new: “3” | bank: “4” — stem: Cervical root fracture, the splinting time, how many months?
+- `nm_0408` (new source) vs `rafi_08_63329a0c57` (bank) — new: “fiber post” | bank: “ready-made post” — stem: Teeth with RCT and you want to use post, which post is the least cause
+- `nm_0428` (new source) vs `rafi_06_5423a2aade` (bank) — new: “1/3 intercuspal distance” | bank: “1/3 inter cuspal distance” — stem: In cavity preparation, the width of the cavity is:
