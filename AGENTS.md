@@ -158,3 +158,18 @@ A free, trustworthy exam-prep app that **prepares the student to PASS the SDLE**
 - **13 bank-answer conflicts** from the new sources vs existing bank — logged at the
   bottom of `docs/FLIP_REVIEW_LOG.md`. Bank is UNTOUCHED (RED LINE). Book agrees
   with the bank on 5; the rest are ambiguous.
+
+## HARD RULES (added after user cost/quality feedback — 2026-08-07)
+1. **NO FALSE DONE.** Never say "all fine / done" without a STUDENT-EYE walkthrough:
+   open a fresh browser, paste the ACTUAL text of 3-5 cards the user would see
+   (desktop + phone). No screenshots-only evidence.
+2. **MCQ = options to pick + reveal.** Any card showing answer-text glued with
+   options ("Answer: ... Options: ..."), empty/placeholder options, or a junk
+   stem labeled MCQ is a BUG. Fix before shipping. The clicktest's "recall Q&A
+   passes" rule is NOT an acceptable outcome for MCQ-class items.
+3. **Money rules:** never call a paid API key (zai-coding-cn GLM, deepseek
+   sk-ba41…, stepfun) without asking the user first. Free models first:
+   kilo-auto/free, cline free, opencode free. Fresh session per task beats
+   marathon sessions (context re-billing is the cost driver). Never read big
+   data files (flash_notes.js = 11MB) into context — always scripts/grep.
+4. If unsure about a claim, say "not done / not sure" — never a false "good".
