@@ -382,3 +382,19 @@ button (hard to find) and doesn't exist on touch screens. Fixed:
 - sw.js cache bumped v48→v49 (forces fresh app.js for all users).
 - Live verified: v10 assets, Q&A hover popup OK, pre-flip badge OK, hints OK,
   0 errors. Commit `226c74a`.
+
+---
+
+## UPDATE 18 (2026-08-06) — Practice tab now shows 📖 book page in every quiz answer
+
+User asked about the Practice tab. Found a gap: the hoverable book reference only
+existed in the Wrong-Book review, NOT in the quiz answers.
+
+- `formatWhy()` now renders `bookRefLine(item)`: after answering ANY MCQ in
+  learn/test/review, students see `📖 BookName — p. N` under the explanation.
+  Hover → popup with the highlighted answer passage; tap/click → full modal.
+  Works for 605 bank questions with located pages (verbatim [Book: support only);
+  others keep plain reference (no fake pages).
+- Book names prettified (Sturdevant_Operative_5e → Sturdevant Operative 5e).
+- Live verified: search "xylitol" in Practice → 4th hit → answer → "📖 Sturdevant
+  Operative 5e — p. 131" + hover popup OK, 0 errors. Commit `f5d7eb4`.
