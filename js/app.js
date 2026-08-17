@@ -1,0 +1,8364 @@
+/* SDLE Study Path — simple step-by-step */
+(function () {
+  const $ = (s, el = document) => el.querySelector(s);
+  const app = $("#app");
+
+  let storeWriteWarned = false;
+  function showStorageWarn() {
+    if (storeWriteWarned) return;
+    storeWriteWarned = true;
+    try {
+      console.warn("sdle: localStorage write failed (quota or private mode)");
+      if (document.getElementById("sdle-storage-warn")) return;
+      const el = document.createElement("div");
+      el.id = "sdle-storage-warn";
+      el.setAttribute("role", "alert");
+      el.style.cssText =
+        "position:fixed;bottom:12px;left:12px;right:12px;z-index:9999;background:#7f1d1d;color:#fff;padding:10px 14px;border-radius:8px;font:14px/1.4 system-ui,sans-serif;box-shadow:0 4px 20px rgba(0,0,0,.4)";
+      el.textContent =
+        "Could not save progress (storage full or private mode). Free space or leave private browsing.";
+      document.body.appendChild(el);
+    } catch (_) {}
+  }
+
+  const store = {
+    get(k, d) {
+      try {
+        const v = localStorage.getItem("sdle3_" + k);
+        return v ? JSON.parse(v) : d;
+      } catch {
+        return d;
+      }
+    },
+    set(k, v) {
+      try {
+        localStorage.setItem("sdle3_" + k, JSON.stringify(v));
+        return true;
+      } catch (e) {
+        // QuotaExceededError or private-mode — do not break quiz flow
+        try {
+          console.warn("sdle store.set failed:", k, e && e.name);
+        } catch (_) {}
+        showStorageWarn();
+        return false;
+      }
+    },
+  };
+
+  function isPlainObject(o) {
+    return o != null && typeof o === "object" && !Array.isArray(o);
+  }
+  function asArray(v, fallback) {
+    return Array.isArray(v) ? v : fallback;
+  }
+  function asObject(v, fallback) {
+    return isPlainObject(v) ? v : fallback;
+  }
+  function normalizeWrongBook(v) {
+    if (!Array.isArray(v)) return [];
+    return v
+      .filter((id) => id != null && (typeof id === "string" || typeof id === "number"))
+      .slice(-500);
+  }
+  function normalizeStats(v) {
+    const s = asObject(v, null);
+    if (!s) return { answered: 0, correct: 0, byTopic: {}, bySubtopic: {} };
+    return {
+      answered: Number.isFinite(+s.answered) ? +s.answered : 0,
+      correct: Number.isFinite(+s.correct) ? +s.correct : 0,
+      byTopic: asObject(s.byTopic, {}),
+      bySubtopic: asObject(s.bySubtopic, {}),
+    };
+  }
+
+  /** Approximate SDLE domain weights for practice balance (not an official SCFHS score). */
+  const BLUEPRINT_WEIGHTS = {
+    restorative: 0.4,
+    perio: 0.18,
+    endo: 0.17,
+    oms: 0.15,
+    ortho_pedo: 0.1,
+  };
+
+  const PERSISTED_KEYS = [
+    "day",
+    "planLength",
+    "stepsDone",
+    "dayDone",
+    "stats",
+    "wrongBook",
+    "seenIds",
+    "cardKnown",
+    "sessionDate",
+    "sessionAnswered",
+    "planDayVolumeKey",
+    "planDayAnswered",
+    "dailyGoal",
+    "dailyGoalUserOverride",
+    "focusMode",
+    "examQa",
+    "history",
+    "planChosen",
+    "simpleMode",
+    "viewStack",
+    "pomoMode",
+    "pomoRemaining",
+  ];
+
+  /** Default ON: fewer tabs + one practice path. Coach mode = full chrome. */
+  function isSimpleMode() {
+    return store.get("simpleMode", true) !== false;
+  }
+  function setSimpleMode(on) {
+    store.set("simpleMode", !!on);
+    applyChromeMode();
+    paintMainNav();
+    render();
+  }
+
+  /** Simple = calm chrome (no cockpit). Coach = full timer + stats. */
+  function applyChromeMode() {
+    const simple = isSimpleMode();
+    try {
+      document.body.classList.toggle("simple-ui", simple);
+    } catch (_) {}
+    const stats = $("#top-stats");
+    const pomo = $("#pomo-bar");
+    if (stats) stats.hidden = !!simple;
+    if (pomo) pomo.hidden = !!simple;
+  }
+
+  /** Short subject line for UI (drop internal codenames after em dash). */
+  function humanLessonTitle(L) {
+    const raw = (L && L.title) || "Today";
+    const cut = raw.split(/\s*[—–]\s*/)[0].trim();
+    return cut || raw;
+  }
+
+  /** Local calendar day key (YYYY-MM-DD) for "Today Q" rollover. */
+  function todayKey() {
+    const d = new Date();
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, "0");
+    const day = String(d.getDate()).padStart(2, "0");
+    return y + "-" + m + "-" + day;
+  }
+
+  /* New installs default 30d (research: good default). Existing localStorage keeps prior length. */
+  const rawPlan =
+    typeof window.normalizePlanLength === "function"
+      ? window.normalizePlanLength(store.get("planLength", 30))
+      : [14, 30, 45, 60, 90].indexOf(+store.get("planLength", 30)) >= 0
+        ? +store.get("planLength", 30)
+        : 30;
+  const rawDay = +store.get("day", 1);
+  const rawGoal = +store.get("dailyGoal", 150);
+
+  const state = {
+    view: "today",
+    day: Number.isFinite(rawDay) && rawDay >= 1 ? rawDay : 1,
+    /** Calendar track: 14 | 30 | 45 | 60 | 90. Content still from 14 LESSONS. */
+    planLength: rawPlan,
+    stepsDone: asObject(store.get("stepsDone", {}), {}), // { "1-read": true, ... }
+    dayDone: asObject(store.get("dayDone", {}), {}),
+    stats: normalizeStats(store.get("stats", { answered: 0, correct: 0, byTopic: {} })),
+    wrongBook: normalizeWrongBook(store.get("wrongBook", [])),
+    /** Question ids already answered (any mode) — powers Unseen packs */
+    seenIds: asObject(store.get("seenIds", {}), {}),
+    cardIx: 0,
+    cardKnown: asObject(store.get("cardKnown", {}), {}),
+    quiz: null,
+    // Loaded after focusModeCssSafe migration at init
+    focusMode: false,
+    dailyGoal: Number.isFinite(rawGoal) && rawGoal > 0 ? rawGoal : 150,
+    /** MCQs answered on this calendar day (resets at local midnight). Top-bar "Today Q". */
+    sessionAnswered: Math.max(0, +store.get("sessionAnswered", 0) || 0),
+    sessionDate: store.get("sessionDate", "") || "",
+    /**
+     * MCQs on the current plan day (planLength:day). Day-complete / next-day gates use this
+     * so volume on Day 1 does not auto-satisfy Day 2 the same calendar day.
+     */
+    planDayVolumeKey: store.get("planDayVolumeKey", "") || "",
+    planDayAnswered: Math.max(0, +store.get("planDayAnswered", 0) || 0),
+    /** In-lesson Exam Q&A picks: { [data-id]: { choice: 0-3, ok: bool } } */
+    examQa: asObject(store.get("examQa", {}), {}),
+    /** Recent quiz sessions: { ts, mode, label, topic, total, correct, pct, sec } */
+    history: asArray(store.get("history", []), []),
+  };
+
+  /** Roll "Today Q" when the local calendar day changes. */
+  function ensureSessionDay() {
+    const key = todayKey();
+    if (state.sessionDate === key) return;
+    state.sessionDate = key;
+    state.sessionAnswered = 0;
+    store.set("sessionDate", state.sessionDate);
+    store.set("sessionAnswered", 0);
+  }
+
+  function planDayVolumeKeyOf() {
+    return String(state.planLength) + ":" + String(state.day);
+  }
+
+  /** Reset plan-day volume when calendar plan day (or track length) changes. */
+  function ensurePlanDayVolume() {
+    const key = planDayVolumeKeyOf();
+    if (state.planDayVolumeKey === key) return;
+    state.planDayVolumeKey = key;
+    state.planDayAnswered = 0;
+  }
+
+  /** Count one MCQ toward calendar "Today Q" and plan-day day-gate volume. */
+  function bumpVolume() {
+    ensureSessionDay();
+    ensurePlanDayVolume();
+    state.sessionAnswered = (state.sessionAnswered || 0) + 1;
+    state.planDayAnswered = (state.planDayAnswered || 0) + 1;
+  }
+
+  ensureSessionDay();
+  ensurePlanDayVolume();
+
+  let timer = null;
+  let pomoTimer = null;
+  let quizKeyHandler = null;
+  let cardKeyHandler = null;
+  /** In-app back stack (tabs + overlays). Never drops content — only navigation memory. */
+  const TAB_VIEW_SET = new Set([
+    "today",
+    "days",
+    "pass",
+    "always",
+    "practice",
+    "mcqs",
+    "progress",
+    "feedback",
+    "more",
+  ]);
+  let viewStack = asArray(store.get("viewStack", []), []).filter(
+    (v) => typeof v === "string" && (TAB_VIEW_SET.has(v) || v === "quiz" || v === "cards")
+  );
+
+  function defaultFocusSec() {
+    const fm =
+      typeof window.focusMinutes === "function"
+        ? window.focusMinutes(state.planLength)
+        : 45;
+    return Math.max(15, +fm || 45) * 60;
+  }
+
+  const pomo = {
+    mode: store.get("pomoMode", "work"), // work | break
+    remaining: store.get("pomoRemaining", null),
+    running: false,
+    workSec: defaultFocusSec(),
+    breakSec: 5 * 60,
+  };
+  if (pomo.remaining == null || pomo.remaining <= 0) {
+    pomo.remaining = pomo.workSec;
+  }
+
+  function save() {
+    ensurePlanDayVolume();
+    if (Array.isArray(state.wrongBook) && state.wrongBook.length > 500) {
+      state.wrongBook = state.wrongBook.slice(-500);
+    }
+    store.set("day", state.day);
+    store.set("planLength", state.planLength);
+    store.set("stepsDone", state.stepsDone);
+    store.set("dayDone", state.dayDone);
+    store.set("stats", state.stats);
+    store.set("wrongBook", state.wrongBook);
+    store.set("seenIds", state.seenIds);
+    store.set("cardKnown", state.cardKnown);
+    store.set("sessionDate", state.sessionDate || todayKey());
+    store.set("sessionAnswered", state.sessionAnswered);
+    store.set("planDayVolumeKey", state.planDayVolumeKey || planDayVolumeKeyOf());
+    store.set("planDayAnswered", state.planDayAnswered || 0);
+    store.set("dailyGoal", state.dailyGoal);
+    store.set("focusMode", state.focusMode);
+    store.set("examQa", state.examQa);
+    store.set("history", state.history);
+    updateTop();
+  }
+
+  function maxDay() {
+    if (typeof window.maxPlanDay === "function") return window.maxPlanDay(state.planLength);
+    const n = +state.planLength;
+    return [14, 30, 45, 60, 90].indexOf(n) >= 0 ? n : 30;
+  }
+
+  function clampDay() {
+    const m = maxDay();
+    if (state.day > m) state.day = m;
+    if (state.day < 1) state.day = 1;
+  }
+
+  function trackMeta() {
+    if (typeof window.planDayMeta === "function") {
+      return window.planDayMeta(state.planLength, state.day) || {};
+    }
+    return { day: state.day, lessonDay: Math.min(state.day, 14), mode: "learn", phase: "", dailyGoal: 150 };
+  }
+
+  function setPlanLength(n, opts) {
+    const force = !!(opts && opts.force);
+    const confirmPick = !!(opts && opts.confirm);
+    const len =
+      typeof window.normalizePlanLength === "function"
+        ? window.normalizePlanLength(n)
+        : [14, 30, 45, 60, 90].indexOf(+n) >= 0
+          ? +n
+          : 30;
+    if (confirmPick) {
+      store.set("planChosen", true);
+      store.set("planPickedExplicit", true);
+    }
+    // Same track, no force: nothing to do (except confirm already saved above)
+    if (state.planLength === len && !force) {
+      if (confirmPick) {
+        const metaSame = trackMeta();
+        if (metaSame.dailyGoal && !store.get("dailyGoalUserOverride", false)) {
+          state.dailyGoal = metaSame.dailyGoal;
+        }
+        syncPomoFromPlan({ force: true });
+        save();
+        render();
+      }
+      return;
+    }
+    state.planLength = len;
+    clampDay();
+    ensurePlanDayVolume();
+    // Switching plan re-syncs goal + timer from track (not hard-coded 150/45)
+    store.set("dailyGoalUserOverride", false);
+    const meta = trackMeta();
+    if (meta.dailyGoal) state.dailyGoal = meta.dailyGoal;
+    syncPomoFromPlan({ force: true });
+    save();
+    render();
+  }
+
+  /** Plan options with live hours/focus for Day 1 learn (so pickers never look hard-coded). */
+  function planOptionsMeta() {
+    return [
+      {
+        n: 14,
+        title: "14 days",
+        short: "14d",
+        titleAr: "١٤ يوم",
+        timeAr: "أسبوعان",
+        descAr: "مكثّف — ساعات طويلة كل يوم",
+      },
+      {
+        n: 30,
+        title: "30 days",
+        short: "30d",
+        titleAr: "٣٠ يوم",
+        timeAr: "شهر واحد",
+        descAr: "موصى به — تعلّم + تكرار + مراجعة",
+      },
+      {
+        n: 45,
+        title: "45 days",
+        short: "45d",
+        titleAr: "٤٥ يوم",
+        timeAr: "شهر ونصف",
+        descAr: "وتيرة ثابتة — وقت إضافي للمراجعة",
+      },
+      {
+        n: 60,
+        title: "2 months",
+        short: "2 mo",
+        titleAr: "شهران",
+        timeAr: "٦٠ يوم",
+        descAr: "هادئ — تركيز على مواضيع الدرجة العالية",
+      },
+      {
+        n: 90,
+        title: "3 months",
+        short: "3 mo",
+        titleAr: "٣ أشهر",
+        timeAr: "٩٠ يوم",
+        descAr: "مخطط كامل — جلسات أقصر يوميًا",
+      },
+    ].map((o) => {
+      const learnH =
+        typeof window.dayHours === "function" ? window.dayHours(o.n, "learn") : o.n <= 14 ? 8 : 3;
+      const focus =
+        typeof window.focusMinutes === "function" ? window.focusMinutes(o.n) : 45;
+      const goal =
+        typeof window.planDayMeta === "function"
+          ? (window.planDayMeta(o.n, 1) || {}).dailyGoal || 80
+          : 80;
+      return {
+        ...o,
+        learnH,
+        focus,
+        goal,
+        sub: `~${learnH}h · ${focus} min · ~${goal}Q`,
+        subAr: `≈${learnH} ساعة/يوم · تركيز ${focus} د · هدف ≈${goal} سؤال`,
+        desc:
+          o.n === 14
+            ? "Full engine days. Same 14 lessons, max hours."
+            : o.n === 30
+              ? "Learn + volume + review. Good default."
+              : o.n === 45
+                ? "Extra review on resto / perio / prosthesis."
+                : o.n === 60
+                  ? "Notebook pace. Score-makers first."
+                  : "Calm full map. Short focus blocks.",
+      };
+    });
+  }
+
+  /** True when user has explicitly picked exam prep length. */
+  function hasChosenPlan() {
+    /* Old builds set planChosen without a real tap — require explicit pick. */
+    if (store.get("planChosen", false) && !store.get("planPickedExplicit", false)) {
+      store.set("planChosen", false);
+    }
+    return !!store.get("planPickedExplicit", false) || !!store.get("planChosen", false);
+  }
+
+  /** Live schedule for current calendar day (hours + ordered timed steps). */
+  function currentSchedule() {
+    const meta = trackMeta();
+    if (meta.schedule) return meta.schedule;
+    if (typeof window.daySchedule === "function") {
+      return window.daySchedule(
+        state.planLength,
+        meta.mode || "learn",
+        meta.dailyGoal || state.dailyGoal,
+        meta.note || ""
+      );
+    }
+    return {
+      totalHours: 4,
+      hoursLabel: "4 h",
+      focusMinutes: 45,
+      howToRead: "Read the open step, write hinges, then solve.",
+      steps: [],
+      mode: meta.mode || "learn",
+      dailyGoal: meta.dailyGoal || state.dailyGoal,
+    };
+  }
+
+  /**
+   * Sync focus timer work block to plan length (and optional day focusMinutes).
+   * Does not interrupt a running timer unless force + not running is already handled.
+   */
+  function syncPomoFromPlan({ force = false } = {}) {
+    const sch = currentSchedule();
+    const focusMin = sch.focusMinutes || (typeof window.focusMinutes === "function" ? window.focusMinutes(state.planLength) : 45);
+    const nextWork = Math.max(15, +focusMin || 45) * 60;
+    pomo.workSec = nextWork;
+    if (pomo.running && !force) return;
+    if (force || pomo.mode === "work") {
+      if (!pomo.running) {
+        pomo.mode = "work";
+        pomo.remaining = nextWork;
+        store.set("pomoMode", pomo.mode);
+        store.set("pomoRemaining", pomo.remaining);
+      }
+    }
+    paintPomoBar();
+  }
+
+  function saveViewStack() {
+    try {
+      store.set("viewStack", viewStack.slice(-24));
+    } catch (_) {}
+  }
+
+  /**
+   * Navigate with back-stack. push=true records current view before leaving.
+   * Overlays (quiz/cards) push the tab they came from.
+   */
+  function navigateTo(view, { push = true, replace = false } = {}) {
+    if (!view) return false;
+    const from = state.view;
+    if (from === view && !replace) {
+      setActiveNav(TAB_VIEWS.includes(view) ? view : from);
+      render();
+      return true;
+    }
+    // Leaving quiz/cards needs clean leave
+    if (from === "quiz" || from === "cards") {
+      const ok = leaveQuizOrCards({ nextView: null, abandon: true, confirmTimed: true });
+      if (!ok) return false;
+      state.quiz = null;
+    }
+    if (push && from && from !== view) {
+      // Don't stack pure re-renders of same tab chain noise
+      if (viewStack[viewStack.length - 1] !== from) {
+        viewStack.push(from);
+        if (viewStack.length > 24) viewStack = viewStack.slice(-24);
+        saveViewStack();
+      }
+    }
+    if (replace) {
+      // no push already handled
+    }
+    state.view = view;
+    setActiveNav(TAB_VIEWS.includes(view) ? view : viewStack[viewStack.length - 1] || "today");
+    render();
+    return true;
+  }
+
+  function goBack() {
+    // Prefer quiz/cards returnView if mid-session
+    if (state.view === "quiz" && state.quiz) {
+      // Peek only — do not mutate stack until leave is confirmed (timer confirm cancel)
+      let back = state.quiz.returnView;
+      if (!back) back = viewStack[viewStack.length - 1] || "today";
+      const ok = leaveQuizOrCards({ nextView: back, abandon: true, confirmTimed: true });
+      if (!ok) return;
+      if (viewStack[viewStack.length - 1] === back) viewStack.pop();
+      saveViewStack();
+      return;
+    }
+    if (state.view === "cards") {
+      let back = viewStack[viewStack.length - 1] || "today";
+      if (back === "cards") back = viewStack[viewStack.length - 2] || "today";
+      const ok = leaveQuizOrCards({ nextView: back, abandon: true, confirmTimed: false });
+      if (!ok) return;
+      if (viewStack[viewStack.length - 1] === "cards") viewStack.pop();
+      if (viewStack[viewStack.length - 1] === back) viewStack.pop();
+      saveViewStack();
+      return;
+    }
+    let prev = viewStack.pop();
+    saveViewStack();
+    while (prev && (prev === state.view || prev === "quiz" || prev === "cards")) {
+      prev = viewStack.pop();
+      saveViewStack();
+    }
+    if (!prev) prev = "today";
+    state.view = prev;
+    setActiveNav(TAB_VIEWS.includes(prev) ? prev : "today");
+    render();
+  }
+
+  function backBarHtml(label) {
+    const can = viewStack.length > 0 || state.view === "quiz" || state.view === "cards";
+    const text = label || (can ? "← Back" : "← Today");
+    return `<div class="back-bar" role="navigation" aria-label="Back">
+      <button type="button" class="btn ghost sm" id="app-back">${escapeHtml(text)}</button>
+      <span class="back-bar-hint muted">${can ? "Previous screen" : "Home path"}</span>
+    </div>`;
+  }
+
+  function bindBackBar() {
+    const b = $("#app-back");
+    if (b) b.onclick = () => goBack();
+  }
+
+  function lessonCardDeck(L) {
+    const L0 = L || lesson();
+    const d = (L0 && L0.cardDeck) || "";
+    if (d && d !== "always") return d;
+    const t = String((L0 && L0.quizTopic) || "").split(",")[0].trim();
+    if (t === "operative" || t === "restorative") return "restorative";
+    if (["perio", "endo", "oms", "ethics", "ortho_pedo"].includes(t)) return t;
+    if (t === "pedo" || t === "ortho") return "ortho_pedo";
+    /* Prefer enriched bank, not the old 150-card "always" deck alone */
+    return "all";
+  }
+
+  function openCards(deck) {
+    state._cardDeck = deck || lessonCardDeck();
+    state.cardIx = 0;
+    state._cardPoolKey = ""; /* force reshuffle */
+    /* rebuild so wrong-book + notes enrichment stay current */
+    window.__FLASHCARDS_ENRICHED = false;
+    navigateTo("cards", { push: true });
+  }
+
+  function openPracticePane(pane) {
+    state.practicePane = pane || "mcqs";
+    navigateTo("practice", { push: true });
+  }
+
+  /** Student pass-readiness (practice ≥80% — not an exam guarantee). */
+  function passReadiness() {
+    const s = state.stats || {};
+    const pct = s.answered ? Math.round((100 * s.correct) / s.answered) : null;
+    const m = maxDay();
+    const daysDone = Object.keys(state.dayDone || {}).filter((k) => {
+      const d = +k;
+      return state.dayDone[k] && d >= 1 && d <= m;
+    }).length;
+    const wrongN = (state.wrongBook || []).length;
+    const answered = s.answered || 0;
+    const weak = typeof weakTopicKeys === "function" ? weakTopicKeys(3) : [];
+    const gates = [
+      {
+        id: "volume",
+        ok: answered >= 400,
+        label: `Volume: ${answered} answered (need ≥400)`,
+      },
+      {
+        id: "acc",
+        ok: pct != null && pct >= 80 && answered >= 100,
+        label:
+          pct == null
+            ? "Accuracy: no data yet (need ≥80% on ≥100Q)"
+            : `Accuracy: ${pct}% ${pct >= 80 && answered >= 100 ? "✓" : "(need ≥80% on ≥100Q)"}`,
+      },
+      {
+        id: "wrong",
+        ok: wrongN <= 40 || (answered >= 200 && wrongN / Math.max(answered, 1) < 0.15),
+        label: `Wrong book: ${wrongN} open (target ≤40 or <15% of answers)`,
+      },
+      {
+        id: "days",
+        ok: daysDone >= Math.ceil(m * 0.6),
+        label: `Days marked done: ${daysDone}/${m} (target ≥60% of track)`,
+      },
+      {
+        id: "weak",
+        ok: weak.length === 0 || answered < 50,
+        label:
+          answered < 50
+            ? "Weak topics: answer more to rank"
+            : `Weak focus: ${weak.join(", ") || "none"}`,
+      },
+    ];
+    const okN = gates.filter((g) => g.ok).length;
+    const score = Math.round((100 * okN) / gates.length);
+    const blueprint = blueprintWeightedScore();
+    return {
+      pct,
+      wrongN,
+      daysDone,
+      answered,
+      weak,
+      gates,
+      score,
+      ready: okN >= 4 && (pct || 0) >= 80,
+      blueprint,
+    };
+  }
+
+  /**
+   * Weighted practice accuracy by approximate exam domain mix.
+   * Requires ≥20 answered per included topic. Not a predicted SCFHS score.
+   */
+  function blueprintWeightedScore() {
+    let score = 0;
+    let totalWeight = 0;
+    const parts = [];
+    for (const [topic, w] of Object.entries(BLUEPRINT_WEIGHTS)) {
+      const x = (state.stats.byTopic && state.stats.byTopic[topic]) || {};
+      const a = x.a || 0;
+      const c = x.c || 0;
+      if (a >= 20) {
+        const p = c / a;
+        score += p * w;
+        totalWeight += w;
+        parts.push({ topic, w, a, c, pct: Math.round(100 * p) });
+      }
+    }
+    if (totalWeight <= 0) return null;
+    return {
+      pct: Math.round((score / totalWeight) * 100),
+      coveredWeight: Math.round(totalWeight * 100),
+      parts,
+    };
+  }
+
+  /**
+   * One data-driven next action — wrong book first, else highest blueprint gap.
+   * Never removes content; only suggests.
+   */
+  function nextBestAction() {
+    const wrongN = (state.wrongBook || []).length;
+    if (wrongN >= 15) {
+      return {
+        topic: "wrong",
+        n: Math.min(50, wrongN),
+        title: "Clear wrong book first",
+        detail: `${wrongN} open misses. Empty these before new volume — free points stay open on Always tab.`,
+        mode: "learn",
+      };
+    }
+    const wrongByTopic = {};
+    (state.wrongBook || []).forEach((id) => {
+      const q = allQ().find((x) => x && x.id === id);
+      if (q && q.topic) wrongByTopic[q.topic] = (wrongByTopic[q.topic] || 0) + 1;
+    });
+    let best = null;
+    for (const [topic, w] of Object.entries(BLUEPRINT_WEIGHTS)) {
+      const x = (state.stats.byTopic && state.stats.byTopic[topic]) || {};
+      const a = x.a || 0;
+      const c = x.c || 0;
+      const acc = a >= 5 ? c / a : 0.5;
+      const bias = 1 + Math.min(1, (wrongByTopic[topic] || 0) / 20);
+      const priority = (1 - acc) * w * bias * (a < 20 ? 1.25 : 1);
+      if (!best || priority > best.priority) {
+        best = {
+          topic,
+          n: 50,
+          title: `Work on ${topic}`,
+          detail:
+            a < 5
+              ? `~${Math.round(w * 100)}% of exam weight · almost no practice yet (${a}Q).`
+              : `~${Math.round(w * 100)}% of exam weight · you are at ${Math.round(acc * 100)}% on ${a}Q` +
+                (wrongByTopic[topic] ? ` · ${wrongByTopic[topic]} in wrong book` : "") +
+                ".",
+          mode: "learn",
+          priority,
+        };
+      }
+    }
+    if (!best) {
+      return {
+        topic: "always_src",
+        n: 25,
+        title: "Warm free points",
+        detail: "Build a few answers, then re-open Progress for a topic pick.",
+        mode: "learn",
+      };
+    }
+    return best;
+  }
+
+  function nextBestActionHtml() {
+    const nb = nextBestAction();
+    const label =
+      nb.topic === "wrong"
+        ? "Wrong book"
+        : nb.topic === "always_src"
+          ? "Free points"
+          : nb.topic;
+    return `<div class="next-best alert" role="region" aria-label="Next best study action">
+      <strong>Next best:</strong> ${escapeHtml(nb.title)}
+      <p class="muted" style="margin:6px 0 10px">${escapeHtml(nb.detail)}</p>
+      <div class="volume-grid">
+        ${volBtn(nb.topic, nb.n, label, "success")}
+        ${nb.topic !== "wrong" ? volBtn("wrong", 25, "Wrong 25", "ghost") : ""}
+        ${volBtn("weak", 50, "Weak pack", "ghost")}
+      </div>
+    </div>`;
+  }
+
+  function passReadinessHtml(opts) {
+    opts = opts || {};
+    const r = passReadiness();
+    const compact = !!opts.compact;
+    const tone = r.ready ? "ready-ok" : r.score >= 50 ? "ready-mid" : "ready-low";
+    const gateLis = r.gates
+      .map(
+        (g) =>
+          `<li class="${g.ok ? "gate-ok" : "gate-miss"}">${g.ok ? "✓" : "○"} ${escapeHtml(g.label)}</li>`
+      )
+      .join("");
+    const bp = r.blueprint;
+    const bpLine =
+      bp == null
+        ? "Weighted practice: need ≥20Q on restorative/perio/endo/OMS/ortho-pedo"
+        : `Weighted practice accuracy ~${bp.pct}% (covers ~${bp.coveredWeight}% of blueprint weights — not an official score)`;
+    if (compact) {
+      return `<div class="pass-ready ${tone}" title="Practice readiness, not exam guarantee">
+        <strong>Practice readiness ${r.score}%</strong>
+        · ${r.pct != null ? r.pct + "%" : "—"} acc · wrong ${r.wrongN}
+        · ${r.ready ? "on track for ≥80% practice" : "keep wrong-book + volume"}
+        <div class="muted" style="margin-top:4px">${escapeHtml(bpLine)}</div>
+      </div>`;
+    }
+    return `<div class="pass-ready-card ${tone}">
+      <div class="pass-ready-head">
+        <strong>Am I ready? (practice ≥80%)</strong>
+        <span class="badge ${r.ready ? "green" : "yellow"}">${r.score}%</span>
+      </div>
+      <p class="muted">This is <em>in-app practice readiness</em> — SCFHS pass is scaled ~542/800. Honest gates only.</p>
+      <p class="muted"><strong>${escapeHtml(bpLine)}</strong></p>
+      <ul class="pass-ready-gates">${gateLis}</ul>
+      <div class="volume-grid" style="margin-top:8px">
+        ${volBtn("wrong", 50, "Wrong book", "ghost")}
+        ${volBtn("weak", 100, "Weak pack", "")}
+        ${volBtn("unseen", 100, "Unseen", "")}
+        ${volBtn("always_src", 50, "Free points", "")}
+      </div>
+    </div>`;
+  }
+
+  /** Mode coach: what a stressed student should do first today. */
+  function modeCoachHtml(L) {
+    const meta = trackMeta();
+    const mode = (meta.mode || "learn").toLowerCase();
+    const goal = meta.dailyGoal || state.dailyGoal || 150;
+    const wrongN = (state.wrongBook || []).length;
+    const playbooks = {
+      learn: {
+        title: "LEARN day — depth first",
+        steps: [
+          "Read blocks A→D in Step 1 (do not open random PDFs)",
+          "Watch only listed videos",
+          "Cards 10–15 min",
+          `Quiz learn mode → hit ≥${goal}Q; write every miss in wrong book`,
+        ],
+        cta: "Start with Read → then Block 1 quiz",
+      },
+      volume: {
+        title: "VOLUME day — MCQ mass, light re-read",
+        steps: [
+          "Skip full re-read unless you are cold on the topic",
+          `Do quiz blocks + volume ladders → ≥${goal}Q`,
+          "Show answer only when unsure; write misses",
+          wrongN ? `Empty wrong book first (${wrongN} open)` : "Keep wrong book near zero",
+        ],
+        cta: "Jump to Quiz volume — protect time",
+      },
+      review: {
+        title: "REVIEW day — wrong book + weak only",
+        steps: [
+          wrongN ? `Wrong book first (${wrongN} items)` : "Wrong book empty — run Weak pack",
+          "Weak pack on lowest topics (Progress table)",
+          "Re-read only bold lines from weak days — not whole textbooks",
+          "Free points 25 if ethics/med weak",
+        ],
+        cta: "Wrong book → Weak pack → stop when green",
+      },
+      mock: {
+        title: "MOCK day — timed sim",
+        steps: [
+          "Phone out · water · exam pace (~72s/Q)",
+          "Warm free points 25 max, then full timed mock",
+          "No new theory mid-mock",
+          "After: every miss → one-line hinge in wrong book",
+        ],
+        cta: "Warm 25 FP → timed mock → review",
+      },
+      light: {
+        title: "LIGHT day — protect the brain",
+        steps: [
+          "Always-comes out loud (20 rules)",
+          "Optional ≤50 free-point MCQs — stop if anxiety spikes",
+          "Logistics: ID, Mumaris, route, sleep ≥7h",
+          "No new banks · no 200Q marathon",
+        ],
+        cta: "Always-comes + sleep — you are done early",
+      },
+    };
+    const pb = playbooks[mode] || playbooks.learn;
+    const sch = currentSchedule();
+    const hrs = sch.hoursLabel || (meta.hoursLabel || L.hours || "?");
+    return `<div class="mode-coach mode-${escapeHtml(mode)}">
+      <div class="mode-coach-head">
+        <span class="badge blue">Day ${state.day}/${maxDay()}</span>
+        <span class="badge">${escapeHtml(mode.toUpperCase())}</span>
+        <span class="badge">L${L.day}</span>
+        <span class="badge yellow">${escapeHtml(String(hrs))}</span>
+        <span class="badge yellow">Goal ${goal}Q</span>
+        <span class="badge">${state.planLength}d · ${sch.focusMinutes || 45}m focus</span>
+      </div>
+      <strong>${escapeHtml(pb.title)}</strong>
+      ${meta.note ? `<div class="muted">${escapeHtml(meta.note)}</div>` : ""}
+      <ol class="mode-coach-steps">${pb.steps.map((s) => `<li>${escapeHtml(s)}</li>`).join("")}</ol>
+      <div class="mode-coach-cta"><strong>Do now:</strong> ${escapeHtml(pb.cta)}</div>
+      ${mode === "review" ? reviewWeakPanelHtml() : ""}
+      ${passReadinessHtml({ compact: true })}
+      ${nextBestActionHtml()}
+    </div>`;
+  }
+
+  /** Review-day: surface weak topics + one-tap packs (auto priority). */
+  function reviewWeakPanelHtml() {
+    const ranked = typeof weakRankedTopics === "function" ? weakRankedTopics() : [];
+    const weak = ranked.filter((x) => x.a >= 8 && x.pct != null && x.pct < 80).slice(0, 4);
+    const cold = ranked.filter((x) => x.a < 8).slice(0, 3);
+    const wrongN = (state.wrongBook || []).length;
+    const lines =
+      weak.length || cold.length
+        ? [...weak, ...cold]
+            .slice(0, 5)
+            .map((x) => {
+              const pct = x.pct == null ? "cold" : Math.round(x.pct) + "%";
+              return `<li><b>${escapeHtml(x.topic)}</b> — ${x.c}/${x.a} (${pct})</li>`;
+            })
+            .join("")
+        : `<li class="muted">Answer more MCQs so weak ranking can rank topics.</li>`;
+    return `<div class="review-weak-panel">
+      <strong>Review focus (auto)</strong>
+      <ul class="review-weak-list">${lines}</ul>
+      <div class="volume-grid">
+        ${wrongN ? volBtn("wrong", Math.min(50, wrongN), "Wrong book", "warn") : ""}
+        ${volBtn("wrong", QUIZ_ALL, "Wrong ALL", "ghost")}
+        ${volBtn("weak", 50, "Weak pack", "")}
+        ${volBtn("weak", 100, "Weak pack", "success")}
+        ${volBtn("weak", QUIZ_ALL, "Weak ALL", "success")}
+        ${volBtn("always_src", 25, "Free points", "ghost")}
+      </div>
+      <p class="muted" style="margin:6px 0 0;font-size:0.85rem">One-tap starts immediately. Re-read only bold lines from weak lesson days — not full textbooks.</p>
+    </div>`;
+  }
+
+  function noteDeptToCardDeck(dept) {
+    const d = String(dept || "mixed");
+    if (d === "fixed" || d === "operative" || d === "rpd") return "restorative";
+    if (d === "ortho_pedo" || d === "ortho" || d === "pedo") return "ortho_pedo";
+    if (["perio", "endo", "oms", "ethics", "restorative"].includes(d)) return d;
+    return "always";
+  }
+
+  /**
+   * Flashcards = static highyield (~150) + always-comes rules + notes_bank stems
+   * + open wrong-book items. Rebuilt once per page load (notes are large).
+   */
+  function ensureFlashcards() {
+    if (window.__FLASHCARDS_ENRICHED && Array.isArray(window.FLASHCARDS) && window.FLASHCARDS.length > 200) {
+      return window.FLASHCARDS;
+    }
+    let cards = Array.isArray(window.FLASHCARDS) ? window.FLASHCARDS.slice() : [];
+    const ids = new Set(cards.map((c) => c && c.id).filter(Boolean));
+
+    (window.ALWAYS_COMES_READ || []).forEach((r, i) => {
+      if (!r || !r[0]) return;
+      const id = "ac_rule_" + (i + 1);
+      if (ids.has(id)) return;
+      const front = String(r[0]).replace(/^\d+\.\s*/, "").trim();
+      cards.push({
+        id,
+        deck: "always",
+        front: front || "Always-comes rule",
+        back: String(r[1] || ""),
+        src: "always_comes",
+      });
+      ids.add(id);
+    });
+
+    /* Enrich from NOTES_BANK (أبطال / رفيع extracts) — stem → note */
+    const notes = (window.NOTES_BANK && window.NOTES_BANK.notes) || [];
+    let noteAdded = 0;
+    const NOTE_CAP = 3500;
+    for (let i = 0; i < notes.length && noteAdded < NOTE_CAP; i++) {
+      const n = notes[i];
+      if (!n || !n.id) continue;
+      const front = String(n.stemPreview || "").replace(/\s+/g, " ").trim();
+      const back = String(n.text || "").replace(/\s+/g, " ").trim();
+      if (front.length < 8 || back.length < 10) continue;
+      if (back.length > 400) continue;
+      const id = "note_" + n.id;
+      if (ids.has(id)) continue;
+      const pack = String(n.sourcePack || "");
+      const fromAbtal = /abtal/i.test(pack);
+      cards.push({
+        id,
+        deck: noteDeptToCardDeck(n.department),
+        front,
+        back,
+        src: fromAbtal ? "abtal_note" : pack || "note",
+      });
+      ids.add(id);
+      noteAdded++;
+    }
+
+    /* Live wrong-book → personal cards */
+    try {
+      const wrongIds = state.wrongBook || [];
+      const bank = window.QUESTION_BANK || [];
+      const byId = new Map(bank.map((q) => [q.id, q]));
+      wrongIds.slice(0, 400).forEach((wid) => {
+        const q = byId.get(wid);
+        if (!q || !q.q) return;
+        const id = "wb_" + wid;
+        if (ids.has(id)) return;
+        const ans =
+          q.options && q.answer != null && q.options[q.answer] != null
+            ? String(q.options[q.answer])
+            : "";
+        const exp = q.explanation ? " — " + String(q.explanation) : "";
+        cards.push({
+          id,
+          deck: "wrong",
+          front: String(q.q).slice(0, 320),
+          back: (ans + exp).trim() || "(no answer text)",
+          src: "wrong_book",
+        });
+        ids.add(id);
+      });
+    } catch (_) {
+      /* ignore */
+    }
+
+    /* Phase 4 — per-department decks from Flash Notes recalls + TOPICS key points */
+    try {
+      const FN = window.FLASH_NOTES || { byDept: {} };
+      let fnAdded = 0, kpAdded = 0;
+      const FN_CAP = 2500, KP_CAP = 800;
+      // (a) Flash Notes recall cards — front=stem, back=marked answer + verdict
+      Object.keys(FN.byDept || {}).forEach((dept) => {
+        const list = FN.byDept[dept] || [];
+        for (let i = 0; i < list.length && fnAdded < FN_CAP; i++) {
+          const it = list[i];
+          if (!it || !it.stem) continue;
+          if (it._merged_into) continue; // merged option — shown inside its parent card
+          const id = "fn_" + it.id;
+          if (ids.has(id)) continue;
+          // back: marked answer option text, else marker note
+          let back = "";
+          if (it.answerLetter && it.options) {
+            const opt = it.options.find((o) => o.startsWith((it.answerLetter || "_") + "."));
+            back = opt ? opt : (it.answerLetter + " (marked)");
+          } else if (it.raw) {
+            back = it.raw.slice(0, 200);
+          } else {
+            back = "no marked answer — recall stem only";
+          }
+          if (it._verification_verdict === "supported") back += "  [book-evidence candidate]";
+          if (it._answer_disputed) back += "  ⚠ AI disputes answer";
+          if (it._model_suggested_answer) back += `  🤖 AI-suggested: ${it._model_suggested_answer.letter}`;
+          const front = it.stem.slice(0, 280) + (it.needsImage ? " 🖼" : "");
+          cards.push({ id, deck: dept, front, back, src: "flashnotes" });
+          ids.add(id); fnAdded++;
+        }
+      });
+      // (b) TOPICS key-point cards — front=key point, back=topic title + dept
+      (window.TOPICS || []).forEach((t) => {
+        if (!t || !t.keyPoints) return;
+        for (let i = 0; i < t.keyPoints.length && kpAdded < KP_CAP; i++) {
+          const kp = String(t.keyPoints[i] || "").trim();
+          if (kp.length < 6) continue;
+          const id = "kp_" + t.id + "_" + i;
+          if (ids.has(id)) continue;
+          cards.push({
+            id, deck: t.dept,
+            front: kp,
+            back: (t.title || "") + "  [" + (t.dept || "") + "]",
+            src: "topic_keypoint",
+          });
+          ids.add(id); kpAdded++;
+        }
+      });
+      window.__FLASHCARDS_META = window.__FLASHCARDS_META || {};
+      window.__FLASHCARDS_META.fromFlashNotes = fnAdded;
+      window.__FLASHCARDS_META.fromKeyPoints = kpAdded;
+    } catch (_) { /* ignore enrichment errors */ }
+
+    window.FLASHCARDS = cards;
+    window.__FLASHCARDS_ENRICHED = true;
+    window.__FLASHCARDS_META = {
+      total: cards.length,
+      fromNotes: noteAdded,
+      staticBase: Math.max(0, cards.length - noteAdded - (state.wrongBook || []).length),
+    };
+    return cards;
+  }
+
+  function cardPoolForDeck(deck) {
+    const cards = ensureFlashcards();
+    const d = deck || "always";
+    if (d === "all") return cards.slice();
+    if (d === "unknown") {
+      const unk = cards.filter((c) => c && !state.cardKnown[c.id]);
+      return unk.length ? unk : cards.slice();
+    }
+    if (d === "wrong") return cards.filter((c) => c.deck === "wrong");
+    if (d === "abtal_notes") return cards.filter((c) => c.src === "abtal_note");
+    if (d === "always") return cards.filter((c) => c.deck === "always");
+    // Phase 4: department decks (flashnotes + keypoints + any with this deck).
+    // A deck is "department" if some card carries it as deck (flashnotes/keypoints set deck=dept).
+    const deptCards = cards.filter((c) => c.deck === d);
+    if (deptCards.length) return cards.filter((c) => c.deck === d || c.deck === "always");
+    // Day 9 uses pedo; include ortho cards too
+    if (d === "pedo" || d === "ortho" || d === "ortho_pedo") {
+      return cards.filter((c) => ["pedo", "ortho", "ortho_pedo", "always"].includes(c.deck));
+    }
+    const hit = cards.filter((c) => c.deck === d || c.deck === "always");
+    return hit.length ? hit : cards.slice();
+  }
+
+  function logSession(entry) {
+    if (!Array.isArray(state.history)) state.history = [];
+    state.history.unshift(entry);
+    if (state.history.length > 80) state.history = state.history.slice(0, 80);
+    store.set("history", state.history);
+  }
+
+  function formatWhen(ts) {
+    try {
+      const d = new Date(ts);
+      return d.toLocaleString(undefined, { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" });
+    } catch {
+      return "—";
+    }
+  }
+
+  function formatDur(sec) {
+    if (sec == null || sec < 0) return "—";
+    const m = Math.floor(sec / 60);
+    const s = sec % 60;
+    return m ? `${m}m ${s}s` : `${s}s`;
+  }
+
+  function formatPomo(s) {
+    const m = Math.floor(Math.max(0, s) / 60);
+    const sec = Math.max(0, s) % 60;
+    return `${m}:${String(sec).padStart(2, "0")}`;
+  }
+
+  function tickPomo() {
+    if (!pomo.running) return;
+    pomo.remaining--;
+    store.set("pomoRemaining", pomo.remaining);
+    store.set("pomoMode", pomo.mode);
+    const el = $("#pomo-display");
+    if (el) {
+      el.textContent = formatPomo(pomo.remaining);
+      el.dataset.mode = pomo.mode;
+    }
+    if (pomo.remaining <= 0) {
+      pomo.running = false;
+      if (pomoTimer) clearInterval(pomoTimer);
+      pomoTimer = null;
+      const wasWork = pomo.mode === "work";
+      pomo.mode = wasWork ? "break" : "work";
+      pomo.remaining = wasWork ? pomo.breakSec : pomo.workSec;
+      store.set("pomoMode", pomo.mode);
+      store.set("pomoRemaining", pomo.remaining);
+      const workMin = Math.round(pomo.workSec / 60);
+      try {
+        if (typeof Notification !== "undefined" && Notification.permission === "granted") {
+          new Notification(wasWork ? "Break — 5 min stand/water" : `Work block — ${workMin} min focus`);
+        }
+      } catch (_) {}
+      if (wasWork) document.body.classList.add("pomo-break");
+      else document.body.classList.remove("pomo-break");
+      paintPomoBar();
+      alert(
+        wasWork
+          ? "Pomodoro done → 5 min BREAK. Stand up, water, no phone rabbit holes."
+          : `Break over → start next ${workMin} min work block (synced to your plan).`
+      );
+    }
+  }
+
+  function paintPomoBar() {
+    const bar = $("#pomo-bar");
+    if (!bar) return;
+    if (isSimpleMode()) {
+      bar.hidden = true;
+      bar.innerHTML = "";
+      return;
+    }
+    bar.hidden = false;
+    const workMin = Math.round(pomo.workSec / 60);
+    const sch = (() => {
+      try {
+        return currentSchedule();
+      } catch (_) {
+        return { hoursLabel: "—", mode: "" };
+      }
+    })();
+    bar.innerHTML = `
+      <span class="pomo-label">${pomo.mode === "work" ? "FOCUS" : "BREAK"}</span>
+      <strong id="pomo-display" data-mode="${pomo.mode}">${formatPomo(pomo.remaining)}</strong>
+      <button type="button" class="btn sm ghost" id="pomo-toggle" title="${pomo.running ? "Pause" : "Start"} timer">${pomo.running ? "❚❚" : "▶"}</button>
+      <button type="button" class="btn sm ghost" id="pomo-reset" title="Reset ${workMin}/5 (plan ${state.planLength}d)">↺</button>
+      <button type="button" class="btn sm ghost" id="focus-toggle" title="Quieter chrome — plan tabs stay visible">${state.focusMode ? "Exit" : "Read"}</button>
+      <span class="pomo-goal" title="Hours · today Q · block">${escapeHtml(sch.hoursLabel || "—")} · Q${state.sessionAnswered}/${state.dailyGoal} · ${workMin}m</span>`;
+    const t = $("#pomo-toggle");
+    if (t)
+      t.onclick = () => {
+        if (pomo.running) {
+          pomo.running = false;
+          if (pomoTimer) clearInterval(pomoTimer);
+          pomoTimer = null;
+        } else {
+          pomo.running = true;
+          if (pomoTimer) clearInterval(pomoTimer);
+          pomoTimer = setInterval(tickPomo, 1000);
+          if (typeof Notification !== "undefined" && Notification.permission === "default") {
+            try {
+              Notification.requestPermission();
+            } catch (_) {}
+          }
+        }
+        paintPomoBar();
+      };
+    const r = $("#pomo-reset");
+    if (r)
+      r.onclick = () => {
+        pomo.running = false;
+        if (pomoTimer) clearInterval(pomoTimer);
+        pomoTimer = null;
+        syncPomoFromPlan({ force: true });
+        pomo.mode = "work";
+        pomo.remaining = pomo.workSec;
+        store.set("pomoMode", pomo.mode);
+        store.set("pomoRemaining", pomo.remaining);
+        document.body.classList.remove("pomo-break");
+        paintPomoBar();
+      };
+    const f = $("#focus-toggle");
+    if (f)
+      f.onclick = () => {
+        state.focusMode = !state.focusMode;
+        store.set("focusMode", state.focusMode);
+        document.body.classList.toggle("focus-mode", state.focusMode);
+        paintPomoBar();
+      };
+  }
+
+  function syncPomoStickyTop() {
+    /* Pomodoro lives inside sticky #topbar — no separate sticky offset. */
+  }
+
+  function ensurePomoBar() {
+    let bar = $("#pomo-bar");
+    if (!bar) {
+      bar = document.createElement("div");
+      bar.id = "pomo-bar";
+      bar.className = "pomo-bar";
+      const row = $(".chrome-row");
+      const top = $("#topbar") || $(".topbar");
+      if (row) row.appendChild(bar);
+      else if (top) top.appendChild(bar);
+      else document.body.prepend(bar);
+    }
+    document.body.classList.toggle("focus-mode", state.focusMode);
+    if (pomo.mode === "break") document.body.classList.add("pomo-break");
+    paintPomoBar();
+    syncPomoStickyTop();
+  }
+
+  function updateTop() {
+    ensureSessionDay();
+    applyChromeMode();
+    const el = $("#top-stats");
+    if (!el) return;
+    if (isSimpleMode()) {
+      el.innerHTML = "";
+      el.hidden = true;
+      // Timer stays hidden in simple — no cockpit.
+      const bar = $("#pomo-bar");
+      if (bar) {
+        bar.hidden = true;
+        bar.innerHTML = "";
+      }
+      return;
+    }
+    el.hidden = false;
+    const s = state.stats;
+    const pct = s.answered ? Math.round((100 * s.correct) / s.answered) : 0;
+    const goalPct = Math.min(100, Math.round((100 * state.sessionAnswered) / (state.dailyGoal || 150)));
+    const m = maxDay();
+    el.innerHTML = `
+      <span title="Calendar day on ${state.planLength}-day track"><strong>D${state.day}/${m}</strong></span>
+      <span class="track-pill" title="Plan length">${state.planLength}d</span>
+      <span title="All-time accuracy"><strong style="color:${pct >= 80 ? "var(--accent2)" : "var(--warn)"}">${pct}%</strong></span>
+      <span title="Wrong book">W<strong>${state.wrongBook.length}</strong></span>
+      <span title="Session MCQ goal">Q<strong style="color:${goalPct >= 100 ? "var(--accent2)" : "var(--warn)"}">${state.sessionAnswered}/${state.dailyGoal}</strong></span>`;
+    ensurePomoBar();
+  }
+
+  /** Content lesson for current calendar day (14 lessons, mapped on 30-day track). */
+  function lesson() {
+    const meta = trackMeta();
+    const ld = meta.lessonDay || Math.min(state.day, 14);
+    return window.LESSONS.find((l) => l.day === ld) || window.LESSONS[0];
+  }
+
+  function trackSwitcherHtml() {
+    const opts = planOptionsMeta();
+    return `
+      <div class="track-switch" role="group" aria-label="Plan length">
+        <span class="muted track-switch-label">Plan:</span>
+        ${opts
+          .map(
+            (o) =>
+              `<button type="button" class="btn ghost track-btn ${
+                state.planLength === o.n ? "active-track" : ""
+              }" data-track="${o.n}" title="${escapeHtml(o.sub)}">${escapeHtml(o.short)}</button>`
+          )
+          .join("")}
+      </div>`;
+  }
+
+  /**
+   * Plan picker. gate=true only in Coach mode (blocks day until pick).
+   * Simple mode uses compact strip so day content is never blocked (TTV).
+   */
+  function planChooserHtml({ gate = false, compact = false } = {}) {
+    const opts = planOptionsMeta();
+    if (compact) {
+      return `
+      <section class="plan-chooser plan-chooser-compact" aria-label="Study plan">
+        <p class="plan-model-line"><b>Same 14 lessons</b> · plan only changes calendar speed, hours, and Q goal. 📖 ${(window.QUESTION_BANK || []).filter(q => q.usable !== false && q.book_verified === true).length} MCQs textbook-verified</p>
+        <div class="plan-compact-row">
+          <span class="muted">Plan:</span>
+          ${opts
+            .map(
+              (t) =>
+                `<button type="button" class="btn sm ${state.planLength === t.n ? "" : "ghost"}" data-pick-plan="${t.n}" title="${escapeHtml(t.sub)}">${escapeHtml(t.short)}</button>`
+            )
+            .join("")}
+        </div>
+      </section>`;
+    }
+    return `
+      <section class="plan-chooser ${gate ? "plan-chooser-gate" : ""}" aria-label="Choose study plan">
+        <h2 class="plan-chooser-title">${gate ? "1 · Choose your plan first" : "Your plan"}</h2>
+        <p class="lead plan-chooser-lead">
+          Same 14 lessons — <b>hours, focus timer, MCQ goal, and step order</b> change with plan length.
+        </p>
+        <p class="muted" style="margin:4px 0 12px">📖 <strong>${(window.QUESTION_BANK || []).filter(q => q.usable !== false && q.book_verified === true).length}/${(window.QUESTION_BANK || []).filter(q => q.usable !== false).length}</strong> usable MCQs are textbook-verified · All 7 topics at 100%</p>
+        <div class="plan-template-grid plan-chooser-grid">
+          ${opts
+            .map(
+              (t) => `
+            <button type="button" class="plan-template ${state.planLength === t.n ? "active" : ""}" data-pick-plan="${t.n}">
+              <span class="plan-template-days">${escapeHtml(t.title)}</span>
+              <span class="plan-template-sub">${escapeHtml(t.sub)}</span>
+              <span class="plan-template-desc">${escapeHtml(t.desc)}</span>
+            </button>`
+            )
+            .join("")}
+        </div>
+        ${
+          gate
+            ? `<p class="muted plan-chooser-hint">Tap a card → Today opens. Change later anytime.</p>`
+            : `<p class="muted plan-chooser-hint">Active: <b>${state.planLength}-day</b>. <button type="button" class="btn sm ghost" id="repick-plan">Change plan…</button></p>`
+        }
+      </section>`;
+  }
+
+  function bindPlanChooser() {
+    app.querySelectorAll("[data-pick-plan]").forEach((b) => {
+      b.onclick = () => setPlanLength(+b.dataset.pickPlan, { confirm: true, force: true });
+    });
+    const repick = $("#repick-plan");
+    if (repick)
+      repick.onclick = () => {
+        store.set("planChosen", false);
+        store.set("planPickedExplicit", false);
+        save();
+        render();
+      };
+  }
+
+  /**
+   * Sticky “Note this” callout. Title is escaped; body is trusted author HTML only
+   * (hardcoded call sites — do not pass user/MCQ text).
+   */
+  function noteThisHtml(title, body) {
+    return `<aside class="note-this" role="note">
+      <div class="note-this-label">Note this</div>
+      <div class="note-this-title">${escapeHtml(title)}</div>
+      <p class="note-this-body">${body}</p>
+    </aside>`;
+  }
+
+  function examFocusBannerHtml() {
+    return noteThisHtml(
+      "Exam weight — write this in your notebook",
+      "Most SDLE marks sit in <b>restorative / operative</b>, <b>periodontics</b>, and <b>prosthesis</b> (fixed, RPD, complete denture). " +
+        "Protect these first. Endo, OMS, ortho/pedo, and ethics still appear — but do not steal hours from the big three until free points and wrong book are clean."
+    );
+  }
+
+  function bindTrackSwitcher() {
+    app.querySelectorAll("[data-track]").forEach((b) => {
+      b.onclick = () => setPlanLength(+b.dataset.track, { force: true, confirm: true });
+    });
+  }
+
+  function readingWithRefs(L) {
+    const focus = (L && L.focus) || "";
+    const refs =
+      typeof window.scfhsRefsHtml === "function" ? window.scfhsRefsHtml(focus, { short: false }) : "";
+    const bookTopic = focus || (L && L.quizTopic) || "";
+    const bookRefs =
+      typeof window.bookRefsHtml === "function"
+        ? window.bookRefsHtml({ topic: bookTopic, q: L.title || "", explanation: focus }, { limit: 2 })
+        : "";
+    // Verified question count for this focus topic (usable + verified only — never exceeds total)
+    const focusVerified = (window.QUESTION_BANK || []).filter(q => q.topic === focus && q.usable !== false && q.book_verified === true).length;
+    const focusTotal = (window.QUESTION_BANK || []).filter(q => q.topic === focus && q.usable !== false).length;
+    const verifiedBar = focusTotal > 0
+      ? `<div class="verified-bar muted" style="margin:8px 0;font-size:0.85rem">📖 <strong>${focusVerified}/${focusTotal}</strong> textbook-verified MCQs available for this topic · Practice tab → topic quizzes</div>`
+      : "";
+
+    // Simple path: lesson text only. Coach gets calendar banner + notebook callouts.
+    if (isSimpleMode()) {
+      return verifiedBar + (L.reading || "") + (refs || "") + (bookRefs || "");
+    }
+    const meta = trackMeta();
+    const banner = `
+      <div class="track-day-banner alert">
+        <strong>Calendar Day ${state.day}/${maxDay()}</strong> · ${escapeHtml(meta.phase || "")}
+        · mode <b>${escapeHtml(meta.mode || "learn")}</b>
+        · content lesson <b>${L.day}</b>: ${escapeHtml(L.title || "")}
+        ${meta.note ? ` · ${escapeHtml(meta.note)}` : ""}
+        <br/><span class="muted">Target today: <b>${meta.dailyGoal || state.dailyGoal} MCQs</b> · global practice target <b>≥80%</b> · wrong book after every miss.</span>
+      </div>`;
+    const note =
+      meta.mode === "learn" || meta.mode === "volume"
+        ? noteThisHtml(
+            "Notebook — exam score-makers",
+            "Restorative · perio · prosthesis carry most of the exam. Underline hinges as you read; after MCQs, rewrite misses in one line."
+          )
+        : "";
+    return banner + note + verifiedBar + (L.reading || "") + (refs || "") + (bookRefs || "");
+  }
+
+  function stepKey(name) {
+    return state.day + "-" + name;
+  }
+
+  function isDone(name) {
+    return !!state.stepsDone[stepKey(name)];
+  }
+
+  function setDone(name, val) {
+    state.stepsDone[stepKey(name)] = val;
+    save();
+  }
+
+  function escapeHtml(s) {
+    if (s == null) return "";
+    return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  }
+
+  function showBookRef(book, page, context, phrase) {
+    let el = document.getElementById('bookref-modal');
+    if (!el) {
+      el = document.createElement('div');
+      el.id = 'bookref-modal';
+      el.style.cssText = 'position:fixed;inset:0;background:rgba(20,16,10,.5);z-index:999;display:flex;align-items:center;justify-content:center;padding:16px';
+      el.addEventListener('click', (e) => { if (e.target === el) el.style.display = 'none'; });
+      document.body.appendChild(el);
+    }
+    const ctx = escapeHtml(context || '');
+    const hl = escapeHtml((phrase || '').slice(0, 90));
+    let body = ctx;
+    if (hl && ctx) {
+      // lenient: try full phrase, then 40/28-char prefixes, whitespace-tolerant
+      let markLen = -1, mi = -1;
+      for (const L of [90, 40, 28, 18]) {
+        const sub = hl.slice(0, L);
+        if (!sub) continue;
+        const i = ctx.toLowerCase().indexOf(sub.toLowerCase());
+        if (i >= 0) { mi = i; markLen = sub.length; break; }
+      }
+      if (mi >= 0 && markLen > 0) {
+        body = ctx.slice(0, mi) + '<mark style="background:#ffe58a;color:#3b2f14;padding:0 3px;border-radius:3px">' + ctx.slice(mi, mi + markLen) + '</mark>' + ctx.slice(mi + markLen);
+      }
+    }
+    el.innerHTML = `<div style="background:var(--bg2,#fffdf8);max-width:680px;width:100%;border-radius:14px;padding:20px 22px;max-height:82vh;overflow:auto;box-shadow:0 12px 44px rgba(0,0,0,.35);cursor:default">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px">
+        <strong style="font-size:1rem;color:var(--accent,#0b6b59)">📖 ${escapeHtml(book || 'Book')}${page ? ' <span class="badge" style="font-size:0.72rem;background:var(--accent,#0b6b59);color:#fff">p. ' + page + '</span>' : ''}</strong>
+        <button type="button" class="btn sm ghost" style="padding:2px 12px;font-size:0.75rem">✕ Close</button>
+      </div>
+      ${page ? '<p style="font-size:0.75rem;color:var(--muted);margin:0 0 8px">Open your book PDF to <b>page ' + page + '</b> for the full passage.</p>' : ''}
+      <div style="font-size:0.86rem;line-height:1.75;background:var(--bg1,#faf7f2);border-left:4px solid var(--accent,#0b6b59);border-radius:0 8px 8px 0;padding:12px 14px;color:var(--text,#2b2620);max-height:52vh;overflow:auto;white-space:pre-wrap">${body || '<span class="muted">No passage text available.</span>'}</div>
+    </div>`;
+    el.style.display = 'flex';
+    el.querySelector('button').onclick = () => { el.style.display = 'none'; };
+  }
+  // ---- hover tooltip: little "book page" popup near the link ----
+  let tipEl = null, tipTimer = null;
+  function hideBookTip() {
+    clearTimeout(tipTimer);
+    if (tipEl) { tipEl.remove(); tipEl = null; }
+  }
+  function showBookTip(b) {
+    hideBookTip();
+    tipEl = document.createElement('div');
+    tipEl.className = 'bookref-tip';
+    if (b.dataset.mini) {
+      tipEl.innerHTML = `<div style="background:var(--bg2,#fffdf8);max-width:320px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.28);border:1px solid var(--border);padding:12px 14px;cursor:default">
+        <strong style="font-size:0.82rem;color:var(--accent,#0b6b59)">📖 ${escapeHtml(b.dataset.book || 'Book')} <span class="badge" style="font-size:0.66rem;background:var(--accent,#0b6b59);color:#fff">p. ${escapeHtml(b.dataset.page || '?')}</span></strong>
+        <div style="font-size:0.72rem;color:var(--muted);margin-top:6px;line-height:1.5">Flip the card (Show answer) to see this passage with the highlighted answer.</div>
+      </div>`;
+      document.body.appendChild(tipEl);
+      const r = b.getBoundingClientRect();
+      const tw = tipEl.offsetWidth, th = tipEl.offsetHeight;
+      let x = Math.min(Math.max(8, r.left + r.width / 2 - tw / 2), window.innerWidth - tw - 8);
+      let y = r.top - th - 8;
+      if (y < 8) y = r.bottom + 8;
+      tipEl.style.left = x + 'px';
+      tipEl.style.top = y + 'px';
+      tipEl.style.position = 'fixed';
+      tipEl.style.zIndex = '1001';
+      tipEl.style.pointerEvents = 'none';
+      return;
+    }
+    const ctx = escapeHtml(b.dataset.ctx || '');
+    const hl = escapeHtml((b.dataset.phrase || '').slice(0, 90));
+    let body = ctx;
+    if (hl && ctx) {
+      let markLen = -1, mi = -1;
+      for (const L of [90, 40, 28, 18]) {
+        const sub = hl.slice(0, L);
+        if (!sub) continue;
+        const i = ctx.toLowerCase().indexOf(sub.toLowerCase());
+        if (i >= 0) { mi = i; markLen = sub.length; break; }
+      }
+      if (mi >= 0 && markLen > 0) {
+        body = ctx.slice(0, mi) + '<mark style="background:#ffe58a;color:#3b2f14;padding:0 3px;border-radius:3px">' + ctx.slice(mi, mi + markLen) + '</mark>' + ctx.slice(mi + markLen);
+      }
+    }
+    tipEl.innerHTML = `<div style="background:var(--bg2,#fffdf8);max-width:400px;min-width:240px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.28);border:1px solid var(--border);padding:12px 14px;cursor:default">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px">
+        <strong style="font-size:0.82rem;color:var(--accent,#0b6b59)">📖 ${escapeHtml(b.dataset.book || 'Book')}${b.dataset.page ? ' <span class="badge" style="font-size:0.66rem;background:var(--accent,#0b6b59);color:#fff">p. ' + escapeHtml(b.dataset.page) + '</span>' : ''}</strong>
+      </div>
+      <div style="font-size:0.76rem;line-height:1.6;background:var(--bg1,#faf7f2);border-left:3px solid var(--accent,#0b6b59);border-radius:0 6px 6px 0;padding:8px 10px;color:var(--text,#2b2620);max-height:180px;overflow:hidden;white-space:pre-wrap">${body || '<span class="muted">No passage text available.</span>'}</div>
+      <div style="font-size:0.64rem;color:var(--muted);margin-top:5px">Click the link to open the full passage ↩</div>
+    </div>`;
+    document.body.appendChild(tipEl);
+    // position above the link, clamped to the viewport
+    const r = b.getBoundingClientRect();
+    const tw = tipEl.offsetWidth, th = tipEl.offsetHeight;
+    let x = Math.min(Math.max(8, r.left + r.width / 2 - tw / 2), window.innerWidth - tw - 8);
+    let y = r.top - th - 8;
+    if (y < 8) y = r.bottom + 8;
+    tipEl.style.left = x + 'px';
+    tipEl.style.top = y + 'px';
+    tipEl.style.position = 'fixed';
+    tipEl.style.zIndex = '1001';
+    tipEl.style.pointerEvents = 'none';
+  }
+  // delegated: any element with [data-bookref] opens the book-reference modal
+  app.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-bookref]');
+    if (!b) return;
+    e.preventDefault();
+    if (b.dataset.mini) return; // pre-flip badge: hover info only, no spoiler on tap
+    showBookRef(b.dataset.book, b.dataset.page, b.dataset.ctx, b.dataset.phrase);
+  });
+  app.addEventListener('mouseover', (e) => {
+    const b = e.target.closest('[data-bookref]');
+    if (!b) return;
+    clearTimeout(tipTimer);
+    tipTimer = setTimeout(() => showBookTip(b), 220);
+  });
+  app.addEventListener('mouseout', (e) => {
+    const t = e.target.closest('[data-bookref]');
+    if (!t) return;
+    const rt = e.relatedTarget;
+    if (rt && rt.closest && rt.closest('[data-bookref]')) return; // still inside the link
+    hideBookTip();
+  });
+  window.addEventListener('scroll', hideBookTip, { passive: true });
+  window.addEventListener('resize', hideBookTip, { passive: true });
+
+  function shuffle(a) {
+    const arr = a.slice();
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  function formatTime(s) {
+    const m = Math.floor(Math.max(0, s) / 60);
+    const r = Math.max(0, s) % 60;
+    return m + ":" + String(r).padStart(2, "0");
+  }
+
+  /* ——— NAV ——— */
+  const TAB_VIEWS = [
+    "today",
+    "topics",
+    "days",
+    "pass",
+    "always",
+    "practice",
+    "mcqs",
+    "notes",
+    "marjune",
+    "recentqa",
+    "progress",
+    "feedback",
+    "more",
+  ];
+  /** Simple chrome: Today · Topics · تدرب · Recent Q&A · Notes · Flash · Progress · Feedback */
+  const SIMPLE_PRIMARY = ["today", "topics", "practice", "recentqa", "notes", "marjune", "progress", "feedback"];
+  /** Public source repo (docs only — feedback does NOT open GitHub). */
+  const REPO_URL = "https://github.com/kemos-labs/sdle-study-path";
+  /** External ChatGPT custom GPT — academic tutor only (not SCFHS, not clinical care). */
+  const SDLEGPT_URL = "https://chatgpt.com/g/g-ytJW9hxum-sdlegpt";
+
+  /**
+   * Build a paste-ready prompt for SDLEGPT from current study context.
+   * opts: { topic, question, options, picked, correct, explanation, subject }
+   *
+   * Enhanced: forces book-grounded reasoning, flags unverified bank answers,
+   * and requests a structured verdict (answer + why + wrong-option refutations).
+   */
+  function buildSdleGptContext(opts) {
+    const o = opts || {};
+    const lines = [
+      "I am studying for the KSA SDLE (Prometric) dental exam.",
+      "You are my academic tutor. Use ONLY mainstream dental textbooks as your source of truth",
+      "(e.g. Cohen's Pathways of the Pulp, Shillingburg Fixed Prosthodontics, Sturdevant's Operative",
+      "Dentistry, Carranza/Lindhe Periodontology, McDonald & Avery Pediatric Dentistry, McCracken RPD,",
+      "Phillips' Science of Dental Materials, Hupp Oral & Maxillofacial Surgery, Complete Dentures textbook).",
+      "Never cite student notes, question dumps, or memorized exam banks.",
+      "Not medical advice for a real patient. Not official SCFHS content.",
+      "",
+      "=== RULES FOR EVERY ANSWER ===",
+      "1. Give the single best letter + repeat the chosen option text.",
+      "2. Explain WHY it is correct in 2-4 sentences, naming the textbook that supports it.",
+      "3. For each wrong option: one sentence saying why it is wrong (do not skip any).",
+      "4. If a bank-flagged answer contradicts the textbooks, say so explicitly and give the book answer.",
+      "5. Keep it tight: max ~8 sentences total unless I ask for depth.",
+      "",
+    ];
+    if (o.subject) lines.push("Today's topic / subject: " + o.subject);
+    if (o.topic) lines.push("Bank topic tag: " + o.topic);
+    if (o.question) {
+      lines.push("", "=== MCQ ===", o.question);
+      if (Array.isArray(o.options) && o.options.length) {
+        o.options.forEach((opt, i) => {
+          lines.push(String.fromCharCode(65 + i) + ". " + opt);
+        });
+      }
+      if (o.picked != null && o.picked >= 0)
+        lines.push("My answer: " + String.fromCharCode(65 + o.picked));
+      if (o.correct != null && o.correct >= 0) {
+        lines.push("Bank answer key: " + String.fromCharCode(65 + o.correct));
+        lines.push("Note: bank keys are student-built; verify against the textbooks before trusting them.");
+      }
+      if (o.explanation) lines.push("Bank explanation: " + o.explanation);
+      lines.push("", "Follow the RULES above.");
+    } else {
+      lines.push(
+        "",
+        "Quiz me / explain high-yield points for this topic in exam style.",
+        "For each point, name the textbook chapter it comes from.",
+      );
+    }
+    return lines.filter((x) => x != null).join("\n");
+  }
+
+  function sdleGptButtonHtml(kind) {
+    /* kind: "row" | "link" | "compact" */
+    if (kind === "link") {
+      return `<button type="button" class="btn-link" data-sdlegpt data-sdlegpt-kind="topic">Ask SDLEGPT…</button>`;
+    }
+    if (kind === "compact") {
+      return `<button type="button" class="btn ghost sm" data-sdlegpt data-sdlegpt-kind="mcq">Ask SDLEGPT</button>`;
+    }
+    return `<div class="sdlegpt-row">
+      <button type="button" class="btn ghost sm" data-sdlegpt data-sdlegpt-kind="mcq">Ask SDLEGPT</button>
+      <span class="muted sdlegpt-hint">Copies context → opens ChatGPT tutor (external)</span>
+    </div>`;
+  }
+
+  async function openSdleGptWithContext(text) {
+    const payload = (text || "").trim();
+    let copied = false;
+    if (payload && navigator.clipboard && navigator.clipboard.writeText) {
+      try {
+        await navigator.clipboard.writeText(payload);
+        copied = true;
+      } catch (_) {}
+    }
+    if (!copied && payload) {
+      try {
+        const ta = document.createElement("textarea");
+        ta.value = payload;
+        ta.setAttribute("readonly", "");
+        ta.style.cssText = "position:fixed;left:-9999px;top:0";
+        document.body.appendChild(ta);
+        ta.select();
+        copied = document.execCommand("copy");
+        document.body.removeChild(ta);
+      } catch (_) {}
+    }
+    window.open(SDLEGPT_URL, "_blank", "noopener,noreferrer");
+    if (copied) {
+      try {
+        const tip = document.createElement("div");
+        tip.className = "sdlegpt-toast";
+        tip.setAttribute("role", "status");
+        tip.textContent = "Context copied — paste in SDLEGPT (Ctrl/Cmd+V)";
+        document.body.appendChild(tip);
+        setTimeout(() => tip.remove(), 3200);
+      } catch (_) {}
+    }
+  }
+
+  function defaultSdleGptTopicContext() {
+    const L = typeof lesson === "function" ? lesson() : null;
+    const subject = L ? humanLessonTitle(L) : "SDLE";
+    const topic = (L && (L.quizTopic || L.topic)) || "";
+    return buildSdleGptContext({ subject, topic });
+  }
+
+  function contextFromQuizItem(item, picked) {
+    if (!item) return defaultSdleGptTopicContext();
+    const L = typeof lesson === "function" ? lesson() : null;
+    return buildSdleGptContext({
+      subject: L ? humanLessonTitle(L) : "",
+      topic: item.topic || "",
+      question: item.q || "",
+      options: item.options || [],
+      picked: picked != null ? picked : -1,
+      correct: item.answer,
+      explanation: item.explanation || "",
+    });
+  }
+
+  function bindSdleGptButtons(root, getContext) {
+    const el = root || app;
+    if (!el) return;
+    el.querySelectorAll("[data-sdlegpt]").forEach((btn) => {
+      btn.onclick = (e) => {
+        e.preventDefault();
+        const text = typeof getContext === "function" ? getContext(btn) : defaultSdleGptTopicContext();
+        openSdleGptWithContext(text);
+      };
+    });
+  }
+
+  function paintMainNav() {
+    const nav = $("#main-nav");
+    if (!nav) return;
+    applyChromeMode();
+    if (isSimpleMode()) {
+      nav.innerHTML = `
+        <button type="button" data-view="today" title="Today's lesson · درس اليوم">🏠 <span class="nav-ar" dir="rtl">اليوم</span> <span class="nav-en">Today</span></button>
+        <button type="button" data-view="topics" title="Micro-lessons by topic · الدروس">📖 <span class="nav-ar" dir="rtl">الدروس</span> <span class="nav-en">Learn</span></button>
+        <button type="button" data-view="practice" title="MCQs · Flashcards · Mock · تدرب">🎯 <span class="nav-ar" dir="rtl">تدرب</span> <span class="nav-en">Practice</span></button>
+        <button type="button" data-view="recentqa" title="Recent textbook-verified Q&A · سؤال وجواب">💬 <span class="nav-ar" dir="rtl">سؤال وجواب</span> <span class="nav-en">Q&amp;A</span></button>
+        <button type="button" data-view="marjune" title="Flash Notes — جميع المواد">🃏 <span class="nav-ar" dir="rtl">فلاش</span> <span class="nav-en">Flash</span></button>
+        <button type="button" data-view="notes" title="Review all notes · الملاحظات">📝 <span class="nav-ar" dir="rtl">ملاحظات</span> <span class="nav-en">Notes</span></button>
+        <button type="button" data-view="progress" title="Scores & settings · تقدمي">📈 <span class="nav-ar" dir="rtl">تقدمي</span> <span class="nav-en">Progress</span></button>
+        <button type="button" data-view="feedback" title="Send feedback · اقتراحات">💬 <span class="nav-ar" dir="rtl">رأيك</span> <span class="nav-en">Feedback</span></button>`;
+    } else {
+      nav.innerHTML = `
+        <button type="button" data-view="today" title="Today">Today</button>
+        <button type="button" data-view="days" title="All days">Days</button>
+        <button type="button" data-view="pass" title="Pass plan">Pass</button>
+        <button type="button" data-view="always" title="Always-comes free points">Always</button>
+        <button type="button" data-view="practice" title="تدرب">تدرب</button>
+        <button type="button" data-view="mcqs" title="MCQs hub">MCQs</button>
+        <button type="button" data-view="recentqa" title="Recent Q&A">Recent Q&A</button>
+        <button type="button" data-view="marjune" title="Flash Notes — جميع المواد">📚 Flash</button>
+        <button type="button" data-view="notes" title="Study notes by department">Notes</button>
+        <button type="button" data-view="progress" title="Progress">Progress</button>
+        <button type="button" data-view="feedback" title="Send feedback — no login">Feedback</button>
+        <button type="button" data-view="more" title="Simple mode">Simple</button>`;
+    }
+    bindNav();
+    setActiveNav(TAB_VIEWS.includes(state.view) ? state.view : "today");
+  }
+
+  /**
+   * MCQs hub categories → pool() keys.
+   * Preferred = SDLE-first subset (not the full 16k dump). Archive = rest. All = everything usable.
+   */
+  const MCQ_CATEGORIES = [
+    { id: "preferred", label: "Preferred (SDLE)", pool: "preferred", primary: true },
+    { id: "blueprint", label: "Exam mix (blueprint)", pool: "blueprint", primary: true },
+    { id: "abtal_src", label: "أبطال ★ priority", pool: "abtal", primary: true },
+    { id: "rafi_core", label: "رفيع 11–19 first", pool: "rafi_core", primary: true },
+    { id: "rafi_second", label: "رفيع 7·5·10·9·1·3", pool: "rafi_second", primary: true },
+    { id: "all", label: "All MCQs", pool: "all", primary: true },
+    { id: "archive", label: "Archive (rest)", pool: "archive", primary: false },
+    { id: "restorative", label: "Restorative", pool: "restorative", primary: true },
+    { id: "operative", label: "Operative", pool: "operative", primary: true },
+    { id: "perio", label: "Perio", pool: "perio", primary: true },
+    { id: "endo", label: "Endo", pool: "endo", primary: true },
+    { id: "oms", label: "OMS / Path", pool: "oms", primary: true },
+    { id: "ortho_pedo", label: "Ortho / Pedo", pool: "ortho_pedo", primary: true },
+    { id: "ethics", label: "Ethics / Med", pool: "ethics", primary: true },
+    { id: "mixed", label: "Mixed", pool: "mixed", primary: true },
+    { id: "fixed", label: "Fixed", pool: "fixed", primary: false },
+    { id: "implant", label: "Implant", pool: "implant", primary: false },
+    { id: "rpd", label: "RPD", pool: "rpd", primary: false },
+    { id: "complete_denture", label: "Complete denture", pool: "complete_denture", primary: false },
+    { id: "materials", label: "Materials", pool: "materials", primary: false },
+    { id: "always_src", label: "Free points", pool: "always_src", primary: true },
+    { id: "saud_delta", label: "Saud delta", pool: "saud_delta", primary: true },
+    { id: "rafi", label: "رفيع ALL parts", pool: "rafi", primary: false },
+    { id: "rafi_1619", label: "رفيع مقام 16 & 19", pool: "rafi_1619", primary: true },
+    { id: "abtal", label: "Mar–June 2026 أبطال", pool: "abtal", primary: true },
+    { id: "wrong", label: "Wrong book", pool: "wrong", primary: true },
+  ];
+
+  function setActiveNav(view) {
+    let navView = TAB_VIEWS.includes(view) ? view : "today";
+    if (isSimpleMode() && !SIMPLE_PRIMARY.includes(navView)) {
+      /* secondary screens: highlight closest primary tab */
+      if (navView === "mcqs" || navView === "always" || navView === "cards" || navView === "quiz")
+        navView = "practice";
+      else if (navView === "more") navView = "progress";
+      else if (navView === "days" || navView === "pass") navView = "today";
+      else navView = "practice";
+    }
+    document.querySelectorAll(".simple-nav button").forEach((x) => {
+      const on = x.dataset.view === navView;
+      x.classList.toggle("active", on);
+      if (on) x.setAttribute("aria-current", "page");
+      else x.removeAttribute("aria-current");
+    });
+  }
+
+  function clearQuizTimer() {
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+  }
+
+  /** Start/restart timed quiz countdown. Safe if quiz missing or untimed. */
+  function startQuizTimer() {
+    clearQuizTimer();
+    if (!state.quiz || !state.quiz.timed || state.quiz.seconds == null) return;
+    timer = setInterval(() => {
+      if (!state.quiz || state.quiz.seconds == null) return;
+      state.quiz.seconds--;
+      const t = $("#quiz-timer");
+      if (t) t.textContent = formatTime(state.quiz.seconds);
+      if (state.quiz.seconds <= 0) {
+        clearQuizTimer();
+        finishQuiz();
+      }
+    }, 1000);
+  }
+
+  /**
+   * Leave quiz/cards cleanly before any view switch. Prevents timer finish after nav away.
+   * @returns {boolean} false if user cancelled timed abandon
+   */
+  function leaveQuizOrCards({ nextView, abandon = true, confirmTimed = true } = {}) {
+    const qz = state.quiz;
+    const inQuiz = state.view === "quiz" && qz;
+    const unfinishedTimed =
+      inQuiz && qz.timed && qz.seconds != null && qz.i < (qz.items || []).length;
+
+    if (abandon && unfinishedTimed && confirmTimed) {
+      // Pause timer before sync confirm() so finishQuiz cannot race the dialog
+      clearQuizTimer();
+      const ok = confirm(
+        "Leave timed quiz? Timer will stop. Progress so far may be partial (not fully scored)."
+      );
+      if (!ok) {
+        if (state.quiz && state.view === "quiz") startQuizTimer();
+        return false;
+      }
+    }
+
+    clearQuizTimer();
+    unbindQuizKeys();
+    unbindCardKeys();
+
+    if (abandon && inQuiz && qz) {
+      // Partial log for learn / test when some answers exist
+      if ((qz.mode === "learn" || qz.mode === "test") && qz.learnN > 0) {
+        const sec = Math.round((Date.now() - (qz.startedAt || Date.now())) / 1000);
+        logSession({
+          ts: Date.now(),
+          mode: qz.mode || "learn",
+          label: (qz.label || "Quiz") + " (partial)",
+          topic: qz.topic,
+          total: (qz.items && qz.items.length) || qz.learnN,
+          answered: qz.learnN,
+          correct: qz.learnOk,
+          pct: Math.round((100 * (qz.learnOk || 0)) / qz.learnN),
+          sec,
+        });
+        save();
+      }
+      // timed/exam mid-run: do NOT call finishQuiz scoring
+    }
+
+    state.quiz = null;
+    if (nextView) {
+      state.view = nextView;
+      setActiveNav(nextView);
+      render();
+    }
+    return true;
+  }
+
+  function bindNav() {
+    document.querySelectorAll(".simple-nav button").forEach((b) => {
+      b.onclick = () => {
+        const next = b.dataset.view;
+        if (!next) return;
+        if (state.view === "quiz" || state.view === "cards") {
+          const ok = leaveQuizOrCards({ nextView: null, abandon: true, confirmTimed: true });
+          if (!ok) return;
+          state.quiz = null;
+          // Drop overlay from logical place — tab click is a top-level jump
+          state.view = viewStack.pop() || "today";
+          saveViewStack();
+        }
+        navigateTo(next, { push: true });
+      };
+    });
+  }
+
+  function assertBoot() {
+    const problems = [];
+    if (!Array.isArray(window.LESSONS) || window.LESSONS.length !== 14) {
+      problems.push("LESSONS (need exactly 14 content days)");
+    }
+    if (!Array.isArray(window.QUESTION_BANK) || window.QUESTION_BANK.length < 100) {
+      problems.push("QUESTION_BANK");
+    }
+    if (!Array.isArray(window.ALWAYS_COMES_READ)) problems.push("ALWAYS_COMES_READ");
+    if (!Array.isArray(window.FLASHCARDS)) problems.push("FLASHCARDS");
+    if (problems.length) {
+      app.innerHTML = `<div class="alert"><strong>Data failed to load:</strong> ${escapeHtml(
+        problems.join(", ")
+      )}. Hard-refresh (Ctrl+Shift+R). Check script tags in index.html (highyield → scfhs_refs → plan_tracks → video_links → book_index → lessons → questions → app).</div>`;
+      throw new Error("boot: " + problems.join(", "));
+    }
+    if (!window.HIGH_YIELD) console.warn("boot: HIGH_YIELD missing (soft)");
+    if (!window.PASS_PROTOCOL) console.warn("boot: PASS_PROTOCOL missing (soft)");
+    if (!window.VIDEO_ROOT) console.warn("boot: VIDEO_ROOT missing; using path fallback");
+    if (!window.SCFHS_APPENDIX_C) console.warn("boot: SCFHS_APPENDIX_C missing (soft)");
+    if (!window.PLAN_TRACKS) console.warn("boot: PLAN_TRACKS missing (soft)");
+    if (!window.VIDEO_DRIVE) console.warn("boot: VIDEO_DRIVE missing (soft) — Drive video links offline");
+    if (!window.BOOK_INDEX) console.warn("boot: BOOK_INDEX missing (soft) — local book page hits offline");
+    clampDay();
+  }
+
+  /* ——— RENDER ——— */
+  function render() {
+    updateTop();
+    /* New user: always ask prep time (Arabic) before any other screen */
+    if (!hasChosenPlan() && state.view !== "quiz" && state.view !== "cards" && state.view !== "marjune" && state.view !== "recentqa" && state.view !== "topics" && state.view !== "micro-lesson" && state.view !== "wrong-dept") {
+      state.view = "today";
+      renderToday();
+      return;
+    }
+    if (state.view === "today") renderToday();
+    else if (state.view === "days") renderDays();
+    else if (state.view === "pass") renderPass();
+    else if (state.view === "always") renderAlways();
+    else if (state.view === "practice") renderPractice();
+    else if (state.view === "mcqs") renderMcqs();
+    else if (state.view === "recalls") renderRecalls();
+    else if (state.view === "notes") renderNotes();
+    else if (state.view === "marjune") renderMarJune();
+    else if (state.view === "recentqa") renderRecentQa();
+    else if (state.view === "progress") renderProgress();
+    else if (state.view === "feedback") renderFeedback();
+    else if (state.view === "topics") renderTopics();
+    else if (state.view === "micro-lesson") renderMicroLesson();
+    else if (state.view === "wrong-dept") renderWrongByDept();
+    else if (state.view === "more") renderMore();
+    else if (state.view === "quiz") renderQuizUI();
+    else if (state.view === "cards") renderCardsUI();
+    else {
+      // Fallback for unknown view (e.g. removed tabs from prior sessions)
+      state.view = "today";
+      renderToday();
+    }
+  }
+
+  /** Secondary destinations — tree of only what you need (not a button dump). */
+  function renderMore() {
+    const simple = isSimpleMode();
+    app.innerHTML = `
+      <div class="more-tree">
+        <h1>More</h1>
+        <details class="more-branch" open>
+          <summary>Study</summary>
+          <div class="more-branch-body">
+            <button type="button" class="btn ghost more-link" data-go="days">All days</button>
+            <button type="button" class="btn ghost more-link" data-go="pass">Pass plan</button>
+            <button type="button" class="btn ghost more-link" data-go="always">Free points list</button>
+            <button type="button" class="btn ghost more-link" data-go="marjune">📚 Flash Notes — جميع المواد</button>
+            <button type="button" class="btn ghost more-link" data-go="marjune">📚 Flash Notes — جميع المواد</button>
+            <button type="button" class="btn ghost more-link" data-go="notes">Notes by department</button>
+          </div>
+        </details>
+        <details class="more-branch" open>
+          <summary>Plan length</summary>
+          <div class="more-branch-body plan-compact-row">
+            ${planOptionsMeta()
+              .map(
+                (t) =>
+                  `<button type="button" class="btn sm ${state.planLength === t.n ? "" : "ghost"}" data-pick-plan="${t.n}">${escapeHtml(t.title)}</button>`
+              )
+              .join("")}
+          </div>
+        </details>
+        <details class="more-branch">
+          <summary>Backup</summary>
+          <div class="more-branch-body">
+            <button type="button" class="btn ghost more-link" id="more-export">Export progress</button>
+            <label class="btn ghost more-link" style="cursor:pointer">
+              Import progress…
+              <input type="file" id="more-import" accept="application/json,.json" hidden />
+            </label>
+          </div>
+        </details>
+        <details class="more-branch">
+          <summary>App mode</summary>
+          <div class="more-branch-body">
+            <p class="muted more-hint">${simple ? "Simple is on (clean tabs)." : "Coach is on (full tools)."}</p>
+            <button type="button" class="btn ${simple ? "ghost" : "success"}" id="toggle-simple">
+              ${simple ? "Switch to Coach mode" : "Switch to Simple mode"}
+            </button>
+          </div>
+        </details>
+        <details class="more-branch" open>
+          <summary>Help</summary>
+          <div class="more-branch-body">
+            <button type="button" class="btn ghost more-link" data-sdlegpt data-sdlegpt-kind="topic">Ask SDLEGPT (tutor)</button>
+            <p class="muted more-hint">Opens ChatGPT SDLEGPT with today’s topic copied. Academic study aid only — not clinical advice.</p>
+            <button type="button" class="btn ghost more-link" data-go="feedback">Send feedback</button>
+          </div>
+        </details>
+      </div>`;
+    bindPlanChooser();
+    app.querySelectorAll("[data-go]").forEach((b) => {
+      b.onclick = () => navigateTo(b.dataset.go, { push: true });
+    });
+    bindSdleGptButtons(app, () => defaultSdleGptTopicContext());
+    const t = $("#toggle-simple");
+    if (t) t.onclick = () => setSimpleMode(!isSimpleMode());
+    $("#more-export") && ($("#more-export").onclick = exportFullProgress);
+    bindImportProgress($("#more-import"));
+  }
+
+  /* =====================================================================
+   * TTS AUTO-READER (Web Speech API) — lets students listen to any lesson.
+   * Falls back gracefully if speechSynthesis unsupported.
+   * ===================================================================== */
+  const tts = {
+    supported: typeof window !== "undefined" && typeof window.speechSynthesis !== "undefined",
+    utter: null,
+    text: "",
+    rate: 0.95,
+    speaking: false,
+    paused: false,
+  };
+  function ttsStop() {
+    if (!tts.supported) return;
+    try { window.speechSynthesis.cancel(); } catch (e) {}
+    tts.speaking = false; tts.paused = false;
+    document.querySelectorAll(".tts-btn.listen").forEach(b => { b.textContent = "🔊 Listen"; b.classList.remove("playing"); });
+  }
+  function ttsSpeak(text, btnId) {
+    if (!tts.supported) { alert("Text-to-speech is not supported in this browser."); return; }
+    ttsStop();
+    const u = new SpeechSynthesisUtterance(text);
+    u.rate = tts.rate; u.pitch = 1; u.lang = "en-US";
+    u.onend = () => { tts.speaking = false; tts.paused = false;
+      document.querySelectorAll(".tts-btn.listen").forEach(b => { b.textContent = "🔊 Listen"; b.classList.remove("playing"); });
+    };
+    tts.utter = u; tts.text = text; tts.speaking = true; tts.paused = false;
+    window.speechSynthesis.speak(u);
+    document.querySelectorAll(".tts-btn.listen").forEach(b => { b.textContent = "⏸ Pause"; b.classList.add("playing"); });
+  }
+  function ttsToggle() {
+    if (!tts.supported || !tts.speaking) return;
+    if (tts.paused) { window.speechSynthesis.resume(); tts.paused = false;
+      document.querySelectorAll(".tts-btn.listen").forEach(b => b.textContent = "⏸ Pause");
+    } else { window.speechSynthesis.pause(); tts.paused = true;
+      document.querySelectorAll(".tts-btn.listen").forEach(b => b.textContent = "▶ Resume");
+    }
+  }
+  function ttsBarHTML(label) {
+    if (!tts.supported) return '<p class="muted" style="font-size:0.75rem">🔊 Auto-reader unavailable in this browser.</p>';
+    return `<div class="tts-bar" role="group" aria-label="Listen to ${escapeHtml(label||'lesson')}" style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;padding:6px 8px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);margin:8px 0">
+      <button type="button" class="btn sm ghost tts-btn listen" id="tts-listen">🔊 Listen</button>
+      <button type="button" class="btn sm ghost tts-btn" id="tts-stop" title="Stop">⏹ Stop</button>
+      <label class="muted" style="font-size:0.72rem">Speed
+        <select id="tts-rate" style="margin-left:4px">
+          ${[0.8,0.9,1,1.1,1.25,1.5].map(r=>`<option value="${r}" ${r===tts.rate?"selected":""}>${r}×</option>`).join("")}
+        </select>
+      </label>
+    </div>`;
+  }
+  function bindTTS(getText) {
+    if (!tts.supported) return;
+    const listen = $("#tts-listen"), stop = $("#tts-stop"), rate = $("#tts-rate");
+    if (listen) listen.onclick = () => {
+      if (tts.speaking) { ttsToggle(); return; }
+      const txt = typeof getText === "function" ? getText() : (getText || "");
+      if (txt && txt.trim()) ttsSpeak(txt.trim(), "tts-listen");
+    };
+    if (stop) stop.onclick = ttsStop;
+    if (rate) rate.onchange = () => { tts.rate = +rate.value || 1; };
+  }
+
+  /* =====================================================================
+   * TOPICS HUB — department-organized lessons (Phase 2 core)
+   * Replaces the previously-undefined renderTopics/renderMicroLesson stubs.
+   * ===================================================================== */
+  const DEPT_META = [
+    { id: "restorative", label: "Operative / Restorative", weight: 40, book: "Sturdevant 5e", ar: "المترمم" },
+    { id: "perio",       label: "Periodontics",            weight: 18, book: "Carranza 2018", ar: "اللثة" },
+    { id: "endo",        label: "Endodontics",              weight: 17, book: "Cohen's 2016", ar: "اللبية" },
+    { id: "oms",         label: "Oral Med / Surgery / Med-compromised", weight: 15, book: "Contemporary OMS 7e", ar: "الجراحة والطب" },
+    { id: "ortho_pedo",  label: "Ortho / Paediatric",      weight: 10, book: "Contemporary Ortho 5e · McDonald 10e", ar: "التقويم والأطفال" },
+    { id: "fixed",       label: "Fixed Prosthodontics",    weight: 0,  book: "Contemporary Fixed Prosth 4e", ar: "التعويضات الثابتة" },
+    { id: "rpd",         label: "Removable Prosthodontics", weight: 0,  book: "McCracken RPD", ar: "التعويضات المتحركة" },
+    { id: "implant",     label: "Implantology",           weight: 0,  book: "Misch", ar: "الزراعة" },
+    { id: "ethics",      label: "Ethics · IC · Local Anesthesia", weight: 0, book: "TD Professionalism · Malamed LA 6e", ar: "الأخلاق والتحكم بالعدوى" },
+    { id: "diagnostics", label: "Diagnostics / Radiology / Pathology", weight: 0, book: "Oral pathology & radiology", ar: "التشخيص", quizPool: "oms" },
+  ];
+
+  function renderTopics() {
+    const TOPICS = (window.TOPICS || []);
+    const BY_DEPT = window.TOPICS_BY_DEPT || {};
+    const FN = (window.FLASH_NOTES) || { byDept: {} };
+    const QB = (window.QUESTION_BANK || []);
+    const fnCount = d => (FN.byDept[d] || []).length;
+    const verifiedCount = d => { try { const dm = DEPT_META.find(x => x.id === d) || {}; return pool(dm.quizPool || d).filter(q => q.book_verified === true).length; } catch (e) { return 0; } };
+    const topicCount = d => (BY_DEPT[d] || []).length;
+    const open = state.topicDept || (DEPT_META.find(d => (BY_DEPT[d.id]||[]).length) || {}).id || null;
+
+    const cards = DEPT_META.map(dm => {
+      const tN = topicCount(dm.id), vN = verifiedCount(dm.id), fN = fnCount(dm.id);
+      const w = dm.weight ? `<span class="badge yellow" style="font-size:0.62rem">~${dm.weight}% exam</span>` : '';
+      return `<details class="dept-card" data-dept="${dm.id}" ${open===dm.id?'open':''} style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);margin:6px 0;padding:0">
+        <summary style="cursor:pointer;padding:10px 12px;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
+          <span>${escapeHtml(dm.label)} <span class="muted" style="font-size:0.74rem;font-weight:400">· ${escapeHtml(dm.ar)} · ${escapeHtml(dm.book)}</span></span>
+          <span style="display:flex;gap:4px;align-items:center">
+            ${w}
+            <span class="badge green" style="font-size:0.62rem" title="Lessons">📘 ${tN}</span>
+            <span class="badge blue" style="font-size:0.62rem" title="Textbook-verified MCQs">📖 ${vN}</span>
+            <span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--accent2)" title="Recall flash notes">🗒️ ${fN}</span>
+          </span>
+        </summary>
+        <div style="padding:6px 12px 12px;border-top:1px solid var(--border)">
+          ${(BY_DEPT[dm.id]||[]).map(t => `<button type="button" class="btn sm ghost" data-topic-id="${escapeHtml(t.id)}" style="display:block;width:100%;text-align:left;margin:3px 0;font-size:0.85rem">📘 ${escapeHtml(t.title)} <span class="muted" style="font-size:0.7rem">· ~${t.estMinutes||20}min · 📖 ${t.verifiedCount||0}</span></button>`).join("") || '<p class="muted" style="font-size:0.8rem">No lessons yet for this department (Phase 2 authoring pending).</p>'}
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px">
+            <button type="button" class="btn sm" data-drill="${dm.id}">▶ Drill ${vN} verified MCQs</button>
+            <button type="button" class="btn sm ghost" data-cards="${dm.id}">🃏 Cards</button>
+            <button type="button" class="btn sm ghost" data-fn-go="${dm.id}">🗒️ Flash Notes</button>
+          </div>
+        </div>
+      </details>`;
+    }).join("");
+
+    app.innerHTML = `
+      <div class="simple-hub">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+          <h1 style="margin:0;font-size:1.3rem">📘 Lessons by Department</h1>
+          <span class="muted" style="font-size:0.78rem">${TOPICS.length} lessons · blueprint-weighted</span>
+        </div>
+        <p class="muted" style="font-size:0.8rem;margin:6px 0 10px">Each department shows its lessons, textbook-verified MCQ count, and recall flash notes. Weights ≈ published SDLE applicant guide (restorative ≈ 40%, perio 18%, endo 17%, oms 15%, ortho/pedo 10%). Tap a lesson to read it — or use the 🔊 auto-reader.</p>
+        ${tts.supported ? '<p class="muted" style="font-size:0.74rem">💡 Tip: open any lesson and press 🔊 Listen to hear it read aloud.</p>' : ''}
+        <details open style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);margin:6px 0 10px;padding:8px 12px">
+          <summary style="cursor:pointer;font-weight:600">🎯 Blueprint study allocation (≈ exam weights)</summary>
+          <p class="muted" style="font-size:0.76rem;margin:6px 0 4px">Split your study time roughly by exam weight. Restorative dominates (~40%) — never under-prepare it. Use verified MCQ counts to balance recall drills.</p>
+          <table class="simple-table" style="width:100%;font-size:0.78rem">
+            <thead><tr><th>Dept</th><th>~Exam %</th><th>Lessons</th><th>Verified Qs</th><th>For 30h plan</th></tr></thead>
+            <tbody>
+              ${DEPT_META.filter(d => d.weight).map(d => {
+                const hrs = Math.round(d.weight * 0.30 * 10) / 10;
+                return `<tr><td>${escapeHtml(d.label)}</td><td>~${d.weight}%</td><td>${topicCount(d.id)}</td><td>${verifiedCount(d.id)}</td><td>~${hrs}h</td></tr>`;
+              }).join("")}
+            </tbody>
+          </table>
+        </details>
+        ${cards}
+      </div>`;
+
+    app.querySelectorAll("[data-topic-id]").forEach(b => b.onclick = () => { state.topicId = b.dataset.topicId; state.view = "micro-lesson"; render(); });
+    app.querySelectorAll("details.dept-card").forEach(d => d.addEventListener("toggle", () => { state.topicDept = d.open ? d.dataset.dept : null; }));
+    app.querySelectorAll("[data-drill]").forEach(b => { const dm2 = DEPT_META.find(x => x.id === b.dataset.drill) || {}; const dp = dm2.quizPool || b.dataset.drill; b.onclick = () => startQuiz(dp + "@complete", Math.min(50, verifiedCount(b.dataset.drill)||50), "learn", false); });
+    app.querySelectorAll("[data-cards]").forEach(b => b.onclick = () => openCards(b.dataset.cards));
+    app.querySelectorAll("[data-fn-go]").forEach(b => b.onclick = () => { state.view = "marjune"; state._fnDept = b.dataset.fnGo; render(); });
+  }
+
+  function renderMicroLesson() {
+    const TOPICS = (window.TOPICS || []);
+    const T = TOPICS.find(x => x.id === state.topicId) || TOPICS[0];
+    if (!T) { state.view = "topics"; render(); return; }
+    const dm = DEPT_META.find(d => d.id === T.dept) || {};
+    const FN = (window.FLASH_NOTES) || { byDept: {} };
+    const drillPool = T.quizPool || (dm.quizPool || T.dept);
+    let vN = 0;
+    try { vN = pool(drillPool).filter(q => q.book_verified === true).length; } catch (e) { vN = 0; }
+    const fN = (FN.byDept[T.dept] || []).length;
+    const kpHtml = (T.keyPoints && T.keyPoints.length)
+      ? `<h3>Key points</h3><ul>${T.keyPoints.map(k => `<li>${escapeHtml(k)}</li>`).join("")}</ul>` : '';
+    const fnList = (FN.byDept[T.dept] || []).slice(0, 5).map(it =>
+      `<li style="font-size:0.82rem;margin:3px 0">${it.answerLetter ? '<b style="color:var(--accent)">'+escapeHtml(it.answerLetter)+'.</b> ' : '● '}${escapeHtml(it.stem).slice(0,140)}${it.needsImage?' 🖼️':''} <span class="muted" style="font-size:0.68rem">[${escapeHtml(it.marker)}]</span></li>`
+    ).join("");
+    // build the readable text for TTS (summary + key points)
+    const readText = `${T.title}. ${T.summary || ""} ${(T.keyPoints||[]).map((k,i)=>"Key point "+(i+1)+": "+k).join(". ")}`;
+
+    app.innerHTML = `
+      <div class="simple-hub">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:4px">
+          <button type="button" class="btn sm ghost" id="ml-back">← Departments</button>
+          <span class="muted" style="font-size:0.76rem">${escapeHtml(dm.label||T.dept)}${dm.weight?' · ~'+dm.weight+'% exam':''}</span>
+        </div>
+        <h1 style="margin:0 0 4px;font-size:1.3rem">📘 ${escapeHtml(T.title)}</h1>
+        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:6px">
+          <span class="badge blue" style="font-size:0.66rem">${escapeHtml(T.dept)}</span>
+          <span class="badge green" style="font-size:0.66rem" title="Textbook-verified MCQs for ${escapeHtml(drillPool)}">📖 ${vN} verified</span>
+          <span class="badge" style="font-size:0.66rem;background:var(--bg3);color:var(--accent2)" title="Recall flash notes">🗒️ ${fN} recalls</span>
+          ${T.estMinutes?`<span class="badge yellow" style="font-size:0.66rem">~${T.estMinutes} min</span>`:''}
+        </div>
+        ${ttsBarHTML(T.title)}
+        <div class="reading" id="ml-reading" style="background:var(--bg1);border:1px solid var(--border);border-radius:var(--radius);padding:12px">
+          <p>${escapeHtml(T.summary || "(no summary)")}</p>
+          ${kpHtml}
+        </div>
+        ${window.getBookRefsHTML ? '<details style="margin-top:8px"><summary style="cursor:pointer;font-weight:600;color:var(--accent)">📚 Textbook references</summary><div style="margin-top:4px">'+window.getBookRefsHTML(T.id)+'</div></details>' : ''}
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin:12px 0">
+          <button type="button" class="btn success" id="ml-drill">▶ Drill ${Math.min(50,vN||50)} verified MCQs</button>
+          <button type="button" class="btn" id="ml-drill-all">All ${vN}</button>
+          <button type="button" class="btn ghost" id="ml-cards">🃏 Cards</button>
+          <button type="button" class="btn ghost" id="ml-fn">🗒️ ${fN} Flash Notes</button>
+        </div>
+        ${fnList ? `<details style="margin-top:8px"><summary style="cursor:pointer;font-weight:600;color:var(--muted)">🗒️ Recent recalls in ${escapeHtml(T.dept)} (${fN} total)</summary><ul style="margin:8px 0 0 18px">${fnList}</ul></details>` : ''}
+        <p class="muted" style="font-size:0.72rem;margin-top:14px;border-top:1px solid var(--border);padding-top:8px">Book: ${escapeHtml(dm.book||'—')}. Verified answers live in the MCQs tab. Recall stems are community-sourced leads, not official keys.</p>
+      </div>`;
+
+    $("#ml-back") && ($("#ml-back").onclick = () => { state.view = "topics"; render(); });
+    $("#ml-drill") && ($("#ml-drill").onclick = () => startQuiz(drillPool + "@complete", Math.min(50, vN||50), "learn", false));
+    $("#ml-drill-all") && ($("#ml-drill-all").onclick = () => startQuiz(drillPool + "@complete", vN || QUIZ_ALL, "learn", false));
+    $("#ml-cards") && ($("#ml-cards").onclick = () => openCards(T.dept));
+    $("#ml-fn") && ($("#ml-fn").onclick = () => { state.view = "marjune"; state._fnDept = T.dept; render(); });
+    bindTTS(() => readText);
+  }
+
+  /* =====================================================================
+   * WRONG BOOK BY DEPARTMENT (Phase 5)
+   * Groups misses by department, shows the book citation for each, and drills per dept.
+   * ===================================================================== */
+  function renderWrongByDept() {
+    const bank = window.QUESTION_BANK || [];
+    const byId = new Map(bank.map((q) => [q.id, q]));
+    const ids = (state.wrongBook || []).slice().reverse(); // newest first
+    const items = ids.map((id) => byId.get(id)).filter(Boolean);
+    const total = ids.length;
+    const byDept = {};
+    items.forEach((q) => {
+      const d = q.department || q.topic || "misc";
+      (byDept[d] = byDept[d] || []).push(q);
+    });
+    const deptOrder = DEPT_META.map((d) => d.id).filter((d) => byDept[d]);
+    Object.keys(byDept).forEach((d) => { if (!deptOrder.includes(d)) deptOrder.push(d); });
+    const DEPT_LABEL = Object.fromEntries(DEPT_META.map((d) => [d.id, d.label]));
+
+    if (!total) {
+      app.innerHTML = `
+        <div class="simple-hub">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+            <h1 style="margin:0;font-size:1.3rem">📕 Wrong Book by Department</h1>
+            <button type="button" class="btn sm ghost" id="wb-back">← Back</button>
+          </div>
+          <p class="muted" style="margin-top:10px">Your wrong book is empty. Answer MCQs and any miss lands here, grouped by department, with the book citation for each. <b>Clear these before new volume</b> — they are your free points.</p>
+        </div>`;
+      $("#wb-back") && ($("#wb-back").onclick = () => history.back());
+      return;
+    }
+
+    const cards = deptOrder.map((d) => {
+      const list = byDept[d] || [];
+      const drills = list.slice(0, 50).map((q) => {
+        const ans = (q.options && q.answer != null && q.options[q.answer] != null) ? String(q.options[q.answer]) : "(no text)";
+        const ref = q.book_support ? `<details style="margin:4px 0"><summary class="muted" style="font-size:0.74rem;cursor:pointer">📖 book support${q._page ? ' · p. ' + q._page : ''}</summary><p style="font-size:0.72rem;margin:2px 0 0 12px;color:var(--accent)">${escapeHtml(String(q.book_support)).slice(0,300)}</p>${q._page ? `<button type="button" class="btn sm ghost" data-bookref style="font-size:0.68rem;padding:1px 8px;margin:4px 0 0 12px" data-book="${escapeHtml(String(q.book_support).match(/^\[Book: ([^\]]*)/)?.[1] || 'Book').replace(/_/g, ' ')}" data-page="${escapeHtml(q._page)}" data-ctx="${escapeHtml(q._context || '')}" data-phrase="${escapeHtml(String((q.options && q.options[q.answer]) || q.q).slice(0,90))}">📖 Open passage · p. ${escapeHtml(q._page)}</button>` : ''}</details>` : '';
+        return `<li style="font-size:0.8rem;margin:4px 0;border-bottom:1px dashed var(--border);padding-bottom:4px">
+          <b style="color:var(--accent)">✓ ${escapeHtml(ans).slice(0,90)}</b> · ${escapeHtml(String(q.q||'').slice(0,150))}
+          ${ref}
+        </li>`;
+      }).join("");
+      return `<details class="dept-card" data-dept="${d}" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);margin:6px 0;padding:0">
+        <summary style="cursor:pointer;padding:10px 12px;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:8px">
+          <span>${escapeHtml(DEPT_LABEL[d] || d)} <span class="muted" style="font-size:0.74rem;font-weight:400">· ${escapeHtml(d)}</span></span>
+          <span style="display:flex;gap:6px;align-items:center">
+            <span class="badge" style="font-size:0.66rem;background:#C22F3B;color:#fff">${list.length} miss${list.length>1?'es':''}</span>
+            <button type="button" class="btn sm" data-wb-drill="${d}">▶ Drill ${Math.min(50, list.length)}</button>
+          </span>
+        </summary>
+        <div style="padding:6px 12px 12px;border-top:1px solid var(--border)">
+          <ul style="margin:6px 0 0 18px">${drills}</ul>
+        </div>
+      </details>`;
+    }).join("");
+
+    app.innerHTML = `
+      <div class="simple-hub">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+          <h1 style="margin:0;font-size:1.3rem">📕 Wrong Book by Department</h1>
+          <div style="display:flex;gap:6px;align-items:center">
+            <span class="badge" style="background:#C22F3B;color:#fff">${total} open</span>
+            <button type="button" class="btn sm ghost" id="wb-back">← Back</button>
+          </div>
+        </div>
+        <p class="muted" style="font-size:0.8rem;margin:6px 0 10px">Your misses grouped by department. Each shows the <b>correct answer</b> + the <b>book citation</b> so you learn why. Drill a department's misses, or run all. <b>Target ≤40 total or &lt;15% of answered.</b></p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+          <button type="button" class="btn success" id="wb-all">▶ Drill all ${total}</button>
+          <button type="button" class="btn ghost" id="wb-clear" title="Clear wrong book after review">🗑 Clear all</button>
+        </div>
+        ${cards}
+      </div>`;
+
+    $("#wb-back") && ($("#wb-back").onclick = () => history.back());
+    $("#wb-all") && ($("#wb-all").onclick = () => startQuiz("wrong", QUIZ_ALL, "learn", false));
+    $("#wb-clear") && ($("#wb-clear").onclick = () => { if (confirm("Clear the whole wrong book? Only do this after review.")) { state.wrongBook = []; save(); renderWrongByDept(); } });
+    app.querySelectorAll("[data-wb-drill]").forEach((b) => {
+      b.onclick = () => {
+        const d = b.dataset.wbDrill;
+        const ids = (byDept[d] || []).map((q) => q.id);
+        state._wrongDeptIds = ids; // used by quiz if supported, else fallback
+        startQuiz("wrong", QUIZ_ALL, "learn", false);
+      };
+    });
+  }
+
+
+  function dayPickerBar() {
+    const m = maxDay();
+    // Simple: Prev / Day N / Next only — no 30-row syllabus dump.
+    if (isSimpleMode()) {
+      return `
+      <div class="nav-day simple-day-nav" role="group" aria-label="Day">
+        <button type="button" class="btn ghost" id="prev-day" ${state.day <= 1 ? "disabled" : ""}>←</button>
+        <span class="simple-day-label">Day <strong>${state.day}</strong> / ${m}</span>
+        <button type="button" class="btn ghost" id="next-day" ${state.day >= m ? "disabled" : ""}>→</button>
+      </div>`;
+    }
+    const track = typeof window.getPlanTrack === "function" ? window.getPlanTrack(state.planLength) : null;
+    let options = "";
+    if (track && track.length) {
+      options = track
+        .map((t) => {
+          const L = window.LESSONS.find((x) => x.day === t.lessonDay) || {};
+          const hrs =
+            typeof window.dayHours === "function" ? window.dayHours(state.planLength, t.mode) : "";
+          const label = `${t.day}. [${t.mode}${hrs ? " · " + hrs + "h" : ""}] L${t.lessonDay} ${L.title || ""}`.slice(
+            0,
+            80
+          );
+          return `<option value="${t.day}" ${t.day === state.day ? "selected" : ""}>${escapeHtml(label)}</option>`;
+        })
+        .join("");
+    } else {
+      options = window.LESSONS.map(
+        (l) =>
+          `<option value="${l.day}" ${l.day === state.day ? "selected" : ""}>${l.day}. ${escapeHtml(l.title)}</option>`
+      ).join("");
+    }
+    return `
+      <div class="nav-day">
+        <label>Day
+          <select id="day-select">${options}</select>
+        </label>
+        <button class="btn ghost" id="prev-day" ${state.day <= 1 ? "disabled" : ""}>← Prev</button>
+        <button class="btn ghost" id="next-day" ${state.day >= m ? "disabled" : ""}>Next →</button>
+      </div>`;
+  }
+
+  function bindDayPicker() {
+    bindTrackSwitcher();
+    $("#day-select") &&
+      ($("#day-select").onchange = (e) => {
+        state.day = +e.target.value;
+        ensurePlanDayVolume();
+        const meta = trackMeta();
+        if (meta.dailyGoal && !store.get("dailyGoalUserOverride", false)) state.dailyGoal = meta.dailyGoal;
+        syncPomoFromPlan({ force: true });
+        save();
+        render();
+      });
+    $("#prev-day") &&
+      ($("#prev-day").onclick = () => {
+        if (state.day > 1) {
+          state.day--;
+          ensurePlanDayVolume();
+          const meta = trackMeta();
+          if (meta.dailyGoal && !store.get("dailyGoalUserOverride", false)) state.dailyGoal = meta.dailyGoal;
+          syncPomoFromPlan({ force: true });
+          save();
+          render();
+        }
+      });
+    $("#next-day") &&
+      ($("#next-day").onclick = () => {
+        if (state.day < maxDay()) {
+          state.day++;
+          ensurePlanDayVolume();
+          const meta = trackMeta();
+          if (meta.dailyGoal && !store.get("dailyGoalUserOverride", false)) state.dailyGoal = meta.dailyGoal;
+          syncPomoFromPlan({ force: true });
+          save();
+          render();
+        }
+      });
+  }
+
+  /** One synced day plan card — hours/order/goal from plan_tracks (not hard-coded copy). */
+  function dayPlanCardHtml(L) {
+    const sch = currentSchedule();
+    const meta = trackMeta();
+    const steps = sch.steps || [];
+    const timeline = steps
+      .map((s, i) => {
+        const minLabel = s.min >= 60 ? `${Math.round((s.min / 60) * 10) / 10}h` : `${s.min} min`;
+        const done = s.key && isDone(s.key);
+        return `<li class="day-plan-step ${done ? "done" : ""}" data-plan-step="${escapeHtml(s.key || "")}">
+          <span class="day-plan-n">${i + 1}</span>
+          <span class="day-plan-time">${escapeHtml(minLabel)}</span>
+          <span class="day-plan-body">
+            <strong>${escapeHtml(s.label)}</strong>
+            <span class="muted">${escapeHtml(s.detail || "")}</span>
+          </span>
+        </li>`;
+      })
+      .join("");
+    const first = steps[0];
+    return `
+      <div class="day-plan-card">
+        <div class="day-plan-head">
+          <strong>Do today · ${escapeHtml(sch.hoursLabel || "?")} total</strong>
+          <span class="badge blue">${state.planLength}-day plan</span>
+          <span class="badge">${escapeHtml((meta.mode || "learn").toUpperCase())}</span>
+          <span class="badge yellow">${escapeHtml(sch.timerLabel || sch.focusMinutes + " min focus")}</span>
+          <span class="badge">Goal ${sch.dailyGoal || state.dailyGoal}Q · now ${state.sessionAnswered}</span>
+        </div>
+        <p class="day-plan-how"><b>How to read:</b> ${escapeHtml(sch.howToRead || "")}</p>
+        ${meta.note ? `<p class="muted day-plan-note">${escapeHtml(meta.note)}</p>` : ""}
+        <ol class="day-plan-timeline">${timeline}</ol>
+        <p class="day-plan-cta"><strong>Start:</strong> ${escapeHtml(first ? first.label : "first step")} · Timer = <b>${sch.focusMinutes} min</b> (this plan) · Q bar = goal above</p>
+      </div>`;
+  }
+
+  function stepOrder(L) {
+    const mode = (trackMeta().mode || "learn").toLowerCase();
+    let keys;
+    // Mode-aware path: student should not re-read 45k chars on volume/review/mock days.
+    if (mode === "volume") keys = ["quiz", "cards", "always", "read", "video"];
+    else if (mode === "review") keys = ["quiz", "always", "cards", "read", "video"];
+    else if (mode === "mock") keys = ["mock", "quiz", "always", "cards", "read", "video"];
+    else if (mode === "light") keys = ["always", "cards", "quiz", "read", "video"];
+    else keys = ["read", "video", "cards", "quiz", "always"]; // learn: free points last (matches Today DOM)
+
+    if (L.mockType && !keys.includes("mock")) {
+      // insert mock before always when lesson has mock
+      const ai = keys.indexOf("always");
+      if (ai >= 0) keys.splice(ai, 0, "mock");
+      else keys.push("mock");
+    }
+    // Drop mock step if lesson has no mockType
+    if (!L.mockType) keys = keys.filter((k) => k !== "mock");
+    // Deduplicate while preserving order
+    const seen = new Set();
+    return keys.filter((k) => {
+      if (seen.has(k)) return false;
+      seen.add(k);
+      return true;
+    });
+  }
+
+  function firstIncompleteKey(L) {
+    for (const k of stepOrder(L)) {
+      if (!isDone(k)) return k;
+    }
+    return null;
+  }
+
+  /** Never leave Today with zero open steps (all done → always or last). Mode biases first open step. */
+  function resolveOpenKey(L) {
+    const order = stepOrder(L);
+    if (isSimpleMode()) {
+      // Hub → path handoff (Read / Videos / Quiz taps)
+      if (state._forceOpenKey && order.includes(state._forceOpenKey)) {
+        const forced = state._forceOpenKey;
+        state._forceOpenKey = null;
+        return forced;
+      }
+      const firstS = firstIncompleteKey(L);
+      if (firstS) return firstS;
+      if (order.includes("always")) return "always";
+      return order[order.length - 1] || "read";
+    }
+    const mode = (trackMeta().mode || "learn").toLowerCase();
+    const prefer =
+      mode === "volume" || mode === "review"
+        ? "quiz"
+        : mode === "mock"
+          ? L.mockType
+            ? "mock"
+            : "quiz"
+          : mode === "light"
+            ? "always"
+            : null;
+    if (prefer && order.includes(prefer) && !isDone(prefer)) return prefer;
+    const first = firstIncompleteKey(L);
+    if (first) return first;
+    if (order.includes("always")) return "always";
+    return order[order.length - 1] || "read";
+  }
+
+  const STEP_CHIP_LABELS = {
+    read: "Read",
+    video: "Videos",
+    cards: "Cards",
+    quiz: "Quiz",
+    mock: "Mock",
+    always: "Always",
+  };
+
+  function stepStripHtml(L, openKey) {
+    const order = stepOrder(L);
+    return `<nav class="step-strip" aria-label="Day steps">${order
+      .map((k) => {
+        const done = isDone(k);
+        const open = k === openKey;
+        const cls = ["step-chip", done ? "done" : "", open ? "open" : ""].filter(Boolean).join(" ");
+        const aria = open ? ' aria-current="step"' : "";
+        return `<button type="button" class="${cls}" data-step="${k}"${aria}>${STEP_CHIP_LABELS[k] || k}</button>`;
+      })
+      .join("")}</nav>`;
+  }
+
+  function openStepKey(key) {
+    if (!key) return;
+    // Toggle visibility only — never drop educational HTML from the page.
+    app.querySelectorAll(".step[data-step]").forEach((s) => {
+      s.classList.toggle("open", s.dataset.step === key);
+    });
+    app.querySelectorAll(".step-chip").forEach((c) => {
+      const on = c.dataset.step === key;
+      c.classList.toggle("open", on);
+      if (on) c.setAttribute("aria-current", "step");
+      else c.removeAttribute("aria-current");
+    });
+    const el = app.querySelector(`.step[data-step="${key}"]`);
+    if (el) el.scrollIntoView({ block: "nearest" });
+  }
+
+  function stepHtml(num, key, title, bodyHtml, openKey) {
+    const done = isDone(key);
+    const open = key === openKey;
+    const simple = isSimpleMode();
+    // Keep full titles for Read/Video (education). Short labels only for chrome-like steps.
+    const headTitle =
+      simple && (key === "quiz" || key === "cards" || key === "mock" || key === "always")
+        ? STEP_CHIP_LABELS[key] || title
+        : title;
+    const markLabel = simple ? "Mark done" : "Mark this step done → next step opens";
+    // ALWAYS keep bodyHtml (lessons, videos, free points). CSS hides closed bodies.
+    // Never strip educational content for "fewer characters".
+    return `
+      <div class="step ${done ? "done" : ""} ${open ? "open" : ""}" data-step="${key}">
+        <div class="step-head">
+          <div class="step-num">${done ? "✓" : num}</div>
+          <div class="step-title">${headTitle}</div>
+          <span class="badge ${done ? "green" : open ? "yellow" : ""}">${done ? "Done" : open ? "Now" : ""}</span>
+        </div>
+        <div class="step-body">
+          ${bodyHtml}
+          <label class="check-row">
+            <input type="checkbox" class="step-check" data-key="${key}" ${done ? "checked" : ""}>
+            ${markLabel}
+          </label>
+        </div>
+      </div>`;
+  }
+
+  function deepChecklistHtml(L) {
+    // Days 1–3 / 5–9 already carry a full day-specific lesson in L.reading.
+    // Do NOT paste the whole "restorative 40%" mega-list on Day 1 (it mixed prostho into operative).
+    if (L.day <= 3 || (L.day >= 5 && L.day <= 9)) return "";
+
+    const hy = window.HIGH_YIELD || {};
+    // Integration / mock days: playbook + theme ranking
+    if (L.day === 6 || L.day >= 10) {
+      const top = (hy.bankEmphasis || []).slice(0, 10);
+      const free = (hy.materials && hy.materials.freeMocks) || [];
+      const mockPlay =
+        L.day >= 10
+          ? `<div class="alert" style="margin:12px 0">
+              <strong>Mock / fix-day playbook (student-tested):</strong>
+              <ol style="margin:8px 0 0 1.1rem">
+                <li>Warm free points ≤25 only — then timed work.</li>
+                <li>Answer every item (no negative marking). Flag hard items; never freeze.</li>
+                <li>After each block: wrong book one-liners only (not full textbook re-read).</li>
+                <li>Target practice accuracy <b>≥80%</b> on warm packs; mock score can be lower — trend up.</li>
+                <li>Day ${L.day === 11 ? "11" : L.day}: Progress tab → Weak pack on lowest domains.</li>
+              </ol>
+            </div>`
+          : "";
+      return `
+        ${mockPlay}
+        <h3>High-frequency themes (optional recap)</h3>
+        <ol class="rank-list">
+          ${top.map((t) => `<li><strong>#${t.rank}</strong> ${escapeHtml(t.theme)}</li>`).join("")}
+        </ol>
+        <h3>External free mocks (only after in-app work)</h3>
+        <ul>
+          ${free
+            .map((m) => `<li><a href="${escapeHtml(m.url)}" target="_blank" rel="noopener">${escapeHtml(m.name)}</a></li>`)
+            .join("")}
+        </ul>`;
+    }
+    return "";
+  }
+
+  /**
+   * Simple home:
+   * 1) First page = pick plan (user must tap — never auto-force 14).
+   * 2) Then today’s topic → learn → practice.
+   */
+  function renderTodayHub(L) {
+    const subject = humanLessonTitle(L);
+    const order = stepOrder(L);
+    const doneCount = order.filter((k) => isDone(k)).length;
+    const vidN = (L.videos && L.videos.length) || 0;
+    const m = maxDay();
+    /* Old builds set planChosen without a real tap — require one explicit pick. */
+    if (store.get("planChosen", false) && !store.get("planPickedExplicit", false)) {
+      store.set("planChosen", false);
+    }
+    const planChosen = !!store.get("planChosen", false);
+    const repick = !!state._hubRepickPlan;
+
+    /* ——— Page 1 (new user): ask prep time in Arabic before the plan opens ——— */
+    if (!planChosen || repick) {
+      const opts = planOptionsMeta();
+      const row = opts
+        .map((t) => {
+          const rec = t.n === 30 ? " rec" : "";
+          const cur = repick && state.planLength === t.n ? " active" : "";
+          const badge = t.n === 30 ? `<span class="hub-plan-badge">موصى به · Recommended</span>` : "";
+          return `<button type="button" class="btn hub-plan-pick${rec}${cur}" data-pick-plan="${t.n}">
+            <span class="hub-plan-ar" dir="rtl">${escapeHtml(t.titleAr)} · ${escapeHtml(t.timeAr)}</span>
+            <span class="hub-plan-en">${escapeHtml(t.title)}</span>
+            <span class="hub-plan-meta" dir="rtl">${escapeHtml(t.descAr)}</span>
+            <span class="hub-plan-meta muted">${escapeHtml(t.subAr || t.sub)}</span>
+            ${badge}
+          </button>`;
+        })
+        .join("");
+
+      app.innerHTML = `
+        <div class="today-hub hub-setup" dir="rtl" lang="ar">
+          <p class="hub-kicker">مسار SDLE · خطة المذاكرة</p>
+          <h1 class="hub-title">${repick ? "تغيير مدة التحضير" : "كم مدة تحضيرك للامتحان؟"}</h1>
+          <p class="hub-sub">
+            اختر الوقت المتبقي قبل الامتحان — نضبط لك <b>خطة الأيام</b> وساعات اليوم وهدف الأسئلة.
+            <br /><span class="muted" dir="ltr" lang="en">Same 14 topics · only pace &amp; daily hours change.</span>
+          </p>
+          <div class="hub-plan-picks" role="group" aria-label="مدة التحضير للامتحان">${row}</div>
+          ${
+            repick
+              ? `<button type="button" class="btn ghost" id="hub-pace-cancel">إلغاء · Cancel</button>`
+              : `<p class="hub-setup-foot muted">اضغط خيارًا واحدًا للمتابعة · Tap one option to continue</p>`
+          }
+        </div>`;
+
+      app.querySelectorAll("[data-pick-plan]").forEach((b) => {
+        b.onclick = () => {
+          state._hubRepickPlan = false;
+          store.set("planPickedExplicit", true);
+          setPlanLength(+b.dataset.pickPlan, { confirm: true, force: true });
+        };
+      });
+      const cancel = $("#hub-pace-cancel");
+      if (cancel) {
+        cancel.onclick = () => {
+          state._hubRepickPlan = false;
+          renderTodayHub(L);
+        };
+      }
+      return;
+    }
+
+    /* ——— Daily hub: subject first, learn first, practice second ——— */
+    const stepRows = order
+      .map((k) => {
+        const done = isDone(k);
+        const label = STEP_CHIP_LABELS[k] || k;
+        return `<li class="hub-step ${done ? "done" : ""}"><span class="hub-dot">${done ? "✓" : "○"}</span> ${escapeHtml(label)}</li>`;
+      })
+      .join("");
+
+    const goalLine = (L.goal && String(L.goal).trim()) || "High-yield points for this topic.";
+    const qLine =
+      state.sessionAnswered > 0
+        ? ` · ${state.sessionAnswered} Q practiced today`
+        : "";
+
+    app.innerHTML = `
+      <div class="today-hub">
+        ${!store.get("sdle3_welcome_done", false) ? `
+        <div class="hub-welcome" dir="rtl" lang="ar">
+          <button type="button" class="hub-welcome-x" id="hub-welcome-x" aria-label="إغلاق · Close">✕</button>
+          <div class="hub-welcome-title">👋 أهلاً بك في مسار SDLE!</div>
+          <div class="hub-welcome-steps">
+            <span>١) اقرأ <b>درس اليوم</b></span><span>٢) تدرب على <b>الأسئلة</b></span><span>٣) راجع <b>الفلاش</b></span>
+          </div>
+          <div class="hub-welcome-en" dir="ltr" lang="en">Every day: 1) Read today's lesson · 2) Drill MCQs · 3) Review Flash notes — then mark steps done below.</div>
+        </div>` : ""}
+        <div class="exam-blueprint">
+          <span class="eb-title">📝 SDLE exam shape:</span>
+          <span class="eb-item">200 MCQs</span>·<span class="eb-item">2 × 100 sections</span>·<span class="eb-item">~72 s/Q</span>·<span class="eb-item">Pass 542/800</span>
+          <span class="eb-w">Weights: <b>Resto 40%</b> · <b>Perio 18%</b> · <b>Endo 17%</b> · OMS 15% · Ortho/Pedo 10%</span>
+          <span class="eb-note">This plan gives Endo + Perio + Prostho + Resto <b>≈74% of study hours</b> — matching the exam.</span>
+        </div>
+        <p class="hub-kicker">Today’s topic</p>
+        <h1 class="hub-title">${escapeHtml(subject)}</h1>
+        <p class="hub-sub">${escapeHtml(goalLine)}${qLine}</p>
+
+        <div class="hub-actions" role="group" aria-label="Start studying">
+          <button type="button" class="btn success path-primary hub-primary" id="hub-read">Start today’s lesson</button>
+          <button type="button" class="btn ghost hub-secondary" id="hub-practice">تدرب · MCQs (today’s subject)</button>
+          ${vidN ? `<button type="button" class="btn ghost hub-secondary" id="hub-videos">Watch videos (${vidN})</button>` : ""}
+          <button type="button" class="btn ghost hub-secondary" id="hub-cards">تدرب · Flashcards</button>
+          <button type="button" class="btn ghost hub-secondary" id="hub-mock">تدرب · Mock (72s/Q)</button>
+          <button type="button" class="btn ghost hub-secondary" id="hub-always">اسئلة مكررة</button>
+        </div>
+
+        <div class="hub-progress">
+          <div class="step-progress" aria-label="Day progress">
+            <div class="step-progress-bar" style="width:${Math.round((100 * doneCount) / Math.max(1, order.length))}%"></div>
+            <span class="step-progress-label">${doneCount} of ${order.length} steps</span>
+          </div>
+          <ul class="hub-step-list">${stepRows}</ul>
+        </div>
+
+        <div class="hub-day-nav">
+          <button type="button" class="btn ghost sm" id="prev-day" ${state.day <= 1 ? "disabled" : ""}>← Prev</button>
+          <span class="hub-day-meta muted">Topic ${Math.min(L.day || state.day, 14)} of 14</span>
+          <button type="button" class="btn ghost sm" id="next-day" ${state.day >= m ? "disabled" : ""}>Next →</button>
+        </div>
+
+        <p class="hub-foot-links">
+          <button type="button" class="btn-link" id="hub-change-pace">Change study pace…</button>
+          ·
+          ${sdleGptButtonHtml("link")}
+        </p>
+      </div>`;
+
+    const wx = $("#hub-welcome-x");
+    if (wx) wx.onclick = () => { store.set("sdle3_welcome_done", true); renderTodayHub(L); };
+
+    $("#hub-read") &&
+      ($("#hub-read").onclick = () => {
+        state.todaySurface = "path";
+        state._forceOpenKey = "read";
+        renderToday();
+      });
+    $("#hub-practice") &&
+      ($("#hub-practice").onclick = () => openPracticePane("mcqs"));
+    bindSdleGptButtons(app, () =>
+      buildSdleGptContext({
+        subject: humanLessonTitle(L),
+        topic: L.quizTopic || L.topic || "",
+      })
+    );
+    $("#hub-videos") &&
+      ($("#hub-videos").onclick = () => {
+        state.todaySurface = "path";
+        state._forceOpenKey = "video";
+        renderToday();
+      });
+    $("#hub-cards") &&
+      ($("#hub-cards").onclick = () => openPracticePane("cards"));
+    $("#hub-mock") &&
+      ($("#hub-mock").onclick = () => openPracticePane("mock"));
+    $("#hub-always") &&
+      ($("#hub-always").onclick = () => openPracticePane("always"));
+    $("#hub-change-pace") &&
+      ($("#hub-change-pace").onclick = () => {
+        state._hubRepickPlan = true;
+        renderTodayHub(L);
+      });
+    bindDayPicker();
+  }
+
+  function renderToday() {
+    const L = lesson();
+    const root = window.VIDEO_ROOT || "/data/prometric/prometric/";
+    const order = stepOrder(L);
+    const doneCount = order.filter((k) => isDone(k)).length;
+    const simple = isSimpleMode();
+
+    // New-user home: one screen, three jobs. Content loads after a tap.
+    if (simple && state.todaySurface !== "path") {
+      renderTodayHub(L);
+      return;
+    }
+
+    const openKey = resolveOpenKey(L);
+
+    let n = 1;
+    const steps = [];
+
+    // 1 Read — full educational HTML preserved; coach meta optional
+    const readBody = simple
+      ? `${ttsBarHTML(L.title || "today's lesson")}<div class="reading">
+           ${readingWithRefs(L)}
+           ${deepChecklistHtml(L)}
+         </div>`
+      : `<div class="read-source">
+           <div><b>Read from:</b> this page only (scroll inside Step 1)</div>
+           <div><b>Do not open:</b> PDFs / other folders for core study today</div>
+           <div><b>Time:</b> ${escapeHtml(L.hours)} total day · reading block first</div>
+           <div><b>Goal:</b> <span style="color:var(--accent2)">${escapeHtml(L.goal)}</span></div>
+         </div>
+         ${ttsBarHTML(L.title || "today's lesson")}<div class="reading">
+           ${readingWithRefs(L)}
+           ${deepChecklistHtml(L)}
+         </div>`;
+    steps.push(
+      stepHtml(
+        n++,
+        "read",
+        simple ? "Read today’s lesson" : "Step 1 — Read today’s lesson (here in the app)",
+        readBody,
+        openKey
+      )
+    );
+
+    // 2 Videos — Google Drive (hosted + local); local path only on localhost
+    if (L.videos && L.videos.length) {
+      const driveRoot =
+        (window.VIDEO_DRIVE && window.VIDEO_DRIVE.rootFolderUrl) ||
+        "https://drive.google.com/drive/folders/1_2pMWMnyvAnmGpcAMMO_9TfVvf58cLJb";
+      const localHost =
+        typeof location !== "undefined" &&
+        (location.hostname === "localhost" ||
+          location.hostname === "127.0.0.1" ||
+          location.hostname === "");
+      const list = L.videos
+        .map((v, i) => {
+          const localPath = root + v.file;
+          const dlink =
+            typeof window.videoDriveLink === "function" ? window.videoDriveLink(v.file) : null;
+          const openUrl = (dlink && dlink.openUrl) || driveRoot;
+          const folderUrl = (dlink && dlink.folderUrl) || driveRoot;
+          const localBits = localHost
+            ? `<code class="vid-path">${escapeHtml(localPath)}</code>
+            <button type="button" class="btn ghost sm copy-path" data-path="${escapeHtml(localPath)}">Copy local path</button>`
+            : "";
+          return `
+        <li>
+          <span class="vid-icon">🎬</span>
+          <div class="vid-body">
+            <strong>${i + 1}. ${escapeHtml(v.label)}</strong>
+            ${localBits}
+            <div class="vid-actions">
+              <a class="btn success sm" href="${escapeHtml(openUrl)}" target="_blank" rel="noopener">▶ Open on Drive</a>
+              <a class="btn ghost sm" href="${escapeHtml(folderUrl)}" target="_blank" rel="noopener">Drive folder</a>
+            </div>
+          </div>
+        </li>`;
+        })
+        .join("");
+      const vNote = L.videoNote
+        ? `<div class="alert" style="margin:10px 0"><strong>Video check:</strong> ${escapeHtml(L.videoNote)}</div>`
+        : "";
+      const howLocal = localHost
+        ? `or open the local path in your file manager · Local folder: <code>${escapeHtml(root)}</code>
+            <button type="button" class="btn ghost sm" id="copy-folder" data-path="${escapeHtml(root)}">Copy folder path</button> · `
+        : "";
+      steps.push(
+        stepHtml(
+          n++,
+          "video",
+          `Step 2 — Watch only these ${L.videos.length} video(s)`,
+          `<div class="folder-hint">
+            <strong>How:</strong> <b>Open on Drive</b> (same on phone or laptop) · 1.25–1.5× OK.<br>
+            ${howLocal}<a href="${escapeHtml(driveRoot)}" target="_blank" rel="noopener">All videos on Drive (كورس 46)</a>
+          </div>
+          ${vNote}
+          <ul class="video-list">${list}</ul>
+          <p style="color:var(--muted);font-size:0.88rem;margin:0">Do <strong>not</strong> watch other subjects today. Numbers match folder names lec.19 / lec.20 / lec.21.</p>`,
+          openKey
+        )
+      );
+    } else {
+      steps.push(
+        stepHtml(
+          n++,
+          "video",
+          "Step 2 — Videos today",
+          `<div class="folder-hint"><strong>No new videos today.</strong> Stay in the app for reading + practice. If weak on an older subject, open that day and rewatch only its listed files.</div>`,
+          openKey
+        )
+      );
+    }
+
+    // 3 Cards
+    const cardN = cardPoolForDeck(L.cardDeck || "always").length;
+    const cardAll = ensureFlashcards().length;
+    steps.push(
+      stepHtml(
+        n++,
+        "cards",
+        `Step 3 — Flashcards (5–15 min) · ${cardN} in deck`,
+        `<p class="lead">Memorize short free-point rules. Tap card to flip. <b>${cardAll}</b> cards total in app · today deck <code>${escapeHtml(
+          L.cardDeck || "always"
+        )}</code> = <b>${cardN}</b>.</p>
+         <p class="muted vol-hint">Keys: <b>Space/Enter</b> flip · <b>1</b> Know · <b>2</b> Again · <b>N</b> Next</p>
+         <div class="volume-grid">
+           <button class="btn" id="go-cards">Open today’s deck (${cardN})</button>
+           <button class="btn ghost" id="go-cards-always">Always deck</button>
+           <button class="btn ghost" id="go-cards-all">All cards (${cardAll})</button>
+           <button class="btn ghost" id="go-cards-unknown">Unknown only</button>
+         </div>`,
+        openKey
+      )
+    );
+
+    // 4 Quiz — multi-block (100s of MCQs per day topic)
+    const topicLabel = L.quizTopic === "all" ? "mixed bank" : L.quizTopic === "wrong" ? "wrong book" : L.quizTopic;
+    const poolSize = pool(L.quizTopic || "all").length;
+    const sets = L.quizSets && L.quizSets.length
+      ? L.quizSets
+      : [{ topic: L.quizTopic, count: L.quizCount || 50, label: `Main ${L.quizCount || 50}Q`, mode: "learn" }];
+    const setBtns = sets
+      .map(
+        (s, i) =>
+          `<button class="btn ${i === 0 ? "" : "ghost"} quiz-set-btn" data-topic="${escapeHtml(s.topic)}" data-n="${
+            s.count
+          }" data-mode="${escapeHtml(s.mode || "learn")}">${escapeHtml(s.label)}</button>`
+      )
+      .join(" ");
+    const focusTopic = L.quizTopic || "all";
+    const focusShort =
+      focusTopic === "operative"
+        ? "Operative"
+        : focusTopic === "restorative"
+          ? "Resto"
+          : focusTopic === "always_src"
+            ? "Free points"
+            : focusTopic;
+    const focusSizes = sizeLadder(poolSize, [50, 100, 150, 200, 300, 500]);
+    const focusVol = focusSizes.map((n) => volBtn(focusTopic, n, focusShort, "")).join("") + volBtn(focusTopic, QUIZ_ALL, focusShort, "success");
+    // Compute verified counts for the pool
+    const allQCount = allQ().length;
+    const verifiedCount = allQ().filter(q => q.book_verified === true).length;
+    const poolVerifiedCount = pool(L.quizTopic).filter(q => q.book_verified === true).length;
+    const verifiedPct = poolSize ? Math.round(100 * poolVerifiedCount / poolSize) : 0;
+
+    const quizSimple = isSimpleMode();
+    const quizAdvanced = `
+         <h4 class="vol-sub">More volume — same focus pool (${poolSize})</h4>
+         <div class="volume-grid">${focusVol}
+           ${volBtn("always_src", 50, "Free points", "")}
+           ${volBtn("always_src", QUIZ_ALL, "Free points", "")}
+           ${volBtn("restorative", 100, "Resto", "")}
+           ${volBtn("restorative", QUIZ_ALL, "Resto", "")}
+           ${volBtn("all", 200, "Full bank", "")}
+           ${volBtn("all", QUIZ_ALL, "Full bank", "success")}
+         </div>
+         <h4 class="vol-sub">Smart packs (unseen + weak topics)</h4>
+         <div class="volume-grid">
+           ${volBtn("unseen", 50, "Unseen", "")}
+           ${volBtn("unseen", 100, "Unseen", "")}
+           ${volBtn("unseen", 200, "Unseen", "")}
+           ${volBtn("unseen", QUIZ_ALL, "Unseen", "success")}
+           ${volBtn("weak", 50, "Weak pack", "")}
+           ${volBtn("weak", 100, "Weak pack", "")}
+           ${volBtn("weak", 150, "Weak pack", "")}
+           ${volBtn("weak", QUIZ_ALL, "Weak pack", "success")}
+         </div>
+         <h4 class="vol-sub">Unseen by subject (never answered in that pool)</h4>
+         <div class="volume-grid">
+           ${volBtn("unseen:operative", 50, "Unseen Op", "")}
+           ${volBtn("unseen:operative", 100, "Unseen Op", "")}
+           ${volBtn("unseen:restorative", 50, "Unseen Resto", "")}
+           ${volBtn("unseen:restorative", 100, "Unseen Resto", "")}
+           ${volBtn(unseenTopic(focusTopic), 50, "Unseen focus", "")}
+           ${volBtn(unseenTopic(focusTopic), 100, "Unseen focus", "")}
+           ${volBtn(unseenTopic(focusTopic), QUIZ_ALL, "Unseen focus", "success")}
+         </div>
+         <p class="muted vol-hint">${smartPackHint()}</p>`;
+    const quizBody = quizSimple
+      ? `<p class="lead">Answer → see why → next. Focus pool: <strong>${poolSize}</strong> (${escapeHtml(String(topicLabel))}) · <span class="badge green">📖 ${poolVerifiedCount} verified</span> <span class="muted">(${verifiedPct}%)</span></p>
+         <div class="volume-grid primary-actions" style="margin:12px 0">
+           <button class="btn success" id="go-quiz">▶ Start 20</button>
+           <button class="btn" id="go-wrong">Wrong book 50</button>
+           <button class="btn ghost" id="go-quiz-full">Start ${L.quizCount || 50}Q</button>
+         </div>
+         <div class="quiz-sets volume-grid" style="margin:8px 0">${setBtns}</div>
+         <details class="adv-details">
+           <summary>More volume packs (all still here)</summary>
+           ${quizAdvanced}
+           <div class="volume-grid" style="margin-top:8px">
+             <button class="btn ghost" id="go-wrong-all">Wrong book ALL</button>
+             <button class="btn ghost" id="go-practice-vol">→ Extra practice (every set)</button>
+           </div>
+         </details>`
+      : `<p class="lead"><strong>${allQCount}</strong> usable MCQs (<span class="badge green">📖 ${verifiedCount} verified</span>) · <strong>${poolSize}</strong> for today’s focus (<code>${escapeHtml(
+          String(focusTopic)
+        )}</code>, <span class="badge green">📖 ${poolVerifiedCount} verified</span>). Learn mode: answer → explanation → next. <b>ALL = entire pool</b>.</p>
+         <div class="alert"><strong>ADHD rule:</strong> Block 1 → break → Block 2 → break → Block 3. Target ≥${state.dailyGoal || 150}Q.</div>
+         <div class="quiz-sets volume-grid" style="margin:12px 0">${setBtns}</div>
+         ${quizAdvanced}
+         <div class="volume-grid" style="margin-top:8px">
+           <button class="btn" id="go-quiz">Quick start ${L.quizCount || 50}Q</button>
+           <button class="btn ghost" id="go-wrong">Wrong book 50</button>
+           <button class="btn ghost" id="go-wrong-all">Wrong book ALL</button>
+           <button class="btn ghost" id="go-practice-vol">→ Extra practice (every set)</button>
+         </div>`;
+    steps.push(
+      stepHtml(
+        n++,
+        "quiz",
+        quizSimple
+          ? `Step 4 — Practice · ${poolSize} focus`
+          : `Step 4 — Practice quizzes · ${allQ().length} usable · ${poolSize} focus (${topicLabel}) · aim ≥${state.dailyGoal || 150}Q`,
+        quizBody,
+        openKey
+      )
+    );
+
+    // 5 Mock if any
+    if (L.mockType) {
+      let mockBtns = `<button class="btn warn" id="go-mock" data-m="${escapeHtml(L.mockType)}">${escapeHtml(L.mockLabel || "Start mock")}</button>`;
+      if (L.mockType2) {
+        mockBtns += `<button class="btn warn" id="go-mock2" data-m="${escapeHtml(L.mockType2)}">${escapeHtml(L.mockLabel2 || "Part 2")}</button>`;
+      }
+      if (L.mockType3) {
+        mockBtns += `<button class="btn warn" id="go-mock3" data-m="${escapeHtml(L.mockType3)}">${escapeHtml(L.mockLabel3 || "Full 200")}</button>`;
+      }
+      steps.push(
+        stepHtml(
+          n++,
+          "mock",
+          "Step 5 — Timed mock (exam pace)",
+          `<p class="lead">~72 seconds per question. Exam mode — score only at the end. No negative marking: answer every item.</p>
+           <div class="volume-grid">${mockBtns}</div>`,
+          openKey
+        )
+      );
+    }
+
+    // 6 Always comes micro
+    const acStep = L.mockType ? 6 : 5;
+    steps.push(
+      stepHtml(
+        n++,
+        "always",
+        `Step ${acStep} — Free points (always-comes)`,
+        `<p class="lead">These marks are free if you know them cold. Say 8 rules out loud, then drill MCQs. Full list: Always-comes · Pass plan tabs.</p>
+         <div>${window.ALWAYS_COMES_READ.slice(0, 8)
+           .map((r) => `<div class="rule"><strong>${escapeHtml(r[0])}</strong><span>${escapeHtml(r[1])}</span></div>`)
+           .join("")}
+         <div class="volume-grid">
+           ${volBtn("always_src", 25, "Free points", "")}
+           ${volBtn("always_src", 50, "Free points", "")}
+           ${volBtn("always_src", QUIZ_ALL, "Free points", "success")}
+           <button class="btn" id="go-fp-drill">Drill free points 25</button>
+           <button class="btn ghost" id="go-always">See all ${window.ALWAYS_COMES_READ.length} rules</button>
+           <button class="btn ghost" id="go-pass">Pass plan</button>
+         </div></div>`,
+        openKey
+      )
+    );
+
+    // Finish day
+    const dayComplete = !!state.dayDone[state.day];
+    const metaToday = trackMeta();
+    const calDay = state.day;
+    const mDays = maxDay();
+    const schNow = currentSchedule();
+    const planChosen = !!store.get("planChosen", false);
+
+    // Coach gate only. Simple mode gates plan on the hub (renderTodayHub), not here.
+    if (!planChosen && !simple) {
+      app.innerHTML = `
+        ${planChooserHtml({ gate: true })}
+        <p class="muted" style="margin-top:12px">Pick a plan to open the day path.</p>
+      `;
+      bindPlanChooser();
+      return;
+    }
+
+    const subject = humanLessonTitle(L);
+
+    const dayLead = simple
+      ? ""
+      : `<p class="lead">Lesson <b>L${L.day}/14</b>
+          · <b>${state.planLength}-day</b> · <b>${escapeHtml((metaToday.mode || "learn").toUpperCase())}</b>
+          · ${escapeHtml(schNow.hoursLabel || "")} today · focus <b>${schNow.focusMinutes || 45} min</b>
+          · Stay in-app except listed videos.</p>`;
+
+    const pathCtas = simple
+      ? `<div class="path-ctas path-toolbar" role="group" aria-label="Study">
+          <button type="button" class="btn ghost" id="hub-back">← Home</button>
+          <button type="button" class="btn ghost" id="path-practice">Practice…</button>
+        </div>`
+      : "";
+
+    const coachChrome = simple
+      ? ""
+      : `${dayPickerBar()}
+        ${dayPlanCardHtml(L)}
+        ${modeCoachHtml(L)}
+        <div class="meta">
+          <span class="badge blue">Focus: ${escapeHtml(L.focus)}</span>
+          <span class="badge green" title="Textbook-verified questions for this topic">📖 ${(window.QUESTION_BANK || []).filter(q => q.topic === L.focus && q.usable !== false && q.book_verified === true).length} verified</span>
+          <span class="badge ${dayComplete ? "green" : "yellow"}">${dayComplete ? "Day complete" : "In progress"}</span>
+          <span class="badge ${state.sessionAnswered >= state.dailyGoal ? "green" : "yellow"}">MCQ ${state.sessionAnswered}/${state.dailyGoal}</span>
+        </div>
+        <div class="adhd-toolbar">
+          <label class="adhd-goal-label">MCQ goal (from plan)
+            <select id="daily-goal-sel">
+              ${[40, 60, 80, 100, 120, 150, 200, 250].map((n) => `<option value="${n}" ${state.dailyGoal === n ? "selected" : ""}>${n}</option>`).join("")}
+            </select>
+          </label>
+          <button type="button" class="btn sm ghost" id="reset-session-q" title="Reset session counter only">Reset Q</button>
+        </div>
+        ${stepStripHtml(L, openKey)}
+        <div class="step-progress" aria-label="Day progress">
+          <div class="step-progress-bar" style="width:${Math.round((100 * doneCount) / Math.max(1, order.length))}%"></div>
+          <span class="step-progress-label">${doneCount} / ${order.length} steps · now: ${openKey}</span>
+        </div>
+        <div class="mcq-goal-bar" aria-label="MCQ goal"><div class="mcq-goal-fill" style="width:${Math.min(100, Math.round((100 * state.sessionAnswered) / (state.dailyGoal || 150)))}%"></div></div>`;
+
+    const finishBlock = simple
+      ? `<div class="step ${dayComplete ? "done" : ""} finish-day simple-finish">
+        <div class="step-body" style="display:block;border:none">
+          <button class="btn success" id="to-next" ${state.day >= maxDay() ? "disabled" : ""}>Next day →</button>
+          <label class="check-row" style="margin-top:10px">
+            <input type="checkbox" id="day-complete" ${dayComplete ? "checked" : ""}>
+            Mark day done
+          </label>
+        </div>
+      </div>`
+      : `<div class="step ${dayComplete ? "done" : ""} finish-day">
+        <div class="step-body" style="display:block;border:none">
+          <label class="check-row">
+            <input type="checkbox" id="day-complete" ${dayComplete ? "checked" : ""}>
+            <strong>I finished calendar Day ${state.day}/${maxDay()}</strong> (content lesson ${L.day}) — then go to next day
+          </label>
+          <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+            <button class="btn success" id="to-next" ${state.day >= maxDay() ? "disabled" : ""}>Go to Day ${Math.min(maxDay(), state.day + 1)} →</button>
+            <button class="btn ghost" id="to-days">All ${maxDay()} days</button>
+          </div>
+        </div>
+      </div>`;
+
+    app.innerHTML = `
+      ${simple ? "" : planChooserHtml({ gate: false, compact: false })}
+      <div class="day-header ${simple ? "day-header-path" : ""}">
+        ${pathCtas}
+        <h1>${simple ? `Day ${calDay} · ${escapeHtml(subject)}` : `Day ${calDay}/${mDays}: ${escapeHtml(L.title)}`}</h1>
+        ${dayLead}
+        ${coachChrome}
+      </div>
+      ${!simple && metaToday.mode === "review" ? reviewWeakPanelHtml() : ""}
+      ${steps.join("")}
+      ${finishBlock}
+    `;
+
+    bindDayPicker();
+    bindPlanChooser();
+
+    // Phase 6 — TTS auto-reader on the daily Today lesson
+    bindTTS(() => { const el = app.querySelector(".reading"); return el ? el.textContent.replace(/\s+/g, " ").trim().slice(0, 12000) : ""; });
+
+    const goalSel = $("#daily-goal-sel");
+    if (goalSel)
+      goalSel.onchange = () => {
+        state.dailyGoal = +goalSel.value || 150;
+        store.set("dailyGoal", state.dailyGoal);
+        store.set("dailyGoalUserOverride", true);
+        updateTop();
+        renderToday();
+      };
+    const resetQ = $("#reset-session-q");
+    if (resetQ)
+      resetQ.onclick = () => {
+        state.sessionAnswered = 0;
+        state.sessionDate = todayKey();
+        state.planDayAnswered = 0;
+        state.planDayVolumeKey = planDayVolumeKeyOf();
+        store.set("sessionDate", state.sessionDate);
+        store.set("sessionAnswered", 0);
+        store.set("planDayAnswered", 0);
+        store.set("planDayVolumeKey", state.planDayVolumeKey);
+        updateTop();
+        renderToday();
+      };
+
+    // accordion — never collapse to zero open steps
+    app.querySelectorAll(".step-head").forEach((h) => {
+      h.onclick = () => {
+        const step = h.closest(".step[data-step]");
+        if (!step) return;
+        const key = step.dataset.step;
+        if (step.classList.contains("open")) return; // keep open
+        openStepKey(key);
+      };
+    });
+    app.querySelectorAll(".step-chip").forEach((chip) => {
+      chip.onclick = () => openStepKey(chip.dataset.step);
+    });
+    app.querySelectorAll(".step-check").forEach((c) => {
+      c.onclick = (e) => e.stopPropagation();
+      c.onchange = () => {
+        setDone(c.dataset.key, c.checked);
+        renderToday();
+      };
+    });
+    app.querySelectorAll(".copy-path, #copy-folder").forEach((b) => {
+      b.onclick = async (e) => {
+        e.stopPropagation();
+        const path = b.dataset.path || "";
+        try {
+          await navigator.clipboard.writeText(path);
+          const old = b.textContent;
+          b.textContent = "Copied!";
+          setTimeout(() => (b.textContent = old), 1200);
+        } catch {
+          prompt("Copy this path:", path);
+        }
+      };
+    });
+    $("#day-complete") &&
+      ($("#day-complete").onchange = (e) => {
+        if (e.target.checked) {
+          const goal = state.dailyGoal || 150;
+          ensurePlanDayVolume();
+          const vol = state.planDayAnswered || 0;
+          if (vol < goal) {
+            const force = confirm(
+              `Day gate: only ${vol}/${goal} MCQs on this plan day.\n\nOK = mark day done anyway\nCancel = keep studying volume`
+            );
+            if (!force) {
+              e.target.checked = false;
+              return;
+            }
+          }
+        }
+        state.dayDone[state.day] = e.target.checked;
+        save();
+        renderToday();
+      });
+    $("#to-next") &&
+      ($("#to-next").onclick = () => {
+        const goal = state.dailyGoal || 150;
+        ensurePlanDayVolume();
+        const vol = state.planDayAnswered || 0;
+        if (!state.dayDone[state.day] && vol < goal) {
+          const force = confirm(
+            `Only ${vol}/${goal} MCQs on this plan day and day not ticked done.\n\nOK = go to next day anyway\nCancel = stay and do more volume`
+          );
+          if (!force) return;
+        }
+        if (state.day < maxDay()) {
+          state.day++;
+          ensurePlanDayVolume();
+          const meta = trackMeta();
+          if (meta.dailyGoal && !store.get("dailyGoalUserOverride", false)) state.dailyGoal = meta.dailyGoal;
+          syncPomoFromPlan({ force: true });
+          save();
+          render();
+        }
+      });
+    $("#to-days") && ($("#to-days").onclick = () => navigateTo("days", { push: true }));
+    bindVolButtons(app);
+    $("#go-practice-vol") && ($("#go-practice-vol").onclick = () => navigateTo("practice", { push: true }));
+    $("#go-cards") && ($("#go-cards").onclick = () => openCards(L.cardDeck || "always"));
+    $("#go-cards-always") && ($("#go-cards-always").onclick = () => openCards("always"));
+    $("#go-cards-all") && ($("#go-cards-all").onclick = () => openCards("all"));
+    $("#go-cards-unknown") && ($("#go-cards-unknown").onclick = () => openCards("unknown"));
+    $("#go-quiz") &&
+      ($("#go-quiz").onclick = () =>
+        isSimpleMode()
+          ? goPracticeBuilder()
+          : startQuiz(L.quizTopic, L.quizCount, "learn", false)
+      );
+    $("#go-quiz-full") &&
+      ($("#go-quiz-full").onclick = () => startQuiz(L.quizTopic, L.quizCount, "learn", false));
+    app.querySelectorAll(".quiz-set-btn").forEach((b) => {
+      b.onclick = () => startQuiz(b.dataset.topic, +b.dataset.n, b.dataset.mode || "learn", false);
+    });
+    $("#go-wrong") &&
+      ($("#go-wrong").onclick = () => startQuiz("wrong", 50, "learn", false));
+    $("#go-wrong-all") &&
+      ($("#go-wrong-all").onclick = () => startQuiz("wrong", QUIZ_ALL, "learn", false));
+    $("#go-always") && ($("#go-always").onclick = () => navigateTo("always", { push: true }));
+    $("#go-fp-drill") &&
+      ($("#go-fp-drill").onclick = () => startQuiz("always_src", 25, "learn", false));
+    $("#go-pass") && ($("#go-pass").onclick = () => navigateTo("pass", { push: true }));
+    app.querySelectorAll(".day-plan-step[data-plan-step]").forEach((li) => {
+      li.onclick = () => {
+        const k = li.dataset.planStep;
+        if (k) openStepKey(k);
+      };
+      li.style.cursor = "pointer";
+    });
+    $("#go-mock") &&
+      ($("#go-mock").onclick = () => runMock($("#go-mock").dataset.m));
+    $("#go-mock2") &&
+      ($("#go-mock2").onclick = () => runMock($("#go-mock2").dataset.m));
+    $("#go-mock3") &&
+      ($("#go-mock3").onclick = () => runMock($("#go-mock3").dataset.m));
+
+    const pathP = $("#path-practice");
+    if (pathP) pathP.onclick = () => goPracticeBuilder();
+    const hubBack = $("#hub-back");
+    if (hubBack)
+      hubBack.onclick = () => {
+        state.todaySurface = "hub";
+        state._forceOpenKey = null;
+        renderToday();
+      };
+
+    enhanceExamQa(app);
+  }
+
+  /**
+   * Interactive scoring for in-lesson Exam Q&A blocks (.exam-qa article.eq).
+   * Click a/b/c/d → instant correct/wrong · auto-open hinge · block score · localStorage.
+   * Counts toward session MCQ goal + stats.byTopic.exam_qa (not bank wrong-book ids).
+   */
+  function enhanceExamQa(root) {
+    const sections = root.querySelectorAll("section.exam-qa");
+    if (!sections.length) return;
+    if (!state.examQa || typeof state.examQa !== "object") state.examQa = {};
+
+    sections.forEach((sec) => {
+      if (sec.dataset.eqEnhanced === "1") return;
+      sec.dataset.eqEnhanced = "1";
+
+      const day = sec.dataset.day || String(state.day);
+      const block = sec.dataset.block || "?";
+      const articles = [...sec.querySelectorAll("article.eq")];
+      if (!articles.length) return;
+
+      // Scoreboard
+      const board = document.createElement("div");
+      board.className = "exam-qa-score";
+      board.innerHTML = `
+        <span class="eq-score-text">Tap a/b/c/d to score · 0 / ${articles.length}</span>
+        <button type="button" class="btn sm ghost eq-reset-block">Reset block</button>`;
+      const hint = sec.querySelector(".exam-qa-hint");
+      if (hint) {
+        hint.textContent =
+          "Tap an option to lock your answer. Green = correct · red = miss. Hinge opens after you pick. Target ≥4/5.";
+        hint.after(board);
+      } else {
+        sec.insertBefore(board, sec.firstChild);
+      }
+
+      const scoreText = board.querySelector(".eq-score-text");
+
+      function parseCorrectIdx(art) {
+        const line = art.querySelector(".ans-line");
+        if (!line) return null;
+        const m = (line.textContent || "").match(/Answer:\s*([a-dA-D])/);
+        if (!m) return null;
+        return m[1].toLowerCase().charCodeAt(0) - 97;
+      }
+
+      function updateBoard() {
+        let answered = 0;
+        let correct = 0;
+        articles.forEach((art) => {
+          const id = art.dataset.id;
+          const rec = id && state.examQa[id];
+          if (rec && typeof rec.choice === "number") {
+            answered++;
+            if (rec.ok) correct++;
+          }
+        });
+        const pct = answered ? Math.round((100 * correct) / answered) : 0;
+        const done = answered === articles.length && articles.length > 0;
+        const flag =
+          done && correct >= Math.ceil(articles.length * 0.8)
+            ? " · pass ≥4/5 ✓"
+            : done
+              ? " · re-drill misses"
+              : "";
+        scoreText.textContent = `Block ${block}: ${correct} / ${answered} correct (${answered}/${articles.length} answered${answered ? `, ${pct}%` : ""})${flag}`;
+        board.classList.toggle("eq-pass", done && correct >= Math.ceil(articles.length * 0.8));
+        board.classList.toggle("eq-fail", done && correct < Math.ceil(articles.length * 0.8));
+      }
+
+      function paintArticle(art, rec) {
+        const opts = [...art.querySelectorAll("li.eq-opt, ol.exam-opts > li")];
+        const correctIdx = parseCorrectIdx(art);
+        opts.forEach((li, idx) => {
+          li.classList.remove("eq-picked", "eq-correct", "eq-wrong", "eq-reveal");
+          li.setAttribute("aria-disabled", rec ? "true" : "false");
+          if (!rec) return;
+          if (idx === correctIdx) li.classList.add("eq-correct", "eq-reveal");
+          if (idx === rec.choice) {
+            li.classList.add("eq-picked");
+            if (!rec.ok) li.classList.add("eq-wrong");
+          }
+        });
+        art.classList.toggle("eq-answered", !!rec);
+        art.classList.toggle("eq-ok", !!(rec && rec.ok));
+        art.classList.toggle("eq-miss", !!(rec && !rec.ok));
+        const det = art.querySelector("details.exam-ans");
+        if (det && rec) det.open = true;
+        const badge = art.querySelector(".eq-result");
+        if (badge) badge.remove();
+        if (rec) {
+          const tag = document.createElement("span");
+          tag.className = "eq-result " + (rec.ok ? "ok" : "miss");
+          tag.textContent = rec.ok ? "Correct" : "Miss — read hinge";
+          const num = art.querySelector(".eq-num");
+          if (num) num.after(tag);
+          else art.insertBefore(tag, art.firstChild);
+        }
+      }
+
+      function lockPick(art, choiceIdx) {
+        const id = art.dataset.id;
+        if (!id) return;
+        if (state.examQa[id] && typeof state.examQa[id].choice === "number") return; // already locked
+        const correctIdx = parseCorrectIdx(art);
+        if (correctIdx == null || choiceIdx < 0 || choiceIdx > 3) return;
+        const ok = choiceIdx === correctIdx;
+        state.examQa[id] = { choice: choiceIdx, ok, day: +day, block };
+        // session + plan-day volume + cumulative stats (lesson Qs count toward daily goal)
+        bumpVolume();
+        state.stats.answered = (state.stats.answered || 0) + 1;
+        if (ok) state.stats.correct = (state.stats.correct || 0) + 1;
+        const t = "exam_qa";
+        if (!state.stats.byTopic[t]) state.stats.byTopic[t] = { a: 0, c: 0 };
+        state.stats.byTopic[t].a++;
+        if (ok) state.stats.byTopic[t].c++;
+        save();
+        paintArticle(art, state.examQa[id]);
+        updateBoard();
+        updateTop();
+        // soft refresh of goal bar without full re-render
+        const fill = document.querySelector(".mcq-goal-fill");
+        if (fill) {
+          fill.style.width =
+            Math.min(100, Math.round((100 * state.sessionAnswered) / (state.dailyGoal || 150))) + "%";
+        }
+        const badgeGoal = document.querySelector(".day-header .meta .badge.yellow, .day-header .meta .badge.green");
+        // update MCQ goal badge if present
+        document.querySelectorAll(".day-header .meta .badge").forEach((b) => {
+          if (/MCQ goal/.test(b.textContent || "")) {
+            b.textContent = `MCQ goal ${state.sessionAnswered}/${state.dailyGoal}`;
+            b.classList.toggle("green", state.sessionAnswered >= state.dailyGoal);
+            b.classList.toggle("yellow", state.sessionAnswered < state.dailyGoal);
+          }
+        });
+      }
+
+      articles.forEach((art) => {
+        const ol = art.querySelector("ol.exam-opts");
+        if (!ol) return;
+        const lis = [...ol.querySelectorAll("li")];
+        lis.forEach((li, idx) => {
+          li.classList.add("eq-opt");
+          li.dataset.idx = String(idx);
+          li.setAttribute("role", "button");
+          li.tabIndex = 0;
+          const letter = String.fromCharCode(97 + idx);
+          if (!li.querySelector(".eq-letter")) {
+            const lab = document.createElement("span");
+            lab.className = "eq-letter";
+            lab.textContent = letter + ".";
+            li.insertBefore(lab, li.firstChild);
+            // space after letter
+            lab.after(document.createTextNode(" "));
+          }
+          const onActivate = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            if (art.classList.contains("eq-answered")) return;
+            lockPick(art, idx);
+          };
+          li.addEventListener("click", onActivate);
+          li.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") onActivate(e);
+          });
+        });
+
+        // Keep details closed until answered; summary still works after
+        const det = art.querySelector("details.exam-ans");
+        if (det) {
+          const sum = det.querySelector("summary");
+          if (sum) sum.textContent = "Answer + hinge (opens after you pick · or tap here)";
+        }
+
+        const id = art.dataset.id;
+        const rec = id && state.examQa[id];
+        if (rec && typeof rec.choice === "number") paintArticle(art, rec);
+      });
+
+      board.querySelector(".eq-reset-block").onclick = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (!confirm(`Reset Exam Q&A scores for Block ${block}?`)) return;
+        articles.forEach((art) => {
+          const id = art.dataset.id;
+          if (id && state.examQa[id]) delete state.examQa[id];
+          art.classList.remove("eq-answered", "eq-ok", "eq-miss");
+          art.querySelectorAll("li").forEach((li) => {
+            li.classList.remove("eq-picked", "eq-correct", "eq-wrong", "eq-reveal");
+            li.setAttribute("aria-disabled", "false");
+          });
+          const badge = art.querySelector(".eq-result");
+          if (badge) badge.remove();
+          const det = art.querySelector("details.exam-ans");
+          if (det) det.open = false;
+        });
+        save();
+        updateBoard();
+      };
+
+      updateBoard();
+    });
+  }
+
+  function renderDays() {
+    const track = typeof window.getPlanTrack === "function" ? window.getPlanTrack(state.planLength) : [];
+    const tiles = (track.length ? track : window.LESSONS.map((l) => ({ day: l.day, lessonDay: l.day, mode: "learn" })))
+      .map((t) => {
+        const L = window.LESSONS.find((x) => x.day === (t.lessonDay || t.day)) || {};
+        const done = !!state.dayDone[t.day];
+        const title = t.note || L.title || "";
+        return `<button class="day-tile ${done ? "done" : ""}" data-d="${t.day}">
+            <div class="d">Day ${t.day}${done ? " ✓" : ""} <span class="mode-tag">${escapeHtml(t.mode || "")}</span></div>
+            <div style="font-size:0.8rem;margin-top:4px;opacity:.9">L${t.lessonDay || t.day}: ${escapeHtml(String(title).slice(0, 48))}</div>
+          </button>`;
+      })
+      .join("");
+    app.innerHTML = `
+      <h1>All days — ${state.planLength}-day track</h1>
+      <p class="lead">Tap a calendar day. Content lessons are the deep ADHD texts (14); longer tracks (30–90) space them for ≥80% with less burnout.</p>
+      ${trackSwitcherHtml()}
+      <div class="day-grid">${tiles}</div>
+      <div class="alert" style="margin-top:16px">
+        <strong>How the exam works (KSA SDLE):</strong> 200 MCQs · 4 hours · 2×100 in 120 min · 30 min break ·
+        Pass 542/800 · Target ≥80% · FDI numbering · English · No negative marking · Restorative ~40% of questions.
+      </div>
+      <div class="alert muted" style="margin-top:10px">
+        <strong>Books:</strong> SCFHS Appendix C suggested textbooks are attached under each reading and under MCQ “Show answer”
+        (titles only — never fake page numbers). Local curated PDFs live under <code>data/raw/books/sdle_book/</code>.
+      </div>
+    `;
+    bindTrackSwitcher();
+    app.querySelectorAll(".day-tile").forEach((b) => {
+      b.onclick = () => {
+        state.day = +b.dataset.d;
+        ensurePlanDayVolume();
+        const meta = trackMeta();
+        if (meta.dailyGoal) state.dailyGoal = meta.dailyGoal;
+        state.view = "today";
+        setActiveNav("today");
+        save();
+        render();
+      };
+    });
+  }
+
+  function renderPass() {
+    const P = window.PASS_PROTOCOL || {};
+    const inv = bankInventory();
+    const pct = state.stats.answered
+      ? Math.round((100 * state.stats.correct) / state.stats.answered)
+      : null;
+    const m = maxDay();
+    const daysDone = Object.keys(state.dayDone || {}).filter((k) => {
+      const d = +k;
+      return state.dayDone[k] && d >= 1 && d <= m;
+    }).length;
+    const meta = trackMeta();
+    const phase = meta.phase || "Study phase";
+    const rawTotal = (window.QUESTION_BANK || []).length;
+    const templates = [
+      { n: 14, title: "14 days", sub: "Blitz · ~8h learn days", desc: "One full lesson per day. Focus timer 45 min. Only if you can sit long sessions." },
+      { n: 30, title: "30 days", sub: "Spaced · ~5h learn days", desc: "Learn + volume + review. Focus 40 min. Good default." },
+      { n: 45, title: "45 days", sub: "Steady · ~4h learn days", desc: "Extra review on resto/perio/prosthesis. Focus 35 min." },
+      { n: 60, title: "2 months", sub: "Calm · ~3h learn days", desc: "Notebook pace. Focus 30 min. Score-makers first." },
+      { n: 90, title: "3 months", sub: "Full · ~2.5h learn days", desc: "Same 14 lessons, more rest. Focus 25 min." },
+    ];
+    const acN = (window.ALWAYS_COMES_READ || []).length;
+    app.innerHTML = `
+      ${backBarHtml("← Back")}
+      <h1>Pass plan</h1>
+      <p class="lead">Pick a calendar template. Same 14 deep lessons — only the pacing and <b>hours per day</b> change. Target practice <b>≥80%</b> · official pass <b>${escapeHtml(
+        P.passScore || "542/800"
+      )}</b>.</p>
+      ${examFocusBannerHtml()}
+
+      <h3 class="section-label">1 · Choose your template</h3>
+      <div class="plan-template-grid">
+        ${templates
+          .map(
+            (t) => `
+          <button type="button" class="plan-template ${state.planLength === t.n ? "active" : ""}" data-track="${t.n}">
+            <span class="plan-template-days">${escapeHtml(t.title)}</span>
+            <span class="plan-template-sub">${escapeHtml(t.sub)}</span>
+            <span class="plan-template-desc">${escapeHtml(t.desc)}</span>
+          </button>`
+          )
+          .join("")}
+      </div>
+      ${trackSwitcherHtml()}
+
+      <div class="stat-row pass-stats">
+        <div class="stat-box"><div class="num">${escapeHtml(P.passScore || "542/800")}</div><div class="lbl">Official pass</div></div>
+        <div class="stat-box"><div class="num" style="color:var(--accent2)">${escapeHtml(P.practiceTarget || "≥80%")}</div><div class="lbl">Practice target</div></div>
+        <div class="stat-box"><div class="num" style="color:${pct != null && pct >= 80 ? "var(--accent2)" : "var(--warn)"}">${pct != null ? pct + "%" : "—"}</div><div class="lbl">Your accuracy</div></div>
+        <div class="stat-box"><div class="num">${daysDone}/${m}</div><div class="lbl">Days done</div></div>
+      </div>
+
+      <div class="alert you-are-here">
+        <strong>You are here — Day ${state.day}/${m}</strong>
+        · ${escapeHtml(phase)} · <b>${escapeHtml(meta.mode || "learn")}</b> · lesson L${meta.lessonDay || "?"}
+        · goal <b>${meta.dailyGoal || state.dailyGoal} Q</b> today
+      </div>
+
+      <h3 class="section-label">2 · Score-makers (do these first)</h3>
+      <p class="muted vol-hint">Simple order: free points → restorative → perio / prosthesis → wrong book → one timed block.</p>
+      <div class="volume-grid roi-grid pass-roi">
+        ${volBtn("always_src", 50, "Free points", "success")}
+        ${volBtn("always_src", QUIZ_ALL, "Free points ALL", "success")}
+        ${volBtn("operative", 100, "Operative", "")}
+        ${volBtn("restorative", 100, "Restorative", "")}
+        ${volBtn("perio", 50, "Perio", "")}
+        ${volBtn("fixed", 50, "Fixed / prosthesis", "")}
+        ${volBtn("wrong", QUIZ_ALL, "Wrong book", "ghost")}
+        <button type="button" class="btn warn" data-m="50">Timed 50</button>
+        <button type="button" class="btn warn" data-m="200">Timed 200</button>
+      </div>
+      <div class="volume-grid pass-nav-row">
+        <button type="button" class="btn" id="pass-today">Open Today path</button>
+        <button type="button" class="btn ghost" id="pass-ac">Always-comes (${acN} notes + MCQs)</button>
+        <button type="button" class="btn ghost" id="pass-cards">Always cards</button>
+        <button type="button" class="btn ghost" id="pass-practice">Extra practice (all packs)</button>
+      </div>
+
+      <h3 class="section-label">3 · Where marks hide</h3>
+      <div class="blueprint-cards">
+        <div class="blueprint-card hot"><b>Restorative</b><span>~40%</span><em>${inv.restorative} + op ${inv.operative}</em></div>
+        <div class="blueprint-card hot"><b>Perio</b><span>~18%</span><em>${inv.perio} Q</em></div>
+        <div class="blueprint-card hot"><b>Prosthesis</b><span>inside resto</span><em>fixed ${inv.fixed || "—"} · RPD/CD</em></div>
+        <div class="blueprint-card"><b>Endo</b><span>~17%</span><em>${inv.endo} Q</em></div>
+        <div class="blueprint-card"><b>OMS</b><span>~15%</span><em>${inv.oms} Q</em></div>
+        <div class="blueprint-card"><b>Ortho/Pedo</b><span>~10%</span><em>${inv.ortho_pedo} Q</em></div>
+      </div>
+
+      <details class="study-fold" open>
+        <summary>More volume (same bank — nothing removed)</summary>
+        <p class="muted vol-hint">Bank: <b>${inv.all}</b> usable / ${rawTotal} loaded. ${escapeHtml(smartPackHint())}</p>
+        <div class="volume-grid roi-grid">
+          ${volBtn("saud_delta", 50, "Saud delta", "")}
+          ${volBtn("saud_delta", QUIZ_ALL, "Saud delta ALL", "success")}
+          ${volBtn("unseen", 100, "Unseen", "")}
+          ${volBtn("unseen", 200, "Unseen", "")}
+          ${volBtn("unseen", QUIZ_ALL, "Unseen ALL", "success")}
+          ${volBtn("weak", 100, "Weak pack", "")}
+          ${volBtn("weak", QUIZ_ALL, "Weak ALL", "success")}
+          ${volBtn("operative", 150, "Operative", "")}
+          ${volBtn("operative", QUIZ_ALL, "Operative ALL", "success")}
+          ${volBtn("restorative", 200, "Restorative", "")}
+          ${volBtn("restorative", QUIZ_ALL, "Resto ALL", "success")}
+          ${volBtn("all", 200, "Mixed", "")}
+          ${volBtn("all", QUIZ_ALL, "Full bank", "success")}
+          <button type="button" class="btn warn" data-m="100">Timed 100</button>
+          <button type="button" class="btn warn" data-m="op100">Op 100 timed</button>
+          <button type="button" class="btn warn" data-m="resto100">Resto 100 timed</button>
+        </div>
+        ${volBlock("Unseen only (full bank)", "unseen", [50, 100, 150, 200, 300, 500], "Unseen")}
+        ${volBlock("Unseen Operative", "unseen:operative", [50, 100, 150, 200, 300], "Unseen Op")}
+        ${volBlock("Unseen Restorative", "unseen:restorative", [50, 100, 150, 200, 300], "Unseen Resto")}
+        ${volBlock("Unseen Perio", "unseen:perio", [50, 100, 150], "Unseen Perio")}
+        ${volBlock("Unseen Endo", "unseen:endo", [50, 100, 150], "Unseen Endo")}
+        ${volBlock("Unseen OMS", "unseen:oms", [50, 100, 150, 200], "Unseen OMS")}
+        ${volBlock("Unseen Ortho/Pedo", "unseen:ortho_pedo", [50, 100], "Unseen Ortho")}
+        ${volBlock("Unseen Ethics", "unseen:ethics", [50, 100], "Unseen Ethics")}
+        ${volBlock("Weak topics pack", "weak", [50, 100, 150, 200, 300], "Weak pack")}
+        ${volBlock("Free points", "always_src", [25, 50, 100], "Free points")}
+        ${volBlock("Operative", "operative", [50, 100, 150, 200, 300, 500], "Operative")}
+        ${volBlock("Restorative", "restorative", [50, 100, 150, 200, 300, 500], "Resto")}
+        ${volBlock("Perio", "perio", [50, 100, 150, 200], "Perio")}
+        ${volBlock("Endo", "endo", [50, 100, 150, 200], "Endo")}
+        ${volBlock("OMS", "oms", [50, 100, 150, 200, 300], "OMS")}
+        ${volBlock("Ortho/Pedo", "ortho_pedo", [50, 100, 150, 200], "Ortho/Pedo")}
+        ${volBlock("Ethics/Med", "ethics", [50, 100], "Ethics")}
+        ${volBlock("Fixed subtopic", "fixed", [25, 50, 100, 150], "Fixed")}
+        ${volBlock("Implant subtopic", "implant", [25, 50, 100, 150], "Implant")}
+        ${volBlock("RPD subtopic", "rpd", [25, 50], "RPD")}
+        ${volBlock("Complete denture", "complete_denture", [25, 50], "CD")}
+        ${volBlock("Materials", "materials", [25, 50], "Materials")}
+        ${volBlock("Mixed topic tag", "mixed", [50, 100], "Mixed")}
+        ${volBlock("Full usable bank", "all", [50, 100, 150, 200, 300, 500, 1000], "Full bank")}
+        ${volBlock("Wrong book", "wrong", [25, 50, 100], "Wrong")}
+      </details>
+
+      <details class="study-fold">
+        <summary>Daily OS · exam day · emergency order</summary>
+        <h3>Daily operating system</h3>
+        <ol>${(P.daily || []).map((x) => `<li>${escapeHtml(x)}</li>`).join("")}</ol>
+        <h3>Exam-day rules</h3>
+        <ol>${(P.examDay || []).map((x) => `<li>${escapeHtml(x)}</li>`).join("")}</ol>
+        <h3>If time is short</h3>
+        <ol>
+          <li><b>Free points</b> until ≥90% on Always-comes drill</li>
+          <li><b>Restorative 150–300</b> (${inv.restorative} ready)</li>
+          <li><b>Wrong book</b> until empty</li>
+          <li><b>One full 200 timed</b></li>
+          <li>Ethics / IC free points (${inv.ethics})</li>
+        </ol>
+        <div class="alert warn"><strong>Stop:</strong> random new banks mid-day · re-reading strong topics while wrong book is full.</div>
+      </details>
+
+      <details class="study-fold">
+        <summary>Pool inventory (live)</summary>
+        ${inventoryTableHtml(inv)}
+      </details>
+    `;
+    bindBackBar();
+    bindTrackSwitcher();
+    app.querySelectorAll(".plan-template[data-track]").forEach((b) => {
+      b.onclick = () => setPlanLength(+b.dataset.track, { force: true, confirm: true });
+    });
+    bindVolButtons(app);
+    app.querySelectorAll("[data-m]").forEach((b) => {
+      b.onclick = () => runMock(b.dataset.m);
+    });
+    $("#pass-cards") && ($("#pass-cards").onclick = () => openCards("always"));
+    $("#pass-today") && ($("#pass-today").onclick = () => navigateTo("today", { push: true }));
+    $("#pass-practice") && ($("#pass-practice").onclick = () => navigateTo("practice", { push: true }));
+    $("#pass-ac") && ($("#pass-ac").onclick = () => navigateTo("always", { push: true }));
+  }
+
+  function renderAlways() {
+    const nAlways = poolN("always_src");
+    const nSaud = poolN("saud_delta");
+    const rules = window.ALWAYS_COMES_READ || [];
+    const formSwitch = [
+      {
+        idea: "Same fact, new clothes",
+        note: "Writers swap the stem: “most likely cause”, “first step”, “best next”, or flip to a clinical vignette. The hinge stays the same — memorize the rule, not one sentence.",
+      },
+      {
+        idea: "Option shuffle",
+        note: "Correct answer may move from A→C. Read every option. Eliminate two wrong, then pick best of remaining.",
+      },
+      {
+        idea: "Negative stems",
+        note: "“All except”, “least likely”, “contraindicated” — underline the negative word in your head before choosing.",
+      },
+      {
+        idea: "Score-maker overlap",
+        note: "Free points often sit inside restorative, perio, and prosthesis stems (dam, contacts, drugs→gingiva, RPD force, implant distances). Write those in your notebook first.",
+      },
+    ];
+    app.innerHTML = `
+      ${backBarHtml("← Back")}
+      <h1>Always-comes</h1>
+      <p class="lead simple-lead">Three steps only: <b>read a note</b> → <b>drill MCQs</b> → <b>say it out loud</b>. Target ≥90% on free points.</p>
+      ${examFocusBannerHtml()}
+
+      <section class="simple-panel">
+        <h3 class="section-label">1 · Start here (drill)</h3>
+        <p class="muted"><b>${nAlways}</b> free-point MCQs${nSaud ? ` · Saud <b>${nSaud}</b>` : ""}</p>
+        <div class="volume-grid ac-drill">
+          ${volBtn("always_src", 25, "Practice 25", "")}
+          ${volBtn("always_src", 50, "Practice 50", "")}
+          ${volBtn("always_src", QUIZ_ALL, "Practice ALL", "success")}
+          <button type="button" class="btn" id="ac-cards">Flashcards</button>
+        </div>
+      </section>
+
+      <section class="simple-panel">
+        <h3 class="section-label">2 · Note this (how exam wording changes)</h3>
+        ${noteThisHtml(
+          "Form-switch",
+          "Exam teams rephrase stems and shuffle options. Own the <b>one-line hinge</b> in your notebook, then prove it on MCQs."
+        )}
+        <div class="form-switch-grid">
+          ${formSwitch
+            .map(
+              (f) => `
+            <div class="form-switch-card">
+              <div class="note-this-label">Note this</div>
+              <strong>${escapeHtml(f.idea)}</strong>
+              <p>${escapeHtml(f.note)}</p>
+            </div>`
+            )
+            .join("")}
+        </div>
+      </section>
+
+      <details class="study-fold simple-panel" open>
+        <summary>3 · Short notes (${rules.length}) — say out loud</summary>
+        <p class="muted">Then re-drill section 1 — same facts, different wording.</p>
+        <div class="ac-rules-grid">
+          ${rules
+            .map(
+              (r) =>
+                `<div class="rule ac-rule"><strong>${escapeHtml(r[0])}</strong><span>${escapeHtml(r[1])}</span></div>`
+            )
+            .join("")}
+        </div>
+      </details>
+
+      <details class="study-fold">
+        <summary>More free-point volume (same bank)</summary>
+        <div class="volume-grid">
+          ${volBtn("always_src", 100, "Free points 100", "")}
+          ${nSaud ? volBtn("saud_delta", 50, "Saud delta", "") : ""}
+          ${nSaud ? volBtn("saud_delta", QUIZ_ALL, "Saud ALL", "success") : ""}
+          <button type="button" class="btn warn" data-m="fp50">Free points 50 timed</button>
+        </div>
+      </details>
+    `;
+    bindBackBar();
+    bindVolButtons(app);
+    app.querySelectorAll("[data-m]").forEach((b) => {
+      b.onclick = () => runMock(b.dataset.m);
+    });
+    $("#ac-cards").onclick = () => openCards("always");
+  }
+
+  function startMcqTest(poolKey, count) {
+    const nPool = poolN(poolKey);
+    if (!nPool) {
+      alert("No questions in this pool yet.");
+      return;
+    }
+    const n = !count || count >= QUIZ_ALL ? nPool : Math.min(count, nPool);
+    if (n > 300) {
+      const ok = confirm(
+        `Full test: ${n} questions (entire pool, not a sample). Progress is saved per answer. Continue?`
+      );
+      if (!ok) return;
+    }
+    startQuiz(poolKey, count || QUIZ_ALL, "test", false);
+  }
+
+  /** True when bank stored import noise instead of a real teaching hinge. */
+  function isPlaceholderExplanation(text) {
+    const t = String(text || "").trim();
+    if (!t) return true;
+    if (/community bank/i.test(t)) return true;
+    if (/extracted from/i.test(t)) return true;
+    if (/verify if no textbook/i.test(t)) return true;
+    if (t.length < 12) return true;
+    return false;
+  }
+
+  /** Strip old coaching / "Correct: X) …" pads — hinge text only, never the letter. */
+  function scrubExplanation(text) {
+    let t = String(text || "").trim();
+    t = t.replace(/\s*Eliminate contradicting distractors;\s*re-drill wrongs same day\.?\s*$/i, "");
+    t = t.replace(/\s*Re-drill this hinge if you missed it\.?\s*$/i, "");
+    t = t.replace(/\s*Correct:\s*[A-D]\).*$/i, "");
+    t = t.replace(/\s*Correct bank letter:\s*[A-D]\).*$/i, "");
+    return t.replace(/\s+/g, " ").trim();
+  }
+
+  function correctLetterOption(item) {
+    const letter = "ABCD"[item.answer];
+    const opt =
+      item.options && letter != null && item.options[item.answer] != null
+        ? String(item.options[item.answer])
+        : "";
+    if (!letter) return "";
+    return opt ? `${letter}) ${opt}` : `${letter})`;
+  }
+
+  /** Hinge only — never restate letter/option (that lives in the answer line). */
+  function hingeOnly(item) {
+    return scrubExplanation(item.explanation || "");
+  }
+
+  /**
+   * One feedback block for all 2500 MCQs (learn / test reveal / review):
+   * 1) Correct. / Incorrect. + which answer is right (once)
+   * 2) Why: clinical hinge only (no second copy of the answer)
+   * 3) Dispute strip — auto-tags MCQ + sends suggested answer to feedback
+   * opts.ok: true | false | null (null = show answer without right/wrong label)
+   * opts.picked: user choice index when known
+   */
+  function formatAnswerFeedback(item, opts) {
+    opts = opts || {};
+    const ok = opts.ok;
+    const ans = correctLetterOption(item);
+    let head;
+    if (ok === true) {
+      head = `<div class="explain"><strong>Correct.</strong> ${escapeHtml(ans)}</div>`;
+    } else if (ok === false) {
+      head = `<div class="explain"><strong>Incorrect.</strong> Correct answer: ${escapeHtml(ans)}</div>`;
+    } else {
+      head = `<div class="explain"><strong>Correct answer:</strong> ${escapeHtml(ans)}</div>`;
+    }
+    return head + formatWhy(item) + mcqDisputeHtml(item, opts.picked);
+  }
+
+  /** Compact “is the bank wrong?” form under the revealed answer. */
+  function mcqDisputeHtml(item, picked) {
+    const id = item && item.id != null ? String(item.id) : "";
+    return `<div class="mcq-dispute" data-mcq-id="${escapeHtml(id)}" data-picked="${picked == null ? "" : +picked}">
+      <button type="button" class="mcq-dispute-toggle" id="mcq-dispute-open" aria-expanded="false">
+        ؟ هل الإجابة خاطئة؟ · Is this answer wrong?
+      </button>
+      <div class="mcq-dispute-panel" id="mcq-dispute-panel" hidden>
+        <p class="mcq-dispute-hint" dir="rtl">أرسل الإجابة الصحيحة برأيك — نصل السؤال تلقائيًا مع بلاغك.</p>
+        <p class="mcq-dispute-hint muted" dir="ltr">Send the answer you think is right. Question is tagged automatically.</p>
+        <label class="mcq-dispute-label" for="mcq-dispute-ans">
+          <span dir="rtl">الإجابة الصحيحة (برأيك)</span>
+          <span class="muted"> · Your recommended answer</span>
+        </label>
+        <input type="text" id="mcq-dispute-ans" class="mcq-dispute-input" maxlength="400"
+          placeholder="مثال: B · أو نص الخيار · e.g. B or option text" autocomplete="off" />
+        <label class="mcq-dispute-label" for="mcq-dispute-note">
+          <span dir="rtl">ملاحظة (اختياري)</span>
+          <span class="muted"> · Optional note</span>
+        </label>
+        <textarea id="mcq-dispute-note" class="mcq-dispute-note" rows="2" maxlength="500"
+          placeholder="Why is the bank wrong? / لماذا الإجابة في البنك خطأ؟"></textarea>
+        <div class="mcq-dispute-actions">
+          <button type="button" class="btn success sm" id="mcq-dispute-send">إرسال · Send</button>
+          <button type="button" class="btn ghost sm" id="mcq-dispute-cancel">إلغاء</button>
+        </div>
+        <p class="mcq-dispute-status muted" id="mcq-dispute-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>`;
+  }
+
+  function buildMcqDisputeMessage(item, userAns, note, picked) {
+    const opts = (item.options || [])
+      .map((o, i) => String.fromCharCode(65 + i) + ") " + String(o || ""))
+      .join("\n");
+    const bankLetter =
+      item.answer != null && item.answer >= 0
+        ? String.fromCharCode(65 + item.answer)
+        : "?";
+    const bankOpt =
+      item.options && item.answer != null ? String(item.options[item.answer] || "") : "";
+    const userPick =
+      picked != null && picked >= 0
+        ? String.fromCharCode(65 + picked) +
+          (item.options && item.options[picked] != null ? ") " + item.options[picked] : "")
+        : "(none)";
+    return [
+      "=== MCQ ANSWER DISPUTE ===",
+      "Tag: wrong_answer_report",
+      "Question ID: " + (item.id != null ? item.id : "(no id)"),
+      "Source: " + (item.source || item.pool || item.topic || ""),
+      "Topic: " + (item.topic || ""),
+      "Subtopics: " + ((item.subtopics || []).join(", ") || "—"),
+      "",
+      "STEM:",
+      String(item.q || "").slice(0, 1200),
+      "",
+      "OPTIONS:",
+      opts,
+      "",
+      "BANK ANSWER: " + bankLetter + ") " + bankOpt,
+      "USER PICKED: " + userPick,
+      "USER RECOMMENDED ANSWER: " + String(userAns || "").trim(),
+      note && String(note).trim() ? "USER NOTE: " + String(note).trim() : "",
+      "",
+      "App day: " + state.day + " · plan: " + state.planLength + "d",
+    ]
+      .filter((line) => line !== "")
+      .join("\n");
+  }
+
+  function bindMcqDispute(root, item, picked) {
+    const host = root || app;
+    /* Prefer classes so review lists with many disputes still work */
+    const openBtn =
+      host.querySelector(".mcq-dispute-toggle") || host.querySelector("#mcq-dispute-open");
+    const panel =
+      host.querySelector(".mcq-dispute-panel") || host.querySelector("#mcq-dispute-panel");
+    const sendBtn =
+      host.querySelector("#mcq-dispute-send") ||
+      host.querySelector(".mcq-dispute-actions .btn.success");
+    const cancelBtn =
+      host.querySelector("#mcq-dispute-cancel") ||
+      host.querySelector(".mcq-dispute-actions .btn.ghost");
+    const status =
+      host.querySelector(".mcq-dispute-status") || host.querySelector("#mcq-dispute-status");
+    const ansInp =
+      host.querySelector(".mcq-dispute-input") || host.querySelector("#mcq-dispute-ans");
+    const noteInp =
+      host.querySelector(".mcq-dispute-note") || host.querySelector("#mcq-dispute-note");
+    if (!openBtn || !panel) return;
+
+    openBtn.onclick = () => {
+      const show = panel.hasAttribute("hidden");
+      if (show) panel.removeAttribute("hidden");
+      else panel.setAttribute("hidden", "");
+      openBtn.setAttribute("aria-expanded", show ? "true" : "false");
+      if (show && ansInp) ansInp.focus();
+    };
+    if (cancelBtn) {
+      cancelBtn.onclick = () => {
+        panel.setAttribute("hidden", "");
+        openBtn.setAttribute("aria-expanded", "false");
+        if (status) status.textContent = "";
+      };
+    }
+    if (sendBtn) {
+      sendBtn.onclick = async () => {
+        const userAns = (ansInp && ansInp.value) || "";
+        const note = (noteInp && noteInp.value) || "";
+        if (!String(userAns).trim() || String(userAns).trim().length < 1) {
+          if (status) status.textContent = "اكتب الإجابة الصحيحة · Write the answer you think is right.";
+          return;
+        }
+        sendBtn.disabled = true;
+        sendBtn.textContent = "جاري الإرسال…";
+        if (status) status.textContent = "Sending tagged report…";
+        const message = buildMcqDisputeMessage(item, userAns, note, picked);
+        const result = await deliverFeedback({
+          name: "",
+          kind: "mcq_dispute",
+          kindLabel: "MCQ dispute",
+          message,
+          when: new Date().toISOString(),
+          appUrl: typeof location !== "undefined" ? location.href : "",
+          device: typeof navigator !== "undefined" ? navigator.userAgent : "",
+          tags: ["warning", "mcq", "wrong_answer"],
+        });
+        sendBtn.disabled = false;
+        sendBtn.textContent = "إرسال · Send";
+        if (result.okNtfy || result.okEmail) {
+          if (status)
+            status.innerHTML =
+              "<strong dir='rtl'>تم الإرسال ✓</strong> · Sent with question tag. شكرًا.";
+          if (ansInp) ansInp.value = "";
+          if (noteInp) noteInp.value = "";
+          setTimeout(() => {
+            panel.setAttribute("hidden", "");
+            openBtn.setAttribute("aria-expanded", "false");
+          }, 1600);
+        } else {
+          if (status)
+            status.textContent =
+              "تعذّر الإرسال · Failed (" +
+              ((result.errors || []).join("; ") || "network") +
+              ")";
+        }
+      };
+    }
+  }
+
+  /** Book reference line for quiz feedback: hover/click opens the passage + page. */
+  function bookRefLine(item) {
+    if (!item || !item.book_support) return "";
+    const bs = String(item.book_support || "");
+    const book = (bs.match(/^\[Book: ([^\]]*)/)?.[1] || "Book").replace(/_/g, " ");
+    if (item._page) {
+      const phrase = (item.options && item.options[item.answer]) || item.q || "";
+      return `<p style="margin:6px 0 0"><a href="#" class="bookref-link" data-bookref data-book="${escapeHtml(book)}" data-page="${escapeHtml(item._page)}" data-ctx="${escapeHtml(item._context || '')}" data-phrase="${escapeHtml(String(phrase).slice(0,90))}">📖 ${escapeHtml(book)} — p. ${escapeHtml(item._page)}</a></p>`;
+    }
+    return `<p style="margin:6px 0 0"><span class="muted" style="font-size:0.72rem">📚 ${escapeHtml(bs.slice(0,160))}</span></p>`;
+  }
+
+  function formatWhy(item) {
+    const body = hingeOnly(item);
+    const placeholder = isPlaceholderExplanation(body);
+    const scfhs =
+      typeof window.scfhsRefsForTopic === "function"
+        ? window.scfhsRefsForTopic(item.topic || item.pool)
+        : [];
+    /* Skip generic book dump when hinge was empty — wrong books confuse more than they help. */
+    const scfhsShort =
+      !placeholder && scfhs.length > 0
+        ? `<div class="src-line muted">Study books: ${scfhs
+            .slice(0, 2)
+            .map((r) => escapeHtml(r.split(",")[0] || r))
+            .join(" · ")}</div>`
+        : "";
+    const isFlashNote = item && (item.source === "flash_notes" || item._fnRecall !== undefined);
+    const bookHtml =
+      !placeholder && !isFlashNote && typeof window.bookRefsHtml === "function"
+        ? window.bookRefsHtml(item, { limit: 2 })
+        : "";
+    const whyBody = placeholder
+      ? "Answer not yet verified against textbook — cross-check with official reference."
+      : body;
+    const footer = placeholder
+      ? ``
+      : "";
+    const verifiedBadge = !placeholder && item.book_verified === true
+      ? `<span class="badge green" title="Textbook-verified answer">📖 Verified</span>`
+      : `<span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--muted)" title="Community source — not yet textbook-checked">📝 community</span>`;
+    return `<div class="explain"><strong>Why:</strong> ${escapeHtml(whyBody)} ${verifiedBadge}</div>
+      ${footer}
+      ${scfhsShort}${bookHtml}${bookRefLine(item)}`;
+  }
+
+  function examPacksMeta() {
+    return (window.EXAM_PACKS && window.EXAM_PACKS.packs) || [];
+  }
+
+  function notesBankMeta() {
+    return window.NOTES_BANK || { notes: [], count: 0, byDepartment: {} };
+  }
+
+  const NOTE_DEPTS = [
+    { id: "all", label: "All" },
+    { id: "operative", label: "Operative" },
+    { id: "fixed", label: "Fixed / implant" },
+    { id: "rpd", label: "Removable" },
+    { id: "endo", label: "Endo" },
+    { id: "perio", label: "Perio" },
+    { id: "oms", label: "OMS / med" },
+    { id: "ortho_pedo", label: "Ortho / Pedo" },
+    { id: "ethics", label: "Ethics / IC" },
+    { id: "mixed", label: "Mixed" },
+  ];
+
+  function renderNotes() {
+    const meta = notesBankMeta();
+    const all = meta.notes || [];
+    const L = lesson();
+    const focusTopic = String(L.quizTopic || "").split(",")[0].trim();
+    const defaultDept =
+      focusTopic === "operative" || focusTopic === "restorative"
+        ? "operative"
+        : ["perio", "endo", "oms", "ortho_pedo", "ethics", "fixed", "rpd"].includes(focusTopic)
+          ? focusTopic
+          : "all";
+    if (!state.notesFilter) state.notesFilter = { dept: defaultDept, q: "" };
+    const filt = state.notesFilter;
+    let list = all;
+    if (filt.dept && filt.dept !== "all") {
+      if (filt.dept === "restorative") {
+        list = list.filter((n) =>
+          ["operative", "fixed", "rpd", "restorative"].includes(n.department || "")
+        );
+      } else {
+        list = list.filter((n) => (n.department || "mixed") === filt.dept);
+      }
+    }
+    if (filt.q) {
+      const qq = String(filt.q).toLowerCase();
+      list = list.filter(
+        (n) =>
+          String(n.text || "").toLowerCase().includes(qq) ||
+          String(n.stemPreview || "").toLowerCase().includes(qq) ||
+          String(n.sourcePack || "").toLowerCase().includes(qq)
+      );
+    }
+    const by = meta.byDepartment || {};
+    const SIMPLE_NOTE_DEPTS = [
+      { id: "all", label: "All" },
+      { id: "operative", label: "Operative" },
+      { id: "fixed", label: "Fixed" },
+      { id: "rpd", label: "RPD" },
+      { id: "endo", label: "Endo" },
+      { id: "perio", label: "Perio" },
+      { id: "oms", label: "OMS" },
+      { id: "ortho_pedo", label: "Ortho/Pedo" },
+      { id: "ethics", label: "Ethics" },
+      { id: "mixed", label: "Mixed" },
+    ];
+    const limit = state.notesLimit || 50;
+    const shown = list.slice(0, limit);
+    const packLabel = (pack) => {
+      const p = String(pack || "");
+      if (/abtal_mar_june/i.test(p)) return "أبطال الديجيتال · Mar–Jun 2026";
+      if (/abtal_dec_feb/i.test(p)) return "أبطال الديجيتال · Dec–Feb 2026";
+      if (/abtal_oct/i.test(p)) return "أبطال الديجيتال · Oct 2025";
+      if (/abtal_sep/i.test(p)) return "أبطال الديجيتال · Sep 2025";
+      if (/abtal/i.test(p)) return "أبطال الديجيتال";
+      if (/rafi|saud/i.test(p)) return p.replace(/_/g, " ");
+      return p || "note";
+    };
+
+    app.innerHTML = `
+      <div class="simple-hub">
+        <h1>Notes</h1>
+        <p class="simple-lead">Full notes · stem + answer. Today: <b>${escapeHtml(humanLessonTitle(L))}</b></p>
+        <p class="simple-day-sync muted">Day ${state.day}/${maxDay()} · ${all.length} notes in bank</p>
+        <div class="simple-dept-row">
+          ${SIMPLE_NOTE_DEPTS.map((d) => {
+            const n =
+              d.id === "all"
+                ? all.length
+                : by[d.id] != null
+                  ? by[d.id]
+                  : all.filter((x) => x.department === d.id).length;
+            const on = (filt.dept || "all") === d.id;
+            return `<button type="button" class="btn ${on ? "success" : "ghost"} simple-dept-btn" data-note-dept="${d.id}">${escapeHtml(d.label)} <span class="badge">${n}</span></button>`;
+          }).join("")}
+        </div>
+        <input type="search" id="notes-search" class="simple-search" placeholder="Search stem or note…" value="${escapeHtml(filt.q || "")}" />
+        <p class="muted simple-count">${shown.length < list.length ? shown.length + " of " : ""}${list.length}</p>
+        <div class="simple-note-list">
+          ${
+            shown.length
+              ? shown
+                  .map((n) => {
+                    const stem = String(n.stemPreview || "").trim();
+                    const text = String(n.text || "").trim();
+                    return `<article class="simple-note note-full">
+                      <div class="simple-note-meta">
+                        <span class="simple-note-tag">${escapeHtml(n.department || "mixed")}</span>
+                        <span class="muted note-src">${escapeHtml(packLabel(n.sourcePack))}</span>
+                      </div>
+                      ${stem ? `<p class="note-stem"><strong>Q:</strong> ${escapeHtml(stem)}</p>` : ""}
+                      <p class="note-body"><strong>Note:</strong> ${escapeHtml(text || "—")}</p>
+                    </article>`;
+                  })
+                  .join("")
+              : `<p class="muted">No notes in this filter.</p>`
+          }
+        </div>
+        ${
+          list.length > limit
+            ? `<button type="button" class="btn" id="notes-more" style="width:100%;margin-top:12px">Show more (${list.length - limit} left)</button>`
+            : ""
+        }
+        ${
+          list.length > 0 && limit < list.length
+            ? `<button type="button" class="btn ghost" id="notes-all" style="width:100%;margin-top:8px">Load all ${list.length}</button>`
+            : ""
+        }
+      </div>`;
+
+    const apply = (patch) => {
+      state.notesFilter = Object.assign({}, state.notesFilter || {}, patch);
+      if (patch.dept) state.notesLimit = 50;
+      renderNotes();
+    };
+    app.querySelectorAll("[data-note-dept]").forEach((b) => {
+      b.onclick = () => apply({ dept: b.getAttribute("data-note-dept") });
+    });
+    const search = $("#notes-search");
+    if (search) {
+      let t = null;
+      search.oninput = () => {
+        clearTimeout(t);
+        t = setTimeout(() => apply({ q: search.value.trim() }), 200);
+      };
+    }
+    const more = $("#notes-more");
+    if (more) {
+      more.onclick = () => {
+        state.notesLimit = (state.notesLimit || 50) + 80;
+        renderNotes();
+      };
+    }
+    const loadAll = $("#notes-all");
+    if (loadAll) {
+      loadAll.onclick = () => {
+        state.notesLimit = list.length;
+        renderNotes();
+      };
+    }
+  }
+
+  /**
+   * Tab: Flash Notes — جميع المواد
+   * One unified dashboard: 7-day Plan + MCQs by Department + Lessons + Flashcards + Quizzes + Recall Flash Notes.
+   * All from the verified 6-PDF bank (Mar–June + Rafi 16/19 + Saud + Stream).
+   */
+  function runFlashNotesAudit() {
+    const panel = document.getElementById("fn-audit-panel");
+    if (!panel || !window.FLASH_NOTES) return;
+    panel.style.display = "block";
+    panel.innerHTML = '<span style="color:var(--accent)">⏳ Running audit...</span>';
+
+    setTimeout(() => {
+      const FN = window.FLASH_NOTES;
+      const byDept = FN.byDept || {};
+      let total = 0, verified = 0, ref = 0, unknown = 0, missingFields = 0, dupes = 0, noRef = 0, noIdx = 0;
+      const idSet = new Set();
+      const deptRows = [];
+      for (const [dept, items] of Object.entries(byDept)) {
+        let dv = 0, dr = 0, du = 0;
+        for (const it of items) {
+          total++;
+          const mk = it.marker || "unknown";
+          if (mk === "verified") { verified++; dv++; if (!("answerIdx" in it)) noIdx++; }
+          else if (mk === "ref") { ref++; dr++; if (!it.ref) noRef++; }
+          else { unknown++; du++; }
+          if (!it.id || !it.stem) missingFields++;
+          if (idSet.has(it.id)) dupes++;
+          idSet.add(it.id);
+        }
+        const pct = total > 0 ? Math.round((dv + dr) / (dv + dr + du) * 100) : 0;
+        const icon = pct >= 80 ? "🟢" : pct >= 50 ? "🟡" : "🔴";
+        deptRows.push(`<tr style="font-size:0.68rem"><td style="padding:2px 6px">${icon} ${dept}</td><td style="text-align:right;padding:2px 6px">${dv}✅</td><td style="text-align:right;padding:2px 6px">${dr}📝</td><td style="text-align:right;padding:2px 6px">${du}❓</td><td style="text-align:right;padding:2px 6px;font-weight:600">${pct}%</td></tr>`);
+      }
+      const overall = total > 0 ? Math.round((verified + ref) / total * 100) : 0;
+      const issues = [];
+      if (missingFields > 0) issues.push(`❌ ${missingFields} items missing id/stem`);
+      if (dupes > 0) issues.push(`❌ ${dupes} duplicate IDs`);
+      if (noRef > 0) issues.push(`❌ ${noRef} ref items missing ref text`);
+      if (noIdx > 0) issues.push(`⚠️ ${noIdx} verified MCQs missing answerIdx`);
+      const statusLine = issues.length === 0
+        ? `<span style="color:#1b7a3d;font-weight:600">✅ CLEAN — ${overall}% resolved (${verified} verified + ${ref} ref + ${unknown} unknown)</span>`
+        : `<span style="color:#C22F3B;font-weight:600">❌ ${issues.length} issue(s) found</span>`;
+      panel.innerHTML = `
+        <table style="width:100%;border-collapse:collapse;margin-bottom:6px">
+          <thead><tr style="border-bottom:1px solid var(--border);color:var(--text)"><th style="text-align:left;padding:2px 6px">Department</th><th style="text-align:right;padding:2px 6px">✅</th><th style="text-align:right;padding:2px 6px">📝</th><th style="text-align:right;padding:2px 6px">❓</th><th style="text-align:right;padding:2px 6px">Resolved</th></tr></thead>
+          <tbody>${deptRows.join("")}</tbody>
+        </table>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:4px;padding-top:6px;border-top:1px solid var(--border)">
+          ${statusLine}
+          <button type="button" class="btn sm ghost" id="fn-audit-close" style="padding:2px 8px;font-size:0.65rem;margin-left:auto">✕ Close</button>
+        </div>
+      `;
+      const closeBtn = document.getElementById("fn-audit-close");
+      if (closeBtn) closeBtn.onclick = () => { panel.style.display = "none"; };
+    }, 80);
+  }
+
+  // Disputed-answer review list: walk all AI-contradicted items, adjudicate
+  function fnDisputeReview() {
+    const FN = window.FLASH_NOTES;
+    const host = document.getElementById("fn-dispute-list");
+    if (!FN || !host) return;
+    const items = Object.values(FN.byDept || {}).flat().filter(it => it._answer_disputed && !it._merged_into);
+    const rev = asObject(store.get("fnDisputeReview", {}), {});
+    const deptLabel = (id) => ({
+      oms: "Oral Surgery & Medicine", restorative: "Restorative", endo: "Endodontics",
+      perio: "Periodontics", ortho_pedo: "Ortho / Pedo", ethics: "Ethics & IC",
+      fixed: "Fixed Prosth", implant: "Implant", rpd: "RPD"
+    }[id] || id);
+    const optText = (it) => (it.options && it.answerIdx != null && it.options[it.answerIdx])
+      ? it.options[it.answerIdx].replace(/^[a-z][).]\s*/i, '').replace(/[✅🟢🟡✳🔵🔁●]/g, '').trim().slice(0, 90)
+      : '';
+    if (!items.length) {
+      host.innerHTML = '<span class="muted" style="font-size:0.66rem">No disputed items.</span>';
+      return;
+    }
+    const rows = items.map(it => {
+      const dj = it._model_judgment || {};
+      const verdict = rev[it.id]; // "source" | "ai" | undefined
+      const vHtml = verdict === "source" ? '<span class="badge" style="font-size:0.56rem;background:var(--bg3);color:#1b7a3d">✅ source kept</span>'
+        : verdict === "ai" ? '<span class="badge" style="font-size:0.56rem;background:var(--bg3);color:var(--accent2)">✏️ AI right</span>'
+        : '<span class="badge" style="font-size:0.56rem;background:var(--bg3);color:var(--muted)">⏳ pending</span>';
+      return `<div style="border:1px solid var(--border);border-radius:var(--radius);padding:6px 8px;margin-bottom:5px;background:var(--bg1)" data-fn-dr="${it.id}">
+        <div style="display:flex;gap:6px;align-items:start;justify-content:space-between;flex-wrap:wrap">
+          <div style="flex:1;min-width:220px">
+            <div style="font-size:0.72rem;color:var(--text);line-height:1.45">${escapeHtml(it.stem || '').slice(0,140)}</div>
+            <div style="font-size:0.64rem;color:var(--muted);margin-top:2px">${escapeHtml(it.id)} · ${escapeHtml(deptLabel(it.dept))} · ${escapeHtml((it.sources || []).join(', '))}</div>
+          </div>
+          <div style="font-size:0.66rem;min-width:200px;max-width:46%">
+            <div style="color:var(--text)">Source: <b>${escapeHtml((it.answerLetter||'').toUpperCase())}</b> — ${escapeHtml(optText(it))}</div>
+            <div style="color:var(--danger,#c0392b);margin-top:2px">AI: ${escapeHtml((dj.reason || dj.verdict || 'contradicted')).slice(0,160)}</div>
+            <div style="color:var(--muted);margin-top:2px">${escapeHtml(dj.confidence || 'low')} conf · ${(dj.models || []).length} models</div>
+          </div>
+          <div style="display:flex;gap:4px;align-items:center">
+            ${vHtml}
+            <button type="button" class="btn sm ghost" data-fn-dr-k="source" data-fn-dr-id="${it.id}" style="padding:1px 8px;font-size:0.62rem" title="You checked the source; the marked answer stands">✅ Source correct</button>
+            <button type="button" class="btn sm warn" data-fn-dr-k="ai" data-fn-dr-id="${it.id}" style="padding:1px 8px;font-size:0.62rem" title="The AI is right; needs a source-data fix">✏️ AI right</button>
+            <button type="button" class="btn sm ghost" data-fn-dr-id="${it.id}" style="padding:1px 8px;font-size:0.62rem" title="Study this item in the deck">🔎</button>
+          </div>
+        </div>
+      </div>`;
+    }).join("");
+    host.innerHTML = rows;
+    const doneEl = document.getElementById("fn-dispute-done");
+    if (doneEl) doneEl.textContent = Object.values(rev).filter(v => v === "source" || v === "ai").length;
+    // adjudicate buttons
+    host.querySelectorAll("[data-fn-dr-k]").forEach(b => {
+      b.onclick = () => {
+        const id = b.dataset.fnDrId, k = b.dataset.fnDrK;
+        const cur = asObject(store.get("fnDisputeReview", {}), {});
+        cur[id] = k;
+        store.set("fnDisputeReview", cur);
+        fnDisputeReview();
+      };
+    });
+    // jump-to-study buttons
+    host.querySelectorAll("[data-fn-dr-id]:not([data-fn-dr-k])").forEach(b => {
+      b.onclick = () => {
+        const id = b.dataset.fnDrId;
+        state.fnPane = "cards";
+        state.fnScope = "rev:disputed";
+        state.fnType = "";
+        state.fnOrder = null;
+        const items = Object.values(window.FLASH_NOTES.byDept || {}).flat().filter(i => i._answer_disputed && !i._merged_into).sort((a, b) => (a.dept === b.dept ? a.id.localeCompare(b.id) : (a.dept || '').localeCompare(b.dept || '')));
+        state.fnStudyIdx = Math.max(0, items.findIndex(i => i.id === id));
+        state.fnPicked = null; state.fnRevealed = false;
+        renderMarJune();
+      };
+    });
+    // export decisions
+    const exportBtn = document.getElementById("fn-dispute-export");
+    if (exportBtn) exportBtn.onclick = () => {
+      const payload = items.map(it => {
+        const dj = it._model_judgment || {};
+        return {
+          id: it.id, dept: it.dept, stem: it.stem,
+          source: { letter: it.answerLetter, text: optText(it) },
+          ai: { verdict: dj.verdict, confidence: dj.confidence, reason: dj.reason, models: dj.models || [] },
+          decision: rev[it.id] || null,
+          sources: it.sources || []
+        };
+      });
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "flash_notes_dispute_review.json";
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+    };
+  }
+
+  function renderRecentQa() {
+    const QA = window.RECENT_QA || { items: [], total: 0 };
+    const items = QA.items || [];
+    if (!state.qaFilter) state.qaFilter = { dept: "all", set: "all", q: "" };
+    const filt = state.qaFilter;
+
+    let filtered = items;
+    if (filt.dept && filt.dept !== "all") {
+      filtered = filtered.filter(i => i.dept === filt.dept);
+    }
+    if (filt.set && filt.set !== "all") {
+      filtered = filtered.filter(i => i.set === filt.set);
+    }
+    if (filt.q) {
+      const qq = filt.q.toLowerCase();
+      filtered = filtered.filter(i =>
+        i.stem.toLowerCase().includes(qq) ||
+        (i.answerText || "").toLowerCase().includes(qq) ||
+        (i.reference || "").toLowerCase().includes(qq) ||
+        (i.why || "").toLowerCase().includes(qq)
+      );
+    }
+
+    const deptOpts = [
+      { id: "all", label: "All" },
+      { id: "operative", label: "Operative" },
+      { id: "fixed", label: "Fixed" },
+      { id: "endo", label: "Endo" },
+      { id: "perio", label: "Perio" },
+      { id: "oms", label: "OMS" },
+      { id: "ortho_pedo", label: "Ortho/Pedo" },
+      { id: "rpd", label: "RPD" },
+      { id: "mixed", label: "Mixed" },
+    ];
+    const setOpts = [
+      { id: "all", label: "All Sets" },
+      { id: "A", label: "Set A — Open recall" },
+      { id: "B", label: "Set B — MCQs" },
+      { id: "C", label: "Set C — MCQs" },
+      { id: "D", label: "Set D — MCQs" },
+      { id: "E", label: "Set E — MCQs" },
+    ];
+
+    const withOptions = filtered.filter(i => i.options && i.options.length > 0 && i.options[0]);
+    const withoutOptions = filtered.filter(i => !i.options || !i.options.length || !i.options[0]);
+
+    function renderQaItem(item) {
+      const isMcq = item.options && item.options.length && item.options[0];
+      if (isMcq) {
+        const optHtml = item.options.filter(o => o).map((o, idx) => {
+          const isCorrect = idx === item.answer;
+          return `<li style="padding:6px 10px;border-radius:6px;background:var(--bg1);border:1px solid var(--border);font-size:0.82rem;margin-bottom:4px${isCorrect ? ';background:rgba(27,122,61,.14);border-color:#1b7a3d;font-weight:600':''}">${String.fromCharCode(65 + idx)}. ${escapeHtml(o)}${isCorrect ? ' ✓':''}</li>`;
+        }).join("");
+        return `<article class="simple-note note-full" style="margin-bottom:12px">
+          <div class="simple-note-meta">
+            <span class="simple-note-tag">${escapeHtml(item.dept)}</span>
+            <span class="muted note-src">Set ${escapeHtml(item.set)} · Q${item.qnum}</span>
+          </div>
+          <p class="note-stem"><strong>Q:</strong> ${escapeHtml(item.stem)}</p>
+          <ul style="list-style:none;padding:0;margin:8px 0">${optHtml}</ul>
+          <p style="margin:8px 0 4px;color:var(--accent);font-weight:600">Answer: ${escapeHtml(item.answerText || "")}</p>
+          <p style="margin:6px 0;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;font-size:0.82rem"><b>📖 Why:</b> ${escapeHtml(item.why || "")}</p>
+          <p style="margin:6px 0 0">${item._page ? `<a href="#" class="bookref-link" data-bookref data-book="${escapeHtml(item.reference || '')}" data-page="${escapeHtml(item._page)}" data-ctx="${escapeHtml(item._context || '')}" data-phrase="${escapeHtml(item.answerText || item.answer || '')}">📖 ${escapeHtml(item.reference || 'Book')} — p. ${escapeHtml(item._page)}</a>` : `<span class="muted" style="font-size:0.72rem">📚 ${escapeHtml(item.reference || '')}</span>`}${item._verified === "recall" ? ' <span class="badge" style="font-size:0.6rem;background:var(--bg3);color:var(--muted)">recall — no verbatim passage</span>' : ''}</p>
+        </article>`;
+      } else {
+        return `<article class="simple-note note-full" style="margin-bottom:12px">
+          <div class="simple-note-meta">
+            <span class="simple-note-tag">${escapeHtml(item.dept)}</span>
+            <span class="muted note-src">Set ${escapeHtml(item.set)} · Q${item.qnum}</span>
+          </div>
+          <p class="note-stem"><strong>Q:</strong> ${escapeHtml(item.stem)}</p>
+          <p style="margin:8px 0;padding:10px 12px;background:var(--bg2);border-radius:var(--radius);color:var(--accent2)"><b>Answer:</b> ${escapeHtml(item.answer || "")}</p>
+          <p style="margin:6px 0;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;font-size:0.82rem"><b>📖 Why:</b> ${escapeHtml(item.why || "")}</p>
+          <p style="margin:6px 0 0">${item._page ? `<a href="#" class="bookref-link" data-bookref data-book="${escapeHtml(item.reference || '')}" data-page="${escapeHtml(item._page)}" data-ctx="${escapeHtml(item._context || '')}" data-phrase="${escapeHtml(item.answer || '')}">📖 ${escapeHtml(item.reference || 'Book')} — p. ${escapeHtml(item._page)}</a>` : `<span class="muted" style="font-size:0.72rem">📚 ${escapeHtml(item.reference || '')}</span>`}${item._verified === "recall" ? ' <span class="badge" style="font-size:0.6rem;background:var(--bg3);color:var(--muted)">recall — no verbatim passage</span>' : ''}</p>
+        </article>`;
+      }
+    }
+
+    app.innerHTML = `
+      <div class="simple-hub">
+        <p style="font-size:0.72rem;color:var(--muted);margin:0 0 8px">💡 <b>Book links:</b> move your mouse over any <b>📖 book link</b> — a popup shows the book page with the answer highlighted. On a phone, <b>tap</b> it instead.</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+          <h1 style="margin:0;font-size:1.4rem">📖 Recent Q&A <span style="font-size:0.8rem;color:var(--muted);font-weight:400">أسئلة وأجوبة جديدة</span></h1>
+          <span style="color:var(--accent2);font-weight:600">${items.length} items</span>
+        </div>
+        <p class="simple-lead" style="font-size:0.85rem">62 Q&A — textbook-verified from official SDLE references. Each answer includes the reference and clinical reasoning. <b>Community leads → book-confirmed.</b></p>
+        <div style="padding:8px 12px;background:rgba(27,122,61,.1);border:1px solid rgba(27,122,61,.3);border-radius:var(--radius);font-size:0.78rem;margin-bottom:12px">
+          ✅ All items verified against: Contemporary Fixed Prosthodontics · Sturdevant's Operative Dentistry · Cohen's Pathways of the Pulp · Contemporary OMS · McDonald & Avery Pediatric Dentistry · Carranza's Periodontology · Dental Materials & Their Selection
+        </div>
+
+        <!-- Department filters -->
+        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px">
+          ${deptOpts.map(d => {
+            const active = (filt.dept || "all") === d.id;
+            const cnt = d.id === "all" ? items.length : (QA.byDept && QA.byDept[d.id] ? QA.byDept[d.id].length : items.filter(i => i.dept === d.id).length);
+            return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-qa-dept="${d.id}" style="padding:3px 10px;font-size:0.74rem">${escapeHtml(d.label)} <span class="muted" style="font-size:0.66rem">${cnt}</span></button>`;
+          }).join("")}
+        </div>
+
+        <!-- Set filters -->
+        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px">
+          ${setOpts.map(s => {
+            const active = (filt.set || "all") === s.id;
+            const cnt = s.id === "all" ? items.length : items.filter(i => i.set === s.id).length;
+            return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-qa-set="${s.id}" style="padding:2px 8px;font-size:0.7rem">${escapeHtml(s.label)} <span class="muted">${cnt}</span></button>`;
+          }).join("")}
+        </div>
+
+        <!-- Search -->
+        <input type="search" id="qa-search" class="simple-search" placeholder="Search questions, answers, references…" value="${escapeHtml(filt.q || "")}" style="margin-bottom:8px" />
+
+        <p class="muted simple-count">Showing ${filtered.length} of ${items.length}</p>
+
+        <!-- MCQ items first -->
+        ${withOptions.length ? `<h2 style="font-size:1rem;margin:12px 0 8px;color:var(--accent)">🎯 Multiple Choice Questions</h2>` : ""}
+        <div class="simple-note-list">
+          ${withOptions.length ? withOptions.map(renderQaItem).join("") : ""}
+        </div>
+
+        <!-- Open-ended items -->
+        ${withoutOptions.length ? `<h2 style="font-size:1rem;margin:12px 0 8px;color:var(--accent)">📝 Open-ended Recall Questions</h2>` : ""}
+        <div class="simple-note-list">
+          ${withoutOptions.length ? withoutOptions.map(renderQaItem).join("") : ""}
+        </div>
+
+        ${!filtered.length ? `<p class="muted" style="padding:20px 0;text-align:center">No items match this filter.</p>` : ""}
+
+        <p class="muted" style="margin-top:16px;font-size:0.7rem;border-top:1px solid var(--border);padding-top:10px">
+          Source: SDLE_QA_Answered.docx — 62 Q&A grounded in official textbooks with references + reasoning. All answers verified against the gold-standard references.
+        </p>
+      </div>
+    `;
+
+    // Bind dept filters
+    app.querySelectorAll("[data-qa-dept]").forEach(b => {
+      b.onclick = () => {
+        state.qaFilter = Object.assign({}, state.qaFilter || {}, { dept: b.dataset.qaDept });
+        renderRecentQa();
+      };
+    });
+    // Bind set filters
+    app.querySelectorAll("[data-qa-set]").forEach(b => {
+      b.onclick = () => {
+        state.qaFilter = Object.assign({}, state.qaFilter || {}, { set: b.dataset.qaSet });
+        renderRecentQa();
+      };
+    });
+    // Search
+    const search = $("#qa-search");
+    if (search) {
+      let t = null;
+      search.oninput = () => {
+        clearTimeout(t);
+        t = setTimeout(() => {
+          state.qaFilter = Object.assign({}, state.qaFilter || {}, { q: search.value.trim() });
+          renderRecentQa();
+        }, 200);
+      };
+    }
+  }
+
+  function renderMarJune() {
+    const FN = window.FLASH_NOTES || { byDept: {}, total: 0, markerStats: {}, sources: [], markerLegend: {} };
+    const DEPTS = [
+      { id: "oms", label: "Oral Surgery & Medicine", ar: "جراحة الفم" },
+      { id: "restorative", label: "Restorative", ar: "الترميمي" },
+      { id: "endo", label: "Endodontics", ar: "علاج الجذور" },
+      { id: "perio", label: "Periodontics", ar: "اللثة" },
+      { id: "ortho_pedo", label: "Ortho / Pedo", ar: "تقويم وأسنان أطفال" },
+      { id: "ethics", label: "Ethics & IC", ar: "أخلاقيات" },
+      { id: "fixed", label: "Fixed Prosth", ar: "تعويضات ثابتة" },
+      { id: "implant", label: "Implant", ar: "زراعة" },
+      { id: "rpd", label: "RPD", ar: "تعويضات متحركة" },
+      { id: "diagnostics", label: "Diagnostics", ar: "تشخيص" }
+    ];
+
+    // ------------------------------------------------------------------
+    // 1) STUDYABLE POOL — every item that is NOT a folded duplicate fragment.
+    //    One source of truth for chips, deck counters, and quizzes, so the
+    //    numbers you see always match the items you actually get.
+    // ------------------------------------------------------------------
+    const fnAllItems = [];
+    Object.keys(FN.byDept || {}).forEach(did => (FN.byDept[did] || []).forEach(it => { if (!it._merged_into) fnAllItems.push(it); }));
+    const isMcqItem = (it) => ((it.options || []).length >= 3) && (it.answerIdx != null || it.answerLetter);
+    const isArchiveItem = (it) => !!(it._raw_recall || it._unverified || it._data_quality === 'merged_options_review');
+    const isFlashCard = (it) => it._kind === 'flashcard';
+    const mcqAll = fnAllItems.filter(isMcqItem).length;
+    const cardAll = fnAllItems.length - mcqAll;
+
+    const srcCounts = {}; const srcMcq = {}; const srcCard = {};
+    fnAllItems.forEach(it => {
+      (it.sources || []).forEach(s => {
+        srcCounts[s] = (srcCounts[s] || 0) + 1;
+        if (isMcqItem(it)) srcMcq[s] = (srcMcq[s] || 0) + 1; else srcCard[s] = (srcCard[s] || 0) + 1;
+      });
+    });
+    const deptCounts = {};
+    Object.keys(FN.byDept || {}).forEach(did => { deptCounts[did] = (FN.byDept[did] || []).filter(it => !it._merged_into).length; });
+
+    // ------------------------------------------------------------------
+    // 2) SCOPE RESOLUTION — one function drives the bank chips, the study
+    //    deck AND the quizzes. scopes: all | src:<id> | dept:<id> | rev:<bucket> | search:<q>
+    // ------------------------------------------------------------------
+    const revBuckets = {
+      book:     { label: "📖 Book-verified",       f: it => it._verification_verdict === 'supported' },
+      needs:    { label: "⚠ Needs review",         f: it => it._verification_verdict === 'needs_review' },
+      disputed: { label: "⚠ Disputed answers",     f: it => !!it._answer_disputed },
+      archive:  { label: "📦 Raw recall archive",  f: it => isArchiveItem(it) },
+      cards:    { label: "🃏 Flashcards",           f: it => isFlashCard(it) },
+      repaired: { label: "🛠 Repaired items",       f: it => !!it._repaired_2026 }
+    };
+    const scopeItems = (scope) => {
+      if (!scope || scope === "all") return fnAllItems;
+      if (scope.indexOf("src:") === 0) { const s = scope.slice(4); return fnAllItems.filter(it => (it.sources || []).includes(s)); }
+      if (scope.indexOf("dept:") === 0) { const d = scope.slice(5); return (FN.byDept[d] || []).filter(it => !it._merged_into); }
+      if (scope.indexOf("search:") === 0) {
+        const q = scope.slice(7).toLowerCase();
+        if (!q) return [];
+        return fnAllItems.filter(it => [it.stem, it.answer, it.why, (it.options || []).join(" "), it._embedded_answer, it.reference].join(" ").toLowerCase().includes(q));
+      }
+      if (scope.indexOf("rev:") === 0) { const b = revBuckets[scope.slice(4)]; return b ? fnAllItems.filter(b.f) : []; }
+      return [];
+    };
+    const scopeCount = (scope) => scopeItems(scope).length;
+    const scopeLabel = (scope) => {
+      if (!scope || scope === "all") return "All Flash Notes";
+      if (scope.indexOf("src:") === 0) { const s = scope.slice(4); const m = (FN.sources || []).find(x => x.id === s); return m ? m.label : s; }
+      if (scope.indexOf("dept:") === 0) { const d = scope.slice(5); const m = DEPTS.find(x => x.id === d); return m ? m.label : d; }
+      if (scope.indexOf("rev:") === 0) { const b = revBuckets[scope.slice(4)]; return b ? b.label : scope.slice(4); }
+      if (scope.indexOf("search:") === 0) return "🔍 " + scope.slice(7);
+      return scope;
+    };
+
+    // ------------------------------------------------------------------
+    // 3) PANE / FILTER STATE
+    // ------------------------------------------------------------------
+    if (!state.fnPane) state.fnPane = state._fnDept ? "cards" : "mcqs";
+    const pane = state.fnPane;
+    if (!["mcqs", "cards", "review"].includes(pane)) state.fnPane = "mcqs";
+    if (!state.fnScope) state.fnScope = state._fnDept ? "dept:" + state._fnDept : "all";
+    if (!state.fnSort) state.fnSort = "source";
+    const sortMode = state.fnSort === "dept" ? "dept" : "source";
+    const fnType = state.fnType || "";
+    const selectedScope = state.fnScope || "all";
+
+    // Deck (Cards pane / review walker)
+    let deckItems = scopeItems(selectedScope);
+    // Optional shuffled order (persisted in state.fnOrder)
+    if (state.fnOrder && state.fnOrder.length === deckItems.length) {
+      const byId = {};
+      deckItems.forEach(it => { byId[it.id] = it; });
+      const reordered = state.fnOrder.map(id => byId[id]).filter(Boolean);
+      if (reordered.length === state.fnOrder.length) deckItems = reordered;
+      else state.fnOrder = null;
+    }
+    if (fnType === "mcq") deckItems = deckItems.filter(isMcqItem);
+    else if (fnType === "card") deckItems = deckItems.filter(it => !isMcqItem(it));
+    if (!state.fnStudyIdx || state.fnStudyIdx >= deckItems.length) state.fnStudyIdx = 0;
+    if (state.fnStudyIdx < 0) state.fnStudyIdx = 0;
+    const fnCurr = deckItems[state.fnStudyIdx] || null;
+
+    // Search (practice-style)
+    const fnQ = (state.fnSearch || "").trim();
+    const searchHits = state.fnSearchHits || [];
+    const searchRan = !!state.fnSearchRan;
+    const searchScope = fnQ ? "search:" + fnQ : "";
+
+    // ------------------------------------------------------------------
+    // 4) CARD RENDERER — honest badges, options, book popups (unchanged)
+    // ------------------------------------------------------------------
+    const fnMarkerBadge = (m, hasOpts, hasBookEvidence, hasCommunity) => {
+      if (hasBookEvidence) return '<span class="badge blue" style="font-size:0.62rem" title="Automated evidence candidate; not a final textbook judgment">📖 evidence candidate</span>';
+      if (hasCommunity) return '<span class="badge" style="font-size:0.62rem;background:var(--accent);color:#fff">✅ community</span>';
+      return ({
+        verified: '<span class="badge" style="font-size:0.62rem;background:var(--accent);color:#fff">✅ MCQ</span>',
+        given:    '<span class="badge blue" style="font-size:0.62rem">🟢 given</span>',
+        ref:      '<span class="badge" style="font-size:0.62rem;color:var(--accent2);font-weight:500">📝 recall</span>',
+        unsure:   '<span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--muted)">🔁 unsure</span>',
+        unknown:  '<span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--muted)">⏳ pending</span>'
+      }[m] || '<span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--muted)">?</span>');
+    };
+    const fnInlineAns = (it) => {
+      const s = (it.raw || it.stem || "");
+      let m = s.match(/\b([a-z])[).]\s*([^\n?]*?)[✅🟢🟡✳🔵]/i);
+      if (m) return m[2].replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim().slice(0, 80);
+      m = s.match(/([^\n?]{2,80}?[✅🟢🟡✳])/);
+      if (m) return m[1].replace(/[✅🟢🟡✳🔵🔁●]/g, "").replace(/^[a-z][).]\s*/i, "").trim().slice(0, 80);
+      return "";
+    };
+    const fnStudyCard = (it) => {
+      if (!it) return '<div class="fn-empty" style="padding:40px 0;text-align:center;color:var(--muted);font-size:0.85rem">No card at this position.</div>';
+      const cleanStem = (it.stem || "").replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim();
+      const q = escapeHtml(cleanStem).slice(0, 260);
+      let ansLetter = it.answerLetter, ansText = "";
+      if (it.options && ansLetter) {
+        const opt = it.options.find(o => o.startsWith(ansLetter + ".") || o.startsWith(ansLetter.toLowerCase() + "."));
+        ansText = opt ? opt.replace(/^[a-z][).]\s*/i, "").replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim() : "";
+      } else if (it.answer) {
+        ansText = String(it.answer).slice(0, 200);
+      } else if (!ansLetter) { ansText = fnInlineAns(it); }
+      const hasOpts = (it.options||[]).length > 0 && (it.answerIdx != null || it.answerLetter);
+      const picked = state.fnPicked;
+      const revealed = !!state.fnRevealed;
+      const correctIdx = it.answerIdx != null ? it.answerIdx : (ansLetter ? String(ansLetter).toUpperCase().charCodeAt(0) - 65 : -1);
+      const optsHtml = hasOpts
+        ? `<div style="margin:10px 0 2px;display:flex;flex-direction:column;gap:6px">${(it.options||[]).map((o,i)=>{
+            const letter = String.fromCharCode(65+i);
+            let style = 'background:var(--bg1);border:1px solid var(--border);color:var(--text);';
+            let tag = '';
+            if (revealed) {
+              if (i === correctIdx) { style = 'background:rgba(27,122,61,.16);border:1px solid #1b7a3d;color:var(--text);font-weight:700;'; tag = ' ✓'; }
+              else if (i === picked) { style = 'background:rgba(192,57,43,.12);border:1px solid #c0392b;color:var(--text);'; tag = ' ✗'; }
+            } else if (i === picked) { style = 'border:2px solid var(--accent);background:var(--bg3);color:var(--text);'; tag = ' · your pick'; }
+            const text = String(o).replace(/^[a-z][).]\s*/i, '').replace(/[✅🟢🟡✳🔵🔁●]/g, '').trim();
+            return `<button type="button" data-fn-opt="${i}" style="text-align:left;padding:9px 12px;border-radius:8px;cursor:pointer;font-size:0.86rem;line-height:1.45;${style}"><b style="display:inline-block;min-width:1.4em">${letter}.</b> ${escapeHtml(text)}${tag}</button>`;
+          }).join('')}</div>` : '';
+      const revealHint = (hasOpts && !revealed) ? '<p style="margin:8px 0 0;font-size:0.74rem;color:var(--muted)">👆 Pick an option — or press <b>🔍 Show answer</b> to reveal the correct one.</p>' : '';
+      const ansLine = (ansLetter||ansText)
+        ? `<p style="margin:8px 0 4px;color:var(--text);font-size:0.95rem"><b style="color:var(--muted);font-size:0.72rem;text-transform:uppercase;letter-spacing:.04em">Answer</b> ${ansLetter?`<span style="display:inline-block;min-width:1.4em;padding:1px 7px;margin:0 4px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;text-align:center;font-size:0.8rem">${escapeHtml(ansLetter)}</span>`:''}${ansText?`<span style="color:var(--accent);font-weight:600">${escapeHtml(ansText)}</span>`:''}</p>`
+        : '<p class="muted" style="margin:8px 0 4px;font-size:0.8rem;color:var(--muted)">no marked answer</p>';
+      const aiAns = it._model_suggested_answer;
+      let aiAnsHtml = '';
+      if (aiAns && !ansLetter && !ansText) {
+        const aiText = (it.options && aiAns.answerIdx != null && it.options[aiAns.answerIdx])
+          ? it.options[aiAns.answerIdx].replace(/^[a-z][).]\s*/i, '').replace(/[✅🟢🟡✳🔵🔁●]/g, '').trim().slice(0, 90)
+          : '';
+        aiAnsHtml = `<p style="margin:8px 0 4px;color:var(--text);font-size:0.9rem"><b style="color:var(--muted);font-size:0.7rem;text-transform:uppercase;letter-spacing:.04em">🤖 AI-suggested</b> ${aiAns.letter?`<span style="display:inline-block;min-width:1.4em;padding:1px 7px;margin:0 4px;border-radius:50%;background:var(--bg3);color:var(--accent);font-weight:700;text-align:center;font-size:0.8rem;border:1px solid var(--accent)">${escapeHtml(aiAns.letter)}</span>`:''}<span style="color:var(--accent2)">${escapeHtml(aiText || '')}</span> <span class="badge" style="font-size:0.56rem;background:var(--bg3);color:var(--muted)">AI ${escapeHtml(aiAns.confidence||'low')} conf</span></p>`
+          + (aiAns.reason ? `<p style="margin:2px 0 0;font-size:0.7rem;color:var(--muted)">🤖 ${escapeHtml(aiAns.reason).slice(0,160)}</p>` : '');
+      }
+      const embAns = it._embedded_answer;
+      let embHtml = '';
+      if (embAns && !ansLetter && !ansText && !aiAnsHtml) {
+        embHtml = `<p style="margin:8px 0 4px;font-size:0.85rem"><b style="color:var(--muted);font-size:0.7rem;text-transform:uppercase;letter-spacing:.04em">Recall answer</b> <span style="color:var(--accent);font-weight:600">${escapeHtml(embAns).slice(0,120)}</span> <span class="badge" style="font-size:0.56rem;background:var(--bg3);color:var(--muted)">from source note</span></p>`;
+      }
+      let disputeHtml = '';
+      if (it._answer_disputed && it._model_judgment) {
+        const dj = it._model_judgment || {};
+        const srcTxt = (it.options && it.answerIdx != null && it.options[it.answerIdx])
+          ? it.options[it.answerIdx].replace(/^[a-z][).]\s*/i, '').replace(/[✅🟢🟡✳🔵🔁●]/g, '').trim().slice(0, 90)
+          : '';
+        const reason = (dj.reason || '').trim();
+        disputeHtml = `<div style="margin:8px 0 0;padding:8px 10px;background:rgba(192,57,43,.08);border-left:3px solid var(--danger,#c0392b);border-radius:0 6px 6px 0;font-size:0.78rem;line-height:1.5">
+          <b style="color:var(--danger,#c0392b)">⚠ AI disputes the marked answer</b>
+          ${srcTxt ? `<div style="margin-top:3px;color:var(--text)">Marked: <b>${escapeHtml((it.answerLetter||'').toUpperCase())}</b> — ${escapeHtml(srcTxt)}</div>` : ''}
+          ${reason ? `<div style="margin-top:3px;color:var(--text)">AI: ${escapeHtml(reason)}</div>` : ''}
+          <div style="margin-top:3px;color:var(--muted);font-size:0.68rem">${escapeHtml(dj.confidence||'low')} confidence · ${(dj.models||[]).length ? 'models: ' + escapeHtml(dj.models.slice(0,3).join(', ')) + (dj.models.length>3 ? ' +'+(dj.models.length-3) : '') : ''} · free-model review, not a textbook citation</div>
+        </div>`;
+      }
+      const bookExp = it._book_explanation;
+      const hasBookEvidence = !!(it._verification_verdict === 'supported' && bookExp && (typeof bookExp === 'object' ? bookExp.passage : bookExp));
+      let bookHtml = '';
+      if (hasBookEvidence && typeof bookExp === 'object' && bookExp.passage) {
+        const bPage = bookExp.page || (it._page) || '';
+        bookHtml = `<div style="margin:8px 0 0;font-size:0.78rem">${bPage ? `<button type="button" class="btn sm ghost" data-bookref style="font-size:0.7rem;padding:1px 10px;margin:0 0 4px" data-book="${escapeHtml(bookExp.book||'')}" data-page="${escapeHtml(bPage)}" data-ctx="${escapeHtml(bookExp.context || bookExp.passage || '')}" data-phrase="${escapeHtml((it.answer && typeof it.answer === 'string') ? it.answer : (it.options && it.options[it.answerIdx]) || '')}">📖 Book passage · p. ${escapeHtml(bPage)}</button>` : ''}<details><summary style="cursor:pointer;font-weight:600;color:var(--accent)">📖 Candidate book evidence: ${escapeHtml(bookExp.book||'')} ${escapeHtml(bookExp.chapter||'')}</summary><p class="muted" style="margin:6px 0 0 8px;font-size:0.72rem">Automated match — not a final answer judgment.</p><p style="margin:6px 0 0 8px;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;color:var(--text);line-height:1.5">${escapeHtml((bookExp.passage||'').slice(0,400))}</p></details></div>`;
+      } else if (hasBookEvidence && typeof bookExp === 'string' && bookExp.trim()) {
+        bookHtml = `<p style="margin:8px 0 0;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;font-size:0.82rem;color:var(--text)"><b style="color:var(--accent)">📖 Candidate book evidence:</b> ${escapeHtml(bookExp).slice(0,320)}</p>`;
+      }
+      let commHtml = '';
+      const commExp = it._verified_explanation;
+      if (commExp && typeof commExp === 'string' && commExp.trim()) {
+        commHtml = `<p style="margin:6px 0 0;font-size:0.76rem;color:var(--muted)">✅ Community: ${escapeHtml(commExp).slice(0,200)}</p>`;
+      }
+      const srcHtml = (it.sources||[]).length ? `<p style="margin:6px 0 0;font-size:0.7rem;color:var(--muted)">from: ${escapeHtml((it.sources||[]).join(", "))}</p>` : '';
+      const imgFlag = it.needsImage ? ' <span class="badge" style="font-size:0.58rem;background:var(--bg3);color:var(--accent2)">🖼 image</span>' : '';
+      const qualityFlag = it._data_quality === 'merged_options_review'
+        ? ' <span class="badge" title="Source text contains merged options; review before using as a graded MCQ" style="font-size:0.58rem;background:var(--bg3);color:var(--warn)">⚠ options review</span>'
+        : '';
+      const disputedFlag = it._answer_disputed
+        ? ' <span class="badge" title="AI review flagged this marked answer as likely wrong; verify before studying" style="font-size:0.58rem;background:var(--bg3);color:var(--danger,#c0392b)">⚠ AI disputes answer</span>'
+        : '';
+      const repairedFlag = it._repaired_2026
+        ? ' <span class="badge" title="Question/options restored from the source PDF parse (was a broken fragment)" style="font-size:0.58rem;background:var(--bg3);color:var(--accent2)">🛠 repaired</span>'
+        : '';
+      const aiBadge = it._model_judgment
+        ? (it._model_judgment.verdict === 'supported'
+          ? ' <span class="badge" title="AI model judged the marked answer correct (free-model review; not a textbook citation)" style="font-size:0.58rem;background:var(--bg3);color:var(--accent)">🤖 AI-confirmed</span>'
+          : it._model_judgment.verdict === 'contradicted'
+            ? ''
+            : ' <span class="badge" style="font-size:0.58rem;background:var(--bg3);color:var(--muted)">🤖 AI: unknown</span>')
+        : '';
+      const hasCommunity = !!((it._verified_explanation || '').trim());
+      const marker = fnMarkerBadge(it.marker, hasOpts, hasBookEvidence, hasCommunity);
+      let cardLabel = '';
+      if (it._kind === 'flashcard') {
+        cardLabel = '<span class="badge" style="font-size:0.6rem;background:var(--accent);color:#fff">📇 Flashcard</span>';
+      } else if (hasBookEvidence) {
+        cardLabel = '<span class="badge blue" style="font-size:0.6rem">📖 evidence candidate</span>';
+      } else if (hasOpts && hasCommunity) {
+        cardLabel = '<span class="badge" style="font-size:0.6rem;background:var(--accent);color:#fff">✅ community MCQ</span>';
+      } else if (hasOpts) {
+        cardLabel = '<span class="badge blue" style="font-size:0.6rem;background:var(--accent);color:#fff">MCQ</span>';
+      } else if (hasCommunity) {
+        cardLabel = '<span class="badge" style="font-size:0.6rem;color:var(--accent2);font-weight:500">📝 community recall</span>';
+      } else {
+        cardLabel = '<span class="badge" style="font-size:0.6rem;background:var(--bg3);color:var(--muted)">📝 recall</span>';
+      }
+      const preFlipBadge = (it._page && bookExp && typeof bookExp === 'object' && bookExp.book)
+        ? `<a href="#" class="bookref-link bookref-mini" data-bookref data-mini="1" data-book="${escapeHtml(bookExp.book)}" data-page="${escapeHtml(it._page)}" style="display:inline-block;margin:6px 0 0">📖 ${escapeHtml(bookExp.book)} · p. ${escapeHtml(it._page)}</a>`
+        : '';
+      return `<div class="fn-study-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;min-height:150px">${preFlipBadge}
+        <div style="margin-bottom:4px">${cardLabel}</div>
+        <div class="fn-study-q" style="font-size:1.05rem;line-height:1.6;color:var(--text)">${q}${imgFlag}${qualityFlag}${disputedFlag}${aiBadge}${repairedFlag}</div>
+        ${optsHtml}${revealHint}
+        <div class="fn-study-body" style="${revealed ? '' : 'display:none;'}margin-top:10px;padding-top:10px;border-top:1px dashed var(--border)">${ansLine}${aiAnsHtml}${embHtml}${disputeHtml}${bookHtml}${commHtml}${srcHtml}</div>
+        <div style="margin-top:10px;font-size:0.72rem;color:var(--muted)">${marker}</div>
+      </div>`;
+    };
+
+    // ------------------------------------------------------------------
+    // 5) BANK CHIP + SIZE CHIP helpers (same visual language as Practice tab)
+    // ------------------------------------------------------------------
+    const fnBankChip = (scope, label, extra) => {
+      const n = scopeCount(scope);
+      const on = selectedScope === scope;
+      return `<button type="button" class="hz-bank${on ? " is-on" : ""}" data-fn-scope="${escapeHtml(scope)}" ${n < 1 ? "disabled" : ""}>
+        <span class="hz-bank-name">${escapeHtml(label)}${extra ? ` <span style="opacity:.75;font-weight:400">${extra}</span>` : ""}</span>
+        <span class="hz-bank-n">${n}</span>
+      </button>`;
+    };
+    const fnSizeChips = (scope, n) => {
+      if (n < 1) return '<span class="muted">Empty bank</span>';
+      const sizes = [50, 100, 200].filter(k => k <= n);
+      const parts = sizes.map(k => `<button type="button" class="btn ghost simple-sz" data-fn-qz="${escapeHtml(scope)}" data-n="${k}">${k}</button>`);
+      parts.push(`<button type="button" class="btn success simple-sz" data-fn-qz="${escapeHtml(scope)}" data-n="${QUIZ_ALL}">All ${n}</button>`);
+      return parts.join("");
+    };
+    const fnBankStrip = (banks) => {
+      const parts = [];
+      banks.forEach(b => {
+        parts.push(fnBankChip(b.scope, b.label, b.extra || ""));
+        if (selectedScope === b.scope) {
+          const n = scopeCount(b.scope);
+          parts.push(`<div class="hz-under-sizes" role="group" aria-label="How many"><div class="hz-size-chips">${fnSizeChips(b.scope, n)}</div></div>`);
+        }
+      });
+      return `<div class="hz-strip" role="listbox">${parts.join("")}</div>`;
+    };
+    const fnBankSection = (title, titleAr, banks) => {
+      if (!banks || !banks.length) return "";
+      return `<section class="hz-section">
+        <h3 class="hz-sec-title"><span dir="rtl">${escapeHtml(titleAr || "")}</span> ${escapeHtml(title)}</h3>
+        ${fnBankStrip(banks)}
+      </section>`;
+    };
+    const SOURCE_BANKS = (FN.sources || []).map(s => ({ scope: "src:" + s.id, label: s.label }));
+    const DEPT_BANKS = DEPTS.map(d => ({ scope: "dept:" + d.id, label: d.label, extra: d.ar }));
+    const REVIEW_BANKS = Object.keys(revBuckets).map(k => ({ scope: "rev:" + k, label: revBuckets[k].label }));
+    const sortToggle = `<div class="hz-sort" role="group" aria-label="Sort banks">
+      <button type="button" class="btn sm ${sortMode === "source" ? "success" : "ghost"}" data-fn-sort="source">By source · حسب المصدر</button>
+      <button type="button" class="btn sm ${sortMode === "dept" ? "success" : "ghost"}" data-fn-sort="dept">By department · حسب التخصص</button>
+    </div>`;
+    const mcqsSections = sortMode === "dept"
+      ? fnBankSection("Departments", "حسب التخصص", DEPT_BANKS) +
+        fnBankSection("Sources", "حسب المصدر", SOURCE_BANKS) +
+        fnBankSection("Review", "مراجعة", REVIEW_BANKS)
+      : fnBankSection("Sources", "حسب المصدر", SOURCE_BANKS) +
+        fnBankSection("Departments", "حسب التخصص", DEPT_BANKS) +
+        fnBankSection("Review", "مراجعة", REVIEW_BANKS);
+
+    // ------------------------------------------------------------------
+    // 6) SEARCH (practice-style top search)
+    // ------------------------------------------------------------------
+    const searchTop = `
+      <div class="search-top">
+        <div class="search-top-row">
+          <input type="search" id="fn-search-q" class="bank-search-center" autocomplete="off"
+            placeholder="Search flash notes · ابحث في النوطات السريعة (سؤال، جواب، خيار…)"
+            value="${escapeHtml(fnQ)}" aria-label="Search flash notes" />
+          <button type="button" class="btn success sm" id="fn-search-go">Search · بحث</button>
+          ${fnQ ? `<button type="button" class="btn ghost sm" id="fn-search-clear">Clear</button>` : ""}
+          ${searchHits.length ? `<button type="button" class="btn sm" id="fn-search-drill">Practice ${searchHits.length}</button>` : ""}
+        </div>
+        <div class="bank-search-results">
+          ${searchRan && !searchHits.length && fnQ.length >= 3
+            ? `<p class="muted">No match · لا نتائج</p>`
+            : searchHits.slice(0, 12).map((it, i) => {
+                const preview = String(it.stem || "").slice(0, 140);
+                return `<button type="button" class="bank-hit" data-fn-hit="${escapeHtml(it.id)}">
+                  <span class="bank-hit-meta">${i + 1}. ${escapeHtml((it.sources || []).join(", "))}</span>
+                  <span class="bank-hit-q">${escapeHtml(preview)}${preview.length >= 140 ? "…" : ""}</span>
+                </button>`;
+              }).join("")}
+        </div>
+      </div>`;
+
+    // ------------------------------------------------------------------
+    // 7) CARDS PANE — one-by-one study deck
+    // ------------------------------------------------------------------
+    const typeSegHtml = [['', 'All', fnAllItems.length], ['mcq', 'MCQs', mcqAll], ['card', 'Flash cards', cardAll]].map(([t, label, n]) => {
+      const active = fnType === t;
+      return `<button type="button" class="btn ${active ? 'success' : 'ghost'}" data-fn-type="${t}" style="padding:6px 16px;font-size:0.85rem;font-weight:600">${label} <span class="muted" style="font-weight:400">(${n})</span></button>`;
+    }).join('');
+    const deckSrcChips = `<button type="button" class="btn sm ${selectedScope === "all" ? "success" : "ghost"}" data-fn-scope="all" style="padding:2px 8px;font-size:0.68rem">All</button>`
+      + (FN.sources || []).map(s => {
+          const active = selectedScope === "src:" + s.id;
+          const n = srcCounts[s.id] || 0;
+          return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-fn-scope="src:${escapeHtml(s.id)}" style="padding:2px 8px;font-size:0.68rem" title="${escapeHtml(s.file || "")}">${escapeHtml(s.label)} <span class="muted">${n}</span></button>`;
+        }).join('');
+    const deckDeptChips = `<button type="button" class="btn sm ${selectedScope === "all" ? "success" : "ghost"}" data-fn-scope="all" style="padding:2px 8px;font-size:0.68rem">All depts</button>`
+      + DEPTS.map(d => {
+          const active = selectedScope === "dept:" + d.id;
+          const n = deptCounts[d.id] || 0;
+          if (!n) return "";
+          return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-fn-scope="dept:${d.id}" style="padding:2px 8px;font-size:0.68rem">${escapeHtml(d.label)} <span class="muted">${n}</span></button>`;
+        }).join('');
+    const cardsHtml = `
+      <div class="hz-layout">
+        <section class="hz-section">
+          <h3 class="hz-sec-title"><span dir="rtl">دراسة بطاقة بطاقة</span> Study deck — <span style="color:var(--accent)">${escapeHtml(scopeLabel(selectedScope))}</span></h3>
+          <p class="muted" style="font-size:0.74rem;margin-bottom:8px">One card at a time: pick an option (MCQs) or press <b>🔍 Show answer</b> (recall cards). Card labels tell you honestly what each item is: 📖 evidence candidate · ✅ community MCQ · 📝 recall.</p>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px">${typeSegHtml}</div>
+          <div style="font-size:0.72rem;font-weight:700;color:var(--muted);margin-bottom:4px">By source — تختار المصدر</div>
+          <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px">${deckSrcChips}</div>
+          <div style="font-size:0.72rem;font-weight:700;color:var(--muted);margin-bottom:4px">By department</div>
+          <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px">${deckDeptChips}</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-bottom:8px;padding:6px 10px;background:var(--bg3);border-radius:var(--radius);border:1px solid var(--border)">
+            <span style="font-size:0.8rem;font-weight:600;color:var(--text)">📌 ${escapeHtml(scopeLabel(selectedScope))} · ${fnType === 'mcq' ? 'MCQs' : fnType === 'card' ? 'Cards' : 'All'}</span>
+            <span style="font-size:0.72rem;color:var(--muted)" id="fn-counter">${state.fnStudyIdx+1} / ${deckItems.length}</span>
+          </div>
+          <div id="fn-study-widget" style="min-height:130px">
+            ${fnStudyCard(fnCurr)}
+            <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">
+              <button type="button" class="btn sm ghost" id="fn-prev" ${state.fnStudyIdx <= 0 ? 'disabled' : ''}>← Prev</button>
+              <span style="font-size:0.78rem;color:var(--muted)">${state.fnStudyIdx+1} / ${deckItems.length}</span>
+              <button type="button" class="btn sm ghost" id="fn-next" ${state.fnStudyIdx+1 >= deckItems.length ? 'disabled' : ''}>Next →</button>
+              <button type="button" class="btn success sm" id="fn-reveal">🔍 Show answer</button>
+              <button type="button" class="btn sm ghost" id="fn-study-tts">🔊 Listen</button>
+              <button type="button" class="btn sm ghost" id="fn-study-stop" style="display:none">⏹ Stop</button>
+            </div>
+          </div>
+          <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:0.72rem;color:var(--muted)">
+            <button type="button" class="btn sm ghost" data-fn-shuffle style="padding:2px 8px;font-size:0.68rem">🔀 Shuffle deck</button>
+            <button type="button" class="btn sm ghost" data-fn-quiz-deck style="padding:2px 8px;font-size:0.68rem">▶ Quiz this deck (${deckItems.length})</button>
+          </div>
+        </section>
+      </div>`;
+
+    // ------------------------------------------------------------------
+    // 8) REVIEW PANE — needs-review walker + disputed adjudication + archive
+    // ------------------------------------------------------------------
+    const needsN = scopeCount("rev:needs");
+    const disputedN = scopeCount("rev:disputed");
+    const archiveN = scopeCount("rev:archive");
+    const bookN = scopeCount("rev:book");
+    const reviewHtml = `
+      <div class="hz-layout">
+        <section class="hz-section" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin-bottom:14px">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <div>
+              <h3 style="margin:0;font-size:1rem;color:var(--text)">⚠ Items needing review (${needsN})</h3>
+              <p class="muted" style="margin:4px 0 0;font-size:0.75rem">No supporting textbook passage found yet. Study them as <b>recall leads</b>, not verified facts — every card is honestly labelled.</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+            <button type="button" class="btn success" data-fn-rev-walk="needs">▶ Walk needs-review deck (${needsN})</button>
+            <button type="button" class="btn" data-fn-rev-walk="disputed">⚠ Walk disputed answers (${disputedN})</button>
+            <button type="button" class="btn ghost" data-fn-rev-walk="book">📖 Book-verified only (${bookN})</button>
+            <button type="button" class="btn ghost" data-fn-rev-walk="archive">📦 Raw recall archive (${archiveN})</button>
+          </div>
+        </section>
+        <section class="hz-section">
+          <h3 class="hz-sec-title">⚠ Disputed answers — adjudicate</h3>
+          <p class="muted" style="font-size:0.72rem;margin:2px 0 6px">AI free-model review flagged these marked answers as likely wrong. Mark each ✅ source-correct or ✏️ AI-right (saved in this browser); export decisions as JSON for a data fix.</p>
+          <div id="fn-dispute-list" style="margin-top:4px"></div>
+          <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+            <button type="button" class="btn sm warn" id="fn-dispute-export">📋 Export decisions (JSON)</button>
+            <span class="muted" style="font-size:0.62rem">Reviewed <b id="fn-dispute-done">0</b>/${disputedN} · decisions live in this browser only (localStorage), not in the data file</span>
+          </div>
+        </section>
+        <section class="hz-section">
+          <h3 class="hz-sec-title">📦 Raw recall archive</h3>
+          <p class="muted" style="font-size:0.72rem;margin:2px 0 6px">Unstructured source fragments (${archiveN}) — demoted from the study deck, honestly labelled. Walk them in the Cards tab via the Review chip, or quiz them below.</p>
+          <div class="hz-under-sizes" role="group"><div class="hz-size-chips">${fnSizeChips("rev:archive", archiveN)}</div></div>
+        </section>
+      </div>`;
+
+    // ------------------------------------------------------------------
+    // 9) PAGE
+    // ------------------------------------------------------------------
+    app.innerHTML = `
+      <div class="simple-hub">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+          <h1 style="margin:0;font-size:1.4rem">📚 Flash Notes <span style="font-size:0.8rem;color:var(--muted);font-weight:400">النوطات السريعة</span></h1>
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="color:var(--accent2);font-weight:600">${fnAllItems.length} items</span>
+            <span class="muted">${mcqAll} MCQ · ${cardAll} cards</span>
+          </div>
+        </div>
+        ${searchTop}
+        <div class="tadarrub-tabs" role="tablist">
+          <button type="button" class="tad-tab${pane === "mcqs" ? " active" : ""}" data-fn-pane="mcqs">🎯 MCQs</button>
+          <button type="button" class="tad-tab${pane === "cards" ? " active" : ""}" data-fn-pane="cards">🃏 Cards</button>
+          <button type="button" class="tad-tab${pane === "review" ? " active" : ""}" data-fn-pane="review">⚠ Review</button>
+        </div>
+        ${pane === "mcqs" ? `<div class="hz-layout">${sortToggle}${mcqsSections}</div>`
+          : pane === "cards" ? cardsHtml
+          : reviewHtml}
+        <p style="font-size:0.7rem;color:var(--muted);margin:10px 0 0">💡 <b>Honesty labels:</b> 📖 book-verified (real passage) · ✅ community MCQ (marked in source, book-check pending) · 📝 recall (Q→A note) · ⚠ needs review (no passage found). Click a bank → pick 50/100/200/All → the quiz uses <b>exactly</b> that source/department/review bucket.</p>
+        <details style="margin-top:6px;font-size:0.68rem">
+          <summary style="cursor:pointer;color:var(--muted)">📊 ${FN.markerStats?.verified || 0}✅ · ${FN.markerStats?.ref || 0}📝 · ${FN.markerStats?.unknown || 0}❓ · 🤖 ${FN.aiStats?.judged || 0} AI-reviewed · ⚠ ${FN.aiStats?.disputed || 0} disputed</summary>
+          <div style="padding:6px 8px;margin-top:4px;background:var(--bg1);border-radius:var(--radius);border:1px solid var(--border)">
+            <span>✅ <b>${FN.markerStats?.verified || 0}</b> verified</span> ·
+            <span>📝 <b>${FN.markerStats?.ref || 0}</b> ref</span> ·
+            <span>❓ <b>${FN.markerStats?.unknown || 0}</b> unknown</span>
+            <button type="button" class="btn sm ghost" id="fn-audit-btn" style="padding:1px 6px;font-size:0.6rem;margin-left:8px">🔍 Audit</button>
+          </div>
+          <div style="padding:4px 8px;margin-top:4px;background:var(--bg1);border-radius:var(--radius);border:1px solid var(--border);font-size:0.62rem;color:var(--muted)">
+            🤖 <b>${FN.aiStats?.judged || 0}</b> AI-reviewed · ⚠ <b>${FN.aiStats?.disputed || 0}</b> answer disputed · 💡 <b>${FN.aiStats?.suggested || 0}</b> AI-suggested answers
+          </div>
+        </details>
+        <div id="fn-audit-panel" style="display:none;margin-top:4px;padding:6px 8px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);font-size:0.68rem"></div>
+        <p class="muted" style="margin-top:10px;font-size:0.62rem;border-top:1px solid var(--border);padding-top:6px">
+          Sources: أبطال · رفيع المقام 16 & 19 · تلخيص سعود · ملف سعود مصحّح · SDLE May 2026 · الملف الذهبي ٢ · June–July 2023 · July 2026 · Bank 160 · SDLE Q&A Answered
+        </p>
+      </div>`;
+
+    // === BIND EVENTS ===
+
+    // Tabs + sort + bank chips + size chips
+    app.querySelectorAll("[data-fn-pane]").forEach(b => {
+      b.onclick = () => { state.fnPane = b.dataset.fnPane; state.fnOrder = null; renderMarJune(); };
+    });
+    app.querySelectorAll("[data-fn-sort]").forEach(b => {
+      b.onclick = () => { state.fnSort = b.dataset.fnSort; state.fnOrder = null; renderMarJune(); };
+    });
+    app.querySelectorAll("[data-fn-scope]").forEach(b => {
+      b.onclick = () => { state.fnScope = b.dataset.fnScope; state.fnStudyIdx = 0; state.fnPicked = null; state.fnRevealed = false; state.fnOrder = null; renderMarJune(); };
+    });
+    app.querySelectorAll(".simple-sz[data-fn-qz]").forEach(b => {
+      b.onclick = () => startFlashQuiz(b.dataset.fnQz, +b.dataset.n, "learn", false);
+    });
+    // Review-pane walk buttons → Cards deck scoped to that bucket
+    app.querySelectorAll("[data-fn-rev-walk]").forEach(b => {
+      b.onclick = () => { state.fnPane = "cards"; state.fnScope = "rev:" + b.dataset.fnRevWalk; state.fnType = ""; state.fnStudyIdx = 0; state.fnPicked = null; state.fnRevealed = false; state.fnOrder = null; renderMarJune(); };
+    });
+    // Shuffle / quiz-this-deck
+    const shuffleBtn = app.querySelector("[data-fn-shuffle]");
+    if (shuffleBtn) shuffleBtn.onclick = () => {
+      const items = scopeItems(selectedScope);
+      if (!items.length) return;
+      state.fnOrder = items.map(it => it.id).sort(() => Math.random() - 0.5);
+      state.fnStudyIdx = 0; state.fnPicked = null; state.fnRevealed = false;
+      renderMarJune();
+    };
+    const quizDeckBtn = app.querySelector("[data-fn-quiz-deck]");
+    if (quizDeckBtn) quizDeckBtn.onclick = () => startFlashQuiz(selectedScope, QUIZ_ALL, "learn", false);
+
+    // Search
+    const runFnSearch = () => {
+      const inp = document.getElementById("fn-search-q");
+      const raw = inp ? inp.value : "";
+      state.fnSearch = raw;
+      state.fnSearchRan = true;
+      state.fnOrder = null;
+      state.fnSearchHits = raw.trim().length >= 2 ? scopeItems("search:" + raw.trim()) : [];
+      renderMarJune();
+      const inp2 = document.getElementById("fn-search-q");
+      if (inp2) { inp2.focus(); try { inp2.setSelectionRange(inp2.value.length, inp2.value.length); } catch (_) {} }
+    };
+    const goBtn = document.getElementById("fn-search-go");
+    if (goBtn) goBtn.onclick = runFnSearch;
+    const clearBtn = document.getElementById("fn-search-clear");
+    if (clearBtn) clearBtn.onclick = () => {
+      state.fnSearch = ""; state.fnSearchHits = []; state.fnSearchRan = false; state.fnOrder = null;
+      renderMarJune();
+    };
+    const drillBtn = document.getElementById("fn-search-drill");
+    if (drillBtn) drillBtn.onclick = () => {
+      if (!(state.fnSearchHits || []).length) return;
+      startFlashQuiz("search:" + state.fnSearch, state.fnSearchHits.length, "learn", false);
+    };
+    app.querySelectorAll("[data-fn-hit]").forEach(b => {
+      b.onclick = () => {
+        const id = b.dataset.fnHit;
+        const hit = (state.fnSearchHits || []).find(h => h.id === id);
+        if (!hit) return;
+        state.fnScope = "search:" + state.fnSearch;
+        state.fnStudyIdx = scopeItems(state.fnScope).findIndex(it => it.id === id);
+        state.fnPane = "cards";
+        state.fnPicked = null; state.fnRevealed = false; state.fnOrder = null;
+        renderMarJune();
+      };
+    });
+    const searchInp = document.getElementById("fn-search-q");
+    if (searchInp) {
+      searchInp.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); runFnSearch(); } });
+    }
+
+    // Study widget: pick an option -> instantly reveals correct answer
+    app.querySelectorAll("[data-fn-opt]").forEach(b => {
+      b.onclick = () => {
+        state.fnPicked = +b.dataset.fnOpt;
+        state.fnRevealed = true;
+        renderMarJune();
+        scrollToStudy();
+      };
+    });
+    // Reveal answer
+    const revealBtn = document.getElementById("fn-reveal");
+    if (revealBtn) revealBtn.onclick = () => { state.fnRevealed = true; renderMarJune(); scrollToStudy(); };
+    // Prev / next
+    const goStudy = (delta) => {
+      if (!deckItems.length) return;
+      state.fnStudyIdx = Math.max(0, Math.min(deckItems.length - 1, (state.fnStudyIdx || 0) + delta));
+      state.fnPicked = null; state.fnRevealed = false;
+      renderMarJune();
+    };
+    const prevBtn = document.getElementById("fn-prev");
+    if (prevBtn) prevBtn.onclick = () => goStudy(-1);
+    const nextBtn = document.getElementById("fn-next");
+    if (nextBtn) nextBtn.onclick = () => goStudy(+1);
+    const scrollToStudy = () => {
+      const el = document.getElementById("fn-study-widget");
+      if (el) el.scrollIntoView({ block: "center", behavior: "smooth" });
+    };
+    // Type segmented control (deck)
+    app.querySelectorAll("[data-fn-type]").forEach(b => {
+      b.onclick = () => { state.fnType = b.dataset.fnType; state.fnStudyIdx = 0; state.fnPicked = null; state.fnRevealed = false; state.fnOrder = null; renderMarJune(); };
+    });
+    // TTS for the current card
+    const ttsBtn = document.getElementById("fn-study-tts");
+    const stopBtn = document.getElementById("fn-study-stop");
+    if (ttsBtn && stopBtn) {
+      ttsBtn.onclick = () => {
+        if (!fnCurr) return;
+        const qText = (fnCurr.stem || "").replace(/[✅🟢🟡✳🔵🔁●]/g,"").trim();
+        let aText = "";
+        if (fnCurr.answerLetter && fnCurr.options) {
+          const o = fnCurr.options.find(oo=>oo.startsWith(fnCurr.answerLetter+".")||oo.startsWith(fnCurr.answerLetter.toLowerCase()+"."));
+          aText = o ? o.replace(/^[a-z][).]\s*/i,"").replace(/[✅🟢🟡✳🔵🔁●]/g,"").trim() : "";
+        } else if (!fnCurr.answerLetter) {
+          aText = fnInlineAns(fnCurr);
+        }
+        const fullText = "Question: " + qText + ". Answer: " + aText;
+        ttsSpeak(fullText);
+        ttsBtn.textContent = "🔊 Playing…";
+        stopBtn.style.display = "";
+      };
+      stopBtn.onclick = () => { ttsStop(); ttsBtn.textContent = "🔊 Listen"; stopBtn.style.display = "none"; };
+    }
+    // Audit
+    const auditBtn = document.getElementById("fn-audit-btn");
+    if (auditBtn) auditBtn.onclick = runFlashNotesAudit;
+    // Disputed adjudication list
+    fnDisputeReview();
+  }
+  function renderRecalls() {
+    const packs = examPacksMeta()
+      .slice()
+      .sort((a, b) => (a.priority || 9) - (b.priority || 9));
+    const openId = state.recallPack || null;
+    const open = packs.find((p) => p.id === openId) || null;
+
+    if (open) {
+      const nBank = poolN(open.bankPool || "all");
+      const allItems = open.items || [];
+      const noteN = open.noteCount != null
+        ? open.noteCount
+        : allItems.filter((x) => (x.notes || []).length).length;
+      const months = Array.from(
+        new Set(allItems.map((x) => x.month || "—").filter(Boolean))
+      );
+      const filt = state.recallFilter || { month: "all", q: "", notesOnly: false };
+      let items = allItems;
+      if (filt.month && filt.month !== "all") {
+        items = items.filter((x) => (x.month || "—") === filt.month);
+      }
+      if (filt.notesOnly) {
+        items = items.filter((x) => (x.notes || []).length > 0);
+      }
+      if (filt.q) {
+        const qq = String(filt.q).toLowerCase();
+        items = items.filter((x) => {
+          const blob = [x.stem, ...(x.options || []), ...(x.notes || [])]
+            .join(" ")
+            .toLowerCase();
+          return blob.includes(qq);
+        });
+      }
+      const themes = (open.themes || [])
+        .map((t) => `<span class="badge blue">${escapeHtml(t)}</span>`)
+        .join(" ");
+      const monthBtns = [
+        `<button type="button" class="btn sm ${filt.month === "all" ? "" : "ghost"}" data-month="all">All months</button>`,
+        ...months.map(
+          (m) =>
+            `<button type="button" class="btn sm ${
+              filt.month === m ? "" : "ghost"
+            }" data-month="${escapeHtml(m)}">${escapeHtml(m)}</button>`
+        ),
+      ].join("");
+      app.innerHTML = `
+        ${backBarHtml("← All recall packs")}
+        <h1>${escapeHtml(open.title)}</h1>
+        <p class="lead">${escapeHtml(open.period || "")}${
+          open.pages ? ` · ${open.pages} PDF pages` : ""
+        } · <strong>${allItems.length}</strong> items extracted ·
+        <strong>${noteN}</strong> with notes ·
+        bank pool <strong>${escapeHtml(open.bankPool || "—")}</strong> (${nBank} Q)</p>
+        ${
+          open.noteAr
+            ? `<p class="muted" dir="rtl" style="text-align:right">${escapeHtml(open.noteAr)}</p>`
+            : ""
+        }
+        <p class="muted pack-disclaimer">${escapeHtml(open.disclaimer || "")}</p>
+        <div class="volume-grid" style="margin-bottom:12px">
+          <button type="button" class="btn success" id="pack-drill" ${nBank < 1 ? "disabled" : ""}>
+            Practice linked bank (${nBank})
+          </button>
+          <button type="button" class="btn ghost" id="pack-drill-25" ${nBank < 1 ? "disabled" : ""}>25 Q</button>
+          <button type="button" class="btn ghost" id="pack-back">All packs</button>
+        </div>
+        <div class="pack-themes">${themes || ""}</div>
+        <div class="pack-filter-bar">
+          <input type="search" id="pack-search" class="pack-search" placeholder="Search stems / notes…" value="${escapeHtml(
+            filt.q || ""
+          )}" />
+          <label class="pack-notes-toggle"><input type="checkbox" id="pack-notes-only" ${
+            filt.notesOnly ? "checked" : ""
+          } /> Notes only</label>
+        </div>
+        <div class="pack-month-row">${monthBtns}</div>
+        <p class="muted">Showing <strong>${items.length}</strong> of ${allItems.length}</p>
+        <div class="pack-items">
+          ${items
+            .map((it, idx) => {
+              const opts = (it.options || [])
+                .map(
+                  (o, i) =>
+                    `<li><span class="muted">${"ABCD"[i] || "?"}.</span> ${escapeHtml(o)}</li>`
+                )
+                .join("");
+              const notes = (it.notes || [])
+                .map((n) => `<li>${escapeHtml(n)}</li>`)
+                .join("");
+              return `<article class="pack-item${notes ? " has-notes" : ""}">
+                <header>
+                  <strong>#${escapeHtml(String(it.n != null ? it.n : idx + 1))}</strong>
+                  <span class="muted">${escapeHtml(it.month || "")}${
+                    it.topic ? " · " + escapeHtml(it.topic) : ""
+                  }</span>
+                  ${it.communityMarked ? '<span class="badge" title="Community mark in PDF">PDF ✅</span>' : ""}
+                  ${notes ? '<span class="badge blue">note</span>' : ""}
+                </header>
+                <p class="pack-stem">${escapeHtml(it.stem || "")}</p>
+                ${opts ? `<ul class="pack-opts">${opts}</ul>` : ""}
+                ${
+                  notes
+                    ? `<div class="pack-notes"><strong>Notes</strong><ul>${notes}</ul></div>`
+                    : ""
+                }
+              </article>`;
+            })
+            .join("")}
+        </div>
+        ${
+          !items.length
+            ? `<p class="muted">No items match this filter — clear search or month.</p>`
+            : ""
+        }
+      `;
+      bindBackBar();
+      const back = () => {
+        state.recallPack = null;
+        state.recallFilter = null;
+        renderRecalls();
+      };
+      $("#pack-back") && ($("#pack-back").onclick = back);
+      const bb = $("#back-bar-btn");
+      if (bb) {
+        const prev = bb.onclick;
+        bb.onclick = () => {
+          state.recallPack = null;
+          state.recallFilter = null;
+          if (typeof prev === "function") prev();
+          else renderRecalls();
+        };
+      }
+      $("#pack-drill") &&
+        ($("#pack-drill").onclick = () =>
+          startQuiz(open.bankPool, QUIZ_ALL, "learn", false));
+      $("#pack-drill-25") &&
+        ($("#pack-drill-25").onclick = () => startQuiz(open.bankPool, 25, "learn", false));
+      const applyFilter = (patch) => {
+        state.recallFilter = Object.assign({}, state.recallFilter || {}, patch);
+        renderRecalls();
+      };
+      app.querySelectorAll("[data-month]").forEach((b) => {
+        b.onclick = () => applyFilter({ month: b.getAttribute("data-month") });
+      });
+      const notesOnly = $("#pack-notes-only");
+      if (notesOnly) {
+        notesOnly.onchange = () => applyFilter({ notesOnly: !!notesOnly.checked });
+      }
+      const search = $("#pack-search");
+      if (search) {
+        let t = null;
+        search.oninput = () => {
+          clearTimeout(t);
+          t = setTimeout(() => applyFilter({ q: search.value.trim() }), 200);
+        };
+      }
+      return;
+    }
+
+    const invAbtal = poolN("abtal");
+    const invSaud = poolN("saud_delta");
+    const invStream = poolN("stream");
+    const invRafi = poolN("rafi");
+    app.innerHTML = `
+      <h1>Recalls · exam packs</h1>
+      <p class="lead">أبطال windows + <strong>رفيع المقام</strong> + سعود delta. Browse stems; drill bank pools.
+        <b>Not official SCFHS keys</b> — community marks can be wrong.</p>
+      <div class="volume-grid pack-quick">
+        <button type="button" class="btn success" data-pack-pool="rafi" data-n="${QUIZ_ALL}">رفيع ALL (${invRafi})</button>
+        <button type="button" class="btn" data-pack-pool="abtal" data-n="${QUIZ_ALL}">أبطال bank (${invAbtal})</button>
+        <button type="button" class="btn" data-pack-pool="saud_delta" data-n="${QUIZ_ALL}">سعود delta (${invSaud})</button>
+        <button type="button" class="btn ghost" data-pack-pool="stream" data-n="${QUIZ_ALL}">Stream (${invStream})</button>
+      </div>
+      <div class="pack-grid">
+        ${packs
+          .map((p) => {
+            const n = poolN(p.bankPool || "all");
+            const themes = (p.themes || [])
+              .slice(0, 4)
+              .map((t) => `<span class="badge blue">${escapeHtml(t)}</span>`)
+              .join(" ");
+            return `<div class="pack-card" data-open-pack="${escapeHtml(p.id)}">
+              <div class="mcq-cat-head">
+                <strong>${escapeHtml(p.title)}</strong>
+                <span class="badge">${escapeHtml(p.kind || "")}</span>
+              </div>
+              <p class="muted mcq-cat-sub">${escapeHtml(p.period || "")}${
+                p.pages ? ` · ${p.pages}p` : ""
+              } · <b>${p.itemCountExtracted || (p.items || []).length}</b> items ·
+              ${(p.noteCount != null ? p.noteCount : 0)} with notes · practice ${n}</p>
+              <div class="pack-themes">${themes}</div>
+              <div class="volume-grid mcq-cat-actions">
+                <button type="button" class="btn" data-open-pack="${escapeHtml(p.id)}">Browse stems</button>
+                <button type="button" class="btn ghost" data-pack-pool="${escapeHtml(
+                  p.bankPool || "all"
+                )}" data-n="25" ${n < 1 ? "disabled" : ""}>Drill 25</button>
+              </div>
+            </div>`;
+          })
+          .join("")}
+      </div>
+      <p class="muted" style="margin-top:16px">Source: local أبطال PDFs + تلخيص سعود + رفيع مقام 16/19 + ملف سعود مصحّح + SDLE May 2026. Full رفيع books not mirrored in-app. Use the <a href="#" data-go="marjune" class="link">Flash Notes tab</a> for the unified study plan.</p>
+    `;
+    app.querySelectorAll("[data-open-pack]").forEach((el) => {
+      el.onclick = (e) => {
+        e.stopPropagation();
+        state.recallPack = el.getAttribute("data-open-pack");
+        renderRecalls();
+      };
+    });
+    app.querySelectorAll("[data-pack-pool]").forEach((btn) => {
+      btn.onclick = (e) => {
+        e.stopPropagation();
+        const poolKey = btn.getAttribute("data-pack-pool");
+        const n = +btn.getAttribute("data-n") || 25;
+        startQuiz(poolKey, n, "learn", false);
+      };
+    });
+  }
+
+  function renderMcqs() {
+    const inv = bankInventory();
+    const rawTotal = (window.QUESTION_BANK || []).length;
+    const primary = MCQ_CATEGORIES.filter((c) => c.primary);
+    const secondary = MCQ_CATEGORIES.filter((c) => !c.primary);
+
+    function catCard(c) {
+      const n = poolN(c.pool);
+      const disabled = n < 1 ? "disabled" : "";
+      return `<div class="mcq-cat-card" data-pool="${escapeHtml(c.pool)}">
+        <div class="mcq-cat-head">
+          <strong>${escapeHtml(c.label)}</strong>
+          <span class="badge blue">${n}</span>
+        </div>
+        <p class="muted mcq-cat-sub">Full test = every usable MCQ in this pool</p>
+        <div class="volume-grid mcq-cat-actions">
+          <button type="button" class="btn success" data-mcq-start="${escapeHtml(c.pool)}" data-n="${QUIZ_ALL}" ${disabled}>Start full test</button>
+          <button type="button" class="btn ghost" data-mcq-start="${escapeHtml(c.pool)}" data-n="50" ${n < 1 ? "disabled" : ""}>50</button>
+          <button type="button" class="btn ghost" data-mcq-start="${escapeHtml(c.pool)}" data-n="100" ${n < 1 ? "disabled" : ""}>100</button>
+          <button type="button" class="btn ghost" data-mcq-start="${escapeHtml(c.pool)}" data-n="150" ${n < 1 ? "disabled" : ""}>150</button>
+        </div>
+      </div>`;
+    }
+
+    app.innerHTML = `
+      <h1>MCQs — practice tests</h1>
+      <p class="lead"><b>أبطال ★</b> = highly recommended (recalls).
+        <b>رفيع</b> from خطة المذاكرة: <b>11–19 first</b> (refs) → then <b>7·5·10·9·1·3</b>;
+        parts 2/4/6/8 = extra only. Study subject-by-subject across files.
+        <b>Preferred</b> = أبطال + curated + quality core رفيع. <b>All</b> = full dump. <b>Archive</b> = rest.</p>
+      <div class="alert"><strong>Preferred ${inv.preferred || 0}</strong> · أبطال ${inv.abtal || 0}
+        · رفيع 11–19 ${inv.rafi_core || 0} · رفيع 2nd ${inv.rafi_second || 0}
+        · All ${inv.all} · Archive ${inv.archive || 0}
+        · Free ${inv.always} · Saud ${inv.saud_delta || 0} · Wrong ${inv.wrong}
+      </div>
+      <div class="alert muted">
+        After you pick an answer, use <b>Show answer</b> for a short why. Next stays on a sticky bar — no scrolling to continue.
+      </div>
+      ${examFocusBannerHtml()}
+
+      <h3>Subjects</h3>
+      <div class="mcq-cat-grid">
+        ${primary.map(catCard).join("")}
+      </div>
+
+      <h3>Subtopics</h3>
+      <div class="mcq-cat-grid">
+        ${secondary.map(catCard).join("")}
+      </div>
+
+      ${inventoryTableHtml(inv)}
+      <p class="muted">Need timed mocks / volume ladders? Use <button type="button" class="btn ghost" id="mcq-to-practice">Extra practice</button></p>
+    `;
+
+    app.querySelectorAll("[data-mcq-start]").forEach((b) => {
+      b.onclick = () => {
+        const pool = b.dataset.mcqStart;
+        const n = +b.dataset.n;
+        startMcqTest(pool, n);
+      };
+    });
+    $("#mcq-to-practice") &&
+      ($("#mcq-to-practice").onclick = () => {
+        state.view = "practice";
+        setActiveNav("practice");
+        render();
+      });
+  }
+
+  /**
+   * Practice = choose, don’t force (Qbank-style create test):
+   * 1) MCQs or flashcards  2) which pool  3) how many  4) learn vs timed  5) start
+   */
+  function practiceTopicLabel(topic) {
+    const map = {
+      all: "Full bank",
+      preferred: "Preferred (SDLE)",
+      archive: "Archive",
+      abtal: "أبطال",
+      rafi_core: "رفيع 11–19",
+      rafi_second: "رفيع 7·5·10·9·1·3",
+      rafi: "رفيع ALL",
+      rafi_plan: "رفيع plan parts",
+      rafi_1619: "رفيع مقام 16 & 19",
+      marjune: "Flash Notes (النوطات السريعة)",
+      complete: "Flash Notes (Mar–June + Rafi 16/19 + Saud + Stream)",
+      plan: "Plan banks",
+      saud_delta: "Saud delta",
+      wrong: "Wrong book",
+      always_src: "Free points",
+      unseen: "Unseen",
+      weak: "Weak topics",
+      operative: "Operative",
+      restorative: "Restorative",
+      perio: "Perio",
+      endo: "Endo",
+      oms: "OMS",
+      ortho_pedo: "Ortho / Pedo",
+      ethics: "Ethics",
+      fixed: "Fixed prosth",
+      rpd: "RPD",
+      implant: "Implant",
+      materials: "Materials",
+      complete_denture: "Complete denture",
+      mixed: "Mixed",
+    };
+    const raw = String(topic || "");
+    if (raw.includes("@")) {
+      const [dept, scope] = raw.split("@");
+      return (map[dept] || dept) + " · " + (map[scope] || scope);
+    }
+    if (map[topic]) return map[topic];
+    if (raw.indexOf("unseen:") === 0) {
+      const rest = raw.slice(7);
+      if (rest.includes("@")) return "Unseen " + practiceTopicLabel(rest);
+      return "Unseen " + (map[rest] || rest);
+    }
+    return topic || "Pool";
+  }
+
+  function getPracticeScope() {
+    if (!state.practiceScope) state.practiceScope = "plan";
+    return state.practiceScope;
+  }
+
+  function setPracticeScope(scope) {
+    state.practiceScope = scope || "plan";
+    try {
+      store.set("practiceScope", state.practiceScope);
+    } catch (_) {}
+  }
+
+  /** Restore scope from storage once */
+  function hydratePracticeScope() {
+    if (state._scopeHydrated) return;
+    state._scopeHydrated = true;
+    const s = store.get("practiceScope", null);
+    if (s) state.practiceScope = s;
+  }
+
+  function ensurePracticeBuild() {
+    if (!state.practiceBuild || typeof state.practiceBuild !== "object") {
+      state.practiceBuild = { step: "hub" };
+    }
+    return state.practiceBuild;
+  }
+
+  function resetPracticeBuild() {
+    state.practiceBuild = { step: "hub" };
+  }
+
+  function goPracticeBuilder() {
+    resetPracticeBuild();
+    navigateTo("practice", { push: true });
+  }
+
+  /** One bank card: title, count, 50 / 100 / All — أبطال uses star styling */
+  function bankCardHtml(opts) {
+    const o = opts || {};
+    const pool = o.pool;
+    const n = poolN(pool);
+    const star = o.star ? " bank-card-star" : "";
+    const sub = o.sub ? `<p class="bank-card-sub">${escapeHtml(o.sub)}</p>` : "";
+    const disabled = n < 1 ? "disabled" : "";
+    return `<article class="bank-card${star}" data-bank-pool="${escapeHtml(pool)}">
+      <div class="bank-card-top">
+        <div>
+          <h3 class="bank-card-title">${o.star ? "★ " : ""}${escapeHtml(o.title)}</h3>
+          ${sub}
+        </div>
+        <span class="badge ${o.star ? "warn" : "blue"}">${n}</span>
+      </div>
+      <div class="bank-card-actions">
+        <button type="button" class="btn ${o.star ? "success" : "ghost"}" data-qz="${escapeHtml(pool)}" data-n="50" ${n < 1 ? "disabled" : ""}>50</button>
+        <button type="button" class="btn ghost" data-qz="${escapeHtml(pool)}" data-n="100" ${n < 1 ? "disabled" : ""}>100</button>
+        <button type="button" class="btn ${o.star ? "success" : ""}" data-qz="${escapeHtml(pool)}" data-n="${QUIZ_ALL}" ${disabled}>All</button>
+      </div>
+    </article>`;
+  }
+
+  function bindBankQuizButtons(root) {
+    (root || app).querySelectorAll("button[data-qz]").forEach((b) => {
+      b.onclick = () => startQuiz(b.dataset.qz, +b.dataset.n, "learn", false);
+    });
+  }
+
+  function renderPractice() {
+    setPracticeScope("plan");
+    const L = lesson();
+    const focusTopic = String(L.quizTopic || "restorative").split(",")[0].trim();
+    const focusDept = [
+      "restorative",
+      "perio",
+      "endo",
+      "oms",
+      "ortho_pedo",
+      "ethics",
+      "operative",
+    ].includes(focusTopic)
+      ? focusTopic === "operative"
+        ? "restorative"
+        : focusTopic
+      : "restorative";
+    const subjectTitle = humanLessonTitle(L);
+    const pane = state.practicePane || "mcqs";
+    if (!["mcqs", "cards", "mock", "always"].includes(pane)) state.practicePane = "mcqs";
+
+    function poolKey(dept) {
+      return dept; // show ALL verified questions for this dept (not just preferred)
+    }
+
+    /** Compact size chips for one selected bank (horizontal). */
+    function sizeChips(pool, n, mode) {
+      if (n < 1) return `<span class="muted">Empty bank</span>`;
+      const isExam = mode === "exam";
+      const sizes = [50, 100, 200].filter((k) => k <= n);
+      const parts = sizes.map(
+        (k) =>
+          `<button type="button" class="btn ghost simple-sz" data-qz="${escapeHtml(pool)}" data-n="${k}" data-mode="${isExam ? "exam" : "learn"}">${k}</button>`
+      );
+      if (!isExam) {
+        parts.push(
+          `<button type="button" class="btn success simple-sz" data-qz="${escapeHtml(pool)}" data-n="${QUIZ_ALL}" data-mode="learn">All ${n}</button>`
+        );
+      } else if (n >= 50) {
+        parts.push(
+          `<button type="button" class="btn success simple-sz" data-qz="${escapeHtml(pool)}" data-n="${Math.min(200, n)}" data-mode="exam">Go ${Math.min(200, n)}</button>`
+        );
+      }
+      return parts.join("");
+    }
+
+    /** Horizontal bank chip (select only). */
+    function bankChip(opts) {
+      const n = poolN(opts.pool);
+      const on = opts.selected ? " is-on" : "";
+      const star = opts.today ? " is-today" : "";
+      return `<button type="button" class="hz-bank${on}${star}" data-pick-pool="${escapeHtml(opts.pool)}" ${n < 1 ? "disabled" : ""}>
+        <span class="hz-bank-name">${escapeHtml(opts.label)}</span>
+        <span class="hz-bank-n">${n}</span>
+      </button>`;
+    }
+
+    const SUBJECTS = [
+      { id: "restorative", label: "Restorative" },
+      { id: "perio", label: "Perio" },
+      { id: "endo", label: "Endo" },
+      { id: "oms", label: "OMS" },
+      { id: "ortho_pedo", label: "Ortho/Pedo" },
+      { id: "ethics", label: "Ethics" },
+    ];
+
+    const cardN = ensureFlashcards().length;
+    const acRules = window.ALWAYS_COMES_READ || [];
+
+    /* Grouped banks — no separate "Today" tile (same pool as focus department) */
+    const bankProviders = [
+      { pool: "abtal", label: "أبطال الديجيتال" },
+      { pool: "rafi", label: "رفيع المقام" },
+      { pool: "rafi_core", label: "رفيع 11–19" },
+      { pool: "rafi_second", label: "رفيع 7·5·10…" },
+      { pool: "saud_delta", label: "سعود delta" },
+      { pool: "stream", label: "Stream" },
+      { pool: "preferred", label: "Preferred" },
+      { pool: "blueprint", label: "Exam mix (blueprint)" },
+      { pool: "all", label: "All MCQs" },
+    ];
+    const bankDepts = SUBJECTS.map((s) => ({
+      pool: poolKey(s.id),
+      label: s.label,
+      today: s.id === focusDept,
+    }));
+    /* Department × provider (full dump for that dept from one source) */
+    const bankDeptAbtal = SUBJECTS.map((s) => ({
+      pool: s.id + "@abtal",
+      label: s.label + " · أبطال",
+    }));
+    const bankDeptRafi = SUBJECTS.map((s) => ({
+      pool: s.id + "@rafi",
+      label: s.label + " · رفيع",
+    }));
+    const bankReview = [
+      { pool: "always_src", label: "اسئلة مكررة" },
+      { pool: "wrong", label: "Wrong book" },
+    ];
+
+    const allBanksFlat = bankProviders
+      .concat(bankDepts)
+      .concat(bankDeptAbtal)
+      .concat(bankDeptRafi)
+      .concat(bankReview);
+
+    if (pane === "mcqs" || pane === "mock") {
+      /* No default selection — size chips only after user picks a bank */
+      const valid = allBanksFlat.some((b) => b.pool === state.practiceBank);
+      if (!valid) state.practiceBank = "";
+    }
+    if (pane === "always") state.practiceBank = "always_src";
+
+    const selectedPool = state.practiceBank || "";
+    /* Default: by department (not provider) */
+    const sortMode = state.practiceSort === "provider" ? "provider" : "department";
+
+    const subnav = `
+      <div class="tadarrub-tabs" role="tablist">
+        <button type="button" class="tad-tab${pane === "mcqs" ? " active" : ""}" data-pane="mcqs">MCQs</button>
+        <button type="button" class="tad-tab${pane === "always" ? " active" : ""}" data-pane="always">اسئلة مكررة</button>
+        <button type="button" class="tad-tab${pane === "cards" ? " active" : ""}" data-pane="cards">Flashcards</button>
+        <button type="button" class="tad-tab${pane === "mock" ? " active" : ""}" data-pane="mock">Mock</button>
+      </div>`;
+
+    const sizeMode = pane === "mock" ? "exam" : "learn";
+
+    /** Bank grid: 50/100/200/All only under the one bank the user clicked. */
+    function bankStrip(banks) {
+      const parts = [];
+      banks.forEach((b) => {
+        const on = !!selectedPool && b.pool === selectedPool;
+        parts.push(
+          bankChip({
+            pool: b.pool,
+            label: b.label,
+            today: b.today,
+            selected: on,
+          })
+        );
+        if (on) {
+          const n = poolN(b.pool);
+          parts.push(`<div class="hz-under-sizes" role="group" aria-label="How many">
+            <div class="hz-size-chips">${sizeChips(b.pool, n, sizeMode)}</div>
+          </div>`);
+        }
+      });
+      return `<div class="hz-strip" role="listbox">${parts.join("")}</div>`;
+    }
+
+    function bankSection(title, titleAr, banks) {
+      if (!banks || !banks.length) return "";
+      return `<section class="hz-section">
+        <h3 class="hz-sec-title"><span dir="rtl">${escapeHtml(titleAr || "")}</span> ${escapeHtml(title)}</h3>
+        ${bankStrip(banks)}
+      </section>`;
+    }
+
+    function sortToggle() {
+      return `<div class="hz-sort" role="group" aria-label="Sort banks">
+        <button type="button" class="btn sm ${sortMode === "department" ? "success" : "ghost"}" data-sort="department">By department · حسب التخصص</button>
+        <button type="button" class="btn sm ${sortMode === "provider" ? "success" : "ghost"}" data-sort="provider">By provider · المصادر</button>
+      </div>`;
+    }
+
+    function banksBySort() {
+      if (sortMode === "provider") {
+        return (
+          bankSection("Exam providers", "مصادر · أبطال · رفيع", bankProviders) +
+          bankSection("By department", "حسب التخصص", bankDepts) +
+          bankSection("Review", "مراجعة", bankReview)
+        );
+      }
+      /* Default: department first — no extra Today row (today’s subject is starred) */
+      return (
+        bankSection("By department", "حسب التخصص", bankDepts) +
+        bankSection("Department · أبطال", "تخصص × أبطال", bankDeptAbtal) +
+        bankSection("Department · رفيع", "تخصص × رفيع", bankDeptRafi) +
+        bankSection("Exam providers", "مصادر الامتحان", bankProviders) +
+        bankSection("Review", "مراجعة", bankReview)
+      );
+    }
+
+    /* Centered upper search — always visible on MCQs / Mock */
+    const sq = state.practiceSearch || "";
+    const searchHits = state.searchHitResults || [];
+    const showSearch = pane === "mcqs" || pane === "mock";
+    const searchTop = showSearch
+      ? `
+      <div class="search-top">
+        <div class="search-top-row">
+          <input type="search" id="bank-search-q" class="bank-search-center" autocomplete="off"
+            placeholder="Search MCQs here · ابحث عن الأسئلة هنا"
+            value="${escapeHtml(sq)}"
+            aria-label="Search MCQs here · ابحث عن الأسئلة هنا" />
+          <button type="button" class="btn success sm" id="bank-search-go">Search · بحث</button>
+          ${sq.trim() ? `<button type="button" class="btn ghost sm" id="bank-search-clear">Clear</button>` : ""}
+          ${
+            searchHits.length
+              ? `<button type="button" class="btn sm" id="bank-search-drill">Practice ${searchHits.length}</button>`
+              : ""
+          }
+        </div>
+        <div class="bank-search-results">
+          ${
+            state.searchHitRan && !searchHits.length && sq.trim().length >= 3
+              ? `<p class="muted">No match · لا نتائج</p>`
+              : searchHits
+                  .map((h, i) => {
+                    const item = h.q;
+                    const src = item.source || item.topic || "";
+                    const preview = String(item.q || "").slice(0, 140);
+                    return `<button type="button" class="bank-hit" data-hit-ix="${i}">
+                      <span class="bank-hit-meta">${i + 1}. ${escapeHtml(String(src))}</span>
+                      <span class="bank-hit-q">${escapeHtml(preview)}${preview.length >= 140 ? "…" : ""}</span>
+                    </button>`;
+                  })
+                  .join("")
+          }
+        </div>
+      </div>`
+      : "";
+
+    let body = "";
+
+    if (pane === "always") {
+      body = `
+        <div class="hz-layout">
+          ${bankSection("اسئلة مكررة", "", [{ pool: "always_src", label: "اسئلة مكررة", today: true }])}
+          <div class="hz-actions">
+            <button type="button" class="btn sm" id="ac-open-cards">Cards</button>
+            <button type="button" class="btn sm ghost" id="ac-full-page">All rules</button>
+          </div>
+          <div class="hz-rules-scroll">
+            ${acRules
+              .slice(0, 24)
+              .map((r, i) => {
+                const front = Array.isArray(r) ? r[0] : r && r.front;
+                const back = Array.isArray(r) ? r[1] : r && r.back;
+                if (!front) return "";
+                return `<div class="hz-rule"><b>${i + 1}.</b> ${escapeHtml(String(front).replace(/^\d+\.\s*/, ""))}${
+                  back ? ` — <span class="muted">${escapeHtml(String(back))}</span>` : ""
+                }</div>`;
+              })
+              .join("")}
+          </div>
+        </div>`;
+    } else if (pane === "mcqs") {
+      body = `
+        <div class="hz-layout">
+          ${sortToggle()}
+          ${banksBySort()}
+        </div>`;
+    } else if (pane === "mock") {
+      const inv = bankInventory();
+      const preferredN = inv.preferred || 0;
+      const allN = inv.all || 0;
+      const abtalN = inv.abtal || 0;
+      const rafiCoreN = inv.rafi_core || 0;
+      /* Source-specific counts for source-based mocks */
+      const rafi16N = poolN("all@rafi_16");
+      const rafi19N = poolN("all@rafi_19");
+
+      body = `
+        <div class="hz-layout">
+          <!-- SDLE FULL MOCK EXAM -->
+          <section class="hz-section" style="background:var(--bg2);border:2px solid var(--accent);border-radius:var(--radius);padding:16px;margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+              <div>
+                <h3 style="margin:0;font-size:1.1rem;color:var(--accent)">🎯 SDLE Full Mock Exam</h3>
+                <p class="muted" style="margin:4px 0 0;font-size:0.82rem">200 MCQs · 4 hours (72s/Q) · Blueprint-weighted</p>
+              </div>
+              <span class="badge warn" style="font-size:0.75rem">${Math.min(200, preferredN)} Q available</span>
+            </div>
+            <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+              <button type="button" class="btn success" id="mock-exam-200" ${preferredN < 50 ? "disabled" : ""}>▶ Start 200 Q Mock (4 hrs)</button>
+              <button type="button" class="btn" id="mock-exam-100" ${preferredN < 50 ? "disabled" : ""}>100 Q (2 hrs)</button>
+              <button type="button" class="btn ghost" id="mock-exam-50" ${preferredN < 50 ? "disabled" : ""}>50 Q (1 hr)</button>
+            </div>
+            <p style="font-size:0.72rem;color:var(--muted);margin-top:8px">Blueprint-weighted preferred bank: Resto 40% · Perio 18% · Endo 17% · OMS 15% · Ortho/Pedo 10%</p>
+          </section>
+
+          <!-- SOURCE-BASED MOCKS -->
+          <section class="hz-section">
+            <h3 class="hz-sec-title" style="color:var(--accent2)">📚 Source-Based Mocks — اختبر نفسك من المصدر</h3>
+            <p class="muted" style="font-size:0.78rem;margin-bottom:8px">Test yourself on specific reference sources. Questions filtered by source/department.</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px">
+              <!-- Preferred bank (blueprint) -->
+              <div class="source-mock-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:12px;cursor:pointer" data-mock-src="blueprint">
+                <strong style="font-size:0.85rem">📋 Blueprint Mock</strong>
+                <p class="muted" style="font-size:0.7rem;margin:4px 0">Preferred bank · stratified by SDLE blueprint</p>
+                <span class="badge blue">${preferredN}</span>
+              </div>
+              <!-- أبطال bank -->
+              <div class="source-mock-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:12px;cursor:pointer" data-mock-src="abtal">
+                <strong style="font-size:0.85rem">🌟 أبطال الديجيتال Mock</strong>
+                <p class="muted" style="font-size:0.7rem;margin:4px 0">Community recall bank</p>
+                <span class="badge blue">${abtalN}</span>
+              </div>
+              <!-- رفيع 11-19 Core -->
+              <div class="source-mock-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:12px;cursor:pointer" data-mock-src="rafi_core">
+                <strong style="font-size:0.85rem">📖 رفيع 11–19 Mock</strong>
+                <p class="muted" style="font-size:0.7rem;margin:4px 0">رفيع المقام core parts</p>
+                <span class="badge blue">${rafiCoreN}</span>
+              </div>
+              <!-- رفيع 16 specific -->
+              <div class="source-mock-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:12px;cursor:pointer" data-mock-src="rafi_16">
+                <strong style="font-size:0.85rem">📖 رفيع 16 Mock</strong>
+                <p class="muted" style="font-size:0.7rem;margin:4px 0">رفيع المقام 16-specific questions</p>
+                <span class="badge blue">${rafi16N}</span>
+              </div>
+              <!-- رفيع 19 specific -->
+              <div class="source-mock-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:12px;cursor:pointer" data-mock-src="rafi_19">
+                <strong style="font-size:0.85rem">📖 رفيع 19 Mock</strong>
+                <p class="muted" style="font-size:0.7rem;margin:4px 0">رفيع المقام 19-specific questions</p>
+                <span class="badge blue">${rafi19N}</span>
+              </div>
+              <!-- All MCQs -->
+              <div class="source-mock-card" style="background:var(--bg2);border:2px solid var(--accent);border-radius:var(--radius);padding:12px;cursor:pointer" data-mock-src="all">
+                <strong style="font-size:0.85rem;color:var(--accent)">🎯 Full Bank Mock</strong>
+                <p class="muted" style="font-size:0.7rem;margin:4px 0">All verified MCQs mixed</p>
+                <span class="badge warn">${allN}</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Quick size selectors for selected source -->
+          <section class="hz-section">
+            <h3 class="hz-sec-title">⚡ Quick Mock Sizes</h3>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button type="button" class="btn sm" data-mock-size="all" data-n="200" data-mode="exam">Mock 200 (4 hrs)</button>
+              <button type="button" class="btn sm" data-mock-size="all" data-n="100" data-mode="exam">Mock 100 (2 hrs)</button>
+              <button type="button" class="btn sm" data-mock-size="all" data-n="50" data-mode="exam">Mock 50 (1 hr)</button>
+              <button type="button" class="btn sm ghost" data-mock-size="all" data-n="50" data-mode="learn">Learn 50 (untimed)</button>
+              <button type="button" class="btn sm ghost" data-mock-size="all" data-n="100" data-mode="test">Test 100 (no timer)</button>
+            </div>
+          </section>
+
+          <!-- Department × Source mock grid (same as MCQs tab for selection) -->
+          ${sortToggle()}
+          ${banksBySort()}
+        </div>
+
+        <style>
+          .source-mock-card:hover {
+            border-color: var(--accent) !important;
+            background: var(--bg3) !important;
+          }
+          .source-mock-card:active {
+            transform: scale(0.98);
+          }
+        </style>
+      `;
+    } else if (pane === "cards") {
+      const deck = lessonCardDeck(L);
+      const deckN = cardPoolForDeck(deck).length;
+      const abtalN = cardPoolForDeck("abtal_notes").length;
+      const wrongN = cardPoolForDeck("wrong").length;
+      const alwaysN = cardPoolForDeck("always").length;
+      body = `
+        <div class="hz-layout">
+          <section class="hz-section">
+            <h3 class="hz-sec-title"><span dir="rtl">مصادر</span> Providers</h3>
+            <div class="hz-strip">
+              <button type="button" class="hz-bank is-today" id="cards-today"><span class="hz-bank-name">Today</span><span class="hz-bank-n">${deckN}</span></button>
+              <button type="button" class="hz-bank" id="cards-abtal"><span class="hz-bank-name">أبطال</span><span class="hz-bank-n">${abtalN}</span></button>
+              <button type="button" class="hz-bank" id="cards-always"><span class="hz-bank-name">اسئلة مكررة</span><span class="hz-bank-n">${alwaysN}</span></button>
+              <button type="button" class="hz-bank" id="cards-all"><span class="hz-bank-name">All</span><span class="hz-bank-n">${cardN}</span></button>
+              <button type="button" class="hz-bank" id="cards-wrong"><span class="hz-bank-name">Wrong</span><span class="hz-bank-n">${wrongN}</span></button>
+            </div>
+          </section>
+          <section class="hz-section">
+            <h3 class="hz-sec-title"><span dir="rtl">حسب التخصص</span> Department</h3>
+            <div class="hz-strip">
+              <button type="button" class="hz-bank" data-card-deck="restorative"><span class="hz-bank-name">Restorative</span><span class="hz-bank-n">${cardPoolForDeck("restorative").length}</span></button>
+              <button type="button" class="hz-bank" data-card-deck="perio"><span class="hz-bank-name">Perio</span><span class="hz-bank-n">${cardPoolForDeck("perio").length}</span></button>
+              <button type="button" class="hz-bank" data-card-deck="endo"><span class="hz-bank-name">Endo</span><span class="hz-bank-n">${cardPoolForDeck("endo").length}</span></button>
+              <button type="button" class="hz-bank" data-card-deck="oms"><span class="hz-bank-name">OMS</span><span class="hz-bank-n">${cardPoolForDeck("oms").length}</span></button>
+              <button type="button" class="hz-bank" data-card-deck="ortho_pedo"><span class="hz-bank-name">Ortho/Pedo</span><span class="hz-bank-n">${cardPoolForDeck("ortho_pedo").length}</span></button>
+              <button type="button" class="hz-bank" data-card-deck="ethics"><span class="hz-bank-name">Ethics</span><span class="hz-bank-n">${cardPoolForDeck("ethics").length}</span></button>
+            </div>
+          </section>
+        </div>`;
+    } else {
+      body = `
+        <div class="hz-layout">
+          ${sortToggle()}
+          ${banksBySort()}
+        </div>`;
+    }
+
+    app.innerHTML = `
+      <div class="simple-hub tadarrub-hub">
+        <div class="tad-head">
+          <div>
+            <h1>تدرب</h1>
+            <p class="simple-day-sync muted">Today · ${escapeHtml(subjectTitle)} · D${state.day}/${maxDay()}</p>
+          </div>
+        </div>
+        ${searchTop}
+        ${subnav}
+        ${body}
+      </div>`;
+
+    app.querySelectorAll("[data-pane]").forEach((b) => {
+      b.onclick = () => {
+        state.practicePane = b.getAttribute("data-pane");
+        renderPractice();
+      };
+    });
+    app.querySelectorAll("[data-sort]").forEach((b) => {
+      b.onclick = () => {
+        state.practiceSort = b.getAttribute("data-sort");
+        renderPractice();
+      };
+    });
+    app.querySelectorAll("[data-pick-pool]").forEach((b) => {
+      b.onclick = () => {
+        state.practiceBank = b.getAttribute("data-pick-pool");
+        renderPractice();
+      };
+    });
+    app.querySelectorAll(".simple-sz[data-qz]").forEach((b) => {
+      b.onclick = () => {
+        const mode = b.dataset.mode || "learn";
+        const n = +b.dataset.n;
+        if (mode === "exam") startQuiz(b.dataset.qz, n, "exam", true, 72);
+        else startQuiz(b.dataset.qz, n, "learn", false);
+      };
+    });
+    const runBankSearch = () => {
+      const inp = $("#bank-search-q");
+      const raw = inp ? inp.value : "";
+      state.practiceSearch = raw;
+      state.searchHitRan = true;
+      const hits = searchQuestionBank(raw, 50);
+      state.searchHitResults = hits;
+      state.searchHitIds = hits.map((h) => h.q && h.q.id).filter(Boolean);
+      renderPractice();
+      const inp2 = $("#bank-search-q");
+      if (inp2) {
+        inp2.focus();
+        try {
+          inp2.setSelectionRange(inp2.value.length, inp2.value.length);
+        } catch (_) {}
+      }
+    };
+    $("#bank-search-go") && ($("#bank-search-go").onclick = runBankSearch);
+    $("#bank-search-clear") &&
+      ($("#bank-search-clear").onclick = () => {
+        state.practiceSearch = "";
+        state.searchHitResults = [];
+        state.searchHitIds = [];
+        state.searchHitRan = false;
+        renderPractice();
+      });
+    $("#bank-search-drill") &&
+      ($("#bank-search-drill").onclick = () => {
+        if (!(state.searchHitIds || []).length) return;
+        startQuiz("search_hits", QUIZ_ALL, "learn", false);
+      });
+    app.querySelectorAll("[data-hit-ix]").forEach((b) => {
+      b.onclick = () => {
+        const ix = +b.getAttribute("data-hit-ix");
+        const hit = (state.searchHitResults || [])[ix];
+        if (!hit || !hit.q) return;
+        state.searchHitIds = [hit.q.id];
+        startQuiz("search_hits", 1, "learn", false);
+      };
+    });
+    const searchInp = $("#bank-search-q");
+    if (searchInp) {
+      searchInp.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          runBankSearch();
+        }
+      });
+    }
+    // Mock exam buttons (200 Q / 4 hrs SDLE full mock)
+    const mockExam200 = document.getElementById("mock-exam-200");
+    if (mockExam200) mockExam200.onclick = () => startQuiz("blueprint", 200, "exam", true, 72);
+    const mockExam100 = document.getElementById("mock-exam-100");
+    if (mockExam100) mockExam100.onclick = () => startQuiz("blueprint", 100, "exam", true, 72);
+    const mockExam50 = document.getElementById("mock-exam-50");
+    if (mockExam50) mockExam50.onclick = () => startQuiz("blueprint", 50, "exam", true, 72);
+
+    // Source-based mock cards
+    app.querySelectorAll("[data-mock-src]").forEach(b => {
+      b.onclick = () => {
+        const src = b.dataset.mockSrc;
+        let poolKey = src;
+        // For source-specific pools, use the @all scope to filter by source
+        if (src === "rafi_16" || src === "rafi_19") {
+          // We want all departments from this specific source
+          poolKey = "all@" + src;
+        } else if (src === "blueprint") {
+          poolKey = "blueprint";
+        }
+        startQuiz(poolKey, 50, "exam", true, 72);
+      };
+    });
+
+    // Quick mock size buttons
+    app.querySelectorAll("[data-mock-size]").forEach(b => {
+      b.onclick = () => {
+        const n = +b.dataset.n;
+        const mode = b.dataset.mode || "exam";
+        const timed = mode === "exam";
+        const secPer = timed ? 72 : null;
+        startQuiz(b.dataset.mockSize, n, mode, timed, secPer);
+      };
+    });
+
+    $("#cards-today") && ($("#cards-today").onclick = () => openCards(lessonCardDeck(L)));
+    $("#cards-abtal") && ($("#cards-abtal").onclick = () => openCards("abtal_notes"));
+    $("#cards-all") && ($("#cards-all").onclick = () => openCards("all"));
+    $("#cards-wrong") && ($("#cards-wrong").onclick = () => openCards("wrong"));
+    $("#cards-always") && ($("#cards-always").onclick = () => openCards("always"));
+    app.querySelectorAll("[data-card-deck]").forEach((b) => {
+      b.onclick = () => openCards(b.getAttribute("data-card-deck"));
+    });
+    $("#ac-open-cards") && ($("#ac-open-cards").onclick = () => openCards("always"));
+    const goAlways = () => navigateTo("always", { push: true });
+    $("#ac-full-page") && ($("#ac-full-page").onclick = goAlways);
+  }
+
+  function exportWrongBook() {
+    const items = pool("wrong");
+    if (!items.length) {
+      alert("Wrong book is empty. Miss some questions in learn mode first.");
+      return;
+    }
+    const lines = items.map((q, i) => {
+      const ans = (q.options && q.options[q.answer]) || "";
+      return `${i + 1}. [${q.topic || "?"}] ${q.q}\n   → ${ans}\n   ${q.explanation || ""}\n`;
+    });
+    const text = `SDLE Wrong book export — ${items.length} items — ${new Date().toISOString()}\n\n${lines.join("\n")}`;
+    const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `sdle-wrong-book-${items.length}.txt`;
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }
+
+  /** Full progress backup (all persisted keys). Never deletes content files. */
+  function exportFullProgress() {
+    const data = {
+      version: 1,
+      exportedAt: new Date().toISOString(),
+      app: "sdle-study-path",
+      keys: {},
+    };
+    PERSISTED_KEYS.forEach((k) => {
+      data.keys[k] = store.get(k, null);
+    });
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json;charset=utf-8" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `sdle-backup-${todayKey()}.json`;
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }
+
+  function importFullProgressFromObject(data) {
+    if (!data || typeof data !== "object") throw new Error("Invalid backup file");
+    const keys = data.keys && typeof data.keys === "object" ? data.keys : data;
+    if (!keys || typeof keys !== "object") throw new Error("No progress keys in file");
+    let wrote = 0;
+    PERSISTED_KEYS.forEach((k) => {
+      if (Object.prototype.hasOwnProperty.call(keys, k) && keys[k] != null) {
+        if (store.set(k, keys[k])) wrote++;
+      }
+    });
+    if (!wrote) throw new Error("Nothing imported (empty or unreadable keys)");
+    return wrote;
+  }
+
+  function bindImportProgress(inputEl) {
+    if (!inputEl) return;
+    inputEl.onchange = () => {
+      const file = inputEl.files && inputEl.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const data = JSON.parse(String(reader.result || ""));
+          const ok = confirm(
+            "Import this backup? It will overwrite progress on THIS browser (stats, wrong book, days, history). Content lessons and MCQ bank are never deleted.\n\nOK = import and reload."
+          );
+          if (!ok) {
+            inputEl.value = "";
+            return;
+          }
+          importFullProgressFromObject(data);
+          location.reload();
+        } catch (e) {
+          alert("Import failed: " + (e && e.message ? e.message : "bad JSON"));
+          inputEl.value = "";
+        }
+      };
+      reader.readAsText(file);
+    };
+  }
+
+  /** Per-topic mock breakdown + optional delta vs previous full mock. */
+  function mockTopicBreakdown(qz) {
+    const byTopic = {};
+    (qz.items || []).forEach((item, i) => {
+      const t = item.topic || "mixed";
+      if (!byTopic[t]) byTopic[t] = { a: 0, c: 0 };
+      byTopic[t].a++;
+      if (qz.answers[i] === item.answer) byTopic[t].c++;
+    });
+    return byTopic;
+  }
+
+  function mockFatigue(qz) {
+    const n = (qz.items || []).length;
+    if (n < 100) return null;
+    const mid = Math.floor(n / 2);
+    let firstOk = 0;
+    let secondOk = 0;
+    for (let i = 0; i < mid; i++) {
+      if (qz.answers[i] === qz.items[i].answer) firstOk++;
+    }
+    for (let i = mid; i < n; i++) {
+      if (qz.answers[i] === qz.items[i].answer) secondOk++;
+    }
+    const firstN = mid;
+    const secondN = n - mid;
+    const firstPct = firstN ? Math.round((100 * firstOk) / firstN) : null;
+    const secondPct = secondN ? Math.round((100 * secondOk) / secondN) : null;
+    return {
+      firstPct,
+      secondPct,
+      delta: firstPct != null && secondPct != null ? secondPct - firstPct : null,
+    };
+  }
+
+  function findPriorMock(afterTs) {
+    const list = state.history || [];
+    for (let i = 0; i < list.length; i++) {
+      const h = list[i];
+      if (!h) continue;
+      if (afterTs && h.ts === afterTs) continue;
+      if (h.isMock || (h.mode === "exam" && (h.total || 0) >= 100)) return h;
+    }
+    return null;
+  }
+
+  function mockDeltaHtml(current, prior) {
+    if (!current || !current.byTopic) return "";
+    const topics = Object.keys(current.byTopic).sort();
+    if (!topics.length) return "";
+    const rows = topics
+      .map((t) => {
+        const cur = current.byTopic[t] || { a: 0, c: 0 };
+        const curPct = cur.a ? Math.round((100 * cur.c) / cur.a) : null;
+        let priorPct = null;
+        if (prior && prior.byTopic && prior.byTopic[t] && prior.byTopic[t].a) {
+          const p = prior.byTopic[t];
+          priorPct = Math.round((100 * p.c) / p.a);
+        }
+        const d = curPct != null && priorPct != null ? curPct - priorPct : null;
+        const dLabel =
+          d == null ? "—" : d > 0 ? `+${d}% ↑` : d < 0 ? `${d}% ↓` : "0%";
+        return `<tr>
+          <td>${escapeHtml(t)}</td>
+          <td>${priorPct != null ? priorPct + "%" : "—"}</td>
+          <td>${curPct != null ? curPct + "%" : "—"}</td>
+          <td style="color:${d == null ? "inherit" : d >= 0 ? "var(--accent2)" : "var(--warn)"}">${escapeHtml(dLabel)}</td>
+        </tr>`;
+      })
+      .join("");
+    const fatigue = current.fatigue;
+    const fatigueLine =
+      fatigue && fatigue.firstPct != null
+        ? `<p class="muted">Pace check: first half <b>${fatigue.firstPct}%</b> · second half <b>${fatigue.secondPct}%</b>${
+            fatigue.delta != null
+              ? ` · ${fatigue.delta >= 0 ? "+" : ""}${fatigue.delta}% second-half shift`
+              : ""
+          }</p>`
+        : "";
+    return `<div class="mock-delta alert" style="margin-top:14px">
+      <strong>Mock domain scores${prior ? " vs previous mock" : ""}</strong>
+      <p class="muted">Compare domains — not an official SCFHS report.</p>
+      ${fatigueLine}
+      <table class="hist-table inv-table" style="margin-top:8px">
+        <thead><tr><th>Topic</th><th>Prior</th><th>This mock</th><th>Δ</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+  }
+
+  function feedbackConfig() {
+    const c = window.SDLE_FEEDBACK || {};
+    return {
+      ntfyTopic: (c.ntfyTopic || "sdle-study-path-feedback-xxxova2-k7m9").replace(/[^\w.-]/g, ""),
+      email: String(c.email || "").trim(),
+      ownerReadHint: c.ownerReadHint || "",
+    };
+  }
+
+  function feedbackNtfyUrl() {
+    return "https://ntfy.sh/" + feedbackConfig().ntfyTopic;
+  }
+
+  /** Deliver feedback with NO client login (ntfy + optional email). */
+  async function deliverFeedback(payload) {
+    const cfg = feedbackConfig();
+    const kindLabel = payload.kindLabel;
+    const text = [
+      "Type: " + kindLabel,
+      "From: " + (payload.name || "(anonymous)"),
+      "When: " + payload.when,
+      "URL: " + payload.appUrl,
+      "",
+      payload.message,
+      "",
+      "Device: " + (payload.device || "").slice(0, 180),
+    ].join("\n");
+
+    const errors = [];
+    let okNtfy = false;
+    let okEmail = false;
+    const ntfyTags =
+      Array.isArray(payload.tags) && payload.tags.length
+        ? payload.tags
+        : ["speech_balloon"];
+    const priority = payload.kind === "mcq_dispute" ? 4 : 3;
+
+    // 1) ntfy.sh — free, no login for sender or reader (open topic URL).
+    // Use JSON body (not Title/Tags headers): fetch rejects header values with
+    // newlines or non-Latin-1 chars → "Invalid value".
+    if (cfg.ntfyTopic) {
+      try {
+        const msgOneLine = String(payload.message || "")
+          .replace(/[\r\n\t]+/g, " ")
+          .replace(/[^\x20-\x7E]/g, "")
+          .trim();
+        const title =
+          ("[SDLE " + kindLabel + "] " + msgOneLine).trim().slice(0, 90) ||
+          "[SDLE " + kindLabel + "]";
+        const res = await fetch("https://ntfy.sh/", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            topic: cfg.ntfyTopic,
+            title: title,
+            message: text,
+            priority: priority,
+            tags: ntfyTags,
+          }),
+        });
+        if (!res.ok) throw new Error("ntfy HTTP " + res.status);
+        okNtfy = true;
+      } catch (err) {
+        errors.push("ntfy: " + (err && err.message ? err.message : "fail"));
+      }
+    }
+
+    // 2) Optional email copy via FormSubmit (no login for client; owner confirms email once)
+    if (cfg.email && cfg.email.includes("@") && !/@users\.noreply\.github\.com$/i.test(cfg.email)) {
+      try {
+        const res = await fetch("https://formsubmit.co/ajax/" + encodeURIComponent(cfg.email), {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: payload.name || "Anonymous student",
+            _subject: "[SDLE Feedback] " + kindLabel,
+            _template: "table",
+            type: kindLabel,
+            message: payload.message,
+            app_url: payload.appUrl,
+            when: payload.when,
+            device: (payload.device || "").slice(0, 240),
+            _captcha: "false",
+          }),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok && data.success !== "true" && data.success !== true) {
+          throw new Error((data && data.message) || "email HTTP " + res.status);
+        }
+        okEmail = true;
+      } catch (err) {
+        errors.push("email: " + (err && err.message ? err.message : "fail"));
+      }
+    }
+
+    // 3) Remember on this device (not shared — only proof for the sender)
+    try {
+      const log = store.get("feedbackSentLog", []);
+      log.unshift({
+        ts: payload.when,
+        kind: payload.kind,
+        name: payload.name,
+        message: payload.message.slice(0, 500),
+        okNtfy,
+        okEmail,
+      });
+      store.set("feedbackSentLog", log.slice(0, 40));
+    } catch (_) {}
+
+    return { okNtfy, okEmail, errors };
+  }
+
+  function renderFeedback() {
+    const draft = store.get("feedbackDraft", {
+      name: "",
+      kind: "bug",
+      message: "",
+    });
+    const cfg = feedbackConfig();
+    const ntfyUrl = feedbackNtfyUrl();
+    const sentLog = store.get("feedbackSentLog", []);
+    const emailOn = !!(cfg.email && cfg.email.includes("@") && !/@users\.noreply\.github\.com$/i.test(cfg.email));
+
+    app.innerHTML = `
+      ${backBarHtml("← Back")}
+      <h1>Feedback</h1>
+      <p class="lead"><strong>No GitHub account. No login.</strong>
+        Write below and tap Send — your note is delivered to the maintainer automatically.
+        Optional name only. Use this for bugs, wrong MCQs, thin lessons, or mobile problems.</p>
+
+      <section class="feedback-card simple-panel">
+        <form id="feedback-form" class="feedback-form" novalidate>
+          <label class="fb-field">
+            <span>Your name or nickname <em>(optional)</em></span>
+            <input type="text" id="fb-name" name="name" maxlength="80" autocomplete="nickname"
+              placeholder="e.g. Ahmed" value="${escapeHtml(draft.name || "")}" />
+          </label>
+          <label class="fb-field">
+            <span>Type</span>
+            <select id="fb-kind" name="kind">
+              <option value="bug" ${draft.kind === "bug" ? "selected" : ""}>Bug / broken thing</option>
+              <option value="content" ${draft.kind === "content" ? "selected" : ""}>Wrong content / MCQ / lesson</option>
+              <option value="mobile" ${draft.kind === "mobile" ? "selected" : ""}>Mobile / phone layout</option>
+              <option value="idea" ${draft.kind === "idea" ? "selected" : ""}>Idea / feature</option>
+              <option value="other" ${draft.kind === "other" ? "selected" : ""}>Other</option>
+            </select>
+          </label>
+          <label class="fb-field">
+            <span>Your feedback <em>(required)</em></span>
+            <textarea id="fb-message" name="message" rows="8" required maxlength="8000"
+              placeholder="What happened? Which day/tab/MCQ? What did you expect?">${escapeHtml(draft.message || "")}</textarea>
+          </label>
+          <p class="muted-hint">Tip: include Day number, tab name, or question text if something is wrong.</p>
+          <div class="feedback-actions">
+            <button type="submit" class="btn success" id="fb-submit">Send feedback</button>
+            <button type="button" class="btn ghost" id="fb-save-draft">Save draft on this device</button>
+          </div>
+          <p id="fb-status" class="fb-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="simple-panel" style="margin-top:16px">
+        <h3 class="section-label">How the owner reads feedback</h3>
+        <p class="lead">Students do <b>not</b> need accounts. You (maintainer) open this inbox anytime:</p>
+        <div class="volume-grid">
+          <a class="btn success" href="${escapeHtml(ntfyUrl)}" target="_blank" rel="noopener">Open feedback inbox</a>
+          <a class="btn ghost" href="${REPO_URL}" target="_blank" rel="noopener">Source code</a>
+          <a class="btn ghost" href="${REPO_URL}/blob/main/INTRO.md" target="_blank" rel="noopener">Intro letter</a>
+        </div>
+        <p class="muted-hint" style="margin-top:10px">
+          Inbox link: <code style="word-break:break-all">${escapeHtml(ntfyUrl)}</code><br>
+          Email copies: <b>${emailOn ? "ON → " + escapeHtml(cfg.email) : "OFF — set your Gmail in data/feedback_config.js for permanent email archive"}</b><br>
+          Free ntfy keeps recent messages; email is better for long-term history.
+        </p>
+      </section>
+
+      ${
+        sentLog.length
+          ? `<section class="simple-panel" style="margin-top:16px">
+        <h3 class="section-label">Sent from this device (${sentLog.length})</h3>
+        <ul class="fb-sent-list">${sentLog
+          .slice(0, 8)
+          .map(
+            (x) =>
+              `<li><b>${escapeHtml(x.kind || "")}</b> · ${escapeHtml((x.message || "").slice(0, 120))}
+              <span class="muted-hint">${escapeHtml(x.ts || "")} · ${x.okNtfy ? "delivered" : "may have failed"}</span></li>`
+          )
+          .join("")}</ul>
+      </section>`
+          : ""
+      }`;
+
+    bindBackBar();
+
+    const saveDraft = () => {
+      store.set("feedbackDraft", {
+        name: ($("#fb-name") && $("#fb-name").value) || "",
+        kind: ($("#fb-kind") && $("#fb-kind").value) || "bug",
+        message: ($("#fb-message") && $("#fb-message").value) || "",
+      });
+    };
+
+    $("#fb-save-draft") &&
+      ($("#fb-save-draft").onclick = () => {
+        saveDraft();
+        const st = $("#fb-status");
+        if (st) st.textContent = "Draft saved on this phone/computer only (not sent yet).";
+      });
+
+    $("#feedback-form") &&
+      ($("#feedback-form").onsubmit = async (e) => {
+        e.preventDefault();
+        const name = (($("#fb-name") && $("#fb-name").value) || "").trim();
+        const kind = (($("#fb-kind") && $("#fb-kind").value) || "other").trim();
+        const message = (($("#fb-message") && $("#fb-message").value) || "").trim();
+        const st = $("#fb-status");
+        const btn = $("#fb-submit");
+        if (!message || message.length < 8) {
+          if (st) st.textContent = "Please write a bit more detail (at least a short sentence).";
+          return;
+        }
+        saveDraft();
+        const kindLabel = {
+          bug: "Bug",
+          content: "Content",
+          mobile: "Mobile",
+          idea: "Idea",
+          other: "Feedback",
+        }[kind] || "Feedback";
+
+        if (btn) {
+          btn.disabled = true;
+          btn.textContent = "Sending…";
+        }
+        if (st) st.textContent = "Sending — no login needed…";
+
+        const result = await deliverFeedback({
+          name,
+          kind,
+          kindLabel,
+          message,
+          when: new Date().toISOString(),
+          appUrl: typeof location !== "undefined" ? location.href : "",
+          device: typeof navigator !== "undefined" ? navigator.userAgent : "",
+        });
+
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = "Send feedback";
+        }
+
+        if (result.okNtfy || result.okEmail) {
+          store.set("feedbackDraft", { name, kind, message: "" });
+          if ($("#fb-message")) $("#fb-message").value = "";
+          if (st) {
+            st.innerHTML =
+              "<strong>Sent.</strong> The maintainer can read it in the feedback inbox" +
+              (result.okEmail ? " and by email" : "") +
+              ". Thank you — no account required.";
+          }
+          // refresh sent list quietly
+          setTimeout(() => {
+            if (state.view === "feedback") renderFeedback();
+          }, 600);
+        } else {
+          if (st) {
+            st.innerHTML =
+              "Could not deliver (" +
+              escapeHtml((result.errors || []).join("; ") || "network") +
+              "). Check internet and try again.";
+          }
+        }
+      });
+  }
+
+  function renderProgress() {
+    const s = state.stats;
+    const pct = s.answered ? Math.round((100 * s.correct) / s.answered) : 0;
+    const topics = ["restorative", "perio", "endo", "oms", "ortho_pedo", "ethics", "mixed"];
+    const m = maxDay();
+    const daysDone = Object.keys(state.dayDone || {}).filter((k) => {
+      const d = +k;
+      return state.dayDone[k] && d >= 1 && d <= m;
+    }).length;
+
+    const histRows = !(state.history || []).length
+      ? `<p class="muted">No sessions yet.</p>`
+      : `<table class="hist-table inv-table">
+        <thead><tr><th>When</th><th>Pool</th><th>Score</th></tr></thead>
+        <tbody>
+          ${(state.history || [])
+            .slice(0, 20)
+            .map((h) => {
+              const score =
+                h.pct != null
+                  ? `${h.pct}% (${h.correct}/${h.total})`
+                  : h.total != null
+                    ? `${h.correct ?? "—"}/${h.total}`
+                    : "—";
+              const col = h.pct == null ? "" : h.pct >= 80 ? "color:var(--accent2)" : "color:var(--warn)";
+              return `<tr>
+                <td>${escapeHtml(formatWhen(h.ts))}</td>
+                <td>${escapeHtml((h.label || h.topic || "—").slice(0, 40))}</td>
+                <td style="${col}"><b>${escapeHtml(score)}</b></td>
+              </tr>`;
+            })
+            .join("")}
+        </tbody>
+      </table>`;
+
+    const topicRows = topics
+      .map((t) => {
+        const x = s.byTopic[t] || { a: 0, c: 0 };
+        if (!x.a) return "";
+        const p = Math.round((100 * x.c) / x.a);
+        return `<tr><td>${escapeHtml(t)}</td><td>${x.c}/${x.a}</td><td>${p}%</td></tr>`;
+      })
+      .filter(Boolean)
+      .join("");
+
+    app.innerHTML = `
+      <div class="progress-clean">
+        <h1>Progress</h1>
+        <div class="stat-row">
+          <div class="stat-box"><div class="num">${s.answered || 0}</div><div class="lbl">Answered</div></div>
+          <div class="stat-box"><div class="num" style="color:${pct >= 80 ? "var(--accent2)" : "var(--warn)"}">${pct}%</div><div class="lbl">Accuracy</div></div>
+          <div class="stat-box"><div class="num">${daysDone}/${m}</div><div class="lbl">Days done</div></div>
+          <div class="stat-box"><div class="num">${state.wrongBook.length}</div><div class="lbl">Wrong book</div></div>
+        </div>
+        <p class="muted progress-meta">Today ${state.sessionAnswered} Q · ${state.planLength}-day plan · aim ≥80%</p>
+
+        <section class="simple-panel">
+          <h3 class="section-label">Bank health</h3>
+          <p class="muted">${window.QUESTION_BANK ? window.QUESTION_BANK.filter(q => q.usable !== false && q.book_verified === true).length + "/" + window.QUESTION_BANK.filter(q => q.usable !== false).length + " usable questions textbook-verified" : "Loading…"} · ${window.QUESTION_BANK ? window.QUESTION_BANK.filter(q => q.usable === false).length + " non-usable (community-sourced, needs expert review)" : ""}</p>
+        </section>
+
+        <section class="simple-panel">
+          <h3 class="section-label">By topic</h3>
+          ${
+            topicRows
+              ? `<table><thead><tr><th>Topic</th><th>Correct</th><th>%</th></tr></thead><tbody>${topicRows}</tbody></table>`
+              : `<p class="muted">Answer MCQs to fill this.</p>`
+          }
+        </section>
+
+        <section class="simple-panel">
+          <h3 class="section-label">Recent sessions</h3>
+          ${histRows}
+        </section>
+
+        <p class="hub-foot-links">
+          <button type="button" class="btn-link" id="reset">Reset all progress…</button>
+        </p>
+      </div>`;
+
+    $("#reset").onclick = () => {
+      if (
+        confirm(
+          "Reset progress, stats, wrong book, seen history, session log, and lesson Exam Q&A scores?"
+        )
+      ) {
+        state.stats = { answered: 0, correct: 0, byTopic: {}, bySubtopic: {} };
+        state.wrongBook = [];
+        state.seenIds = {};
+        state.history = [];
+        state.stepsDone = {};
+        state.dayDone = {};
+        state.cardKnown = {};
+        state.examQa = {};
+        state.sessionAnswered = 0;
+        state.sessionDate = todayKey();
+        state.planDayAnswered = 0;
+        state.planDayVolumeKey = planDayVolumeKeyOf();
+        save();
+        render();
+      }
+    };
+  }
+
+  /* ——— QUIZ ——— */
+  function allQ() {
+    // usable:false = quarantined (image-only / polluted extract) — keep in bank for audit, skip in practice
+    return (window.QUESTION_BANK || []).filter((q) => q && q.usable !== false);
+  }
+
+  /**
+   * Preferred MCQs — from «تحديث خطة المذاكرة» (رفيع) + SCFHS SDLE blueprint.
+   *
+   * أبطال الديجيتال = highly recommended (recalls). Prefer almost all usable أبطال.
+   *
+   * رفيع study order (plan):
+   *   1st — parts 11–19 (mostly أبطال windows + references): 11…19
+   *   2nd — parts 7, 5, 10, 9, 1, 3
+   *   Extra only (archive default): 2, 4, 6, 8 (بيان / board / e-dental) + 20
+   * Study subject-by-subject across files; last 2 weeks = full-file random review.
+   *
+   * Preferred cut (not full 16k dump):
+   *   A) أبطال — nearly all usable (high priority)
+   *   B) Curated: free points, premium_*, stream, saud_delta
+   *   C) رفيع 11–19 quality full MCQs (core)
+   *   D) رفيع 7/5/10/9/1/3 quality full MCQs (second wave)
+   * Archive = thin pads + رفيع 2/4/6/8/20 + other low-signal extracts.
+   */
+  const RAFI_CORE_FIRST = new Set([11, 12, 13, 14, 15, 16, 17, 18, 19]);
+  const RAFI_CORE_SECOND = new Set([7, 5, 10, 9, 1, 3]);
+  const RAFI_EXTRA_ONLY = new Set([2, 4, 6, 8, 20]);
+
+  function optionPadCount(q) {
+    const opts = (q && q.options) || [];
+    let n = 0;
+    for (let i = 0; i < opts.length; i++) {
+      const t = String(opts[i] || "").toLowerCase();
+      if (t.includes("not listed") || /^option\s*[a-d]\b/i.test(t)) n++;
+    }
+    return n;
+  }
+
+  function realOptionCount(q) {
+    return Math.max(0, ((q && q.options) || []).length - optionPadCount(q));
+  }
+
+  function stemLen(q) {
+    return String((q && (q.q || q.stem)) || "").trim().length;
+  }
+
+  function isCuratedPreferred(q) {
+    const s = String((q && q.source) || "");
+    const id = String((q && q.id) || "");
+    if (s === "always" || s === "saud_delta") return true;
+    if (s.startsWith("premium") || s.startsWith("stream")) return true;
+    if (id.startsWith("stream") || id.startsWith("pass_")) return true;
+    if (/^(op_|per_|end_|fr_|oped|eth|hy|gd_)/.test(id)) return true;
+    return false;
+  }
+
+  function isAbtalSource(q) {
+    const s = String((q && q.source) || "");
+    const id = String((q && q.id) || "");
+    return s === "abtal" || id.startsWith("ab2") || id.startsWith("abtal");
+  }
+
+  /**
+   * 6-PDF comprehensive source: Mar–June (abtal), Rafi 16/19, Saud, Stream.
+   */
+  function isCompleteSource(q) {
+    if (isAbtalSource(q)) return true;
+    const src = String((q && q.source) || "");
+    return (
+      src === "rafi_16" ||
+      src === "rafi_19" ||
+      src === "saud_delta" ||
+      src === "stream_july2026"
+    );
+  }
+
+  function rafiPartNum(q) {
+    const s = String((q && q.source) || "");
+    const id = String((q && q.id) || "");
+    const m = s.match(/^rafi_(\d+)/) || id.match(/^rafi_(\d+)/);
+    return m ? parseInt(m[1], 10) : null;
+  }
+
+  /** أبطال: highly recommended — keep almost everything with a real stem. */
+  function isAbtalPreferred(q) {
+    if (!isAbtalSource(q)) return false;
+    return stemLen(q) >= 10;
+  }
+
+  function isRafiPreferred(q) {
+    const part = rafiPartNum(q);
+    if (part == null || RAFI_EXTRA_ONLY.has(part)) return false;
+    const real = realOptionCount(q);
+    const sl = stemLen(q);
+    const pads = optionPadCount(q);
+    // Core first (11–19): slightly looser — plan says start here (references)
+    if (RAFI_CORE_FIRST.has(part)) {
+      return real >= 3 && sl >= 25 && pads <= 1;
+    }
+    // Second wave (7,5,10,9,1,3)
+    if (RAFI_CORE_SECOND.has(part)) {
+      return real >= 4 && pads === 0 && sl >= 35;
+    }
+    return false;
+  }
+
+  function isPreferredMcq(q) {
+    if (!q || q.usable === false) return false;
+    // Order of importance for study: أبطال → curated → رفيع plan waves
+    if (isAbtalPreferred(q)) return true;
+    if (isCuratedPreferred(q)) return true;
+    if (isRafiPreferred(q)) return true;
+    return false;
+  }
+
+  const SUBTOPIC_KEYS = new Set([
+    "operative",
+    "fixed",
+    "implant",
+    "rpd",
+    "complete_denture",
+    "materials",
+    "restorative_general",
+  ]);
+
+  /** ALL / huge counts → entire pool (bank is large; prefer pool "preferred" for study) */
+  const QUIZ_ALL = 99999;
+
+  function isSeen(id) {
+    return !!(id && state.seenIds && state.seenIds[id]);
+  }
+
+  function markSeen(id) {
+    if (!id) return;
+    if (!state.seenIds) state.seenIds = {};
+    state.seenIds[id] = true;
+  }
+
+  /** Topic accuracy rows for weak-pack ranking */
+  function topicAccuracyList() {
+    const keys = ["restorative", "perio", "endo", "oms", "ortho_pedo", "ethics", "mixed"];
+    return keys.map((t) => {
+      const x = (state.stats.byTopic && state.stats.byTopic[t]) || { a: 0, c: 0 };
+      const a = x.a || 0;
+      const c = x.c || 0;
+      return { topic: t, a, c, pct: a ? (100 * c) / a : null };
+    });
+  }
+
+  /**
+   * Rank topics: practiced & under 80% first (worst first), then least practiced, then strong.
+   * Used for Day 11-style weak packs.
+   */
+  function weakRankedTopics() {
+    const list = topicAccuracyList();
+    const practicedWeak = list.filter((x) => x.a >= 8 && x.pct != null && x.pct < 80).sort((a, b) => a.pct - b.pct);
+    const unpracticed = list.filter((x) => x.a < 8).sort((a, b) => a.a - b.a);
+    const practicedStrong = list.filter((x) => x.a >= 8 && x.pct != null && x.pct >= 80).sort((a, b) => a.pct - b.pct);
+    return practicedWeak.concat(unpracticed, practicedStrong);
+  }
+
+  function weakTopicKeys(n) {
+    const ranked = weakRankedTopics();
+    const pick = ranked.slice(0, n || 3).map((x) => x.topic);
+    // Cold start: exam-weight subjects
+    if (!pick.length || ranked.every((x) => x.a === 0)) return ["restorative", "perio", "endo"];
+    return pick;
+  }
+
+  function smartPackHint() {
+    const seenN = Object.keys(state.seenIds || {}).length;
+    const unseenN = poolN("unseen");
+    const weakKeys = weakTopicKeys(3);
+    const ranks = weakRankedTopics()
+      .slice(0, 3)
+      .map((x) => {
+        if (x.a < 8) return `${x.topic} (few: ${x.a})`;
+        return `${x.topic} ${Math.round(x.pct)}%`;
+      });
+    return `Seen ${seenN} · Unseen ${unseenN} · Weak focus: ${ranks.join(" · ") || weakKeys.join(", ")}`;
+  }
+
+  /** "unseen" | "unseen:operative" | "dept@scope" (plan: endo across all rafi/abtal) */
+  function unseenTopic(base) {
+    const b = !base || base === "all" || base === "unseen" || base === "weak" || base === "wrong" ? "all" : base;
+    return b === "all" ? "unseen" : "unseen:" + b;
+  }
+
+  /**
+   * Pool keys:
+   *   endo | restorative | …
+   *   endo@plan | endo@abtal | endo@rafi_core | endo@rafi_second | endo@rafi_plan | endo@all
+   * Scope = which files; dept = subject (خطة: department across files, not file-by-file).
+   */
+  function parsePoolTopic(topic) {
+    const raw = String(topic == null ? "all" : topic);
+    if (raw === "unseen") return { base: "all", sourceScope: null, unseenOnly: true };
+    if (raw.startsWith("unseen:")) {
+      const rest = raw.slice(7) || "all";
+      if (rest.includes("@")) {
+        const [dept, scope] = rest.split("@");
+        return { base: dept || "all", sourceScope: scope || "plan", unseenOnly: true };
+      }
+      return { base: rest, sourceScope: null, unseenOnly: true };
+    }
+    if (raw.includes("@")) {
+      const [dept, scope] = raw.split("@");
+      return { base: dept || "all", sourceScope: scope || "plan", unseenOnly: false };
+    }
+    return { base: raw, sourceScope: null, unseenOnly: false };
+  }
+
+  /** Blueprint department from topic + department + subtopics (رفيع tags both). */
+  function matchesDepartment(q, dept) {
+    if (!dept || dept === "all") return true;
+    const d = String((q && q.department) || "").toLowerCase();
+    const t = String((q && q.topic) || "").toLowerCase();
+    const st = (q && q.subtopics) || [];
+    const has = (s) => st.includes(s);
+    /* Main topic wins over polluted subtopics: an endo/oms/perio/ortho/ethics question never
+       matches a different department's subtopic-based pool (e.g. endo tagged 'implant'). */
+    const OTHER_TOPICS = ["endo", "perio", "oms", "ortho_pedo", "ethics"];
+    const mismatchTopic = (wanted) => OTHER_TOPICS.includes(t) && t !== wanted;
+
+    if (dept === "endo") return t === "endo" || d === "endo";
+    if (dept === "perio") return t === "perio" || d === "perio";
+    if (dept === "oms") return t === "oms" || d === "oms";
+    if (dept === "ortho_pedo") return t === "ortho_pedo" || d === "ortho_pedo";
+    if (dept === "ethics") return t === "ethics" || d === "ethics";
+    if (dept === "mixed") return t === "mixed" || d === "mixed";
+    if (dept === "operative") {
+      if (mismatchTopic("operative")) return false;
+      if (d === "operative" || has("operative")) return true;
+      if (String((q && q.source) || "") === "premium_operative") return true;
+      if (t === "restorative" && !has("fixed") && !has("rpd") && !has("implant") && d !== "fixed" && d !== "rpd") {
+        /* bare restorative without prostho tags — count as operative-ish only if no prostho dept */
+        return d === "" || d === "operative" || has("restorative_general") || has("materials") || has("isolation");
+      }
+      return false;
+    }
+    if (dept === "fixed") { if (mismatchTopic("fixed")) return false; return d === "fixed" || has("fixed"); }
+    if (dept === "rpd") { if (mismatchTopic("rpd")) return false; return d === "rpd" || has("rpd"); }
+    if (dept === "implant") { if (mismatchTopic("implant")) return false; return d === "implant" || has("implant"); }
+    if (dept === "materials") { if (mismatchTopic("materials")) return false; return has("materials") || d === "materials"; }
+    if (dept === "complete_denture") { if (mismatchTopic("complete_denture")) return false; return has("complete_denture"); }
+    if (dept === "restorative") {
+      if (t === "restorative") return true;
+      if (OTHER_TOPICS.includes(t)) return false; // main topic wins — no cross-topic leak
+      if (["operative", "fixed", "rpd", "implant"].includes(d)) return true;
+      if (st.some((s) => ["operative", "fixed", "rpd", "implant", "materials", "complete_denture", "restorative_general"].includes(s)))
+        return true;
+      return false;
+    }
+    return t === dept || d === dept;
+  }
+
+  function inSourceScope(q, scope) {
+    if (!scope || scope === "all") return true;
+    if (scope === "plan" || scope === "preferred") return isPreferredMcq(q);
+    if (scope === "abtal") return isAbtalSource(q);
+    if (scope === "rafi_core") {
+      const part = rafiPartNum(q);
+      return part != null && RAFI_CORE_FIRST.has(part);
+    }
+    if (scope === "rafi_second") {
+      const part = rafiPartNum(q);
+      return part != null && RAFI_CORE_SECOND.has(part);
+    }
+    if (scope === "rafi_plan") {
+      /* خطة: 11–19 then 7,5,10,9,1,3 — not 2/4/6/8 */
+      const part = rafiPartNum(q);
+      return part != null && (RAFI_CORE_FIRST.has(part) || RAFI_CORE_SECOND.has(part));
+    }
+    if (scope === "rafi") {
+      return String((q && q.source) || "").startsWith("rafi_") || String((q && q.id) || "").startsWith("rafi_");
+    }
+    if (scope === "rafi_16") {
+      return String((q && q.source) || "") === "rafi_16";
+    }
+    if (scope === "rafi_19") {
+      return String((q && q.source) || "") === "rafi_19";
+    }
+    if (scope === "rafi_1619") {
+      const src = String((q && q.source) || "");
+      return src === "rafi_16" || src === "rafi_19";
+    }
+    if (scope === "complete") return isCompleteSource(q);
+    if (scope === "archive") return !isPreferredMcq(q);
+    return true;
+  }
+
+  function pool(topic) {
+    const { base, sourceScope, unseenOnly } = parsePoolTopic(topic);
+
+    let p = allQ();
+
+    /* Source scope first when using dept@scope (department-first plan) */
+    if (sourceScope) {
+      p = p.filter((q) => inSourceScope(q, sourceScope));
+      if (base && base !== "all") {
+        if (base === "operative") {
+          p = p.filter((q) => matchesDepartment(q, "operative"));
+        } else if (SUBTOPIC_KEYS.has(base)) {
+          p = p.filter((q) => matchesDepartment(q, base));
+        } else {
+          p = p.filter((q) => matchesDepartment(q, base));
+        }
+      }
+      if (unseenOnly) p = p.filter((q) => !isSeen(q.id));
+      return p;
+    }
+
+    if (base === "wrong") p = state.wrongBook.map((id) => p.find((q) => q.id === id)).filter(Boolean);
+    else if (base === "search_hits") {
+      const ids = state.searchHitIds || [];
+      const byId = new Map(p.map((q) => [q.id, q]));
+      p = ids.map((id) => byId.get(id)).filter(Boolean);
+    } else if (base === "preferred") p = p.filter((q) => isPreferredMcq(q));
+    else if (base === "archive") p = p.filter((q) => !isPreferredMcq(q));
+    else if (base === "always_src") p = p.filter((q) => q.source === "always");
+    else if (base === "saud_delta") p = p.filter((q) => q.source === "saud_delta");
+    else if (base === "abtal") p = p.filter((q) => isAbtalSource(q));
+    else if (base === "rafi_core")
+      p = p.filter((q) => {
+        const part = rafiPartNum(q);
+        return part != null && RAFI_CORE_FIRST.has(part);
+      });
+    else if (base === "rafi_second")
+      p = p.filter((q) => {
+        const part = rafiPartNum(q);
+        return part != null && RAFI_CORE_SECOND.has(part);
+      });
+    else if (base === "rafi")
+      p = p.filter((q) => String(q.source || "").startsWith("rafi_") || String(q.id || "").startsWith("rafi_"));
+    else if (base === "rafi_1619")
+      p = p.filter((q) => {
+        const src = String(q.source || "");
+        return src === "rafi_16" || src === "rafi_19";
+      });
+    else if (base === "complete")
+      p = p.filter((q) => isCompleteSource(q));
+    else if (base === "stream")
+      p = p.filter((q) => String(q.source || "").startsWith("stream"));
+    else if (base === "weak") {
+      const keys = weakTopicKeys(3);
+      p = p.filter((q) => keys.some((k) => matchesDepartment(q, k)));
+      const wrongSet = new Set(state.wrongBook || []);
+      p = p.slice().sort((a, b) => (wrongSet.has(b.id) ? 1 : 0) - (wrongSet.has(a.id) ? 1 : 0));
+    } else if (base === "all" || !base) {
+      /* keep all */
+    } else if (String(base).includes(",")) {
+      const parts = String(base)
+        .split(",")
+        .map((t) => t.trim())
+        .filter(Boolean);
+      const topicSet = new Set(parts.filter((t) => !SUBTOPIC_KEYS.has(t) && t !== "unseen" && t !== "weak"));
+      const subSet = new Set(parts.filter((t) => SUBTOPIC_KEYS.has(t)));
+      const wantUnseen = parts.includes("unseen");
+      p = p.filter((q) => {
+        if (wantUnseen && isSeen(q.id)) return false;
+        const st = q.subtopics || [];
+        const topicOk = !topicSet.size || [...topicSet].some((td) => matchesDepartment(q, td));
+        const subOk = !subSet.size || st.some((s) => subSet.has(s)) || [...subSet].some((s) => matchesDepartment(q, s));
+        if (topicSet.size && subSet.size) return topicOk && subOk;
+        if (subSet.size) return subOk;
+        return topicOk;
+      });
+    } else if (base === "operative") {
+      p = p.filter((q) => matchesDepartment(q, "operative"));
+    } else if (SUBTOPIC_KEYS.has(base)) {
+      p = p.filter((q) => matchesDepartment(q, base));
+    } else {
+      /* Blueprint topics: use department field too (رفيع tagged both) */
+      p = p.filter((q) => matchesDepartment(q, base));
+    }
+
+    if (unseenOnly) p = p.filter((q) => !isSeen(q.id));
+    return p;
+  }
+
+  function poolN(topic) {
+    if (topic === "blueprint" || topic === "exam_mix") {
+      // virtual mix — stock is preferred bank size
+      return pool("preferred").length;
+    }
+    return pool(topic).length;
+  }
+
+  /** Normalize paste/search text for MCQ lookup across full bank. */
+  function normalizeMcqSearch(s) {
+    return String(s || "")
+      .toLowerCase()
+      .replace(/[\u200f\u200e\u202a-\u202e]/g, "")
+      .replace(/[^\p{L}\p{N}\s]/gu, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  /**
+   * Search all ~16k MCQs by pasted stem / keywords.
+   * Returns [{ q, score }] sorted best-first.
+   */
+  function searchQuestionBank(rawQuery, limit) {
+    const lim = Math.min(Math.max(limit || 40, 1), 80);
+    const qNorm = normalizeMcqSearch(rawQuery);
+    if (qNorm.length < 3) return [];
+    const words = qNorm.split(" ").filter((w) => w.length >= 3);
+    const phrase = qNorm.length > 100 ? qNorm.slice(0, 90) : qNorm;
+    const shortPhrase = qNorm.slice(0, 48);
+    const bank = allQ();
+    const hits = [];
+    for (let i = 0; i < bank.length; i++) {
+      const item = bank[i];
+      if (!item || !item.q) continue;
+      const stem = normalizeMcqSearch(item.q);
+      if (!stem) continue;
+      let score = 0;
+      if (stem === qNorm) score = 10000;
+      else if (stem.includes(qNorm) || qNorm.includes(stem)) score = 8000 + Math.min(stem.length, 200);
+      else if (shortPhrase.length >= 12 && stem.includes(shortPhrase)) score = 5000;
+      else if (phrase.length >= 16 && stem.includes(phrase)) score = 4000;
+      else if (words.length) {
+        let hit = 0;
+        for (let w = 0; w < words.length; w++) {
+          if (stem.includes(words[w])) hit++;
+        }
+        if (hit === 0) continue;
+        score = hit * 100 + (hit === words.length ? 500 : 0);
+        /* options / explanation boost */
+        const opts = Array.isArray(item.options) ? item.options.join(" ") : "";
+        const blob = normalizeMcqSearch(opts + " " + (item.explanation || ""));
+        for (let w = 0; w < words.length; w++) {
+          if (blob.includes(words[w])) score += 8;
+        }
+      } else continue;
+      if (score > 0) hits.push({ q: item, score });
+    }
+    hits.sort((a, b) => b.score - a.score);
+    return hits.slice(0, lim);
+  }
+
+  function bankInventory() {
+    return {
+      all: poolN("all"),
+      preferred: poolN("preferred"),
+      archive: poolN("archive"),
+      always: poolN("always_src"),
+      saud_delta: poolN("saud_delta"),
+      abtal: poolN("abtal"),
+      rafi_core: poolN("rafi_core"),
+      rafi_second: poolN("rafi_second"),
+      rafi: poolN("rafi"),
+      rafi_1619: poolN("rafi_1619"),
+      marjune: poolN("abtal"),
+      complete: poolN("complete"),
+      stream: poolN("stream"),
+      restorative: poolN("restorative"),
+      operative: poolN("operative"),
+      fixed: poolN("fixed"),
+      implant: poolN("implant"),
+      rpd: poolN("rpd"),
+      complete_denture: poolN("complete_denture"),
+      materials: poolN("materials"),
+      perio: poolN("perio"),
+      endo: poolN("endo"),
+      oms: poolN("oms"),
+      ortho_pedo: poolN("ortho_pedo"),
+      ethics: poolN("ethics"),
+      mixed: poolN("mixed"),
+      wrong: poolN("wrong"),
+      unseen: poolN("unseen"),
+      unseen_operative: poolN("unseen:operative"),
+      unseen_restorative: poolN("unseen:restorative"),
+      unseen_perio: poolN("unseen:perio"),
+      unseen_endo: poolN("unseen:endo"),
+      unseen_oms: poolN("unseen:oms"),
+      weak: poolN("weak"),
+      seen: Object.keys(state.seenIds || {}).length,
+    };
+  }
+
+  /** Build size list that scales with pool — never hide volume behind a single 50. */
+  function sizeLadder(poolSize, prefer) {
+    const candidates = prefer || [25, 50, 100, 150, 200, 300, 500, 750, 1000];
+    const out = [];
+    for (const n of candidates) {
+      if (n <= poolSize) out.push(n);
+    }
+    // If pool is between rungs, still offer nearest under-pool sizes already added
+    if (poolSize >= 20 && !out.includes(50) && poolSize < 50) out.push(Math.min(50, poolSize));
+    if (poolSize > 0 && (out.length === 0 || out[out.length - 1] < poolSize)) {
+      /* ALL always last */
+    }
+    return out;
+  }
+
+  function volBtn(topic, n, shortLabel, cls) {
+    const p = poolN(topic);
+    const take = n >= QUIZ_ALL ? p : Math.min(n, p);
+    const isAll = n >= QUIZ_ALL;
+    const label = isAll ? `${shortLabel} ALL (${p})` : `${shortLabel} ${n}`;
+    const disabled = p === 0 ? "disabled" : "";
+    const dim = !isAll && n > p ? " ghost" : "";
+    return `<button type="button" class="btn vol-btn${dim}${cls ? " " + cls : ""}" data-t="${escapeHtml(topic)}" data-n="${
+      isAll ? QUIZ_ALL : n
+    }" title="${p} in pool · starts ${take}" ${disabled}>${escapeHtml(label)}<span class="vol-meta">${p}</span></button>`;
+  }
+
+  function volBlock(title, topic, sizes, shortLabel) {
+    const p = poolN(topic);
+    const ladder = (sizes || sizeLadder(p)).filter((n) => n === "ALL" || n <= p || n <= 50);
+    const parts = [];
+    for (const s of ladder) {
+      if (s === "ALL") continue;
+      if (typeof s === "number" && s > p && s > 50) continue;
+      parts.push(volBtn(topic, s, shortLabel || title, ""));
+    }
+    parts.push(volBtn(topic, QUIZ_ALL, shortLabel || title, "success"));
+    return `<div class="vol-block">
+      <div class="vol-head"><strong>${escapeHtml(title)}</strong><span class="vol-pool"><b>${p}</b> questions in pool</span></div>
+      <div class="volume-grid">${parts.join("")}</div>
+    </div>`;
+  }
+
+  function bindVolButtons(root) {
+    (root || app).querySelectorAll("button.vol-btn[data-t]").forEach((b) => {
+      b.onclick = () => startQuiz(b.dataset.t, +b.dataset.n, "learn", false);
+    });
+  }
+
+  function inventoryTableHtml(inv) {
+    const rows = [
+      ["Preferred (أبطال + curated + core رفيع)", inv.preferred || 0],
+      ["أبطال (highly recommended)", inv.abtal || 0],
+      ["رفيع 11–19 first (plan)", inv.rafi_core || 0],
+      ["رفيع 7·5·10·9·1·3 (plan)", inv.rafi_second || 0],
+      ["Archive (not preferred)", inv.archive || 0],
+      ["Full usable bank", inv.all],
+      ["Unseen (never answered)", inv.unseen],
+      ["Unseen operative", inv.unseen_operative],
+      ["Unseen restorative", inv.unseen_restorative],
+      ["Seen (answered once+)", inv.seen],
+      ["Weak pack (lowest topics)", inv.weak],
+      ["Flashcards loaded", ensureFlashcards().length],
+      ["Free points (always)", inv.always],
+      ["Saud delta (تلخيص سعود)", inv.saud_delta || 0],
+      ["Restorative", inv.restorative],
+      ["Operative (subtopic)", inv.operative],
+      ["Fixed / Implant / RPD", `${inv.fixed} / ${inv.implant} / ${inv.rpd}`],
+      ["Perio", inv.perio],
+      ["Endo", inv.endo],
+      ["OMS", inv.oms],
+      ["Ortho/Pedo", inv.ortho_pedo],
+      ["Ethics/Med", inv.ethics],
+      ["Mixed", inv.mixed],
+      ["Wrong book", inv.wrong],
+    ];
+    return `<table class="inv-table"><thead><tr><th>Pool</th><th>Count</th></tr></thead><tbody>
+      ${rows.map(([a, b]) => `<tr><td>${a}</td><td><b>${b}</b></td></tr>`).join("")}
+    </tbody></table>`;
+  }
+
+  /**
+   * Full-exam mocks: SCFHS-ish blueprint mix from Preferred (SDLE) pool only.
+   * Restorative ~40%, perio ~18%, endo ~17%, oms ~15%, ortho/pedo ~10%, ethics free points sprinkled.
+   */
+  function blueprintMockItems(count) {
+    const n = Math.max(1, Math.min(+count || 100, 300));
+    const weights = Object.assign({}, BLUEPRINT_WEIGHTS, { ethics: 0.08 });
+    let sumW = 0;
+    for (const k of Object.keys(weights)) sumW += weights[k];
+    const keys = Object.keys(weights);
+    const targets = {};
+    const frac = [];
+    let assigned = 0;
+    keys.forEach((k) => {
+      const exact = (weights[k] / sumW) * n;
+      const floor = Math.floor(exact);
+      targets[k] = floor;
+      assigned += floor;
+      frac.push({ k, f: exact - floor });
+    });
+    frac.sort((a, b) => b.f - a.f);
+    let left = n - assigned;
+    for (let i = 0; i < frac.length && left > 0; i++, left--) {
+      targets[frac[i].k]++;
+    }
+
+    const picked = [];
+    const used = new Set();
+    function takeFrom(topic, need) {
+      let bag = pool(topic).filter((q) => isPreferredMcq(q) && !used.has(q.id));
+      if (bag.length < need) {
+        bag = pool(topic).filter((q) => !used.has(q.id));
+      }
+      bag = shuffle(bag);
+      for (let i = 0; i < bag.length && picked.length < n && need > 0; i++) {
+        picked.push(bag[i]);
+        used.add(bag[i].id);
+        need--;
+      }
+      return need;
+    }
+    for (const k of keys) {
+      takeFrom(k, targets[k] || 0);
+    }
+    // fill remainder from preferred all
+    if (picked.length < n) {
+      let rest = pool("preferred").filter((q) => !used.has(q.id));
+      if (rest.length < n - picked.length) rest = allQ().filter((q) => !used.has(q.id));
+      rest = shuffle(rest);
+      for (let i = 0; i < rest.length && picked.length < n; i++) {
+        picked.push(rest[i]);
+        used.add(rest[i].id);
+      }
+    }
+    return shuffle(picked).slice(0, n);
+  }
+
+  function runMock(type) {
+    const map = {
+      /* Full mocks → blueprint-weighted Preferred (not raw 15k dump) */
+      25: { topic: "blueprint", count: 25, sec: 72 },
+      50: { topic: "blueprint", count: 50, sec: 72 },
+      100: { topic: "blueprint", count: 100, sec: 72 },
+      150: { topic: "blueprint", count: 150, sec: 72 },
+      200: { topic: "blueprint", count: 200, sec: 72 },
+      resto40: { topic: "restorative@preferred", count: 40, sec: 72 },
+      resto50: { topic: "restorative@preferred", count: 50, sec: 72 },
+      resto100: { topic: "restorative@preferred", count: 100, sec: 72 },
+      resto150: { topic: "restorative@preferred", count: 150, sec: 72 },
+      resto200: { topic: "restorative@preferred", count: 200, sec: 72 },
+      op50: { topic: "operative@preferred", count: 50, sec: 72 },
+      op100: { topic: "operative@preferred", count: 100, sec: 72 },
+      op150: { topic: "operative@preferred", count: 150, sec: 72 },
+      op200: { topic: "operative@preferred", count: 200, sec: 72 },
+      perio50: { topic: "perio@preferred", count: 50, sec: 72 },
+      perio100: { topic: "perio@preferred", count: 100, sec: 72 },
+      endo50: { topic: "endo@preferred", count: 50, sec: 72 },
+      endo100: { topic: "endo@preferred", count: 100, sec: 72 },
+      oms50: { topic: "oms@preferred", count: 50, sec: 72 },
+      oms100: { topic: "oms@preferred", count: 100, sec: 72 },
+      oms200: { topic: "oms@preferred", count: 200, sec: 72 },
+      ortho50: { topic: "ortho_pedo@preferred", count: 50, sec: 72 },
+      ortho100: { topic: "ortho_pedo@preferred", count: 100, sec: 72 },
+      ethics50: { topic: "ethics@preferred", count: 50, sec: 72 },
+      fp50: { topic: "always_src", count: 50, sec: 72 },
+    };
+    const c = map[type] || map[25];
+    startQuiz(c.topic, c.count, "exam", true, c.sec);
+  }
+
+  function topicLabelOf(topic) {
+    if (topic === "always_src") return "Free points";
+    if (topic === "saud_delta") return "Saud delta";
+    if (topic === "abtal") return "أبطال الديجيتال";
+    if (topic === "rafi") return "رفيع المقام";
+    if (topic === "stream") return "Stream recalls";
+    if (topic === "wrong") return "Wrong book";
+    if (topic === "search_hits") return "Search results";
+    if (topic === "blueprint" || topic === "exam_mix") return "Exam mix (blueprint)";
+    if (topic === "all") return "Full bank";
+    if (topic === "preferred") return "Preferred (SDLE)";
+    if (topic === "unseen") return "Unseen";
+    if (topic === "weak") return `Weak (${weakTopicKeys(3).join("+")})`;
+    if (String(topic).startsWith("unseen:")) return "Unseen " + String(topic).slice(7);
+    if (String(topic).includes("@preferred")) return String(topic).split("@")[0] + " (Preferred)";
+    const cat = MCQ_CATEGORIES.find((c) => c.pool === topic);
+    if (cat) return cat.label;
+    return String(topic);
+  }
+
+  function unbindQuizKeys() {
+    if (quizKeyHandler) {
+      document.removeEventListener("keydown", quizKeyHandler);
+      quizKeyHandler = null;
+    }
+  }
+
+  function bindQuizKeys() {
+    unbindQuizKeys();
+    quizKeyHandler = (e) => {
+      if (state.view !== "quiz" || !state.quiz) return;
+      const tag = (e.target && e.target.tagName) || "";
+      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+      const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+      const qz = state.quiz;
+      const next = $("#btn-next");
+      const showAns = $("#btn-show-ans");
+      const fnReveal = $("#fn-reveal");
+      const item = qz.items[qz.i] || {};
+      if (item._fnRecall) {
+        if ((k === "r" || k === "R") && fnReveal && !fnReveal.hidden) {
+          e.preventDefault(); fnReveal.click(); return;
+        }
+        if ((k === "Enter" || k === "n" || k === "N" || k === " " || k === "ArrowRight") && next && !next.hidden) {
+          e.preventDefault(); next.click(); return;
+        }
+        return;
+      }
+      const locked = qz.mode === "test" && qz.answers[qz.i] != null;
+      const answered = (next && !next.hidden) || locked;
+      if (answered && (k === "Enter" || k === "n" || k === "N" || k === " " || k === "ArrowRight")) {
+        e.preventDefault();
+        if (next && !next.hidden) next.click();
+        return;
+      }
+      if (locked && (k === "r" || k === "R") && showAns && !showAns.hidden && !showAns.disabled) {
+        e.preventDefault();
+        showAns.click();
+        return;
+      }
+      if (answered) return;
+      const map = { a: 0, b: 1, c: 2, d: 3, A: 0, B: 1, C: 2, D: 3, "1": 0, "2": 1, "3": 2, "4": 3 };
+      if (map[k] != null) {
+        e.preventDefault();
+        const opts = app.querySelectorAll(".option");
+        if (opts[map[k]] && !opts[map[k]].disabled) pick(map[k]);
+      }
+    };
+    document.addEventListener("keydown", quizKeyHandler);
+  }
+
+  function startQuiz(topic, count, mode, timed, secPer) {
+    const want = !count || count >= QUIZ_ALL ? QUIZ_ALL : +count;
+    let p;
+    const topicStr = String(topic == null ? "all" : topic);
+    const { base } = parsePoolTopic(topicStr === "blueprint" || topicStr === "exam_mix" ? "all" : topic);
+
+    // Blueprint full mocks — stratified Preferred bank
+    if (topicStr === "blueprint" || topicStr === "exam_mix") {
+      p = blueprintMockItems(want === QUIZ_ALL ? 100 : want);
+    } else {
+      p = pool(topic);
+      // Day/learn practice: prefer Preferred (SDLE) within the topic when enough stock
+      // (skip for focus packs — they are their own source, not the structured bank)
+      if (
+        mode !== "exam" &&
+        topicStr !== "wrong" &&
+        topicStr !== "weak" &&
+        !topicStr.startsWith("unseen")
+      ) {
+        const pref = p.filter((q) => isPreferredMcq(q));
+        const need = want === QUIZ_ALL ? 40 : Math.min(want, 40);
+        if (pref.length >= need) p = pref;
+      }
+    }
+
+    if (!p.length) {
+      const hint = String(topic).startsWith("unseen")
+        ? "Unseen pool is empty for this filter — try another subject, Weak pack, Wrong book, or Full bank."
+        : topic === "weak"
+          ? "Weak pack is empty. Answer more MCQs so topic stats exist, or use subject buttons."
+          : "No questions in this pool yet. Try another subject or do more quizzes to fill wrong book.";
+      alert(hint);
+      return;
+    }
+    // Weak: wrong-book items from weak topics first, then shuffle the rest
+    if (base === "weak") {
+      const wrongSet = new Set(state.wrongBook || []);
+      const w = shuffle(p.filter((q) => wrongSet.has(q.id)));
+      const rest = shuffle(p.filter((q) => !wrongSet.has(q.id)));
+      p = w.concat(rest);
+    } else if (topicStr !== "blueprint" && topicStr !== "exam_mix") {
+      p = shuffle(p);
+    }
+    const n = !count || count >= QUIZ_ALL ? p.length : Math.min(count, p.length);
+    p = p.slice(0, n);
+    const topicLabel =
+      topicStr === "blueprint" || topicStr === "exam_mix"
+        ? "Exam mix (blueprint)"
+        : topicLabelOf(topic);
+    const modeLabel =
+      mode === "exam" ? "Mock" : mode === "test" ? "Test" : "Learn";
+    state.quiz = {
+      items: p,
+      i: 0,
+      mode,
+      timed,
+      topic,
+      answers: [],
+      revealed: [],
+      learnOk: 0,
+      learnN: 0,
+      startedAt: Date.now(),
+      seconds: timed ? p.length * (secPer || 60) : null,
+      label: `${modeLabel} · ${topicLabel} · ${p.length}Q`,
+      returnView:
+        state.view && state.view !== "quiz"
+          ? state.view
+          : mode === "test"
+            ? "mcqs"
+            : viewStack[viewStack.length - 1] || "today",
+    };
+    // Push origin so ← Back returns to the tab that started the quiz
+    if (state.view && state.view !== "quiz" && viewStack[viewStack.length - 1] !== state.view) {
+      viewStack.push(state.view);
+      if (viewStack.length > 24) viewStack = viewStack.slice(-24);
+      saveViewStack();
+    }
+    if (timed) startQuizTimer();
+    else clearQuizTimer();
+    state.view = "quiz";
+    renderQuizUI();
+  }
+
+  /**
+   * Start a quiz using FLASH NOTES items (not the main bank).
+   * Converts flash notes MCQ-ready items to quiz format.
+   */
+  function startFlashQuiz(dept, count, mode, timed, secPer) {
+    const FN = window.FLASH_NOTES || { byDept: {} };
+
+    // Scope can be: "all" | "src:<source-id>" | "dept:<id>" | "rev:<bucket>" | "search:<q>"
+    // (old callers pass a bare dept id or "all")
+    const isScope = (s) => s.indexOf("src:") === 0 || s.indexOf("dept:") === 0 || s.indexOf("rev:") === 0 || s.indexOf("search:") === 0;
+    let items = [];
+    if (isScope(dept)) {
+      if (dept.indexOf("src:") === 0) {
+        const s = dept.slice(4);
+        Object.values(FN.byDept || {}).forEach(arr => (arr || []).forEach(it => { if (!it._merged_into && (it.sources || []).includes(s)) items.push(it); }));
+      } else if (dept.indexOf("dept:") === 0) {
+        items = (FN.byDept[dept.slice(5)] || []).filter(it => !it._merged_into);
+      } else if (dept.indexOf("rev:") === 0) {
+        const r = dept.slice(4);
+        const f = {
+          book: it => it._verification_verdict === 'supported',
+          needs: it => it._verification_verdict === 'needs_review',
+          disputed: it => !!it._answer_disputed,
+          archive: it => !!(it._raw_recall || it._unverified || it._data_quality === 'merged_options_review'),
+          cards: it => it._kind === 'flashcard',
+          repaired: it => !!it._repaired_2026
+        }[r];
+        if (f) Object.values(FN.byDept || {}).forEach(arr => (arr || []).forEach(it => { if (!it._merged_into && f(it)) items.push(it); }));
+      } else { // search:
+        const q = dept.slice(7).toLowerCase();
+        if (q) Object.values(FN.byDept || {}).forEach(arr => (arr || []).forEach(it => {
+          if (it._merged_into) return;
+          const hay = [it.stem, it.answer, it.why, (it.options || []).join(" "), it._embedded_answer, it.reference].join(" ").toLowerCase();
+          if (hay.includes(q)) items.push(it);
+        }));
+      }
+    } else {
+      items = dept === "all"
+        ? [].concat(...Object.values(FN.byDept)).filter(it => !it._merged_into)
+        : (FN.byDept[dept] || []).filter(it => !it._merged_into);
+    }
+
+    if (!items.length) {
+      alert("No items in this scope.");
+      return;
+    }
+
+    // Use ALL items — convert MCQ-ready items to quiz format, recall-only items become Q&A
+    let quizItems = shuffle([...items]);
+    const n = count >= 99999 ? quizItems.length : Math.min(count, quizItems.length);
+    quizItems = quizItems.slice(0, n);
+
+    // Convert to quiz format
+    const isGarbageStem = (s) => {
+      const t = (s || "").replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim();
+      if (t.length < 3) return true;                       // "- composite" / empty
+      if (/^[-•*●#>\s]+$/.test(t)) return true;            // bullets only
+      if (!/[a-zA-Z\u0621-\u064A0-9]/.test(t)) return true; // no letters/digits/arabic
+      return false;
+    };
+    const cleanStem = (s) => (s || "")
+      .replace(/[✅🟢🟡✳🔵🔁●]/g, "")
+      .replace(/^[\s\u2022\u25CF\u2023\u25AA\u25A0#*>-]+/, "")  // leading bullets/dashes
+      .replace(/[\s\u2022\u25CF\u2023\u25AA\u25A0]+$/, "")
+      .trim();
+    const isPlaceholderOpt = (o) => /^\(?(not listed|none of the|n\.a|see image|pic|figure|صورة|الصورة)/i.test(o);
+    const converted = quizItems.map(it => {
+      const stem = cleanStem(it.stem);
+      if (isGarbageStem(stem)) return null; // drop garbage stems from quiz (kept in data, flagged)
+      if (it._data_quality === "merged_options_review" || it._data_quality === "garbage") return null; // merged messes / junk — split & repair in data phase, not quizzed as broken MCQs
+      if (it._is_option) return null; // orphan option fragments — merged back to parents in data phase
+      // _book_explanation may be an object {book, chapter, passage} or a string
+      const bookExp = it._book_explanation;
+      const bookWhy = (bookExp && typeof bookExp === 'object') ? (bookExp.passage || '') : (typeof bookExp === 'string' ? bookExp : '');
+      const commWhy = (typeof it._verified_explanation === 'string') ? it._verified_explanation : '';
+      const why = bookWhy || commWhy || "";
+
+      // Real MCQ detection: 2+ real options AND a resolvable answer, regardless of the
+      // format field (old parser labeled many valid MCQs as recall and vice-versa).
+      const rawOpts = (it.options || []).filter(Boolean);
+      const cleanOpts = rawOpts
+        .map(o => o.replace(/^[a-z][).]\s*/i, "").replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim())
+        .filter(Boolean);
+      let ansIdx = it.answerIdx;
+      if (ansIdx == null && it.answerLetter) {
+        ansIdx = it.answerLetter.toLowerCase().charCodeAt(0) - 97;
+      }
+      // map ansIdx onto cleaned options index (same position — cleaning preserves order)
+      const ansOpt = (ansIdx != null && ansIdx >= 0 && ansIdx < cleanOpts.length) ? cleanOpts[ansIdx] : "";
+      const hasOpts = cleanOpts.length > 1 && ansOpt && !isPlaceholderOpt(ansOpt) && !isPlaceholderOpt(stem);
+
+      if (hasOpts) {
+        return {
+          id: it.id || "fn_" + dept + "_" + Math.random().toString(36).slice(2, 8),
+          q: stem,
+          options: cleanOpts.slice(0, 6),
+          answer: Math.min(ansIdx, cleanOpts.length - 1),
+          explanation: why.slice(0, 400),
+          topic: dept || it.dept || "",
+          source: "flash_notes",
+          _fnRecall: false
+        };
+      }
+
+      // Honest Q&A card — no fake "Reveal answer" option; the reveal button is in the UI.
+      // Prefer structured answers over regex heuristics.
+      let ansText = "";
+      if (it._embedded_answer && typeof it._embedded_answer === 'string') ansText = it._embedded_answer;
+      else if (it._verified_explanation && typeof it._verified_explanation === 'string') {
+        ansText = it._verified_explanation.replace(/^correct answer:?\s*/i, "");
+      }
+      else if (it._model_suggested_answer && it._model_suggested_answer.answerIdx != null && cleanOpts[it._model_suggested_answer.answerIdx]) {
+        ansText = cleanOpts[it._model_suggested_answer.answerIdx];
+      }
+      if (!ansText && ansOpt) ansText = ansOpt;
+      if (!ansText) {
+        const raw = it.raw || it.stem || "";
+        const m = raw.match(/([a-z])[).]\s*([^\n?]*?)[✅🟢🟡✳🔵]/i);
+        if (m) ansText = m[2].replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim();
+      }
+      if (!ansText) ansText = "(no marked answer in source — see notes)";
+      const whyTxt = why ? "\n\n" + why.slice(0, 300) : "";
+      return {
+        id: it.id || "fn_" + dept + "_" + Math.random().toString(36).slice(2, 8),
+        q: stem,
+        options: cleanOpts.length > 1 ? cleanOpts.slice(0, 6) : [],
+        answer: 0,
+        explanation: "Answer: " + ansText + whyTxt,
+        topic: dept || it.dept || "",
+        source: "flash_notes",
+        _fnRecall: true
+      };
+    }).filter(Boolean);
+
+    const modeLabel = mode === "exam" ? "Flash Mock" : "Flash Quiz";
+    const deptLabel = dept === "all" ? "All Flash"
+      : dept.indexOf("src:") === 0 ? ((FN.sources || []).find(s => s.id === dept.slice(4)) || {}).label || dept.slice(4)
+      : dept.indexOf("dept:") === 0 ? dept.slice(5)
+      : dept.indexOf("rev:") === 0 ? ({book:"Book-verified",needs:"Needs review",disputed:"Disputed",archive:"Raw archive",cards:"Flashcards",repaired:"Repaired"}[dept.slice(4)] || dept.slice(4))
+      : dept.indexOf("search:") === 0 ? "Search: " + dept.slice(7).slice(0, 32)
+      : dept;
+
+    state.quiz = {
+      items: converted,
+      i: 0,
+      mode,
+      timed,
+      topic: "fn_" + (dept || "all").replace(/[^a-zA-Z0-9_]/g,'_').slice(0, 40),
+      answers: [],
+      revealed: [],
+      learnOk: 0,
+      learnN: 0,
+      startedAt: Date.now(),
+      seconds: timed ? converted.length * (secPer || 72) : null,
+      label: modeLabel + " · " + deptLabel + " · " + converted.length + "Q",
+      returnView: state.view || "marjune"
+    };
+
+    if (state.view && state.view !== "quiz" && viewStack[viewStack.length - 1] !== state.view) {
+      viewStack.push(state.view);
+      if (viewStack.length > 24) viewStack = viewStack.slice(-24);
+      saveViewStack();
+    }
+    if (timed) startQuizTimer();
+    else clearQuizTimer();
+    state.view = "quiz";
+    renderQuizUI();
+  }
+
+  function renderQuizUI() {
+    const qz = state.quiz;
+    if (!qz) {
+      unbindQuizKeys();
+      state.view = "today";
+      setActiveNav("today");
+      render();
+      return;
+    }
+    if (qz.i >= qz.items.length) {
+      finishQuiz();
+      return;
+    }
+    const item = qz.items[qz.i];
+    // ---- Honest Q&A card for recall flash notes (no fake "Reveal answer" option) ----
+    if (item._fnRecall) {
+      const rv = !!qz.revealed && qz.revealed[qz.i];
+      const showNext = rv || qz.mode === "learn";
+      const hasPickOpts = (item.options || []).length >= 2;
+      const pickedIdx = (qz.recallPick && qz.recallPick[qz.i] != null) ? qz.recallPick[qz.i] : null;
+      const optsHtml = hasPickOpts
+        ? `<div style="display:flex;flex-direction:column;gap:6px;margin-top:10px">${(item.options||[]).map((o,i)=>{
+            const letter = String.fromCharCode(65+i);
+            const isPicked = pickedIdx === i;
+            return `<button type="button" data-recall-opt="${i}" style="text-align:left;padding:9px 12px;border-radius:8px;cursor:pointer;font-size:0.86rem;line-height:1.45;background:var(--bg1);border:${isPicked?'2px solid var(--accent)':'1px solid var(--border)'};color:var(--text)"><b style="display:inline-block;min-width:1.4em">${letter}.</b> ${escapeHtml(o)}${isPicked?' · your pick':''}</button>`;
+          }).join('')}</div>` : '';
+      const ansHtml = rv
+        ? `<div class="explain"><strong>Answer</strong></div><div class="q-feedback" style="padding:10px 14px;background:var(--bg1);border:1px solid var(--border);border-radius:var(--radius);font-size:0.92rem;line-height:1.6;white-space:pre-wrap">${escapeHtml(item.explanation || "")}</div>`
+        : `<p class="muted q-feedback-hint">${hasPickOpts ? 'Answer not book-verified — pick your best to self-test, then <b>Show answer</b> (no scoring).' : 'Recall Q&A — tap <b>Show answer</b> to reveal. No scoring; use it to self-test recall.'}</p>`;
+      app.innerHTML = `
+        ${backBarHtml("← Back (previous screen)")}
+        <div class="q-card q-card-wide">
+          <div class="q-meta">
+            ${escapeHtml(qz.label)} · ${qz.i + 1} / ${qz.items.length}
+            <span class="badge blue">${escapeHtml(item.topic)}</span>
+            <span class="badge" style="background:var(--bg3);color:var(--accent2);font-weight:500">📝 recall Q&A</span>
+            ${qz.seconds != null ? `<span class="timer" id="quiz-timer">${formatTime(qz.seconds)}</span>` : ""}
+          </div>
+          <h2 class="q-stem">${escapeHtml(item.q)}</h2>
+          ${optsHtml}
+          <div class="q-layout"><div id="feedback" class="q-feedback">${ansHtml}</div></div>
+          <div class="quiz-actions quiz-actions-sticky">
+            <button class="btn ghost" id="fn-reveal" ${rv ? "hidden" : ""}>🔍 Show answer</button>
+            <button class="btn btn-next-main" id="btn-next" ${showNext ? "" : "hidden"}>Next →</button>
+          </div>
+          <p class="kb-hint">Keys: <b>R</b> show answer · <b>Enter / N</b> next</p>
+        </div>
+      `;
+      bindBackBar();
+      app.querySelectorAll("[data-recall-opt]").forEach(b => b.onclick = () => {
+        if (!qz.recallPick) qz.recallPick = [];
+        qz.recallPick[qz.i] = +b.dataset.recallOpt;
+        renderQuizUI();
+      });
+      const revealBtn = $("#fn-reveal");
+      if (revealBtn) revealBtn.onclick = () => {
+        if (!qz.revealed) qz.revealed = [];
+        qz.revealed[qz.i] = true;
+        qz.learnN = (qz.learnN || 0) + 1; // count as seen; no right/wrong scoring
+        renderQuizUI();
+      };
+      const nextBtn = $("#btn-next");
+      if (nextBtn) nextBtn.onclick = () => { qz.i++; renderQuizUI(); };
+      bindQuizKeys();
+      return;
+    }
+    const locked = qz.mode === "test" && qz.answers[qz.i] != null;
+    const picked = locked ? qz.answers[qz.i] : null;
+    const revealed = qz.mode === "test" && qz.revealed && qz.revealed[qz.i];
+    const kbHint =
+      qz.mode === "test"
+        ? "Keys: <b>A B C D</b> answer · <b>R</b> show answer · <b>Enter / N</b> next"
+        : qz.mode === "exam"
+          ? "Keys: <b>A B C D</b> — exam advances immediately"
+          : "Keys: <b>A B C D</b> (or 1–4) answer · <b>Enter / N</b> next";
+
+    const showNext = qz.mode === "test" && locked;
+    const showAnsBtn = qz.mode === "test" && locked && !revealed;
+    const actionsHtml = `
+        <div class="quiz-actions${showNext || qz.mode === "learn" ? " quiz-actions-sticky" : ""}">
+          ${
+            qz.mode === "test"
+              ? `<button class="btn ghost" id="btn-show-ans" ${!showAnsBtn ? "hidden" : ""}>Show answer</button>`
+              : ""
+          }
+          <button class="btn btn-next-main" id="btn-next" ${showNext ? "" : "hidden"}>Next →</button>
+        </div>`;
+
+    app.innerHTML = `
+      ${backBarHtml("← Back (previous screen)")}
+      <div class="q-card q-card-wide">
+        <div class="q-meta">
+          ${escapeHtml(qz.label)} · ${qz.i + 1} / ${qz.items.length}
+          <span class="badge blue">${escapeHtml(item.topic)}</span>
+          ${qz.seconds != null ? `<span class="timer" id="quiz-timer">${formatTime(qz.seconds)}</span>` : ""}
+        </div>
+        <h2 class="q-stem">${escapeHtml(item.q)}</h2>
+        <div class="q-layout">
+          <div id="opts" class="q-opts">
+            ${item.options
+              .map((o, idx) => {
+                let cls = "option";
+                if (locked && idx === picked) cls += " option-picked";
+                if (revealed && idx === item.answer) cls += " correct";
+                if (revealed && idx === picked && picked !== item.answer) cls += " wrong";
+                const dis = locked || revealed ? "disabled" : "";
+                return `<button class="${cls}" data-idx="${idx}" ${dis}><strong>${String.fromCharCode(65 + idx)}.</strong> ${escapeHtml(o)}</button>`;
+              })
+              .join("")}
+          </div>
+          <div id="feedback" class="q-feedback">${
+            revealed
+              ? `${formatAnswerFeedback(item, {
+                  ok: picked == null ? null : picked === item.answer,
+                  picked,
+                })}${sdleGptButtonHtml("row")}`
+              : locked
+                ? `<p class="muted q-feedback-hint">Answer locked. Tap <b>Show answer</b> or <b>Next</b> (bottom bar stays in view).</p>`
+                : ""
+          }</div>
+        </div>
+        ${actionsHtml}
+        <p class="kb-hint">${kbHint}</p>
+      </div>
+    `;
+    bindBackBar();
+    if (!locked) {
+      app.querySelectorAll(".option").forEach((btn) => {
+        btn.onclick = () => pick(+btn.dataset.idx);
+      });
+    }
+    if (revealed) {
+      bindSdleGptButtons(app, () => contextFromQuizItem(item, picked));
+      bindMcqDispute(app, item, picked);
+    }
+    const goNext = () => {
+      qz.i++;
+      renderQuizUI();
+    };
+    const next = $("#btn-next");
+    if (next && showNext) next.onclick = goNext;
+    const showBtn = $("#btn-show-ans");
+    if (showBtn && qz.mode === "test") {
+      showBtn.onclick = () => {
+        if (qz.answers[qz.i] == null) return;
+        if (!qz.revealed) qz.revealed = [];
+        qz.revealed[qz.i] = true;
+        renderQuizUI();
+      };
+    }
+    bindQuizKeys();
+  }
+
+  function pick(idx) {
+    const qz = state.quiz;
+    if (!qz) return;
+    const item = qz.items[qz.i];
+    if (qz.mode === "exam") {
+      qz.answers[qz.i] = idx;
+      qz.i++;
+      renderQuizUI();
+      return;
+    }
+    if (qz.mode === "test") {
+      if (qz.answers[qz.i] != null) return;
+      qz.answers[qz.i] = idx;
+      // reveal right/wrong immediately on pick
+      if (!qz.revealed) qz.revealed = [];
+      qz.revealed[qz.i] = true;
+      const ok = idx === item.answer;
+      qz.learnN = (qz.learnN || 0) + 1;
+      if (ok) qz.learnOk = (qz.learnOk || 0) + 1;
+      record(item, ok);
+      renderQuizUI();
+      return;
+    }
+    // learn mode — already answered this item
+    if ($("#btn-next") && !$("#btn-next").hidden) return;
+    const ok = idx === item.answer;
+    qz.learnN = (qz.learnN || 0) + 1;
+    if (ok) qz.learnOk = (qz.learnOk || 0) + 1;
+    record(item, ok);
+    app.querySelectorAll(".option").forEach((b) => {
+      b.disabled = true;
+      const i = +b.dataset.idx;
+      if (i === item.answer) b.classList.add("correct");
+      if (i === idx && !ok) b.classList.add("wrong");
+    });
+    const fb = $("#feedback");
+    if (fb) {
+      fb.innerHTML = `${formatAnswerFeedback(item, { ok, picked: idx })}${sdleGptButtonHtml("row")}`;
+      bindSdleGptButtons(fb, () => contextFromQuizItem(item, idx));
+      bindMcqDispute(fb, item, idx);
+    }
+    const next = $("#btn-next");
+    if (next) {
+      next.hidden = false;
+      next.classList.add("btn-next-main");
+      const bar = next.closest(".quiz-actions");
+      if (bar) bar.classList.add("quiz-actions-sticky");
+      next.onclick = () => {
+        qz.i++;
+        renderQuizUI();
+      };
+    }
+  }
+
+  function record(item, ok) {
+    bumpVolume();
+    state.stats.answered++;
+    if (ok) state.stats.correct++;
+    const t = item.topic || "mixed";
+    if (!state.stats.byTopic[t]) state.stats.byTopic[t] = { a: 0, c: 0 };
+    state.stats.byTopic[t].a++;
+    if (ok) state.stats.byTopic[t].c++;
+    if (!state.stats.bySubtopic) state.stats.bySubtopic = {};
+    (item.subtopics || []).forEach((st) => {
+      if (!st) return;
+      if (!state.stats.bySubtopic[st]) state.stats.bySubtopic[st] = { a: 0, c: 0 };
+      state.stats.bySubtopic[st].a++;
+      if (ok) state.stats.bySubtopic[st].c++;
+    });
+    markSeen(item.id);
+    if (!ok) {
+      if (!state.wrongBook.includes(item.id)) state.wrongBook.push(item.id);
+    } else {
+      state.wrongBook = state.wrongBook.filter((id) => id !== item.id);
+    }
+    save();
+  }
+
+  function finishQuiz() {
+    clearQuizTimer();
+    unbindQuizKeys();
+    const qz = state.quiz;
+    if (!qz) return;
+    let correct = 0;
+    if (qz.mode === "exam") {
+      qz.items.forEach((item, i) => {
+        const ans = qz.answers[i];
+        const ok = ans === item.answer;
+        if (ans != null) record(item, ok);
+        if (ok) correct++;
+      });
+    } else {
+      // learn + test: already recorded on lock/pick
+      correct = qz.learnOk || 0;
+    }
+    const total =
+      qz.mode === "exam"
+        ? qz.items.length
+        : qz.mode === "test"
+          ? qz.items.length
+          : qz.learnN || qz.items.length;
+    const pct =
+      qz.mode === "exam"
+        ? total
+          ? Math.round((100 * correct) / total)
+          : null
+        : qz.mode === "test"
+          ? total
+            ? Math.round((100 * correct) / Math.max(qz.learnN || total, 1))
+            : null
+          : qz.learnN
+            ? Math.round((100 * (qz.learnOk || 0)) / qz.learnN)
+            : null;
+    // test mode: score over answered; if user finished all, learnN === items.length
+    const displayTotal = qz.mode === "test" ? qz.learnN || qz.items.length : total;
+    const displayCorrect = correct;
+    const displayPct =
+      displayTotal > 0 ? Math.round((100 * displayCorrect) / displayTotal) : pct;
+    const sec = Math.round((Date.now() - (qz.startedAt || Date.now())) / 1000);
+    const itemCount = (qz.items && qz.items.length) || 0;
+    const isMock = qz.mode === "exam" && itemCount >= 100;
+    const byTopicMock = isMock ? mockTopicBreakdown(qz) : null;
+    const fatigue = isMock ? mockFatigue(qz) : null;
+    const sessionTs = Date.now();
+    const sessionEntry = {
+      ts: sessionTs,
+      mode: qz.mode || "learn",
+      label: qz.label,
+      topic: qz.topic,
+      total: itemCount || displayTotal,
+      answered: qz.mode === "exam" ? (qz.answers || []).filter((a) => a != null).length : qz.learnN || 0,
+      correct: displayCorrect,
+      pct: displayPct,
+      sec,
+    };
+    if (isMock) {
+      sessionEntry.isMock = true;
+      sessionEntry.byTopic = byTopicMock;
+      if (fatigue) sessionEntry.fatigue = fatigue;
+    }
+    const priorMock = isMock ? findPriorMock(null) : null;
+    logSession(sessionEntry);
+    save();
+    const showReview = qz.mode === "exam" || qz.mode === "test";
+    const backView = qz.returnView || (qz.mode === "test" ? "mcqs" : viewStack[viewStack.length - 1] || "today");
+    const backLabel =
+      backView === "mcqs"
+        ? "← Back to MCQs"
+        : backView === "practice"
+          ? "← Back to Extra practice"
+          : backView === "always"
+            ? "← Back to Always-comes"
+            : backView === "pass"
+              ? "← Back to Pass plan"
+              : backView === "progress"
+                ? "← Back to Progress"
+                : "← Back";
+    const deltaBlock = isMock ? mockDeltaHtml(sessionEntry, priorMock) : "";
+    app.innerHTML = `
+      ${backBarHtml(backLabel)}
+      <div class="q-card">
+        <h1>Session complete</h1>
+        ${
+          displayPct != null
+            ? `<div class="stat-box" style="margin:16px 0"><div class="num" style="color:${
+                displayPct >= 80 ? "var(--accent2)" : "var(--warn)"
+              }">${displayPct}%</div><div class="lbl">${displayCorrect} / ${displayTotal} · ${formatDur(
+                sec
+              )}</div></div>
+               <p class="lead">${displayPct >= 80 ? "On target for 80%+." : "Review below, then wrong book."} Logged in Progress history.</p>`
+            : `<p class="lead">Session finished (${formatDur(sec)}). Check Progress for history + score.</p>`
+        }
+        ${deltaBlock}
+        ${nextBestActionHtml()}
+        <div class="volume-grid">
+          <button class="btn" id="back">${backLabel}</button>
+          <button class="btn ghost" id="wb">Wrong book</button>
+          <button class="btn ghost" id="to-hist">Progress history</button>
+          ${qz.mode === "test" ? `<button class="btn ghost" id="again">Retake same pool</button>` : ""}
+        </div>
+      </div>
+      ${
+        showReview
+          ? `<div class="mcq-review" style="margin-top:16px">${qz.items
+              .map((item, i) => {
+                const ans = qz.answers[i];
+                const ok = ans === item.answer;
+                const skipped = ans == null;
+                return `<div class="rule" style="border-left-color:${
+                  skipped ? "var(--muted)" : ok ? "var(--accent2)" : "var(--danger)"
+                }">
+                  <strong>${skipped ? "SKIP" : ok ? "OK" : "MISS"} · ${escapeHtml(item.topic)}</strong>
+                  <span>${escapeHtml(item.q)}</span>
+                  <div class="explain">Your pick: ${
+                    skipped ? "—" : escapeHtml(item.options[ans] || "")
+                  }</div>
+                  ${formatAnswerFeedback(item, {
+                    ok: skipped ? null : ok,
+                    picked: skipped ? null : ans,
+                  })}
+                </div>`;
+              })
+              .join("")}</div>`
+          : ""
+      }
+    `;
+    const topicRetake = qz.topic;
+    const reviewItems = showReview ? qz.items.slice() : [];
+    const reviewAnswers = showReview ? (qz.answers || []).slice() : [];
+    state.quiz = null;
+    bindBackBar();
+    bindVolButtons(app);
+    if (showReview && reviewItems.length) {
+      app.querySelectorAll(".mcq-dispute").forEach((box, i) => {
+        const item = reviewItems[i];
+        if (!item) return;
+        bindMcqDispute(box, item, reviewAnswers[i]);
+      });
+    }
+    $("#back").onclick = () => {
+      // Prefer stack, fall back to returnView
+      if (viewStack.length) goBack();
+      else navigateTo(backView, { push: false });
+    };
+    $("#wb").onclick = () => {
+      /* Don’t force 20 — open builder on wrong book count step */
+      state.practiceBuild = { step: "count", kind: "mcq", topic: "wrong" };
+      navigateTo("practice", { push: true });
+    };
+    $("#to-hist") &&
+      ($("#to-hist").onclick = () => {
+        state.view = "progress";
+        setActiveNav("progress");
+        render();
+      });
+    $("#again") &&
+      ($("#again").onclick = () => {
+        startMcqTest(topicRetake, QUIZ_ALL);
+      });
+  }
+
+  /* ——— CARDS ——— */
+  function unbindCardKeys() {
+    if (cardKeyHandler) {
+      document.removeEventListener("keydown", cardKeyHandler);
+      cardKeyHandler = null;
+    }
+  }
+
+  function renderCardsUI() {
+    unbindQuizKeys();
+    const deck = state._cardDeck || lessonCardDeck();
+    const total = ensureFlashcards().length;
+    const poolKey = deck + ":" + total + ":" + (state.wrongBook || []).length;
+    if (state._cardPoolKey !== poolKey || !Array.isArray(state._cardPool) || !state._cardPool.length) {
+      state._cardPool = shuffle(cardPoolForDeck(deck));
+      state._cardPoolKey = poolKey;
+      state.cardIx = 0;
+    }
+    let pool = state._cardPool;
+    if (!pool.length) {
+      app.innerHTML = `
+        ${backBarHtml("← Back")}
+        <h1>Flashcards</h1>
+        <div class="alert">No cards. Hard-refresh (Ctrl+Shift+R). Need notes_bank + highyield.</div>`;
+      bindBackBar();
+      return;
+    }
+    if (state.cardIx >= pool.length) state.cardIx = 0;
+    const c = pool[state.cardIx];
+    const knownN = pool.filter((x) => state.cardKnown[x.id]).length;
+    const decks = [
+      "always",
+      "abtal_notes",
+      "restorative",
+      "perio",
+      "endo",
+      "oms",
+      "ortho_pedo",
+      "ethics",
+      "fixed",
+      "rpd",
+      "implant",
+      "diagnostics",
+      "wrong",
+      "unknown",
+      "all",
+    ];
+    const deckLabel = {
+      always: "Always",
+      abtal_notes: "أبطال الديجيتال",
+      restorative: "Restorative",
+      perio: "Perio",
+      endo: "Endo",
+      oms: "OMS",
+      ortho_pedo: "Ortho/Pedo",
+      ethics: "Ethics",
+      fixed: "Fixed Prosth",
+      rpd: "Removable (RPD)",
+      implant: "Implant",
+      diagnostics: "Diagnostics",
+      wrong: "Wrong book",
+      unknown: "Unknown",
+      all: "All",
+    };
+    const srcLabel =
+      c.src === "abtal_note"
+        ? "أبطال الديجيتال"
+        : c.src === "wrong_book"
+          ? "Wrong book"
+          : c.src === "always_comes"
+            ? "Always-comes"
+            : c.src && c.src !== "note"
+              ? String(c.src)
+              : "Core";
+    app.innerHTML = `
+      ${backBarHtml("← Back")}
+      <h1>Flashcards <span class="badge">${state.cardIx + 1}/${pool.length}</span>
+        <span class="badge green">${knownN} known</span></h1>
+      <p class="lead" dir="rtl">
+        ${total} بطاقة — أساسية، ملاحظات أبطال الديجيتال/رفيع، ودفتر الأخطاء.
+        المجموعة: <b>${escapeHtml(deckLabel[deck] || deck)}</b>
+      </p>
+      <div class="volume-grid" style="margin-bottom:10px">
+        ${decks
+          .map(
+            (d) =>
+              `<button type="button" class="btn sm ${d === deck ? "" : "ghost"} deck-pick" data-deck="${d}">${escapeHtml(deckLabel[d] || d)} (${cardPoolForDeck(d).length})</button>`
+          )
+          .join("")}
+      </div>
+      <div class="card-face" id="flip" tabindex="0">
+        <div class="q-meta">${escapeHtml(srcLabel)} · ${escapeHtml(c.deck || "card")}</div>
+        <h2 id="cf" style="line-height:1.45">${escapeHtml(c.front)}</h2>
+        <div id="cb" class="explain" hidden><strong>Answer:</strong> ${escapeHtml(c.back)}</div>
+      </div>
+      <div class="volume-grid">
+        <button class="btn ghost" id="show">Show</button>
+        <button class="btn success" id="know">Know (1)</button>
+        <button class="btn" id="again" style="background:#6b3a3a">Again (2)</button>
+        <button class="btn" id="cnext">Next (N)</button>
+      </div>
+      <p class="kb-hint">Space/Enter flip · 1 Know · 2 Again · N Next</p>
+    `;
+    const show = () => {
+      const el = $("#cb");
+      if (el) el.hidden = false;
+    };
+    $("#flip").onclick = show;
+    $("#show").onclick = show;
+    $("#cnext").onclick = () => {
+      state.cardIx = (state.cardIx + 1) % pool.length;
+      renderCardsUI();
+    };
+    $("#know").onclick = () => {
+      state.cardKnown[c.id] = true;
+      state.cardIx = (state.cardIx + 1) % pool.length;
+      save();
+      renderCardsUI();
+    };
+    $("#again").onclick = () => {
+      delete state.cardKnown[c.id];
+      state.cardIx = (state.cardIx + 1) % pool.length;
+      save();
+      renderCardsUI();
+    };
+    app.querySelectorAll(".deck-pick").forEach((b) => {
+      b.onclick = () => {
+        state._cardDeck = b.dataset.deck;
+        state.cardIx = 0;
+        state._cardPoolKey = "";
+        renderCardsUI();
+      };
+    });
+    bindBackBar();
+    unbindCardKeys();
+    cardKeyHandler = (e) => {
+      if (state.view !== "cards") return;
+      const tag = (e.target && e.target.tagName) || "";
+      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+      const k = e.key;
+      if (k === " " || k === "Enter") {
+        e.preventDefault();
+        show();
+      } else if (k === "1") {
+        e.preventDefault();
+        $("#know") && $("#know").click();
+      } else if (k === "2") {
+        e.preventDefault();
+        $("#again") && $("#again").click();
+      } else if (k === "n" || k === "N" || k === "ArrowRight") {
+        e.preventDefault();
+        $("#cnext") && $("#cnext").click();
+      }
+    };
+    document.addEventListener("keydown", cardKeyHandler);
+  }
+
+  /* init */
+  // One-time: old focusMode hid tabs. After chrome-safe CSS, restore is OK.
+  try {
+    if (!store.get("focusModeCssSafe", false)) {
+      store.set("focusMode", false);
+      store.set("focusModeCssSafe", true);
+    }
+    state.focusMode = !!store.get("focusMode", false);
+  } catch (_) {
+    state.focusMode = false;
+  }
+  try {
+    assertBoot();
+  } catch (e) {
+    console.error(e);
+    return;
+  }
+  // Sync daily goal + focus timer from active track day unless user overrode goal
+  try {
+    const meta0 = trackMeta();
+    if (meta0.dailyGoal && !store.get("dailyGoalUserOverride", false)) {
+      state.dailyGoal = meta0.dailyGoal;
+    }
+  } catch (_) {}
+  ensureFlashcards();
+  paintMainNav();
+  setActiveNav(TAB_VIEWS.includes(state.view) ? state.view : "today");
+  // First paint: timer must match plan (not a hard-coded 45:00 for every template)
+  try {
+    const savedRem = store.get("pomoRemaining", null);
+    const savedMode = store.get("pomoMode", "work");
+    syncPomoFromPlan({ force: !pomo.running });
+    // Keep remaining only if it still fits the new work block (same mode work)
+    if (savedRem != null && savedMode === "work" && savedRem <= pomo.workSec && savedRem > 0) {
+      pomo.remaining = savedRem;
+      store.set("pomoRemaining", pomo.remaining);
+    }
+  } catch (_) {
+    syncPomoFromPlan({ force: true });
+  }
+  render();
+  paintPomoBar();
+  window.addEventListener("resize", syncPomoStickyTop);
+  requestAnimationFrame(syncPomoStickyTop);
+
+  /* ——— Install app (PWA) — full screen, no browser chrome ——— */
+  (function setupInstallPrompt() {
+    const DISMISS_KEY = "installDismissUntil";
+    const INSTALLED_KEY = "installDone";
+
+    function isStandalone() {
+      try {
+        if (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) return true;
+        if (window.navigator.standalone === true) return true;
+      } catch (_) {}
+      return false;
+    }
+
+    function dismissed() {
+      const until = +store.get(DISMISS_KEY, 0) || 0;
+      return until > Date.now();
+    }
+
+    function isIos() {
+      const ua = navigator.userAgent || "";
+      return /iPad|iPhone|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    }
+
+    function isMobileUa() {
+      return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent || "");
+    }
+
+    /** Don’t cover “Choose your plan” — wait until user picked a pace. */
+    function planReady() {
+      return !!store.get("planPickedExplicit", false) || !!store.get("planChosen", false);
+    }
+
+    function removeBanner() {
+      const el = document.getElementById("sdle-install-banner");
+      if (el) el.remove();
+    }
+
+    function showBanner(opts) {
+      if (isStandalone() || store.get(INSTALLED_KEY, false) || dismissed()) return;
+      if (document.getElementById("sdle-install-banner")) return;
+      if (!planReady()) return;
+      const ios = !!(opts && opts.ios);
+      const canNative = !!(opts && opts.canNative);
+      const manual = !!(opts && opts.manual);
+      const el = document.createElement("div");
+      el.id = "sdle-install-banner";
+      el.className = "install-banner";
+      el.setAttribute("role", "dialog");
+      el.setAttribute("aria-label", "Install app");
+      let title = "Install this app?";
+      let text =
+        "Add to home screen or desktop — full screen, hide browser bars, more study space.";
+      if (ios) {
+        title = "Install SDLE on your phone";
+        text = "Full screen study — hide the browser bar. Tap <b>Share</b> → <b>Add to Home Screen</b>.";
+      } else if (manual) {
+        title = isMobileUa() ? "Install SDLE?" : "Install on this computer?";
+        text = isMobileUa()
+          ? "Browser menu → <b>Install app</b> / <b>Add to Home screen</b> — full screen, no address bar."
+          : "Chrome/Edge: address bar <b>Install</b> icon, or menu → <b>Install SDLE…</b> — opens like an app (no tabs/URL bar).";
+      }
+      el.innerHTML = `
+        <div class="install-banner-inner">
+          <p class="install-banner-title">${title}</p>
+          <p class="install-banner-text">${text}</p>
+          <div class="install-banner-actions">
+            <button type="button" class="btn ghost sm" data-install-dismiss>Not now</button>
+            ${
+              canNative
+                ? `<button type="button" class="btn success sm" data-install-go>Install</button>`
+                : `<button type="button" class="btn success sm" data-install-ok>Got it</button>`
+            }
+          </div>
+        </div>`;
+      document.body.appendChild(el);
+      const dismiss = () => {
+        store.set(DISMISS_KEY, Date.now() + 14 * 24 * 60 * 60 * 1000);
+        removeBanner();
+      };
+      el.querySelector("[data-install-dismiss]") &&
+        (el.querySelector("[data-install-dismiss]").onclick = dismiss);
+      const ok = el.querySelector("[data-install-ok]");
+      if (ok) ok.onclick = dismiss;
+      const go = el.querySelector("[data-install-go]");
+      if (go && opts && opts.deferred) {
+        go.onclick = async () => {
+          try {
+            opts.deferred.prompt();
+            const choice = await opts.deferred.userChoice;
+            if (choice && choice.outcome === "accepted") store.set(INSTALLED_KEY, true);
+            else store.set(DISMISS_KEY, Date.now() + 7 * 24 * 60 * 60 * 1000);
+          } catch (_) {
+            store.set(DISMISS_KEY, Date.now() + 3 * 24 * 60 * 60 * 1000);
+          }
+          removeBanner();
+        };
+      }
+    }
+
+    /** Retry until plan is picked, then show (max ~2 min). */
+    function whenPlanReady(fn, tries) {
+      const left = tries == null ? 60 : tries;
+      if (planReady()) {
+        fn();
+        return;
+      }
+      if (left <= 0) return;
+      setTimeout(() => whenPlanReady(fn, left - 1), 2000);
+    }
+
+    if (isStandalone()) {
+      document.documentElement.classList.add("sdle-standalone");
+      document.body.classList.add("sdle-standalone");
+      return;
+    }
+
+    /* Register service worker (needed for install criteria on many browsers).
+       updateViaCache: "none" forces the browser to always re-fetch sw.js from the
+       network on update checks — GitHub Pages sends max-age=600 on sw.js, which
+       otherwise delays cache-version bumps by up to 10 min. */
+    if ("serviceWorker" in navigator) {
+      const swUrl = new URL("sw.js", window.location.href).href;
+      navigator.serviceWorker
+        .register(swUrl, {
+          scope: new URL("./", window.location.href).pathname,
+          updateViaCache: "none",
+        })
+        .catch(() => {});
+    }
+
+    let deferred = null;
+    window.addEventListener("beforeinstallprompt", (e) => {
+      e.preventDefault();
+      deferred = e;
+      /* After plan pick so it does not cover first-page chooser */
+      whenPlanReady(() => setTimeout(() => showBanner({ canNative: true, deferred }), 800));
+    });
+
+    window.addEventListener("appinstalled", () => {
+      store.set(INSTALLED_KEY, true);
+      removeBanner();
+    });
+
+    /* iOS Safari: no BIP — guide Share → Add to Home Screen */
+    if (isIos() && !isStandalone() && !dismissed()) {
+      whenPlanReady(() => setTimeout(() => showBanner({ ios: true }), 1200));
+    }
+
+    /* Phone/PC browser without BIP (or BIP late): still ask once after plan pick */
+    if (!isIos() && !dismissed() && !store.get(INSTALLED_KEY, false)) {
+      whenPlanReady(() =>
+        setTimeout(() => {
+          if (!document.getElementById("sdle-install-banner")) {
+            if (deferred) showBanner({ canNative: true, deferred });
+            else showBanner({ manual: true });
+          }
+        }, 4500)
+      );
+    }
+  })();
+})();
