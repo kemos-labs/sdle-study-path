@@ -152,3 +152,17 @@ July-2026 recall). Flash deck repair in the same pass: 251 ✅-glue option split
 markers stripped, 22 merged items flagged, 77 recall fragments demoted, 62 flashcards
 restored; FN-MERGED gate now catches ✅-glue. Live verified: 0 glue, 0 bad indices,
 answers live-correct, 0 errors. Commits `fdd85f6`, `d745c19`.
+
+### ✅ FLASH TAB REDESIGN — 2026-08-07 (user: "make flash like practice; rafi 16 = only rafi 16; not synced; add review")
+- **UI parity with Practice tab**: same bank-chip grid (`hz-strip`/`hz-bank`), size chips
+  50/100/200/All, top search bar, and sub-tabs (🎯 MCQs / 🃏 Cards / ⚠ Review) — `renderMarJune()` rebuilt.
+- **Click رفيع المقام 16 → only rafi 16**: chips drive source/dept/review scoped quizzes
+  via the new `startFlashQuiz` scope system (`src:` / `dept:` / `rev:` / `search:`);
+  quiz = exactly that bucket (2149 rafi-16 items), merged fragments excluded.
+- **Counts now sync**: one studyable pool (excludes `_merged_into`) drives chip numbers,
+  deck counter and quiz size — no more 2149-vs-2129 or 8030-vs-7580 mismatches; the 4
+  missing sources (`bank160`, `SDLE_QA_Answered`, `mcq_solved`, `friend_july2026`) were
+  added to `FLASH_NOTES.sources` so all 261 orphan items are visible; footer uses studyable count.
+- **Review pane**: needs-review walker (4,185), disputed adjudication (123, export JSON),
+  book-verified / raw-archive / flashcards buckets; Review chips also in the MCQs grid.
+- Gates: main 9/9 ✅ · flash ✅ · Playwright smoke 24/24 ✅ · 0 console errors.

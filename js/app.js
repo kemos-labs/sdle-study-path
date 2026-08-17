@@ -4368,11 +4368,13 @@
     host.querySelectorAll("[data-fn-dr-id]:not([data-fn-dr-k])").forEach(b => {
       b.onclick = () => {
         const id = b.dataset.fnDrId;
-        state._fnDept = (window.FLASH_NOTES && window.FLASH_NOTES.byDept ? Object.entries(window.FLASH_NOTES.byDept).find(([, arr]) => arr.some(i => i.id === id)) : null)?.[0] || state._fnDept;
-        state._fnDisputed = true;
+        state.fnPane = "cards";
+        state.fnScope = "rev:disputed";
+        state.fnType = "";
+        state.fnOrder = null;
         const items = Object.values(window.FLASH_NOTES.byDept || {}).flat().filter(i => i._answer_disputed && !i._merged_into).sort((a, b) => (a.dept === b.dept ? a.id.localeCompare(b.id) : (a.dept || '').localeCompare(b.dept || '')));
-        state._fnStudyIdx = items.findIndex(i => i.id === id);
-        state._fnStudySource = "";
+        state.fnStudyIdx = Math.max(0, items.findIndex(i => i.id === id));
+        state.fnPicked = null; state.fnRevealed = false;
         renderMarJune();
       };
     });
@@ -4560,125 +4562,114 @@
   }
 
   function renderMarJune() {
-    const totalCards = ensureFlashcards().length;
-
+    const FN = window.FLASH_NOTES || { byDept: {}, total: 0, markerStats: {}, sources: [], markerLegend: {} };
     const DEPTS = [
-      { id: "oms", label: "Oral Surgery & Medicine" },
-      { id: "restorative", label: "Restorative" },
-      { id: "endo", label: "Endodontics" },
-      { id: "perio", label: "Periodontics" },
-      { id: "ortho_pedo", label: "Ortho / Pedo" },
-      { id: "ethics", label: "Ethics & IC" },
-      { id: "fixed", label: "Fixed Prosth" },
-      { id: "implant", label: "Implant" },
-      { id: "rpd", label: "RPD" },
+      { id: "oms", label: "Oral Surgery & Medicine", ar: "جراحة الفم" },
+      { id: "restorative", label: "Restorative", ar: "الترميمي" },
+      { id: "endo", label: "Endodontics", ar: "علاج الجذور" },
+      { id: "perio", label: "Periodontics", ar: "اللثة" },
+      { id: "ortho_pedo", label: "Ortho / Pedo", ar: "تقويم وأسنان أطفال" },
+      { id: "ethics", label: "Ethics & IC", ar: "أخلاقيات" },
+      { id: "fixed", label: "Fixed Prosth", ar: "تعويضات ثابتة" },
+      { id: "implant", label: "Implant", ar: "زراعة" },
+      { id: "rpd", label: "RPD", ar: "تعويضات متحركة" },
+      { id: "diagnostics", label: "Diagnostics", ar: "تشخيص" }
     ];
 
-    if (!state._planMj) state._planMj = "day1";
-    const day = state._planMj || "day1";
-
-    // Use FLASH_NOTES total for display (not bank pool count)
-    const FN = (window.FLASH_NOTES) || { byDept: {}, total: 0, markerStats: {}, sources: [], markerLegend: {} };
-    const totalAll6 = FN.total || poolN("complete");
-    const deptCounts = {};
-    DEPTS.forEach(d => { 
-      deptCounts[d.id] = (FN.byDept[d.id] || []).length || poolN(d.id + "@complete"); 
-    });
-
-    // ---- Flash Notes (recall stems from PDFs) ----
-    const FN_DEPTS = DEPTS.filter(d => (FN.byDept[d.id] || []).length);
-    if (!state._fnDept) state._fnDept = "";
-    if (state._fnDept && !(FN.byDept[state._fnDept] || []).length) state._fnDept = "";
-    const fnDept = state._fnDept;
-    // source filter (optional — filters by source label)
-    const fnSrc = state._fnStudySource || "";
-    // type filter: "" all | "mcq" 4-option questions | "card" recall Q/A pairs
-    const fnType = state._fnType || "";
-    // disputed review mode: walk ALL disputed items across departments
-    const fnDisputedMode = !!state._fnDisputed;
-    const fnArchiveMode = !!state._fnArchive;
-    // raw item classification helpers (used for counts AND filtering)
-    const isMcqItem = (it) => ((it.options || []).length >= 3) && (it.answerIdx != null || it.answerLetter);
-    const isArchiveItem = (it) => !!(it._raw_recall || it._unverified || it._data_quality === 'merged_options_review');
-    // full raw pool (no archive filter) for honest counts
+    // ------------------------------------------------------------------
+    // 1) STUDYABLE POOL — every item that is NOT a folded duplicate fragment.
+    //    One source of truth for chips, deck counters, and quizzes, so the
+    //    numbers you see always match the items you actually get.
+    // ------------------------------------------------------------------
     const fnAllItems = [];
     Object.keys(FN.byDept || {}).forEach(did => (FN.byDept[did] || []).forEach(it => { if (!it._merged_into) fnAllItems.push(it); }));
+    const isMcqItem = (it) => ((it.options || []).length >= 3) && (it.answerIdx != null || it.answerLetter);
+    const isArchiveItem = (it) => !!(it._raw_recall || it._unverified || it._data_quality === 'merged_options_review');
+    const isFlashCard = (it) => it._kind === 'flashcard';
     const mcqAll = fnAllItems.filter(isMcqItem).length;
     const cardAll = fnAllItems.length - mcqAll;
-    const fnSrcCounts = {}; const fnSrcMcq = {}; const fnSrcCard = {};
-    fnAllItems.forEach(it => { (it.sources || []).forEach(s => {
-      fnSrcCounts[s] = (fnSrcCounts[s] || 0) + 1;
-      if (isMcqItem(it)) fnSrcMcq[s] = (fnSrcMcq[s] || 0) + 1; else fnSrcCard[s] = (fnSrcCard[s] || 0) + 1;
-    }); });
-    let fnListRaw = [];
-    if (fnDisputedMode) {
-      Object.keys(FN.byDept || {}).forEach(did => {
-        (FN.byDept[did] || []).forEach(it => { if (it._answer_disputed && !it._merged_into) fnListRaw.push(it); });
+
+    const srcCounts = {}; const srcMcq = {}; const srcCard = {};
+    fnAllItems.forEach(it => {
+      (it.sources || []).forEach(s => {
+        srcCounts[s] = (srcCounts[s] || 0) + 1;
+        if (isMcqItem(it)) srcMcq[s] = (srcMcq[s] || 0) + 1; else srcCard[s] = (srcCard[s] || 0) + 1;
       });
-      fnListRaw.sort((a, b) => (a.dept === b.dept ? a.id.localeCompare(b.id) : (a.dept || '').localeCompare(b.dept || '')));
-    } else {
-      const scopeDepts = fnSrc ? Object.keys(FN.byDept || {}) : (fnDept ? [fnDept] : Object.keys(FN.byDept || {}));
-      scopeDepts.forEach(did => {
-        (FN.byDept[did] || []).forEach(it => {
-          if (it._merged_into) return;
-          if (fnArchiveMode !== isArchiveItem(it)) return;
-          if (fnSrc && !(it.sources || []).includes(fnSrc)) return;
-          fnListRaw.push(it);
-        });
-      });
+    });
+    const deptCounts = {};
+    Object.keys(FN.byDept || {}).forEach(did => { deptCounts[did] = (FN.byDept[did] || []).filter(it => !it._merged_into).length; });
+
+    // ------------------------------------------------------------------
+    // 2) SCOPE RESOLUTION — one function drives the bank chips, the study
+    //    deck AND the quizzes. scopes: all | src:<id> | dept:<id> | rev:<bucket> | search:<q>
+    // ------------------------------------------------------------------
+    const revBuckets = {
+      book:     { label: "📖 Book-verified",       f: it => it._verification_verdict === 'supported' },
+      needs:    { label: "⚠ Needs review",         f: it => it._verification_verdict === 'needs_review' },
+      disputed: { label: "⚠ Disputed answers",     f: it => !!it._answer_disputed },
+      archive:  { label: "📦 Raw recall archive",  f: it => isArchiveItem(it) },
+      cards:    { label: "🃏 Flashcards",           f: it => isFlashCard(it) },
+      repaired: { label: "🛠 Repaired items",       f: it => !!it._repaired_2026 }
+    };
+    const scopeItems = (scope) => {
+      if (!scope || scope === "all") return fnAllItems;
+      if (scope.indexOf("src:") === 0) { const s = scope.slice(4); return fnAllItems.filter(it => (it.sources || []).includes(s)); }
+      if (scope.indexOf("dept:") === 0) { const d = scope.slice(5); return (FN.byDept[d] || []).filter(it => !it._merged_into); }
+      if (scope.indexOf("search:") === 0) {
+        const q = scope.slice(7).toLowerCase();
+        if (!q) return [];
+        return fnAllItems.filter(it => [it.stem, it.answer, it.why, (it.options || []).join(" "), it._embedded_answer, it.reference].join(" ").toLowerCase().includes(q));
+      }
+      if (scope.indexOf("rev:") === 0) { const b = revBuckets[scope.slice(4)]; return b ? fnAllItems.filter(b.f) : []; }
+      return [];
+    };
+    const scopeCount = (scope) => scopeItems(scope).length;
+    const scopeLabel = (scope) => {
+      if (!scope || scope === "all") return "All Flash Notes";
+      if (scope.indexOf("src:") === 0) { const s = scope.slice(4); const m = (FN.sources || []).find(x => x.id === s); return m ? m.label : s; }
+      if (scope.indexOf("dept:") === 0) { const d = scope.slice(5); const m = DEPTS.find(x => x.id === d); return m ? m.label : d; }
+      if (scope.indexOf("rev:") === 0) { const b = revBuckets[scope.slice(4)]; return b ? b.label : scope.slice(4); }
+      if (scope.indexOf("search:") === 0) return "🔍 " + scope.slice(7);
+      return scope;
+    };
+
+    // ------------------------------------------------------------------
+    // 3) PANE / FILTER STATE
+    // ------------------------------------------------------------------
+    if (!state.fnPane) state.fnPane = state._fnDept ? "cards" : "mcqs";
+    const pane = state.fnPane;
+    if (!["mcqs", "cards", "review"].includes(pane)) state.fnPane = "mcqs";
+    if (!state.fnScope) state.fnScope = state._fnDept ? "dept:" + state._fnDept : "all";
+    if (!state.fnSort) state.fnSort = "source";
+    const sortMode = state.fnSort === "dept" ? "dept" : "source";
+    const fnType = state.fnType || "";
+    const selectedScope = state.fnScope || "all";
+
+    // Deck (Cards pane / review walker)
+    let deckItems = scopeItems(selectedScope);
+    // Optional shuffled order (persisted in state.fnOrder)
+    if (state.fnOrder && state.fnOrder.length === deckItems.length) {
+      const byId = {};
+      deckItems.forEach(it => { byId[it.id] = it; });
+      const reordered = state.fnOrder.map(id => byId[id]).filter(Boolean);
+      if (reordered.length === state.fnOrder.length) deckItems = reordered;
+      else state.fnOrder = null;
     }
-    if (fnType === "mcq") fnListRaw = fnListRaw.filter(isMcqItem);
-    else if (fnType === "card") fnListRaw = fnListRaw.filter(it => !isMcqItem(it));
-    const fnQ = (state._fnSearch || "").trim().toLowerCase();
-    if (fnQ) {
-      // search across ALL departments
-      const archiveMode = !!state._fnArchive;
-      const allDeptItems = [];
-      Object.keys(FN.byDept || {}).forEach(did => {
-        (FN.byDept[did] || []).forEach(it => {
-          if (it._merged_into) return;
-          const isArchive = it._raw_recall || it._unverified || it._data_quality === 'merged_options_review';
-          if (archiveMode !== isArchive) return;
-          allDeptItems.push(it);
-        });
-      });
-      fnListRaw = allDeptItems.filter(it => {
-        const hay = [it.stem, it.answer, it.why, (it.options || []).join(" "), it._embedded_answer, it.reference].join(" ").toLowerCase();
-        return hay.includes(fnQ);
-      });
-    }
-    const fnList = fnListRaw;
-    if (!state._fnStudyIdx || state._fnStudyIdx >= fnList.length) state._fnStudyIdx = 0;
-    const fnTotal = fnList.length;
-    const fnCurr = fnList[state._fnStudyIdx] || null;
-    // ---- source cards (the "study by source" grid) ----
-    const fnSourcesList = (window.FLASH_NOTES || {}).sources || [];
-    const sourceCardsHtml = `
-      <button type="button" class="btn ${!fnSrc ? 'success' : 'ghost'}" data-fn-src="" style="padding:8px 10px;font-size:0.78rem;display:flex;flex-direction:column;align-items:center;gap:2px;height:100%">
-        <span style="font-weight:700">🟦 All sources</span>
-        <span class="muted" style="font-size:0.68rem">${fnAllItems.length} · ${mcqAll} MCQ · ${cardAll} cards</span>
-      </button>`
-      + fnSourcesList.map(s => {
-        const active = fnSrc === s.id;
-        const tot = fnSrcCounts[s.id] || 0;
-        const mq = fnSrcMcq[s.id] || 0;
-        const cd = fnSrcCard[s.id] || 0;
-        return `<button type="button" class="btn ${active ? 'success' : 'ghost'}" data-fn-src="${escapeHtml(s.id)}" style="padding:8px 10px;font-size:0.78rem;display:flex;flex-direction:column;align-items:center;gap:2px;height:100%" title="${escapeHtml(s.file)}">
-          <span style="font-weight:700">${s.recent ? '✨ ' : ''}${escapeHtml(s.label)}</span>
-          <span class="muted" style="font-size:0.68rem">${tot} · ${mq} MCQ · ${cd} cards</span>
-        </button>`;
-      }).join('');
-    // ---- type segmented control ----
-    const typeSegHtml = [['', 'All'], ['mcq', 'MCQs'], ['card', 'Flash cards']].map(([t, label]) => {
-      const n = t === '' ? fnAllItems.length : (t === 'mcq' ? mcqAll : cardAll);
-      const active = fnType === t;
-      return `<button type="button" class="btn ${active ? 'success' : 'ghost'}" data-fn-type="${t}" style="padding:6px 16px;font-size:0.85rem;font-weight:600">${label} <span class="muted" style="font-weight:400">(${n})</span></button>`;
-    }).join('');
-    // ---- current deck header ----
-    const srcLabel = fnSrc ? ((fnSourcesList.find(s => s.id === fnSrc) || {}).label || fnSrc) : 'All sources';
-    const typeLabel = fnType === 'mcq' ? 'MCQs' : fnType === 'card' ? 'Flash cards' : 'All';
-    const deptLabel = fnDept ? ((DEPTS.find(d => d.id === fnDept) || {}).label || fnDept) : '';
-    const deckTitle = fnDisputedMode ? '⚠ Disputed answers' : `${srcLabel}${deptLabel ? ' · ' + deptLabel : ''} · ${typeLabel}`;
+    if (fnType === "mcq") deckItems = deckItems.filter(isMcqItem);
+    else if (fnType === "card") deckItems = deckItems.filter(it => !isMcqItem(it));
+    if (!state.fnStudyIdx || state.fnStudyIdx >= deckItems.length) state.fnStudyIdx = 0;
+    if (state.fnStudyIdx < 0) state.fnStudyIdx = 0;
+    const fnCurr = deckItems[state.fnStudyIdx] || null;
+
+    // Search (practice-style)
+    const fnQ = (state.fnSearch || "").trim();
+    const searchHits = state.fnSearchHits || [];
+    const searchRan = !!state.fnSearchRan;
+    const searchScope = fnQ ? "search:" + fnQ : "";
+
+    // ------------------------------------------------------------------
+    // 4) CARD RENDERER — honest badges, options, book popups (unchanged)
+    // ------------------------------------------------------------------
     const fnMarkerBadge = (m, hasOpts, hasBookEvidence, hasCommunity) => {
       if (hasBookEvidence) return '<span class="badge blue" style="font-size:0.62rem" title="Automated evidence candidate; not a final textbook judgment">📖 evidence candidate</span>';
       if (hasCommunity) return '<span class="badge" style="font-size:0.62rem;background:var(--accent);color:#fff">✅ community</span>';
@@ -4691,12 +4682,9 @@
       }[m] || '<span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--muted)">?</span>');
     };
     const fnInlineAns = (it) => {
-      // extract the ✅-marked answer phrase from the stem/raw for inline-answer items
       const s = (it.raw || it.stem || "");
-      // prefer an explicit option-letter line ending in a marker: "a. Some text ✅"
       let m = s.match(/\b([a-z])[).]\s*([^\n?]*?)[✅🟢🟡✳🔵]/i);
       if (m) return m[2].replace(/[✅🟢🟡✳🔵🔁●]/g, "").trim().slice(0, 80);
-      // else the phrase immediately preceding a marker
       m = s.match(/([^\n?]{2,80}?[✅🟢🟡✳])/);
       if (m) return m[1].replace(/[✅🟢🟡✳🔵🔁●]/g, "").replace(/^[a-z][).]\s*/i, "").trim().slice(0, 80);
       return "";
@@ -4713,10 +4701,9 @@
         ansText = String(it.answer).slice(0, 200);
       } else if (!ansLetter) { ansText = fnInlineAns(it); }
       const hasOpts = (it.options||[]).length > 0 && (it.answerIdx != null || it.answerLetter);
-      const picked = state._fnPicked;
-      const revealed = !!state._fnRevealed;
+      const picked = state.fnPicked;
+      const revealed = !!state.fnRevealed;
       const correctIdx = it.answerIdx != null ? it.answerIdx : (ansLetter ? String(ansLetter).toUpperCase().charCodeAt(0) - 65 : -1);
-      // OPTIONS — always visible as clickable choices (exam-style: pick one)
       const optsHtml = hasOpts
         ? `<div style="margin:10px 0 2px;display:flex;flex-direction:column;gap:6px">${(it.options||[]).map((o,i)=>{
             const letter = String.fromCharCode(65+i);
@@ -4733,7 +4720,6 @@
       const ansLine = (ansLetter||ansText)
         ? `<p style="margin:8px 0 4px;color:var(--text);font-size:0.95rem"><b style="color:var(--muted);font-size:0.72rem;text-transform:uppercase;letter-spacing:.04em">Answer</b> ${ansLetter?`<span style="display:inline-block;min-width:1.4em;padding:1px 7px;margin:0 4px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;text-align:center;font-size:0.8rem">${escapeHtml(ansLetter)}</span>`:''}${ansText?`<span style="color:var(--accent);font-weight:600">${escapeHtml(ansText)}</span>`:''}</p>`
         : '<p class="muted" style="margin:8px 0 4px;font-size:0.8rem;color:var(--muted)">no marked answer</p>';
-      // AI-suggested answer for MCQs that had none
       const aiAns = it._model_suggested_answer;
       let aiAnsHtml = '';
       if (aiAns && !ansLetter && !ansText) {
@@ -4743,13 +4729,11 @@
         aiAnsHtml = `<p style="margin:8px 0 4px;color:var(--text);font-size:0.9rem"><b style="color:var(--muted);font-size:0.7rem;text-transform:uppercase;letter-spacing:.04em">🤖 AI-suggested</b> ${aiAns.letter?`<span style="display:inline-block;min-width:1.4em;padding:1px 7px;margin:0 4px;border-radius:50%;background:var(--bg3);color:var(--accent);font-weight:700;text-align:center;font-size:0.8rem;border:1px solid var(--accent)">${escapeHtml(aiAns.letter)}</span>`:''}<span style="color:var(--accent2)">${escapeHtml(aiText || '')}</span> <span class="badge" style="font-size:0.56rem;background:var(--bg3);color:var(--muted)">AI ${escapeHtml(aiAns.confidence||'low')} conf</span></p>`
           + (aiAns.reason ? `<p style="margin:2px 0 0;font-size:0.7rem;color:var(--muted)">🤖 ${escapeHtml(aiAns.reason).slice(0,160)}</p>` : '');
       }
-      // Embedded recall answer ('Question? Answer' from source notes)
       const embAns = it._embedded_answer;
       let embHtml = '';
       if (embAns && !ansLetter && !ansText && !aiAnsHtml) {
         embHtml = `<p style="margin:8px 0 4px;font-size:0.85rem"><b style="color:var(--muted);font-size:0.7rem;text-transform:uppercase;letter-spacing:.04em">Recall answer</b> <span style="color:var(--accent);font-weight:600">${escapeHtml(embAns).slice(0,120)}</span> <span class="badge" style="font-size:0.56rem;background:var(--bg3);color:var(--muted)">from source note</span></p>`;
       }
-      // Dispute panel — explain WHY AI flagged the marked answer (honesty)
       let disputeHtml = '';
       if (it._answer_disputed && it._model_judgment) {
         const dj = it._model_judgment || {};
@@ -4766,8 +4750,6 @@
       }
       const bookExp = it._book_explanation;
       const hasBookEvidence = !!(it._verification_verdict === 'supported' && bookExp && (typeof bookExp === 'object' ? bookExp.passage : bookExp));
-      // Automated matches are evidence candidates. Do not show loose or
-      // needs-review keyword hits as textbook evidence.
       let bookHtml = '';
       if (hasBookEvidence && typeof bookExp === 'object' && bookExp.passage) {
         const bPage = bookExp.page || (it._page) || '';
@@ -4775,7 +4757,6 @@
       } else if (hasBookEvidence && typeof bookExp === 'string' && bookExp.trim()) {
         bookHtml = `<p style="margin:8px 0 0;padding:8px 10px;background:var(--bg1);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;font-size:0.82rem;color:var(--text)"><b style="color:var(--accent)">📖 Candidate book evidence:</b> ${escapeHtml(bookExp).slice(0,320)}</p>`;
       }
-      // Community answer display (show when different from textbook)
       let commHtml = '';
       const commExp = it._verified_explanation;
       if (commExp && typeof commExp === 'string' && commExp.trim()) {
@@ -4801,7 +4782,6 @@
         : '';
       const hasCommunity = !!((it._verified_explanation || '').trim());
       const marker = fnMarkerBadge(it.marker, hasOpts, hasBookEvidence, hasCommunity);
-      // Card label: evidence candidate > community > MCQ > recall
       let cardLabel = '';
       if (it._kind === 'flashcard') {
         cardLabel = '<span class="badge" style="font-size:0.6rem;background:var(--accent);color:#fff">📇 Flashcard</span>';
@@ -4828,180 +4808,201 @@
       </div>`;
     };
 
-    const dayPlans = [
-      { id: "day1", label: "OMS", topics: "oms", goal: 100, title: "Oral Surgery & Medicine", desc: "IAN block, LA, biopsy, odontogenic infections, fractures, MRONJ, dry socket" },
-      { id: "day2", label: "Resto", topics: "restorative", goal: 100, title: "Restorative Dentistry", desc: "Composite, amalgam, bonding, dentin/pulp protection, bleaching, matrix systems" },
-      { id: "day3", label: "Endo", topics: "endo", goal: 100, title: "Endodontics", desc: "Pulpitis diagnosis, access cavities, irrigation, obturation, VRF" },
-      { id: "day4", label: "Perio", topics: "perio", goal: 100, title: "Periodontics", desc: "AAP 2017 classification, probing, SRP, GTR, mucogingival surgery" },
-      { id: "day5", label: "Ortho", topics: "ortho_pedo", goal: 100, title: "Ortho / Pedo", desc: "Malocclusion, space maintainers, expansion, pediatric trauma" },
-      { id: "day6", label: "Ethics+", topics: "ethics,fixed,implant,rpd", goal: 100, title: "Ethics / Fixed / Implant / RPD", desc: "Ethics principles, consent, crowns, bridges, implants, RPD design" },
-      { id: "day7", label: "Review", topics: "all", goal: 150, title: "Mixed Review + Revision", desc: "Full 6-PDF mixed pool + revision of weak areas from days 1–6" },
-    ];
+    // ------------------------------------------------------------------
+    // 5) BANK CHIP + SIZE CHIP helpers (same visual language as Practice tab)
+    // ------------------------------------------------------------------
+    const fnBankChip = (scope, label, extra) => {
+      const n = scopeCount(scope);
+      const on = selectedScope === scope;
+      return `<button type="button" class="hz-bank${on ? " is-on" : ""}" data-fn-scope="${escapeHtml(scope)}" ${n < 1 ? "disabled" : ""}>
+        <span class="hz-bank-name">${escapeHtml(label)}${extra ? ` <span style="opacity:.75;font-weight:400">${extra}</span>` : ""}</span>
+        <span class="hz-bank-n">${n}</span>
+      </button>`;
+    };
+    const fnSizeChips = (scope, n) => {
+      if (n < 1) return '<span class="muted">Empty bank</span>';
+      const sizes = [50, 100, 200].filter(k => k <= n);
+      const parts = sizes.map(k => `<button type="button" class="btn ghost simple-sz" data-fn-qz="${escapeHtml(scope)}" data-n="${k}">${k}</button>`);
+      parts.push(`<button type="button" class="btn success simple-sz" data-fn-qz="${escapeHtml(scope)}" data-n="${QUIZ_ALL}">All ${n}</button>`);
+      return parts.join("");
+    };
+    const fnBankStrip = (banks) => {
+      const parts = [];
+      banks.forEach(b => {
+        parts.push(fnBankChip(b.scope, b.label, b.extra || ""));
+        if (selectedScope === b.scope) {
+          const n = scopeCount(b.scope);
+          parts.push(`<div class="hz-under-sizes" role="group" aria-label="How many"><div class="hz-size-chips">${fnSizeChips(b.scope, n)}</div></div>`);
+        }
+      });
+      return `<div class="hz-strip" role="listbox">${parts.join("")}</div>`;
+    };
+    const fnBankSection = (title, titleAr, banks) => {
+      if (!banks || !banks.length) return "";
+      return `<section class="hz-section">
+        <h3 class="hz-sec-title"><span dir="rtl">${escapeHtml(titleAr || "")}</span> ${escapeHtml(title)}</h3>
+        ${fnBankStrip(banks)}
+      </section>`;
+    };
+    const SOURCE_BANKS = (FN.sources || []).map(s => ({ scope: "src:" + s.id, label: s.label }));
+    const DEPT_BANKS = DEPTS.map(d => ({ scope: "dept:" + d.id, label: d.label, extra: d.ar }));
+    const REVIEW_BANKS = Object.keys(revBuckets).map(k => ({ scope: "rev:" + k, label: revBuckets[k].label }));
+    const sortToggle = `<div class="hz-sort" role="group" aria-label="Sort banks">
+      <button type="button" class="btn sm ${sortMode === "source" ? "success" : "ghost"}" data-fn-sort="source">By source · حسب المصدر</button>
+      <button type="button" class="btn sm ${sortMode === "dept" ? "success" : "ghost"}" data-fn-sort="dept">By department · حسب التخصص</button>
+    </div>`;
+    const mcqsSections = sortMode === "dept"
+      ? fnBankSection("Departments", "حسب التخصص", DEPT_BANKS) +
+        fnBankSection("Sources", "حسب المصدر", SOURCE_BANKS) +
+        fnBankSection("Review", "مراجعة", REVIEW_BANKS)
+      : fnBankSection("Sources", "حسب المصدر", SOURCE_BANKS) +
+        fnBankSection("Departments", "حسب التخصص", DEPT_BANKS) +
+        fnBankSection("Review", "مراجعة", REVIEW_BANKS);
 
-    const plan = dayPlans.find(d => d.id === day) || dayPlans[0];
-    const poolKey = plan.topics === "all" ? "complete" : plan.topics + "@complete";
-    const dayPoolCount = poolN(poolKey);
-
-    app.innerHTML = `
-      <div class="simple-hub">
-        <!-- HEADER ROW -->
-        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
-          <h1 style="margin:0;font-size:1.4rem">📚 Flash Notes <span style="font-size:0.8rem;color:var(--muted);font-weight:400">النوطات السريعة</span></h1>
-          <div style="display:flex;align-items:center;gap:12px">
-            <span style="color:var(--accent2);font-weight:600">${totalAll6} items</span>
-            <span class="muted">🃏 ${fnAllItems.length} studyable</span>
-          </div>
+    // ------------------------------------------------------------------
+    // 6) SEARCH (practice-style top search)
+    // ------------------------------------------------------------------
+    const searchTop = `
+      <div class="search-top">
+        <div class="search-top-row">
+          <input type="search" id="fn-search-q" class="bank-search-center" autocomplete="off"
+            placeholder="Search flash notes · ابحث في النوطات السريعة (سؤال، جواب، خيار…)"
+            value="${escapeHtml(fnQ)}" aria-label="Search flash notes" />
+          <button type="button" class="btn success sm" id="fn-search-go">Search · بحث</button>
+          ${fnQ ? `<button type="button" class="btn ghost sm" id="fn-search-clear">Clear</button>` : ""}
+          ${searchHits.length ? `<button type="button" class="btn sm" id="fn-search-drill">Practice ${searchHits.length}</button>` : ""}
         </div>
+        <div class="bank-search-results">
+          ${searchRan && !searchHits.length && fnQ.length >= 3
+            ? `<p class="muted">No match · لا نتائج</p>`
+            : searchHits.slice(0, 12).map((it, i) => {
+                const preview = String(it.stem || "").slice(0, 140);
+                return `<button type="button" class="bank-hit" data-fn-hit="${escapeHtml(it.id)}">
+                  <span class="bank-hit-meta">${i + 1}. ${escapeHtml((it.sources || []).join(", "))}</span>
+                  <span class="bank-hit-q">${escapeHtml(preview)}${preview.length >= 140 ? "…" : ""}</span>
+                </button>`;
+              }).join("")}
+        </div>
+      </div>`;
 
-        <!-- ============ STUDY DECK: study by source + by type ============ -->
-        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin-top:4px">
-          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px">
-            <h2 style="margin:0;font-size:1.05rem;color:var(--accent)">🎯 Study deck</h2>
-            <button type="button" class="btn sm ghost" id="fn-reset" style="padding:2px 10px;font-size:0.7rem">↺ Reset filters</button>
-          </div>
-
-          <input type="search" id="fn-search" placeholder="🔍 Search all flashcards · ابحث (question, answer, option…)" value="${escapeHtml(state._fnSearch || "")}" style="width:100%;box-sizing:border-box;padding:9px 12px;border-radius:10px;border:1px solid var(--border);background:var(--bg1);color:var(--text);font-size:0.85rem;margin-bottom:10px" aria-label="Search flashcards" />
-
-          <div style="font-size:0.78rem;font-weight:700;color:var(--muted);margin-bottom:4px">1️⃣ Study by source — تختار المصدر (exam is ~70% from these packs)</div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:6px;margin-bottom:12px">
-            ${sourceCardsHtml}
-          </div>
-
-          <div style="font-size:0.78rem;font-weight:700;color:var(--muted);margin-bottom:4px">2️⃣ Pick a type — MCQs (4 options) or flash cards (Q→A)</div>
-          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">${typeSegHtml}</div>
-
+    // ------------------------------------------------------------------
+    // 7) CARDS PANE — one-by-one study deck
+    // ------------------------------------------------------------------
+    const typeSegHtml = [['', 'All', fnAllItems.length], ['mcq', 'MCQs', mcqAll], ['card', 'Flash cards', cardAll]].map(([t, label, n]) => {
+      const active = fnType === t;
+      return `<button type="button" class="btn ${active ? 'success' : 'ghost'}" data-fn-type="${t}" style="padding:6px 16px;font-size:0.85rem;font-weight:600">${label} <span class="muted" style="font-weight:400">(${n})</span></button>`;
+    }).join('');
+    const deckSrcChips = `<button type="button" class="btn sm ${selectedScope === "all" ? "success" : "ghost"}" data-fn-scope="all" style="padding:2px 8px;font-size:0.68rem">All</button>`
+      + (FN.sources || []).map(s => {
+          const active = selectedScope === "src:" + s.id;
+          const n = srcCounts[s.id] || 0;
+          return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-fn-scope="src:${escapeHtml(s.id)}" style="padding:2px 8px;font-size:0.68rem" title="${escapeHtml(s.file || "")}">${escapeHtml(s.label)} <span class="muted">${n}</span></button>`;
+        }).join('');
+    const deckDeptChips = `<button type="button" class="btn sm ${selectedScope === "all" ? "success" : "ghost"}" data-fn-scope="all" style="padding:2px 8px;font-size:0.68rem">All depts</button>`
+      + DEPTS.map(d => {
+          const active = selectedScope === "dept:" + d.id;
+          const n = deptCounts[d.id] || 0;
+          if (!n) return "";
+          return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-fn-scope="dept:${d.id}" style="padding:2px 8px;font-size:0.68rem">${escapeHtml(d.label)} <span class="muted">${n}</span></button>`;
+        }).join('');
+    const cardsHtml = `
+      <div class="hz-layout">
+        <section class="hz-section">
+          <h3 class="hz-sec-title"><span dir="rtl">دراسة بطاقة بطاقة</span> Study deck — <span style="color:var(--accent)">${escapeHtml(scopeLabel(selectedScope))}</span></h3>
+          <p class="muted" style="font-size:0.74rem;margin-bottom:8px">One card at a time: pick an option (MCQs) or press <b>🔍 Show answer</b> (recall cards). Card labels tell you honestly what each item is: 📖 evidence candidate · ✅ community MCQ · 📝 recall.</p>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px">${typeSegHtml}</div>
+          <div style="font-size:0.72rem;font-weight:700;color:var(--muted);margin-bottom:4px">By source — تختار المصدر</div>
+          <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px">${deckSrcChips}</div>
+          <div style="font-size:0.72rem;font-weight:700;color:var(--muted);margin-bottom:4px">By department</div>
+          <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px">${deckDeptChips}</div>
           <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-bottom:8px;padding:6px 10px;background:var(--bg3);border-radius:var(--radius);border:1px solid var(--border)">
-            <span style="font-size:0.8rem;font-weight:600;color:var(--text)">📌 ${escapeHtml(deckTitle)}</span>
-            <span style="font-size:0.72rem;color:var(--muted)" id="fn-counter">${state._fnStudyIdx+1} / ${fnTotal}</span>
+            <span style="font-size:0.8rem;font-weight:600;color:var(--text)">📌 ${escapeHtml(scopeLabel(selectedScope))} · ${fnType === 'mcq' ? 'MCQs' : fnType === 'card' ? 'Cards' : 'All'}</span>
+            <span style="font-size:0.72rem;color:var(--muted)" id="fn-counter">${state.fnStudyIdx+1} / ${deckItems.length}</span>
           </div>
-
           <div id="fn-study-widget" style="min-height:130px">
             ${fnStudyCard(fnCurr)}
             <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">
-              <button type="button" class="btn sm ghost" id="fn-prev" ${state._fnStudyIdx <= 0 ? 'disabled' : ''}>← Prev</button>
-              <span style="font-size:0.78rem;color:var(--muted)">${state._fnStudyIdx+1} / ${fnTotal}</span>
-              <button type="button" class="btn sm ghost" id="fn-next" ${state._fnStudyIdx+1 >= fnTotal ? 'disabled' : ''}>Next →</button>
+              <button type="button" class="btn sm ghost" id="fn-prev" ${state.fnStudyIdx <= 0 ? 'disabled' : ''}>← Prev</button>
+              <span style="font-size:0.78rem;color:var(--muted)">${state.fnStudyIdx+1} / ${deckItems.length}</span>
+              <button type="button" class="btn sm ghost" id="fn-next" ${state.fnStudyIdx+1 >= deckItems.length ? 'disabled' : ''}>Next →</button>
               <button type="button" class="btn success sm" id="fn-reveal">🔍 Show answer</button>
               <button type="button" class="btn sm ghost" id="fn-study-tts">🔊 Listen</button>
               <button type="button" class="btn sm ghost" id="fn-study-stop" style="display:none">⏹ Stop</button>
             </div>
           </div>
-
-          <div style="margin-top:10px;padding-top:8px;border-top:1px dashed var(--border);display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:0.72rem;color:var(--muted)">
-            <span>📓 By department:</span>
-            <button type="button" class="btn sm ${!fnDept ? "success" : "ghost"}" data-fn-dept="" style="padding:2px 8px;font-size:0.68rem">All depts</button>
-            ${FN_DEPTS.map(d => {
-              const n = (FN.byDept[d.id] || []).length;
-              const active = !fnDisputedMode && fnDept === d.id;
-              return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-fn-dept="${d.id}" style="padding:2px 8px;font-size:0.68rem">${escapeHtml(d.label)} <span class="muted">${n}</span></button>`;
-            }).join("")}
-            <button type="button" class="btn sm ${fnDisputedMode ? "warn" : "ghost"}" data-fn-disputed style="padding:2px 8px;font-size:0.68rem">⚠ Disputed ${FN.aiStats?.disputed || 0}</button>
-            <button type="button" class="btn sm ${state._fnArchive ? "warn" : "ghost"}" data-fn-archive style="padding:2px 8px;font-size:0.68rem">${state._fnArchive ? "📦 Raw recall archive" : "🃏 Study deck"}</button>
+          <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:0.72rem;color:var(--muted)">
+            <button type="button" class="btn sm ghost" data-fn-shuffle style="padding:2px 8px;font-size:0.68rem">🔀 Shuffle deck</button>
+            <button type="button" class="btn sm ghost" data-fn-quiz-deck style="padding:2px 8px;font-size:0.68rem">▶ Quiz this deck (${deckItems.length})</button>
           </div>
-        </div>
+        </section>
+      </div>`;
 
-        <p style="font-size:0.7rem;color:var(--muted);margin:8px 0 0">💡 <b>Book links:</b> hover/tap <b>📖</b> — a popup shows the book page with the answer. MCQs have 4 options + a <b>Why</b>; flash cards are quick Q→A pairs. <b>${fnAllItems.length}</b> studyable cards (${totalAll6 - fnAllItems.length} duplicate fragments folded into their parent cards, hidden).</p>
-
-        <hr style="margin:14px 0;border-color:var(--border)">
-
-        <!-- DAY PILLS -->
-        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:12px">
-          ${dayPlans.map(p => {
-            const active = day === p.id;
-            return `<button type="button" class="btn sm ${active ? "success" : "ghost"}" data-plan-day="${p.id}" style="padding:4px 12px;font-size:0.8rem">${escapeHtml(p.label)}</button>`;
-          }).join("")}
-        </div>
-
-        <!-- ACTIVE DAY CARD -->
-        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:16px">
-          <div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:8px">
+    // ------------------------------------------------------------------
+    // 8) REVIEW PANE — needs-review walker + disputed adjudication + archive
+    // ------------------------------------------------------------------
+    const needsN = scopeCount("rev:needs");
+    const disputedN = scopeCount("rev:disputed");
+    const archiveN = scopeCount("rev:archive");
+    const bookN = scopeCount("rev:book");
+    const reviewHtml = `
+      <div class="hz-layout">
+        <section class="hz-section" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin-bottom:14px">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
             <div>
-              <strong style="font-size:1.05rem;color:var(--accent)">Day ${plan.id.replace('day','')} — ${escapeHtml(plan.title)}</strong>
-              <div class="muted" style="font-size:0.85rem;margin-top:4px">${escapeHtml(plan.desc)}</div>
+              <h3 style="margin:0;font-size:1rem;color:var(--text)">⚠ Items needing review (${needsN})</h3>
+              <p class="muted" style="margin:4px 0 0;font-size:0.75rem">No supporting textbook passage found yet. Study them as <b>recall leads</b>, not verified facts — every card is honestly labelled.</p>
             </div>
-            <span style="color:var(--accent2);font-weight:500;font-size:0.85rem">${dayPoolCount} Qs</span>
           </div>
-          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
-            <button type="button" class="btn success" id="qz-${day}-goal">▶ Start ${plan.goal} Qs</button>
-            <button type="button" class="btn" id="qz-${day}-200">200</button>
-            <button type="button" class="btn" id="qz-${day}-all">All ${dayPoolCount}</button>
-            <button type="button" class="btn ghost" id="qz-${day}-50">50</button>
-            <button type="button" class="btn ghost" id="plan-flash-today">🃏 Cards</button>
+          <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+            <button type="button" class="btn success" data-fn-rev-walk="needs">▶ Walk needs-review deck (${needsN})</button>
+            <button type="button" class="btn" data-fn-rev-walk="disputed">⚠ Walk disputed answers (${disputedN})</button>
+            <button type="button" class="btn ghost" data-fn-rev-walk="book">📖 Book-verified only (${bookN})</button>
+            <button type="button" class="btn ghost" data-fn-rev-walk="archive">📦 Raw recall archive (${archiveN})</button>
           </div>
-        </div>
+        </section>
+        <section class="hz-section">
+          <h3 class="hz-sec-title">⚠ Disputed answers — adjudicate</h3>
+          <p class="muted" style="font-size:0.72rem;margin:2px 0 6px">AI free-model review flagged these marked answers as likely wrong. Mark each ✅ source-correct or ✏️ AI-right (saved in this browser); export decisions as JSON for a data fix.</p>
+          <div id="fn-dispute-list" style="margin-top:4px"></div>
+          <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+            <button type="button" class="btn sm warn" id="fn-dispute-export">📋 Export decisions (JSON)</button>
+            <span class="muted" style="font-size:0.62rem">Reviewed <b id="fn-dispute-done">0</b>/${disputedN} · decisions live in this browser only (localStorage), not in the data file</span>
+          </div>
+        </section>
+        <section class="hz-section">
+          <h3 class="hz-sec-title">📦 Raw recall archive</h3>
+          <p class="muted" style="font-size:0.72rem;margin:2px 0 6px">Unstructured source fragments (${archiveN}) — demoted from the study deck, honestly labelled. Walk them in the Cards tab via the Review chip, or quiz them below.</p>
+          <div class="hz-under-sizes" role="group"><div class="hz-size-chips">${fnSizeChips("rev:archive", archiveN)}</div></div>
+        </section>
+      </div>`;
 
-        <!-- 7-DAY OVERVIEW (collapsible) -->
-        <details style="margin-bottom:16px;font-size:0.85rem">
-          <summary style="cursor:pointer;font-weight:600;color:var(--muted)">📋 7-day overview</summary>
-          <table class="simple-table" style="width:100%;margin-top:8px">
-            <thead><tr><th>#</th><th>Topic</th><th>Items</th><th>Goal</th></tr></thead>
-            <tbody>
-              ${dayPlans.map(p => {
-                const cnt = p.topics === "all" ? totalAll6 : poolN(p.topics + "@complete");
-                const active = day === p.id;
-                return `<tr style="${active ? 'background:var(--bg3);border-left:3px solid var(--accent)' : ''}">
-                  <td>${p.id.replace('day','')}</td>
-                  <td>${escapeHtml(p.title)}</td>
-                  <td>${cnt}</td>
-                  <td>${p.goal}</td>
-                </tr>`;
-              }).join("")}
-            </tbody>
-          </table>
-        </details>
-
-        <hr style="margin:12px 0;border-color:var(--border)">
-
-        <!-- DEPARTMENTS -->
-        <h2 style="font-size:1rem;margin-bottom:2px;color:var(--text)">📊 Departments</h2>
-        <p class="muted" style="font-size:0.8rem;margin-bottom:8px">${totalAll6} Flash Notes from all source packs</p>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px">
-          ${DEPTS.map(d => {
-            const n = deptCounts[d.id] || 0;
-            return `
-              <div data-dept-quiz="${d.id}" data-n="${n}" style="display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:8px 12px;cursor:pointer">
-                <span style="font-size:0.85rem;color:var(--text)">${escapeHtml(d.label)}</span>
-                <span style="display:flex;align-items:center;gap:6px">
-                  <button type="button" class="btn sm ghost" data-fn-cards="${d.id}" style="padding:1px 6px;font-size:0.7rem;cursor:pointer" title="Flashcards for ${escapeHtml(d.label)}">🃏</button>
-                  <span style="color:var(--accent2);font-weight:500;font-size:0.8rem">${n}</span>
-                  <span style="color:var(--accent);font-size:0.9rem">▶</span>
-                </span>
-              </div>`;
-          }).join("")}
-          <!-- All PDFs row -->
-          <div data-dept-quiz="all" data-n="${totalAll6}" style="display:flex;align-items:center;justify-content:space-between;background:var(--bg3);border:2px solid var(--accent);border-radius:var(--radius);padding:8px 12px;cursor:pointer">
-            <span style="font-size:0.85rem;font-weight:600;color:var(--accent)">🎯 All Flash Notes</span>
-            <span style="display:flex;align-items:center;gap:6px">
-              <span style="color:var(--accent);font-weight:500;font-size:0.8rem">${totalAll6}</span>
-              <span style="color:var(--accent);font-size:0.9rem">▶</span>
-            </span>
+    // ------------------------------------------------------------------
+    // 9) PAGE
+    // ------------------------------------------------------------------
+    app.innerHTML = `
+      <div class="simple-hub">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+          <h1 style="margin:0;font-size:1.4rem">📚 Flash Notes <span style="font-size:0.8rem;color:var(--muted);font-weight:400">النوطات السريعة</span></h1>
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="color:var(--accent2);font-weight:600">${fnAllItems.length} items</span>
+            <span class="muted">${mcqAll} MCQ · ${cardAll} cards</span>
           </div>
         </div>
-
-        <hr style="margin:12px 0;border-color:var(--border)">
-
-        <!-- QUICK ACTIONS -->
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <button type="button" class="btn success" id="qa-mixed-50">🎲 Mixed 50</button>
-          <button type="button" class="btn" id="qa-mixed-100">🎲 Mixed 100</button>
-          <button type="button" class="btn warn" id="qa-mixed-200">🎯 Mock 200 (4hrs)</button>
-          <button type="button" class="btn" id="qa-flash-all">🃏 All Cards</button>
-          <button type="button" class="btn ghost" id="qa-wrong">📕 Wrong Book</button>
-          <button type="button" class="btn ghost" id="qa-weak">🔴 Weak Areas</button>
-          <button type="button" class="btn ghost" id="plan-lesson-today">📘 Today's Lesson</button>
-          <button type="button" class="btn ghost" id="plan-notes-all">📝 All Notes</button>
+        ${searchTop}
+        <div class="tadarrub-tabs" role="tablist">
+          <button type="button" class="tad-tab${pane === "mcqs" ? " active" : ""}" data-fn-pane="mcqs">🎯 MCQs</button>
+          <button type="button" class="tad-tab${pane === "cards" ? " active" : ""}" data-fn-pane="cards">🃏 Cards</button>
+          <button type="button" class="tad-tab${pane === "review" ? " active" : ""}" data-fn-pane="review">⚠ Review</button>
         </div>
-
-        <hr style="margin:12px 0;border-color:var(--border)">
-
-        <!-- Audit (collapsible) -->
-
-        <!-- Audit (collapsible) -->
+        ${pane === "mcqs" ? `<div class="hz-layout">${sortToggle}${mcqsSections}</div>`
+          : pane === "cards" ? cardsHtml
+          : reviewHtml}
+        <p style="font-size:0.7rem;color:var(--muted);margin:10px 0 0">💡 <b>Honesty labels:</b> 📖 book-verified (real passage) · ✅ community MCQ (marked in source, book-check pending) · 📝 recall (Q→A note) · ⚠ needs review (no passage found). Click a bank → pick 50/100/200/All → the quiz uses <b>exactly</b> that source/department/review bucket.</p>
         <details style="margin-top:6px;font-size:0.68rem">
-          <summary style="cursor:pointer;color:var(--muted)">📊 ${FN.markerStats?.verified || 0}✅ · ${FN.markerStats?.ref || 0}📝 · ${Math.round((((FN.markerStats?.verified||0)+(FN.markerStats?.ref||0))/FN.total)*100)}%</summary>
+          <summary style="cursor:pointer;color:var(--muted)">📊 ${FN.markerStats?.verified || 0}✅ · ${FN.markerStats?.ref || 0}📝 · ${FN.markerStats?.unknown || 0}❓ · 🤖 ${FN.aiStats?.judged || 0} AI-reviewed · ⚠ ${FN.aiStats?.disputed || 0} disputed</summary>
           <div style="padding:6px 8px;margin-top:4px;background:var(--bg1);border-radius:var(--radius);border:1px solid var(--border)">
-            <span>✅ <b>${FN.markerStats?.verified || 0}</b> verified</span> · 
-            <span>📝 <b>${FN.markerStats?.ref || 0}</b> ref</span> · 
+            <span>✅ <b>${FN.markerStats?.verified || 0}</b> verified</span> ·
+            <span>📝 <b>${FN.markerStats?.ref || 0}</b> ref</span> ·
             <span>❓ <b>${FN.markerStats?.unknown || 0}</b> unknown</span>
             <button type="button" class="btn sm ghost" id="fn-audit-btn" style="padding:1px 6px;font-size:0.6rem;margin-left:8px">🔍 Audit</button>
           </div>
@@ -5010,149 +5011,115 @@
           </div>
         </details>
         <div id="fn-audit-panel" style="display:none;margin-top:4px;padding:6px 8px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);font-size:0.68rem"></div>
-
-        <!-- Disputed-answer review panel -->
-        <details id="fn-dispute-review" style="margin-top:8px;font-size:0.7rem" ${fnDisputedMode ? 'open' : ''}>
-          <summary style="cursor:pointer;color:var(--danger,#c0392b);font-weight:600">⚠ Review disputed answers (${FN.aiStats?.disputed || 0})</summary>
-          <div class="muted" style="font-size:0.66rem;margin:4px 0 6px">AI free-model review flagged these marked answers as likely wrong. Adjudicate each (saved in this browser); export decisions as JSON for a data fix.</div>
-          <div id="fn-dispute-list" style="margin-top:4px"></div>
-          <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
-            <button type="button" class="btn sm warn" id="fn-dispute-export">📋 Export decisions (JSON)</button>
-            <span class="muted" style="font-size:0.62rem">Reviewed <b id="fn-dispute-done">0</b>/${FN.aiStats?.disputed || 0} · decisions live in this browser only (localStorage), not in the data file</span>
-          </div>
-        </details>
-
         <p class="muted" style="margin-top:10px;font-size:0.62rem;border-top:1px solid var(--border);padding-top:6px">
-          Sources: أبطال · رفيع المقام 16 & 19 · تلخيص سعود · ملف سعود مصحّح · SDLE May 2026 · الملف الذهبي ٢ · July 2026
+          Sources: أبطال · رفيع المقام 16 & 19 · تلخيص سعود · ملف سعود مصحّح · SDLE May 2026 · الملف الذهبي ٢ · June–July 2023 · July 2026 · Bank 160 · SDLE Q&A Answered
         </p>
       </div>`;
+
     // === BIND EVENTS ===
 
-    // Day navigation pills
-    app.querySelectorAll("[data-plan-day]").forEach(b => {
-      b.onclick = () => { state._planMj = b.dataset.planDay; renderMarJune(); };
+    // Tabs + sort + bank chips + size chips
+    app.querySelectorAll("[data-fn-pane]").forEach(b => {
+      b.onclick = () => { state.fnPane = b.dataset.fnPane; state.fnOrder = null; renderMarJune(); };
     });
-
-    // Study-deck source cards + type filter + reset
-    app.querySelectorAll("[data-fn-src]").forEach(b => {
-      b.onclick = () => { state._fnStudySource = b.dataset.fnSrc; state._fnStudyIdx = 0; state._fnPicked = null; state._fnRevealed = false; renderMarJune(); };
+    app.querySelectorAll("[data-fn-sort]").forEach(b => {
+      b.onclick = () => { state.fnSort = b.dataset.fnSort; state.fnOrder = null; renderMarJune(); };
     });
-    app.querySelectorAll("[data-fn-type]").forEach(b => {
-      b.onclick = () => { state._fnType = b.dataset.fnType; state._fnStudyIdx = 0; state._fnPicked = null; state._fnRevealed = false; renderMarJune(); };
+    app.querySelectorAll("[data-fn-scope]").forEach(b => {
+      b.onclick = () => { state.fnScope = b.dataset.fnScope; state.fnStudyIdx = 0; state.fnPicked = null; state.fnRevealed = false; state.fnOrder = null; renderMarJune(); };
     });
-    const fnResetBtn = document.getElementById("fn-reset");
-    if (fnResetBtn) fnResetBtn.onclick = () => {
-      state._fnStudySource = ""; state._fnType = ""; state._fnDept = ""; state._fnArchive = false; state._fnDisputed = false; state._fnSearch = ""; state._fnStudyIdx = 0; state._fnPicked = null; state._fnRevealed = false;
+    app.querySelectorAll(".simple-sz[data-fn-qz]").forEach(b => {
+      b.onclick = () => startFlashQuiz(b.dataset.fnQz, +b.dataset.n, "learn", false);
+    });
+    // Review-pane walk buttons → Cards deck scoped to that bucket
+    app.querySelectorAll("[data-fn-rev-walk]").forEach(b => {
+      b.onclick = () => { state.fnPane = "cards"; state.fnScope = "rev:" + b.dataset.fnRevWalk; state.fnType = ""; state.fnStudyIdx = 0; state.fnPicked = null; state.fnRevealed = false; state.fnOrder = null; renderMarJune(); };
+    });
+    // Shuffle / quiz-this-deck
+    const shuffleBtn = app.querySelector("[data-fn-shuffle]");
+    if (shuffleBtn) shuffleBtn.onclick = () => {
+      const items = scopeItems(selectedScope);
+      if (!items.length) return;
+      state.fnOrder = items.map(it => it.id).sort(() => Math.random() - 0.5);
+      state.fnStudyIdx = 0; state.fnPicked = null; state.fnRevealed = false;
       renderMarJune();
     };
+    const quizDeckBtn = app.querySelector("[data-fn-quiz-deck]");
+    if (quizDeckBtn) quizDeckBtn.onclick = () => startFlashQuiz(selectedScope, QUIZ_ALL, "learn", false);
 
-    // Day quiz buttons — use FLASH NOTES items (not main bank)
-    const setFlashQuiz = (id, dept, n, timed, sec) => {
-      const el = document.getElementById(id);
-      if (el) el.onclick = () => startFlashQuiz(dept, n, timed ? "exam" : "learn", !!timed, sec || 72);
+    // Search
+    const runFnSearch = () => {
+      const inp = document.getElementById("fn-search-q");
+      const raw = inp ? inp.value : "";
+      state.fnSearch = raw;
+      state.fnSearchRan = true;
+      state.fnOrder = null;
+      state.fnSearchHits = raw.trim().length >= 2 ? scopeItems("search:" + raw.trim()) : [];
+      renderMarJune();
+      const inp2 = document.getElementById("fn-search-q");
+      if (inp2) { inp2.focus(); try { inp2.setSelectionRange(inp2.value.length, inp2.value.length); } catch (_) {} }
     };
-    // Map plan topic to flash notes department
-    const planTopics = plan.topics;
-    const flashDayDept = planTopics === "all" ? "all" 
-      : planTopics.includes(",") ? "all"
-      : planTopics;
-    setFlashQuiz(`qz-${day}-goal`, flashDayDept, plan.goal);
-    setFlashQuiz(`qz-${day}-all`, flashDayDept, dayPoolCount);
-    setFlashQuiz(`qz-${day}-50`, flashDayDept, 50);
-    setFlashQuiz(`qz-${day}-200`, flashDayDept, 200, true);  // timed mock
-
-    // Department rows → start quiz from flash notes
-    app.querySelectorAll("[data-dept-quiz]").forEach(b => {
-      const dept = b.dataset.deptQuiz;
-      const n = b.dataset.n ? +b.dataset.n : 50;
-      b.onclick = () => startFlashQuiz(dept, n, "learn", false);
-    });
-    // Flashcard buttons in department grid → open cards for that dept
-    app.querySelectorAll("[data-fn-cards]").forEach(b => {
-      b.onclick = (e) => { 
-        e.stopPropagation();
-        state._fnDept = b.dataset.fnCards;
-        state._fnStudyIdx = 0;
+    const goBtn = document.getElementById("fn-search-go");
+    if (goBtn) goBtn.onclick = runFnSearch;
+    const clearBtn = document.getElementById("fn-search-clear");
+    if (clearBtn) clearBtn.onclick = () => {
+      state.fnSearch = ""; state.fnSearchHits = []; state.fnSearchRan = false; state.fnOrder = null;
+      renderMarJune();
+    };
+    const drillBtn = document.getElementById("fn-search-drill");
+    if (drillBtn) drillBtn.onclick = () => {
+      if (!(state.fnSearchHits || []).length) return;
+      startFlashQuiz("search:" + state.fnSearch, state.fnSearchHits.length, "learn", false);
+    };
+    app.querySelectorAll("[data-fn-hit]").forEach(b => {
+      b.onclick = () => {
+        const id = b.dataset.fnHit;
+        const hit = (state.fnSearchHits || []).find(h => h.id === id);
+        if (!hit) return;
+        state.fnScope = "search:" + state.fnSearch;
+        state.fnStudyIdx = scopeItems(state.fnScope).findIndex(it => it.id === id);
+        state.fnPane = "cards";
+        state.fnPicked = null; state.fnRevealed = false; state.fnOrder = null;
         renderMarJune();
       };
     });
+    const searchInp = document.getElementById("fn-search-q");
+    if (searchInp) {
+      searchInp.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); runFnSearch(); } });
+    }
 
-    const byId = id => document.getElementById(id);
-    if (byId("plan-flash-today")) byId("plan-flash-today").onclick = () => openCards("always");
-    if (byId("qa-flash-all")) byId("qa-flash-all").onclick = () => openCards("always");
-    if (byId("plan-lesson-today")) byId("plan-lesson-today").onclick = () => { state.view = "today"; render(); };
-    if (byId("plan-notes-all")) byId("plan-notes-all").onclick = () => { state.view = "notes"; render(); };
-    if (byId("qa-mixed-50")) byId("qa-mixed-50").onclick = () => startFlashQuiz("all", 50, "learn", false);
-    if (byId("qa-mixed-100")) byId("qa-mixed-100").onclick = () => startFlashQuiz("all", 100, "learn", false);
-    if (byId("qa-mixed-200")) byId("qa-mixed-200").onclick = () => startFlashQuiz("all", 200, "exam", true, 72);
-    if (byId("qa-wrong")) byId("qa-wrong").onclick = () => { state.view = "wrong-dept"; render(); };
-    if (byId("qa-weak")) byId("qa-weak").onclick = () => startQuiz("weak", QUIZ_ALL, "learn", false);
-
-    // Flash Notes audit button
-    const auditBtn = document.getElementById("fn-audit-btn");
-    if (auditBtn) auditBtn.onclick = runFlashNotesAudit;
-
-    // Flash Notes: department chips + source chips + study widget controls
-    app.querySelectorAll("[data-fn-dept]").forEach(b => {
-      b.onclick = () => { state._fnDept = b.dataset.fnDept; state._fnStudySource = ""; state._fnDisputed = false; state._fnStudyIdx = 0; state._fnPicked = null; state._fnRevealed = false; renderMarJune(); };
-    });
-    app.querySelectorAll("[data-fn-disputed]").forEach(b => {
-      b.onclick = () => { state._fnDisputed = !state._fnDisputed; state._fnStudySource = ""; state._fnStudyIdx = 0; state._fnPicked = null; state._fnRevealed = false; renderMarJune(); };
-      app.querySelectorAll("[data-fn-archive]").forEach(b => b.onclick = () => { state._fnArchive = !state._fnArchive; state._fnDisputed = false; state._fnStudySource = ""; state._fnStudyIdx = 0; state._fnPicked = null; state._fnRevealed = false; renderMarJune(); });
-      const fnSearch = document.getElementById("fn-search");
-      if (fnSearch) {
-        let t;
-        fnSearch.oninput = () => {
-          clearTimeout(t);
-          t = setTimeout(() => {
-            state._fnSearch = fnSearch.value.trim();
-            state._fnStudyIdx = 0;
-            renderMarJune();
-            const el = document.getElementById("fn-search");
-            if (el) { el.focus(); el.setSelectionRange(el.value.length, el.value.length); }
-          }, 180);
-        };
-        fnSearch.addEventListener("keydown", (e) => { if (e.key === "Enter") e.preventDefault(); });
-      }
-    });
-    app.querySelectorAll("[data-fn-src]").forEach(b => {
-      b.onclick = () => { state._fnStudySource = b.dataset.fnSrc; state._fnStudyIdx = 0; renderMarJune(); };
-    });
-    // Disputed-answer review list
-    fnDisputeReview();
-    // Study widget: scroll the deck back into view after re-render
-    const scrollToStudy = () => {
-      const el = document.getElementById("fn-study-widget");
-      if (el) el.scrollIntoView({ block: "center", behavior: "smooth" });
-    };
-    // Study widget: pick an option (MCQs) -> instantly reveals the correct answer
+    // Study widget: pick an option -> instantly reveals correct answer
     app.querySelectorAll("[data-fn-opt]").forEach(b => {
       b.onclick = () => {
-        state._fnPicked = +b.dataset.fnOpt;
-        state._fnRevealed = true;
+        state.fnPicked = +b.dataset.fnOpt;
+        state.fnRevealed = true;
         renderMarJune();
         scrollToStudy();
       };
     });
-    // Study widget: reveal answer
+    // Reveal answer
     const revealBtn = document.getElementById("fn-reveal");
-    if (revealBtn) revealBtn.onclick = () => {
-      state._fnRevealed = true;
-      renderMarJune();
-      scrollToStudy();
-    };
-    // Study widget: prev/next
+    if (revealBtn) revealBtn.onclick = () => { state.fnRevealed = true; renderMarJune(); scrollToStudy(); };
+    // Prev / next
     const goStudy = (delta) => {
-      if (!fnTotal) return;
-      state._fnStudyIdx = Math.max(0, Math.min(fnTotal - 1, (state._fnStudyIdx || 0) + delta));
-      state._fnPicked = null; state._fnRevealed = false;
+      if (!deckItems.length) return;
+      state.fnStudyIdx = Math.max(0, Math.min(deckItems.length - 1, (state.fnStudyIdx || 0) + delta));
+      state.fnPicked = null; state.fnRevealed = false;
       renderMarJune();
     };
     const prevBtn = document.getElementById("fn-prev");
     if (prevBtn) prevBtn.onclick = () => goStudy(-1);
     const nextBtn = document.getElementById("fn-next");
     if (nextBtn) nextBtn.onclick = () => goStudy(+1);
-    // Study widget: TTS for the current card
+    const scrollToStudy = () => {
+      const el = document.getElementById("fn-study-widget");
+      if (el) el.scrollIntoView({ block: "center", behavior: "smooth" });
+    };
+    // Type segmented control (deck)
+    app.querySelectorAll("[data-fn-type]").forEach(b => {
+      b.onclick = () => { state.fnType = b.dataset.fnType; state.fnStudyIdx = 0; state.fnPicked = null; state.fnRevealed = false; state.fnOrder = null; renderMarJune(); };
+    });
+    // TTS for the current card
     const ttsBtn = document.getElementById("fn-study-tts");
     const stopBtn = document.getElementById("fn-study-stop");
     if (ttsBtn && stopBtn) {
@@ -5173,8 +5140,12 @@
       };
       stopBtn.onclick = () => { ttsStop(); ttsBtn.textContent = "🔊 Listen"; stopBtn.style.display = "none"; };
     }
+    // Audit
+    const auditBtn = document.getElementById("fn-audit-btn");
+    if (auditBtn) auditBtn.onclick = runFlashNotesAudit;
+    // Disputed adjudication list
+    fnDisputeReview();
   }
-
   function renderRecalls() {
     const packs = examPacksMeta()
       .slice()
@@ -7471,12 +7442,44 @@
    */
   function startFlashQuiz(dept, count, mode, timed, secPer) {
     const FN = window.FLASH_NOTES || { byDept: {} };
-    const items = dept === "all"
-      ? [].concat(...Object.values(FN.byDept))
-      : (FN.byDept[dept] || []);
+
+    // Scope can be: "all" | "src:<source-id>" | "dept:<id>" | "rev:<bucket>" | "search:<q>"
+    // (old callers pass a bare dept id or "all")
+    const isScope = (s) => s.indexOf("src:") === 0 || s.indexOf("dept:") === 0 || s.indexOf("rev:") === 0 || s.indexOf("search:") === 0;
+    let items = [];
+    if (isScope(dept)) {
+      if (dept.indexOf("src:") === 0) {
+        const s = dept.slice(4);
+        Object.values(FN.byDept || {}).forEach(arr => (arr || []).forEach(it => { if (!it._merged_into && (it.sources || []).includes(s)) items.push(it); }));
+      } else if (dept.indexOf("dept:") === 0) {
+        items = (FN.byDept[dept.slice(5)] || []).filter(it => !it._merged_into);
+      } else if (dept.indexOf("rev:") === 0) {
+        const r = dept.slice(4);
+        const f = {
+          book: it => it._verification_verdict === 'supported',
+          needs: it => it._verification_verdict === 'needs_review',
+          disputed: it => !!it._answer_disputed,
+          archive: it => !!(it._raw_recall || it._unverified || it._data_quality === 'merged_options_review'),
+          cards: it => it._kind === 'flashcard',
+          repaired: it => !!it._repaired_2026
+        }[r];
+        if (f) Object.values(FN.byDept || {}).forEach(arr => (arr || []).forEach(it => { if (!it._merged_into && f(it)) items.push(it); }));
+      } else { // search:
+        const q = dept.slice(7).toLowerCase();
+        if (q) Object.values(FN.byDept || {}).forEach(arr => (arr || []).forEach(it => {
+          if (it._merged_into) return;
+          const hay = [it.stem, it.answer, it.why, (it.options || []).join(" "), it._embedded_answer, it.reference].join(" ").toLowerCase();
+          if (hay.includes(q)) items.push(it);
+        }));
+      }
+    } else {
+      items = dept === "all"
+        ? [].concat(...Object.values(FN.byDept)).filter(it => !it._merged_into)
+        : (FN.byDept[dept] || []).filter(it => !it._merged_into);
+    }
 
     if (!items.length) {
-      alert("No items in this department.");
+      alert("No items in this scope.");
       return;
     }
 
@@ -7568,14 +7571,19 @@
     }).filter(Boolean);
 
     const modeLabel = mode === "exam" ? "Flash Mock" : "Flash Quiz";
-    const deptLabel = dept === "all" ? "All Flash" : dept;
+    const deptLabel = dept === "all" ? "All Flash"
+      : dept.indexOf("src:") === 0 ? ((FN.sources || []).find(s => s.id === dept.slice(4)) || {}).label || dept.slice(4)
+      : dept.indexOf("dept:") === 0 ? dept.slice(5)
+      : dept.indexOf("rev:") === 0 ? ({book:"Book-verified",needs:"Needs review",disputed:"Disputed",archive:"Raw archive",cards:"Flashcards",repaired:"Repaired"}[dept.slice(4)] || dept.slice(4))
+      : dept.indexOf("search:") === 0 ? "Search: " + dept.slice(7).slice(0, 32)
+      : dept;
 
     state.quiz = {
       items: converted,
       i: 0,
       mode,
       timed,
-      topic: "flash_" + dept,
+      topic: "fn_" + (dept || "all").replace(/[^a-zA-Z0-9_]/g,'_').slice(0, 40),
       answers: [],
       revealed: [],
       learnOk: 0,

@@ -2,19 +2,24 @@ window.FLASH_NOTES = {
  "generated": "2026-08-02 (dedupe_flash)",
  "total": 8030,
  "perSource": {
-  "Mar-June_2026": 1483,
+  "Mar-June_2026": 1476,
   "SDLE_May_2026": 251,
-  "July_2026": 160,
-  "Saud_Talkhees": 291,
-  "Rafi_Maqam_19": 946,
-  "Rafi_Maqam_16": 2151,
-  "Saud_Masahhah": 2039,
+  "July_2026": 366,
+  "Saud_Talkhees": 282,
+  "Rafi_Maqam_19": 945,
+  "Rafi_Maqam_16": 2149,
+  "Saud_Masahhah": 1598,
   "June_July2023": 213,
-  "GoldenFile2": 91
+  "GoldenFile2": 91,
+  "bank160": 149,
+  "SDLE_QA_Answered": 62,
+  "mcq_solved": 44,
+  "friend_july2026": 6
  },
  "markerStats": {
-  "verified": 1799,
-  "ref": 3119
+  "verified": 5718,
+  "ref": 1862,
+  "unknown": 450
  },
  "byDept": {
   "restorative": [
@@ -214656,6 +214661,30 @@ window.FLASH_NOTES = {
    "label": "July 2026 (أبطال الدجيتال) — recent add",
    "file": "focus_new/July_2026_abtal.md",
    "recent": true
+  },
+  {
+   "id": "bank160",
+   "label": "Bank 160 (راجع 160 سؤال)",
+   "file": "merged items tagged bank160",
+   "recent": false
+  },
+  {
+   "id": "SDLE_QA_Answered",
+   "label": "SDLE Q&A Answered (docx)",
+   "file": "merged items tagged SDLE_QA_Answered",
+   "recent": false
+  },
+  {
+   "id": "mcq_solved",
+   "label": "MCQ solved (extra pack)",
+   "file": "merged items tagged mcq_solved",
+   "recent": false
+  },
+  {
+   "id": "friend_july2026",
+   "label": "Friend July 2026 (extra pack)",
+   "file": "merged items tagged friend_july2026",
+   "recent": false
   }
  ],
  "markerLegend": {

@@ -69,7 +69,7 @@
     <script src="data/questions.js?v=20260806v12"></script>
     <script src="data/feedback_config.js?v=20260730fn12"></script>
     <script src="data/topics.js?v=20260730fn12"></script>
-    <script src="data/flash_notes.js?v=20260807fn15"></script>
+    <script src="data/flash_notes.js?v=20260807fn16"></script>
     <script src="data/flash_notes_verdicts.js?v=20260807fn8"></script>
     <script src="data/recent_qa.js?v=20260806rq11"></script>
     <script src="data/book_refs.js?v=20260730fn12"></script>
@@ -80,11 +80,15 @@
         var Q = (window.QUESTION_BANK || []).filter(function (q) { return q.usable !== false; });
         var V = Q.filter(function (q) { return q.book_verified === true; }).length;
         var F = window.FLASH_NOTES || {};
+        var fnStudy = 0;
+        Object.keys(F.byDept || {}).forEach(function (d) {
+          (F.byDept[d] || []).forEach(function (it) { if (!it._merged_into) fnStudy++; });
+        });
         var el = document.getElementById('foot-stats');
-        if (el) el.textContent = Q.length + ' MCQs (100% textbook-verified) · Flash Notes ' + (F.total || 0) + ' recall items · 7 topics · free forever';
+        if (el) el.textContent = Q.length + ' MCQs (100% textbook-verified) · Flash Notes ' + fnStudy + ' studyable recall items · 7 topics · free forever';
       } catch (e) { /* footer stats are non-critical */ }
     })();
     </script>
-    <script src="js/app.js?v=20260807v4"></script>
+    <script src="js/app.js?v=20260807v5"></script>
   </body>
 </html>
