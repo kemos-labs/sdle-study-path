@@ -1,0 +1,36 @@
+/* SDLE Study Path — print stylesheet
+   Makes lessons, micro-lessons, and flash notes print-friendly:
+   hide chrome (nav, buttons, footers), expand details, clean typography. */
+
+@media print {
+  :root { --bg1:#fff; --bg2:#fff; --bg3:#fff; --text:#000; --muted:#444; --border:#ccc; --accent:#000; --accent2:#000; }
+
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+  header.topbar, .foot, footer, nav.nav, .nav, .adhd-toolbar, .step-chips,
+  .path-ctas, .more-tree, .tts-bar, .pomo-bar, #topbar, #main-nav,
+  button, .btn, .step-progress, .mcq-goal-bar, .day-picker-bar,
+  .hub-actions, .path-ctas, .chrome-row, .simple-hub > .foot { display: none !important; }
+
+  body, main, .path-main, #app, .simple-hub { background:#fff !important; color:#000 !important; }
+
+  /* Expand all collapsible sections so content isn't hidden */
+  details:not([open]) > summary { display:block; }
+  details { display:block !important; }
+  details > div, details > ul, details > ol, details > p { display:block !important; }
+
+  .reading, .read-source, .fn-card, .dept-card, .step, .step-body {
+    page-break-inside: avoid; border:1px solid #ccc !important; padding:8px !important; margin:6px 0 !important;
+  }
+
+  h1, h2, h3 { color:#000 !important; page-break-after: avoid; }
+  a { color:#000 !important; text-decoration: underline; }
+  .muted { color:#444 !important; }
+  .badge { border:1px solid #999 !important; color:#000 !important; background:#fff !important; font-size:0.7rem !important; }
+
+  /* Flash note cards print as compact Q/A */
+  .fn-card summary { font-weight:600; }
+  .fn-card .muted { font-size:0.65rem !important; }
+
+  @page { margin: 1.5cm; }
+}

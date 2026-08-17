@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#141820" />
+    <meta name="description" content="Free KSA SDLE study path — readings, MCQs, plans. Open source." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="SDLE" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
+    <title>SDLE Study Path — KSA</title>
+    <!-- Reading serif: Spectral (falls back offline to Charter/Georgia) -->
+    <!-- UI sans + friendly Arabic: Cairo (rounded, readable for non-tech users) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Cairo:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ?v= busts CDN/browser cache (warm paper theme 2026-08-05) -->
+    <link rel="stylesheet" href="css/app.css?v=20260806ui4" />
+    <link rel="stylesheet" href="css/print.css?v=20260730fn13" media="print" />
+  </head>
+  <body class="path-app simple-ui">
+    <header class="topbar simple" id="topbar">
+      <div class="chrome-row">
+        <div class="logo" title="SDLE Study Path">
+          <span class="logo-text">SDLE</span>
+          <span class="logo-sub">Study Path · مسارك لامتحان SDLE</span>
+        </div>
+        <div class="top-stats" id="top-stats" hidden></div>
+        <div id="pomo-bar" class="pomo-bar" aria-label="Focus timer" hidden></div>
+      </div>
+      <!-- paintMainNav() fills this: Simple = 4 tabs; Coach = full set -->
+      <nav class="nav simple-nav" id="main-nav" aria-label="Main plan tabs">
+        <button type="button" data-view="today" class="active" title="Today’s lesson · درس اليوم">🏠 <span class="nav-ar" dir="rtl">اليوم</span> <span class="nav-en">Today</span></button>
+        <button type="button" data-view="topics" title="Micro-lessons by topic · الدروس">📖 <span class="nav-ar" dir="rtl">الدروس</span> <span class="nav-en">Learn</span></button>
+        <button type="button" data-view="practice" title="MCQs · Flashcards · Mock · تدرب">🎯 <span class="nav-ar" dir="rtl">تدرب</span> <span class="nav-en">Practice</span></button>
+        <button type="button" data-view="recentqa" title="Recent textbook-verified Q&A · سؤال وجواب">💬 <span class="nav-ar" dir="rtl">سؤال وجواب</span> <span class="nav-en">Q&amp;A</span></button>
+        <button type="button" data-view="marjune" title="Flash Notes — جميع المواد">🃏 <span class="nav-ar" dir="rtl">فلاش</span> <span class="nav-en">Flash</span></button>
+        <button type="button" data-view="notes" title="Review all notes · الملاحظات">📝 <span class="nav-ar" dir="rtl">ملاحظات</span> <span class="nav-en">Notes</span></button>
+        <button type="button" data-view="progress" title="Scores & settings · تقدمي">📈 <span class="nav-ar" dir="rtl">تقدمي</span> <span class="nav-en">Progress</span></button>
+        <button type="button" data-view="feedback" title="Send feedback · اقتراحات">💬 <span class="nav-ar" dir="rtl">رأيك</span> <span class="nav-en">Feedback</span></button>
+      </nav>
+    </header>
+
+    <main class="path-main" id="app"></main>
+
+    <footer class="foot">
+      Free SDLE ·
+      <a href="https://github.com/xxxova2/sdle-study-path" target="_blank" rel="noopener">Source</a>
+      ·
+      <a href="https://github.com/xxxova2/sdle-study-path/blob/main/docs/INTRO_POST_EN_AR.md" target="_blank" rel="noopener">Intro</a>
+      <span id="foot-stats" class="muted" style="display:block;font-size:0.75rem;margin-top:6px"></span>
+    </footer>
+
+    <script src="data/highyield.js?v=20260730fn12"></script>
+    <script src="data/scfhs_refs.js?v=20260730fn12"></script>
+    <script src="data/plan_tracks.js?v=20260803p4"></script>
+    <script src="data/video_links.js?v=20260730fn12"></script>
+    <script src="data/book_index.js?v=20260730fn12"></script>
+    <script src="data/exam_packs.js?v=20260730fn12"></script>
+    <script src="data/notes_bank.js?v=20260730fn12"></script>
+    <script src="data/lessons.js?v=20260804e1"></script>
+    <script src="data/questions.js?v=20260806v12"></script>
+    <script src="data/feedback_config.js?v=20260730fn12"></script>
+    <script src="data/topics.js?v=20260730fn12"></script>
+    <script src="data/flash_notes.js?v=20260807fn16"></script>
+    <script src="data/flash_notes_verdicts.js?v=20260807fn8"></script>
+    <script src="data/recent_qa.js?v=20260806rq11"></script>
+    <script src="data/book_refs.js?v=20260730fn12"></script>
+    <script>
+    /* Honest live stats — always computed from loaded data, never hardcoded */
+    (function () {
+      try {
+        var Q = (window.QUESTION_BANK || []).filter(function (q) { return q.usable !== false; });
+        var V = Q.filter(function (q) { return q.book_verified === true; }).length;
+        var F = window.FLASH_NOTES || {};
+        var fnStudy = 0;
+        Object.keys(F.byDept || {}).forEach(function (d) {
+          (F.byDept[d] || []).forEach(function (it) { if (!it._merged_into) fnStudy++; });
+        });
+        var el = document.getElementById('foot-stats');
+        if (el) el.textContent = Q.length + ' MCQs (100% textbook-verified) · Flash Notes ' + fnStudy + ' studyable recall items · 7 topics · free forever';
+      } catch (e) { /* footer stats are non-critical */ }
+    })();
+    </script>
+    <script src="js/app.js?v=20260807v5"></script>
+  </body>
+</html>
