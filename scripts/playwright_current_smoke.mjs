@@ -58,6 +58,8 @@ try {
     }
 
     await page.locator("#main-nav button[data-view='marjune']").click();
+    const mcqType = page.locator("button[data-fn-type='mcq']");
+    if (await mcqType.count()) await mcqType.click();
     const flashPool = page.locator("button[data-fn-scope]").first();
     if (await flashPool.count()) await flashPool.click();
     const startFlash = page.locator("button[data-fn-qz]").first();
