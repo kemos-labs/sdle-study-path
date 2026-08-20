@@ -14,6 +14,7 @@ mkdir -p "$OUT/css" "$OUT/js" "$OUT/data" "$OUT/icons"
 
 cp -a "$ROOT/index.html" "$OUT/index.html"
 cp -a "$ROOT/css/app.css" "$OUT/css/app.css"
+cp -a "$ROOT/css/print.css" "$OUT/css/print.css"
 cp -a "$ROOT/js/app.js" "$OUT/js/app.js"
 cp -a "$ROOT/manifest.webmanifest" "$OUT/manifest.webmanifest"
 cp -a "$ROOT/sw.js" "$OUT/sw.js"
@@ -29,9 +30,16 @@ for f in \
   plan_tracks.js \
   video_links.js \
   book_index.js \
+  exam_packs.js \
+  notes_bank.js \
   lessons.js \
   questions.js \
-  feedback_config.js
+  feedback_config.js \
+  topics.js \
+  flash_notes.js \
+  flash_notes_verdicts.js \
+  recent_qa.js \
+  book_refs.js
 do
   if [[ ! -f "$ROOT/data/$f" ]]; then
     echo "ERROR: missing data/$f" >&2
