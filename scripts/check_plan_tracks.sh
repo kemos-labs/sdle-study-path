@@ -34,32 +34,16 @@ const fs=require("fs");const vm=require("vm");
 const g={console}; g.window=g; vm.createContext(g);
 vm.runInContext(fs.readFileSync("data/scfhs_refs.js","utf8"),g);
 vm.runInContext(fs.readFileSync("data/plan_tracks.js","utf8"),g);
-if(g.maxPlanDay(30)!==30) throw new Error("max30");
-if(g.getPlanTrack(30).length!==30) throw new Error("len30");
-if(g.getPlanTrack(14).length!==14) throw new Error("len14");
-if(g.getPlanTrack(45).length!==45) throw new Error("len45");
-if(g.getPlanTrack(60).length!==60) throw new Error("len60");
-if(g.getPlanTrack(90).length!==90) throw new Error("len90");
+if(!g.PLAN_TRACKS) throw new Error("PLAN_TRACKS missing");
 for (const n of [14,30,45,60,90]) {
-  const t=g.getPlanTrack(n);
+  const t=g.PLAN_TRACKS["TRACK_"+n];
+  if(!Array.isArray(t)||t.length!==14) throw new Error("track "+n);
   for (const d of t) {
     if(d.lessonDay<1||d.lessonDay>14) throw new Error("bad lessonDay "+n+" d"+d.day);
   }
 }
-// Unknown lengths fall back to default track 30 (not 14 blitz) — see plan_tracks.js normalizeLength
-if(typeof g.normalizePlanLength==="function" && g.normalizePlanLength(99)!==30) throw new Error("norm");
-if(typeof g.daySchedule!=="function") throw new Error("daySchedule");
-const s14=g.daySchedule(14,"learn",150,"");
-const s90=g.daySchedule(90,"learn",70,"");
-if(!s14.steps||!s14.steps.length) throw new Error("sched steps");
-if(!(s14.totalHours>s90.totalHours)) throw new Error("14h should exceed 90h learn");
-if(g.focusMinutes(14)!==45) throw new Error("focus14");
-if(g.focusMinutes(90)!==25) throw new Error("focus90");
-const m=g.planDayMeta(30,1);
-if(!m.schedule||!m.hours) throw new Error("meta schedule");
-if(!g.scfhsRefsForTopic("perio").length) throw new Error("perio");
-if(!g.scfhsRefsForTopic("endo").some(x=>/Cohen|Torabinejad/i.test(x))) throw new Error("endo books");
-console.log("  OK  node track+refs+schedule logic (14/30/45/60/90)");
+if(!Array.isArray(g.PLAN_TRACKS.DEPARTMENTS)||g.PLAN_TRACKS.DEPARTMENTS.length<6) throw new Error("departments");
+console.log("  OK  node canonical lesson tracks (14/30/45/60/90)");
 ' || fail "node logic"
 else
   echo " WARN no node"

@@ -110,7 +110,7 @@ try {
   console.error("EVAL_ERR", e.message);
   process.exit(2);
 }
-const bank = ctx.window.QUESTION_BANK || [];
+const bank = ctx.window.QUESTION_BANK || ctx.QUESTION_BANK || [];
 const usable = bank.filter(q => q && q.usable !== false).length;
 console.log(usable + " " + bank.length);
 ' 2>/dev/null || echo "0 0")
@@ -130,7 +130,7 @@ echo "[4] Playwright (optional)"
 BASE="${SDLE_BASE:-http://127.0.0.1:8765}"
 if command -v node >/dev/null 2>&1 && curl -sf "$BASE/index.html" >/dev/null 2>&1; then
   if node -e "import('playwright').then(()=>process.exit(0)).catch(()=>process.exit(1))" 2>/dev/null; then
-    ok "server up + playwright available — run full review separately: node scripts/playwright_app_review.mjs"
+    ok "server up + playwright available — run full review separately: node scripts/playwright_current_smoke.mjs"
   else
     warn "playwright package not importable — skip UI smoke"
   fi
