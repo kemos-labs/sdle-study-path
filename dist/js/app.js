@@ -1286,7 +1286,7 @@
     if (compact) {
       return `
       <section class="plan-chooser plan-chooser-compact" aria-label="Study plan">
-        <p class="plan-model-line"><b>Same 14 lessons</b> · plan only changes calendar speed, hours, and Q goal. 📖 ${(window.QUESTION_BANK || []).filter(q => q.usable !== false && q.book_verified === true).length} MCQs textbook-verified</p>
+        <p class="plan-model-line"><b>Same 14 lessons</b> · plan only changes calendar speed, hours, and Q goal. 📖 ${(window.QUESTION_BANK || []).filter(q => q.usable !== false && q.book_verified === true).length} MCQs completed textbook review</p>
         <div class="plan-compact-row">
           <span class="muted">Plan:</span>
           ${opts
@@ -1304,7 +1304,7 @@
         <p class="lead plan-chooser-lead">
           Same 14 lessons — <b>hours, focus timer, MCQ goal, and step order</b> change with plan length.
         </p>
-        <p class="muted" style="margin:4px 0 12px">📖 <strong>${(window.QUESTION_BANK || []).filter(q => q.usable !== false && q.book_verified === true).length}/${(window.QUESTION_BANK || []).filter(q => q.usable !== false).length}</strong> usable MCQs are textbook-verified · All 7 topics at 100%</p>
+        <p class="muted" style="margin:4px 0 12px">📖 <strong>${(window.QUESTION_BANK || []).filter(q => q.usable !== false && q.book_verified === true).length}/${(window.QUESTION_BANK || []).filter(q => q.usable !== false).length}</strong> usable MCQs completed textbook review · <strong>${(window.QUESTION_BANK || []).filter(q => q.usable !== false && q.book_verified === true && q._page).length}</strong> include a located book page</p>
         <div class="plan-template-grid plan-chooser-grid">
           ${opts
             .map(
@@ -4485,9 +4485,9 @@
           <h1 style="margin:0;font-size:1.4rem">📖 Recent Q&A <span style="font-size:0.8rem;color:var(--muted);font-weight:400">أسئلة وأجوبة جديدة</span></h1>
           <span style="color:var(--accent2);font-weight:600">${items.length} items</span>
         </div>
-        <p class="simple-lead" style="font-size:0.85rem">62 Q&A — textbook-verified from official SDLE references. Each answer includes the reference and clinical reasoning. <b>Community leads → book-confirmed.</b></p>
+        <p class="simple-lead" style="font-size:0.85rem"><b>${items.filter(x => x._verified !== "recall").length} book-grounded</b> Q&A · <b>${items.filter(x => x._page).length} passage-linked</b> · <b>${items.filter(x => x._verified === "recall").length} recall items awaiting a verbatim passage.</b></p>
         <div style="padding:8px 12px;background:rgba(27,122,61,.1);border:1px solid rgba(27,122,61,.3);border-radius:var(--radius);font-size:0.78rem;margin-bottom:12px">
-          ✅ All items verified against: Contemporary Fixed Prosthodontics · Sturdevant's Operative Dentistry · Cohen's Pathways of the Pulp · Contemporary OMS · McDonald & Avery Pediatric Dentistry · Carranza's Periodontology · Dental Materials & Their Selection
+          📖 Evidence comes from: Contemporary Fixed Prosthodontics · Sturdevant's Operative Dentistry · Cohen's Pathways of the Pulp · Contemporary OMS · McDonald & Avery Pediatric Dentistry · Carranza's Periodontology · Dental Materials & Their Selection. Recall-only items remain visibly labelled.
         </div>
 
         <!-- Department filters -->
@@ -4528,7 +4528,7 @@
         ${!filtered.length ? `<p class="muted" style="padding:20px 0;text-align:center">No items match this filter.</p>` : ""}
 
         <p class="muted" style="margin-top:16px;font-size:0.7rem;border-top:1px solid var(--border);padding-top:10px">
-          Source: SDLE_QA_Answered.docx — 62 Q&A grounded in official textbooks with references + reasoning. All answers verified against the gold-standard references.
+          Sources include SDLE_QA_Answered.docx and later reviewed sets. Community material supplies question leads only; displayed evidence status determines trust.
         </p>
       </div>
     `;
@@ -6372,7 +6372,6 @@
     const cfg = feedbackConfig();
     const ntfyUrl = feedbackNtfyUrl();
     const sentLog = store.get("feedbackSentLog", []);
-    const emailOn = !!(cfg.email && cfg.email.includes("@") && !/@users\.noreply\.github\.com$/i.test(cfg.email));
 
     app.innerHTML = `
       ${backBarHtml("← Back")}
@@ -6413,18 +6412,12 @@
       </section>
 
       <section class="simple-panel" style="margin-top:16px">
-        <h3 class="section-label">How the owner reads feedback</h3>
-        <p class="lead">Students do <b>not</b> need accounts. You (maintainer) open this inbox anytime:</p>
+        <h3 class="section-label">Privacy</h3>
+        <p class="lead">No account is required. Feedback is sent to the maintainer; your optional name and message are the only details included.</p>
         <div class="volume-grid">
-          <a class="btn success" href="${escapeHtml(ntfyUrl)}" target="_blank" rel="noopener">Open feedback inbox</a>
           <a class="btn ghost" href="${REPO_URL}" target="_blank" rel="noopener">Source code</a>
           <a class="btn ghost" href="${REPO_URL}/blob/main/INTRO.md" target="_blank" rel="noopener">Intro letter</a>
         </div>
-        <p class="muted-hint" style="margin-top:10px">
-          Inbox link: <code style="word-break:break-all">${escapeHtml(ntfyUrl)}</code><br>
-          Email copies: <b>${emailOn ? "ON → " + escapeHtml(cfg.email) : "OFF — set your Gmail in data/feedback_config.js for permanent email archive"}</b><br>
-          Free ntfy keeps recent messages; email is better for long-term history.
-        </p>
       </section>
 
       ${
@@ -6584,7 +6577,7 @@
 
         <section class="simple-panel">
           <h3 class="section-label">Bank health</h3>
-          <p class="muted">${window.QUESTION_BANK ? window.QUESTION_BANK.filter(q => q.usable !== false && q.book_verified === true).length + "/" + window.QUESTION_BANK.filter(q => q.usable !== false).length + " usable questions textbook-verified" : "Loading…"} · ${window.QUESTION_BANK ? window.QUESTION_BANK.filter(q => q.usable === false).length + " non-usable (community-sourced, needs expert review)" : ""}</p>
+          <p class="muted">${window.QUESTION_BANK ? window.QUESTION_BANK.filter(q => q.usable !== false && q.book_verified === true).length + "/" + window.QUESTION_BANK.filter(q => q.usable !== false).length + " usable questions completed textbook review" : "Loading…"} · ${window.QUESTION_BANK ? window.QUESTION_BANK.filter(q => q.usable !== false && q.book_verified === true && q._page).length + " passage-linked" : ""} · ${window.QUESTION_BANK ? window.QUESTION_BANK.filter(q => q.usable === false).length + " quarantined" : ""}</p>
         </section>
 
         <section class="simple-panel">
