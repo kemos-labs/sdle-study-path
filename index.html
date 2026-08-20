@@ -78,17 +78,17 @@
     (function () {
       try {
         var Q = (window.QUESTION_BANK || []).filter(function (q) { return q.usable !== false; });
-        var V = Q.filter(function (q) { return q.book_verified === true; }).length;
+        var pageLinked = Q.filter(function (q) { return q.book_verified === true && q._page; }).length;
         var F = window.FLASH_NOTES || {};
         var fnStudy = 0;
         Object.keys(F.byDept || {}).forEach(function (d) {
           (F.byDept[d] || []).forEach(function (it) { if (!it._merged_into) fnStudy++; });
         });
         var el = document.getElementById('foot-stats');
-        if (el) el.textContent = Q.length + ' MCQs (100% textbook-verified) · Flash Notes ' + fnStudy + ' studyable recall items · 7 topics · free forever';
+        if (el) el.textContent = Q.length + ' textbook-reviewed MCQs · ' + pageLinked + ' passage-linked · Flash Notes ' + fnStudy + ' studyable items · free forever';
       } catch (e) { /* footer stats are non-critical */ }
     })();
     </script>
-    <script src="js/app.js?v=20260807v5"></script>
+    <script src="js/app.js?v=20260820v1"></script>
   </body>
 </html>
