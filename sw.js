@@ -1,6 +1,6 @@
 /* SDLE Study Path — light service worker for installability + shell cache.
    Progress stays in localStorage (not cached here). */
-const CACHE = "sdle-shell-v51";
+const CACHE = "sdle-shell-v52";
 const SHELL = [
   "./",
   "./index.html",

@@ -1732,3 +1732,46 @@ which overstated 10 of 13 as "conflicts". Re-verified against `work/parsed_new_m
 - `fn_oms_0445` repaired (canine space infection); `fn_fixed_0048` flagged.
 - Gate FN-MERGED upgraded: also fails on ✅-glue in options (0 remaining).
 - `qa_j_0025` (recentqa) repaired from a 9-option merged blob → 4 month options, answer 4 (index 3, book-cited).
+
+---
+
+## 2026-08-22 — RESIDUE PASS (C1+C2): no answer flips, quarantine/repair only
+
+### BANK — DEMOTED (7, `usable:false` + `exclude_reason`; data kept)
+| id | Why |
+|---|---|
+| `j26_0003` | recall note (2 non-option lines in source docx: "Metal: Carbide bur / Porcelain: Diamond bur") |
+| `j26_0004` | recall note ("*Also Ramus Osteotomy" is not an option; stem "Name the procedure?" has no real option set) |
+| `j26_0006` / `j26_0008` | second option is a book-title string (recall note) |
+| `rafi_12_af73b4e2a1` | options are student slang fragments (miss/semi miss/extra miss) |
+| `rafi_17_747d83d9ec` | option = "I don't remember it → maybe Pressure indicating paste" + inline ✖ |
+| `j26_0120` | merged junk option block in source ('crown' duplicated, scenario sentences as options); nothing clean to recover |
+
+Usable count 15,521 → **15,514**. The remaining 9 two-option items are legitimate A/B clinical choices (HSV-1/2, A-delta/C fibers, Stage II B/C…) and stay.
+
+### BANK — MERGED-OPTION MONSTERS REPAIRED (4, options trimmed to the source's real set; answer index re-verified against option TEXT after trim — RED LINE rule)
+| id | Clean options | ans (verified) |
+|---|---|---|
+| `j26_0116` multiple tooth-like radiopacities | Complex odontoma / **Compound odontoma** / Cementoblastoma / Ameloblastic fibro-odontoma | 1 — Oral Radiology 7e passage already cited in item ("toothlike appearance… compound") |
+| `j26_0118` chalky white anteriors + brown molars | MIH / AI / Dental caries / DI | 0 — MIH (molar-incisor hypomineralization pattern) |
+| `j26_0119` PD 5 mm, bone loss 50% | Flap+graft / **SRP + re-eval 6 wks** / Extract / Endo | 1 — Carranza nonsurgical-first case cited in item |
+| `j26_0134` Class II high vertical growth | Cervical HG / Reverse-pull HG / **High-pull HG** / Twin block | 2 — McDonald headgear selection by vertical/sagittal factors |
+
+### BANK — GLUE WHYS REPLACED (9 of the 11-item "Selected (N) … For:" class)
+- Book-cited verbatim passages: `rafi_18_2ce26df9ac` (McCracken U-shape least rigid), `rafi_20_a3377426d9` (Carranza residual calculus post-SRP), `rafi_17_0b2cd77d8f` (Cohen NSAID for endo pain), `rafi_17_67efc316f9` (crestal/internal sinus elevation), `rafi_06_13ef6decfe` (Cohen pulpectomy primary teeth).
+- Honest UNCITED clinical hinges (no local passage found; per AGENTS.md an uncited hinge beats a fake page): `rafi_12_2825f92145` (Class II div 2 interincisal angle), `rafi_17_19ec23a21f` (low-dose steroid coverage), `rafi_20_a098e903fc` (supragingival margins), `rafi_20_276af0bfaf` (external oblique ridge vs crown lengthening).
+- No answer indices changed anywhere in this pass.
+
+### FLASH DECK — GARBAGE-STEM QUARANTINE (233 items flagged `_data_quality:'garbage'`)
+- Classes: bullet-answer-fragments without any question mark (219, e.g. "- gold", "- Erythema multiform", "Present of mesial concavity…"), table-pipe fragments without "?" (14). All from Saud_Masahhah (218) / Saud_Talkhees (15).
+- Items stay in the data file; excluded from study decks/MCQ counts/quizzes (`isDeckBroken` filter in app.js mirrors the quiz converter); visible via Review ▸ 📦 Raw recall archive.
+- Multi-line REAL vignettes were deliberately NOT quarantined (classifier keeps any stem containing "?").
+
+### OPEN ITEM (next books-only pass, NOT auto-applied)
+53 usable bank items still carry "Selected (N) … For:" glue whys (rafi recall class). Several answers look clinically suspect on sight (e.g. "ground glass appearance → Odontoma" should be fibrous dysplasia; "nosocomial routes → Counter"). These need the standard books-only verification pipeline before any rewrite or flip. Also: flash archive walker silently skips broken items when quizzing (pre-existing; bucket counts are inventory numbers).
+
+### PASS UPDATE — 2 more whys grounded verbatim + G-CITE honest-hinge class
+- `rafi_12_2825f92145` → Contemporary Orthodontics 7e ("class II division 2 incisor pattern… upright central incisors").
+- `rafi_20_a098e903fc` → Contemporary Fixed Prosthodontics ("should be supragingival. Subgingival margins… major etiologic factor in periodontal disease").
+- Remaining 2 (`rafi_17_19ec23a21f`, `rafi_20_276af0bfaf`) keep explicit `📎 Clinical hinge:` prefixes after 3 grep rounds found no local passage. G-CITE now accepts that exact prefix as the AGENTS.md-sanctioned "uncited hinge beats fake page" class; empty/junk whys still fail.
+- Gates re-run: no_slack 9/9 green (usable 15,514) · flash 7/7 green.

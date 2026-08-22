@@ -4584,10 +4584,14 @@
     const fnAllItems = [];
     Object.keys(FN.byDept || {}).forEach(did => (FN.byDept[did] || []).forEach(it => { if (!it._merged_into) fnAllItems.push(it); }));
     const isMcqItem = (it) => ((it.options || []).length >= 3) && (it.answerIdx != null || it.answerLetter);
-    const isArchiveItem = (it) => !!(it._raw_recall || it._unverified || it._data_quality === 'merged_options_review');
+    const isArchiveItem = (it) => !!(it._raw_recall || it._unverified || it._data_quality === 'merged_options_review' || it._data_quality === 'garbage');
     const isFlashCard = (it) => it._kind === 'flashcard';
-    const mcqAll = fnAllItems.filter(isMcqItem).length;
-    const cardAll = fnAllItems.length - mcqAll;
+    const fnCleanStem = (s) => (s || "").replace(/[✅🟢🟡✳🔵🔁●]/g, "").replace(/^[\s\u2022\u25CF\u2023\u25AA\u25A0#*>-]+/, "").replace(/[\s\u2022\u25CF\u2023\u25AA\u25A0]+$/, "").trim();
+    const isGarbageStemFn = (s) => { const t = fnCleanStem(s); if (t.length < 3) return true; if (/^[-•*●#>\s]+$/.test(t)) return true; if (!/[a-zA-Z\u0621-\u064A0-9]/.test(t)) return true; return false; };
+    const isDeckBroken = (it) => !!(it._data_quality === "merged_options_review" || it._data_quality === "garbage" || it._is_option || isGarbageStemFn(it.stem));
+    const deckEligible = fnAllItems.filter((it) => !isDeckBroken(it));
+    const mcqAll = deckEligible.filter(isMcqItem).length;
+    const cardAll = deckEligible.length - mcqAll;
 
     const srcCounts = {}; const srcMcq = {}; const srcCard = {};
     fnAllItems.forEach(it => {
@@ -4623,7 +4627,11 @@
       if (scope.indexOf("rev:") === 0) { const b = revBuckets[scope.slice(4)]; return b ? fnAllItems.filter(b.f) : []; }
       return [];
     };
-    const scopeCount = (scope) => scopeItems(scope).length;
+    const scopeCount = (scope) => {
+      const arr = scopeItems(scope);
+      if (scope.indexOf("rev:") === 0 || scope.indexOf("search:") === 0) return arr.length;
+      return arr.filter((it) => !isDeckBroken(it)).length;
+    };
     const scopeLabel = (scope) => {
       if (!scope || scope === "all") return "All Flash Notes";
       if (scope.indexOf("src:") === 0) { const s = scope.slice(4); const m = (FN.sources || []).find(x => x.id === s); return m ? m.label : s; }
@@ -4646,7 +4654,7 @@
     const selectedScope = state.fnScope || "all";
 
     // Deck (Cards pane / review walker)
-    let deckItems = scopeItems(selectedScope);
+    let deckItems = scopeItems(selectedScope).filter((it) => !isDeckBroken(it));
     // Optional shuffled order (persisted in state.fnOrder)
     if (state.fnOrder && state.fnOrder.length === deckItems.length) {
       const byId = {};
@@ -4700,7 +4708,8 @@
       } else if (it.answer) {
         ansText = String(it.answer).slice(0, 200);
       } else if (!ansLetter) { ansText = fnInlineAns(it); }
-      const hasOpts = (it.options||[]).length > 0 && (it.answerIdx != null || it.answerLetter);
+      const optsArr = it.options || [];
+      const hasOpts = optsArr.length > 0 && optsArr.length <= 6 && (it.answerIdx != null || it.answerLetter);
       const picked = state.fnPicked;
       const revealed = !!state.fnRevealed;
       const correctIdx = it.answerIdx != null ? it.answerIdx : (ansLetter ? String(ansLetter).toUpperCase().charCodeAt(0) - 65 : -1);
@@ -4888,7 +4897,7 @@
     // ------------------------------------------------------------------
     // 7) CARDS PANE — one-by-one study deck
     // ------------------------------------------------------------------
-    const typeSegHtml = [['', 'All', fnAllItems.length], ['mcq', 'MCQs', mcqAll], ['card', 'Flash cards', cardAll]].map(([t, label, n]) => {
+    const typeSegHtml = [['', 'All', deckEligible.length], ['mcq', 'MCQs', mcqAll], ['card', 'Flash cards', cardAll]].map(([t, label, n]) => {
       const active = fnType === t;
       return `<button type="button" class="btn ${active ? 'success' : 'ghost'}" data-fn-type="${t}" style="padding:6px 16px;font-size:0.85rem;font-weight:600">${label} <span class="muted" style="font-weight:400">(${n})</span></button>`;
     }).join('');
@@ -4984,7 +4993,7 @@
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
           <h1 style="margin:0;font-size:1.4rem">📚 Flash Notes <span style="font-size:0.8rem;color:var(--muted);font-weight:400">النوطات السريعة</span></h1>
           <div style="display:flex;align-items:center;gap:12px">
-            <span style="color:var(--accent2);font-weight:600">${fnAllItems.length} items</span>
+            <span style="color:var(--accent2);font-weight:600">${deckEligible.length} items</span>
             <span class="muted">${mcqAll} MCQ · ${cardAll} cards</span>
           </div>
         </div>
@@ -7452,7 +7461,7 @@
           book: it => it._verification_verdict === 'supported',
           needs: it => it._verification_verdict === 'needs_review',
           disputed: it => !!it._answer_disputed,
-          archive: it => !!(it._raw_recall || it._unverified || it._data_quality === 'merged_options_review'),
+          archive: it => !!(it._raw_recall || it._unverified || it._data_quality === 'merged_options_review' || it._data_quality === 'garbage'),
           cards: it => it._kind === 'flashcard',
           repaired: it => !!it._repaired_2026
         }[r];

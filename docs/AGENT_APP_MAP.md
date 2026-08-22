@@ -38,7 +38,7 @@ index.html
 
 | File | Global | Role |
 |------|--------|------|
-| `data/questions.js` | `window.QUESTION_BANK` | Full MCQ array (**2533** verified 2026-07-20; **2501** usable) |
+| `data/questions.js` | `window.QUESTION_BANK` | Full MCQ array (**16,738** total; **15,514** usable as of 2026-08-22) |
 | `data/lessons.js` | `window.LESSONS` | Day lessons (readings, quizzes, cards, video ids) |
 | `data/plan_tracks.js` | `window.PLAN_TRACKS`, helpers | Schedules for plan lengths 14/30/45/60/90 |
 | `data/highyield.js` | high-yield meta / bank mining notes | Blueprint emphasis, source notes |
@@ -65,18 +65,20 @@ Do **not** convert to `import`/`export` without changing `index.html` and deploy
 
 `localStorage` `sdle3_simpleMode` defaults **true**.
 
-Bottom/top nav: **Today · Practice · Progress · More**
+Top nav (8 tabs, bilingual): **Today · Learn · Practice · Q&A · Flash · Notes · Progress · Feedback**
 
 | Tab | What student sees |
 |-----|-------------------|
 | **Today** | Current plan day: read → videos → cards → quiz; plan chooser if not picked |
-| **Practice** | Extra MCQs by topic / volume builder |
+| **Learn** | Micro-lessons by topic (`data/topics.js`) |
+| **Practice** | MCQ banks by dept/provider, flashcards, mock packs (`data/exam_packs.js`) |
+| **Q&A** | 439 recent textbook-verified Q&A items (`data/recent_qa.js`, Set A–J) |
+| **Flash** | Flash Notes — study by source/dept/type + review buckets (`data/flash_notes.js`, ~8k items) |
+| **Notes** | Full recall notes by department (`data/notes_bank.js`, ~8k notes) |
 | **Progress** | Scores, wrong book, history, readiness |
-| **More** | Days list, Pass pack, Always, full MCQ hub, Feedback, switch to Coach |
+| **Feedback** | ntfy/FormSubmit form |
 
-### Coach mode
-
-`simpleMode === false` — fuller original tab set (Days, Pass, Always, Extra, MCQs, Feedback, etc.). Same content, more entry points.
+Coach mode (`simpleMode === false`) keeps the same views with fuller entry points.
 
 ### Navigation stack
 
@@ -118,7 +120,10 @@ Main chrome: `#main-nav` filled by `paintMainNav()`. Content: `#app`.
 }
 ```
 
-### Approximate composition (~2533 total)
+### Approximate composition (~16,738 total · 15,514 usable, 2026-08-22)
+
+> Historical table below reflects the pre-2026-08 bank; rafi/rafi16-19/j26/stream
+> imports now dominate. Run the node integrity snippet at the bottom for live numbers.
 
 | ID prefix / source | ~Count | Meaning |
 |--------------------|-------:|---------|

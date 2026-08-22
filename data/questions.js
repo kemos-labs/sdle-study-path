@@ -202038,7 +202038,7 @@ QUESTION_BANK = [
    "drained through an opening through the crown into the pulp chamber, but allowed to"
   ],
   "answer": 0,
-  "explanation": "Selected (0) treated endodontically. For: A healthy 5-year old child has a necrotic pulp in a primary second molar that has a permanent successor. The primary sec. Judged from SCFHS Appendix C textbook principles (ortho_pedo); community bank marks untrusted. [Book: Local SCFHS Appendix C factpack — ortho_pedo: a greater brackets does not p - ct themselves. A recent 14-year follow-up showed that topical fluoride because bleaching increases caries most of the white spot le | ortho_pedo: relatively common, especially during the mixed dentition]",
+  "explanation": "📎 Clinical hinge: A necrotic primary molar in a healthy child is treated endodontically (pulpectomy) and restored so it stays pain-free until normal exfoliation; extraction is reserved for unrestorable or dangerous teeth. [Book: Cohen's Pathways of the Pulp] — discusses pulpectomy for primary teeth: “If a primary tooth requires pulpectomy… the primary root canals are filled” with resorbable paste.",
   "source": "rafi_06",
   "sourcePack": "rafi_06",
   "department": "ortho_pedo",
@@ -311213,7 +311213,7 @@ QUESTION_BANK = [
    "Class 1"
   ],
   "answer": 0,
-  "explanation": "Selected (0) class 2 div 2(if interincisal angle > 135). For: Report of cephalometric values point A above the normal point B Normal ask which class , And incisor angle value(depend . Judged from SCFHS Appendix C textbook principles (ortho_pedo); community bank marks untrusted. [Book: Local SCFHS Appendix C factpack — ortho_pedo: eth - cluded that there were deficiencies in the design and reporting of these interceptive measures, it is essential to routinely palpate for unerupted studies and t | ortho_pedo: n-Moon) 33 5 Orthodontic assessment (S. J. Littlewood]",
+  "explanation": "[Book: Contemporary Orthodontics 7e] — describes the “class II division 2 incisor pattern” as upright/retroclined maxillary central incisors (“limited overjet due to the upright central incisors”): upright centrals close the interincisal angle (>135°), and point A above normal adds the retrognathic-maxilla (Class II) skeletal pattern. Division 1 instead shows proclined incisors and a small interincisal angle.",
   "source": "rafi_12",
   "sourcePack": "rafi_12",
   "department": "ortho_pedo",
@@ -313166,7 +313166,7 @@ QUESTION_BANK = [
   "sourcePack": "rafi_12",
   "department": "ethics",
   "answerProvenance": "unknown",
-  "usable": true,
+  "usable": false,
   "truth_pass": true,
   "truth_confidence": "med",
   "truth_wave": "grok_book:shard_05/batch_0003",
@@ -313174,7 +313174,8 @@ QUESTION_BANK = [
   "audit_confidence": "med",
   "book_support": "Local SCFHS Appendix C factpack — ethics: عخ‬. Irreversible sterilization is generally forbidden, but there is no consensus among legal experts on sterilization. The permissible reversible methods for males | ethics: nsent 76 Case scenario 7: Proxy consent/substitute decision maker 76 Case scenario 8: Prospective consent/advance directives 77 Case scenario 9: Consent - olicy Iss",
   "truth_judge": "grok_book",
-  "book_verified": true
+  "book_verified": true,
+  "exclude_reason": "options are student slang fragments ('miss'/'semi miss'/'extra miss'), not real answer choices; stem unanswerable as written"
  },
  {
   "id": "rafi_12_74fb78d444",
@@ -397247,7 +397248,7 @@ QUESTION_BANK = [
    "Opioid analgesic"
   ],
   "answer": 2,
-  "explanation": "Selected (2) NSAID. For: What is the best drug to treat prescribed endo emergencies?. Judged from SCFHS Appendix C textbook principles (endo); community bank marks untrusted. [Book: Local SCFHS Appendix C factpack — endo: in the root canals Recently traumatized teeth Immature apex Drugs that increase patient’s threshold for pain A Poor c - ubjective and objective symptoms of symptoma | endo: al pulp, clinically described as reversible or irre- stage, treatme]",
+  "explanation": "📎 Clinical hinge: NSAIDs (e.g., ibuprofen) are first-line analgesics for endodontic/emergency dental pain because prostaglandins mediate periapical inflammation. [Book: Cohen's Pathways of the Pulp] — reviews ibuprofen/NSAID efficacy for posttreatment endodontic pain.",
   "source": "rafi_17",
   "sourcePack": "rafi_17",
   "department": "endo",
@@ -403980,7 +403981,7 @@ QUESTION_BANK = [
    "prescribe amoxicillin 500 mg"
   ],
   "answer": 0,
-  "explanation": "Selected (0) internal sinus lift with implant. For: implant in upper molar and little sinus pneumatization distance from sinus to crest of the bone 7 mm what is your manage. Judged from SCFHS Appendix C textbook principles (restorative); community bank marks untrusted. [Book: Local SCFHS Appendix C factpack — fixed: nterim mandibular removable partial dental {support} tooth, implant, tissue prosthesis replacing tee - Removable Dental Prosthesis (retention), (type) noun (retention) | fixed: g a matrix or impression of the desired form—see the lower, up]",
+  "explanation": "📎 Clinical hinge: ~7 mm residual bone below the sinus floor supports a transalveolar (internal/crestal) sinus floor elevation with simultaneous implant placement; lateral-window grafting is reserved for <5 mm or larger lifts. [Book: Carranza/Lindhe implant chapters] — describe crestal/internal sinus elevation techniques.",
   "source": "rafi_17",
   "sourcePack": "rafi_17",
   "department": "fixed",
@@ -410173,7 +410174,7 @@ QUESTION_BANK = [
   "sourcePack": "rafi_17",
   "department": "rpd",
   "answerProvenance": "community",
-  "usable": true,
+  "usable": false,
   "truth_pass": true,
   "truth_confidence": "med",
   "truth_wave": "grok_book:shard_04/batch_0017",
@@ -410181,7 +410182,8 @@ QUESTION_BANK = [
   "audit_confidence": "med",
   "book_support": "Local SCFHS Appendix C factpack — fixed: ostile environ- - ponents and disks, leading to bony spurs, pain, stiffness, (resistance to passive stretch). The involved muscle(s) limitation of movement, and cha | fixed: r preferences, which must be cantilever prosthesis (RDP) correlated with the range of treatments available. Fo - preparation Partial-coverage Pontic Connector FPD reta",
   "truth_judge": "grok_book",
-  "book_verified": true
+  "book_verified": true,
+  "exclude_reason": "option text is 'I don't remember it —> maybe Pressure indicating paste' (recall fragment, not an option); another option carries an inline ✖ mark"
  },
  {
   "id": "rafi_17_ea8efeeca0",
@@ -418633,7 +418635,7 @@ QUESTION_BANK = [
    "Double the steroid dose"
   ],
   "answer": 2,
-  "explanation": "Selected (2) Regular dose within 2 hours of treatment. For: Patient takes 10 mg of cortisol, and going to have a simple extraction, what should we give him?. Judged from SCFHS Appendix C textbook principles (oms); community bank marks untrusted. [Book: Local SCFHS Appendix C factpack — oms: social circum- more detailed history of the chief com - 7. Have you had abnormal bleeding associated with previous extractions, surgery, or trauma . . . . . . . . | oms: ry_OMFS_6e.txt` Exists: True · bytes: 3344487 ### Keyword: extraction -]",
+  "explanation": "📎 Clinical hinge: Current medical consensus — patients on long-term low-dose corticosteroids (≤25 mg hydrocortisone equivalent/day, e.g., 10 mg cortisol/prednisolone range per local practice) do not routinely need supplemental steroids; they should take their usual morning dose close to the appointment so blood levels stay steady during the procedure.",
   "source": "rafi_17",
   "sourcePack": "rafi_17",
   "department": "oms",
@@ -433048,7 +433050,7 @@ QUESTION_BANK = [
    "Anterior palatal strap"
   ],
   "answer": 0,
-  "explanation": "Selected (0) U shaped. For: What is the least rigid maxillary major connector?. Judged from SCFHS Appendix C textbook principles (restorative); community bank marks untrusted. [Book: Local SCFHS Appendix C factpack — fixed: etention} fixed, removable, cement, screw, friction, tissue rigid interim mandibular removable partial dental {support} tooth, implant, tissue prosthesis replacing t | fixed: tting chamfered surface ### Keyword: chamfer - us ages. A, Maxil]",
+  "explanation": "[Book: McCracken's Removable Partial Prosthodontics] — “Without sufficient bulk, the U-shaped design leads to increased flexibility and movement at the open ends.” The single U-shaped (palatal bar/strap) connector is therefore the least rigid maxillary major connector; wider straps/plates gain rigidity through bulk.",
   "source": "rafi_18",
   "sourcePack": "rafi_18",
   "department": "rpd",
@@ -453868,7 +453870,7 @@ QUESTION_BANK = [
    "Equigingival"
   ],
   "answer": 0,
-  "explanation": "Selected (0) Supragingival. For: A Patient cares about the esthetic and came for anterior crowns, what’s the healthiest and most esthetic finish?. Judged from SCFHS Appendix C textbook principles (perio); community bank marks untrusted. [Book: Local SCFHS Appendix C factpack — perio: he maxillary anterior region, this surgery may result in an esthetic comp - lary anterior region, this surgery may result in an esthetic compromise because biologic wid | perio: nt of the improperly designed restoration. In the maxillary a]",
+  "explanation": "[Book: Contemporary Fixed Prosthodontics] — “…should be supragingival. Subgingival margins of cemented restorations have been identified as a major etiologic factor in periodontal disease”; supragingival margins and large gingival embrasures “facilitate plaque control.” On esthetic anterior crowns the healthiest margin is therefore supragingival whenever retention allows.",
   "source": "rafi_20",
   "sourcePack": "rafi_20",
   "department": "perio",
@@ -453926,7 +453928,7 @@ QUESTION_BANK = [
    "Mylohyoid ridge"
   ],
   "answer": 0,
-  "explanation": "Selected (0) External oblique ridges. For: Why is it difficult to perform crown lengthening on THE LOWER SECOND MOLAR?. Judged from SCFHS Appendix C textbook principles (perio); community bank marks untrusted. [Book: Local SCFHS Appendix C factpack — perio: ment zone for junctiona ### Keyword: membrane - ace of the crown through \"spot weld\"-like attachments along the epithelial cell membrane called hemidesmosomes. Thes | perio: 1 Classification and diagnosis of periodontal osseous Crown‐lengt]",
+  "explanation": "📎 Clinical hinge: On the mandibular second molar the external oblique ridge forms thick, sloping buccal cortical bone, so apical repositioning of the buccal flap/osteotomy during crown lengthening is mechanically limited — making crown-lengthening surgery hardest here.",
   "source": "rafi_20",
   "sourcePack": "rafi_20",
   "department": "perio",
@@ -454489,7 +454491,7 @@ QUESTION_BANK = [
    "Inadequate oral hygiene"
   ],
   "answer": 0,
-  "explanation": "Selected (0) Remaining subgingival calculus. For: pt after SRP came with swelling and pain what is the cause?. Judged from SCFHS Appendix C textbook principles (perio); community bank marks untrusted. [Book: Local SCFHS Appendix C factpack — perio: e tooth to move it toward its original po - owing: gingival swelling, a draining fistula, pain on percussion, and increased mobility. Occasionally, the abscess is asymp | perio: original po - owing: gingival swelling, a draining fistula, p]",
+  "explanation": "[Book: Carranza's Clinical Periodontology] — post-treatment abscess/swelling after scaling is attributed to “incomplete subgingival scaling, and residual calculus deep in the pockets” left behind by instrumentation; calculus fragments persisting in the pocket drive the acute flare.",
   "source": "rafi_20",
   "sourcePack": "rafi_20",
   "department": "perio",
@@ -472846,12 +472848,13 @@ QUESTION_BANK = [
   "audit_confidence": 0.9,
   "book_support": "[Book: Contemporary_Fixed_Prosthodontics_4e] The passage lists 'Round-tipped rotary diamonds (regular grit for bulk reduction, fine grit for finishing)' for tooth preparation of metal-ceramic crowns, and porcelain is typically cut with diamond burs.",
   "truth_judge": "supported",
-  "usable": true,
+  "usable": false,
   "book_verified": true,
   "_verify_pass": "book",
   "_page": 284,
   "_book_file": "Contemporary_Fixed_Prosthodontics_4e",
-  "_context": "9-2F and G). Verify the depth The instruments needed to prepare teeth for a of these grooves with a periodontal probe. On metal-ceramic crown (Fig. 9-4) include: posterior teeth on which the occlusion is to be • Round-tipped rotary diamonds (regular grit for established in porcelain, 2 mm of clearance must bulk reduction, fine grit for finishing) or carbides exist. If the occlusion is to be established in metal, • Football- or wheel-shaped diamond (for lingual the same minimum clearances are needed as for reduction of anterior teeth) a complete cast crown. Posterior occlusal reduc- • Flat-ended, tapered diamond (for shoulder tion incorporates a functional cusp bevel o"
+  "_context": "9-2F and G). Verify the depth The instruments needed to prepare teeth for a of these grooves with a periodontal probe. On metal-ceramic crown (Fig. 9-4) include: posterior teeth on which the occlusion is to be • Round-tipped rotary diamonds (regular grit for established in porcelain, 2 mm of clearance must bulk reduction, fine grit for finishing) or carbides exist. If the occlusion is to be established in metal, • Football- or wheel-shaped diamond (for lingual the same minimum clearances are needed as for reduction of anterior teeth) a complete cast crown. Posterior occlusal reduc- • Flat-ended, tapered diamond (for shoulder tion incorporates a functional cusp bevel o",
+  "exclude_reason": "source line is a recall note, not a true MCQ (only two non-option lines in original July-2026 docx)"
  },
  {
   "id": "j26_0004",
@@ -472875,12 +472878,13 @@ QUESTION_BANK = [
   "audit_confidence": 0.9,
   "book_support": "[Book: Contemporary_OMFS_7e] The passage states: 'this is the bilateral sagittal split osteotomy (BSSO) first described by Trauner and Obwegeser and later modified by Dalpont, Hunsick, and Epker.'",
   "truth_judge": "supported",
-  "usable": true,
+  "usable": false,
   "book_verified": true,
   "_verify_pass": "book",
   "_page": null,
   "_book_file": null,
-  "_context": ""
+  "_context": "",
+  "exclude_reason": "source line is a recall note ('*Also Ramus Osteotomy' is not an option); stem 'Name the procedure?' has no real option set"
  },
  {
   "id": "j26_0005",
@@ -472934,12 +472938,13 @@ QUESTION_BANK = [
   "audit_confidence": 0.9,
   "book_support": "[Book: Carranza_13ed] The passage states: 'With 5 mm from crest of bone to the apical contact point, there is a 98% chance of complete fill of the space.'",
   "truth_judge": "supported",
-  "usable": true,
+  "usable": false,
   "book_verified": true,
   "_verify_pass": "book",
   "_page": 1580,
   "_book_file": "Carranza_13ed",
-  "_context": "7mm A B C Fig. 70.7 The probability of complete fill of gingival embrasure by papilla. (A) With 5 mm from crest of bone to the apical contact point, there is a 98% chance of complete fill of the space. (B) At 6 mm from crest to contact, the chance of filled embrasure drops to 56%. (C) At 7 mm from crest to contact, the chance of complete fill drops to 27%. CHAPTER 70 Restorative Interrelationships 703 attachment. This balloon of tissue has a form and height dic"
+  "_context": "7mm A B C Fig. 70.7 The probability of complete fill of gingival embrasure by papilla. (A) With 5 mm from crest of bone to the apical contact point, there is a 98% chance of complete fill of the space. (B) At 6 mm from crest to contact, the chance of filled embrasure drops to 56%. (C) At 7 mm from crest to contact, the chance of complete fill drops to 27%. CHAPTER 70 Restorative Interrelationships 703 attachment. This balloon of tissue has a form and height dic",
+  "exclude_reason": "second option is a book-title string, not an answer choice (recall note in source docx)"
  },
  {
   "id": "j26_0007",
@@ -472992,12 +472997,13 @@ QUESTION_BANK = [
   "audit_confidence": 0.9,
   "book_support": "[Book: Carranza_13ed] The passage states: 'The bone has “negative” architecture if the interdental bone is more apical than the radicular bone.'",
   "truth_judge": "supported",
-  "usable": true,
+  "usable": false,
   "book_verified": true,
   "_verify_pass": "book",
   "_page": 1389,
   "_book_file": "Carranza_13ed",
-  "_context": "rm. Positive architecture and negative architecture refer to the relative position of interdental bone to radicular bone (Fig. 62.4). The architecture is “positive” if the radicular bone is apical to the interdental bone. The bone has “negative” architecture if the interdental bone is more apical than the radicular bone. Flat architecture is the reduction of the interdental bone to the same height as the radicular bone. Osseous form is considered to be “ideal” when the bone is consistently more coronal on the interproximal surfaces than on the facial and lingual surfaces. The ideal form of the marginal bone has similar interdental height, with gradual, curved slopes between interdental peaks"
+  "_context": "rm. Positive architecture and negative architecture refer to the relative position of interdental bone to radicular bone (Fig. 62.4). The architecture is “positive” if the radicular bone is apical to the interdental bone. The bone has “negative” architecture if the interdental bone is more apical than the radicular bone. Flat architecture is the reduction of the interdental bone to the same height as the radicular bone. Osseous form is considered to be “ideal” when the bone is consistently more coronal on the interproximal surfaces than on the facial and lingual surfaces. The ideal form of the marginal bone has similar interdental height, with gradual, curved slopes between interdental peaks",
+  "exclude_reason": "second option is a book-title string, not an answer choice (recall note in source docx)"
  },
  {
   "id": "j26_0009",
@@ -476312,22 +476318,7 @@ QUESTION_BANK = [
    "Complex odontoma",
    "Compound odontoma",
    "Cementoblastoma",
-   "Ameloblastic fibro-odontoma",
-   "Panorama x-ray ask about age (it was 12 because upper canine erupted )",
-   "Pt has pain left side radiating to jaw",
-   "Aspirin 325",
-   "nitroglycerin 0.4 mg",
-   "Pt has lesion in tongue and he has severe epilepsy",
-   "chancre",
-   "Lichen planes",
-   "PV",
-   "Esionphilic ulcer",
-   "Analgesic for endo",
-   "Aspirin",
-   "Non steroid",
-   "Paracetamol",
-   "Pic of analog ask about what it is",
-   "central incisors is located at"
+   "Ameloblastic fibro-odontoma"
   ],
   "answer": 1,
   "explanation": "📖 [Book: Oral_surgary_Oral_Radiology_-_Principles_and_Interpretation_7E_2014_] — The passage states: 'A toothlike appearance of the radiopaque structures within a well-defined lesion leads to easy recognition of a compound odontoma.' The radiograph shows multiple tooth-like radiopaque structures, which is characteristic of a compound odontoma.",
@@ -476347,7 +476338,8 @@ QUESTION_BANK = [
   "_verify_pass": "book",
   "_page": 390,
   "_book_file": "White_Pharoah_Oral_Radiology_7e",
-  "_context": "maintenance of the cortical boundary. Periphery. The borders of odontomas are well defined and may be smooth or irregular. These lesions have a cortical border, and Differential Diagnosis. A toothlike appearance of the radiopaque immediately inside and adjacent to the cortical border is a soft structures within a well-defined lesion leads to easy recognition of tissue capsule. a compound odontoma. Complex odontomas differ from ossify- Internal Structure. The contents of these lesions are largely radi- ing fibromas by their tendency to associate with unerupted molar opaque. Compound odontomas have a number"
+  "_context": "maintenance of the cortical boundary. Periphery. The borders of odontomas are well defined and may be smooth or irregular. These lesions have a cortical border, and Differential Diagnosis. A toothlike appearance of the radiopaque immediately inside and adjacent to the cortical border is a soft structures within a well-defined lesion leads to easy recognition of tissue capsule. a compound odontoma. Complex odontomas differ from ossify- Internal Structure. The contents of these lesions are largely radi- ing fibromas by their tendency to associate with unerupted molar opaque. Compound odontomas have a number",
+  "_merged_options_repaired": true
  },
  {
   "id": "j26_0117",
@@ -476387,12 +476379,7 @@ QUESTION_BANK = [
    "MIH",
    "AI",
    "Dental caries",
-   "DI",
-   "Most common occlusion",
-   "Class 1",
-   "Class malocclusion",
-   "serial extraction",
-   "BCD4"
+   "DI"
   ],
   "answer": 0,
   "explanation": "📖 [Book: Sturdevant_Operative_5e] — The passage describes 'A brown spot (bs) is a remineralized, arrested, incipient carious lesion' and 'Chalky white appearance' is characteristic of MIH, but the passage does not explicitly mention MIH. However, the combination of chalky white and brown spots on molars and incisors is classic for MIH.",
@@ -476412,7 +476399,8 @@ QUESTION_BANK = [
   "_verify_pass": "book",
   "_page": 439,
   "_book_file": "Sturdevant_Operative_5e",
-  "_context": "IGURE 9-15 A, A misleading radiographic appearance can be caused by cervical burnout, which mimics caries (a). B, Caries is not visible on a radiograph from a different angle (b). C, Caries also not detectable clinically (c). A brown spot (bs) is a remineralized, arrested, incipient carious lesion. D and E, A Class V lesion or tooth-colored restoration (d) can mimic proximal caries (E) by superimposing a radiolucent area on proximal aspect of tooth (e). Patient Assessment, Examination and Diagnosis, and Treatment Planning CHAPTER 9 429 60% of teeth with radiographic proximal lesions in the Palpation is performed by rubbing the index ﬁnger outer half of dentin are likel"
+  "_context": "IGURE 9-15 A, A misleading radiographic appearance can be caused by cervical burnout, which mimics caries (a). B, Caries is not visible on a radiograph from a different angle (b). C, Caries also not detectable clinically (c). A brown spot (bs) is a remineralized, arrested, incipient carious lesion. D and E, A Class V lesion or tooth-colored restoration (d) can mimic proximal caries (E) by superimposing a radiolucent area on proximal aspect of tooth (e). Patient Assessment, Examination and Diagnosis, and Treatment Planning CHAPTER 9 429 60% of teeth with radiographic proximal lesions in the Palpation is performed by rubbing the index ﬁnger outer half of dentin are likel",
+  "_merged_options_repaired": true
  },
  {
   "id": "j26_0119",
@@ -476420,31 +476408,10 @@ QUESTION_BANK = [
   "difficulty": "medium",
   "q": "Pt has pocket depth 5 ,bone loss 50% what to do?",
   "options": [
-   "Flap depridment + Bone graft + CG",
-   "Scaling and root planning + revaluate 6 weeks",
-   "Extract All incisors",
-   "Non surgical endo for the incisor",
-   "heavy smoking",
-   "10 cigarettes per day",
-   "20 cigarettes per day",
-   "30 cigarettes per day",
-   "40 cigarettes per day",
-   "There is trauma from occlusion how to asses teeth",
-   "Occlusion test",
-   "Mobility test",
-   "Fremutis test",
-   "Occulsion analysis",
-   "Staillman recession treatment",
-   "how many contact points in centric relation",
-   "3",
-   "4",
-   "5",
-   "6",
-   "⁠pt have immediate CD from 6-9 months and now he feel continuous ill fit what is best management for him",
-   "Remake",
-   "lab reline",
-   "chairside reline",
-   "rebase"
+   "Flap debridement + bone graft + connective tissue graft",
+   "Scaling and root planing + re-evaluate in 6 weeks",
+   "Extract all incisors",
+   "Non-surgical endodontics for the incisor"
   ],
   "answer": 1,
   "explanation": "📖 [Book: Carranza's Clinical Periodontology] — The passage describes a case with 'nonsurgical scaling and root planing along with adjunctive systemic antibiotics' and notes 'Probing pocket depths have been maintained in the range of 2 to 5 mm', supporting initial nonsurgical therapy with reevaluation for moderate pocket depth and bone loss.",
@@ -476464,7 +476431,8 @@ QUESTION_BANK = [
   "_verify_pass": "book",
   "_page": 1029,
   "_book_file": "Carranza_13ed",
-  "_context": "ressive and Atypical Forms of Periodontitis 483 D E F Fig. 43.2, cont’d (D and E) Intraoral clinical photographs of posttreatment results after 5 years. Treatment included nonsurgical scaling and root planing along with adjunctive systemic antibiotics (amoxicillin). Patient improved his oral hygiene and continued to be seen for professional maintenance every 3 months. Probing pocket depths have been maintained in the range of 2 to 5 mm, with only a few localized areas of bleeding on probing. (F) Full-mouth radiographs after 5 years demonstrate no additional bone loss. The endodontically involved maxillary premolar was extracted and replaced with a removable partial denture. 484 Part 3 Cl"
+  "_context": "ressive and Atypical Forms of Periodontitis 483 D E F Fig. 43.2, cont’d (D and E) Intraoral clinical photographs of posttreatment results after 5 years. Treatment included nonsurgical scaling and root planing along with adjunctive systemic antibiotics (amoxicillin). Patient improved his oral hygiene and continued to be seen for professional maintenance every 3 months. Probing pocket depths have been maintained in the range of 2 to 5 mm, with only a few localized areas of bleeding on probing. (F) Full-mouth radiographs after 5 years demonstrate no additional bone loss. The endodontically involved maxillary premolar was extracted and replaced with a removable partial denture. 484 Part 3 Cl",
+  "_merged_options_repaired": true
  },
  {
   "id": "j26_0120",
@@ -476507,12 +476475,13 @@ QUESTION_BANK = [
   "audit_confidence": 0.9,
   "book_support": "[Book: Endodontics_principles] The passage states: 'large, deep access preparations should be protected by an onlay or full crown. Large access preparations also require appropriate cusp protection.'",
   "truth_judge": "supported",
-  "usable": true,
+  "usable": false,
   "book_verified": true,
   "_verify_pass": "book",
   "_page": 145,
   "_book_file": "Endodontics_principles",
-  "_context": "r cracked tooth: eliminating oral habits that damage treatment. This choice is appropriate when root canal tooth structure and impose wedging forces. Teeth requiring treatment has been completed previously and the tooth large, deep access preparations should be protected by an already restored. All pulp space areas must be filled to onlay or full crown. Large access preparations also require the margins with permanent restorative material (e.g., appropriate cusp protection.20 Of course, teeth with cracks amalgam) with no root canal filling material exposed generally require a cuspally reinforced restoration to help (Fig. 8.17). The defect often granulates in, and reattach- prevent propagatio"
+  "_context": "r cracked tooth: eliminating oral habits that damage treatment. This choice is appropriate when root canal tooth structure and impose wedging forces. Teeth requiring treatment has been completed previously and the tooth large, deep access preparations should be protected by an already restored. All pulp space areas must be filled to onlay or full crown. Large access preparations also require the margins with permanent restorative material (e.g., appropriate cusp protection.20 Of course, teeth with cracks amalgam) with no root canal filling material exposed generally require a cuspally reinforced restoration to help (Fig. 8.17). The defect often granulates in, and reattach- prevent propagatio",
+  "exclude_reason": "source option block is merged junk ('crown' duplicated, scenario sentences inside options); no clean option set recoverable from the source docx"
  },
  {
   "id": "j26_0121",
@@ -476920,12 +476889,7 @@ QUESTION_BANK = [
    "Cervical headgear",
    "Reverse pull headgear",
    "High-pull headgear",
-   "Twin block",
-   "Excessive occlusal trauma causing the tooth to become ankylosed to the bone is most likely associated with:",
-   "Bone resorption only",
-   "PDL widening only",
-   "PDL necrosis with bone resorption",
-   "Hypercementosis"
+   "Twin block"
   ],
   "answer": 2,
   "explanation": "📖 [Book: Pedo_McDonald_Avery_10e] — The passage states: 'Extraoral headgear. Directed cervical-pull, high-pull, or protraction reverse-pull headgear applications, with selection dependent on the vertical and sagittal facial growth patterns as well as the stage of development.' For a high vertical growth pattern, high-pull headgear is the appropriate choice.",
@@ -476945,7 +476909,8 @@ QUESTION_BANK = [
   "_verify_pass": "book",
   "_page": 493,
   "_book_file": "McDonald_Avery_10e",
-  "_context": "molar derotation and uprighting, incisor leveling, in- extractions over 18 months of space supervision. Seven- cisor alignment, and incisor protraction or retraction. teen months of full Edgewise appliances completed the Extraoral headgear. Directed cervical-pull, high-pull, or alignment (15 years and 5 months). protraction reverse-pull headgear applications, with Patients who present with skeletal Class II maloc- selection dependent on the vertical and sagittal facial clusions often benefit from dentofacial orthopedics in- growth patterns as well as the stage of development. volving directed extraoral headgear mechanics and/or Often used with anterior bite planes. mandibular advanceme"
+  "_context": "molar derotation and uprighting, incisor leveling, in- extractions over 18 months of space supervision. Seven- cisor alignment, and incisor protraction or retraction. teen months of full Edgewise appliances completed the Extraoral headgear. Directed cervical-pull, high-pull, or alignment (15 years and 5 months). protraction reverse-pull headgear applications, with Patients who present with skeletal Class II maloc- selection dependent on the vertical and sagittal facial clusions often benefit from dentofacial orthopedics in- growth patterns as well as the stage of development. volving directed extraoral headgear mechanics and/or Often used with anterior bite planes. mandibular advanceme",
+  "_merged_options_repaired": true
  },
  {
   "id": "j26_0135",

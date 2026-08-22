@@ -1,3 +1,4 @@
+/** Flash Notes — garbage-stem quarantine pass */
 window.FLASH_NOTES = {
  "generated": "2026-08-02 (dedupe_flash)",
  "total": 8030,
@@ -117,7 +118,9 @@ window.FLASH_NOTES = {
       "kilo/stepfun/step-3.7-flash:free"
      ]
     },
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "bad oral hygiene pt suddenly appeared colour front of teeth what is it?",
@@ -663,7 +666,9 @@ window.FLASH_NOTES = {
     "_page": 35,
     "_book_file": "ref-md/TD_GUIDELINES_FOR_INFECTION_CONTROL-2003",
     "_context": "ently to compromise the learning experience (405,406). However, whether autoclave sterilization of extracted teeth affects dentinal structure to the point that the chemical and microchemical relationship between dental materials and the dentin would be affected for research purposes on dental materials is unknown (406). Use of teeth that do not contain amalgam is preferred in educational settings because they can be safely autoclaved (403,405). Extracted teeth containing amalgam restorations should not be heat-sterilized because of the potential health hazard from mercury vaporization and exposure. If extracted teeth containing amalgam restorations are to be used, immersion in 10% formalin s",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Gingival recession classification: (RT1, RT2, Class I, Class II.)",
@@ -2846,7 +2851,9 @@ window.FLASH_NOTES = {
     "_page": 245,
     "_book_file": "pedo/McDonald_Avery_Child_Adolescent",
     "_context": "ol 4, St. Louis: Mosby; 1970.) resin-based composites in traditional cavity preparations modified only by the beveling of enamel margins. Dilley et al.17 have demonstrated that the placement difference in the progression of the lesions treated with the and finishing of posterior composite restorations are sig- resin infiltrate or sealant; however, both the resin infiltrate nificantly more time consuming than those for comparable and sealant were significantly better at inhibiting lesion amalgam restorations. In addition to increasing the cost of progression than was the untreated control.22 Analysis of care, the extra time required for treatment may complicate future cl",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Cement color shade for veneer :",
@@ -5740,7 +5747,9 @@ window.FLASH_NOTES = {
     "_page": 288,
     "_book_file": "perio/Periodontics_MSI_PDF",
     "_context": "titis.8–10 However, on the basis of a meta-analysis, sites that exhibit bleeding on probing visit after visit during a maintenance program are approximately at a threefold greater risk for progression than sites that only occasionally bleed.11 The last major sign of gingival inflammation is the presence of GCF that oozes from the pocket orifice. The fluid is produced by the inflamed soft tissue wall of the pocket and may range from a clear serous liquid to highly viscous pus (i.e., purulent exudate). GCF is primarily composed of inflammatory cells (mostly polymorphonuclear neutrophilic leukocytes) and serum proteins. In addition, the fluid contains bacteria, tissue breakdown products, enzyme",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "table_fragment_no_question"
    },
    {
     "id": "fn_restorative_0182x1",
@@ -9027,7 +9036,9 @@ window.FLASH_NOTES = {
      "passage": "In some instances, crown lengthening may be necessary to create biologic width before performing root canal treatment.",
      "context": "In some instances, crown lengthening may be necessary to create biologic width before performing root canal treatment."
     },
-    "_verified_explanation": "Why: The passage explicitly states that crown lengthening may be necessary to create biologic width before performing root canal treatment, which aligns with the question's focus on crown lengthening."
+    "_verified_explanation": "Why: The passage explicitly states that crown lengthening may be necessary to create biologic width before performing root canal treatment, which aligns with the question's focus on crown lengthening.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "air polishing use? A- Subgingival biofilm B-Subragingival biofilm C- Enamel reminrlization",
@@ -9139,7 +9150,9 @@ window.FLASH_NOTES = {
      "passage": "Many oral ulcerative conditions can also present lesions elsewhere in the body (e.g., pemphigus, lichen planus, erythema multiforme, and sexually transmitted infections).",
      "context": "Many oral ulcerative conditions can also present lesions elsewhere in the body (e.g., pemphigus, lichen planus, erythema multiforme, and sexually transmitted infections)."
     },
-    "_verified_explanation": "Why: The passage lists erythema multiforme as one of the oral ulcerative conditions that can present lesions elsewhere in the body, matching the question's topic."
+    "_verified_explanation": "Why: The passage lists erythema multiforme as one of the oral ulcerative conditions that can present lesions elsewhere in the body, matching the question's topic.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Patient you give him immediate denture and he takes it off after 24 at night , in the morning he can't wear it why?",
@@ -9206,7 +9219,9 @@ window.FLASH_NOTES = {
      "passage": "Glass ionomer and resin-modified glass ionomer cements are adhesive materials useful for small buildups or to fill undercuts in prepared teeth.",
      "context": "Glass ionomer and resin-modified glass ionomer cements are adhesive materials useful for small buildups or to fill undercuts in prepared teeth."
     },
-    "_verified_explanation": "Why: Glass ionomer cements are adhesive materials specifically useful for filling undercuts in prepared teeth."
+    "_verified_explanation": "Why: Glass ionomer cements are adhesive materials specifically useful for filling undercuts in prepared teeth.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Patient after she removes the ortho she notices a white spot in her anterior teeth , what is your management ? 2023/09/17 نرقم نب دونعلا GUC Pt. When close his mouth mandibular shift 7mm doctor diagnose with masticatory muscle spasm which muscle in the cause ?! Temporal Medial pterygoid? Lateral pterygoid Masseter",
@@ -10138,7 +10153,9 @@ window.FLASH_NOTES = {
      "passage": "In some instances, crown lengthening may be necessary to create biologic width before performing root canal treatment.",
      "context": "In some instances, crown lengthening may be necessary to create biologic width before performing root canal treatment."
     },
-    "_verified_explanation": "Why: The passages state that crown lengthening may be necessary to create biologic width before root canal treatment."
+    "_verified_explanation": "Why: The passages state that crown lengthening may be necessary to create biologic width before root canal treatment.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "patient with increased lower facial height , abnormal increased ramus growth (I think they said backward downward direction) open bite with proclined incisors and supraerupted posteriors, that is the cause?",
@@ -11157,7 +11174,9 @@ window.FLASH_NOTES = {
     "_option_text": "Gold",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passages do not discuss gold properties, so the answer cannot be confirmed from the provided text."
+    "_verified_explanation": "Why (not book-verified): The passages do not discuss gold properties, so the answer cannot be confirmed from the provided text.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- metal",
@@ -12780,7 +12799,9 @@ window.FLASH_NOTES = {
     "_option_text": "severity of inflammation",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passages do not discuss severity of inflammation as a specific topic, so the answer cannot be confirmed from the provided text."
+    "_verified_explanation": "Why (not book-verified): The passages do not discuss severity of inflammation as a specific topic, so the answer cannot be confirmed from the provided text.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Pt fall on his chin what will fracture?",
@@ -13680,7 +13701,9 @@ window.FLASH_NOTES = {
      "passage": "The main causes of microbial introduction in the canal during treatment include remnants of dental plaque, calculus, or caries on the tooth crown",
      "context": "The main causes of microbial introduction in the canal during treatment include remnants of dental plaque, calculus, or caries on the tooth crown"
     },
-    "_verified_explanation": "Why: The passage explicitly lists remnants of dental plaque, calculus, or caries on the tooth crown as a main cause of microbial introduction into the canal during treatment."
+    "_verified_explanation": "Why: The passage explicitly lists remnants of dental plaque, calculus, or caries on the tooth crown as a main cause of microbial introduction into the canal during treatment.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "OH\nWhy while you do class 2 amalgam restoration on mesial surface of upper 1st\npremolar sometimes you end up with overhang ?",
@@ -13744,7 +13767,9 @@ window.FLASH_NOTES = {
      "passage": "No direct passage provided; based on standard restorative principles, poor wedge adaptation causes overhangs.",
      "context": "No direct passage provided; based on standard restorative principles, poor wedge adaptation causes overhangs."
     },
-    "_verified_explanation": "Why: Poor wedge adaptation leads to gingival overhang and improper contour, causing overhanging margins."
+    "_verified_explanation": "Why: Poor wedge adaptation leads to gingival overhang and improper contour, causing overhanging margins.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Present of mesial concavity in cervical third",
@@ -13777,7 +13802,9 @@ window.FLASH_NOTES = {
      "passage": "The canals are calcified, the root is narrow, and there is a hint of a significant mesial concavity in the coronal third (C). The tooth is also crowned, which increases access complexity. This is considered a high-risk case.",
      "context": "The canals are calcified, the root is narrow, and there is a hint of a significant mesial concavity in the coronal third (C). The tooth is also crowned, which increases access complexity. This is considered a high-risk case."
     },
-    "_verified_explanation": "Why: The passage describes a case with a mesial concavity in the coronal third, calcified canals, and a narrow root, which is explicitly labeled as a high-risk case."
+    "_verified_explanation": "Why: The passage describes a case with a mesial concavity in the coronal third, calcified canals, and a narrow root, which is explicitly labeled as a high-risk case.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Hard to place the wedge due to root proximity with canine",
@@ -13810,7 +13837,9 @@ window.FLASH_NOTES = {
      "passage": "Hard to place the wedge due to root proximity with canine",
      "context": "Hard to place the wedge due to root proximity with canine"
     },
-    "_verified_explanation": "Why: When root proximity with the canine makes wedge placement difficult from the usual direction, placing the wedge from the buccal direction can help achieve proper adaptation."
+    "_verified_explanation": "Why: When root proximity with the canine makes wedge placement difficult from the usual direction, placing the wedge from the buccal direction can help achieve proper adaptation.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "There is usual space between canine and 1st premolar\nCase scenario of patients with night sweating and sputum with blood what to\nsuspect?",
@@ -13899,7 +13928,9 @@ window.FLASH_NOTES = {
      "passage": "Endodontic management in a patient with vitamin D-resistant Rickets",
      "context": "Endodontic management in a patient with vitamin D-resistant Rickets"
     },
-    "_verified_explanation": "Why: The passage mentions vitamin D-resistant rickets, indicating that vitamin D is relevant to dental and endodontic considerations."
+    "_verified_explanation": "Why: The passage mentions vitamin D-resistant rickets, indicating that vitamin D is relevant to dental and endodontic considerations.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Antifungal",
@@ -13932,7 +13963,9 @@ window.FLASH_NOTES = {
      "passage": "Antifungals including fluconazole and nystatin",
      "context": "Antifungals including fluconazole and nystatin"
     },
-    "_verified_explanation": "Why: The passage lists antifungals including fluconazole and nystatin as compatible with pregnancy and breast-feeding."
+    "_verified_explanation": "Why: The passage lists antifungals including fluconazole and nystatin as compatible with pregnancy and breast-feeding.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Restrict wear the denture to day-time only",
@@ -13959,7 +13992,9 @@ window.FLASH_NOTES = {
     "_option_text": "Restrict wear the denture to day-time only",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): Restricting denture wear to daytime only is a common recommendation to allow the oral mucosa to recover from pressure and inflammation, though the provided passages do not directly address this. The question is unsolved as no passage supports any specific answer."
+    "_verified_explanation": "Why (not book-verified): Restricting denture wear to daytime only is a common recommendation to allow the oral mucosa to recover from pressure and inflammation, though the provided passages do not directly address this. The question is unsolved as no passage supports any specific answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "A patient with unilateral sharp pain preceded by a rash. What is the diagnosis?",
@@ -14033,7 +14068,9 @@ window.FLASH_NOTES = {
      "passage": "the procedure is safe and has a high success rate if properly performed",
      "context": "the procedure is safe and has a high success rate if properly performed"
     },
-    "_verified_explanation": "Why: The passage states that root canal treatment is safe and has a high success rate if properly performed."
+    "_verified_explanation": "Why: The passage states that root canal treatment is safe and has a high success rate if properly performed.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- medium",
@@ -14066,7 +14103,9 @@ window.FLASH_NOTES = {
      "passage": "The probe tip will be coated with a conducive medium such as toothpaste and placed in contact with the tooth surface.",
      "context": "The probe tip will be coated with a conducive medium such as toothpaste and placed in contact with the tooth surface."
     },
-    "_verified_explanation": "Why: The passage states the probe tip is coated with a conductive medium such as toothpaste."
+    "_verified_explanation": "Why: The passage states the probe tip is coated with a conductive medium such as toothpaste.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "low\nPic of SCC in ventral of tongue, after surgery what adjunctive tx. most likely followed\nafter surgery ?",
@@ -14124,7 +14163,9 @@ window.FLASH_NOTES = {
      "passage": "Identify the effects of diabetes mellitus, smoking, genetic predisposition, irradiation, sickle cell disease, and viral infections on the pathogenesis of endodontic pathosis and endodontic treatment outcomes.",
      "context": "Identify the effects of diabetes mellitus, smoking, genetic predisposition, irradiation, sickle cell disease, and viral infections on the pathogenesis of endodontic pathosis and endodontic treatment outcomes."
     },
-    "_verified_explanation": "Why: The passage lists irradiation as a factor affecting endodontic pathosis and treatment outcomes, supporting this answer."
+    "_verified_explanation": "Why: The passage lists irradiation as a factor affecting endodontic pathosis and treatment outcomes, supporting this answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "ABX\nPic of attrition in all occlusal surfaces of all teeth",
@@ -14188,7 +14229,9 @@ window.FLASH_NOTES = {
      "passage": "The rate can increase if the odontoblasts are stimulated by toxin molecules penetrating the dentin.",
      "context": "The rate can increase if the odontoblasts are stimulated by toxin molecules penetrating the dentin."
     },
-    "_verified_explanation": "Why: The passage states that the rate of dentin deposition can increase if odontoblasts are stimulated by toxin molecules penetrating the dentin."
+    "_verified_explanation": "Why: The passage states that the rate of dentin deposition can increase if odontoblasts are stimulated by toxin molecules penetrating the dentin.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Tooth to tooth contact\nWhat material to prepare the veneer ?",
@@ -14252,7 +14295,9 @@ window.FLASH_NOTES = {
      "passage": "silanization, hydrofluoric etching, and sandblasting (with 30 to 50 μm Al2O3) do not modify the mechanical properties.",
      "context": "silanization, hydrofluoric etching, and sandblasting (with 30 to 50 μm Al2O3) do not modify the mechanical properties."
     },
-    "_verified_explanation": "Why: The passage mentions hydrofluoric etching as a pretreatment, and standard protocol is 4-10% for 10 seconds."
+    "_verified_explanation": "Why: The passage mentions hydrofluoric etching as a pretreatment, and standard protocol is 4-10% for 10 seconds.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "hydrofluoric acid 50%, 10 sec\nHow to increase retention while using GIC ?",
@@ -14349,7 +14394,9 @@ window.FLASH_NOTES = {
      "passage": "Light debridement and irrigation with 1.25% sodium hypochlorite (NaOCl) are performed.",
      "context": "Light debridement and irrigation with 1.25% sodium hypochlorite (NaOCl) are performed."
     },
-    "_verified_explanation": "Why: The passage describes irrigation with sodium hypochlorite during endodontic procedures, supporting its use as an irrigant."
+    "_verified_explanation": "Why: The passage describes irrigation with sodium hypochlorite during endodontic procedures, supporting its use as an irrigant.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Bismuth oxide",
@@ -14478,7 +14525,9 @@ window.FLASH_NOTES = {
      "passage": "No direct passage provided; based on standard lever mechanics.",
      "context": "No direct passage provided; based on standard lever mechanics."
     },
-    "_verified_explanation": "Why: A class I lever has the fulcrum between the effort and load, as per standard biomechanics."
+    "_verified_explanation": "Why: A class I lever has the fulcrum between the effort and load, as per standard biomechanics.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- level 2 lever",
@@ -14506,7 +14555,9 @@ window.FLASH_NOTES = {
     "_option_text": "level 2 lever",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question asks about a level 2 lever. The provided passages do not contain information about levers, so this question is unsolved."
+    "_verified_explanation": "Why (not book-verified): The question asks about a level 2 lever. The provided passages do not contain information about levers, so this question is unsolved.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "level 3 lever\nMetal tray how you will disinfict ?\nBrush the metal tray\nManual",
@@ -14581,7 +14632,9 @@ window.FLASH_NOTES = {
      "passage": "under hot water (correct)",
      "context": "under hot water (correct)"
     },
-    "_verified_explanation": "Why: The passage indicates that washing under hot water is the correct method for metal tray disinfection."
+    "_verified_explanation": "Why: The passage indicates that washing under hot water is the correct method for metal tray disinfection.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "pt with gingival recession on one tooth caused by habit of nail scratching, tx after she stops habit?",
@@ -15907,7 +15960,9 @@ window.FLASH_NOTES = {
      "passage": "Anemia Diabetes Head/Neck injuries Immunodeficiency Migraine Ulcers",
      "context": "Anemia Diabetes Head/Neck injuries Immunodeficiency Migraine Ulcers"
     },
-    "_verified_explanation": "Why: The passage lists anemia as a medical condition in the health history form, and the question asks about iron deficiency anemia, which is a type of anemia."
+    "_verified_explanation": "Why: The passage lists anemia as a medical condition in the health history form, and the question asks about iron deficiency anemia, which is a type of anemia.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- pernicious anemia",
@@ -15941,7 +15996,9 @@ window.FLASH_NOTES = {
      "passage": "Patients with iron deficiency anemia, pernicious anemia, and leukemia frequently exhibit paresthesia of the oral soft tissues.",
      "context": "Patients with iron deficiency anemia, pernicious anemia, and leukemia frequently exhibit paresthesia of the oral soft tissues."
     },
-    "_verified_explanation": "Why: The passage states that patients with pernicious anemia frequently exhibit paresthesia of the oral soft tissues."
+    "_verified_explanation": "Why: The passage states that patients with pernicious anemia frequently exhibit paresthesia of the oral soft tissues.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "pt with HBA1C 9%, severe periodontitis, 82% BOP, what to do?",
@@ -20012,7 +20069,9 @@ window.FLASH_NOTES = {
     "_book_explanation": {
      "book": "Hand book of local anesthesia 6th",
      "passage": "The passage does not directly define dual-cured resins, but the term 'dual-cured' conventionally means both chemical and light activation. No passage contradicts this."
-    }
+    },
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "id": "fn_j26_0337",
@@ -20462,7 +20521,9 @@ window.FLASH_NOTES = {
     },
     "_page": 427,
     "_book_file": "Fixed/Contemporary_Fixed_Prosthodontics_5e",
-    "_context": "sue surface form (TSF). B • Impression tray • Mixing spatula Step-by-Step Procedure 1. After shade selection and tooth preparation, obtain FIGURE 15-29 ■ A, After trimming, the indirect tissue surface an impression tray for an irreversible hydrocolloid form (TSF) is fitted with the external surface form (ESF) to verify impression. A sextant impression is adequate only accurate passive indexing. B, With this accomplished, the forms are separated, and the TSF is completely coated with a resin- if it extends one tooth beyond the abutments,"
+    "_context": "sue surface form (TSF). B • Impression tray • Mixing spatula Step-by-Step Procedure 1. After shade selection and tooth preparation, obtain FIGURE 15-29 ■ A, After trimming, the indirect tissue surface an impression tray for an irreversible hydrocolloid form (TSF) is fitted with the external surface form (ESF) to verify impression. A sextant impression is adequate only accurate passive indexing. B, With this accomplished, the forms are separated, and the TSF is completely coated with a resin- if it extends one tooth beyond the abutments,",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "id": "fn_j26_0421",
@@ -23478,7 +23539,9 @@ window.FLASH_NOTES = {
      "passage": "modulus of resilience: the work or energy required to stress a cubic inch of material (in one direction only) from zero up to the proportional limit of the material",
      "context": "modulus of resilience: the work or energy required to stress a cubic inch of material (in one direction only) from zero up to the proportional limit of the material"
     },
-    "_verified_explanation": "Why: The passage defines modulus of resilience as the work or energy required to stress a material from zero up to the proportional limit."
+    "_verified_explanation": "Why: The passage defines modulus of resilience as the work or energy required to stress a material from zero up to the proportional limit.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Pt having small amalgam restoration in #16 , need to be changed what you will choose ?",
@@ -29513,7 +29576,9 @@ window.FLASH_NOTES = {
      "passage": "Dental pulp stem cells are recruited to the site of injury following a gradient of chemotactic agents released by resident immune cells and from the damaged dentin. The reparative dentin formed by these cells is distinct from the primary, secondary, and reactionary dentin that has been lost.",
      "context": "Dental pulp stem cells are recruited to the site of injury following a gradient of chemotactic agents released by resident immune cells and from the damaged dentin. The reparative dentin formed by these cells is distinct from the primary, secondary, and reactionary dentin that has been lost."
     },
-    "_verified_explanation": "Why: The passage discusses dental pulp stem cells participating in reparative dentinogenesis, which is the process of forming tertiary dentin in response to injury."
+    "_verified_explanation": "Why: The passage discusses dental pulp stem cells participating in reparative dentinogenesis, which is the process of forming tertiary dentin in response to injury.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "table_fragment_no_question"
    },
    {
     "stem": "true combined\n\npatient with “shifted teeth” and father had the\nsame thing before and removed I think he means\ntumor or cyst there was OPG showing large cyst in\nthe symph area\na-Ectodermal\n\nb-Nevoid Basal cell",
@@ -33422,7 +33487,9 @@ window.FLASH_NOTES = {
     "_page": 681,
     "_book_file": "Resto/Sturdevant_Operative_5e",
     "_context": "onded pontics. indicated by the nature of the accident; the patient’s Considerations for this type of treatment include the physician should be contacted regarding this need. following: (1) Periodontally involved teeth warrant Appointments are made for follow-up examinations on extraction, (2) teeth have fractured roots, (3) teeth are a weekly basis for the ﬁrst month. The patient is alerted unsuccessfully reimplanted after avulsion, and (4) root to the symptoms of pulpal necrosis and advised to call canal treatment has been unsuccessful. However lost, if a problem develops. If a root canal therapy is required, the immediate replacement of a natural anterior tooth it is better accomplished w",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Combination\nLong cast about Pt having pain and deep pocket (see\nimage) there is peri apical RL and asking the Tx?",
@@ -33624,7 +33691,9 @@ window.FLASH_NOTES = {
     "_option_text": "faulty material",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): No passage retrieved; cannot determine the answer."
+    "_verified_explanation": "Why (not book-verified): No passage retrieved; cannot determine the answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- difficulty in isolation because of the surgery",
@@ -33652,7 +33721,9 @@ window.FLASH_NOTES = {
     "_option_text": "difficulty in isolation because of the surgery",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passages do not directly address this; however, the stem is incomplete and lacks context, making it unsolvable."
+    "_verified_explanation": "Why (not book-verified): The passages do not directly address this; however, the stem is incomplete and lacks context, making it unsolvable.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "mobility 1.5mm what mobility grade. grade lll",
@@ -34467,7 +34538,9 @@ window.FLASH_NOTES = {
     "_option_text": "Increase treatment duration",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passages do not provide specific information about treatment duration; the stem is incomplete and lacks context."
+    "_verified_explanation": "Why (not book-verified): The passages do not provide specific information about treatment duration; the stem is incomplete and lacks context.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Slower tooth movement than healthy",
@@ -34495,7 +34568,9 @@ window.FLASH_NOTES = {
     "_option_text": "Slower tooth movement than healthy",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): No passage retrieved; cannot determine the answer."
+    "_verified_explanation": "Why (not book-verified): No passage retrieved; cannot determine the answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Hard to a achieve good intercuspation with opposing\nWhat appliance for max expansion is tissue borne",
@@ -34560,7 +34635,9 @@ window.FLASH_NOTES = {
      "passage": "13.4.4 The quadhelix appliance",
      "context": "13.4.4 The quadhelix appliance"
     },
-    "_verified_explanation": "Why: The passages discuss the quadhelix appliance in the context of crossbite correction, supporting the correct answer."
+    "_verified_explanation": "Why: The passages discuss the quadhelix appliance in the context of crossbite correction, supporting the correct answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Haas",
@@ -34594,7 +34671,9 @@ window.FLASH_NOTES = {
      "passage": "Shojaei and Haas385 concluded that some evidence for exposure to the latex allergen exists, although no causal study has been published.",
      "context": "Shojaei and Haas385 concluded that some evidence for exposure to the latex allergen exists, although no causal study has been published."
     },
-    "_verified_explanation": "Why: The passage discusses latex allergen exposure and references Shojaei and Haas, who concluded evidence for exposure to the latex allergen exists."
+    "_verified_explanation": "Why: The passage discusses latex allergen exposure and references Shojaei and Haas, who concluded evidence for exposure to the latex allergen exists.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- border tissue ( something like that)",
@@ -34628,7 +34707,9 @@ window.FLASH_NOTES = {
      "passage": "No passage directly addresses border tissue.",
      "context": "No passage directly addresses border tissue."
     },
-    "_verified_explanation": "Why: The term 'border tissue' refers to the tissue at the periphery of a denture or surgical site, which is the correct answer."
+    "_verified_explanation": "Why: The term 'border tissue' refers to the tissue at the periphery of a denture or surgical site, which is the correct answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- No tx",
@@ -34656,7 +34737,9 @@ window.FLASH_NOTES = {
     "_option_text": "No tx",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): No passage was retrieved, and the stem is incomplete, making it unsolvable."
+    "_verified_explanation": "Why (not book-verified): No passage was retrieved, and the stem is incomplete, making it unsolvable.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "14 y/o patient have avulsion tooth while playing in bicycle, was managed\nproperly and ABX was prescribed, what is the ABX",
@@ -34743,7 +34826,9 @@ window.FLASH_NOTES = {
      "passage": "the regimen is 2 g of amoxicillin given 30 to 60 minutes before surgery for adults.",
      "context": "the regimen is 2 g of amoxicillin given 30 to 60 minutes before surgery for adults."
     },
-    "_verified_explanation": "Why: Amoxicillin is the standard prophylactic antibiotic for infective endocarditis, given 2 g 30-60 minutes before the procedure."
+    "_verified_explanation": "Why: Amoxicillin is the standard prophylactic antibiotic for infective endocarditis, given 2 g 30-60 minutes before the procedure.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Tetracycline",
@@ -34777,7 +34862,9 @@ window.FLASH_NOTES = {
      "passage": "Antiseptics such as quaternary ammonium compounds (EDTAC) or tetracycline antibiotics (MTAD) have been added to EDTA and citric acid irrigants, respectively, to increase their antimicrobial capacity.",
      "context": "Antiseptics such as quaternary ammonium compounds (EDTAC) or tetracycline antibiotics (MTAD) have been added to EDTA and citric acid irrigants, respectively, to increase their antimicrobial capacity."
     },
-    "_verified_explanation": "Why: The passages mention tetracycline antibiotics (MTAD) as an additive to irrigants, supporting the correct answer."
+    "_verified_explanation": "Why: The passages mention tetracycline antibiotics (MTAD) as an additive to irrigants, supporting the correct answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Metronidazole\nPatient have #24 pain with percussion, tooth was restored, and pulp test was\ndone\nCold: negative\nEPT: positive\nPA was provided and there is recurrent caries and PARL ( there was canal\nobliteration in coronal third)\nWhat your pulpal Dx?",
@@ -34843,7 +34930,9 @@ window.FLASH_NOTES = {
      "passage": "If a mature, nontraumatized tooth does not respond to both cold testing and electric pulp testing, then the pulp should be considered necrotic.",
      "context": "If a mature, nontraumatized tooth does not respond to both cold testing and electric pulp testing, then the pulp should be considered necrotic."
     },
-    "_verified_explanation": "Why: A tooth that does not respond to cold or electric pulp testing is considered to have a necrotic pulp."
+    "_verified_explanation": "Why: A tooth that does not respond to cold or electric pulp testing is considered to have a necrotic pulp.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Reversible pulpitis",
@@ -34877,7 +34966,9 @@ window.FLASH_NOTES = {
      "passage": "This may tip the balance from a reversible to an irreversible pulpitis; it also highlights the importance of a holistic approach to management of dental caries.",
      "context": "This may tip the balance from a reversible to an irreversible pulpitis; it also highlights the importance of a holistic approach to management of dental caries."
     },
-    "_verified_explanation": "Why: The passages discuss pulp vitality maintenance and reversible pulpitis concepts, supporting the correct answer."
+    "_verified_explanation": "Why: The passages discuss pulp vitality maintenance and reversible pulpitis concepts, supporting the correct answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Irreversible pulpitis",
@@ -34911,7 +35002,9 @@ window.FLASH_NOTES = {
      "passage": "The most popular method of performing cold testing is with a refrigerant spray. It is readily available, easy to use, and provides test results that are reproducible, reliable, and equivalent to that of frozen CO2.",
      "context": "The most popular method of performing cold testing is with a refrigerant spray. It is readily available, easy to use, and provides test results that are reproducible, reliable, and equivalent to that of frozen CO2."
     },
-    "_verified_explanation": "Why: The passage states that the most popular method of performing cold testing is with a refrigerant spray, which provides reproducible and reliable results."
+    "_verified_explanation": "Why: The passage states that the most popular method of performing cold testing is with a refrigerant spray, which provides reproducible and reliable results.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Normal\nتانب لايع اننيب كرتشملا فلملا ةلئسا نع ةرابع لولأا نشكسلا\nريثك راركت\nWhat is the complication with this Cingulum rest on the canine ? ( they\nprovide a pic from textbook )",
@@ -34985,7 +35078,9 @@ window.FLASH_NOTES = {
      "passage": "Increase incsogingivaly thickness",
      "context": "Increase incsogingivaly thickness"
     },
-    "_verified_explanation": "Why: A cingulum rest on the canine that is too thick incisogingivally can cause interference; the complication is increased incisogingival thickness."
+    "_verified_explanation": "Why: A cingulum rest on the canine that is too thick incisogingivally can cause interference; the complication is increased incisogingival thickness.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Increase buccolingual thickness",
@@ -35019,7 +35114,9 @@ window.FLASH_NOTES = {
      "passage": "Examination of the width of the mesiobuccal root in both the axial and coronal views (buccolingually) showed that the mesiobuccal root possibly had two canals and that only a single canal was treated during the initial endodontic therapy.",
      "context": "Examination of the width of the mesiobuccal root in both the axial and coronal views (buccolingually) showed that the mesiobuccal root possibly had two canals and that only a single canal was treated during the initial endodontic therapy."
     },
-    "_verified_explanation": "Why: The passage describes that examination of the width of the mesiobuccal root in the buccolingual direction revealed the possibility of two canals, indicating that increased buccolingual thickness is a radiographic sign of a possible second canal."
+    "_verified_explanation": "Why: The passage describes that examination of the width of the mesiobuccal root in the buccolingual direction revealed the possibility of two canals, indicating that increased buccolingual thickness is a radiographic sign of a possible second canal.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- You should put it more incsial",
@@ -35053,7 +35150,9 @@ window.FLASH_NOTES = {
      "passage": "No passage retrieved",
      "context": "No passage retrieved"
     },
-    "_verified_explanation": "Why: The student's answer 'You should put it more incisal' is the correct option, as the cingulum rest on the canine should be placed more incisally to avoid improper location."
+    "_verified_explanation": "Why: The student's answer 'You should put it more incisal' is the correct option, as the cingulum rest on the canine should be placed more incisally to avoid improper location.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Improper location of rest\nPatient undergoing perio surgery, you asked the assistant for blade no. 11,\nwhat the safe way ?",
@@ -35112,7 +35211,9 @@ window.FLASH_NOTES = {
      "passage": "Root canal treatment outcomes of these procedures. In this edition we’ve included is a well-tested procedure that has provided pain relief and has restored function and esthetics to patients.",
      "context": "Root canal treatment outcomes of these procedures. In this edition we’ve included is a well-tested procedure that has provided pain relief and has restored function and esthetics to patients."
     },
-    "_verified_explanation": "Why: The passage states that root canal treatment 'has restored function and esthetics to patients,' which is the primary goal of the procedure."
+    "_verified_explanation": "Why: The passage states that root canal treatment 'has restored function and esthetics to patients,' which is the primary goal of the procedure.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Put it in working zone and inform you",
@@ -35146,7 +35247,9 @@ window.FLASH_NOTES = {
      "passage": "No passage retrieved",
      "context": "No passage retrieved"
     },
-    "_verified_explanation": "Why: The student's answer 'Put it in working zone and inform you' is correct, as the safe way to pass a blade is to place it in the working zone and inform the surgeon."
+    "_verified_explanation": "Why: The student's answer 'Put it in working zone and inform you' is correct, as the safe way to pass a blade is to place it in the working zone and inform the surgeon.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Put it in neutral zone and inform you\nScenario about implant 2 stage, parallel\nChoose which pic, رركم\nScenario about 8 health providers got infection with MRSA",
@@ -35258,7 +35361,9 @@ window.FLASH_NOTES = {
      "passage": "No passage retrieved",
      "context": "No passage retrieved"
     },
-    "_verified_explanation": "Why: The student's answer '45-90' is correct, as scaling and root planing requires the blade to be angled between 45 and 90 degrees for effective calculus removal."
+    "_verified_explanation": "Why: The student's answer '45-90' is correct, as scaling and root planing requires the blade to be angled between 45 and 90 degrees for effective calculus removal.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- 90-100",
@@ -35286,7 +35391,9 @@ window.FLASH_NOTES = {
     "_option_text": "90-100",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): No passage was retrieved for this item, so no answer can be supported."
+    "_verified_explanation": "Why (not book-verified): No passage was retrieved for this item, so no answer can be supported.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "100-120\nAndrew gold criteria of ideal occlusion",
@@ -35345,7 +35452,9 @@ window.FLASH_NOTES = {
      "passage": "No passage retrieved",
      "context": "No passage retrieved"
     },
-    "_verified_explanation": "Why: The student's answer 'not present rotation of teeth' is correct, as Andrew's criteria for ideal occlusion include absence of tooth rotation."
+    "_verified_explanation": "Why: The student's answer 'not present rotation of teeth' is correct, as Andrew's criteria for ideal occlusion include absence of tooth rotation.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Flat occlusal plane",
@@ -35373,7 +35482,9 @@ window.FLASH_NOTES = {
     "_option_text": "Flat occlusal plane",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): No passage addresses occlusal plane characteristics; the provided passages discuss pulp anatomy and periodontal ligament pain localization."
+    "_verified_explanation": "Why (not book-verified): No passage addresses occlusal plane characteristics; the provided passages discuss pulp anatomy and periodontal ligament pain localization.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- All Upper and lower crown mesially inclined",
@@ -35407,7 +35518,9 @@ window.FLASH_NOTES = {
      "passage": "All Upper and lower crown mesially inclined - All upper and lower lingually inclined (if the question is except!!)",
      "context": "All Upper and lower crown mesially inclined - All upper and lower lingually inclined (if the question is except!!)"
     },
-    "_verified_explanation": "Why: The passage from the TD_SEP-1 document lists 'All Upper and lower crown mesially inclined' as a characteristic of ideal occlusion, which matches the question stem."
+    "_verified_explanation": "Why: The passage from the TD_SEP-1 document lists 'All Upper and lower crown mesially inclined' as a characteristic of ideal occlusion, which matches the question stem.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "All upper and lower lingually inclined (if the question is except!!)\n9 Y/O patient and you will do space analysis",
@@ -35460,7 +35573,9 @@ window.FLASH_NOTES = {
     "_option_text": "Radiographic",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): No passage provides a specific answer to the incomplete question; the passages only mention radiographic interpretation as a chapter topic."
+    "_verified_explanation": "Why (not book-verified): No passage provides a specific answer to the incomplete question; the passages only mention radiographic interpretation as a chapter topic.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Tanaka jonsen",
@@ -35494,7 +35609,9 @@ window.FLASH_NOTES = {
      "passage": "9 Y/O patient and you will do space analysis - Radiographic - Tanaka jonsen - Golden ratio - Proportion table",
      "context": "9 Y/O patient and you will do space analysis - Radiographic - Tanaka jonsen - Golden ratio - Proportion table"
     },
-    "_verified_explanation": "Why: The passage from TD_SEP-1 explicitly lists 'Tanaka jonsen' as a method for space analysis in a 9-year-old patient, which is the correct answer."
+    "_verified_explanation": "Why: The passage from TD_SEP-1 explicitly lists 'Tanaka jonsen' as a method for space analysis in a 9-year-old patient, which is the correct answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Golden ratio",
@@ -35528,7 +35645,9 @@ window.FLASH_NOTES = {
      "passage": "No passage retrieved",
      "context": "No passage retrieved"
     },
-    "_verified_explanation": "Why: The student's answer 'Golden ratio' is correct, as it is a method used in dental aesthetics and space analysis."
+    "_verified_explanation": "Why: The student's answer 'Golden ratio' is correct, as it is a method used in dental aesthetics and space analysis.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Proportion table\nDiabetic patient with palatal perforation through nasal, what highly you\nsuspect?",
@@ -35587,7 +35706,9 @@ window.FLASH_NOTES = {
      "passage": "Granulomatous inflammation is characterized by the presence of activated macrophages with modified epithelioid cells in diseases such as tuberculosis, leprosy, syphilis, cryptococcosis, sarcoidosis, rheumatic fever, and foreign body granuloma.",
      "context": "Granulomatous inflammation is characterized by the presence of activated macrophages with modified epithelioid cells in diseases such as tuberculosis, leprosy, syphilis, cryptococcosis, sarcoidosis, rheumatic fever, and foreign body granuloma."
     },
-    "_verified_explanation": "Why: The passage lists syphilis among diseases characterized by granulomatous inflammation with modified epithelioid cells, which is the correct answer for the question about palatal perforation through nasal."
+    "_verified_explanation": "Why: The passage lists syphilis among diseases characterized by granulomatous inflammation with modified epithelioid cells, which is the correct answer for the question about palatal perforation through nasal.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "TB\n-\n36 extracted, sever tilted mesially #37, you will replace with FDP",
@@ -35652,7 +35773,9 @@ window.FLASH_NOTES = {
      "passage": "In the developing tooth, cells of the inner and outer dental epithelia meet at a point known as the cervical loop. This delineates the end of the anatomic crown and the site where root formation begins.",
      "context": "In the developing tooth, cells of the inner and outer dental epithelia meet at a point known as the cervical loop. This delineates the end of the anatomic crown and the site where root formation begins."
     },
-    "_verified_explanation": "Why: The passage states that cells of the inner and outer dental epithelia meet at a point known as the cervical loop, which delineates the end of the anatomic crown and the site where root formation begins."
+    "_verified_explanation": "Why: The passage states that cells of the inner and outer dental epithelia meet at a point known as the cervical loop, which delineates the end of the anatomic crown and the site where root formation begins.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Casted",
@@ -35686,7 +35809,9 @@ window.FLASH_NOTES = {
      "passage": "36 extracted, sever tilted mesially #37, you will replace with FDP - loop - Casted - Rigis - Non- rigid",
      "context": "36 extracted, sever tilted mesially #37, you will replace with FDP - loop - Casted - Rigis - Non- rigid"
     },
-    "_verified_explanation": "Why: The passage from TD_SEP-1 lists 'Casted' as one of the options for replacing a severely tilted molar with a fixed dental prosthesis, which is the correct answer."
+    "_verified_explanation": "Why: The passage from TD_SEP-1 lists 'Casted' as one of the options for replacing a severely tilted molar with a fixed dental prosthesis, which is the correct answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Rigis",
@@ -35720,7 +35845,9 @@ window.FLASH_NOTES = {
      "passage": "No passage retrieved",
      "context": "No passage retrieved"
     },
-    "_verified_explanation": "Why: The student's answer 'Rigis' (rigid) is correct, as a rigid connector is used for a fixed dental prosthesis replacing a severely tilted tooth."
+    "_verified_explanation": "Why: The student's answer 'Rigis' (rigid) is correct, as a rigid connector is used for a fixed dental prosthesis replacing a severely tilted tooth.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "under hot water (correct)\nCases about vrf",
@@ -36886,7 +37013,9 @@ window.FLASH_NOTES = {
      "passage": "Uncomplicated single-rooted, vital teeth may be planned for a single-visit approach.",
      "context": "Uncomplicated single-rooted, vital teeth may be planned for a single-visit approach."
     },
-    "_verified_explanation": "Why: The passage explicitly states that uncomplicated single-rooted vital teeth may be planned for a single-visit approach."
+    "_verified_explanation": "Why: The passage explicitly states that uncomplicated single-rooted vital teeth may be planned for a single-visit approach.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Patient came to the clinic with ANUG what you will do at the first visit",
@@ -37009,7 +37138,9 @@ window.FLASH_NOTES = {
     "_repair_source": "parse_saud_fixed",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question stem is incomplete and does not contain a meaningful clinical question. The passages provided are about medical history forms and author lists, which do not relate to any specific MCQ."
+    "_verified_explanation": "Why (not book-verified): The question stem is incomplete and does not contain a meaningful clinical question. The passages provided are about medical history forms and author lists, which do not relate to any specific MCQ.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Fair",
@@ -37043,7 +37174,9 @@ window.FLASH_NOTES = {
      "passage": "How would you rate your health? Please circle one. Excellent Good Fair Poor",
      "context": "How would you rate your health? Please circle one. Excellent Good Fair Poor"
     },
-    "_verified_explanation": "Why: The passage shows a health questionnaire where patients rate their health as Excellent, Good, Fair, or Poor, and 'Fair' is one of the options."
+    "_verified_explanation": "Why: The passage shows a health questionnaire where patients rate their health as Excellent, Good, Fair, or Poor, and 'Fair' is one of the options.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "- Questionable",
@@ -37392,7 +37525,9 @@ window.FLASH_NOTES = {
      "passage": "Chemomechanical caries removal is a noninvasive technique that eliminates infected dentin via a chemical agent by means of dissolution. Instead of drilling, a chemical agent such as Carisolv (MediTeam Dental, Göteberg, Sweden) or Papacarie is applied to the carious dentin.",
      "context": "Chemomechanical caries removal is a noninvasive technique that eliminates infected dentin via a chemical agent by means of dissolution. Instead of drilling, a chemical agent such as Carisolv (MediTeam Dental, Göteberg, Sweden) or Papacarie is applied to the carious dentin."
     },
-    "_verified_explanation": "Why: Carisolv is explicitly described as a chemical agent used in chemomechanical caries removal."
+    "_verified_explanation": "Why: Carisolv is explicitly described as a chemical agent used in chemomechanical caries removal.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Acid aitch",
@@ -37426,7 +37561,9 @@ window.FLASH_NOTES = {
      "passage": "32- chemo-mechanical caries removal - Carisolv - Acid aitch - Air abrasion",
      "context": "32- chemo-mechanical caries removal - Carisolv - Acid aitch - Air abrasion"
     },
-    "_verified_explanation": "Why: The passage lists 'Acid aitch' (likely a typo for 'Acid etch') as one of the chemo-mechanical caries removal methods. The question asks about 'Acid aitch' which corresponds to acid etch."
+    "_verified_explanation": "Why: The passage lists 'Acid aitch' (likely a typo for 'Acid etch') as one of the chemo-mechanical caries removal methods. The question asks about 'Acid aitch' which corresponds to acid etch.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "What is the part that connect the fixture of implant with the crown",
@@ -37497,7 +37634,9 @@ window.FLASH_NOTES = {
     "_option_text": "healing abutment",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passage does not provide specific information about healing abutments, so the question cannot be answered based on the provided text."
+    "_verified_explanation": "Why (not book-verified): The passage does not provide specific information about healing abutments, so the question cannot be answered based on the provided text.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Impression coping",
@@ -38761,7 +38900,9 @@ window.FLASH_NOTES = {
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passage discusses the use of local anesthetics without vasoconstrictors for asthmatic patients, but does not mention benzodiazepines for anxious asthmatic patients, so the answer cannot be confirmed."
+    "_verified_explanation": "Why (not book-verified): The passage discusses the use of local anesthetics without vasoconstrictors for asthmatic patients, but does not mention benzodiazepines for anxious asthmatic patients, so the answer cannot be confirmed.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Down syndrome",
@@ -38787,7 +38928,9 @@ window.FLASH_NOTES = {
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The student's answer of congenital heart disease is a well-known association with Down syndrome, though the provided passages do not directly address this."
+    "_verified_explanation": "Why (not book-verified): The student's answer of congenital heart disease is a well-known association with Down syndrome, though the provided passages do not directly address this.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "not giving flouride varnish",
@@ -38934,7 +39077,9 @@ window.FLASH_NOTES = {
      "passage": "We still use files that can inadvertently separate. The resolution may be in a complete transformation in metallurgy or even the implementation of other non-metal cutting materials.",
      "context": "We still use files that can inadvertently separate. The resolution may be in a complete transformation in metallurgy or even the implementation of other non-metal cutting materials."
     },
-    "_verified_explanation": "Why: The passage mentions 'files that can inadvertently separate' and 'from hand files to motor-driven files', indicating that K-files are a type of endodontic file. The question asks about 'k file' which is a common endodontic instrument."
+    "_verified_explanation": "Why: The passage mentions 'files that can inadvertently separate' and 'from hand files to motor-driven files', indicating that K-files are a type of endodontic file. The question asks about 'k file' which is a common endodontic instrument.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "how to manage ledging",
@@ -39005,7 +39150,9 @@ window.FLASH_NOTES = {
     "_repair_source": "parse_saud_fixed",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passage mentions files that can inadvertently separate, but does not specifically describe the K-file, so the answer cannot be determined from the provided text."
+    "_verified_explanation": "Why (not book-verified): The passage mentions files that can inadvertently separate, but does not specifically describe the K-file, so the answer cannot be determined from the provided text.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "k file",
@@ -39033,7 +39180,9 @@ window.FLASH_NOTES = {
     "_repair_source": "parse_saud_fixed",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): K-files are standard stainless steel hand files used in root canal instrumentation, though the provided passages do not specifically define them."
+    "_verified_explanation": "Why (not book-verified): K-files are standard stainless steel hand files used in root canal instrumentation, though the provided passages do not specifically define them.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "- Rotary large file",
@@ -39350,7 +39499,9 @@ window.FLASH_NOTES = {
      "passage": "The presence of bilateral swellings may be a normal finding for any given patient; however, it may also be a sign of a systemic disease or the consequence of a developmental event.",
      "context": "The presence of bilateral swellings may be a normal finding for any given patient; however, it may also be a sign of a systemic disease or the consequence of a developmental event."
     },
-    "_verified_explanation": "Why: The passage states that bilateral swellings may be a normal finding for any given patient, though it can also indicate systemic disease or developmental events."
+    "_verified_explanation": "Why: The passage states that bilateral swellings may be a normal finding for any given patient, though it can also indicate systemic disease or developmental events.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- mutually protected",
@@ -39585,7 +39736,9 @@ window.FLASH_NOTES = {
      "passage": "Primary afferent fibers of nontrigeminal origin such as those derived from vagus, glossopharyngeal, facial, and cervical spinal ganglia have been shown to converge and synapse onto trigeminal projection neurons located as far caudal as spinal level C4.",
      "context": "Primary afferent fibers of nontrigeminal origin such as those derived from vagus, glossopharyngeal, facial, and cervical spinal ganglia have been shown to converge and synapse onto trigeminal projection neurons located as far caudal as spinal level C4."
     },
-    "_verified_explanation": "Why: The passage states that primary afferent fibers of nontrigeminal origin such as those derived from vagus, glossopharyngeal, facial, and cervical spinal ganglia converge onto trigeminal projection neurons."
+    "_verified_explanation": "Why: The passage states that primary afferent fibers of nontrigeminal origin such as those derived from vagus, glossopharyngeal, facial, and cervical spinal ganglia converge onto trigeminal projection neurons.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Buccal",
@@ -39619,7 +39772,9 @@ window.FLASH_NOTES = {
      "passage": "FIG. 1-6 Buccal space swelling associated with an acute periradicular abscess from the mandibular left second molar.",
      "context": "FIG. 1-6 Buccal space swelling associated with an acute periradicular abscess from the mandibular left second molar."
     },
-    "_verified_explanation": "Why: Buccal refers to the surface of a tooth facing the cheek, as illustrated by the buccal space swelling described in the passage."
+    "_verified_explanation": "Why: Buccal refers to the surface of a tooth facing the cheek, as illustrated by the buccal space swelling described in the passage.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "pt with tb and the test was negative three times, how would treat him?",
@@ -40492,7 +40647,9 @@ window.FLASH_NOTES = {
     "_repair_source": "parse_saud_fixed",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question asks about HSV, which is a common abbreviation for herpes simplex virus. However, no passage was retrieved for this item, so the answer cannot be confirmed from the provided passages."
+    "_verified_explanation": "Why (not book-verified): The question asks about HSV, which is a common abbreviation for herpes simplex virus. However, no passage was retrieved for this item, so the answer cannot be confirmed from the provided passages.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "- 4 weeks",
@@ -40820,7 +40977,9 @@ window.FLASH_NOTES = {
      "passage": "FIG. 1-6 Buccal space swelling associated with an acute periradicular abscess from the mandibular left second molar.",
      "context": "FIG. 1-6 Buccal space swelling associated with an acute periradicular abscess from the mandibular left second molar."
     },
-    "_verified_explanation": "Why: The passage explicitly describes buccal space swelling associated with an acute periradicular abscess from the mandibular left second molar, as shown in Figure 1-6."
+    "_verified_explanation": "Why: The passage explicitly describes buccal space swelling associated with an acute periradicular abscess from the mandibular left second molar, as shown in Figure 1-6.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "alginate impression was disinfectant with Naocl for 10 mins then left uncovered for 1 hr, what would you see?",
@@ -41231,7 +41390,9 @@ window.FLASH_NOTES = {
       "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
       "kilo/nvidia/nemotron-3-super-120b-a12b:free"
      ]
-    }
+    },
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "- Advocator",
@@ -41788,7 +41949,9 @@ window.FLASH_NOTES = {
     "_page": 1288,
     "_book_file": "perio/Carranza_13ed",
     "_context": "ee eFig. 56A.2). This opens the embrasure beneath To answer this question, the clinician must know how far to erupt the tooth contact, provides additional bone support, and enhances the root. If a tooth fracture extends to the level of the bone, it the patient’s access to the interproximal region for hygiene. This must be erupted 4 mm. The first 2.5 mm moves the fracture approach generally improves the periodontal health of this area. margin far enough away from the bone to prevent a biologic If orthodontic treatment will be used to separate the roots, this width problem. The other 1.5 mm provides the proper amount plan must be understood before bracket placement. It is advantageous of ferru",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "penicillin V",
@@ -41822,7 +41985,9 @@ window.FLASH_NOTES = {
     "_page": 1,
     "_book_file": "ref-md/Pedo_Pediatric Dentistry INFANCY THROUGH ADOLESCENCE",
     "_context": "ures. and moisture, would be the restorative materials of choice if the tooth cannot be kept dry. Many CARs do not require anesthesia because of the minimal tooth preparation; however, soft tissue anesthesia may be necessary for comfort in placing the rubber dam. act as a pit and issure sealant. The entire surface is then What Simonsen52 called the type 1 CAR (PRR) is merely polymerized. a sealant application with minimal preparation or widening The type 3 CAR (PRR) technique is similar to the type 2 of the pits and issures with a very small round bur (1 or CAR, except that a sealant layer forms an integral part of the 4 1 ) or Fissurotomy bur to remove the areas of questionable, restoration",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "dentogenesis imperfecta",
@@ -41856,7 +42021,9 @@ window.FLASH_NOTES = {
     "_page": 886,
     "_book_file": "perio/Periodontics_MSI_PDF",
     "_context": "dge of the envelope at the most apical position of the two entry points. The needle enters the facial soft tissue of the envelope, directed in a mesial and coronal direction into the tunnel and extending out of the sulcular opening of that tooth (Fig. 21-77, C). The needle is then inserted through the distoapical corner of the graft (Fig. 21-77, D) from the facial to the lingual, 1 mm from the graft edge. Then the needle is inserted through the distocoronal corner of the graft from the lingual side to the facial side. The donor tissue must be dense enough to allow pulling on the graft with some resistance without pulling the suture out of the donor tissue. The needle is then introduced back ",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "take consent from the Pt.",
@@ -41957,7 +42124,9 @@ window.FLASH_NOTES = {
      "passage": "electronic standards in dentistry: (1) interoperability, (2) electronic health record design, (3) clinical workstation architecture, and (4) electronic dissemination of dental information.",
      "context": "electronic standards in dentistry: (1) interoperability, (2) electronic health record design, (3) clinical workstation architecture, and (4) electronic dissemination of dental information."
     },
-    "_verified_explanation": "Why: The passage lists 'clinical workstation architecture' as one of the electronic standards in dentistry, directly matching the question term 'flat architecture' (likely a typo for 'clinical workstation architecture')."
+    "_verified_explanation": "Why: The passage lists 'clinical workstation architecture' as one of the electronic standards in dentistry, directly matching the question term 'flat architecture' (likely a typo for 'clinical workstation architecture').",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "odontoma",
@@ -41990,7 +42159,9 @@ window.FLASH_NOTES = {
      "passage": "Odontogenic Tumors A B Odontoma Ameloblastoma Malignant ameloblastoma Ameloblastic fibroma Calcifying epithelial odontogenic tumor Ameloblastic fibrosarcoma Ameloblastic fibro-odontoma",
      "context": "Odontogenic Tumors A B Odontoma Ameloblastoma Malignant ameloblastoma Ameloblastic fibroma Calcifying epithelial odontogenic tumor Ameloblastic fibrosarcoma Ameloblastic fibro-odontoma"
     },
-    "_verified_explanation": "Why: The passage lists odontoma under the treatment modality of enucleation and/or curettage for odontogenic tumors."
+    "_verified_explanation": "Why: The passage lists odontoma under the treatment modality of enucleation and/or curettage for odontogenic tumors.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Pt. consent confidentiality wasn’t in the options",
@@ -42058,7 +42229,9 @@ window.FLASH_NOTES = {
     "_page": 795,
     "_book_file": "Fixed/Contemporary_Fixed_Prosthodontics_5e",
     "_context": "E,F G H FIGURE 30-12 ■ Cementation with C&B-Metabond resin cement. A, The brush-on separating film is applied to the prosthesis, the proximal teeth, in order to prevent the adhesive from bonding where it is not wanted. B, The recommended dentin conditioner is applied for 10 seconds and rinsed off, and the tooth is dried. C and D, Four drops of base and one drop of catalyst are mixed for each crown. After the preparation and interior of the crown are wetted with this mixed liquid (E), the powder is added (F). G, The casting is painted, and the crown is seated. H, Excess resin is removed after it ha",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "what is the most flexible file?",
@@ -42790,7 +42963,9 @@ window.FLASH_NOTES = {
     "_option_text": "see him as last patient",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): No passage retrieved supports any answer for scheduling the patient as the last patient; the question lacks context."
+    "_verified_explanation": "Why (not book-verified): No passage retrieved supports any answer for scheduling the patient as the last patient; the question lacks context.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- wear ventilation mask",
@@ -42824,7 +42999,9 @@ window.FLASH_NOTES = {
      "passage": "Anxiety may or may not differ in the degree of physiologic and emotional arousal compared with fear, but the source of the threat is typically ambiguous, ill defined, and not immediate.",
      "context": "Anxiety may or may not differ in the degree of physiologic and emotional arousal compared with fear, but the source of the threat is typically ambiguous, ill defined, and not immediate."
     },
-    "_verified_explanation": "Why: The passage describes anxiety as a response to an ambiguous, ill-defined threat, such as imagining a dental appointment, which fits the context of wearing a ventilation mask."
+    "_verified_explanation": "Why: The passage describes anxiety as a response to an ambiguous, ill-defined threat, such as imagining a dental appointment, which fits the context of wearing a ventilation mask.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- treat him is isolation room",
@@ -43391,7 +43568,9 @@ window.FLASH_NOTES = {
      "passage": "In the absence of swelling, trephination is the surgical perforation of the alveolar cortical plate to release, from between the cortical plates, the accumulated inflammatory and infective tissue exudate that causes pain.",
      "context": "In the absence of swelling, trephination is the surgical perforation of the alveolar cortical plate to release, from between the cortical plates, the accumulated inflammatory and infective tissue exudate that causes pain."
     },
-    "_verified_explanation": "Why: The passage defines trephination as the surgical perforation of the alveolar cortical plate to release accumulated inflammatory exudate causing pain."
+    "_verified_explanation": "Why: The passage defines trephination as the surgical perforation of the alveolar cortical plate to release accumulated inflammatory exudate causing pain.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "what is the most flexible file?",
@@ -43530,7 +43709,9 @@ window.FLASH_NOTES = {
     "_option_text": "Extraoral incision RCT and AB",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): No passage retrieved supports any answer for extraoral incision with RCT and AB; the question is incomplete."
+    "_verified_explanation": "Why (not book-verified): No passage retrieved supports any answer for extraoral incision with RCT and AB; the question is incomplete.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "intraoral incision RCT and AB\nQ2 veneer is debonened from the tooth with resin on the surface of the veneer and the tooth is cleaned. What is\nthe cause?",
@@ -43589,7 +43770,9 @@ window.FLASH_NOTES = {
      "passage": "Most studies have found that the 60-mg dose of codeine (the amount in two tablets of Tylenol with codeine no. 3) produces significantly more analgesia than placebo, although it often produces less analgesia than either aspirin 650 mg or acetaminophen 600 mg. In general, patients taking only 30 mg of codeine report about as much analgesia as those taking a placebo.",
      "context": "Most studies have found that the 60-mg dose of codeine (the amount in two tablets of Tylenol with codeine no. 3) produces significantly more analgesia than placebo, although it often produces less analgesia than either aspirin 650 mg or acetaminophen 600 mg. In general, patients taking only 30 mg of codeine report about as much analgesia as those taking a placebo."
     },
-    "_verified_explanation": "Why: The passage states that the 60-mg dose of codeine produces significantly more analgesia than placebo, while 30 mg is similar to placebo."
+    "_verified_explanation": "Why: The passage states that the 60-mg dose of codeine produces significantly more analgesia than placebo, while 30 mg is similar to placebo.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Dentin substructure\nQ3 8 years old child got trauma 1 month ago he went to the dentist, and he managed it, the pt came to you for\ncheckup what did the previous dentist did?",
@@ -43654,7 +43837,9 @@ window.FLASH_NOTES = {
      "passage": "from pulp removal to pulpal regeneration.",
      "context": "from pulp removal to pulpal regeneration."
     },
-    "_verified_explanation": "Why: The passage explicitly states the evolution of endodontics includes a shift 'from pulp removal to pulpal regeneration,' making regeneration the correct answer."
+    "_verified_explanation": "Why: The passage explicitly states the evolution of endodontics includes a shift 'from pulp removal to pulpal regeneration,' making regeneration the correct answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Apexogensis",
@@ -43688,7 +43873,9 @@ window.FLASH_NOTES = {
      "passage": "Efficacy of revascularization to induce apexification/apexogensis in infected, nonvital, immature teeth: a pilot clinical study",
      "context": "Efficacy of revascularization to induce apexification/apexogensis in infected, nonvital, immature teeth: a pilot clinical study"
     },
-    "_verified_explanation": "Why: The passage references a study on revascularization to induce apexification/apexogenesis in infected, nonvital, immature teeth, which is the correct context for the term."
+    "_verified_explanation": "Why: The passage references a study on revascularization to induce apexification/apexogenesis in infected, nonvital, immature teeth, which is the correct context for the term.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Pulpotomy\nQ4 pt did bleaching and used whitening toothpaste clinical like this",
@@ -43773,7 +43960,9 @@ window.FLASH_NOTES = {
      "passage": "Supplemental corticosteroids for dental patients with adrenal insufficiency: reconsideration of the problem",
      "context": "Supplemental corticosteroids for dental patients with adrenal insufficiency: reconsideration of the problem"
     },
-    "_verified_explanation": "Why: The passage mentions supplemental corticosteroids for dental patients with adrenal insufficiency."
+    "_verified_explanation": "Why: The passage mentions supplemental corticosteroids for dental patients with adrenal insufficiency.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Case referred for retreatment needs a post, PA shows void in mid canal, what is the reason for referral:",
@@ -44306,7 +44495,9 @@ window.FLASH_NOTES = {
      "passage": "A fractured tooth may be treated by a simple restoration, endodontics (nonsurgical or surgical), or even extraction, depending on the extent and orientation of the fracture.",
      "context": "A fractured tooth may be treated by a simple restoration, endodontics (nonsurgical or surgical), or even extraction, depending on the extent and orientation of the fracture."
     },
-    "_verified_explanation": "Why: The passage states a fractured tooth may be treated by restoration, endodontics, or extraction depending on extent; for a poor prognosis, extraction is the indicated option."
+    "_verified_explanation": "Why: The passage states a fractured tooth may be treated by restoration, endodontics, or extraction depending on extent; for a poor prognosis, extraction is the indicated option.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Lesion appears as cyst and need surgical excision",
@@ -44340,7 +44531,9 @@ window.FLASH_NOTES = {
      "passage": "Hard-Tissue Healing: Excisional Dentoalveolar Wound Root-End Resection",
      "context": "Hard-Tissue Healing: Excisional Dentoalveolar Wound Root-End Resection"
     },
-    "_verified_explanation": "Why: The passage discusses excisional dentoalveolar wound healing and root-end resection, which are surgical procedures; a lesion appearing as a cyst requiring surgical excision aligns with surgical enucleation."
+    "_verified_explanation": "Why: The passage discusses excisional dentoalveolar wound healing and root-end resection, which are surgical procedures; a lesion appearing as a cyst requiring surgical excision aligns with surgical enucleation.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Endo retreatment and re-eval for perio\nPregnant 5 month come with pain on tooth 16, I forget the details but I choose RCT\nPt came with insufficient free way space .. 1 mm , what is the preferred management",
@@ -44406,7 +44599,9 @@ window.FLASH_NOTES = {
      "passage": "As we advance into the years ahead, we will incorporate even more refined and accurate improvements in pulpal diagnosis, canal cleaning and disinfection, canal obturation, and surgical enhancements.",
      "context": "As we advance into the years ahead, we will incorporate even more refined and accurate improvements in pulpal diagnosis, canal cleaning and disinfection, canal obturation, and surgical enhancements."
     },
-    "_verified_explanation": "Why: The passage discusses future improvements in pulpal diagnosis and canal cleaning, not selective grinding; selective grinding is not mentioned in the provided text, so no passage supports it."
+    "_verified_explanation": "Why: The passage discusses future improvements in pulpal diagnosis and canal cleaning, not selective grinding; selective grinding is not mentioned in the provided text, so no passage supports it.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Reduce from the inner surface",
@@ -44434,7 +44629,9 @@ window.FLASH_NOTES = {
     "_option_text": "Reduce from the inner surface",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passage does not provide specific information about reducing from the inner surface; the question is incomplete and cannot be answered."
+    "_verified_explanation": "Why (not book-verified): The passage does not provide specific information about reducing from the inner surface; the question is incomplete and cannot be answered.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Remake\nPt. Came with 3x2 mm erythmatous area on the ridge with distal end of RPD .. how to find out the\nproblem",
@@ -44499,7 +44696,9 @@ window.FLASH_NOTES = {
      "passage": "Pt. Came with 3x2 mm erythmatous area on the ridge with distal end of RPD .. how to find out the problem ● PIP in the infaligo surface of RPD",
      "context": "Pt. Came with 3x2 mm erythmatous area on the ridge with distal end of RPD .. how to find out the problem ● PIP in the infaligo surface of RPD"
     },
-    "_verified_explanation": "Why: The passage indicates that PIP (pressure indicator paste) on the intaglio surface of the RPD is used to identify areas of irritation."
+    "_verified_explanation": "Why: The passage indicates that PIP (pressure indicator paste) on the intaglio surface of the RPD is used to identify areas of irritation.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Soft liner",
@@ -44533,7 +44732,9 @@ window.FLASH_NOTES = {
      "passage": "ZnOE has many uses in dentistry. It has a long history as a temporary filling material, cavity liner, cement base, and luting agent for provisional cementation of castings.",
      "context": "ZnOE has many uses in dentistry. It has a long history as a temporary filling material, cavity liner, cement base, and luting agent for provisional cementation of castings."
     },
-    "_verified_explanation": "Why: The passage mentions ZnOE as a cavity liner and temporary filling material, which is a soft liner in dental context."
+    "_verified_explanation": "Why: The passage mentions ZnOE as a cavity liner and temporary filling material, which is a soft liner in dental context.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Heavy PVS on the inner surface\nU will ansasthise #36 , What is the safe method to perform LA without needle stick?",
@@ -44598,7 +44799,9 @@ window.FLASH_NOTES = {
      "passage": "Patients cannot differentiate between 25-, 27-, and 30-gauge needles during...",
      "context": "Patients cannot differentiate between 25-, 27-, and 30-gauge needles during..."
     },
-    "_verified_explanation": "Why: The passage discusses needle gauges and insertion but does not mention 'short needle' as a specific topic; no passage supports any answer about short needles."
+    "_verified_explanation": "Why: The passage discusses needle gauges and insertion but does not mention 'short needle' as a specific topic; no passage supports any answer about short needles.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Retract with mirror to improve visibility",
@@ -44632,7 +44835,9 @@ window.FLASH_NOTES = {
      "passage": "Whenever possible, restorations should be removed before endodontic treatment.",
      "context": "Whenever possible, restorations should be removed before endodontic treatment."
     },
-    "_verified_explanation": "Why: The passage states that restorations should be removed before endodontic treatment to improve visibility and access, which is the correct management."
+    "_verified_explanation": "Why: The passage states that restorations should be removed before endodontic treatment to improve visibility and access, which is the correct management.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Retract with your finger for better control\nYou will work in surgery.. ur gloved hand in the operation area and u cant see them, and u will work\non area with blood and sharps and anatomical space etc. to much details",
@@ -44750,7 +44955,9 @@ window.FLASH_NOTES = {
      "passage": "Severe hemophilia B, what should u give him before the extraction by one hour ● Desmopressen ● Factor VIII ● Factor IX ● Blood transfusion",
      "context": "Severe hemophilia B, what should u give him before the extraction by one hour ● Desmopressen ● Factor VIII ● Factor IX ● Blood transfusion"
     },
-    "_verified_explanation": "Why: The passage indicates that for severe hemophilia B, Factor IX should be given before extraction."
+    "_verified_explanation": "Why: The passage indicates that for severe hemophilia B, Factor IX should be given before extraction.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Factor VIII",
@@ -44837,7 +45044,9 @@ window.FLASH_NOTES = {
      "passage": "Powder: Zinc oxide (body), 42 parts; staybelite resin (setting time and consistency), 27 parts; bismuth subcarbonate, 15 parts; barium sulfate (radiopacity), 15 parts; sodium borate, 1 part.",
      "context": "Powder: Zinc oxide (body), 42 parts; staybelite resin (setting time and consistency), 27 parts; bismuth subcarbonate, 15 parts; barium sulfate (radiopacity), 15 parts; sodium borate, 1 part."
     },
-    "_verified_explanation": "Why: The passage lists bismuth subcarbonate as a component of the sealer powder, which is the correct answer for the ingredient."
+    "_verified_explanation": "Why: The passage lists bismuth subcarbonate as a component of the sealer powder, which is the correct answer for the ingredient.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Pic of enlarged lesion on the palate related to #24 and asking what can exaggerate the lesion?\nDiabetes\n( I forgot the other options)",
@@ -47714,7 +47923,9 @@ window.FLASH_NOTES = {
      "passage": "Sealers are resorbable when exposed to tissues and tissue fluids.",
      "context": "Sealers are resorbable when exposed to tissues and tissue fluids."
     },
-    "_verified_explanation": "Why: The passage states that sealers are resorbable when exposed to tissues and tissue fluids, and the student's lead identifies ZOE as the canal filling material associated with this property."
+    "_verified_explanation": "Why: The passage states that sealers are resorbable when exposed to tissues and tissue fluids, and the student's lead identifies ZOE as the canal filling material associated with this property.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "intrusion splint",
@@ -47735,7 +47946,9 @@ window.FLASH_NOTES = {
     "id": "fn_rafi16_5848545062",
     "_verification_verdict": "needs_review",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passage discusses intrusion of foreign bodies into the maxillary sinus, not dental splinting. No passage provides information about an intrusion splint."
+    "_verified_explanation": "Why (not book-verified): The passage discusses intrusion of foreign bodies into the maxillary sinus, not dental splinting. No passage provides information about an intrusion splint.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "75 years old came to restore broken MO restoration, probing depth was normal, cold test no response, EPT positive",
@@ -53300,7 +53513,9 @@ window.FLASH_NOTES = {
     "_page": 118,
     "_book_file": "perio/Carranza_13ed",
     "_context": "gingival diseases or periodontitis Necrotizing Periodontal Diseases Mucogingival deformities and conditions around teeth Necrotizing ulcerative gingivitis (NUG) Mucogingival deformities and conditions on edentulous ridges Necrotizing ulcerative periodontitis (NUP) Occlusal trauma a These diseases may occur on a periodontium with no attachment loss or on a periodontium with attachment loss that is stable and not progressing. b Chronic periodontitis can",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Before perio surgery: Need to check thickness of keratinized gingiva ,Instrument used:",
@@ -53550,7 +53765,9 @@ window.FLASH_NOTES = {
     "_page": 1093,
     "_book_file": "perio/Carranza_13ed",
     "_context": "sease management, it is unlikely that periodontal positive improvements in performance can be used for reinforce- disease will progress.80 ment. The plaque biofilm control record and the bleeding points index are simple indices that are useful for patient education and Instruction and Demonstration motivation. Patients can reduce the incidence of plaque biofilm and gingivitis with repeated instruction and encouragement much more effectively Plaque Biofilm Control Record (O’Leary Index) than with self-acquired oral hygiene habits.53,111 However, instruc- Have the patient use a disclosing solution or tablet a",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Hardest tooth to scaling ?",
@@ -57251,7 +57468,9 @@ window.FLASH_NOTES = {
      "passage": "Having a psychologist or psychiatrist at the malodor consultation can be especially helpful for such patients.",
      "context": "Having a psychologist or psychiatrist at the malodor consultation can be especially helpful for such patients."
     },
-    "_verified_explanation": "Why: The patient referred from a psychiatrist likely has halitophobia, a condition where the patient has illusional breath malodor."
+    "_verified_explanation": "Why: The patient referred from a psychiatrist likely has halitophobia, a condition where the patient has illusional breath malodor.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "table_fragment_no_question"
    },
    {
     "stem": "- clasp\nconnecter-\n|     |     |     |     |     | -Base | (in | CD) |     |     |\n| --- | --- | --- | --- | --- | ----- | --- | --- | --- | --- |\n|     |     |     |     |     |       |     |     |     |     |\n🚨\n| patient |           | , did | direct |           | composite |        | veneers | with    | microfiler |\n| ------- | --------- | ----- | ------ | --------- | --------- | ------ | ------",
@@ -57281,7 +57500,9 @@ window.FLASH_NOTES = {
      "passage": "patient , did direct composite veneers with microfiler composite you will re do it what type of composite u will use ? nanao filers",
      "context": "patient , did direct composite veneers with microfiler composite you will re do it what type of composite u will use ? nanao filers"
     },
-    "_verified_explanation": "Why: When redoing direct composite veneers previously done with microfillers, nanofillers are the appropriate choice for improved polishability and strength."
+    "_verified_explanation": "Why: When redoing direct composite veneers previously done with microfillers, nanofillers are the appropriate choice for improved polishability and strength.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "table_fragment_no_question"
    },
    {
     "stem": "✅\nmucogingical deformity buccal recession -\nmucogingival deformity interproximal recession -\nmouth wash to control bleeding\n🚨\ntranexemic acid used with?\nstroke -\n✅\nhemophelia -\ndvt -\natrial valve something -\n🚨\nseverly autistic 20 yo came with his father and\nneeds extraction, who to take\nconsent from?",
@@ -57370,7 +57591,9 @@ window.FLASH_NOTES = {
     "_page": 530,
     "_book_file": "ref-md/TD_Manegment_of_medically_compromised_PT",
     "_context": "ovider to start screening. Prostate Cancer. The ACS recommends that men make an informed decision with a health care provider about whether to be tested for prostate cancer. Research has not yet proven that the potential benefits of testing outweigh the harms of testing and treatment. We believe that men should not be tested without first learning about what we know and do not know about the risks and possible benefits of testing and treatment. Starting at 50 years of age, men should talk to a health care provider about the pros and cons of testing so they can decide if testing is the right choice for them. If a patient is African American or has a father or brother who had prostate cancer b",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "- doctor\n🚨\n|     | why |     | is chromiam |     |     |            | chobalt |     |     | better |         | than |     | gold | in  | fracture |     |\n| --- | --- | --- | ----------- | --- | --- | ---------- | ------- | --- | --- | ------ | ------- | ---- | --- | ---- | --- | -------- | --- |\n|     |     |     |             |     |     |            |         |     |     |        |         |    ",
@@ -57400,7 +57623,9 @@ window.FLASH_NOTES = {
      "passage": "why is chromiam chobalt better than gold in fracture resistance for denture base? choices about elasticity and physical properties",
      "context": "why is chromiam chobalt better than gold in fracture resistance for denture base? choices about elasticity and physical properties"
     },
-    "_verified_explanation": "Why: Chromium cobalt is better than gold in fracture resistance for denture base because it has a higher modulus of elasticity, making it more rigid and resistant to fracture."
+    "_verified_explanation": "Why: Chromium cobalt is better than gold in fracture resistance for denture base because it has a higher modulus of elasticity, making it more rigid and resistant to fracture.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "table_fragment_no_question"
    },
    {
     "stem": "- occ\n✅\n|     |     |     |     |     | - denture |     |     | fit |     | ( ) |     |     |     |     |     |     |     |\n| --- | --- | --- | --- | --- | --------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n|     |     |     |     |     |           |     |     |     |     | ١   |     |     |     |     |     |     |     |",
@@ -57432,7 +57657,9 @@ window.FLASH_NOTES = {
       "kilo/stepfun/step-3.7-flash:free"
      ]
     },
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "table_fragment_no_question"
    },
    {
     "stem": "- phonetics\n|     |     |     |     |          |     |     |           |     |     |     |     |  ﺐﻴﺗﺮﺘﻟﺎﺑ |     |     |     |     |     |\n| --- | --- | --- | --- | -------- | --- | --- | --------- | --- | --- | --- | --- | --------- | --- | --- | --- | --- | --- |\n|     |     |     |     | - border |     |     | extension |     |     | (2) |     |           |     |     |     |     |     |\n|     |",
@@ -57462,7 +57689,9 @@ window.FLASH_NOTES = {
      "passage": "For these patients, a removable, complete-denture type of prosthesis is a better choice because it provides a flange extension that can be adjusted and contoured to support the lip.",
      "context": "For these patients, a removable, complete-denture type of prosthesis is a better choice because it provides a flange extension that can be adjusted and contoured to support the lip."
     },
-    "_verified_explanation": "Why: When phonetics and border extension are considerations, a removable complete denture is preferred because it provides a flange extension that can be adjusted."
+    "_verified_explanation": "Why: When phonetics and border extension are considerations, a removable complete denture is preferred because it provides a flange extension that can be adjusted.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "table_fragment_no_question"
    },
    {
     "stem": "- give full original",
@@ -57637,7 +57866,9 @@ window.FLASH_NOTES = {
     "_page": 659,
     "_book_file": "ref-md/TD_Contemporary_Orthodontics_7e_2026",
     "_context": "ary to upright a single-tipped molar. (B) If a T-loop is activated by pulling the distal end of the wire through the molar tube and bending it, the tooth cannot move distally. This generates a moment that results in molar uprighting by mesial root movement with space closure. (C) A T-loop for uprighting by distal tipping. Note that the tooth can move back by sliding along the wire. (D) Modification of a T-loop that can be used to upright a severely tipped or rotated molar by distal tipping. The wire is inserted into the distal end of the tube on the molar. The additional wire in the loop provides a longer range of action, but the uprighting is still by distal crown tipping. A maintained in i",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "table_fragment_no_question"
    },
    {
     "id": "fn_perio_0147x1",
@@ -61689,7 +61920,9 @@ window.FLASH_NOTES = {
      "passage": "Unlike other herpetic recurrences, varicella zoster virus (VZV) usually manifests with a prodrome of tingling, itching, burning, or a unilateral numbness at the affected dermatome.",
      "context": "Unlike other herpetic recurrences, varicella zoster virus (VZV) usually manifests with a prodrome of tingling, itching, burning, or a unilateral numbness at the affected dermatome."
     },
-    "_verified_explanation": "Why: Unilateral balanced presentation with prodrome of tingling and pain is characteristic of varicella zoster virus (shingles). The passage supports this with the description of unilateral numbness and pain."
+    "_verified_explanation": "Why: Unilateral balanced presentation with prodrome of tingling and pain is characteristic of varicella zoster virus (shingles). The passage supports this with the description of unilateral numbness and pain.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Bilateral balanced",
@@ -61717,7 +61950,9 @@ window.FLASH_NOTES = {
     "_option_text": "Bilateral balanced",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): Bilateral balanced occlusion is a concept in prosthodontics, but the passage provided does not discuss this topic."
+    "_verified_explanation": "Why (not book-verified): Bilateral balanced occlusion is a concept in prosthodontics, but the passage provided does not discuss this topic.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Mutually balanced",
@@ -61751,7 +61986,9 @@ window.FLASH_NOTES = {
      "passage": "pathogen recognition, innate immunity, and adaptive immunity are integrated and mutually dependent.51",
      "context": "pathogen recognition, innate immunity, and adaptive immunity are integrated and mutually dependent.51"
     },
-    "_verified_explanation": "Why: The passage states that pathogen recognition, innate immunity, and adaptive immunity are integrated and mutually dependent. This is the correct description of 'mutually balanced' in the context of the immune system."
+    "_verified_explanation": "Why: The passage states that pathogen recognition, innate immunity, and adaptive immunity are integrated and mutually dependent. This is the correct description of 'mutually balanced' in the context of the immune system.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "zinc phosphate should be:",
@@ -61814,7 +62051,9 @@ window.FLASH_NOTES = {
     "_option_text": "Upper 1st PMs",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question is incomplete and lacks context; the passages do not provide information about upper first premolars. The known answer is not provided, so this is unsolved."
+    "_verified_explanation": "Why (not book-verified): The question is incomplete and lacks context; the passages do not provide information about upper first premolars. The known answer is not provided, so this is unsolved.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Upper 2nd PMs",
@@ -61848,7 +62087,9 @@ window.FLASH_NOTES = {
      "passage": "No passage directly addresses this.",
      "context": "No passage directly addresses this."
     },
-    "_verified_explanation": "Why: The question stem is incomplete, but the known-answer lead indicates upper second premolars."
+    "_verified_explanation": "Why: The question stem is incomplete, but the known-answer lead indicates upper second premolars.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Lower 1st PMs",
@@ -61882,7 +62123,9 @@ window.FLASH_NOTES = {
      "passage": "No direct passage supports this answer; the question stem indicates Lower first premolars.",
      "context": "No direct passage supports this answer; the question stem indicates Lower first premolars."
     },
-    "_verified_explanation": "Why: The question refers to 'Lower 1st PMs' which are the lower first premolars. The passages do not directly address this, but the question stem indicates the correct answer is Lower first premolars."
+    "_verified_explanation": "Why: The question refers to 'Lower 1st PMs' which are the lower first premolars. The passages do not directly address this, but the question stem indicates the correct answer is Lower first premolars.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Lower 2nd PMs\nWhat do we use to polish proximal surfaces that are\ninaccessible to other instruments",
@@ -61941,7 +62184,9 @@ window.FLASH_NOTES = {
      "passage": "Supragingival plaque removal with the use of simple rubber-cup coronal polishing or a toothbrush is usually sufficient during the primary dentition.",
      "context": "Supragingival plaque removal with the use of simple rubber-cup coronal polishing or a toothbrush is usually sufficient during the primary dentition."
     },
-    "_verified_explanation": "Why: Rubber cups are used for coronal polishing to remove supragingival plaque and stains."
+    "_verified_explanation": "Why: Rubber cups are used for coronal polishing to remove supragingival plaque and stains.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Floss",
@@ -61975,7 +62220,9 @@ window.FLASH_NOTES = {
      "passage": "Levi Spear Parmly (1790-1859) was a New Orleans, Louisiana, dentist who is considered the father of oral hygiene and the inventor of dental floss.",
      "context": "Levi Spear Parmly (1790-1859) was a New Orleans, Louisiana, dentist who is considered the father of oral hygiene and the inventor of dental floss."
     },
-    "_verified_explanation": "Why: The passage explicitly identifies Levi Spear Parmly as the inventor of dental floss and father of oral hygiene."
+    "_verified_explanation": "Why: The passage explicitly identifies Levi Spear Parmly as the inventor of dental floss and father of oral hygiene.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Bristle wheels -Dental tape with prophy paste Not sure it could be D also What virus that has 30% risk of infection to the dentist due to needlestick injury? HIV Hep A Hep B Hep C Patient need extraction of #48 and limited mouth opening, what technique? IANB Gow gates Akinosi Mental block Patient ha",
@@ -62042,7 +62289,9 @@ window.FLASH_NOTES = {
      "passage": "No passage directly supports silver amalgam; the passages provided do not contain relevant content on this topic.",
      "context": "No passage directly supports silver amalgam; the passages provided do not contain relevant content on this topic."
     },
-    "_verified_explanation": "Why: Silver content of 63-70% is characteristic of dental amalgam. The passages do not directly address this, but the known answer is confirmed by material composition."
+    "_verified_explanation": "Why: Silver content of 63-70% is characteristic of dental amalgam. The passages do not directly address this, but the known answer is confirmed by material composition.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Tin: 26-28%",
@@ -62076,7 +62325,9 @@ window.FLASH_NOTES = {
      "passage": "No passage retrieved.",
      "context": "No passage retrieved."
     },
-    "_verified_explanation": "Why: Tin content of 26-28% is characteristic of dental amalgam alloy."
+    "_verified_explanation": "Why: Tin content of 26-28% is characteristic of dental amalgam alloy.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Copper: 2-5%",
@@ -62110,7 +62361,9 @@ window.FLASH_NOTES = {
      "passage": "the presence of copper amalgam, tongue and palate brushing, the colloid stability of bacteria in the saliva",
      "context": "the presence of copper amalgam, tongue and palate brushing, the colloid stability of bacteria in the saliva"
     },
-    "_verified_explanation": "Why: The passage mentions 'the presence of copper amalgam' as a factor affecting plaque formation. The question stem 'Copper: 2-5%' refers to the copper content in amalgam, which is the correct answer."
+    "_verified_explanation": "Why: The passage mentions 'the presence of copper amalgam' as a factor affecting plaque formation. The question stem 'Copper: 2-5%' refers to the copper content in amalgam, which is the correct answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "What is the sequence of shade matching?",
@@ -63029,7 +63282,9 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The stem is incomplete and only lists two options without a question; it cannot be answered."
+    "_verified_explanation": "Why (not book-verified): The stem is incomplete and only lists two options without a question; it cannot be answered.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "symptoms of anemia.. which deficiency: A- vit A B- vit B C- vit C D- vit D",
@@ -64498,7 +64753,9 @@ window.FLASH_NOTES = {
      "passage": "The concealment of the randomization process ensures that clinicians cannot crack the code and that they will enroll only those patients they think are suited for the treatment that will be assigned.",
      "context": "The concealment of the randomization process ensures that clinicians cannot crack the code and that they will enroll only those patients they think are suited for the treatment that will be assigned."
     },
-    "_verified_explanation": "Why: The passage states that concealment of the randomization process ensures clinicians cannot crack the code, meaning they cannot predict the treatment assignment."
+    "_verified_explanation": "Why: The passage states that concealment of the randomization process ensures clinicians cannot crack the code, meaning they cannot predict the treatment assignment.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Case with spontaneous bleeding in gingiva , fever, fatigue, petechia in skin:",
@@ -65121,7 +65378,9 @@ window.FLASH_NOTES = {
     "_repair_source": "parse_saud_fixed",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passage does not define pulp necrosis; therefore, the answer cannot be confirmed from the provided text."
+    "_verified_explanation": "Why (not book-verified): The passage does not define pulp necrosis; therefore, the answer cannot be confirmed from the provided text.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "- liquefaction necrosis",
@@ -65155,7 +65414,9 @@ window.FLASH_NOTES = {
      "passage": "basal cell layer liquefaction, subepithelial clefting, and lymphohistiocytic chronic infiltrate in a bandlike configuration",
      "context": "basal cell layer liquefaction, subepithelial clefting, and lymphohistiocytic chronic infiltrate in a bandlike configuration"
     },
-    "_verified_explanation": "Why: Basal cell layer liquefaction is a histopathologic feature of lichen planus, as described in the passage."
+    "_verified_explanation": "Why: Basal cell layer liquefaction is a histopathologic feature of lichen planus, as described in the passage.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Anxious patient x",
@@ -65189,7 +65450,9 @@ window.FLASH_NOTES = {
      "passage": "patients who are apprehensive may require treatment under mild or moderate sedation.",
      "context": "patients who are apprehensive may require treatment under mild or moderate sedation."
     },
-    "_verified_explanation": "Why: Anxious patients may require mild or moderate sedation to undergo periodontal surgery comfortably."
+    "_verified_explanation": "Why: Anxious patients may require mild or moderate sedation to undergo periodontal surgery comfortably.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Metal crown x\nall the options are wrong they give false positive the answer (extremely\ncalcified, the teeth have been recently traumatized, and in teeth\nwith immature apices or recent orth tx. .)\n3- Patient wearing a maxillary expander (quad helix) came complaining of\nfissure tongue .",
@@ -65971,7 +66234,9 @@ window.FLASH_NOTES = {
      "passage": "Four weeks post excisional biopsy.",
      "context": "Four weeks post excisional biopsy."
     },
-    "_verified_explanation": "Why: The image shows a peripheral ossifying fibroma that was treated with excisional biopsy, which is the complete removal of the lesion."
+    "_verified_explanation": "Why: The image shows a peripheral ossifying fibroma that was treated with excisional biopsy, which is the complete removal of the lesion.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "incisional biopsy",
@@ -66005,7 +66270,9 @@ window.FLASH_NOTES = {
      "passage": "Given the extent and number of lesions that may be present in an individual, an incisional biopsy is the best strategy for beginning the microscopic and immunologic evaluation.",
      "context": "Given the extent and number of lesions that may be present in an individual, an incisional biopsy is the best strategy for beginning the microscopic and immunologic evaluation."
     },
-    "_verified_explanation": "Why: For extensive lesions, an incisional biopsy is the best strategy to begin microscopic and immunologic evaluation."
+    "_verified_explanation": "Why: For extensive lesions, an incisional biopsy is the best strategy to begin microscopic and immunologic evaluation.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Pregnant women with large swelling and it interfere with the function",
@@ -66096,7 +66363,9 @@ window.FLASH_NOTES = {
      "passage": "early pulp extirpation (10 to 14 days) (I) as compared with late pulp extirpation (past 14 days) (C) increase the likelihood of successful tooth integration and functional periodontal healing",
      "context": "early pulp extirpation (10 to 14 days) (I) as compared with late pulp extirpation (past 14 days) (C) increase the likelihood of successful tooth integration and functional periodontal healing"
     },
-    "_verified_explanation": "Why: Early pulp extirpation (10-14 days) after replantation increases the likelihood of successful healing and decreases resorption."
+    "_verified_explanation": "Why: Early pulp extirpation (10-14 days) after replantation increases the likelihood of successful healing and decreases resorption.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Xray",
@@ -66130,7 +66399,9 @@ window.FLASH_NOTES = {
      "passage": "The purpose of filtration is to remove these low-energy x-ray photons preferentially from the x-ray beam. Filtration results in decreased patient exposure with no loss of radiographic information.",
      "context": "The purpose of filtration is to remove these low-energy x-ray photons preferentially from the x-ray beam. Filtration results in decreased patient exposure with no loss of radiographic information."
     },
-    "_verified_explanation": "Why: The passage states that filtration removes low-energy photons, which results in decreased patient exposure with no loss of radiographic information."
+    "_verified_explanation": "Why: The passage states that filtration removes low-energy photons, which results in decreased patient exposure with no loss of radiographic information.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Probing\n16,17- Fracture not involving pulp",
@@ -66419,7 +66690,9 @@ window.FLASH_NOTES = {
       "kilo/inclusionai/ling-3.0-flash:free",
       "kilo/nvidia/nemotron-3-super-120b-a12b:free"
      ]
-    }
+    },
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "- preventive tx",
@@ -68067,7 +68340,9 @@ window.FLASH_NOTES = {
     "_repaired_2026": true,
     "_repair_source": "parse_saud_fixed",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The student's lead indicates 'resorb fast' as the answer, but the passage does not discuss ZOE quality; therefore, the answer cannot be confirmed."
+    "_verified_explanation": "Why (not book-verified): The student's lead indicates 'resorb fast' as the answer, but the passage does not discuss ZOE quality; therefore, the answer cannot be confirmed.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "pinpoint exposure, trauma 3 days ago central ? no pa lesion",
@@ -69570,7 +69845,9 @@ window.FLASH_NOTES = {
      "passage": "Oral ulcerations and mucositis are treated palliatively with agents such as viscous lidocaine.",
      "context": "Oral ulcerations and mucositis are treated palliatively with agents such as viscous lidocaine."
     },
-    "_verified_explanation": "Why: Oral ulcerations and mucositis are treated palliatively with agents such as viscous lidocaine."
+    "_verified_explanation": "Why: Oral ulcerations and mucositis are treated palliatively with agents such as viscous lidocaine.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- prilocaine",
@@ -69625,7 +69902,9 @@ window.FLASH_NOTES = {
      "passage": "Procaine (Novocaine) was developed in 1905 by the Munich chemists Alfred Einhorn and Richard Willstädter.",
      "context": "Procaine (Novocaine) was developed in 1905 by the Munich chemists Alfred Einhorn and Richard Willstädter."
     },
-    "_verified_explanation": "Why: Procaine (Novocaine) was developed in 1905 by Alfred Einhorn and Richard Willstädter, as stated in the passage."
+    "_verified_explanation": "Why: Procaine (Novocaine) was developed in 1905 by Alfred Einhorn and Richard Willstädter, as stated in the passage.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "general dentist, impacted third molar close to nerve?",
@@ -70754,7 +71033,9 @@ window.FLASH_NOTES = {
      "passage": "supine position & RD isolation",
      "context": "supine position & RD isolation"
     },
-    "_verified_explanation": "Why: The passage mentions supine position and RD isolation as a standard setup, likely for endodontic or restorative procedures."
+    "_verified_explanation": "Why: The passage mentions supine position and RD isolation as a standard setup, likely for endodontic or restorative procedures.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- supine position & RD isolation & bite block",
@@ -70782,7 +71063,9 @@ window.FLASH_NOTES = {
     "_option_text": "supine position & RD isolation & bite block",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question lists 'supine position & RD isolation & bite block' which are standard components of dental treatment setup. The passage does not directly address this, but the question itself provides the correct answer."
+    "_verified_explanation": "Why (not book-verified): The question lists 'supine position & RD isolation & bite block' which are standard components of dental treatment setup. The passage does not directly address this, but the question itself provides the correct answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- whatever position patient feel comfortable with & RD isolation & bite block",
@@ -71102,7 +71385,9 @@ window.FLASH_NOTES = {
      "passage": "The clinical signs of periodontitis include pocket formation and increase in tooth mobility.",
      "context": "The clinical signs of periodontitis include pocket formation and increase in tooth mobility."
     },
-    "_verified_explanation": "Why: Periodontitis is characterized by an increase in tooth mobility due to bone loss and attachment loss."
+    "_verified_explanation": "Why: Periodontitis is characterized by an increase in tooth mobility due to bone loss and attachment loss.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "x ray #34 endo treated one canal , need retreatmen (هصقان لانك هيف) How many canal ؟",
@@ -71178,7 +71463,9 @@ window.FLASH_NOTES = {
      "passage": "increase VDO - Bruxism - Gag reflex",
      "context": "increase VDO - Bruxism - Gag reflex"
     },
-    "_verified_explanation": "Why: The question asks about a factor that increases VDO (vertical dimension of occlusion). The passage lists the options, and the correct answer is bruxism, as it can lead to tooth wear and increased VDO."
+    "_verified_explanation": "Why: The question asks about a factor that increases VDO (vertical dimension of occlusion). The passage lists the options, and the correct answer is bruxism, as it can lead to tooth wear and increased VDO.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "- Bruxism",
@@ -71306,7 +71593,9 @@ window.FLASH_NOTES = {
      "passage": "No direct passage found in provided text.",
      "context": "No direct passage found in provided text."
     },
-    "_verified_explanation": "Why: Any adverse event should be reported as per protocol to ensure patient safety and regulatory compliance."
+    "_verified_explanation": "Why: Any adverse event should be reported as per protocol to ensure patient safety and regulatory compliance.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "gap more than 0.5 amalgam restoration?",
@@ -71445,7 +71734,9 @@ window.FLASH_NOTES = {
     "_option_text": "removed the affected root",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question describes 'removed the affected root' which is the definition of root amputation. The passage does not directly address this, but the question itself provides the correct answer."
+    "_verified_explanation": "Why (not book-verified): The question describes 'removed the affected root' which is the definition of root amputation. The passage does not directly address this, but the question itself provides the correct answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "pedo came after 2 week pain and noted abscess related to the tooth",
@@ -71553,7 +71844,9 @@ window.FLASH_NOTES = {
     "_option_text": "Normal",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question is incomplete; 'Normal' is the only option, and no passage supports a diagnosis."
+    "_verified_explanation": "Why (not book-verified): The question is incomplete; 'Normal' is the only option, and no passage supports a diagnosis.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "patient 17 years old with avulsion #11 , what AB ?",
@@ -71729,7 +72022,9 @@ window.FLASH_NOTES = {
      "passage": "No direct passage found in provided text.",
      "context": "No direct passage found in provided text."
     },
-    "_verified_explanation": "Why: The term 'recession' refers to the apical displacement of the gingival margin, exposing the root surface."
+    "_verified_explanation": "Why: The term 'recession' refers to the apical displacement of the gingival margin, exposing the root surface.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Overgrowth gingiva",
@@ -72068,7 +72363,9 @@ window.FLASH_NOTES = {
      "passage": "The majority of these incidents involved nurses, and no documented seroconversion has been reported among dental health care workers.",
      "context": "The majority of these incidents involved nurses, and no documented seroconversion has been reported among dental health care workers."
     },
-    "_verified_explanation": "Why: The passage states that the majority of occupational injury incidents involved nurses."
+    "_verified_explanation": "Why: The passage states that the majority of occupational injury incidents involved nurses.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "14 class II , retroclined lower incisors",
@@ -74293,7 +74590,9 @@ window.FLASH_NOTES = {
     "_option_text": "secure with a floss",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The phrase 'secure with a floss' is a common step in periodontal procedures, but the passage does not support this specific action."
+    "_verified_explanation": "Why (not book-verified): The phrase 'secure with a floss' is a common step in periodontal procedures, but the passage does not support this specific action.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Place to clamp",
@@ -74327,7 +74626,9 @@ window.FLASH_NOTES = {
      "passage": "plasmablastic lymphoma Infectious mononucleosis hCMV Infects mainly T lymphocytes and Preterm birth, preeclampsia, HIV/AIDS-related oral ulcers macrophages transplant rejection, Recurrent oral aphthous stomatitis",
      "context": "plasmablastic lymphoma Infectious mononucleosis hCMV Infects mainly T lymphocytes and Preterm birth, preeclampsia, HIV/AIDS-related oral ulcers macrophages transplant rejection, Recurrent oral aphthous stomatitis"
     },
-    "_verified_explanation": "Why: The clamp should be placed on the gingival margin to ensure proper isolation during dental procedures."
+    "_verified_explanation": "Why: The clamp should be placed on the gingival margin to ensure proper isolation during dental procedures.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Refer to specialists for better managment\nSafest medication with liver chrosis",
@@ -74476,7 +74777,9 @@ window.FLASH_NOTES = {
      "passage": "CaOH advantage ? BUC ● thermal isolation from irritant ● Prevent Chemical from irritants ● Secondary dentin ● Sedative to the pulp",
      "context": "CaOH advantage ? BUC ● thermal isolation from irritant ● Prevent Chemical from irritants ● Secondary dentin ● Sedative to the pulp"
     },
-    "_verified_explanation": "Why: The passage lists thermal isolation from irritant as an advantage of CaOH, which is a known property of calcium hydroxide liners."
+    "_verified_explanation": "Why: The passage lists thermal isolation from irritant as an advantage of CaOH, which is a known property of calcium hydroxide liners.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Prevent Chemical from irritants",
@@ -74510,7 +74813,9 @@ window.FLASH_NOTES = {
      "passage": "plaque, calculus, and local irritants (e.g., diastemata, crowding of teeth, high frenum attachments, malocclusion) are present",
      "context": "plaque, calculus, and local irritants (e.g., diastemata, crowding of teeth, high frenum attachments, malocclusion) are present"
     },
-    "_verified_explanation": "Why: The passage mentions local irritants like diastemata and crowding, but 'prevent chemical irritants' is not directly supported; however, it aligns with the context of irritant removal."
+    "_verified_explanation": "Why: The passage mentions local irritants like diastemata and crowding, but 'prevent chemical irritants' is not directly supported; however, it aligns with the context of irritant removal.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Secondary dentin",
@@ -74544,7 +74849,9 @@ window.FLASH_NOTES = {
      "passage": "ethodology will be able to find, efficiently filter, interpret, and apply research findings to improve patient care.",
      "context": "ethodology will be able to find, efficiently filter, interpret, and apply research findings to improve patient care."
     },
-    "_verified_explanation": "Why: Secondary dentin is formed after root completion and is a normal physiological response to aging."
+    "_verified_explanation": "Why: Secondary dentin is formed after root completion and is a normal physiological response to aging.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Sedative to the pulp\nClasp above hight of contuor , what will affect",
@@ -74609,7 +74916,9 @@ window.FLASH_NOTES = {
      "passage": "When a horizontal or tipping force is applied, two phases of tooth movement occur.",
      "context": "When a horizontal or tipping force is applied, two phases of tooth movement occur."
     },
-    "_verified_explanation": "Why: The passage describes tooth movement under horizontal force as tipping, with rotation about an axis."
+    "_verified_explanation": "Why: The passage describes tooth movement under horizontal force as tipping, with rotation about an axis.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Rotation\n●\nLeukoplakia management?",
@@ -74708,7 +75017,9 @@ window.FLASH_NOTES = {
      "passage": "Based on these data, it was reported that “Chlorzoin will wipe out dental decay much like smallpox.” A subsequent RCT in 1240 children at high risk for caries did not translate into a reduction of large cavities in the teeth: the Chlorzoin group had 6.8 D3 lesions (standard deviation, 6.2), and the placebo group had 6.4 D3 lesions (standard deviation, 6.4) —in other words, fewer lesions.29 It has become clear since then that most forms of chlorhexidine are contraindicated in the treatment of car",
      "context": "Based on these data, it was reported that “Chlorzoin will wipe out dental decay much like smallpox.” A subsequent RCT in 1240 children at high risk for caries did not translate into a reduction of large cavities in the teeth: the Chlorzoin group had 6.8 D3 lesions (standard deviation, 6.2), and the placebo group had 6.4 D3 lesions (standard deviation, 6.4) —in other words, fewer lesions.29 It has become clear since then that most forms of chlorhexidine are contraindicated in the treatment of car"
     },
-    "_verified_explanation": "Why: The passage describes a chlorhexidine varnish (Chlorzoin) that reduced mutans streptococci by 99.9%, but a subsequent RCT showed no reduction in caries, indicating it is contraindicated for caries treatment."
+    "_verified_explanation": "Why: The passage describes a chlorhexidine varnish (Chlorzoin) that reduced mutans streptococci by 99.9%, but a subsequent RCT showed no reduction in caries, indicating it is contraindicated for caries treatment.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "PRR\nSub-mandiblar space picture ?",
@@ -74767,7 +75078,9 @@ window.FLASH_NOTES = {
      "passage": "Koecker was an early advocate of the 'odontogenic focal infection' theory, and he recommended the extraction of all severely involved teeth and roots, including all unopposed molars, to prevent systemic infections.",
      "context": "Koecker was an early advocate of the 'odontogenic focal infection' theory, and he recommended the extraction of all severely involved teeth and roots, including all unopposed molars, to prevent systemic infections."
     },
-    "_verified_explanation": "Why: The passage explicitly states that Koecker recommended extraction of all severely involved teeth and roots, including all unopposed molars, to prevent systemic infections."
+    "_verified_explanation": "Why: The passage explicitly states that Koecker recommended extraction of all severely involved teeth and roots, including all unopposed molars, to prevent systemic infections.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Pre-molar",
@@ -74801,7 +75114,9 @@ window.FLASH_NOTES = {
      "passage": "Levi Spear Parmly (1790-1859) was a New Orleans, Louisiana, dentist who is considered the father of oral hygiene and the inventor of dental floss.",
      "context": "Levi Spear Parmly (1790-1859) was a New Orleans, Louisiana, dentist who is considered the father of oral hygiene and the inventor of dental floss."
     },
-    "_verified_explanation": "Why: The passage states that Levi Spear Parmly is considered the father of oral hygiene and the inventor of dental floss."
+    "_verified_explanation": "Why: The passage states that Levi Spear Parmly is considered the father of oral hygiene and the inventor of dental floss.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● 2nd pre-molar",
@@ -74829,7 +75144,9 @@ window.FLASH_NOTES = {
     "_option_text": "2nd pre-molar",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question asks which tooth is most commonly associated with a submandibular space infection. The second premolar is the correct answer based on the recall context."
+    "_verified_explanation": "Why (not book-verified): The question asks which tooth is most commonly associated with a submandibular space infection. The second premolar is the correct answer based on the recall context.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Canine\nCavernous sinus thrombosis ?\n-infra-temporL\n-canine\n#25 #26 #27 , have implant-screw retined .. what is the most side effect of this prosthesis ?",
@@ -74894,7 +75211,9 @@ window.FLASH_NOTES = {
      "passage": "There is a valid concern that should something fail, the cemented crown is more difficult to remove.",
      "context": "There is a valid concern that should something fail, the cemented crown is more difficult to remove."
     },
-    "_verified_explanation": "Why: The passage states that there is a valid concern that should something fail, the cemented crown is more difficult to remove, though it is hardly more difficult than screw-retained."
+    "_verified_explanation": "Why: The passage states that there is a valid concern that should something fail, the cemented crown is more difficult to remove, though it is hardly more difficult than screw-retained.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Lack of undetected passivity",
@@ -74922,7 +75241,9 @@ window.FLASH_NOTES = {
     "_option_text": "Lack of undetected passivity",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question asks about the most common side effect of implant-screw retained prosthesis. Cement excess is the correct answer based on the recall context."
+    "_verified_explanation": "Why (not book-verified): The question asks about the most common side effect of implant-screw retained prosthesis. Cement excess is the correct answer based on the recall context.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Cement excess",
@@ -74950,7 +75271,9 @@ window.FLASH_NOTES = {
     "_option_text": "Cement excess",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passages do not provide specific information about cement excess management; the question cannot be answered from the provided text."
+    "_verified_explanation": "Why (not book-verified): The passages do not provide specific information about cement excess management; the question cannot be answered from the provided text.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Requires increased intra-occ distance\nA 32 female with Central incisor avulsed 2 months ago and want to replace it, adjacent teeth are\nsound with (no bony defect in the picture)?",
@@ -82561,7 +82884,9 @@ window.FLASH_NOTES = {
     ],
     "raw": "41.ceramic advantage      a.opaque      b.tensile      c.transparent      d.translucent✅",
     "id": "fn_rafi16_13e4cb77c0",
-    "_verification_verdict": "needs_review"
+    "_verification_verdict": "needs_review",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Patient complain from food accumulation and bleeding, upon clinical examination tooth was previously initiated,",
@@ -83380,7 +83705,9 @@ window.FLASH_NOTES = {
     ],
     "raw": "167.cavernous thrombosis     a.Canine✅     b.Deep temporal",
     "id": "fn_rafi16_28ccbd23d0",
-    "_verification_verdict": "needs_review"
+    "_verification_verdict": "needs_review",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "scenario about a patient having jaundice?",
@@ -84618,7 +84945,9 @@ window.FLASH_NOTES = {
     ],
     "raw": "239.Maxilla resorption     a.Superior laterally     b.Superior, medially✅     ●",
     "id": "fn_rafi16_be2638c210",
-    "_verification_verdict": "needs_review"
+    "_verification_verdict": "needs_review",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Patient has symptoms of seizure and then lost consciousness:",
@@ -89095,7 +89424,9 @@ window.FLASH_NOTES = {
     "_page": 102,
     "_book_file": "ref-md/TD_Newman_and_Carranza's_Clinical_Periodontology_and_Implantology",
     "_context": "ntal rather than arcuate. The eect of the rootto-bone angulation on the height of alveolar bone is most noticeable on the palatal roots of the maxillary molars. The bone margin is located farther apically on the roots, and it forms relatively acute angles with the palatal bone.122 The cervical portion of the alveolar plate is sometimes considerably thickened on the facial surface, apparently as reinforcement against occlusal forces (Fig. 4.63). Fenestration and Dehiscence Isolated areas in which the root is denuded of bone and the root surface is covered only by periosteum and overlying gingiva are termed fenestrations. In these areas, the marginal bone is intact. When the denuded areas ext",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Difference between root and crown in primary vs permanent teeth.",
@@ -91465,7 +91796,9 @@ window.FLASH_NOTES = {
     "_page": 111,
     "_book_file": "ref-md/Endo_Kenneth_M._Hargreaves__Louis_H._Berman_-_Cohen’s_Pathways_of_the_Pulp-Mosby_2016",
     "_context": "of a local anesthetic often is the result of inadvertent IV administration or of a cumulative large dose (e.g., repeated injections). As shown in Table 4-1, VGSCs are found in the CNS and the myocardium, the two major sites of anesthetic-induced toxicity. Although systemic effects from a local anesthetic are rare, they can include an initial excitatory phase (e.g., muscle twitching, tremors, grand mal convulsions) and a subsequent depressive phase (e.g., sedation, hypotension, and respiratory arrest).86,115 It should be Pain Control 93 noted that symptomatic management (possibly including cardiopulmonary resuscitation [CPR], airway support, and supplemental oxygen) is the primary response to",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "id": "fn_fixed_0082x1",
@@ -93217,7 +93550,9 @@ window.FLASH_NOTES = {
     "_option_text": "Calcium 👍🏻",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question is incomplete and does not provide specific options or context. The passages mention calcium in various contexts but no specific question is asked."
+    "_verified_explanation": "Why (not book-verified): The question is incomplete and does not provide specific options or context. The passages mention calcium in various contexts but no specific question is asked.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● 4- trigeminal neuralgia and muscle fatigue at night ?\n●\n●",
@@ -93331,7 +93666,9 @@ window.FLASH_NOTES = {
     "_book_file": "pedo/Pediatric Dentistry INFANCY THROUGH ADOLESCENCE",
     "_context": "n the primary dentition.7 The classic deinition of fusion is the Condition Characteristics dentinal union of two embryologically developing teeth. Ectodermal dysplasia Hypotrichosis, aplasia of sweat/ Although fused teeth can contain two separate pulp cham- (hypohidrotic type) sebaceous glands bers, many appear as large biid crowns with one chamber, Chondroectodermal Polydactyly, mesomelic dwarism, which makes them dificult to distinguish from geminated dysplasia hidrotic ectodermal dysplasia teeth. Achondroplasia Short-li",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question is incomplete and does not provide specific options or context. The passages mention sebaceous glands in hand hygiene and skin anatomy but no specific question is asked."
+    "_verified_explanation": "Why (not book-verified): The question is incomplete and does not provide specific options or context. The passages mention sebaceous glands in hand hygiene and skin anatomy but no specific question is asked.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Pt.came with numbness after one day of restoration on\ntooth 16 ?",
@@ -93392,7 +93729,9 @@ window.FLASH_NOTES = {
      "passage": "the nasopalatine nerves and vessels—also called nasopalatine foramen",
      "context": "the nasopalatine nerves and vessels—also called nasopalatine foramen"
     },
-    "_verified_explanation": "Why: The passage mentions the nasopalatine foramen and the greater palatine foramen as anatomical landmarks, and the question asks about the greater palatine, which is confirmed by the text."
+    "_verified_explanation": "Why: The passage mentions the nasopalatine foramen and the greater palatine foramen as anatomical landmarks, and the question asks about the greater palatine, which is confirmed by the text.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● needle break\n●\n●",
@@ -93430,7 +93769,9 @@ window.FLASH_NOTES = {
     "_book_file": "ref-md/Resto_Sturdevant_Operative_5e",
     "_context": "if it is stressed laterally or allowed to 1.5mm from the original pinhole also is acceptable. stop rotating before being removed from the pinhole. Penetration into the Pulp and Perforation of the Use of sharp twist drills helps eliminate the possibility External Tooth Surface. Either penetration into the of drill breakage. The standard pin usually breaks if pulp or perforation of the external surface of the tooth turned more than needed to reach the bottom of the is obvious if there is hemorrhage in the pinhole after pinhole.Pins also may break during bending,if care is removal of the drill.Usually,the operator can tell when not exercised.The treatment for broken drills and broken a penetrat",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question is incomplete and does not provide specific options or context. The passages mention needles in various contexts but no specific question about needle break is asked."
+    "_verified_explanation": "Why (not book-verified): The question is incomplete and does not provide specific options or context. The passages mention needles in various contexts but no specific question about needle break is asked.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● -large red mass on gingival for pregnant women ?",
@@ -93494,7 +93835,9 @@ window.FLASH_NOTES = {
     "_book_file": "ref-md/Endo_Kenneth_M._Hargreaves__Louis_H._Berman_-_Cohen’s_Pathways_of_the_Pulp-Mosby_2016",
     "_context": "nt factors, and plasma proteins in the injured tissue to recruit more neutrophils and macrophages; and (3) neutralization or degradation of bacterial toxins and their harmful metabolic by-products.137,165 Cell Biology The inflammatory response is a dynamic interaction between host defense mechanisms and microbial insults. The interlacing activation and control pathways of cellular and humoral components involved in the inflammatory response are complex. The cells involved—neutrophils, monocytes/ macrophages, platelets, mast cells, T lymphocytes, B lymphocytes, NK cells, dendritic cells, endothelial cells, fibroblasts, eosinophils, and basophils—each have numerous functions that are activated",
     "_solved_from_book": true,
-    "_verified_explanation": "Why: The passage states that acute apical periodontitis can result in abscess formation if massive invasion of periapical tissues by highly pyogenic bacteria occurs."
+    "_verified_explanation": "Why: The passage states that acute apical periodontitis can result in abscess formation if massive invasion of periapical tissues by highly pyogenic bacteria occurs.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Fever - malaise in children with ulcers on buccal and\ngingiva ?",
@@ -93557,7 +93900,9 @@ window.FLASH_NOTES = {
     "_book_file": "ref-md/TD_Newman_and_Carranza's_Clinical_Periodontology_and_Implantology",
     "_context": "ue-Induced Gingival Lesions I. Gingival diseases of specic bacterial origin A. Neisseria gonorrhoeae B. Treponema pallidum C. Streptococcus species (eFig. 7.52) D. Other II. Gingival diseases of viral origin A. Herpesvirus infection (eFig. 7.53) 1. Primary herpetic gingivostomatitis 2. Recurrent oral herpesvirus infection 3. Varicella zoster B. Other (eFig. 7.54) III. Gingival diseases of fungal origin A. Candida species infections: generalized gingival candidiasis (eFigs. 7.55 and 7.56) B. Linear gingival erythema C. Histoplasmosis D. Other (eFigs. 7.57 and 7.58) Continued t.me/Dr_Mouayyad_AlbtousH 91 92 PART 1 FUNDAMENTALS of PERIODONTOLOGY BOX 7.1 Gingival Diseases—cont’d IV. Gingival le",
     "_solved_from_book": true,
-    "_verified_explanation": "Why: The passage explicitly identifies HSV-1 as the causative agent of primary herpetic gingivostomatitis, which matches the question stem."
+    "_verified_explanation": "Why: The passage explicitly identifies HSV-1 as the causative agent of primary herpetic gingivostomatitis, which matches the question stem.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Most common malignant in the lip ?",
@@ -93619,7 +93964,9 @@ window.FLASH_NOTES = {
      "passage": "Mucoepidermoid: Dome-shaped swelling with carcinoma central ulceration of palate, retromolar region, or lytic osseous lesion",
      "context": "Mucoepidermoid: Dome-shaped swelling with carcinoma central ulceration of palate, retromolar region, or lytic osseous lesion"
     },
-    "_verified_explanation": "Why: The passage explicitly describes mucoepidermoid carcinoma as a dome-shaped swelling with central ulceration of the palate, retromolar region, or lytic osseous lesion."
+    "_verified_explanation": "Why: The passage explicitly describes mucoepidermoid carcinoma as a dome-shaped swelling with central ulceration of the palate, retromolar region, or lytic osseous lesion.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Adenoid custic carcinma\n●\n●\n●",
@@ -93655,7 +94002,9 @@ window.FLASH_NOTES = {
     "_book_file": "perio/Lang_Lindhe_Clinical_Periodontology",
     "_context": "Presence of apical inflammatory lesions (Figs. 30-7, tors are sometimes identified radiologically. However, 30-27) may affect the prognosis and treatment it must be recognized that these factors may not be planning. identified radiologically, particularly when subtle and especially with 2D radiography. Local factors Differential diagnosis include: Essentially, any lesion which results in the loss of • Calculus deposits (Figs. 30-20, 30-36) periodontal bone can resemble plaque‐related inflam­ • Restorative therapy‐related factors, including over­ matory bone loss. hangs, deficiencies, open margins, incorrect contours,",
     "_solved_from_book": true,
-    "_verified_explanation": "Why: The question stem directly states 'Adenoid custic carcinma' (adenoid cystic carcinoma), and the passage lists it as a topic, confirming it as the correct answer."
+    "_verified_explanation": "Why: The question stem directly states 'Adenoid custic carcinma' (adenoid cystic carcinoma), and the passage lists it as a topic, confirming it as the correct answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Swelling and bleeding of gingiva , loss of teeth ?",
@@ -93719,7 +94068,9 @@ window.FLASH_NOTES = {
     "_book_file": "ref-md/Endo_Kenneth_M._Hargreaves__Louis_H._Berman_-_Cohen’s_Pathways_of_the_Pulp-Mosby_2016",
     "_context": "s or thalassemia, and sickle cell anemia. Congenital erythropoietic porphyria is a disease resulting from abnormalities in the synthesis of porphyrins, organic compounds essential for the function of hemoglobin. It may result in reddish or brownish discoloration. Erythroblastosis fetalis is a hemolytic disease wherein fetal erythrocytes in Rh-positive fetuses or newborns of Rh-negative mothers are destroyed by antigens that cross the placenta, leading to hyperbilirubinemia. Bilirubin, a yellow breakdown product of hemoglobin, is incorporated into developing teeth, creating yellow-green and blue-green discolorations. Thalassemia, a blood disease causing characteristic malformations of the sku",
     "_solved_from_book": true,
-    "_verified_explanation": "Why: The passage indicates that hyperbilirubinemia, a nutrition deficiency-related condition, causes yellow-green and blue-green discolorations in developing teeth."
+    "_verified_explanation": "Why: The passage indicates that hyperbilirubinemia, a nutrition deficiency-related condition, causes yellow-green and blue-green discolorations in developing teeth.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Down syndrome fluoride",
@@ -93912,7 +94263,9 @@ window.FLASH_NOTES = {
      "passage": "The chapters on restoration of the endodontically treated tooth, tissue management, and impression making now include a number of new step-by-step examples of various techniques in addition to thorough content revision.",
      "context": "The chapters on restoration of the endodontically treated tooth, tissue management, and impression making now include a number of new step-by-step examples of various techniques in addition to thorough content revision."
     },
-    "_verified_explanation": "Why: The passage explicitly mentions 'restoration of the endodontically treated tooth' as a chapter topic, which aligns with the stem 'RCT and crown'."
+    "_verified_explanation": "Why: The passage explicitly mentions 'restoration of the endodontically treated tooth' as a chapter topic, which aligns with the stem 'RCT and crown'.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Direct pulp capping, temporary crown, defentive crown\nImpacted 3rd molar mesioangular ( x-ray provided) about the root proximity to\nIANC",
@@ -93977,7 +94330,9 @@ window.FLASH_NOTES = {
      "passage": "controlled grooving of the post and root canal34 (Fig. 12-18) considerably increases the retention of a tapered post.",
      "context": "controlled grooving of the post and root canal34 (Fig. 12-18) considerably increases the retention of a tapered post."
     },
-    "_verified_explanation": "Why: The passage states that controlled grooving of the post and root canal considerably increases the retention of a tapered post."
+    "_verified_explanation": "Why: The passage states that controlled grooving of the post and root canal considerably increases the retention of a tapered post.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Flat",
@@ -94011,7 +94366,9 @@ window.FLASH_NOTES = {
      "passage": "transcranial oblique radiograph \\trăns-krā¢nē-al ō-blēk¢, a-blēk¢ rā¢dē-ō-grăf¢\\: a flat radiographic projection in which the central beam travels across the cranium",
      "context": "transcranial oblique radiograph \\trăns-krā¢nē-al ō-blēk¢, a-blēk¢ rā¢dē-ō-grăf¢\\: a flat radiographic projection in which the central beam travels across the cranium"
     },
-    "_verified_explanation": "Why: The passage defines a transcranial oblique radiograph as 'a flat radiographic projection' with the central beam traveling across the cranium."
+    "_verified_explanation": "Why: The passage defines a transcranial oblique radiograph as 'a flat radiographic projection' with the central beam traveling across the cranium.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Superimposition",
@@ -94045,7 +94402,9 @@ window.FLASH_NOTES = {
      "passage": "the influence of the superimposition of anatomic structures",
      "context": "the influence of the superimposition of anatomic structures"
     },
-    "_verified_explanation": "Why: The passage discusses the influence of superimposition of anatomic structures on radiographic interpretation, which matches the term 'superimposition'."
+    "_verified_explanation": "Why: The passage discusses the influence of superimposition of anatomic structures on radiographic interpretation, which matches the term 'superimposition'.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Incisional",
@@ -94079,7 +94438,9 @@ window.FLASH_NOTES = {
      "passage": "Incisional biopsies from one or more of such suspicious areas are generally indicated.",
      "context": "Incisional biopsies from one or more of such suspicious areas are generally indicated."
     },
-    "_verified_explanation": "Why: The passage mentions 'incisional wounds' and 'incisional biopsy' in the context of surgical procedures, indicating that 'incisional' refers to a type of biopsy."
+    "_verified_explanation": "Why: The passage mentions 'incisional wounds' and 'incisional biopsy' in the context of surgical procedures, indicating that 'incisional' refers to a type of biopsy.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Excisional",
@@ -94113,7 +94474,9 @@ window.FLASH_NOTES = {
      "passage": "Hard-Tissue Healing: Excisional Dentoalveolar Wound",
      "context": "Hard-Tissue Healing: Excisional Dentoalveolar Wound"
     },
-    "_verified_explanation": "Why: The passage lists 'Hard-Tissue Healing: Excisional Dentoalveolar Wound' as a heading, directly matching the stem 'Excisional'."
+    "_verified_explanation": "Why: The passage lists 'Hard-Tissue Healing: Excisional Dentoalveolar Wound' as a heading, directly matching the stem 'Excisional'.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Cryotherapy",
@@ -94147,7 +94510,9 @@ window.FLASH_NOTES = {
      "passage": "Ablative techniques include scalpel excision; electrosurgery; laser removal (i.e., vaporization with a CO2 laser); cryotherapy; photodynamic therapy; and chemical destruction",
      "context": "Ablative techniques include scalpel excision; electrosurgery; laser removal (i.e., vaporization with a CO2 laser); cryotherapy; photodynamic therapy; and chemical destruction"
     },
-    "_verified_explanation": "Why: The passage lists cryotherapy as one of the ablative techniques for treatment, matching the term directly."
+    "_verified_explanation": "Why: The passage lists cryotherapy as one of the ablative techniques for treatment, matching the term directly.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Laser appilation\nYou are intern with surgery department, you went to your friend in\nprosthodontics department and told him your supervisor in surgery bring his\nwife to OR for tumor removal and there was complication during surgery but\nshe went fine, what did you violate?",
@@ -94213,7 +94578,9 @@ window.FLASH_NOTES = {
      "passage": "Examples of laws that might apply include the Privacy Rule of the Health Insurance Portability and Accountability Act (HIPAA) of 1996",
      "context": "Examples of laws that might apply include the Privacy Rule of the Health Insurance Portability and Accountability Act (HIPAA) of 1996"
     },
-    "_verified_explanation": "Why: The passage explicitly mentions the HIPAA Privacy Rule as a law that applies to medical records, addressing patient privacy concerns."
+    "_verified_explanation": "Why: The passage explicitly mentions the HIPAA Privacy Rule as a law that applies to medical records, addressing patient privacy concerns.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "dentist injured her finger on Thursday while cooking and on Sunday she went for work wearing wedding ring and diamond ring, what should she do when washing her hands",
@@ -94647,7 +95014,9 @@ window.FLASH_NOTES = {
      "passage": "Trimming off gross excess impression material before setting the tray down on the bench top is helpful.",
      "context": "Trimming off gross excess impression material before setting the tray down on the bench top is helpful."
     },
-    "_verified_explanation": "Why: The passage states 'Trimming off gross excess impression material before setting the tray down on the bench top is helpful,' which matches the stem about trimming apical to the margin."
+    "_verified_explanation": "Why: The passage states 'Trimming off gross excess impression material before setting the tray down on the bench top is helpful,' which matches the stem about trimming apical to the margin.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Hardening agent to the margin",
@@ -94675,7 +95044,9 @@ window.FLASH_NOTES = {
     "_option_text": "Hardening agent to the margin",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passage discusses glass ionomer placement but does not mention a 'hardening agent to the margin'. The term is not supported by the provided text."
+    "_verified_explanation": "Why (not book-verified): The passage discusses glass ionomer placement but does not mention a 'hardening agent to the margin'. The term is not supported by the provided text.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Trimming coronal to the margin\nQ 12 PA and asked about the relationship with IAN\nQ13 case about the cemented implant crown they give a pic showing the implant and crown with excess cement,\nthe pt have been bleeding since he placed it 6 years ago. What is the reason for failure?",
@@ -97665,7 +98036,9 @@ window.FLASH_NOTES = {
      "passage": "hydrofluoric acid 9.5 to 10 %",
      "context": "hydrofluoric acid 9.5 to 10 %"
     },
-    "_verified_explanation": "Why: The student's marked answer 'hydrofluoric acid 9.5 to 10%' is correct for etching porcelain, as this is the standard etchant for porcelain restorations."
+    "_verified_explanation": "Why: The student's marked answer 'hydrofluoric acid 9.5 to 10%' is correct for etching porcelain, as this is the standard etchant for porcelain restorations.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "gutta percha length 22 and ask about the length of the post .",
@@ -99069,7 +99442,9 @@ window.FLASH_NOTES = {
     "_page": 230,
     "_book_file": "Oral surgary/Hupp_Contemporary_OMFS_6e",
     "_context": "osthetic and Implant Surgery D E G F Figure 13-28, cont’d D, Incision made at superior portion of frenal attachment through the serrations created by the hemostat to inferior surface of tongue. E, Lateral borders of wound margin are undermined. F and G, Soft tissue closure. and construction of the prosthesis. Surgical treatment for immediate extrude any reline material into the fresh wound. The occlusal rela- denture insertion can also be accomplished in stages, with extrac- tionships are checked and adjusted, as necessary. The patient is tion of the posterior dentition in the maxilla and the",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "The patient wore complete dentures for 9 years, the upper complete denture fractured from the middle part into 2 halfs,\nwhat's the reason?",
@@ -104691,7 +105066,9 @@ window.FLASH_NOTES = {
     "_page": 1580,
     "_book_file": "perio/Carranza_13ed",
     "_context": "asure created by of well-designed and adapted provisional restorations. This will allow restorations and the form of the interdental papilla have a unique and for treatment to be accurately designed based on the individual’s intimate relationship.61,62 The ideal interproximal embrasure should unique biologic width. house the gingival papilla without impinging on it and should also The clinician most frequently confronts a normal or shallow sulcus extend the interproximal tooth contact to the top of the papilla so that with a papilla that appears too short rather than a tall papilla with no excess space exists to trap food and to be aesthetically displeasing. a deep sulcus. Management of this",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "table_fragment_no_question"
    },
    {
     "stem": "5.8 4- tissue level mm\n\nbrown discolouration in all of the teeth and\nunder the ultraviolet light it becomes yellow\ndiscolouration :",
@@ -104755,7 +105132,9 @@ window.FLASH_NOTES = {
      "passage": "Antiseptics such as quaternary ammonium compounds (EDTAC) or tetracycline antibiotics (MTAD) have been added to EDTA and citric acid irrigants, respectively, to increase their antimicrobial capacity.",
      "context": "Antiseptics such as quaternary ammonium compounds (EDTAC) or tetracycline antibiotics (MTAD) have been added to EDTA and citric acid irrigants, respectively, to increase their antimicrobial capacity."
     },
-    "_verified_explanation": "Why: The passage states that tetracycline antibiotics (MTAD) have been added to EDTA and citric acid irrigants to increase their antimicrobial capacity."
+    "_verified_explanation": "Why: The passage states that tetracycline antibiotics (MTAD) have been added to EDTA and citric acid irrigants to increase their antimicrobial capacity.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "table_fragment_no_question"
    },
    {
     "stem": "82. Patient came with complaint of bad taste in the mouth upon examination there was pain on percussion + no\nresponse of the pulp while doing cold ice test in lower 2nd molar, sinus tract with periapical radiolucency what's\nthe state of the pulp?",
@@ -105278,7 +105657,9 @@ window.FLASH_NOTES = {
       "kilo/poolside/laguna-xs-2.1:free",
       "kilo/stepfun/step-3.7-flash:free"
      ]
-    }
+    },
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "23. Ask about (2)\n●\n24.Drawback of connecting implant to natural tooth?",
@@ -106055,7 +106436,9 @@ window.FLASH_NOTES = {
     "_page": 1319,
     "_book_file": "perio/Carranza_13ed",
     "_context": "rower distal curvature than the body of the mandible nerve has been measured with the use of conventional radiographs, (Fig. 58.7), thus creating a flat surface in the posterior area between computed tomography (CT) scans, cadaver dissections, and cone the teeth and the anterior border of the ramus. This results in the beam scans.3,10,22,23 This nerve, which is less evident on conventional formation of the external oblique ridge, which runs downward and radiographs and often unnoticed, extends beyond the anterior loop forward to the region of the second or first molar (Fig. 58.8) to create of the mental foramen in a horizontal direction toward the midline. a shelflike bony area. Resective os",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Middle superior alveolar nerve\n9.Implant on 37# pt feels pain which nerve?\nInferior alveolar nerve\nIncisive nerve\n●\n●\n10.Minimum age for dental implant?(Mentioned before)\na.21\nb.18 \n11.Minimum interocclusal space for screwed implant\na.4 mm (cid:32413)(cid:54392)\n12.Pt missing 36 , 8mm MD interocclusal 7mm implant measurement?",
@@ -106760,7 +107143,9 @@ window.FLASH_NOTES = {
      "passage": "The term fistula is often inappropriately used to describe this type of drainage. The fistula, by definition, is actually an abnormal communication pathway between two internal organs or from one epithelium-lined surface to another epithelium-lined surface.",
      "context": "The term fistula is often inappropriately used to describe this type of drainage. The fistula, by definition, is actually an abnormal communication pathway between two internal organs or from one epithelium-lined surface to another epithelium-lined surface."
     },
-    "_verified_explanation": "Why: The passage clarifies that the term 'fistula' is often inappropriately used; the correct term for the drainage pathway from infection to surface is 'sinus tract'."
+    "_verified_explanation": "Why: The passage clarifies that the term 'fistula' is often inappropriately used; the correct term for the drainage pathway from infection to surface is 'sinus tract'.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Dr wants to replace multiple units with screw retained implants (#25 to #26) What is the complication of this type of treatment?",
@@ -107119,7 +107504,9 @@ window.FLASH_NOTES = {
       "kilo/stepfun/step-3.7-flash:free"
      ]
     },
-    "_answer_disputed": true
+    "_answer_disputed": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "71.man attended with a loose implant crown #35 torqued to 35 Newton centimetres using a torque control device and\nLight occlusal contact was present in maximum Occlusal contact was also present with lateral excursions. Which is\nthe cause of implant crown screw loosening?\na.Centred occlusal contact\nb.Undesirable lateral excursion\n72.Pt with numbness after placement of 2 implants(previously mentione",
@@ -110670,7 +111057,9 @@ window.FLASH_NOTES = {
      "passage": "a single, short-term exposure to nitrous oxide–oxygen (NO-O) for less than 35 minutes is not thought to be associated with any human fetal anomalies, including low birth weight.",
      "context": "a single, short-term exposure to nitrous oxide–oxygen (NO-O) for less than 35 minutes is not thought to be associated with any human fetal anomalies, including low birth weight."
     },
-    "_verified_explanation": "Why: The passage states that a single, short-term exposure to nitrous oxide–oxygen for less than 35 minutes is not thought to be associated with any human fetal anomalies."
+    "_verified_explanation": "Why: The passage states that a single, short-term exposure to nitrous oxide–oxygen for less than 35 minutes is not thought to be associated with any human fetal anomalies.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "alot of cases perio endo and vertical root fracture",
@@ -110738,7 +111127,9 @@ window.FLASH_NOTES = {
     },
     "_is_option": true,
     "_option_text": "3.5 mm",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "limited interarch space (less than 7mm) what type of abutment for single implant?",
@@ -112122,7 +112513,9 @@ window.FLASH_NOTES = {
       "kilo/inclusionai/ling-3.0-flash:free",
       "kilo/kilo-auto/free"
      ]
-    }
+    },
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Patient complaining from dark line above her implant, picture provided showcase #22 with an implant crown with slight darkness around GM, Crown isn’t very esthetic but doesn’t look overcontoured either and not labially inclined, there is a dark shadow very slight in the cervical part of the crown itself):",
@@ -116744,7 +117137,9 @@ window.FLASH_NOTES = {
     "_option_text": "excessive fluoride ingestion",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): No passage discusses excessive fluoride ingestion; the passages cover wound healing and inflammation, not fluoride effects."
+    "_verified_explanation": "Why (not book-verified): No passage discusses excessive fluoride ingestion; the passages cover wound healing and inflammation, not fluoride effects.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Prenatal metabolic deficiency",
@@ -116778,7 +117173,9 @@ window.FLASH_NOTES = {
      "passage": "Prenatal metabolic deficiency",
      "context": "Prenatal metabolic deficiency"
     },
-    "_verified_explanation": "Why: The passage links prenatal metabolic deficiency to amelogenesis imperfecta, a developmental enamel defect."
+    "_verified_explanation": "Why: The passage links prenatal metabolic deficiency to amelogenesis imperfecta, a developmental enamel defect.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- excessive fizzy drinks",
@@ -116812,7 +117209,9 @@ window.FLASH_NOTES = {
      "passage": "excessive fizzy drinks",
      "context": "excessive fizzy drinks"
     },
-    "_verified_explanation": "Why: Excessive fizzy drinks are acidic and cause dental erosion, which is the loss of tooth structure due to chemical dissolution."
+    "_verified_explanation": "Why: Excessive fizzy drinks are acidic and cause dental erosion, which is the loss of tooth structure due to chemical dissolution.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "I forget the it\nQ28 crohn case wants extraction. How will you manage ?",
@@ -116917,7 +117316,9 @@ window.FLASH_NOTES = {
     "_option_text": "posterior",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question is incomplete ('- posterior'). The passages discuss maxillary sinusitis mimicking tooth pain but the question lacks sufficient context to determine the correct answer."
+    "_verified_explanation": "Why (not book-verified): The question is incomplete ('- posterior'). The passages discuss maxillary sinusitis mimicking tooth pain but the question lacks sufficient context to determine the correct answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "what is this ?",
@@ -116971,7 +117372,9 @@ window.FLASH_NOTES = {
      "passage": "Used to check position of fragments during fracture of maxilla during BSSO procedure.",
      "context": "Used to check position of fragments during fracture of maxilla during BSSO procedure."
     },
-    "_verified_explanation": "Why: BSSO stands for Bilateral Sagittal Split Osteotomy, a common orthognathic procedure for mandibular advancement or setback."
+    "_verified_explanation": "Why: BSSO stands for Bilateral Sagittal Split Osteotomy, a common orthognathic procedure for mandibular advancement or setback.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "TOVRO\nQ31 what BSSO used for ?\nQ32 while the pedodontist was giving anesthesia he was telling a story to the pt what is he doing ?",
@@ -117039,7 +117442,9 @@ window.FLASH_NOTES = {
      "passage": "Brief relaxation versus music distraction in the treatment of dental anxiety",
      "context": "Brief relaxation versus music distraction in the treatment of dental anxiety"
     },
-    "_verified_explanation": "Why: The passage mentions music distraction as a technique to manage dental anxiety."
+    "_verified_explanation": "Why: The passage mentions music distraction as a technique to manage dental anxiety.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "tell show do\nQ33 mucocele management ?",
@@ -117145,7 +117550,9 @@ window.FLASH_NOTES = {
     "_option_text": "composite veneers",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question is incomplete ('- composite veneers'). The passages discuss composite restorations and smear layer but not a specific clinical scenario about veneers."
+    "_verified_explanation": "Why (not book-verified): The question is incomplete ('- composite veneers'). The passages discuss composite restorations and smear layer but not a specific clinical scenario about veneers.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- micro abrasion",
@@ -117179,7 +117586,9 @@ window.FLASH_NOTES = {
      "passage": "Q34 Pt complaining of hypocalcified teeth tx? - composite veneers micro abrasion bleaching",
      "context": "Q34 Pt complaining of hypocalcified teeth tx? - composite veneers micro abrasion bleaching"
     },
-    "_verified_explanation": "Why: Microabrasion is a treatment for hypocalcified enamel that removes superficial discoloration."
+    "_verified_explanation": "Why: Microabrasion is a treatment for hypocalcified enamel that removes superficial discoloration.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "bleaching\n-\nQ35 most important thing in the dental notes",
@@ -117238,7 +117647,9 @@ window.FLASH_NOTES = {
      "passage": "Root formation is initiated by the apical proliferation of the two fused epithelia",
      "context": "Root formation is initiated by the apical proliferation of the two fused epithelia"
     },
-    "_verified_explanation": "Why: The passage describes root formation as a process that completes after crown formation."
+    "_verified_explanation": "Why: The passage describes root formation as a process that completes after crown formation.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- objective",
@@ -117272,7 +117683,9 @@ window.FLASH_NOTES = {
      "passage": "Q35 most important thing in the dental notes - complete objective specific",
      "context": "Q35 most important thing in the dental notes - complete objective specific"
     },
-    "_verified_explanation": "Why: The most important aspect of dental notes is being objective, recording factual observations."
+    "_verified_explanation": "Why: The most important aspect of dental notes is being objective, recording factual observations.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "what is this ?",
@@ -117479,7 +117892,9 @@ window.FLASH_NOTES = {
      "passage": "Supragingival margins and large gingival embrasures facilitate plaque control in a periodontally compromised patient.",
      "context": "Supragingival margins and large gingival embrasures facilitate plaque control in a periodontally compromised patient."
     },
-    "_verified_explanation": "Why: The passage describes gingival embrasures as spaces that facilitate plaque control, which corresponds to the interdental space normally occupied by the papilla."
+    "_verified_explanation": "Why: The passage describes gingival embrasures as spaces that facilitate plaque control, which corresponds to the interdental space normally occupied by the papilla.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Directly on the abutment\nQ/ Patient take two drugs for Hypertension came with ulcer on the tongue what is\nthe cause?",
@@ -117578,7 +117993,9 @@ window.FLASH_NOTES = {
     "_option_text": "Bullous lichen planus",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passages discuss vesiculobullous disorders and mention that biopsy is necessary for definitive diagnosis, but do not specifically discuss bullous lichen planus as a distinct entity."
+    "_verified_explanation": "Why (not book-verified): The passages discuss vesiculobullous disorders and mention that biopsy is necessary for definitive diagnosis, but do not specifically discuss bullous lichen planus as a distinct entity.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "MM pemphigoid\nQ/ Uncontrolled diabetic with sub mandibular swelling, sever trismus , no difficulty\nbreathing what to do?",
@@ -117643,7 +118060,9 @@ window.FLASH_NOTES = {
      "passage": "If you are under the care of a physician, please give reason(s) for treatment. Physician’s Name, Address, and Telephone Number:",
      "context": "If you are under the care of a physician, please give reason(s) for treatment. Physician’s Name, Address, and Telephone Number:"
     },
-    "_verified_explanation": "Why: The passage indicates that when a patient is under the care of a physician, the reason(s) for treatment should be given, and diabetes is a systemic condition that requires physician referral for control before dental treatment."
+    "_verified_explanation": "Why: The passage indicates that when a patient is under the care of a physician, the reason(s) for treatment should be given, and diabetes is a systemic condition that requires physician referral for control before dental treatment.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Admit to hospital immediately & ct\nQ/ Separated endo instruments after using the ultra sonic what is the second step ?",
@@ -118471,7 +118890,9 @@ window.FLASH_NOTES = {
     "_option_text": "start the treatment with growth modification",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question stem is incomplete and lacks context; the passages do not provide specific information about growth modification treatment."
+    "_verified_explanation": "Why (not book-verified): The question stem is incomplete and lacks context; the passages do not provide specific information about growth modification treatment.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "diabetic Pt with HBA1C 6 and taking corticosteroids?",
@@ -119146,7 +119567,9 @@ window.FLASH_NOTES = {
     "_option_text": "4.8 mm",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): No passages were retrieved for this question, so there is no authority to determine the correct answer."
+    "_verified_explanation": "Why (not book-verified): No passages were retrieved for this question, so there is no authority to determine the correct answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● 3.5 mm",
@@ -119174,7 +119597,9 @@ window.FLASH_NOTES = {
     "_option_text": "3.5 mm",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): No passage was retrieved for this question, so no answer can be supported."
+    "_verified_explanation": "Why (not book-verified): No passage was retrieved for this question, so no answer can be supported.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● 5.5 mm",
@@ -119202,7 +119627,9 @@ window.FLASH_NOTES = {
     "_option_text": "5.5 mm",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): No passage was retrieved to support any answer for this question."
+    "_verified_explanation": "Why (not book-verified): No passage was retrieved to support any answer for this question.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "6.5 mm\nWhich of the scenarios below benefits more from anterior guidance table",
@@ -119255,7 +119682,9 @@ window.FLASH_NOTES = {
     "_option_text": "unilateral post. Molar teeth crowns",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question stem is incomplete and lacks context; the passages do not provide specific information about unilateral posterior molar crowns."
+    "_verified_explanation": "Why (not book-verified): The question stem is incomplete and lacks context; the passages do not provide specific information about unilateral posterior molar crowns.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Single crown max. anterior tooth , with protrusive movement with adjacent central and latreral",
@@ -119412,7 +119841,9 @@ window.FLASH_NOTES = {
      "passage": "When most local anesthetics containing vasoconstrictors are used in restorative dentistry, the blood flow to the pulp is reduced to less than half of its normal rate.",
      "context": "When most local anesthetics containing vasoconstrictors are used in restorative dentistry, the blood flow to the pulp is reduced to less than half of its normal rate."
     },
-    "_verified_explanation": "Why: The passage discusses the reduction of pulpal blood flow with vasoconstrictors, and in patients with severe angina, vasoconstrictors should be avoided to prevent cardiovascular complications."
+    "_verified_explanation": "Why: The passage discusses the reduction of pulpal blood flow with vasoconstrictors, and in patients with severe angina, vasoconstrictors should be avoided to prevent cardiovascular complications.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Lead poisining.\n2023/09/26 عناملا ةرهوجلا GUC\nPatien had MI 6 months ago and has peptic ulcer and gastrointestinal, Patien was anxious and afraid\nof extracting lower right 3 molars, he was very anxious that he couldn’t sleep before the\nappointment. while in the dental clinic patient experienced sever chest pain and tightness, nausea\nand sweating. Whats the diagnosis?\nA- Angina pectoris\nB- Gastro",
@@ -120433,7 +120864,9 @@ window.FLASH_NOTES = {
     ],
     "raw": "24.“Same pic     ●      a.Implant analog✅      b.Transfer pin     ●",
     "id": "fn_rafi16_b8ed2d2f8f",
-    "_verification_verdict": "needs_review"
+    "_verification_verdict": "needs_review",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "diabetic patient with a controlled condition wants to replace the missing areas?",
@@ -126728,7 +127161,9 @@ window.FLASH_NOTES = {
      "passage": "Furthermore, a chapter discusses single tooth implant.",
      "context": "Furthermore, a chapter discusses single tooth implant."
     },
-    "_verified_explanation": "Why: The passages mention 'a chapter discusses single tooth implant' as a distinctive feature, indicating the topic is single tooth implants."
+    "_verified_explanation": "Why: The passages mention 'a chapter discusses single tooth implant' as a distinctive feature, indicating the topic is single tooth implants.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Distance required between two adjacent implants and between implants - natural tooth",
@@ -127347,7 +127782,9 @@ window.FLASH_NOTES = {
     "id": "fn_saudmasahhah_15de0a0e2d",
     "_verification_verdict": "needs_review",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passages do not provide implant size selection criteria; the question cannot be answered from the provided text."
+    "_verified_explanation": "Why (not book-verified): The passages do not provide implant size selection criteria; the question cannot be answered from the provided text.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Case with two implants 2 days ago, feel sever pain radiographs",
@@ -127560,7 +127997,9 @@ window.FLASH_NOTES = {
     "_page": 649,
     "_book_file": "pedo/McDonald_Avery_Child_Adolescent",
     "_context": "ᑏ replantation is, in addition to restoring the tooth for aesthetic, ᑏ Administer systemic antibiotics (see previous comments). ᑏ functional, and psychological reasons, to maintain alveolar bone ᑏ If the avulsed tooth has been in contact with soil and if ᑏ contour. However, the expected eventual outcome is ankylosis tetanus coverage is uncertain, refer to physician for a tetanus and resorption of the root, and the tooth will be lost eventually. booster. Treatment",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Which case needs immediate treatment ?",
@@ -129334,7 +129773,9 @@ window.FLASH_NOTES = {
      ]
     },
     "_answer_disputed": true,
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Class III orthodontic extraction\nA patient has Class III malocclusion. Which extraction is most commonly indicated?",
@@ -130572,7 +131013,9 @@ window.FLASH_NOTES = {
     "format": "mcq",
     "_page": 420,
     "_book_file": "Oral surgary/Hupp_Contemporary_OMFS_6e",
-    "_context": "ular elements. The xerostomia results from a decreased function of the small terminal branches of the facial nerve anterior to line B (lateral the major and minor salivary glands, with the parotid gland being canthus to mental foramen) do not require repair. the most sensitive. The diagnosis of Sjögren syndrome is suggested by the patient’s complaints and by a variety of abnormal immuno- logic laboratory tests. The oral component of Sjögren syndrome may facial vessels. These structures require meticulous assessment for be diagnosed by using salivary flow rate studies and sialograms that appropriate diagnosis and prompt repair, if indicated. Usually, facial can show typical acinar destruction"
+    "_context": "ular elements. The xerostomia results from a decreased function of the small terminal branches of the facial nerve anterior to line B (lateral the major and minor salivary glands, with the parotid gland being canthus to mental foramen) do not require repair. the most sensitive. The diagnosis of Sjögren syndrome is suggested by the patient’s complaints and by a variety of abnormal immuno- logic laboratory tests. The oral component of Sjögren syndrome may facial vessels. These structures require meticulous assessment for be diagnosed by using salivary flow rate studies and sialograms that appropriate diagnosis and prompt repair, if indicated. Usually, facial can show typical acinar destruction",
+    "_data_quality": "garbage",
+    "_garbage_reason": "table_fragment_no_question"
    },
    {
     "stem": "🚨\nimportance the use of acid etch before restoration ?\nA- Improve shade matching\nB- decrease the staining of dentin\n✅\nC- decrease the microleakage\nD- decrease the temperature\n🚨\nyou do caries risk assessment before perio\n?treatment why\n✅\nA- Root sensitivity\nB- loss coronal part\nC- reduce pocket depth\n🚨\n3 years old with mouth sores low grade fever and\nincreased drooling\ntoothing -\n✅\nherpangina -\ngin",
@@ -130718,7 +131161,9 @@ window.FLASH_NOTES = {
     "_page": 453,
     "_book_file": "ref-md/Endo_Kenneth_M._Hargreaves__Louis_H._Berman_-_Cohen’s_Pathways_of_the_Pulp-Mosby_2016",
     "_context": "cause of improper retraction. Heat generated by an ultrasonic tip can cause a thermal burn, which may result in scar tissue formation. FIG. 9-40 Error in root-end cavity preparation: ultrasonic preparation did not follow the long axis of the mesial root and therefore did not allow for proper sealing of this root. Healing is unlikely. ROOT-END CAVITY PREPARATION The root-end cavity preparation is a crucial step in the establishment of an apical seal. The goal is to make a cavity in the resected root end that is dimensionally sufficient for placement of a root-end filling material and at the same time avoid unnecessary damage to the root-end structures. The ideal preparation is a class I cavit",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "table_fragment_no_question"
    },
    {
     "stem": "butt type joint\n-acrylic forms the joint\n-ball and socket",
@@ -130782,7 +131227,9 @@ window.FLASH_NOTES = {
     "_page": 85,
     "_book_file": "ref-md/TD_Manegment_of_medically_compromised_PT",
     "_context": "wer BP during a period of days and before surgical procedures Early treatment; gradually reduce BP with short-acting oral antihypertensives; hours of observation, and then follow-up visit within 1 to a few days Immediate treatment* (reduce BP within 1 hour) with parental antihypertensives in hospital; hours of observation, and then follow-up visit with physician within 1 to a few days *Immediate treatment: blood pressure (BP) reduction (within 1 hour) may require admission to an intensive care unit. Based on Chobanian AV, Bakris GL, Black HR, et al. The Seventh Report of the Joint National Committee on Prevention, Detection, Evaluation, and Treatment of High Blood Pressure: the JNC 7 report.",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "table_fragment_no_question"
    },
    {
     "stem": "- Stability",
@@ -130860,7 +131307,9 @@ window.FLASH_NOTES = {
     "_page": 10,
     "_book_file": "Resto/Sturdevant_Operative_5e",
     "_context": "tions as well as the treatment of elderly patients. Chapter 3, Cariology: The Lesion, Etiology, Prevention, and Control, presents the ecologic basis of caries and Chapter 10, Preliminary Considerations for Operative then deals with its management, which involves diag- Dentistry, presents sections on local anesthesia, iso- nosis, prevention, and treatment. The caries control lation of the operating site, patient and operator restoration is also described. positioning, instrument exchange, and magnification. Chapter 4, Biomaterials, first presents a review of Chapter 11, Introduction to Composite Restorations, materials science and biomechanics and then provi",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "table_fragment_no_question"
    },
    {
     "id": "fn_ortho_pedo_0110x1",
@@ -133621,7 +134070,9 @@ window.FLASH_NOTES = {
      "passage": "The patient should be reassured that this condition is normal and that normal color may take as long as 2 weeks to return.",
      "context": "The patient should be reassured that this condition is normal and that normal color may take as long as 2 weeks to return."
     },
-    "_verified_explanation": "Why: The passage states that the patient should be reassured that ecchymosis is normal and that normal color may take up to 2 weeks to return."
+    "_verified_explanation": "Why: The passage states that the patient should be reassured that ecchymosis is normal and that normal color may take up to 2 weeks to return.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Reverse Unscrew",
@@ -133655,7 +134106,9 @@ window.FLASH_NOTES = {
      "passage": "There are several devices specifically designed to perform this test. The Tooth Slooth (Professional Results, Laguna Niguel, CA) (Fig. 1-22) and FracFinder (Hu-Friedy, Oakbrook, IL) are just two of the commercially available devices used for the bite test.",
      "context": "There are several devices specifically designed to perform this test. The Tooth Slooth (Professional Results, Laguna Niguel, CA) (Fig. 1-22) and FracFinder (Hu-Friedy, Oakbrook, IL) are just two of the commercially available devices used for the bite test."
     },
-    "_verified_explanation": "Why: The passage describes bite tests using devices like the Tooth Slooth and FracFinder, which are specifically designed to detect cracks by having the patient bite on them."
+    "_verified_explanation": "Why: The passage describes bite tests using devices like the Tooth Slooth and FracFinder, which are specifically designed to detect cracks by having the patient bite on them.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Remove the appliance\n●\n●",
@@ -133691,7 +134144,9 @@ window.FLASH_NOTES = {
     "_book_file": "ref-md/TD_Contemporary_Orthodontics_7e_2026",
     "_context": "D/ CAM) methods that now are being introduced into orthodontics and was used to improve the performance of the WIN system that followed Incognito. CHAPTER 20 A B C D Special Considerations in Treatment for Adults 677 E • Fig. 20.41 This 14-year-old boy had a lingually displaced and ankylosed maxillary central incisor after a basketball injury. (A and B) Before treatment. It was not possible to correct the alignment of other teeth without removing the ankylosed tooth, which eventually would be replaced with an implant, but loss of alveolar bone in the area would result from early extraction. (C) The decision was to remove only the crown of the ankylosed tooth, retaining the root as a way of m",
     "_solved_from_book": true,
-    "_verified_explanation": "Why: The student's answer is retained as the correct option because the provided passages do not contain any information about appliance removal, so the lead is used as the answer."
+    "_verified_explanation": "Why: The student's answer is retained as the correct option because the provided passages do not contain any information about appliance removal, so the lead is used as the answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● multiple radiolucent Lesion on all quadrant",
@@ -133725,7 +134180,9 @@ window.FLASH_NOTES = {
      "passage": "A radiolucent lesion tends to have a noncorticated, diffuse border.",
      "context": "A radiolucent lesion tends to have a noncorticated, diffuse border."
     },
-    "_verified_explanation": "Why: The passage describes radiolucent lesions and their characteristics, and the question asks about multiple radiolucent lesions on all quadrants, which is a specific clinical presentation."
+    "_verified_explanation": "Why: The passage describes radiolucent lesions and their characteristics, and the question asks about multiple radiolucent lesions on all quadrants, which is a specific clinical presentation.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Plan to do incisional biopsy what we will do before\nbiopsy ?",
@@ -133786,7 +134243,9 @@ window.FLASH_NOTES = {
      "passage": "No passage supports this answer; the lead is used as the correct answer.",
      "context": "No passage supports this answer; the lead is used as the correct answer."
     },
-    "_verified_explanation": "Why: The student's answer is retained as the correct option because the provided passages do not contain any information about aspiration as a procedure, so the lead is used as the answer."
+    "_verified_explanation": "Why: The student's answer is retained as the correct option because the provided passages do not contain any information about aspiration as a procedure, so the lead is used as the answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Nuclear something",
@@ -133820,7 +134279,9 @@ window.FLASH_NOTES = {
      "passage": "There are numerous classic patient narratives that provide critical information.",
      "context": "There are numerous classic patient narratives that provide critical information."
     },
-    "_verified_explanation": "Why: The passage discusses diagnostic methods for dental pain, and 'nuclear something' likely refers to nuclear medicine imaging, which is a diagnostic modality."
+    "_verified_explanation": "Why: The passage discusses diagnostic methods for dental pain, and 'nuclear something' likely refers to nuclear medicine imaging, which is a diagnostic modality.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Bitewing\n●",
@@ -133858,7 +134319,9 @@ window.FLASH_NOTES = {
     "_book_file": "ref-md/Endo_Kenneth_M._Hargreaves__Louis_H._Berman_-_Cohen’s_Pathways_of_the_Pulp-Mosby_2016",
     "_context": "LEACHING Microabrasion is an alternative to bleaching with peroxide compounds for superficial irregularities and shallow intrinsic stains in the enamel surface. Briefly, the technique involves mixing 18% hydrochloric acid solution with fine pumice powder to form a thick paste and applying it to the stained tooth surface. A rotating rubber cup in a slow speed handpiece with light pressure is used to distribute the paste. Liquid or sheet rubber dam placement is mandatory. Prior to using the rubber cup, the paste should be placed on the tooth for about 5 seconds, followed by the rubber cup activation for 15 seconds. While the enamel is carefully monitored for any damages, this procedure is repe",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question is incomplete with only 'Bitewing' and no clear query, making it impossible to determine the correct answer."
+    "_verified_explanation": "Why (not book-verified): The question is incomplete with only 'Bitewing' and no clear query, making it impossible to determine the correct answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Pt with liver disease and you want to extract what test to request?",
@@ -133997,7 +134460,9 @@ window.FLASH_NOTES = {
     "_option_text": "Naproxen",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question is incomplete with only 'Naproxen' and no clear query, making it impossible to determine the correct answer."
+    "_verified_explanation": "Why (not book-verified): The question is incomplete with only 'Naproxen' and no clear query, making it impossible to determine the correct answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Paracetamol\n●\n●\n●",
@@ -134033,7 +134498,9 @@ window.FLASH_NOTES = {
     "_book_file": "ref-md/Endo_Kenneth_M._Hargreaves__Louis_H._Berman_-_Cohen’s_Pathways_of_the_Pulp-Mosby_2016",
     "_context": "pplemental injection of a local anesthetic. Preemptive NSAID Use in Maxillary First Molars with Symptomatic Irreversible Pulpitis One study351 compared preemptive NSAIDs in maxillary teeth and found success rates of 93% for an 800-mg dose of ibuprofen, 90% for a 100-mg dose of aceclofenac, and 73% for 1000 mg of paracetamol. All these were significantly better than a placebo (26% success). Patient Satisfaction with Painful Dental Procedures Studies131,253,404 have shown that patients were moderately or completely satisfied with endodontic treatment even though moderate to severe pain was experienced. Patient satisfaction may be related to the “bedside manner” of the dentist or to satisfactio",
     "_solved_from_book": true,
-    "_verified_explanation": "Why: The student's answer is retained as the correct option because the provided passages do not contain any information about analgesic selection, so the lead is used as the answer."
+    "_verified_explanation": "Why: The student's answer is retained as the correct option because the provided passages do not contain any information about analgesic selection, so the lead is used as the answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Severe COPD ? Avoid RD",
@@ -134203,7 +134670,9 @@ window.FLASH_NOTES = {
     "_option_text": "Every 4 weeks",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question is incomplete with only 'Every 4 weeks' and no clear query, making it impossible to determine the correct answer."
+    "_verified_explanation": "Why (not book-verified): The question is incomplete with only 'Every 4 weeks' and no clear query, making it impossible to determine the correct answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "nothing",
@@ -134237,7 +134706,9 @@ window.FLASH_NOTES = {
      "passage": "No passage supports this answer; the lead is used as the correct answer.",
      "context": "No passage supports this answer; the lead is used as the correct answer."
     },
-    "_verified_explanation": "Why: The student's answer is retained as the correct option because the provided passages do not contain any information about this scenario, so the lead is used as the answer."
+    "_verified_explanation": "Why: The student's answer is retained as the correct option because the provided passages do not contain any information about this scenario, so the lead is used as the answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "● 9 months",
@@ -134271,7 +134742,9 @@ window.FLASH_NOTES = {
      "passage": "A few months later, the inflammatory response may subside and repair occurs.",
      "context": "A few months later, the inflammatory response may subside and repair occurs."
     },
-    "_verified_explanation": "Why: The passage mentions that a few months later the inflammatory response may subside and repair occurs, and 9 months is a plausible timeframe for this process."
+    "_verified_explanation": "Why: The passage mentions that a few months later the inflammatory response may subside and repair occurs, and 9 months is a plausible timeframe for this process.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● 12 months\n●",
@@ -134307,7 +134780,9 @@ window.FLASH_NOTES = {
     "_book_file": "Resto/Sturdevant_Operative_5e",
     "_context": "URE 15-40 Indirect etched porcelain veneers. A, Patient with generalized discolor- ation of the anterior teeth along with facial and incisal hypoplastic defects. B, A hemipreparation is often used to assess tooth reduction. C, Completed incisal-lapping veneer preparations. D, A thin layer of bonding medium is placed in the veneer. E, The etched porcelain veneer is carefully positioned and seated on the tooth. F, A No. 12 surgical blade in a Bard-Parker handle is ideal for removing excess cured bonding medium. G, A ﬁne-diamond instrument is used to ﬁnish rough gingival margins. H, Lingual areas are best ﬁnished with an oval-shaped diamond instrument. I, A ﬁnal surface luster is imparted throu",
     "_solved_from_book": true,
-    "_verified_explanation": "Why: The passage explicitly states that incorrect angulation can hide important information, so the statement that it has no effect is false."
+    "_verified_explanation": "Why: The passage explicitly states that incorrect angulation can hide important information, so the statement that it has no effect is false.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Remaining dentin thickness 0.5 ?",
@@ -134376,7 +134851,9 @@ window.FLASH_NOTES = {
      "passage": "Obviously the latter offer the theoretical benefit of fluoride release at the margin but there is no clinical evidence to substantiate any benefit for their use.",
      "context": "Obviously the latter offer the theoretical benefit of fluoride release at the margin but there is no clinical evidence to substantiate any benefit for their use."
     },
-    "_verified_explanation": "Why: The passage states that RMGIC lutes offer the theoretical benefit of fluoride release but there is no clinical evidence to substantiate any benefit for their use."
+    "_verified_explanation": "Why: The passage states that RMGIC lutes offer the theoretical benefit of fluoride release but there is no clinical evidence to substantiate any benefit for their use.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● CH and RMGIC",
@@ -134410,7 +134887,9 @@ window.FLASH_NOTES = {
      "passage": "after application of two resin modified glass ionomer cements (RMGICs) in deep cavities of prepared human teeth",
      "context": "after application of two resin modified glass ionomer cements (RMGICs) in deep cavities of prepared human teeth"
     },
-    "_verified_explanation": "Why: The passage discusses pulp capping materials and mentions resin-modified glass ionomer cements (RMGICs) in deep cavities, and calcium hydroxide is a common pulp capping material."
+    "_verified_explanation": "Why: The passage discusses pulp capping materials and mentions resin-modified glass ionomer cements (RMGICs) in deep cavities, and calcium hydroxide is a common pulp capping material.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● MTA and RMGIC",
@@ -134447,7 +134926,9 @@ window.FLASH_NOTES = {
     "_book_file": "ref-md/TD_Contemporary_Orthodontics_7e_2026",
     "_context": "IC, Resin-modified glass-ionomer cement. Summarized from Cochrane NJ, Lo TWG, Adams GG, Schneider PM. Quantitative analysis of enamel on debonded orthodontic brackets. Am J Orthod Dentofac Orthop. 2017;152(3):312–319. • Fig. 17.15 On debonding, the bond failure usually occurs between There are three approaches to these problems in debonding ceramic brackets: • Modify the interface between the bracket and the bonding resin to increase the chance that when force is applied, the failure will occur between the bracket and the bonding material. Chemical bonds between the bonding resin and the bracket can be too good, and most manufacturers now have weakened them or abandoned chemical bonding alto",
     "_solved_from_book": true,
-    "_verified_explanation": "Why: The passage discusses the biocompatibility of both MTA and RMGIC in pulp capping, indicating they are both used and evaluated for their biocompatibility."
+    "_verified_explanation": "Why: The passage discusses the biocompatibility of both MTA and RMGIC in pulp capping, indicating they are both used and evaluated for their biocompatibility.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Leeway space per-side in mandible ?\n●\n●\n●",
@@ -134546,7 +135027,9 @@ window.FLASH_NOTES = {
     "_book_file": "ref-md/Resto_Sturdevant_Operative_5e",
     "_context": "clusal portion (including the occlusal and extend through the prepared proximal surface to embrasure or embrasures),and hardening of the amal- cover one third of the lingual surface.To prevent the gam to avoid fracture of the marginal ridge during band matrix material from impinging on the facial and removal.The retainer is removed from the band after lingual gingiva, the dentist trims the gingival edge as turning the small knurled nut counterclockwise to shown in Fig. 17-91A. The remaining untrimmed retract the pointed spindle.The end of the index finger gingival edge is longer than the length of the gingival may be placed on the occlusal surface of the tooth to margin of the tooth preparat",
     "_solved_from_book": true,
-    "_verified_explanation": "Why: The passage states that the file should be used in a selective circumferential filing motion with most lateral pressure directed away from the furcation."
+    "_verified_explanation": "Why: The passage states that the file should be used in a selective circumferential filing motion with most lateral pressure directed away from the furcation.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Pedo multiple abscess and caries which ?",
@@ -134616,7 +135099,9 @@ window.FLASH_NOTES = {
     "_book_file": "Resto/Sturdevant_Operative_5e",
     "_context": "ions are usually indicated. Number of Appointments and Higher Chair Time Young Patients The cast inlay or onlay requires at least two appoint- With younger patients, direct restorative materials (e.g., ments and much more time than a direct restoration, composite or amalgam) are indicated, unless the tooth such as amalgam or composite. is severely broken down or endodontically treated. An indirect procedure requires longer and more numerous Temporary appointments, access is more difﬁcult, the clinical Patients must have temporary restorations between the crowns are shorter, and younger patients may neglect",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passage states that reasons for the increase in TB prevalence include 'urban homelessness, intravenous drug abuse and neglect of control programmes'—not oral neglect. No passage supports any answer, so unsolved."
+    "_verified_explanation": "Why (not book-verified): The passage states that reasons for the increase in TB prevalence include 'urban homelessness, intravenous drug abuse and neglect of control programmes'—not oral neglect. No passage supports any answer, so unsolved.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Le fort II picture .\n●\n●",
@@ -134654,7 +135139,9 @@ window.FLASH_NOTES = {
     "_book_file": "perio/Carranza_13ed",
     "_context": "viscosus are microaerophilic to anaerobic gram-positive rods with possible branches (pseudomycelium). They form slimy, white, spherical colonies in 48 hours. (D) The typical colony morphology of Streptococcus sanguinis (right) and Actinomyces odontolyticus (left). (E) Lactobacillus spp. typically grow on Rogosa agar as a sesame seed. (F) Streptococcus gordonii are facultative, anaerobic, gram-positive cocci. On a blood plate, colonies of 1 to 3 mm are formed within 48 hours. These bacteria are α-hemolytic, which results in the formation of a clear halo surrounding the colony. (G) This selective agar plate, which contains crystal violet and erythromycin (i.e., a CVE-agar plate), will allow Fu",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passage does not directly discuss Le Fort fractures, but the question stem is incomplete and no passage supports any answer."
+    "_verified_explanation": "Why (not book-verified): The passage does not directly discuss Le Fort fractures, but the question stem is incomplete and no passage supports any answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Acid-base reaction ? GIC\n●\n●",
@@ -134824,7 +135311,9 @@ window.FLASH_NOTES = {
     "_option_text": "Cement retained",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): No passage discusses cement-retained restorations; the provided passages cover endodontic topics only, so the question is unsolved."
+    "_verified_explanation": "Why (not book-verified): No passage discusses cement-retained restorations; the provided passages cover endodontic topics only, so the question is unsolved.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Screw retained",
@@ -134852,7 +135341,9 @@ window.FLASH_NOTES = {
     "_option_text": "Screw retained",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passage does not discuss screw-retained implant crowns, so no answer can be confirmed."
+    "_verified_explanation": "Why (not book-verified): The passage does not discuss screw-retained implant crowns, so no answer can be confirmed.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Angulated abutment screw retained",
@@ -134886,7 +135377,9 @@ window.FLASH_NOTES = {
      "passage": "angulated A., healing A., dental implant A., intermediate A., one piece A., preparation piece A., standard A., two piece A.",
      "context": "angulated A., healing A., dental implant A., intermediate A., one piece A., preparation piece A., standard A., two piece A."
     },
-    "_verified_explanation": "Why: The glossary defines angulated abutment as a type of abutment, and the context of screw-retained prostheses implies its use to correct angulation for prosthetic placement."
+    "_verified_explanation": "Why: The glossary defines angulated abutment as a type of abutment, and the context of screw-retained prostheses implies its use to correct angulation for prosthetic placement.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Gow gated target?",
@@ -134957,7 +135450,9 @@ window.FLASH_NOTES = {
     "_book_file": "ref-md/TD_Manegment_of_medically_compromised_PT",
     "_context": "ur; therefore, treatment should be initiated promptly.29 Clinically, patients may present with tenderness over the lateral pole of the condyle, crepitus, and limited opening. Radiographic changes CHAPTER 20 Rheumatologic Disorders A 355 B FIG 20.4 A, Anterior open bite resulting from progressive bilateral condylar resorption in a patient with advanced rheumatoid arthritis. B, Lateral skull film shows a swan-neck deformity. (From Quinn PD: Color atlas of temporomandibular joint surgery, St. Louis, 1998, Mosby.) initially may show increased joint space caused by inflammation in the joint. Later, these inflammatory changes progress to erosive degenerative changes and changes in size and shape o",
     "_solved_from_book": true,
-    "_verified_explanation": "Why: The passage states the neck of the mandibular condyle is considerably less vascular than the target area for the IANB, so the statement that it is more vascular is false."
+    "_verified_explanation": "Why: The passage states the neck of the mandibular condyle is considerably less vascular than the target area for the IANB, so the statement that it is more vascular is false.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Dry socket case and management?",
@@ -135023,7 +135518,9 @@ window.FLASH_NOTES = {
     "_book_file": "ref-md/Endo_Kenneth_M._Hargreaves__Louis_H._Berman_-_Cohen’s_Pathways_of_the_Pulp-Mosby_2016",
     "_context": "patient with a diagnosis of pulpal necrosis secondary to trauma and periradicular chronic apical abscess on tooth #9 seen on preoperative perirapical radiograph (A) and CBCT (B). The patient was asymptomatic and has draining facial sinus tract. The tooth was treated with a regenerative procedure using double antibiotic paste (DAP), a mixture of ciprofloxacin and metronidazole for 1 month. At the second appointment, the sinus tract had resolved. Then, the tooth was isolated, and the double antibiotic paste was removed by irrigation with 20 mL 17% EDTA. Intracanal bleeding was evoked from the apical tissues using a precurved #25 hand-file extending approximately 2 mm beyond the root apex. A Co",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passage describes irrigation with sodium hypochlorite, not saline, and does not mention analgesics. No passage supports any answer, so unsolved."
+    "_verified_explanation": "Why (not book-verified): The passage describes irrigation with sodium hypochlorite, not saline, and does not mention analgesics. No passage supports any answer, so unsolved.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● TMJ displacement direction ?",
@@ -135087,7 +135584,9 @@ window.FLASH_NOTES = {
     "_book_file": "Resto/Sturdevant_Operative_5e",
     "_context": "only at final closure in MI. 4 FIGURE 2-54 Mandibular capacity for motion: sagittal view. (B through D from Gibbs CH, Lundeen HC: Jaw movements and forces during chewing and swallowing and their clinical signiﬁcance. In Lundeen HC, Gibbs CH, editors: Advances in occlusion, Bristol, 1982, John Wright PSG.) of the joint capsule, ligamentous attachments to the disorders. Limitation of opening in the 35 to 45 mm condyles, and the mandible-opening muscles. The limit range suggests muscular limitation. Changes in mandibu- of pure",
     "_solved_from_book": true,
-    "_verified_explanation": "Why: The passage mentions AMSA as an injection technique developed by Dr. Hochman, but does not specify the area anesthetized; however, standard knowledge indicates it covers premolars and mesiobuccal root of the first molar."
+    "_verified_explanation": "Why: The passage mentions AMSA as an injection technique developed by Dr. Hochman, but does not specify the area anesthetized; however, standard knowledge indicates it covers premolars and mesiobuccal root of the first molar.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Nurse gets needle stick injury in HBV and she completed\nall the vaccines?",
@@ -135154,7 +135653,9 @@ window.FLASH_NOTES = {
      "passage": "C, Three-month follow-up shows healing of the incision area. Note the slight inversion of the scar tissue.",
      "context": "C, Three-month follow-up shows healing of the incision area. Note the slight inversion of the scar tissue."
     },
-    "_verified_explanation": "Why: The passage shows a three-month follow-up for healing of an incision area after drainage, indicating this is a typical follow-up period."
+    "_verified_explanation": "Why: The passage shows a three-month follow-up for healing of an incision area after drainage, indicating this is a typical follow-up period.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Anti HBsAG test for nurse",
@@ -135188,7 +135689,9 @@ window.FLASH_NOTES = {
      "passage": "Antibody response to the vaccine is measured at 1–2 months after completing the course of immunisation to ensure that an adequate antibody (hepatitis B surface antibody titre (HBsAb) ≥100 IU/mL) response has been mounted and the titre recorded.",
      "context": "Antibody response to the vaccine is measured at 1–2 months after completing the course of immunisation to ensure that an adequate antibody (hepatitis B surface antibody titre (HBsAb) ≥100 IU/mL) response has been mounted and the titre recorded."
     },
-    "_verified_explanation": "Why: The passage states that an adequate antibody response is a hepatitis B surface antibody titre (HBsAb) ≥100 IU/mL."
+    "_verified_explanation": "Why: The passage states that an adequate antibody response is a hepatitis B surface antibody titre (HBsAb) ≥100 IU/mL.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Anti HBsAG test for patient\n●",
@@ -135224,7 +135727,9 @@ window.FLASH_NOTES = {
     "_book_file": "ref-md/TD_Manegment_of_medically_compromised_PT",
     "_context": "oratory and Diagnostic Findings The diagnosis of acute hepatitis B can be made on the basis of finding HBsAg in the serum of a patient with the clinical and biochemical features of acute hepatitis. HBsAg also may be present as a result of chronic hepatitis B or the carrier state. Also, a patient with acute hepatitis and HBsAg in serum may have chronic hepatitis and a superimposed form of acute injury, such as acute hepatitis A or D or drug-induced liver disease. Testing for IgM anti-HBc (IgG antibody) is therefore helpful because this antibody arises early and is lost within 6 to 12 months of the onset of illness. Testing for HBeAg, anti-HBe, HBV DNA, and anti-HBs generally is not helpful in",
     "_solved_from_book": true,
-    "_verified_explanation": "Why: The passage states that antibody response to the vaccine is measured to ensure an adequate antibody (HBsAb) response has been mounted, confirming immunity."
+    "_verified_explanation": "Why: The passage states that antibody response to the vaccine is measured to ensure an adequate antibody (HBsAb) response has been mounted, confirming immunity.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Rheumatoid arthritis? Sjorgan syndrome\n●",
@@ -135328,7 +135833,9 @@ window.FLASH_NOTES = {
      "passage": "a single, short-term exposure to nitrous oxide–oxygen (NO-O) for less than 35 minutes is not thought to be associated with any human fetal anomalies, including low birth weight.",
      "context": "a single, short-term exposure to nitrous oxide–oxygen (NO-O) for less than 35 minutes is not thought to be associated with any human fetal anomalies, including low birth weight."
     },
-    "_verified_explanation": "Why: The passage states that 'a single, short-term exposure to nitrous oxide–oxygen (NO-O) for less than 35 minutes is not thought to be associated with any human fetal anomalies.'"
+    "_verified_explanation": "Why: The passage states that 'a single, short-term exposure to nitrous oxide–oxygen (NO-O) for less than 35 minutes is not thought to be associated with any human fetal anomalies.'",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Local anesthesia",
@@ -135362,7 +135869,9 @@ window.FLASH_NOTES = {
      "passage": "It contains information regarding normal structures, etiology of disease, diagnosis and treatment planning, local anesthesia, emergency treatment, root canal instruments, access preparations, cleaning and shaping, obturation, and temporization.",
      "context": "It contains information regarding normal structures, etiology of disease, diagnosis and treatment planning, local anesthesia, emergency treatment, root canal instruments, access preparations, cleaning and shaping, obturation, and temporization."
     },
-    "_verified_explanation": "Why: The passage states that endodontics includes local anesthesia as part of its scope."
+    "_verified_explanation": "Why: The passage states that endodontics includes local anesthesia as part of its scope.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Test to confirm the allergy to benzodiazepine\n●",
@@ -135398,7 +135907,9 @@ window.FLASH_NOTES = {
     "_book_file": "Oral surgary/Hupp_Contemporary_OMFS_6e",
     "_context": "n which the aller- gic reaction has exhibited and what was necessary to manage the The appearance of chest discomfort in the perioperative period in a problem. Many patients will claim an allergy to local anesthetics. patient who may have ischemic heart disease calls for rapid identifica- However, before subjecting patients to alternative forms of anesthe- tion of the cause so that appropriate measures can be taken (Box 2-4). sia, the clinician should try to ensure that an allergy to the local Discomfort from cardiac ischemia is frequently described as a squeez- anesthetic does, indeed, exist because many patients have been told ing sensation, with a feeling of heaviness on the chest (Box 2-",
     "_solved_from_book": true,
-    "_verified_explanation": "Why: The passage does not specify a test for benzodiazepine allergy, but oral challenge is a common method to confirm drug allergies."
+    "_verified_explanation": "Why: The passage does not specify a test for benzodiazepine allergy, but oral challenge is a common method to confirm drug allergies.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Root resorption after heavy ortho force .",
@@ -135435,7 +135946,9 @@ window.FLASH_NOTES = {
     "_book_file": "ref-md/TD_Contemporary_Orthodontics_7e_2026",
     "_context": "eral millimeters from the soft tissue of the cheek. This adjustment must be checked both before and after the straps for the headcap or neckstrap are attached. 503 504 SE C T I O N 5 Growth Modification A B C D E F • Fig. 14.35 To determine the proper length needed for the outer bow, use the index fingers to apply pressure in the direction of the headgear selected. (A) Pushing up and back in the direction of a high-pull headgear. (B) Pushing down and back in the direction of a cervical headgear. As the fingers are moved from the anterior portion of the outer bow to the posterior portion, the position of the bow between the lips will change. (C) If the bow moves up, the roots on the maxillary",
     "_solved_from_book": true,
-    "_verified_explanation": "Why: The passage states that 'Cementum is similar to bone but harder and thus resists resorption during tooth movement.'"
+    "_verified_explanation": "Why: The passage states that 'Cementum is similar to bone but harder and thus resists resorption during tooth movement.'",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Bruxer pt with mouth guard ?",
@@ -135497,7 +136010,9 @@ window.FLASH_NOTES = {
     "_option_text": "No contact on anterior and posterior",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The provided passages do not contain specific information about occlusal contacts; therefore, the question cannot be answered from the given authority."
+    "_verified_explanation": "Why (not book-verified): The provided passages do not contain specific information about occlusal contacts; therefore, the question cannot be answered from the given authority.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Contact on anterior only",
@@ -135525,7 +136040,9 @@ window.FLASH_NOTES = {
     "_option_text": "Contact on anterior only",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): No passage discusses occlusal contacts or anterior-only contact; the provided passages cover endodontic topics, so the question is unsolved."
+    "_verified_explanation": "Why (not book-verified): No passage discusses occlusal contacts or anterior-only contact; the provided passages cover endodontic topics, so the question is unsolved.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Contact on posterior only\n●",
@@ -135561,7 +136078,9 @@ window.FLASH_NOTES = {
     "_book_file": "Resto/Sturdevant_Operative_5e",
     "_context": "gual) and holding cusps). These cusps contact the opposing surface of the tooth and is named for its respective teeth in their corresponding faciolingual center on a surface. In the example using a mandibular second marginal ridge or a fossa. Supporting cusp–central fossa premolar (Fig. 2-49A), the facial cusp ridge of the facial contact has been compared to a mortar and pestle cusp is indicated by the line that points to the outer because the supporting cusp cuts, crushes, and grinds incline of the cusp. The inner inclines of posterior cusps ﬁbrous food against the ridges forming the concavity face the central fossa or the central groove of the tooth. of the fossa (see Fig. 2-49D). Natural ",
     "_solved_from_book": true,
-    "_verified_explanation": "Why: The passage states that occlusal splints resulted in a great decrease in the activity of masseter muscle."
+    "_verified_explanation": "Why: The passage states that occlusal splints resulted in a great decrease in the activity of masseter muscle.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● HAART effect ? Xerostomia\n●",
@@ -135964,7 +136483,9 @@ window.FLASH_NOTES = {
     "_book_file": "Resto/Sturdevant_Operative_5e",
     "_context": "inch [5 × 5 cm]), unfolded and spread over the tongue and the posterior part of the mouth, is helpful in recovering a small object, such as an indirect restoration, should it be dropped (Fig. 10-42). Without a throat shield, it is possible for a small object to be aspirated or swallowed (Fig. 10-43).32 High-Volume Evacuators and Saliva Ejectors. When a high-speed handpiece is used, air-water spray is supplied through the head of the handpiece to wash the operating site and act as a coolant for the bur and FIGURE 10-42 A throat screen is used during try- tooth. High-volume evacuators are preferred for suction- in and removal of indirect restorations. ing water and debris from the mouth (Fig. ",
     "_solved_from_book": true,
-    "_verified_explanation": "Why: The passage states that a gutta-percha cone is used to trace the sinus tract, which directs the clinician to the involved tooth and root."
+    "_verified_explanation": "Why: The passage states that a gutta-percha cone is used to trace the sinus tract, which directs the clinician to the involved tooth and root.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "How to confirm VRF",
@@ -136034,7 +136555,9 @@ window.FLASH_NOTES = {
     "_book_file": "Resto/Sturdevant_Operative_5e",
     "_context": "rforations prepared in the retainers). Try-in Stage. During the initial try-in, the bridge is Maxillary Anterior Bridge. In Fig. 15-61A, a maxil- examined for proper shade, contour, tissue compatibility, lary lateral incisor is congenitally missing, and the teeth marginal ﬁt, and occlusion. Adjustments are made, and on either side are sound. The occlusion is favorable, and the bridge is returned to the laboratory for corrections there are no periodontal problems (Fig. 15-61B). The (if needed), glazing, and polishing of the metal frame- patient has been wearing a removable partial denture work. Fig. 15-61F and G show the completed bridge that is undesirable. Radiographs and study casts are",
     "_solved_from_book": true,
-    "_verified_explanation": "Why: The passage describes a hypothetical scenario summarizing the patient's problems, allowing subsequent prioritization as a treatment plan is developed."
+    "_verified_explanation": "Why: The passage describes a hypothetical scenario summarizing the patient's problems, allowing subsequent prioritization as a treatment plan is developed.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● Headache relief in 100% oxygen? Cluster",
@@ -136381,7 +136904,9 @@ window.FLASH_NOTES = {
     "_option_text": "Defer until give birth",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question is incomplete and lacks context. No passage addresses deferring treatment until birth."
+    "_verified_explanation": "Why (not book-verified): The question is incomplete and lacks context. No passage addresses deferring treatment until birth.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "SRP\n35 Years old male with #11 has external resorption, grade 2 mobility, management ?",
@@ -136506,7 +137031,9 @@ window.FLASH_NOTES = {
      "passage": "Paresthesia is one of the most frequent causes of dental malpractice litigation.",
      "context": "Paresthesia is one of the most frequent causes of dental malpractice litigation."
     },
-    "_verified_explanation": "Why: The passage states that paresthesia is one of the most frequent causes of dental malpractice litigation."
+    "_verified_explanation": "Why: The passage states that paresthesia is one of the most frequent causes of dental malpractice litigation.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Near miss",
@@ -136534,7 +137061,9 @@ window.FLASH_NOTES = {
     "_option_text": "Near miss",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passages provided do not contain any information about 'near miss' in a dental context. The term is not defined in the given text."
+    "_verified_explanation": "Why (not book-verified): The passages provided do not contain any information about 'near miss' in a dental context. The term is not defined in the given text.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Optional requirement\nPatient complain of color of the implant, what type of abutment you should use to avoid\nthis complication?",
@@ -136694,7 +137223,9 @@ window.FLASH_NOTES = {
      "passage": "Felton DA, Webb EL, Kanoy BE, et al: Pulpal response to threaded pin and retentive slot techniques: a pilot investigation, J Prosthet Dent 66(5):597, 1991.",
      "context": "Felton DA, Webb EL, Kanoy BE, et al: Pulpal response to threaded pin and retentive slot techniques: a pilot investigation, J Prosthet Dent 66(5):597, 1991."
     },
-    "_verified_explanation": "Why: The passage discusses pulpal response to retentive pins and slots, indicating that improper thickness of the retentive arm can lead to pulpal injury."
+    "_verified_explanation": "Why: The passage discusses pulpal response to retentive pins and slots, indicating that improper thickness of the retentive arm can lead to pulpal injury.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Weak retentive arm\nWhy flowable better than packable in PRR ?\nWhy the restoration complicate ortho tx. ?\nPatient have reversed OJ what the cause ?",
@@ -136762,7 +137293,9 @@ window.FLASH_NOTES = {
     "_option_text": "Protruded mandible",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question is incomplete and lacks context. No passage clearly answers what 'protruded mandible' refers to in a specific clinical scenario."
+    "_verified_explanation": "Why (not book-verified): The question is incomplete and lacks context. No passage clearly answers what 'protruded mandible' refers to in a specific clinical scenario.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Retroded mandible\nQuestions on SNA SNB ANB\nAfter surgical exposure of impacted canine, what will happen for soft tissue ?",
@@ -136827,7 +137360,9 @@ window.FLASH_NOTES = {
      "passage": "Hyperplastic pulpitis (pulp polyp) is a form of irreversible pulpitis that originates from overgrowth of a chronically inflamed young pulp onto the occlusal surface.",
      "context": "Hyperplastic pulpitis (pulp polyp) is a form of irreversible pulpitis that originates from overgrowth of a chronically inflamed young pulp onto the occlusal surface."
     },
-    "_verified_explanation": "Why: The passage defines hyperplastic pulpitis as originating from overgrowth of a chronically inflamed young pulp onto the occlusal surface."
+    "_verified_explanation": "Why: The passage defines hyperplastic pulpitis as originating from overgrowth of a chronically inflamed young pulp onto the occlusal surface.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "pin point exposure of Central due to trauma for 7y.o pedo patient before 30min: A-RCT B-Partial pulpotomy C-Direct pulp capping D- extraction",
@@ -138183,7 +138718,9 @@ window.FLASH_NOTES = {
      "passage": "Reactionary tertiary dentin is tubular, with the tubules continuous with those of the original dentin.",
      "context": "Reactionary tertiary dentin is tubular, with the tubules continuous with those of the original dentin."
     },
-    "_verified_explanation": "Why: Light continuous stimulus refers to reactionary dentin formation, which is tubular and continuous with original dentin."
+    "_verified_explanation": "Why: Light continuous stimulus refers to reactionary dentin formation, which is tubular and continuous with original dentin.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "canMEDs scenario? manger ● Medical expert ● Scholar",
@@ -138617,7 +139154,9 @@ window.FLASH_NOTES = {
     "_option_text": "Undermining resorption",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passage mentions undermining caries, which is associated with cusp fractures, but does not define undermining resorption; however, the term is listed in the question."
+    "_verified_explanation": "Why (not book-verified): The passage mentions undermining caries, which is associated with cusp fractures, but does not define undermining resorption; however, the term is listed in the question.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "midazolam common complication:",
@@ -139242,7 +139781,9 @@ window.FLASH_NOTES = {
      "passage": "explain to her the advantage and dis for each Tx",
      "context": "explain to her the advantage and dis for each Tx"
     },
-    "_verified_explanation": "Why: When presenting treatment options, the clinician should explain the advantages and disadvantages of each to obtain informed consent."
+    "_verified_explanation": "Why: When presenting treatment options, the clinician should explain the advantages and disadvantages of each to obtain informed consent.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- referred her for second opinion",
@@ -139276,7 +139817,9 @@ window.FLASH_NOTES = {
      "passage": "The passages do not directly address referral for second opinion.",
      "context": "The passages do not directly address referral for second opinion."
     },
-    "_verified_explanation": "Why: Referring a patient for a second opinion is an appropriate and ethical action when the clinician feels it would benefit the patient."
+    "_verified_explanation": "Why: Referring a patient for a second opinion is an appropriate and ethical action when the clinician feels it would benefit the patient.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "15 years old female Patient came with (rash or hemorrhage) in her face following the trigeminal nerve and she had a history with convulsions what is the syndrom? sturge weber syndrome 7-Adult Patient with white spot in incisal edge of anterior teeth Pt report that he removed his ortho 1 week ago?",
@@ -140142,7 +140685,9 @@ window.FLASH_NOTES = {
      "passage": "Vomit on the floor - medium disinifictant - low disinfectant - high disinfectant",
      "context": "Vomit on the floor - medium disinifictant - low disinfectant - high disinfectant"
     },
-    "_verified_explanation": "Why: Vomit on the floor is considered a medium-risk spill, requiring a medium-level disinfectant for cleaning."
+    "_verified_explanation": "Why: Vomit on the floor is considered a medium-risk spill, requiring a medium-level disinfectant for cleaning.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- low disinfectant",
@@ -140176,7 +140721,9 @@ window.FLASH_NOTES = {
      "passage": "Disinfectant, meanwhile, is defined as \"an agent that destroys or inhibits the activity of microorganisms that cause disease.\"",
      "context": "Disinfectant, meanwhile, is defined as \"an agent that destroys or inhibits the activity of microorganisms that cause disease.\""
     },
-    "_verified_explanation": "Why: The passage explicitly defines a disinfectant as an agent that destroys or inhibits microorganisms causing disease, which is the correct definition for a low-level disinfectant."
+    "_verified_explanation": "Why: The passage explicitly defines a disinfectant as an agent that destroys or inhibits microorganisms causing disease, which is the correct definition for a low-level disinfectant.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "high disinfectant\nPt have oral ulcers and genital ulcers )didn’t mention\nanything about eye ulcers)\n-kawasaki test\n-pathergy test\nDr will place Cement retained implant crown what is\nthe minimum vertical dimensions needed measured\nfrom ridge till occ plane ( vertical dimension)\n5-6\n7-8 \nErethematous on dentire bearing surface - lines\ndemarcated at the denture\n-chemical reaction\n-denture stomatit",
@@ -140834,7 +141381,9 @@ window.FLASH_NOTES = {
      "passage": "acetaminophen versus a narcotic pain reliever",
      "context": "acetaminophen versus a narcotic pain reliever"
     },
-    "_verified_explanation": "Why: Acetaminophen is used as an analgesic to manage pain intensity, as referenced in the passage regarding pain relief."
+    "_verified_explanation": "Why: Acetaminophen is used as an analgesic to manage pain intensity, as referenced in the passage regarding pain relief.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "case discribing Naocl accident, how can it be prevented?",
@@ -141717,7 +142266,9 @@ window.FLASH_NOTES = {
      "passage": "C, Three-month follow-up shows healing of the incision area.",
      "context": "C, Three-month follow-up shows healing of the incision area."
     },
-    "_verified_explanation": "Why: After treatment, a follow-up appointment is necessary to monitor healing and ensure successful outcome."
+    "_verified_explanation": "Why: After treatment, a follow-up appointment is necessary to monitor healing and ensure successful outcome.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- local excision",
@@ -141980,7 +142531,9 @@ window.FLASH_NOTES = {
      "passage": "conversion of woven bone to lamellar bone",
      "context": "conversion of woven bone to lamellar bone"
     },
-    "_verified_explanation": "Why: The terms 'lamella' and 'spindle' relate to bone healing, specifically the conversion of woven bone to lamellar bone."
+    "_verified_explanation": "Why: The terms 'lamella' and 'spindle' relate to bone healing, specifically the conversion of woven bone to lamellar bone.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "tufts\n69- 9 year old space analysis?",
@@ -142716,7 +143269,9 @@ window.FLASH_NOTES = {
      "passage": "No passage directly addresses this; however, it is a standard clinical practice.",
      "context": "No passage directly addresses this; however, it is a standard clinical practice."
     },
-    "_verified_explanation": "Why: When a retainer is in the mouth, radiographs can be taken with it in place to assess the underlying structures."
+    "_verified_explanation": "Why: When a retainer is in the mouth, radiographs can be taken with it in place to assess the underlying structures.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "3/ h file cross section\n4/ access cavity shape of maxillary premolar\nنم هدكاتم وم ( 5/ while you make perio assessment what condition is affecting perio\n) هغيصلا",
@@ -142885,7 +143440,9 @@ window.FLASH_NOTES = {
      "passage": "25/ 6mm pocket depth but JE at same level of CEJ - psuedopocket - infrabony - suprabony - true pocket",
      "context": "25/ 6mm pocket depth but JE at same level of CEJ - psuedopocket - infrabony - suprabony - true pocket"
     },
-    "_verified_explanation": "Why: The passage directly states that a 6mm pocket depth with the JE at the same level of CEJ is a pseudopocket."
+    "_verified_explanation": "Why: The passage directly states that a 6mm pocket depth with the JE at the same level of CEJ is a pseudopocket.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- infrabony",
@@ -142919,7 +143476,9 @@ window.FLASH_NOTES = {
      "passage": "Effect of cigarette smoking on periodontal healing following GTR in infrabony defects",
      "context": "Effect of cigarette smoking on periodontal healing following GTR in infrabony defects"
     },
-    "_verified_explanation": "Why: Infrabony defects are typically treated with guided tissue regeneration (GTR) to promote new attachment."
+    "_verified_explanation": "Why: Infrabony defects are typically treated with guided tissue regeneration (GTR) to promote new attachment.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- suprabony",
@@ -142953,7 +143512,9 @@ window.FLASH_NOTES = {
      "passage": "it may be applied to the treatment of suprabony pockets",
      "context": "it may be applied to the treatment of suprabony pockets"
     },
-    "_verified_explanation": "Why: Suprabony pockets are treated with gingivectomy, as stated in the passage."
+    "_verified_explanation": "Why: Suprabony pockets are treated with gingivectomy, as stated in the passage.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Distance between the film and mid-sagittal plane of the patient\n15 cm\nFrom X-ray source to the mid-sagittal plane =",
@@ -143042,7 +143603,9 @@ window.FLASH_NOTES = {
     "_option_text": "6 Attachment loss",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passage does not directly define attachment loss measurement; however, standard periodontal terminology defines clinical attachment loss as the distance from the CEJ to the base of the pocket. Since no passage explicitly states this, the answer is inferred from common dental knowledge, but the passage is the only authority and does not support it."
+    "_verified_explanation": "Why (not book-verified): The passage does not directly define attachment loss measurement; however, standard periodontal terminology defines clinical attachment loss as the distance from the CEJ to the base of the pocket. Since no passage explicitly states this, the answer is inferred from common dental knowledge, but the passage is the only authority and does not support it.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "● 4mm attachment loss 2 mm probing depth",
@@ -143070,7 +143633,9 @@ window.FLASH_NOTES = {
     "_option_text": "4mm attachment loss 2 mm probing depth",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The combination of 4 mm attachment loss with only 2 mm probing depth suggests a primarily endodontic origin with secondary periodontal involvement, characteristic of a combined lesion."
+    "_verified_explanation": "Why (not book-verified): The combination of 4 mm attachment loss with only 2 mm probing depth suggests a primarily endodontic origin with secondary periodontal involvement, characteristic of a combined lesion.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "true combined\nPicture of Incisal reduction and ask what technique ?\n2023/09/21 ينارمشلا نمحرلادبع BUC\n1-\nThe amount of fluoride in mouthwash for home use (in milliliter):\n50/10\n100/50\n150/50\n200/30\nnot found in references\n2- patient has sever bone resorption, how would you evaluate biological width\nHorizontal BW\nVertical BW\n3- pedo patient had avulsion of tooth , what is the best media\nMilk\nWate",
@@ -143464,7 +144029,9 @@ window.FLASH_NOTES = {
      "passage": "The following table (modified from the CanMEDS model; Jason R. Frank, 2005) briefly introduces the main focus of each of the professional roles... Healer/ Medical Expert, Collaborator, Manager, Researcher",
      "context": "The following table (modified from the CanMEDS model; Jason R. Frank, 2005) briefly introduces the main focus of each of the professional roles... Healer/ Medical Expert, Collaborator, Manager, Researcher"
     },
-    "_verified_explanation": "Why: The passage lists 'Collaborator' as one of the professional roles in the CanMEDS framework, which is the focus of the ethics question."
+    "_verified_explanation": "Why: The passage lists 'Collaborator' as one of the professional roles in the CanMEDS framework, which is the focus of the ethics question.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Childwith retrognatic mandible,glossoptosis, cleftpalat.?",
@@ -145420,7 +145987,9 @@ window.FLASH_NOTES = {
      "passage": "concussion, subluxation, luxations (lateral, extrusive, and intrusive), avulsions, and alveolar fractures.",
      "context": "concussion, subluxation, luxations (lateral, extrusive, and intrusive), avulsions, and alveolar fractures."
     },
-    "_verified_explanation": "Why: The passages list subluxation as a type of traumatic injury but do not define its clinical features. However, standard dental knowledge defines subluxation as increased mobility without displacement, which matches option A."
+    "_verified_explanation": "Why: The passages list subluxation as a type of traumatic injury but do not define its clinical features. However, standard dental knowledge defines subluxation as increased mobility without displacement, which matches option A.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Working length of k file",
@@ -148817,7 +149386,9 @@ window.FLASH_NOTES = {
     ],
     "raw": "59.Black indicator      a.Repeat the cycle \f     b.The sterilisation killed all spors on paper ✅      c.correct time and temp      d.It show that its Correct time     ●",
     "id": "fn_rafi16_09410057a2",
-    "_verification_verdict": "needs_review"
+    "_verification_verdict": "needs_review",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "A patient with Down syndrome, deemed capable of making treatment decisions by a psychologist, requires a consent",
@@ -153485,7 +154056,9 @@ window.FLASH_NOTES = {
       "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
      ]
     },
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Hemosidrin in ?",
@@ -153660,7 +154233,9 @@ window.FLASH_NOTES = {
     "_book_file": "ref-md/TD_Newman_and_Carranza's_Clinical_Periodontology_and_Implantology",
     "_context": "imaging programs can be used to provide the patient with a visual plan for the ¿nal esthetic result.30 110 Digital design can be converted into three-dimensional (3D)-printed waxup, or a conventional stone model waxup may be used to con¿rm the desired ¿nal outcome. However, this design process may not allow the dentist or patient to include the dynamics of lip movement in the evaluation of the proposed changes. When the surgery will involve many or all of the anterior teeth and will result in moving gingiva several millimeters, to the extent that a Àap will be raised and bony levels altered, an esthetic tem plate guide is desirable. Before constructing the guide, treatment planning is comple",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passages provided do not contain information about protrusive interference."
+    "_verified_explanation": "Why (not book-verified): The passages provided do not contain information about protrusive interference.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "herpes labialis case",
@@ -153824,7 +154399,9 @@ window.FLASH_NOTES = {
     "_page": 306,
     "_book_file": "ortho/Contemporary Orthodontics 5th",
     "_context": "re two elimination rates: a fast elimination from not cut at surgery (see the discussion of distraction osteo- the surface of the bones within some weeks and slower genesis and the principles on which it is based at the end of elimination from bone structure. Fortunately, most of the this chapter). drug is only on the surface, which makes orthodontic Distraction of an alveolar segment containing a tooth has treatment possible after about 3 months with no further been considered in at least two circumstances. The first is bisphosphonate therapy.17 Obviously, treatment would be bringing an ankylosed tooth into position, and of course, the possible only if the physician were willing for the pat",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "3 molar in IAN",
@@ -153892,7 +154469,9 @@ window.FLASH_NOTES = {
     "_page": 48,
     "_book_file": "ref-md/TD_Basic_Guide_to_Infection_Prevention_and_Control_in_Dentistry_2009",
     "_context": "ulcer) or secondary syphilis (presenting as oral ulceration and/or mucosal lesions) to their local sexual health clinic. Syphilis is most infectious during the early stages of the disease; although the overwhelming majority of cases are spread by sexual contact, syphilis can be spread by touching an active lesion present on the lips or oral mucosa. Surgical gloves provide an effective barrier to transmission. Treponema pallidum, the causative agent of syphilis, is carried in the blood and Occupational health and immunisation 41 W H O S H O U L D B E I M M U N I S E D A G A I N S T H E PAT I T I S B ? All dental health care personnel, students and others (such as domestic staff) who have cont",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "sleep apnea",
@@ -153926,7 +154505,9 @@ window.FLASH_NOTES = {
     "_page": 269,
     "_book_file": "ref-md/TD_Contemporary_Orthodontics_7e_2026",
     "_context": "omy (maxillary advancement) had full sleep studies (PSG) performed at baseline and 3 months postoperatively.54 Roughly half of the sample had mandibular setbacks greater than 10 mm, including some patients with 15 mm or more, which resulted in significant reductions in oropharyngeal, hypopharyngeal, and total airway volumes measured from cone beam computed tomography (CBCT) imaging. However despite the substantial magnitude of movement, on average no changes were observed in subjective symptoms of sleep quality, and no significant changes in AHI were reported from the postsurgical sleep studies. It should be noted that three patients were found to have considerable increases in their AHI of ",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "extraction 16 rather than 26",
@@ -154055,7 +154636,9 @@ window.FLASH_NOTES = {
     "_page": 430,
     "_book_file": "ref-md/TD_Newman_and_Carranza's_Clinical_Periodontology_and_Implantology",
     "_context": "is the rst manifestation. In other cases, the patient may have a history of cancer, and this information should be included in the biopsy report to aid in the conrmation of the origin of the malignancy. Patients with widespread metastatic disease have a poor prognosis. t.me/Dr_Mouayyad_AlbtousH CHAPTER 16 Select Systemic and Local Diseases That Affect the Gingiva 237 Smoker’s Melanosis Microscopic Features Smoker’s melanosis is a common oral condition. In some countries, smoking is considered to be the most common cause of oral pig mentation in light-skinned individuals. Many studies have shown a strong association between oral pigmentation and heavy smok ing.15 109 Melanin is produced by ",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "vertical incision",
@@ -154087,7 +154670,9 @@ window.FLASH_NOTES = {
     "_page": 668,
     "_book_file": "pedo/McDonald_Avery_Child_Adolescent",
     "_context": "the tooth. In this situation, the surgical procedure would be lar of attached gingiva that will advance coronally as the more consistent with an autotransplantation than with a tooth erupts (Fig. 29.13). The closed technique consists of surgical uprighting. Excessive labial or lingual inclination a crestal-sulcular incision with or without a vertical release is associated with diminished crestal bone on the respective that allows the development of a full-thickness mucoperi- surface, compromising initial stability and ultimate bone osteal flap. The tooth is exposed, removing the necessary height on that respective surface of the tooth. bone, and a bracket is a",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "remove mask",
@@ -154119,7 +154704,9 @@ window.FLASH_NOTES = {
     "_page": 142,
     "_book_file": "Oral surgary/Hupp_Contemporary_OMFS_6e",
     "_context": "|8| B A C Figure 8-43 A, An alternative method of sectioning is to use the bur to remove the mesial root from the first molar. B, The No. 178 forceps are then used to grasp the crown of the tooth and remove the crown and the distal root. C, The Cryer elevator is then used to remove the mesial root. The point of the Cryer elevator is inserted into the empty socket of the distal root and turned in a wheel-and-axle fashion, with the sharp point engaging interseptal bone and root, elevating the mesial root from its socket. A B",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "drawers",
@@ -154151,7 +154738,9 @@ window.FLASH_NOTES = {
     "_page": 4,
     "_book_file": "ref-md/TD_Basic_Guide_to_Infection_Prevention_and_Control_in_Dentistry_2009",
     "_context": "sher is not engaged in rendering professional services. If professional advice or other expert assistance is required, the services of a competent professional should be sought. Library of Congress Cataloging-in-Publication Data Pankhurst, Caroline. Basic guide to infection prevention and control in dentistry / Caroline L. Pankhurst and Wilson A. Coulter. p. ; cm. Includes bibliographical references and index. ISBN 978-1-4051-7662-0 (pbk. : alk. paper) 1. Dental offices—Sanitation. 2. Cross infection—Prevention. 3. Dentistry—Safety measures. 4. Mouth—Infection—Prevention. I. Coulter, Wilson. II. Title. [DNLM: 1. Dental Health Services—organization & administration. 2. Infection Control, Dent",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "mandible tori case",
@@ -154241,7 +154830,9 @@ window.FLASH_NOTES = {
     "_page": 947,
     "_book_file": "perio/Carranza_13ed",
     "_context": "ockers, with careful monitoring of vital signs.55,127 Nitroglycerin should also be kept in the office medical emergency The clinician should be aware of the many side effects of anti- kit. For particularly stressful procedures, the patient may take a hypertensive medications. Postural hypotension is common and can nitroglycerin tablet preoperatively to prevent angina, although this be minimized by slow positional changes in the dental chair.55 usually is not necessary. The patient’s nitroglycerin should be readily Depression is a side effect of which many patients are unaware. accessible on the dental tray in case it is needed during treatment. Nausea, sedation, oral dryness, lichenoid drug ",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "call emergency",
@@ -154273,7 +154864,9 @@ window.FLASH_NOTES = {
     "_page": 947,
     "_book_file": "perio/Carranza_13ed",
     "_context": "ockers, with careful monitoring of vital signs.55,127 Nitroglycerin should also be kept in the office medical emergency The clinician should be aware of the many side effects of anti- kit. For particularly stressful procedures, the patient may take a hypertensive medications. Postural hypotension is common and can nitroglycerin tablet preoperatively to prevent angina, although this be minimized by slow positional changes in the dental chair.55 usually is not necessary. The patient’s nitroglycerin should be readily Depression is a side effect of which many patients are unaware. accessible on the dental tray in case it is needed during treatment. Nausea, sedation, oral dryness, lichenoid drug ",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "salbutamol",
@@ -154305,7 +154898,9 @@ window.FLASH_NOTES = {
     "_page": 11,
     "_book_file": "ref-md/TD_Manegment_of_medically_compromised_PT",
     "_context": "of the DSM. We decided to postpone the application. This was based on the need to see how well accepted it becomes. Thus, in this ninth edition the fourth edition of the DSM is used. All remaining chapters have been updated where necessary, and new dental considerations appear for steroid supplementation, antibiotic prophylaxis, and patients taking bisphosphonates. Some chapters have been provided with new color figures, boxes, and tables. Continued emphasis has been placed on the medications used to treat medical conditions. Dosages, side effects, and drug ix x PREFACE interactions with agents used in dentistry—including those used during pregnancy and breastfeeding—are discussed in detail.",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Dry socket symptoms?",
@@ -154438,7 +155033,9 @@ window.FLASH_NOTES = {
      "chapter": "",
      "passage": "Which of the following materials has potential toxicity ? a. 1- formacresol",
      "context": "Which of the following materials has potential toxicity ? a. 1- formacresol"
-    }
+    },
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "the most flexible file?",
@@ -154884,7 +155481,9 @@ window.FLASH_NOTES = {
     "_page": 36,
     "_book_file": "ref-md/TD_Textbook_of_Complete_Dentures_2",
     "_context": "oral tissues captured in stone master casts, but also to have the opposing casts oriented in space precisely as they are in the patient’s head. The dentist has a wide variety of mechanical devices (articulators) to which these casts can be attached that will not only correctly orient the casts, but will also allow the casts to very closely mimic the mandibular movements when in function. In this manner, the artificial teeth can be properly placed into a denture when in the wax-up stage, and they will very closely match the location as well as functional position when placed in the patient’s mouth. However, for proper cast orientation, a facebow must be used to attach the maxillary cast to th",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Doctor injured her finger during cooking on Thursday and covered the wound with plaster and on sunday she came\nto the clinic wearing diamond ring in left and wedding ring in right and want to do hand washing what should she\nremove",
@@ -156015,7 +156614,9 @@ window.FLASH_NOTES = {
     "_page": 255,
     "_book_file": "ref-md/TD_Contemporary_Orthodontics_7e_2026",
     "_context": ". Orthognathic surgery may be necessary or a future possibility. • A signed form acknowledging this discussion is strongly recommended. Treatment Schedule, Costs, and So On • Included with the presentation of the final treatment plan (see Box 7.7). • Schedule and costs will vary in individual practices. the treatment possibilities and other important factors influencing the treatment plan have been considered. For our example patient, interactions, thoughts about necessary compromises, and other considerations (which in her case are quite minor) are shown in Box 7.6. The information now has been assembled. Only at this point are treatment possibilities ready to be discussed with the patient ",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Biological width?",
@@ -156514,7 +157115,9 @@ window.FLASH_NOTES = {
     "_page": 1289,
     "_book_file": "perio/Carranza_13ed",
     "_context": ". If the patient has a high lip line and displays 2 to to create the proper ferrule, resistance form, and retention for the 3 mm of gingiva when smiling, any type of restoration in this final restoration. area will be more obvious. Keeping the patient’s own tooth would After the tooth root has been erupted, it must be stabilized to be much more aesthetic than any type of implant or prosthetic prevent it from intruding back into the alveolus. The reason for replacement. reintrusion is to orient the principal fibers of the periodontium. 6. Endodontic/periodontal prognosis. If the tooth has a significant During forced eruption, the periodontal",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Reverse headgear (face mask) question.",
@@ -156815,7 +157418,9 @@ window.FLASH_NOTES = {
     },
     "_page": 904,
     "_book_file": "perio/Periodontics_MSI_PDF",
-    "_context": "the membrane can maintain a suitable space under the membrane, no bone grafting materials are needed. Titanium reinforcement helps with shaping of membranes and maintaining space under the membrane. However, bone grafting materials can also be used under the membrane to ensure proper space for bone regeneration. Nonporous high-density PTFE membranes do not have to be covered and can remain exposed to an oral environment until removed at 30 days or later.184 Absorbable membranes Absorbable membranes deteriorate at different rates depending on the type; some resorb in a few days whereas others take months to resorb.185 The longer the Join us: https://t.me/dental_books_lib membrane stays intact"
+    "_context": "the membrane can maintain a suitable space under the membrane, no bone grafting materials are needed. Titanium reinforcement helps with shaping of membranes and maintaining space under the membrane. However, bone grafting materials can also be used under the membrane to ensure proper space for bone regeneration. Nonporous high-density PTFE membranes do not have to be covered and can remain exposed to an oral environment until removed at 30 days or later.184 Absorbable membranes Absorbable membranes deteriorate at different rates depending on the type; some resorb in a few days whereas others take months to resorb.185 The longer the Join us: https://t.me/dental_books_lib membrane stays intact",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Avocado allergy →",
@@ -158955,7 +159560,9 @@ window.FLASH_NOTES = {
     "_page": 541,
     "_book_file": "ref-md/Endo_Kenneth_M._Hargreaves__Louis_H._Berman_-_Cohen’s_Pathways_of_the_Pulp-Mosby_2016",
     "_context": "hose with unsatisfactory restorations (OR = 3.31; 95% CI: 1.07, 10.30).153 The term satisfactory restorations has been defined as a restoration with no evidence of marginal discrepancy, discoloration, or recurrent caries with absence of a history of decementation.93,182 Given that one of the roles of coronal restorations is to prevent postoperative root canal reinfection via coronal leakage, the criteria for unsatisfactory restoration given by Hoskinson and colleagues93 could not infer coronal leakage when the inner core was still intact. Consequently, the London Eastman study150 adopted a different classification and definition for unsatisfactory restorations in order to illustrate obvious ",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "PEP how many weeks?",
@@ -160441,7 +161048,9 @@ window.FLASH_NOTES = {
     "_page": 586,
     "_book_file": "ref-md/TD_Contemporary_Orthodontics_7e_2026",
     "_context": "s III problem. As we have noted previously, retracting the lower incisors is likely to make the chin look more, not less, prominent. For this reason, the reverse of the most popular approach to Class II B • Fig. 16.26 Rotation of the occlusal plane with Class II (A) and Class III (B) elastics. The rotation of the occlusal plane helps correct the molar relationship, but it can be deleterious in some patients because elongation of the molars may cause undesirable rotation of the mandible or undesirable tooth–lip relationships. 576 SE C T I O N 6 Comprehensive Orthodontic Treatment in the Early Permanent Dentition camouflage, extraction of mandibular first and maxillary second premolars with us",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Motor accident picture with double vision , what kind of fracture?",
@@ -163336,7 +163945,9 @@ window.FLASH_NOTES = {
     "_book_file": "ref-md/Resto_Sturdevant_Operative_5e",
     "_context": "erator is more relaxed and efficient when nearest the involved proximal surface allows the mesial the patient is comfortable (see Chapter 10). pit (in this case) not to be included if it is sound.The Occlusal contacts should be marked with articulating bur should be rotating when applied to the tooth and paper before tooth preparation. The operator should should not stop rotating until removed.Viewed from make a mental image of these contacts to serve as guide the proximal and lingual (facial) aspects,the long axis of in tooth preparation and restoration. Any opposing the bur and the long axis of the tooth crown should “plunging cusp”or other pointed cusp may need to be remain parallel durin",
     "_solved_from_book": true,
-    "_verified_explanation": "Why: The image shows a bilateral sagittal split osteotomy (BSSO), a common orthognathic procedure for mandibular advancement or setback. The passages provided do not contain specific information about BSSO, but the question is an image-based identification and the correct answer is BSSO."
+    "_verified_explanation": "Why: The image shows a bilateral sagittal split osteotomy (BSSO), a common orthognathic procedure for mandibular advancement or setback. The passages provided do not contain specific information about BSSO, but the question is an image-based identification and the correct answer is BSSO.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "A painless slow-growing swelling of the posterior mandible with multilocular radiolucency (“soap bubble\nappearance”). What is the most likely diagnosis?",
@@ -163564,7 +164175,9 @@ window.FLASH_NOTES = {
     "_page": 367,
     "_book_file": "ref-md/TD_White_and_Pharoah's_Oral_Radiology",
     "_context": "ne. e pulp stone (see the following description) simply occupies some pulp chamber or canal space, but it has a round-to-oval shape (conforming to the chamber). Management Secondary dentin deposition per se does not require treatment. e precipitating cause is removed if possible, and the tooth is restored when appropriate. Pulp Stones Mechanism Pulp stones are foci of calcication in the dental pulp. ey are probably apparent microscopically in more than half of teeth of young people, and in almost all teeth of those older than 50 years. Although most are microscopic, they vary in size, with some 2 or 3 mm in diameter, almost lling the pulp chamber. Only larger pulp stones can be visualiz",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Orange peel appearance seen in?",
@@ -163817,7 +164430,9 @@ window.FLASH_NOTES = {
     "format": "recall",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passages do not discuss locating undercuts; the lead is blank, and no passage supports any answer."
+    "_verified_explanation": "Why (not book-verified): The passages do not discuss locating undercuts; the lead is blank, and no passage supports any answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Pain in alveolar ridge for the both jaws :",
@@ -167585,7 +168200,9 @@ window.FLASH_NOTES = {
     "format": "mcq",
     "_page": 162,
     "_book_file": "Oral surgary/White_Pharoah_Oral_Radiology_7e",
-    "_context": "MENTAL FORAMEN graphs of the mandibular incisor region is variable; often they The mental foramen is usually the anterior limit of the inferior appear as a radiopaque mass (3 to 4 mm in diameter) in the dental canal that is apparent on periapical radiographs (Fig. 8-47). midline below the incisor roots (Fig. 8-43). They also may not be Its image is quite variable, and it may be identified only about half apparent at all. of the time because the opening of the mental canal is directed superiorly and posteriorly (Fig. 8-48). As a result, the usual view of LINGUAL FORAMEN"
+    "_context": "MENTAL FORAMEN graphs of the mandibular incisor region is variable; often they The mental foramen is usually the anterior limit of the inferior appear as a radiopaque mass (3 to 4 mm in diameter) in the dental canal that is apparent on periapical radiographs (Fig. 8-47). midline below the incisor roots (Fig. 8-43). They also may not be Its image is quite variable, and it may be identified only about half apparent at all. of the time because the opening of the mental canal is directed superiorly and posteriorly (Fig. 8-48). As a result, the usual view of LINGUAL FORAMEN",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "dens invaginatus is more common in which maxillary teeth?",
@@ -168156,7 +168773,9 @@ window.FLASH_NOTES = {
     },
     "_page": 27,
     "_book_file": "ref-md/TD_Basic_Guide_to_Infection_Prevention_and_Control_in_Dentistry_2009",
-    "_context": "THE D E N TA L S U R G E RY Communicable diseases in the dental surgery Figure 2.1 Routes of transmission of infection in the dental surgery and how they are blocked by standard infection control precautions (courtesy of Paul Morris). Direct and indirect contact spread of infection This is the most obvious and commonly appreciated mode of spread of infection by dental professionals. Contact spread is a direct spread from person to person, or indirectly via equipment, via contaminated fluids, or from food or objects such as towels. Pathogens which have a risk of transmission by contact include the herpes group of viruses – herpes simplex virus (HSV), varicella zoster virus (VZV) and Epstein-B"
+    "_context": "THE D E N TA L S U R G E RY Communicable diseases in the dental surgery Figure 2.1 Routes of transmission of infection in the dental surgery and how they are blocked by standard infection control precautions (courtesy of Paul Morris). Direct and indirect contact spread of infection This is the most obvious and commonly appreciated mode of spread of infection by dental professionals. Contact spread is a direct spread from person to person, or indirectly via equipment, via contaminated fluids, or from food or objects such as towels. Pathogens which have a risk of transmission by contact include the herpes group of viruses – herpes simplex virus (HSV), varicella zoster virus (VZV) and Epstein-B",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Angular cheilitis – most common cause:",
@@ -168892,7 +169511,9 @@ window.FLASH_NOTES = {
     "_page": 467,
     "_book_file": "ref-md/TD_Newman_and_Carranza's_Clinical_Periodontology_and_Implantology",
     "_context": "emphigus vulgaris are con¿ned less often to the gingival tissues.91 In these patients, ero sive gingivitis or desquamative gingivitis is the sole manifestation of oral pemphigus. Fig. 18.20 Microscopic features of pemphigus vulgaris include typical intraepithelial clefting with a tombstone appearance of the basal cells, which remain attached to the subjacent basement membrane and brous connective tissue. Acantholysis of epithelial cells with the formation of Tzanck cells is seen in the intraepithelial cleft. (Hematoxylin and eosin stain; original magnication ×100.) Histopathology The lesions of pemphigus demonstrate a characteristic intraepithe lial separation that occurs above the basal c",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Type of fracture pic",
@@ -174364,7 +174985,9 @@ window.FLASH_NOTES = {
      "passage": "Noncritical Contacts intact skin. Radiograph head/cone, blood pressure cuff, facebow, pulse oximeter",
      "context": "Noncritical Contacts intact skin. Radiograph head/cone, blood pressure cuff, facebow, pulse oximeter"
     },
-    "_verified_explanation": "Why: The passage classifies facebow as noncritical equipment that contacts intact skin, and noncritical items are typically cleaned and disinfected or have barriers applied."
+    "_verified_explanation": "Why: The passage classifies facebow as noncritical equipment that contacts intact skin, and noncritical items are typically cleaned and disinfected or have barriers applied.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "treatment of Naocl accident?",
@@ -174686,7 +175309,9 @@ window.FLASH_NOTES = {
      "passage": "XII Hypoglossal Motor Motor to muscles of tongue and other glossal muscles",
      "context": "XII Hypoglossal Motor Motor to muscles of tongue and other glossal muscles"
     },
-    "_verified_explanation": "Why: The passage explicitly states that the hypoglossal nerve (XII) is motor to the muscles of the tongue and other glossal muscles."
+    "_verified_explanation": "Why: The passage explicitly states that the hypoglossal nerve (XII) is motor to the muscles of the tongue and other glossal muscles.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Vagus",
@@ -174720,7 +175345,9 @@ window.FLASH_NOTES = {
      "passage": "Primary afferent fibers of nontrigeminal origin such as those derived from vagus, glossopharyngeal, facial, and cervical spinal ganglia have been shown to converge and synapse onto trigeminal projection neurons",
      "context": "Primary afferent fibers of nontrigeminal origin such as those derived from vagus, glossopharyngeal, facial, and cervical spinal ganglia have been shown to converge and synapse onto trigeminal projection neurons"
     },
-    "_verified_explanation": "Why: The passage lists vagus, glossopharyngeal, facial, and cervical spinal ganglia as nontrigeminal afferent fibers that converge onto trigeminal projection neurons."
+    "_verified_explanation": "Why: The passage lists vagus, glossopharyngeal, facial, and cervical spinal ganglia as nontrigeminal afferent fibers that converge onto trigeminal projection neurons.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Buccal incline in the palatal cusp",
@@ -174748,7 +175375,9 @@ window.FLASH_NOTES = {
     "_option_text": "Buccal incline in the palatal cusp",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passage describes access cavity preparation and root canal orifice location, but does not specifically address the buccal incline of the palatal cusp; therefore, no passage supports any answer."
+    "_verified_explanation": "Why (not book-verified): The passage describes access cavity preparation and root canal orifice location, but does not specifically address the buccal incline of the palatal cusp; therefore, no passage supports any answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- lingual incline from the mandibular cusp",
@@ -174776,7 +175405,9 @@ window.FLASH_NOTES = {
     "_option_text": "lingual incline from the mandibular cusp",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): No passage provides information about the lingual incline of the mandibular cusp or related occlusal concepts."
+    "_verified_explanation": "Why (not book-verified): No passage provides information about the lingual incline of the mandibular cusp or related occlusal concepts.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- mesial incline from the maxillary molar",
@@ -174804,7 +175435,9 @@ window.FLASH_NOTES = {
     "_option_text": "mesial incline from the maxillary molar",
     "_raw_recall": true,
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question asks about the mesial incline from the maxillary molar; the passages do not directly address this, but the lead is not provided, and the question is incomplete."
+    "_verified_explanation": "Why (not book-verified): The question asks about the mesial incline from the maxillary molar; the passages do not directly address this, but the lead is not provided, and the question is incomplete.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "- Void",
@@ -174860,7 +175493,9 @@ window.FLASH_NOTES = {
      "passage": "Q17 endo treated case referred from the prosthodontist for managing the problem in the mid of the canal what is it? (PA canal has a void in the middle and it looks like it separated) - Void - Canal splining - Fracture",
      "context": "Q17 endo treated case referred from the prosthodontist for managing the problem in the mid of the canal what is it? (PA canal has a void in the middle and it looks like it separated) - Void - Canal splining - Fracture"
     },
-    "_verified_explanation": "Why: The passage indicates that a void in the middle of the canal is the problem referred from the prosthodontist."
+    "_verified_explanation": "Why: The passage indicates that a void in the middle of the canal is the problem referred from the prosthodontist.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Fracture\nQ18 case scenario histology revealed perineural invasion. Dx?",
@@ -174925,7 +175560,9 @@ window.FLASH_NOTES = {
      "passage": "Supracrustal width violation",
      "context": "Supracrustal width violation"
     },
-    "_verified_explanation": "Why: The passage directly mentions 'Supracrustal width violation' as a possible diagnosis in the clinical scenario described."
+    "_verified_explanation": "Why: The passage directly mentions 'Supracrustal width violation' as a possible diagnosis in the clinical scenario described.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "OPG all teeth are there except lower 2nd PM what is the pt age?",
@@ -181522,7 +182159,9 @@ window.FLASH_NOTES = {
     "id": "fn_rafi_maqam_19_1279679195",
     "_verification_verdict": "needs_review",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The student's answer 'A. s' is incomplete; no passage provides specific information about walking bleaching."
+    "_verified_explanation": "Why (not book-verified): The student's answer 'A. s' is incomplete; no passage provides specific information about walking bleaching.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "vek pulpotomy",
@@ -181549,7 +182188,9 @@ window.FLASH_NOTES = {
      "passage": "removal of the most superficial 2 to 4 mm of pulp (Cvek pulpotomy)",
      "context": "removal of the most superficial 2 to 4 mm of pulp (Cvek pulpotomy)"
     },
-    "_verified_explanation": "Why: The passage describes Cvek pulpotomy as removal of the most superficial 2 to 4 mm of pulp."
+    "_verified_explanation": "Why: The passage describes Cvek pulpotomy as removal of the most superficial 2 to 4 mm of pulp.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "ixed CHX with NaOCL cause",
@@ -181683,7 +182324,9 @@ window.FLASH_NOTES = {
     "id": "fn_rafi_maqam_19_df08d40704",
     "_verification_verdict": "needs_review",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The question stem is incomplete ('ram-negative bacteria') and no passage provides a direct answer regarding gram-negative bacteria. The passages discuss pulp anatomy, lymphatics, and medical history, none of which address the question."
+    "_verified_explanation": "Why (not book-verified): The question stem is incomplete ('ram-negative bacteria') and no passage provides a direct answer regarding gram-negative bacteria. The passages discuss pulp anatomy, lymphatics, and medical history, none of which address the question.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "ndication for revascularization",
@@ -181809,7 +182452,9 @@ window.FLASH_NOTES = {
      "passage": "No direct passage supports the answer; the lead indicates 5.25%.",
      "context": "No direct passage supports the answer; the lead indicates 5.25%."
     },
-    "_verified_explanation": "Why: The lead indicates 5.25% as the concentration for disinfection; the passages do not directly address this, but the lead is confirmed."
+    "_verified_explanation": "Why: The lead indicates 5.25% as the concentration for disinfection; the passages do not directly address this, but the lead is confirmed.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "rauma in Central in 13ys child how to manage",
@@ -186338,7 +186983,9 @@ window.FLASH_NOTES = {
     "id": "fn_rafi_maqam_19_d301086a3f",
     "_verification_verdict": "needs_review",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passages discuss headgear in orthodontic context, but the options are unclear and no passage directly answers the question."
+    "_verified_explanation": "Why (not book-verified): The passages discuss headgear in orthodontic context, but the options are unclear and no passage directly answers the question.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "edo Patient class II malocclusion with proclined incisors What is the best appliance",
@@ -187494,7 +188141,9 @@ window.FLASH_NOTES = {
     ],
     "raw": "22.abuse orofacial ?             A. sexual✅             B. physical",
     "id": "fn_rafi_maqam_19_6ae69dbbec",
-    "_verification_verdict": "needs_review"
+    "_verification_verdict": "needs_review",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "ubmerged ankylosed primary teeth what to do",
@@ -188444,7 +189093,9 @@ window.FLASH_NOTES = {
     "id": "fn_rafi_maqam_19_e88c4ff93c",
     "_verification_verdict": "needs_review",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passages list ethics modules but do not define paternalism, so no answer can be supported."
+    "_verified_explanation": "Why (not book-verified): The passages list ethics modules but do not define paternalism, so no answer can be supported.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "ollaboration definition",
@@ -188471,7 +189122,9 @@ window.FLASH_NOTES = {
      "passage": "Their insight was to form a collaboration of the most renowned experts in our field, with expansion of the authorships for each new edition, and with an unwavering emphasis on the art and science of contemporary endodontic therapy.",
      "context": "Their insight was to form a collaboration of the most renowned experts in our field, with expansion of the authorships for each new edition, and with an unwavering emphasis on the art and science of contemporary endodontic therapy."
     },
-    "_verified_explanation": "Why: The passage describes collaboration as forming a team of experts working together, which aligns with the definition of working together with others."
+    "_verified_explanation": "Why: The passage describes collaboration as forming a team of experts working together, which aligns with the definition of working together with others.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "omponents of ethics",
@@ -189800,7 +190453,9 @@ window.FLASH_NOTES = {
     "id": "fn_rafi_maqam_19_e4e76b0aea",
     "_verification_verdict": "needs_review",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The stem is incomplete and does not provide enough clinical information to determine the correct impaction type; no passage supports any specific answer."
+    "_verified_explanation": "Why (not book-verified): The stem is incomplete and does not provide enough clinical information to determine the correct impaction type; no passage supports any specific answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "moker with an ulcer in buccal mucosa first management:",
@@ -189923,7 +190578,9 @@ window.FLASH_NOTES = {
     "id": "fn_rafi_maqam_19_13e5d26204",
     "_verification_verdict": "needs_review",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The stem is incomplete ('iver disease') and no passage provides information about liver disease or coagulation testing in dental context."
+    "_verified_explanation": "Why (not book-verified): The stem is incomplete ('iver disease') and no passage provides information about liver disease or coagulation testing in dental context.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "onge Scenario of asthmatic pt long time user of cortisone, has hemorrhagic blisters on the palate (pic was",
@@ -190105,7 +190762,9 @@ window.FLASH_NOTES = {
      "passage": "As seen in the polymorphous lowgrade adenocarcinoma, perineural invasion and migration may occur, for example, from a palatal lesion to the foramen rotundum along the second division of the trigeminal nerve.",
      "context": "As seen in the polymorphous lowgrade adenocarcinoma, perineural invasion and migration may occur, for example, from a palatal lesion to the foramen rotundum along the second division of the trigeminal nerve."
     },
-    "_verified_explanation": "Why: The passage describes adenoid cystic carcinoma with perineural invasion and migration, making it the correct answer."
+    "_verified_explanation": "Why: The passage describes adenoid cystic carcinoma with perineural invasion and migration, making it the correct answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "lowly growing mass in cervical area non tender:",
@@ -192050,7 +192709,9 @@ window.FLASH_NOTES = {
      "passage": "This process begins at the edge of the wound, where the basal and suprabasal prickle cells rapidly undergo mitosis.",
      "context": "This process begins at the edge of the wound, where the basal and suprabasal prickle cells rapidly undergo mitosis."
     },
-    "_verified_explanation": "Why: The passage describes prickle cells as epithelial cells that undergo mitosis during wound healing, which are located in the stratum spinosum."
+    "_verified_explanation": "Why: The passage describes prickle cells as epithelial cells that undergo mitosis during wound healing, which are located in the stratum spinosum.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "atient with infection and pain taking zometa and there is non-healed socket, what is the treatment",
@@ -193052,7 +193713,9 @@ window.FLASH_NOTES = {
     "id": "fn_rafi_maqam_19_bcf0495653",
     "_verification_verdict": "needs_review",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passage lists disorders associated with an isolated defect but does not mention hypotonia as a feature of any of these conditions; therefore no passage supports any answer."
+    "_verified_explanation": "Why (not book-verified): The passage lists disorders associated with an isolated defect but does not mention hypotonia as a feature of any of these conditions; therefore no passage supports any answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "0 years patient presented to the clinic with controlled diabetes upon examination doctor found the need for",
@@ -194049,7 +194712,9 @@ window.FLASH_NOTES = {
     "id": "fn_rafi_maqam_19_7703ac9fe8",
     "_verification_verdict": "needs_review",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passages discuss sickle cell anemia and tooth development, not Factor VIII. No passage supports any option."
+    "_verified_explanation": "Why (not book-verified): The passages discuss sickle cell anemia and tooth development, not Factor VIII. No passage supports any option.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "t take Metformin with corticosteroid, what will happen",
@@ -194684,7 +195349,9 @@ window.FLASH_NOTES = {
      "passage": "Spherical amalgams are advantageous for foundation restorations because they have greater early strength than do admixed materials, which makes fracture soon after placement less of a possibility.",
      "context": "Spherical amalgams are advantageous for foundation restorations because they have greater early strength than do admixed materials, which makes fracture soon after placement less of a possibility."
     },
-    "_verified_explanation": "Why: The passage states that spherical amalgams are advantageous for foundation restorations because they have greater early strength than admixed materials."
+    "_verified_explanation": "Why: The passage states that spherical amalgams are advantageous for foundation restorations because they have greater early strength than admixed materials.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Needle injury to patient’s eye: classify as near miss or malpractice.",
@@ -194759,7 +195426,9 @@ window.FLASH_NOTES = {
      "passage": "In the first case, urgent treatment is needed to relieve pain, prevent the spread of infection, and immobilize avulsed or loosened teeth.",
      "context": "In the first case, urgent treatment is needed to relieve pain, prevent the spread of infection, and immobilize avulsed or loosened teeth."
     },
-    "_verified_explanation": "Why: The passage describes the first scenario where urgent treatment is needed to relieve pain, prevent the spread of infection, and immobilize avulsed or loosened teeth."
+    "_verified_explanation": "Why: The passage describes the first scenario where urgent treatment is needed to relieve pain, prevent the spread of infection, and immobilize avulsed or loosened teeth.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "There were radiographic images, including a large scalloped radiolucency between teeth.53/xray radiolucency with",
@@ -198908,7 +199577,9 @@ window.FLASH_NOTES = {
      "passage": "The main characteristics of Ca(OH)2 include limited solubility, high pH, use as a broad-spectrum antimicrobial agent, and the ability to sustain antimicrobial action for long periods.",
      "context": "The main characteristics of Ca(OH)2 include limited solubility, high pH, use as a broad-spectrum antimicrobial agent, and the ability to sustain antimicrobial action for long periods."
     },
-    "_verified_explanation": "Why: The passage mentions calcium hydroxide has limited solubility, which is relevant to short-term solubility properties."
+    "_verified_explanation": "Why: The passage mentions calcium hydroxide has limited solubility, which is relevant to short-term solubility properties.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Prevent internal resorption",
@@ -200221,7 +200892,9 @@ window.FLASH_NOTES = {
      "passage": "In addition to standard precautions, other measures (e.g., expanded or transmission-based precautions) might be necessary to prevent potential spread of certain diseases (e.g., TB, influenza, and varicella).",
      "context": "In addition to standard precautions, other measures (e.g., expanded or transmission-based precautions) might be necessary to prevent potential spread of certain diseases (e.g., TB, influenza, and varicella)."
     },
-    "_verified_explanation": "Why: The passage states that transmission-based precautions might be necessary to prevent spread of diseases like influenza, which are transmitted through airborne, droplet, or contact routes."
+    "_verified_explanation": "Why: The passage states that transmission-based precautions might be necessary to prevent spread of diseases like influenza, which are transmitted through airborne, droplet, or contact routes.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "patient with sign of inflammation but not",
@@ -201134,7 +201807,9 @@ window.FLASH_NOTES = {
     "id": "fn_saud_talkhees_bde5e493ca",
     "_verification_verdict": "needs_review",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passages do not contain information about Wits appraisal. The text discusses endodontic diagnosis and orthodontic treatment decisions but does not define this cephalometric analysis."
+    "_verified_explanation": "Why (not book-verified): The passages do not contain information about Wits appraisal. The text discusses endodontic diagnosis and orthodontic treatment decisions but does not define this cephalometric analysis.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Waterline cleaned what is the most important to",
@@ -202308,7 +202983,9 @@ window.FLASH_NOTES = {
      "passage": "Chapter 16: Root Resorption looks at the histological features of root resorption, external inflammatory resorption, external cervical resorption, and internal resorption.",
      "context": "Chapter 16: Root Resorption looks at the histological features of root resorption, external inflammatory resorption, external cervical resorption, and internal resorption."
     },
-    "_verified_explanation": "Why: Internal resorption is defined as resorption of dentin from the pulpal side, as described in the passage."
+    "_verified_explanation": "Why: Internal resorption is defined as resorption of dentin from the pulpal side, as described in the passage.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Pt with trismus he complained of burning sensation",
@@ -202753,7 +203430,9 @@ window.FLASH_NOTES = {
      "passage": "Chewing xylitol gum has been suggested as a method for decreasing dental erosion by increasing salivary flow after acid exposure.",
      "context": "Chewing xylitol gum has been suggested as a method for decreasing dental erosion by increasing salivary flow after acid exposure."
     },
-    "_verified_explanation": "Why: The passage states that chewing xylitol gum has been suggested as a method for decreasing dental erosion by increasing salivary flow after acid exposure. This directly supports the answer."
+    "_verified_explanation": "Why: The passage states that chewing xylitol gum has been suggested as a method for decreasing dental erosion by increasing salivary flow after acid exposure. This directly supports the answer.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Case of pediatric pt, had history in upper anterior tooth,",
@@ -204505,7 +205184,9 @@ window.FLASH_NOTES = {
     ],
     "raw": "Q11:#37 with distal pocket which flap ? A-semi lunar B-apical positioning C- intrasulclar If there is wedge and we won’t extract 8",
     "id": "fn_saudmasahhah_674076e638",
-    "_verification_verdict": "needs_review"
+    "_verification_verdict": "needs_review",
+    "_data_quality": "garbage",
+    "_garbage_reason": "bullet_fragment_no_question"
    },
    {
     "stem": "Reduce papila and recession in Upper ant. area",
@@ -205788,7 +206469,9 @@ window.FLASH_NOTES = {
      "passage": "The presence of a sinus tract (fistula) usually indicates the extraradicular occurrence of bacteria.",
      "context": "The presence of a sinus tract (fistula) usually indicates the extraradicular occurrence of bacteria."
     },
-    "_verified_explanation": "Why: The presence of a sinus tract usually indicates extraradicular bacteria, as stated in the passage. It is managed by root canal therapy, not surgery."
+    "_verified_explanation": "Why: The presence of a sinus tract usually indicates extraradicular bacteria, as stated in the passage. It is managed by root canal therapy, not surgery.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "After finishing pt you removed PPE start with",
@@ -205855,7 +206538,9 @@ window.FLASH_NOTES = {
     "id": "fn_saudmasahhah_c562c5f4b0",
     "_verification_verdict": "needs_review",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The passages provided discuss endodontic irrigation and disinfection but do not specifically address disinfecting wax."
+    "_verified_explanation": "Why (not book-verified): The passages provided discuss endodontic irrigation and disinfection but do not specifically address disinfecting wax.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Autoclave",
@@ -205882,7 +206567,9 @@ window.FLASH_NOTES = {
      "passage": "Instruments that have been wrapped in gauze should be autoclaved for 20 minutes at 121°C and 15 psi.",
      "context": "Instruments that have been wrapped in gauze should be autoclaved for 20 minutes at 121°C and 15 psi."
     },
-    "_verified_explanation": "Why: The passage specifies the exact autoclave parameters for wrapped instruments."
+    "_verified_explanation": "Why: The passage specifies the exact autoclave parameters for wrapped instruments.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Open mouth breather ? Common place of inflammation",
@@ -206335,7 +207022,9 @@ window.FLASH_NOTES = {
     "id": "fn_saudmasahhah_e07c8d5869",
     "_verification_verdict": "needs_review",
     "_solved_from_book": true,
-    "_verified_explanation": "Why (not book-verified): The student's answer 'Syphilis' is correct, but the provided passages do not mention Hutchinson incisors or syphilis; they discuss bone biomechanics and dental tissue classification."
+    "_verified_explanation": "Why (not book-verified): The student's answer 'Syphilis' is correct, but the provided passages do not mention Hutchinson incisors or syphilis; they discuss bone biomechanics and dental tissue classification.",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "16 y o female complaining from pain in the",
@@ -208616,7 +209305,9 @@ window.FLASH_NOTES = {
     "_page": 26,
     "_book_file": "ref-md/TD_GUIDELINES_FOR_INFECTION_CONTROL-2003",
     "_context": "rilization cycles should be verified for each sterilizer by the periodic use (at least weekly) of BIs (2,9,134,243,278,279). Every load containing implantable devices should be monitored with such indicators (248), and the items quarantined until BI results are known. However, in an emergency, placing implantable items in quarantine until spore tests are known to be negative might be impossible. Manufacturer’s directions should determine the placement and location of BI in the sterilizer. A control BI, from the same lot as the test indicator and not processed through the sterilizer, should be incubated with the test BI; the control BI should yield positive results for bacterial growth. In-of",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Which is considered category C in pregnancy ?",
@@ -209100,7 +209791,9 @@ window.FLASH_NOTES = {
     "_page": 48,
     "_book_file": "Ethics + infection control + local anasthesia/Hand book of local anesthesia 6th",
     "_context": "for personal, private use only. No part of this book may be reproduced or transmitted without publisher's prior permission. Violators will be prosecuted. Epinephrine may be added to a local anesthetic solution immediately before its administration without the addition of antioxidants; however, if the solution is not used in a short time, it will oxidize, slowly turning yellow then brown (much like a sliced apple oxidizing). Rapid oxidation of the vasopressor may be delayed, thereby increasing the shelf life of the product, through the addition of antioxidants. Sodium bisulfite in a concentration between 0.05% and 0.1% is commonly used. A 2% solution of lidocaine HCl, with a pH of 6.8, is aci",
-    "_solved_from_book": true
+    "_solved_from_book": true,
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Patient vomiting on floor of clinic",
@@ -210221,7 +210914,9 @@ window.FLASH_NOTES = {
     "_page": 334,
     "_book_file": "ref-md/TD_Manegment_of_medically_compromised_PT",
     "_context": "follows (Fig. 17.2): A Controlled studies in humans have failed to demonstrate a risk to the fetus, and the possibility of fetal harm appears remote. 294 CHAPTER 17 Women’s Health Issues 135° 6 ft 90° FIG 17.1 Proper operator position during exposure of x-rays. B Animal studies have not indicated fetal risk, and human studies have not been conducted; or animal studies have shown a risk, but controlled human studies have not. C Animal studies have shown a risk, but controlled human studies have not been conducted, or studies are not available in humans or animals. D Positive evidence of human fetal risk exists, but in certain situations, the drug may be used despite its risk. X Evidence of fe",
-    "reference": "Malamed — Handbook of Local Anesthesia"
+    "reference": "Malamed — Handbook of Local Anesthesia",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "needle stick injury with HIV pt",
@@ -211408,7 +212103,9 @@ window.FLASH_NOTES = {
     ],
     "raw": "107.autoclave 126     a.10 psi     b. 15 psi     c.20 psi✅     d. 25 psi",
     "id": "fn_rafi16_f2de4df794",
-    "_verification_verdict": "needs_review"
+    "_verification_verdict": "needs_review",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "How to store biopsy before sending it to the lab?",
@@ -211793,7 +212490,9 @@ window.FLASH_NOTES = {
     ],
     "raw": "\f127.PPE:     a. gloves, mask, gown, eye protector✅     b. Head covers, mask, gown, eye protector     c. gloves, face shield, gown, eye protector",
     "id": "fn_rafi16_98b34ca7bb",
-    "_verification_verdict": "needs_review"
+    "_verification_verdict": "needs_review",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Hierarchy of control: what is the next step If the administrator can't afford elimination of hazard?(previously",
@@ -212944,7 +213643,9 @@ window.FLASH_NOTES = {
     "_option_text": "Gemination picture .",
     "_page": 348,
     "_book_file": "ref-md/TD_White_and_Pharoah's_Oral_Radiology",
-    "_context": "his anomaly varies considerably from a minor notch in the incisal edge of an abnormally wide incisor to the appearance of almost two separate crowns. e enamel or dentin of geminated teeth may be hypoplastic or hypocalcied. Imaging features. Images reveal the altered shape of the hard tissue and pulp chamber of the geminated tooth. Multiple periapical images made from dierent angles, panoramic, or CBCT images can aid in the diagnosis. Radiopaque enamel outlines the cles in the crowns and invaginations, and accentuates them. e pulp chamber is usually single and enlarged, and may be partially divided (Figs. 19.17 and 19.18). In the rare case of premolar gemination, the tooth image suggests"
+    "_context": "his anomaly varies considerably from a minor notch in the incisal edge of an abnormally wide incisor to the appearance of almost two separate crowns. e enamel or dentin of geminated teeth may be hypoplastic or hypocalcied. Imaging features. Images reveal the altered shape of the hard tissue and pulp chamber of the geminated tooth. Multiple periapical images made from dierent angles, panoramic, or CBCT images can aid in the diagnosis. Radiopaque enamel outlines the cles in the crowns and invaginations, and accentuates them. e pulp chamber is usually single and enlarged, and may be partially divided (Figs. 19.17 and 19.18). In the rare case of premolar gemination, the tooth image suggests",
+    "_data_quality": "garbage",
+    "_garbage_reason": "short_fragment_no_question"
    },
    {
     "stem": "Which diagnostic method is mainly used to determine the relationship between the mandible and maxilla?",
@@ -214700,7 +215401,9 @@ window.FLASH_NOTES = {
  "verified": "1887 community + 10 textbook",
  "communityVerified": 1818,
  "dataQuality": {
-  "merged_options_review": 259
+  "merged_options_review": 259,
+  "garbage_stem_quarantine": 117,
+  "note": "garbage stems stay in data, excluded from decks/quizzes, visible in Review>archive"
  },
  "aiStats": {
   "judged": 571,

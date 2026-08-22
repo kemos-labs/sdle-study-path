@@ -135,12 +135,17 @@ def main() -> int:
             no_book_verify.append(q.get("id"))
 
     # G-CITE — every usable question's explanation has a book citation
+    # OR is an explicitly-marked honest uncited clinical hinge (📎 prefix).
+    # The 📎 class exists because AGENTS.md prefers an uncited hinge over a
+    # fabricated page number; only that exact prefix counts.
     no_citation = []
     for q in usable:
         exp = str(q.get("explanation") or "")
         has_cite = "Book-Verified:" in exp or "📖" in exp or "[Book:" in exp
         if not has_cite:
-            no_citation.append(q.get("id"))
+            has_uncited_hinge = exp.lstrip().startswith("📎 Clinical hinge:")
+            if not has_uncited_hinge:
+                no_citation.append(q.get("id"))
 
     gates = {
         "G-DUP": {"ok": dup_extras == 0, "norm_stem_extras": dup_extras},
