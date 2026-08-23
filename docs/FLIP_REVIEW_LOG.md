@@ -1775,3 +1775,57 @@ Usable count 15,521 → **15,514**. The remaining 9 two-option items are legitim
 - `rafi_20_a098e903fc` → Contemporary Fixed Prosthodontics ("should be supragingival. Subgingival margins… major etiologic factor in periodontal disease").
 - Remaining 2 (`rafi_17_19ec23a21f`, `rafi_20_276af0bfaf`) keep explicit `📎 Clinical hinge:` prefixes after 3 grep rounds found no local passage. G-CITE now accepts that exact prefix as the AGENTS.md-sanctioned "uncited hinge beats fake page" class; empty/junk whys still fail.
 - Gates re-run: no_slack 9/9 green (usable 15,514) · flash 7/7 green.
+
+---
+
+## 2026-08-22 — GLUE53 PASS: all 53 "Selected (N)… For:" whys eliminated (books-only)
+
+Continued the PHASE-8 open item. All 53 usable glue items ran through the books-only
+pipeline (`scripts/verify_glue53.py`, checkpoint `data/generated/bank_verification/
+glue53_verdicts.jsonl`; 30 supported / 6 contradicted / 8 uncertain / 9 re-run to
+completion). Every model verdict was then hand-reviewed against verbatim corpus text —
+several raw verdicts were FALSE POSITIVES and were overturned:
+
+| Verifier said | Item | Hand ruling (corpus evidence) |
+|---|---|---|
+| contradicted | rafi_17_ffa0aa8501 Ti-alloy | SUPPORTED — White&Pharoah: "alloys containing aluminum and vanadium" |
+| contradicted | rafi_18_305bb1dc3e #16 pain source | SUPPORTED — wrong-passage-type; sealed #17 perforation vs untreated #16 canal logic stands |
+| contradicted | rafi_14_802e04a8f1 transillumination | SUPPORTED — McDonald 10e: FOTI "routinely use[d]… interproximal surfaces of the ANTERIOR teeth" |
+| contradicted | rafi_18_9e06d81d42 procaine | SUPPORTED — Malamed 6e: allergy to esters "significantly greater than to amide" |
+
+### FLIPS APPLIED (4 — each asserted against option TEXT at apply time)
+| id | Was | Now | Evidence (verbatim, local corpus) |
+|---|---|---|---|
+| `rafi_02_5cfbf6a90a` bone density | D4 densest | **D1 densest** | Oral_Radiology_8e L16935: Misch D1–D4 by cortical thickness + trabecular density; Hupp: anterior mandible "densest of any area" |
+| `rafi_07_facb01e9dc` nosocomial routes | Counter | **Direct contact** | Basic Guide IPC p.: "Transmission by direct or indirect contact"; counter = fomite (indirect), not a route |
+| `rafi_10_83d78639b6` ground glass | Odontoma | **Fibrous dysplasia** | Neville OMFP L33353: "classic radiographic finding is a fine 'ground-glass' opacification"; table L48564 maps FD→ground glass |
+| `rafi_17_a1d9b9fd14` Class III CD setup | Buccal (upper posterior) | **Crossbite setting** | Textbook of Complete Dentures L9243: reverse articulation — maxillary teeth "positioned more palatally", buccal cusps functional |
+
+### DEMOTED (1)
+- `rafi_18_eddfbb3bb9` — stem is a dangling cross-reference ("Same question as the one
+  before"); parent question not in bank → unanswerable as written. Kept in data,
+  `usable:false` with reason. Usable count 15,514 → **15,513**.
+
+### WHY REWRITES (all 53 now G-CITE-clean)
+- ~20 grounded in verbatim passages found this session (Malamed vasovagal/ester-allergy;
+  McDonald xylitol trials + PLS palm/sole hyperkeratosis + FOTI; Lindhe literal
+  "rapid progression of periodontal breakdown (8%)"; Periodontics MSI "implant head…
+  approximately 3 mm apical"; overhang = plaque-retentive iatrogenic factor ×2 items;
+  Carranza lactoperoxidase/lysozyme host-defense; Neville PGCG excision "down to the
+  underlying bone"; Contemporary OMFS records chapter; Textbook of Complete Dentures).
+- Remainder carry explicit `📎 Clinical hinge:` reasoning (AGENTS.md uncited-hinge class).
+
+### OPTION-TEXT TRIMS (5 — student meta-noise stripped; answer sets untouched)
+`rafi_12_7803257e3f[0]` 'also correct but less common' · `rafi_17_94ca05abd8[1]`,
+`rafi_18_24e6fe954f[2]`, `rafi_18_172c2faf72[3]` 🔁 notes · `rafi_19_fb57179862[3]`
+"I wrote it…" note.
+
+### VERIFICATION & REGRESSION
+- Gates: no_slack **9/9 green** (usable 15,513) · flash_notes **green**.
+- Playwright smoke: **27 checks OK × 2 viewports (1280/390px), 0 console errors**
+  (`scripts/playwright_current_smoke.mjs` against http.server :8799).
+- Cache bumps: `questions.js v20260822v14`, sw CACHE v52→v53.
+- Scripts added: `scripts/verify_glue53.py` (+ provider fix: deepseek key dead → 401,
+  dropped to last resort; zai glm-4.5-flash needs `thinking:disabled` or content comes
+  back empty — both patched in `verify_bank_batch.py`).
+- NOT yet pushed/deployed to dist/Pages.

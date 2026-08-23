@@ -93331,8 +93331,8 @@ QUESTION_BANK = [
    "There is a direct correlation between bone density and implant survival rate d. Bone",
    "D3 bone is densest"
   ],
-  "answer": 0,
-  "explanation": "Selected (0) D4 bone is the densest bone for: which of the following statements about bone quality is true?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: rpd/indirect retainer: - 14 8 Indirect Retainers 96 3 Classification of Partially Edentulous Role of Indirect Retainers in Control of Arches 16 Prosthesis Movement 96 Requirements of - 96 3 Classification of Partially Edentulous Role of Indirect Retainers in Control of Arc]",
+  "answer": 1,
+  "explanation": "[Book: Oral Radiology / Misch classification] — bone quality is graded D1–D4 “based on the thickness of cortical bone and the density and distribution of trabecular bone”; D1 (thick cortex + dense, fine trabeculae) is the densest, D4 the least. [Book: Hupp, Contemporary OMFS] — anterior mandible “bone quality is usually excellent, typically the densest of any area in the two arches.”",
   "source": "rafi_02",
   "sourcePack": "rafi_02",
   "department": "fixed",
@@ -93343,7 +93343,7 @@ QUESTION_BANK = [
   "truth_wave": "grok_book:shard_02/batch_0015",
   "read_audit": true,
   "audit_confidence": "med",
-  "book_support": "rpd/indirect retainer: - 14 8 Indirect Retainers 96 3 Classification of Partially Edentulous Role of Indirect Retainers in Control of Arches 16 Prosthesis Movement 96 Requirements of - 96 3 Classification of Partially Edentulous Role of Indirect Retainers in Control of Arc",
+  "book_support": "four categories of bone (D1 to D4) based on the thickness of cortical bone",
   "truth_judge": "grok_book",
   "book_verified": true
  },
@@ -153824,7 +153824,7 @@ QUESTION_BANK = [
    "asking for a parent or legal guardian"
   ],
   "answer": 0,
-  "explanation": "Selected (0) consultation and oral diagnosis for: A 15-year-old girl came to the clinic to seek orthodontic treatment for her protruded upper incisors. Which of the following is the first st. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: ortho_pedo: `ortho/Contemporary Orthodontics 5th.txt` Exists: True · bytes: 3488869 ### Keyword: Angle Class - always were achieved when the patient had ideal occlusion. Note that the Angle classification has four classes: normal A]",
+  "explanation": "📎 Clinical hinge: Every orthodontic evaluation begins with consultation, history-taking and oral diagnosis; impressions, radiographs and other records are ordered only AFTER the clinical problem is defined (diagnosis-first sequencing in Proffit's Contemporary Orthodontics).",
   "source": "rafi_04",
   "sourcePack": "rafi_04",
   "department": "ortho_pedo",
@@ -215291,7 +215291,7 @@ QUESTION_BANK = [
    "Moist canal"
   ],
   "answer": 0,
-  "explanation": "Selected (0) Perforation (or if it touch the clap on the tooth or pfm crown) for: pic of apex locator and thy are saying that tooth was previously opened from another dr.as soon you enter the canal immediately it ring what. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: endo: Fearful accidents, perforations (nonsurgical), inferior alveolar nerve Dental Patient injury (surgical), sinus perforation, instrument separation, • Chapter 29: Endodontic Records and Legal apical extrus - m arsenic tia]",
+  "explanation": "📎 Clinical hinge: An apex locator that beeps immediately upon entry into a previously-accessed canal signals the circuit completing through METAL — a perforation or contact with a post/crown — not the apical constriction (lip-clip connection must also be verified). [Book: Cohen's Pathways of the Pulp] — apex locators require an intact circuit; metallic contact gives false early readings.",
   "source": "rafi_07",
   "sourcePack": "rafi_07",
   "department": "endo",
@@ -218125,7 +218125,7 @@ QUESTION_BANK = [
    "cause hydrolysis"
   ],
   "answer": 0,
-  "explanation": "Selected (0) reduce caries for: xylitol gum it?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: operative: tance form, but the increase in retention form is not 4-methyloxy ethyl trimellitic anhydride (4-META)–based signiﬁcant. Adhesion of amalgam to tooth structure is systems are used frequently. This monomer molecule unnece]",
+  "explanation": "[Book: McDonald & Avery, Pediatric Dentistry] — cites the xylitol chewing-gum caries-prevention trials (Isokangas et al.); regular xylitol gum use reduces caries by suppressing Streptococcus mutans growth and transmission.",
   "source": "rafi_07",
   "sourcePack": "rafi_07",
   "department": "operative",
@@ -228279,8 +228279,8 @@ QUESTION_BANK = [
    "direct contact",
    "Airborne droplet spread"
   ],
-  "answer": 0,
-  "explanation": "Selected (0) Counter for: Nosocomial infection routes of transmission?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: ethics/hand hygiene: - ............. 10 numbers]. Hand Hygiene ................................................................ 14 Personal Protective Equipment ........................................ 16 Contact Der - lth-care personnel; 2) preventing transmission of bl]",
+  "answer": 2,
+  "explanation": "[Book: Basic Guide to Infection Prevention and Control in Dentistry] — “Transmission by direct or indirect contact” heads the listed routes of infection transmission (“Direct and indirect contact spread of infection”). A counter is only a fomite within INDIRECT contact, not a route itself; airborne droplet spread is a further recognized route, with contact transmission the principal dental-surgery route.",
   "source": "rafi_07",
   "sourcePack": "rafi_07",
   "department": "ethics",
@@ -228291,7 +228291,7 @@ QUESTION_BANK = [
   "truth_wave": "grok_book:shard_03/batch_0003",
   "read_audit": true,
   "audit_confidence": "med",
-  "book_support": "ethics/hand hygiene: - ............. 10 numbers]. Hand Hygiene ................................................................ 14 Personal Protective Equipment ........................................ 16 Contact Der - lth-care personnel; 2) preventing transmission of bl",
+  "book_support": "Transmission by direct or indirect contact",
   "truth_judge": "grok_book",
   "book_verified": true
  },
@@ -228755,7 +228755,7 @@ QUESTION_BANK = [
    "acyclovir"
   ],
   "answer": 0,
-  "explanation": "Selected (0) Aspirin for: Patient have pain in temporal area and headache?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: oms: teroids) (including prednisone). . . . . . . . . . . . . . . . . . . YES - loss of appetite • Anticoagulant use • Head: Headache, dizziness, fainting, insomnia • Asthma • Ears: Decreased hearing, tinnitus (ringing), pain]",
+  "explanation": "📎 Clinical hinge: Diffuse temporal-area pain with headache, absent red flags (scalp tenderness, jaw claudication, visual loss), is managed as tension-type/TMD-related pain with a simple analgesic — aspirin/NSAID first-line; antibiotics, acyclovir and prednisone target infection, herpes and giant-cell arteritis respectively.",
   "source": "rafi_07",
   "sourcePack": "rafi_07",
   "department": "oms",
@@ -283448,7 +283448,7 @@ QUESTION_BANK = [
    "Antibiotics only"
   ],
   "answer": 0,
-  "explanation": "Selected (0) Extraction for: 30-year-old patient has severe pain in the left side, what is the treatment for wisdom teeth?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: oms/extraction: - e physical examination lengthy history of a painful, nonhealing extraction site in a patient should be tailored to each patient, taking into consideration the who received therapeutic irradiation. In this more complex case, a patient’s medical prob]",
+  "explanation": "[Book: Hupp, Contemporary Oral and Maxillofacial Surgery] — severe/recurrent pericoronal pain of a third molar is a classic indication for removal; definitive treatment is extraction — antibiotics alone treat the episode, not the cause, and coronectomy is reserved for nerve-proximity planning.",
   "source": "rafi_10",
   "sourcePack": "rafi_10",
   "department": "oms",
@@ -287190,8 +287190,8 @@ QUESTION_BANK = [
    "Ameloblastoma",
    "Fibrous dysplasia"
   ],
-  "answer": 0,
-  "explanation": "Selected (0) Odontoma for: Ground glass appearance in ?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: oms/extraction: - e physical examination lengthy history of a painful, nonhealing extraction site in a patient should be tailored to each patient, taking into consideration the who received therapeutic irradiation. In this more complex case, a patient’s medical prob]",
+  "answer": 3,
+  "explanation": "[Book: Neville, Oral and Maxillofacial Pathology] — fibrous dysplasia: “The classic radiographic finding is a fine ‘ground-glass’ opacification”, and the text’s table lists fibrous dysplasia as the “‘Ground glass’ appearance” lesion; odontomas instead show tooth-like radiopacities.",
   "source": "rafi_10",
   "sourcePack": "rafi_10",
   "department": "oms",
@@ -287202,7 +287202,7 @@ QUESTION_BANK = [
   "truth_wave": "grok_book:shard_02/batch_0006",
   "read_audit": true,
   "audit_confidence": "med",
-  "book_support": "oms/extraction: - e physical examination lengthy history of a painful, nonhealing extraction site in a patient should be tailored to each patient, taking into consideration the who received therapeutic irradiation. In this more complex case, a patient’s medical prob",
+  "book_support": "classic radiographic finding is a fine “ground-glass”",
   "truth_judge": "grok_book",
   "book_verified": true
  },
@@ -289734,7 +289734,7 @@ QUESTION_BANK = [
    "calculus"
   ],
   "answer": 2,
-  "explanation": "Selected (2) direct bacteria to the bone (food impaction-plaque-bacteria and infla) for: x ray picture with access amalgam and bone resorption and asking why?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: operative/amalgam: - contemporary work by our scientists the use of gold as a restorative material. Amalgam, and clinicians around the world. Prevention is still the however, remains a mainstay of operative dentistry. All least costly alternative of all treatment optio]",
+  "explanation": "[Book: Periodontics: Medicine, Surgery and Implants] — “Dental restorations with overhanging or open margins create plaque-retentive areas that can increase gingival inflammation, bone loss, and attachment loss”; plaque bacteria organized at the defective margin drive the localized bone resorption.",
   "source": "rafi_11",
   "sourcePack": "rafi_11",
   "department": "operative",
@@ -303114,7 +303114,7 @@ QUESTION_BANK = [
    "Periapical scar"
   ],
   "answer": 2,
-  "explanation": "Selected (2) Chronic radicular periodontitis(because it is a asymptomatic) for: An endo-treated tooth case, and the patient is asymptomatic. However, there's a periapical lesion on the mesial root. What would you conside. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: endo/apical constriction: - . 5-20 A, Morphology of the root apex. From its orifice the canal tapers to the apical constriction, or minor apical diameter, which generally is considered the narrowest part of Minor apical the canal. From this point the canal widens as it exits]",
+  "explanation": "📎 Clinical hinge: An ASYMPTOMATIC periapical radiolucency on an endo-treated tooth is chronic apical (radicular) periodontitis — long-standing low-grade inflammation; acute apical abscess and acute radicular periodontitis are defined by pain/swelling, and a scar is a postsurgical radiolucent healing variant.",
   "source": "rafi_12",
   "sourcePack": "rafi_12",
   "department": "endo",
@@ -307128,7 +307128,7 @@ QUESTION_BANK = [
    "Guided bone regeneration"
   ],
   "answer": 0,
-  "explanation": "Selected (0) block graft for: Implant in lower left with vertical and horizontal bone loss. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: rpd/vertical dimension: - ated by the fact that caused by a reduction in occlusal vertical dimension. Restor- 71.5% of 65- to 74-year-old individuals are partially eden- ing facial esthetics in a manner that maintains an appropri- tulous (mean number of retained teeth = 18.]",
+  "explanation": "📎 Clinical hinge: Combined vertical + horizontal ridge loss at an implant site is reconstructed with an autogenous BLOCK graft, which structurally restores both dimensions; resorbable collagen membranes suit contained horizontal defects, and titanium-reinforced membranes serve primarily vertical augmentation.",
   "source": "rafi_12",
   "sourcePack": "rafi_12",
   "department": "fixed",
@@ -310502,7 +310502,7 @@ QUESTION_BANK = [
    "Orthognathic surgery"
   ],
   "answer": 0,
-  "explanation": "Selected (0) grind from tooth(remove interference) for: Pseudo class 3 and there is drifting when occlude what to do?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: ortho_pedo/angle class: - always were achieved when the patient had ideal occlusion. Note that the Angle classification has four classes: normal As time passed, it became clear that even an excellent occlusion, Class I malocclusion, Class II malocclusion, and occlusion was]",
+  "explanation": "📎 Clinical hinge: Pseudo-(postural) Class III results from an anterior occlusal INTERFERENCE that deflects the mandible forward on closure; eliminating the interference (selective grinding) restores centric closure — facemask/headgear/surgery address skeletal discrepancies, not functional shifts.",
   "source": "rafi_12",
   "sourcePack": "rafi_12",
   "department": "ortho_pedo",
@@ -310926,7 +310926,7 @@ QUESTION_BANK = [
    "Headgear"
   ],
   "answer": 2,
-  "explanation": "Selected (2) Twin block(if Reverse Twin Block) for: class 3 with normal maxilla. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: ortho_pedo/angle class: - always were achieved when the patient had ideal occlusion. Note that the Angle classification has four classes: normal As time passed, it became clear that even an excellent occlusion, Class I malocclusion, Class II malocclusion, and occlusion was]",
+  "explanation": "📎 Clinical hinge: Class III with a NORMAL maxilla implies mandibular prognathism, so maxillary protraction (reverse-pull headgear) is inappropriate; the matched functional choice is the REVERSE twin block — designed to restrain/reposition the mandible in Class III.",
   "source": "rafi_12",
   "sourcePack": "rafi_12",
   "department": "ortho_pedo",
@@ -315425,13 +315425,13 @@ QUESTION_BANK = [
   "difficulty": "exam",
   "q": "Pic. of patient has swelling and cavernous sinus thrombosis which space infected ?",
   "options": [
-   "Infratemporal ‘also correct but less common’",
+   "Infratemporal space",
    "canine (more common in canine)",
    "Supratemporal",
    "Pterygoid plexus involvement"
   ],
   "answer": 1,
-  "explanation": "Selected (1) canine (more common in canine) for: Pic. of patient has swelling and cavernous sinus thrombosis which space infected ?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: oms/extraction: - e physical examination lengthy history of a painful, nonhealing extraction site in a patient should be tailored to each patient, taking into consideration the who received therapeutic irradiation. In this more complex case, a patient’s medical prob]",
+  "explanation": "📎 Clinical hinge: Canine-space infection tracks along the angular vessels to the inferior ophthalmic veins and can precipitate cavernous sinus thrombosis — the classic dangerous spread of an infraorbital/canine abscess; infratemporal involvement occurs but is less common.",
   "source": "rafi_12",
   "sourcePack": "rafi_12",
   "department": "oms",
@@ -317080,7 +317080,7 @@ QUESTION_BANK = [
    "Bleeding control"
   ],
   "answer": 2,
-  "explanation": "Selected (2) airway (this fracture site causes airway obstruction) for: Pt came with parasymphyseal fracture what the ﬁrst thing u will maintain ?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: oms/fracture: - d bone clasts, derived from monocyte precursor cells, function to resorb fractures. In contrast, healing by secondary intention implies that a necrotic bone and bone that needs to be remodeled. Osteoblasts then gap is left between the edges of an i]",
+  "explanation": "📎 Clinical hinge: Facial-fracture care follows ATLS priorities — AIRWAY first; bilateral parasymphyseal fractures release the anterior floor-of-mouth/tongue complex, which can fall back and obstruct the airway before hemorrhage or malocclusion is addressed.",
   "source": "rafi_12",
   "sourcePack": "rafi_12",
   "department": "oms",
@@ -335342,7 +335342,7 @@ QUESTION_BANK = [
    "Radiographs for proximal caries"
   ],
   "answer": 0,
-  "explanation": "Selected (0) transillumination for interproximal for: Best method to detect anterior teeth lesion ?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: operative: y 200 beneﬁcial for anterior restorations. It also produces - silicate glass particle, releasing calcium, aluminum, composite wear more than beveled margins. Butt joint fluoride, silicon, and other ions. Divalent calcium]",
+  "explanation": "[Book: McDonald & Avery 10e] — “Conventional clinical caries examinations routinely use transillumination to identify lesions located on the interproximal surfaces of the ANTERIOR teeth”; radiographs serve POSTERIOR proximal lesions, where light cannot transmit through the broad contacts.",
   "source": "rafi_14",
   "sourcePack": "rafi_14",
   "department": "operative",
@@ -341962,7 +341962,7 @@ QUESTION_BANK = [
    "kennedy III"
   ],
   "answer": 0,
-  "explanation": "Selected (0) kennedy IV for: Patient lost his anteriors due to trauma. What's Kennedy's classification ?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: rpd/kennedy: - 17 Retainers 99 Kennedy Classification 17 Auxiliary Functions of Indirect Retainers 99 Applegate’s Rules for Applying the Kennedy Forms of Indirect Retainers 99 Classification - ions of Indirect Retainers 99 Applegate’s Rules for Applying the Kenne]",
+  "explanation": "[Book: McCracken's Removable Partial Prosthodontics / Applegate's rules] — a bounded edentulous span crossing the midline in the ANTERIOR region is Kennedy Class IV; Class III is a bounded span entirely posterior to the midline on one side.",
   "source": "rafi_14",
   "sourcePack": "rafi_14",
   "department": "rpd",
@@ -367383,7 +367383,7 @@ QUESTION_BANK = [
    "Palliative restoration only"
   ],
   "answer": 0,
-  "explanation": "Selected (0) Extraction (if they ask about before receiving treatment ) for: Old female with breast cancer stage IV with poor prognosis , #46 questionable restorability. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: oms/extraction: - e physical examination lengthy history of a painful, nonhealing extraction site in a patient should be tailored to each patient, taking into consideration the who received therapeutic irradiation. In this more complex case, a patient’s medical prob]",
+  "explanation": "📎 Clinical hinge: Before stage-IV cancer therapy (chemo/bisphosphonates/radiation), dental clearance removes potential infection sources — a tooth of QUESTIONABLE restorability is extracted pre-treatment; definitive RCT+crown becomes impractical and osteonecrosis-risky once oncologic therapy begins.",
   "source": "rafi_15",
   "sourcePack": "rafi_15",
   "department": "oms",
@@ -369758,7 +369758,7 @@ QUESTION_BANK = [
    "Stop the second med"
   ],
   "answer": 1,
-  "explanation": "Selected (1) Interlesional steroid(depend on diagnosis) for: Pt taking immunosuppressive mid. Pridinson and other Came complain from pain and lesion prevent him from eat and drink ?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: oms: infection or other immunosuppressive conditions. • Fig. 1-26 Bismuth Staining. Transitory staining of the posterior ◆ VARICOSITIES (VARICES) dorsal tongue after using bismuth subsalicylate for an upset stomach - is prob]",
+  "explanation": "📎 Clinical hinge: A painful oral ulcer in an immunosuppressed patient is treated per its DIAGNOSIS — intralesional corticosteroid suits inflammatory/autoimmune (aphthous-like) lesions, while a persistent/atypical ulcer warrants biopsy first; stopping prednisone abruptly risks adrenal crisis and treats nothing.",
   "source": "rafi_15",
   "sourcePack": "rafi_15",
   "department": "oms",
@@ -369959,7 +369959,7 @@ QUESTION_BANK = [
    "pulpitis with irreversible inflammation"
   ],
   "answer": 0,
-  "explanation": "Selected (0) vasovagal syncope for: patient came to the dentist and this is her first visit after you give LA she feel dizziness and lightheadedness. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: oms/extraction: - e physical examination lengthy history of a painful, nonhealing extraction site in a patient should be tailored to each patient, taking into consideration the who received therapeutic irradiation. In this more complex case, a patient’s medical prob]",
+  "explanation": "[Book: Malamed, Handbook of Local Anesthesia] — “Many ‘healthy’ patients suffer from fear-related emergencies, including hyperventilation and vasodepressor syncope (also known as vasovagal syncope and ‘fainting’)”; first-visit dizziness/lightheadedness after injection is the classic stress-induced syncope prodrome.",
   "source": "rafi_15",
   "sourcePack": "rafi_15",
   "department": "oms",
@@ -380041,7 +380041,7 @@ QUESTION_BANK = [
    "Polish the chipped area"
   ],
   "answer": 0,
-  "explanation": "Selected (0) Remove and take a new impression (because huge defect as half of it gone) for: Pt present to clinic with 3 unit ceramic bridge #11#22 with half incisal of #11 chipped, what will you do?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: operative/composite: - comes, the fundamentals of operative dentistry will be niques, increased use of composites, and a decline in advanced through contemporary work by our scientists the use of gold as a restorative material. Amalgam, and clinicians around the world. P]",
+  "explanation": "📎 Clinical hinge: A chip involving HALF the incisal edge of a ceramic bridge far exceeds intraoral repair limits — the prosthesis must be REMADE from a new impression; chairside composite or laboratory patch repair is reserved for SMALL porcelain veneer chips.",
   "source": "rafi_16",
   "sourcePack": "rafi_16",
   "department": "fixed",
@@ -390959,7 +390959,7 @@ QUESTION_BANK = [
    "Test regarding muscle movement"
   ],
   "answer": 0,
-  "explanation": "Selected (0) Diagnosis by exclude. ( eliminate any disease with dissimilar symptoms ) for: patient complain of fibromyalgia, what is the most accurate method to diagnose it:. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: oms: dibular lymph tions regarding liver dysfunction, including drug dosage nodes may become infected with TB; this condition is reductions, are discussed in Chapter 10. called scrofula. The n - itis) interactions, and advers]",
+  "explanation": "📎 Clinical hinge: Fibromyalgia has no confirmatory electrical, imaging or histologic test — it is a CLINICAL diagnosis made by excluding similar disorders (history, examination, targeted labs); muscle-movement tests and biopsies play no diagnostic role.",
   "source": "rafi_16",
   "sourcePack": "rafi_16",
   "department": "oms",
@@ -396934,7 +396934,7 @@ QUESTION_BANK = [
    "None of the above"
   ],
   "answer": 2,
-  "explanation": "Selected (2) Both of the above for: the irrigation solution is good because. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: endo: d on the ability of irrigation to generate optimum stream- ## Source: `Endo/Endodontics_principles.txt` Exists: True · bytes: 2443376 ### Keyword: irreversible pulpitis - considerable interest is developing in tip the]",
+  "explanation": "[Book: Cohen's Pathways of the Pulp] — endodontic irrigants FLUSH debris from the canal AND act as a lubricant (alongside antimicrobial/tissue-dissolving action), so “both of the above” is correct.",
   "source": "rafi_17",
   "sourcePack": "rafi_17",
   "department": "endo",
@@ -399279,7 +399279,7 @@ QUESTION_BANK = [
    "Furcation involvement"
   ],
   "answer": 1,
-  "explanation": "Selected (1) Overhanging restoration  ( Iatrogenic Factor ) for: Patient: 42 year old male . current smoker (smokes a pack of cigarettes a day), did not report any systemic conditions, is not on any medica. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: operative/c-factor: - ng stress-breaker indications, advantages, and disadvantages of the and C-factor issues, and new restorative techniques, presented procedure; and finally the tooth preparation especially the Class IV composite restoration. factors and restorative f]",
+  "explanation": "[Book: Periodontics: Medicine, Surgery and Implants] — “Dental restorations with overhanging or open margins create plaque-retentive areas”; an OVERHANG physically blocks probe seating and harbors plaque — the iatrogenic factor behind localized deep probing on the buccal of the involved tooth.",
   "source": "rafi_17",
   "sourcePack": "rafi_17",
   "department": "operative",
@@ -400508,7 +400508,7 @@ QUESTION_BANK = [
    "Vanadium"
   ],
   "answer": 2,
-  "explanation": "Selected (2) Aluminum for: Titanium Alloy component?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: operative: weak attachment to components are weaker than the 37% phosphoric acid the dentin and is su ### Keyword: hybrid layer - resin interdiffusion zone often is termed the hybrid layer (Figs. 2-31 and 2-32). Although dentin b]",
+  "explanation": "[Book: White & Pharoah, Oral Radiology] — “Commercially pure (CP) titanium and titanium in alloys containing aluminum and vanadium” — the standard Ti-6Al-4V implant alloy adds ALUMINUM and vanadium to CP titanium; aluminum is the classic examined component (vanadium is likewise present).",
   "source": "rafi_17",
   "sourcePack": "rafi_17",
   "department": "operative",
@@ -401978,7 +401978,7 @@ QUESTION_BANK = [
    "Toothbrush abrasion"
   ],
   "answer": 2,
-  "explanation": "Selected (2) High frenum attachment for: patient has a gingival recession in only on 41 from the labial side, what is the cause of it?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: perio/clinical attachment: - cess will continue in a coronal direction until the split approaches the normal clinical attachment level at the cementoenamel junction. The epithelium on the opposite side of the split will continue to recede until it is slightly coronal to the ce]",
+  "explanation": "📎 Clinical hinge: Recession isolated to ONE tooth's labial aspect indicates a LOCAL mechanical factor — a HIGH FRENUM attaching near the margin with a thin biotype tenses on lip movement and strips tissue; toothbrush trauma and occlusal forces typically affect multiple sites.",
   "source": "rafi_17",
   "sourcePack": "rafi_17",
   "department": "perio",
@@ -402870,7 +402870,7 @@ QUESTION_BANK = [
    "Digestion"
   ],
   "answer": 1,
-  "explanation": "Selected (1) Antibacterial for: lysozyme and lactoperoxidase function, in the saliva composition?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: perio: itis, 241 Microbial composition of dental biofilms, 177 Gregory J. Seymour, Leonardo Trombelli, Benefits to the host of a resident oral and Tord Berglundh microbiota, 178 Introduction, 241 Concluding remarks, - in the de]",
+  "explanation": "[Book: Carranza's Clinical Periodontology] — saliva's antibacterial systems: lactoperoxidase generates hypothiocyanite (oxidation-mediated microbial inhibition) alongside lysozyme, lactoferrin and defensins; lysozyme hydrolyzes bacterial cell walls — host-defense factors, not buffering/lubricants/digestive enzymes.",
   "source": "rafi_17",
   "sourcePack": "rafi_17",
   "department": "perio",
@@ -402956,7 +402956,7 @@ QUESTION_BANK = [
    "3 months recall"
   ],
   "answer": 0,
-  "explanation": "Selected (0) 1-2 for: Anug after SRP healed well and everything good. Next visit ?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: perio: Appendix C textbook extracts. Not SCFHS answer keys. Use for lesson writing only. ## Source: `perio/Periodontics Medicine Surgery Implants.txt` Exists: True · bytes: 3433620 ### Keyword: probing depth - t disruption, r]",
+  "explanation": "📎 Clinical hinge: After SRP for ANUG with full healing, the re-evaluation visit is SHORT-interval (1–2 weeks) to confirm resolution and reinforce biofilm control; multi-month recalls belong to routine periodontal maintenance, and the acute phase itself is reviewed within days.",
   "source": "rafi_17",
   "sourcePack": "rafi_17",
   "department": "perio",
@@ -406029,7 +406029,7 @@ QUESTION_BANK = [
    "Distortion of metal during firing"
   ],
   "answer": 0,
-  "explanation": "Selected (0) Incorrectly related cast  (incorrect opposing cast) for: When try in PFM, the dentist observes that the gingival margin adaptation and integrity with finish line is excellent, but the occlusal surf. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: fixed/finish line: - essential to help determine the exact amount selection of certain types of finish line geometry.53 of reduction necessary to develop an optimum occlusion. Occlusal considerations A satisfactory tooth preparation allows sufficient Preventing tooth f]",
+  "explanation": "📎 Clinical hinge: Perfect marginal adaptation rules out distortion of the restoration itself; occlusion 1 mm TOO HIGH with intact margins means the OPPOSING cast was incorrectly related on the articulator (mounting error) — tight proximal contacts would instead drag/open the margin.",
   "source": "rafi_17",
   "sourcePack": "rafi_17",
   "department": "fixed",
@@ -407102,7 +407102,7 @@ QUESTION_BANK = [
    "Maxilla class 1"
   ],
   "answer": 1,
-  "explanation": "Selected (1) Man class 1 (by using dual impression) for: Which case Alters functional impression in recording function in partially edentulous. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: fixed/impression: - h, perception of esthetics and objective tooth color tissue management, and impression making now measurement have been incorporated, which allows include a number of new step-by-step examples of logical flow of content with that in the chapters on]",
+  "explanation": "[Book: McCracken's Removable Partial Prosthodontics] — distal-extension (Kennedy Class I/II) bases require a FUNCTIONAL, pressure-recorded ridge impression made with a dual/altered-cast technique; tooth-supported cases use conventional mucostatic impressions — hence MANDIBULAR Class I alters the functional-impression recording.",
   "source": "rafi_17",
   "sourcePack": "rafi_17",
   "department": "rpd",
@@ -409797,8 +409797,8 @@ QUESTION_BANK = [
    "Lingual",
    "Crossbite setting"
   ],
-  "answer": 1,
-  "explanation": "Selected (1) Buccal  (upper posterior) for: Class III patient, how will you ask the lab technician to set the teeth of CD?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: rpd/rest seat: - : GENERAL CONCEPTS/TREATMENT Interproximal Occlusal Rest Seats 59 PLANNING Internal Occlusal Rests 61 Support for Rests 61 1 Partially - Physiology, and Terminology 2 Incisal Rests and Rest Seats 64 Tooth Loss and Age 3 Implants as a Rest 66 Conseq]",
+  "answer": 3,
+  "explanation": "[Book: Textbook of Complete Dentures] — for prognathic (Class III) patients the posteriors are arranged in “reverse articulation (crossbite)”: “all maxillary teeth are posi- tioned more palatally than the mandibular teeth, resulting in the buccal cusps serving as the functional cusps.” Asking for upper posteriors BUCCAL would reproduce normal occlusion, not Class III.",
   "source": "rafi_17",
   "sourcePack": "rafi_17",
   "department": "rpd",
@@ -409809,7 +409809,7 @@ QUESTION_BANK = [
   "truth_wave": "grok_book:shard_02/batch_0017",
   "read_audit": true,
   "audit_confidence": "med",
-  "book_support": "rpd/rest seat: - : GENERAL CONCEPTS/TREATMENT Interproximal Occlusal Rest Seats 59 PLANNING Internal Occlusal Rests 61 Support for Rests 61 1 Partially - Physiology, and Terminology 2 Incisal Rests and Rest Seats 64 Tooth Loss and Age 3 Implants as a Rest 66 Conseq",
+  "book_support": "Complete reverse articulation (crossbite) of the posterior teeth",
   "truth_judge": "grok_book",
   "book_verified": true
  },
@@ -410681,12 +410681,12 @@ QUESTION_BANK = [
   "q": "Pedo patient with deep bite what is the management?",
   "options": [
    "Intrusion of posterior",
-   "Extrusion of posterior (anterior bite plane). 🔁",
+   "Extrusion of posterior (anterior bite plane)",
    "Intrusion of anterior",
    "Extrusion of posterior"
   ],
   "answer": 1,
-  "explanation": "Selected (1) Extrusion of posterior (anterior bite plane). 🔁 for: Pedo patient with deep bite what is the management?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: ortho_pedo: Moderat - . Proffit Management of Occlusal Relationship Problems, 403 Management of Eruption Problems, 417 Correction of Molar Relationship, 556 Management of Space Problems, 427 Class I Crowding/Protrusion: Closure of T]",
+  "explanation": "📎 Clinical hinge: Pediatric deep bite is corrected by permitting ERUPTION OF POSTERIOR teeth — a (posterior-effect) anterior bite plane discludes the molars so they erupt vertically, opening the incisor overlap; anterior intrusion is the fixed-appliance/adult alternative.",
   "source": "rafi_17",
   "sourcePack": "rafi_17",
   "department": "ortho_pedo",
@@ -414577,7 +414577,7 @@ QUESTION_BANK = [
    "PSAN + GP"
   ],
   "answer": 0,
-  "explanation": "Selected (0) MSAN for: Child with caries in primary molar reach 1/3 of dentin how to give profound anesthesia:. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: oms/local anesthesia: - MEDICAL CONDITIONS 8 gery, under local anesthesia, nitrous oxide sedation, or both, differs Cardiovascular Problems 8 substantially from that necessary for a patient requiring hospital Ischemic Heart Disease 8 admission and general anesthesia for -]",
+  "explanation": "📎 Clinical hinge: Profound PULPAL anesthesia for a maxillary primary molar requires the middle superior alveolar (MSAN) block covering its buccal roots; the greater palatine numbs palatal SOFT tissue only (extraction adjunct, unnecessary for restorative work) and PSAN spares the primary molar's roots.",
   "source": "rafi_17",
   "sourcePack": "rafi_17",
   "department": "oms",
@@ -415957,7 +415957,7 @@ QUESTION_BANK = [
    "Hereditary gingival fibromatosis"
   ],
   "answer": 0,
-  "explanation": "Selected (0) Papillon-Lefèvre Syndrome for: Obg, clinical photos of hand palms and knees, asking the diagnosis?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: oms/extraction: - e physical examination lengthy history of a painful, nonhealing extraction site in a patient should be tailored to each patient, taking into consideration the who received therapeutic irradiation. In this more complex case, a patient’s medical prob]",
+  "explanation": "[Book: McDonald & Avery] — Papillon-Lefèvre syndrome: palmoplantar hyperkeratosis (“Hyperkeratosis of the palms and soles was present”, knees/elbows included) with early aggressive periodontitis; ectodermal dysplasia shows hypotrichosis/hypohidrosis/conoid teeth, not keratoderma.",
   "source": "rafi_17",
   "sourcePack": "rafi_17",
   "department": "oms",
@@ -421784,7 +421784,7 @@ QUESTION_BANK = [
    "Pulpotomy"
   ],
   "answer": 0,
-  "explanation": "Selected (0) Apexification for: 8 years old boy with traumatized central 9m ago, tooth didn’t respond to vitality test.?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: endo/apexification: - - ment should be performed as soon as possible so that symp- ries, apexification, or apexogenesis therapy. At the time these tomatic irreversible pulpitis or necrosis does not develop and cases present for root canal therapy it would not be possibl]",
+  "explanation": "[Book: Cohen's Pathways of the Pulp] — a young permanent incisor with pulp NECROSIS and an incompletely formed (blunderbuss) apex requires APEXIFICATION — long-term Ca(OH)₂ or an MTA apical plug — to induce a calcified barrier; DPC/IPC/pulpotomy are VITAL-pulp therapies, inapplicable to a non-responsive tooth.",
   "source": "rafi_18",
   "sourcePack": "rafi_18",
   "department": "endo",
@@ -421813,7 +421813,7 @@ QUESTION_BANK = [
    "enamel hypoplasia on #19"
   ],
   "answer": 2,
-  "explanation": "Selected (2) #16 apical infection for: pt came complain from pain upon biting after post placement, #17 PA shows a post perforation which was good sealed, #16 was with a post with. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: endo/apical constriction: - . 5-20 A, Morphology of the root apex. From its orifice the canal tapers to the apical constriction, or minor apical diameter, which generally is considered the narrowest part of Minor apical the canal. From this point the canal widens as it exits]",
+  "explanation": "📎 Clinical hinge: Source follows the evidence: #16 carries a post with NO root-canal filling (uninstrumented canal → symptomatic apical periodontitis on biting), whereas #17's perforation is WELL SEALED with no periapical radiolucency — the untreated #16 canal is the likely pain origin.",
   "source": "rafi_18",
   "sourcePack": "rafi_18",
   "department": "endo",
@@ -423929,11 +423929,11 @@ QUESTION_BANK = [
   "options": [
    "Remake",
    "Laboratory repair",
-   "Composite repair🔁 (question lack details)",
+   "Composite repair",
    "full crown coverage"
   ],
   "answer": 2,
-  "explanation": "Selected (2) Composite repair🔁 (question lack details) for: Pt. has broken half of the incisal third , how to manage?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: operative/composite: - comes, the fundamentals of operative dentistry will be niques, increased use of composites, and a decline in advanced through contemporary work by our scientists the use of gold as a restorative material. Amalgam, and clinicians around the world. P]",
+  "explanation": "📎 Clinical hinge: An incisal-THIRD fracture of an anterior tooth (enamel-dentin, vital pulp) is restored directly with COMPOSITE RESIN (Class IV); full coverage wastes tooth structure and lab-processed repair adds nothing for a directly bondable defect.",
   "source": "rafi_18",
   "sourcePack": "rafi_18",
   "department": "operative",
@@ -424209,7 +424209,7 @@ QUESTION_BANK = [
    "Widen the gingival floor"
   ],
   "answer": 0,
-  "explanation": "Selected (0) Divergence of the axial walls ( or parall ) for: Dentist wanted to do class ll amalgam, but he increased the isthmus. So he decided to go for gold inlay, what alteration should he do?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: operative/amalgam: - contemporary work by our scientists the use of gold as a restorative material. Amalgam, and clinicians around the world. Prevention is still the however, remains a mainstay of operative dentistry. All least costly alternative of all treatment optio]",
+  "explanation": "📎 Clinical hinge: Cast-gold INLAY preparations require all walls slightly DIVERGENT occlusally (single draw, no undercuts, beveled margins), whereas amalgam relies on convergent (undercut) walls for retention — box width/floor width are unrelated to switching materials.",
   "source": "rafi_18",
   "sourcePack": "rafi_18",
   "department": "operative",
@@ -430201,7 +430201,7 @@ QUESTION_BANK = [
    "Root canal treatment for pulpitis"
   ],
   "answer": 2,
-  "explanation": "Selected (2) Non adjustable articulator (mentioned before) for: Type of articlulator for patient recieving upper right 6 crown with all other teeth intact and good occlusion?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: operative: Dentin Predentin - Occlusion CHAPTER 2 31 debris (Fig. 2-28). The smear layer serves as a natural the primary mechanism of attachment is mechanical bandage over the cut dentinal surface because it occludes interlocking.]",
+  "explanation": "📎 Clinical hinge: A SINGLE crown in an intact, harmonious occlusion needs only a NON-ADJUSTABLE (hinge/average-value) articulator with an interocclusal record — facebow transfers and semi-adjustable programming matter for multiple units/reconstructed occlusions.",
   "source": "rafi_18",
   "sourcePack": "rafi_18",
   "department": "fixed",
@@ -434120,7 +434120,7 @@ QUESTION_BANK = [
    "periapical for caries detection"
   ],
   "answer": 1,
-  "explanation": "Selected (1) cephalometric  (Frontal cephalogram) for: p.t with facial asymmetry type of x-ray you take?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: ortho_pedo: J. Littlewood) 53 6 Cephalometrics 73 7 Treatment planning (S. J. Littlew - anines 169 15 Anchorage planning (F. Dyer) 179 16 Retention (S. J. Littlewood) 193 17 Removable appliances 207 18 Fixed appliances - 7.6 Basic p]",
+  "explanation": "📎 Clinical hinge: Facial asymmetry is measured on the POSTEROANTERIOR (frontal) cephalogram — paired structures are compared across the midsagittal axis; an OPG images jaws/teeth but cannot quantify transverse skeletal symmetry.",
   "source": "rafi_18",
   "sourcePack": "rafi_18",
   "department": "ortho_pedo",
@@ -435472,7 +435472,7 @@ QUESTION_BANK = [
    "complete"
   ],
   "answer": 1,
-  "explanation": "Selected (1) objective(previously mentioned) for: the most important thing in documentation ?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: ethics: FIDENTIALITY 87 8.1 Objectives of the Module 89 8.2 Case (Ethical Scenario) 89 8.3 Introduction - 90 How privacy and confidentiality differ 90 Measures to protect patients‟ privacy 90 Measures to protect the confidential]",
+  "explanation": "📎 Clinical hinge: Defensible records are OBJECTIVE — dated entries charting observed findings and actions (“if it was not charted, it did not happen”, Contemporary OMFS records chapter); completeness and specificity support the record, but objectivity gives it clinical/legal weight.",
   "source": "rafi_18",
   "sourcePack": "rafi_18",
   "department": "ethics",
@@ -438285,7 +438285,7 @@ QUESTION_BANK = [
    "Mental nerve"
   ],
   "answer": 0,
-  "explanation": "Selected (0) Lingual  (Mentioned previously) for: 60 years old patient came to you and seeking for complete denture upper and lower, examination shows sever lower ridge resorption and promin. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: oms: action - e physical examination lengthy history of a painful, nonhealing extraction site in a patient should be tailored to each patient, taking into consideration the who received therapeutic irradiation. In this more c]",
+  "explanation": "📎 Clinical hinge: Relief of a prominent MYLOHYOID ridge via a floor-of-mouth incision risks the LINGUAL nerve — it rests directly against the medial mandible (lingual to the molar/ridge region) just beneath mucoperiosteum; the mylohyoid nerve runs below the mylohyoid line in its groove, and IAN/mental lie buccal or deeper.",
   "source": "rafi_18",
   "sourcePack": "rafi_18",
   "department": "oms",
@@ -438458,7 +438458,7 @@ QUESTION_BANK = [
    "Xylocaine"
   ],
   "answer": 2,
-  "explanation": "Selected (2) Procain ( causes allergy ) for: Patient takes LA and starts to feel itchy, lip swelling, you give him epinephrine and symptoms are relieved. Which type of anesthesia was us. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: oms/local anesthesia: - MEDICAL CONDITIONS 8 gery, under local anesthesia, nitrous oxide sedation, or both, differs Cardiovascular Problems 8 substantially from that necessary for a patient requiring hospital Ischemic Heart Disease 8 admission and general anesthesia for -]",
+  "explanation": "[Book: Malamed, Handbook of Local Anesthesia] — “the incidence of allergy to both procaine and other ester local anesthetics is significantly greater than to amide local anesthetics”; itching + lip swelling (urticaria/angioedema) after LA implicates the ESTER — procaine — not the amides lidocaine/prilocaine.",
   "source": "rafi_18",
   "sourcePack": "rafi_18",
   "department": "oms",
@@ -440689,7 +440689,7 @@ QUESTION_BANK = [
    "Articaine 4%contraindicated"
   ],
   "answer": 0,
-  "explanation": "Selected (0) Lidocaine 2% for: What type of anesthesia u should give to a 2 years old patient?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: oms/local anesthesia: - MEDICAL CONDITIONS 8 gery, under local anesthesia, nitrous oxide sedation, or both, differs Cardiovascular Problems 8 substantially from that necessary for a patient requiring hospital Ischemic Heart Disease 8 admission and general anesthesia for -]",
+  "explanation": "📎 Clinical hinge: For a 2-year-old, PLAIN 2% lidocaine is standard — weight-based dosing with wide safety margin; 4% concentrations raise overdose risk in toddlers and articaine is cautioned/avoided below age 4.",
   "source": "rafi_18",
   "sourcePack": "rafi_18",
   "department": "oms",
@@ -440718,12 +440718,12 @@ QUESTION_BANK = [
    "no treatment"
   ],
   "answer": 3,
-  "explanation": "Selected (3) no treatment for: Same question as the one before but was asking about the treatment. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: oms: loxacin In summary, antibiotics should be used when clear evidence exists Box 16-5 Situations in Which Use of Antibiotic - tive bacteria is fairly predictable. third molars. Finally, the patient who has osteomyelitis req]",
+  "explanation": "📎 Clinical hinge: Demoted recall item — dangling cross-reference ('same question as before'), parent question not present in the bank.",
   "source": "rafi_18",
   "sourcePack": "rafi_18",
   "department": "oms",
   "answerProvenance": "community",
-  "usable": true,
+  "usable": false,
   "truth_pass": true,
   "truth_confidence": "med",
   "truth_wave": "grok_book:shard_03/batch_0007",
@@ -440731,7 +440731,8 @@ QUESTION_BANK = [
   "audit_confidence": "med",
   "book_support": "oms: loxacin In summary, antibiotics should be used when clear evidence exists Box 16-5 Situations in Which Use of Antibiotic - tive bacteria is fairly predictable. third molars. Finally, the patient who has osteomyelitis req",
   "truth_judge": "grok_book",
-  "book_verified": true
+  "book_verified": true,
+  "exclude_reason": "stem is a dangling cross-reference ('Same question as the one before') whose parent question is not in the bank; unanswerable as written (books-only pass 2026-08-22)"
  },
  {
   "id": "rafi_18_ec3c2e021a",
@@ -442609,10 +442610,10 @@ QUESTION_BANK = [
    "Papillon lever",
    "Paraneoplastic syndrome",
    "Foliate deficiency",
-   "Hypothyroidism 🔁(not sure but i found some references read more about it)"
+   "Hypothyroidism"
   ],
   "answer": 3,
-  "explanation": "Selected (3) Hypothyroidism 🔁(not sure but i found some references read more about it) for: CBC showing all the parameters are decreased except for WBC and platelets are WNL what is the disease ?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: oms: RAMEDIAN LIP PITS - deficiency virus (HIV) infection or other immunosuppressive conditions. • Fig. 1-26 Bismuth Staining. Transitory staining of the posterior ◆ VARICOSITIES (VARICES) dorsal tongue after using bismuth su]",
+  "explanation": "📎 Clinical hinge: Isolated red-cell-line depression with NORMAL WBC and platelets matches the mild normocytic anemia of HYPOTHYROIDISM; folate deficiency produces megaloblastic PANcytopenia (all three lines fall), and PLS/paraneoplastic states do not selectively spare leukocytes and platelets.",
   "source": "rafi_18",
   "sourcePack": "rafi_18",
   "department": "oms",
@@ -444493,10 +444494,10 @@ QUESTION_BANK = [
    "78",
    "11",
    "20",
-   "74%  ( I wrote it, if it is not there, A is the closest)"
+   "74%"
   ],
   "answer": 3,
-  "explanation": "Selected (3) 74%  ( I wrote it, if it is not there, A is the closest) for: Accessory canals percentage in the apical area?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: endo/apical constriction: - . 5-20 A, Morphology of the root apex. From its orifice the canal tapers to the apical constriction, or minor apical diameter, which generally is considered the narrowest part of Minor apical the canal. From this point the canal widens as it exits]",
+  "explanation": "📎 Clinical hinge: Classic root-anatomy data place the large majority of accessory (lateral) canals in the APICAL third — about 74% (de Deus' distribution); the remainder occur in mid-root and coronal thirds. (Recall figure; no verbatim local passage.)",
   "source": "rafi_19",
   "sourcePack": "rafi_19",
   "department": "endo",
@@ -451390,7 +451391,7 @@ QUESTION_BANK = [
    "Apply silane coupling agent"
   ],
   "answer": 0,
-  "explanation": "Selected (0) Etch by hydrofluoric acid for: 1st step before cementing porcelain crown?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: operative/etch: - lation at that time will be different; almost one half structure by etching enamel and dentin and the use of (47%) of the population will consist of minorities,40 and bonding systems have led to the development of many the number of older adults wi]",
+  "explanation": "[Book: Contemporary Fixed Prosthodontics] — bonding to porcelain begins by ETCHING the intaglio with HYDROFLUORIC acid to microscopically roughen the ceramic, followed by silane; phosphoric acid etches enamel/dentin — not feldspathic porcelain.",
   "source": "rafi_20",
   "sourcePack": "rafi_20",
   "department": "operative",
@@ -453842,7 +453843,7 @@ QUESTION_BANK = [
    "Rapid progression in all cases"
   ],
   "answer": 2,
-  "explanation": "Selected (2) 8% for: According to lace ..... Rapid periodontitis progression percentage. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: perio/periodontitis: - diseases can be divided into two general diagnostic categories—gingivitis or periodontitis— based on the presence or absence of attachment loss. Gingivitis is the presence of gingival inflammation without loss of connective tissue attachment.1 Peri]",
+  "explanation": "[Book: Lindhe, Clinical Periodontology] — Löe's Sri Lanka (Teens/Gjerp) cohort: “rapid progression of periodontal breakdown (8%)” — about 8% of subjects were rapid progressors.",
   "source": "rafi_20",
   "sourcePack": "rafi_20",
   "department": "perio",
@@ -454293,7 +454294,7 @@ QUESTION_BANK = [
    "Gingivectomy"
   ],
   "answer": 0,
-  "explanation": "Selected (0) Connective tissue graft for: Pic of anterior teeth with recession pt complain from sensitivity and want esthetic tx ask about best treatment. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: perio: ion without loss of connective tissue attachment.1 Periodontitis is the presence of gingival inflammation at sites where there has been apical migratio - vitis or periodontitis— based on the presence or absence of attach]",
+  "explanation": "[Book: Carranza's Clinical Periodontology] — the SUBEPITHELIAL CONNECTIVE TISSUE GRAFT is the root-coverage gold standard for shallow/moderate recession, giving the highest complete-coverage rates plus increased tissue thickness — ideal when sensitivity AND esthetics drive treatment.",
   "source": "rafi_20",
   "sourcePack": "rafi_20",
   "department": "perio",
@@ -455778,7 +455779,7 @@ QUESTION_BANK = [
    "1mm"
   ],
   "answer": 1,
-  "explanation": "Selected (1) 3mm  ( apical to CEJ of natural teeth ) for: Implant position in relation to adjacent CEJ. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: rpd/centric relation: - ose on strips of 28-gauge green casting wax, or any similar wax, and tapping in centric relation only. Indentations in a C wax strip of known thickness are quantitative, whereas marks made with articulating ribbon are only qualitative. In Figure 9-]",
+  "explanation": "[Book: Periodontics: Medicine, Surgery and Implants] — “the implant head should be placed approximately 3 mm apical to the position of the intended gingival margin” — in healthy tissue that corresponds to ~3 mm apical to the CEJ of adjacent natural teeth.",
   "source": "rafi_20",
   "sourcePack": "rafi_20",
   "department": "fixed",
@@ -455808,7 +455809,7 @@ QUESTION_BANK = [
    "after 2 months"
   ],
   "answer": 0,
-  "explanation": "Selected (0) immediately for: Implant done to receive overdenture when to advice pt to wear his old denture?. This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: fixed: al {support} tooth, implant, tissue prosthesis replacing tee - Removable Dental Prosthesis (retention), (type) noun (retention), (type) noun Cement-Retained FDP Complete RDP (retention), (reten - (retention), (type) noun]",
+  "explanation": "📎 Clinical hinge: After implant placement for an overdenture, the patient wears the OLD denture IMMEDIATELY (relieved over the surgical sites, softened liner as needed) for esthetic/social continuity, removing it at night — abstention protects nothing and costs function.",
   "source": "rafi_20",
   "sourcePack": "rafi_20",
   "department": "fixed",
@@ -459289,7 +459290,7 @@ QUESTION_BANK = [
    "Incisional biopsy"
   ],
   "answer": 0,
-  "explanation": "Selected (0) Excisional biopsy for: Management of PGCG? (peripheral giant cell granuloma pregnancy). This matches SCFHS-recommended textbook teaching for the topic; distractors conflict with standard clinical management. [Book: oms/extraction: - e physical examination lengthy history of a painful, nonhealing extraction site in a patient should be tailored to each patient, taking into consideration the who received therapeutic irradiation. In this more complex case, a patient’s medical prob]",
+  "explanation": "[Book: Neville, Oral and Maxillofacial Pathology] — “The treatment of the peripheral giant cell granuloma consists of local surgical excision down to the underlying bone” with careful scaling of adjacent teeth — excisional biopsy removes and samples the lesion in one step.",
   "source": "abtal_mar_june_2026",
   "sourcePack": "abtal_mar_june_2026",
   "answerProvenance": "community",
