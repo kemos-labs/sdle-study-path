@@ -4215,3 +4215,105 @@ code {
   .hub-dashboard .hub-foot-links { order: 5; }
 }
 @media (max-width: 390px) { .hub-feature .hub-actions { grid-template-columns: 1fr; } .hub-feature .hub-primary { grid-column: auto; } }
+
+/* SDLE Path — focused study workspace */
+:root { --bg:#f5f5f1; --bg2:#fff; --bg3:#edf1ec; --text:#183333; --muted:#627775; --accent:#167760; --accent2:#167760; --border:#dfe8e2; --cta:#167760; --cta-hover:#0e5d4b; --focus-ring:#d59b34; --shadow:0 10px 35px rgba(18,43,44,.055); }
+body.path-app { padding-left:248px; }
+.topbar.simple { position:fixed; inset:0 auto 0 0; width:248px; height:100vh; padding:30px 16px 20px; background:#142f30; border:0; box-shadow:none; overflow-y:auto; }
+.chrome-row { display:block; padding:0 6px 31px; border-bottom:1px solid rgba(255,255,255,.12); }
+.logo { gap:12px; white-space:normal; }
+.brand-mark { width:42px; height:42px; display:grid; place-items:center; flex:none; border-radius:13px; background:#bde5d0; color:#163b35; font-family:Georgia,serif; font-size:25px; font-weight:700; position:relative; }
+.brand-mark span { position:absolute; top:3px; right:5px; font:9px sans-serif; }
+.brand-copy { display:flex; flex-direction:column; gap:1px; }
+.logo-text { color:#fff; font-size:1.15rem; letter-spacing:-.03em; line-height:1.2; }
+.logo-text b { color:#badfcd; font-weight:400; }
+.logo-sub { color:#a5bcb4; font-size:.57rem; font-weight:700; letter-spacing:.11em; }
+.simple-nav { display:flex; flex-direction:column; align-items:stretch; gap:5px; padding-top:24px; overflow:visible; }
+.simple-nav::before { content:'YOUR WORKSPACE'; padding:0 12px 10px; color:#91aaa2; font-size:.64rem; font-weight:700; letter-spacing:.14em; }
+.simple-nav button { width:100%; justify-content:flex-start; min-height:47px; padding:10px 12px; border-radius:10px; color:#ccdbd5; border:1px solid transparent; }
+.simple-nav button:hover { background:#244744; color:#fff; border-color:transparent; }
+.simple-nav button.active { background:#d9eee2; color:#153d35; box-shadow:none; }
+.simple-nav button .nav-icon { width:19px; height:19px; flex:none; margin-right:7px; }
+.simple-nav button .nav-en { font-size:.86rem; font-weight:700; opacity:1; }
+.simple-nav button .nav-ar { margin-left:auto; font-size:.75rem; font-weight:500; opacity:.75; }
+.simple-nav button.active .nav-en,.simple-nav button.active .nav-ar { color:#153d35; }
+.path-main { max-width:1440px; padding:48px clamp(28px,5vw,76px) 70px; }
+.foot { padding:20px 30px; border-top:1px solid #e0e8e2; font-size:.75rem; }
+.today-hub.hub-setup { max-width:1160px; padding:0; display:grid; grid-template-columns:minmax(290px,.9fr) minmax(0,1.3fr); gap:clamp(28px,5vw,75px); align-items:start; text-align:right; }
+.setup-intro { position:relative; border-radius:24px; background:#e1eee4; padding:38px; overflow:hidden; min-height:510px; }
+.setup-intro::after { content:'✦'; position:absolute; bottom:-105px; left:-25px; color:rgba(22,119,96,.1); font:400 360px/1 Georgia,serif; pointer-events:none; }
+.hub-setup .hub-kicker { background:#c7e5d1; color:#205d4e; letter-spacing:0; }
+.hub-setup .hub-title { margin:26px 0 18px; font-size:clamp(2.2rem,4vw,3.4rem); letter-spacing:-.04em; line-height:1.22; }
+.hub-setup .hub-sub { margin:0; color:#425e55; font-size:1.05rem; }
+.setup-guide { text-align:left; position:relative; z-index:1; margin-top:90px; border-top:1px solid #accfba; padding-top:20px; }
+.setup-guide span,.setup-options-heading span,.workspace-eyebrow { color:#24745f; font-size:.68rem; font-weight:700; letter-spacing:.14em; }
+.setup-guide p { margin:8px 0; font-family:Georgia,serif; font-size:1.6rem; color:#163d34; }
+.setup-guide small { display:block; color:#496a60; font-size:.8rem; line-height:1.6; }
+.setup-options-heading { display:flex; justify-content:space-between; align-items:center; margin:8px 0 20px; }
+.setup-options-heading strong { font-size:1rem; }
+.hub-plan-picks { grid-template-columns:1fr; gap:10px; }
+.btn.hub-plan-pick { min-height:0; padding:17px 20px; display:grid; grid-template-columns:1fr auto; gap:2px 14px; border-radius:14px; background:#fff; box-shadow:none; }
+.btn.hub-plan-pick.rec { padding:16px 19px; border-color:#75b99d; background:#f4fbf6; }
+.hub-plan-pick .hub-plan-ar { font-size:1.05rem; }
+.hub-plan-pick .hub-plan-en { text-align:left; align-self:center; font-size:.8rem; }
+.hub-plan-pick .hub-plan-meta { grid-column:1 / -1; font-size:.77rem; }
+.hub-plan-badge { grid-column:1 / -1; justify-self:start; font-size:.68rem; }
+.hub-setup-foot { text-align:right; }
+.hub-dashboard { max-width:1160px; padding:0; gap:18px; grid-template-columns:minmax(0,1.55fr) minmax(275px,1fr); }
+.hub-dashboard .hub-welcome { background:#e7f2e8; border:0; padding:20px 24px; }
+.hub-feature { background:#e4f0e6; border:0; border-radius:20px; padding:36px; box-shadow:none; }
+.hub-feature .hub-kicker { font-size:.7rem; letter-spacing:.14em; }
+.hub-feature .hub-title { font-family:Georgia,serif; font-size:clamp(2.2rem,4vw,3.5rem); font-weight:400; letter-spacing:-.04em; line-height:1.12; }
+.hub-feature .hub-sub { max-width:46ch; color:#49645b; }
+.hub-feature .hub-actions { margin-top:30px; }
+.hub-feature .hub-secondary { background:rgba(255,255,255,.65); border-color:#c9ddd0; }
+.hub-feature .hub-primary,.btn.path-primary { border-radius:10px; box-shadow:none; background:#176d57 !important; }
+.hub-dashboard .exam-blueprint { background:#fff; border:1px solid var(--border); box-shadow:var(--shadow); }
+.hub-dashboard .hub-progress { border-radius:18px; padding:24px; }
+.tad-head { text-align:left; }
+.tad-head h1 { font-family:Georgia,serif; font-weight:400; font-size:clamp(2.2rem,4vw,3.4rem); letter-spacing:-.04em; margin:8px 0; }
+.workspace-eyebrow { margin:0; }
+.workspace-description { color:var(--muted); margin:0 0 6px; font-size:1rem; }
+.tadarrub-hub .search-top { margin:25px 0; }
+.tadarrub-hub .tadarrub-tabs { padding:5px; background:#e9efea; border-radius:12px; gap:5px; }
+.tadarrub-hub .tad-tab { border:0; border-radius:9px; background:transparent; }
+.tadarrub-hub .tad-tab.active { background:#fff; color:#12634e; box-shadow:0 2px 8px rgba(20,47,48,.08); }
+.hz-layout { margin-top:25px; }
+.hz-section { margin-top:24px; }
+.hz-sec-title { font-size:.95rem; margin-bottom:12px; }
+.hz-bank { min-height:85px; border:1px solid var(--border); box-shadow:none; }
+.hz-bank.is-today:not(.is-on) { border-color:#9bcbb1; background:#f2f9f3; }
+.hz-bank-n::after { content:' questions'; font-size:.72rem; color:var(--muted); }
+.bank-more { margin-top:24px; padding:16px 20px; border:1px solid var(--border); border-radius:14px; background:#fff; }
+.bank-more summary { cursor:pointer; font-weight:700; color:#1a5e4c; }
+.bank-more summary span { color:var(--muted); font-weight:400; margin-left:8px; }
+.q-card { border-radius:20px; border:1px solid var(--border); box-shadow:var(--shadow); padding:clamp(20px,4vw,38px); }
+.q-stem { line-height:1.55; }
+.option { border-radius:12px; background:#fff; }
+@media(max-width:900px) {
+ body.path-app { padding-left:0; }
+ .topbar.simple { position:sticky; inset:0 0 auto; width:100%; height:auto; padding:10px 16px 0; overflow:visible; }
+ .chrome-row { padding:0 0 9px; border:0; }
+ .brand-mark { width:34px; height:34px; font-size:21px; border-radius:10px; }
+ .logo-text { font-size:1rem; }
+ .simple-nav { flex-direction:row; overflow-x:auto; padding:0; gap:4px; scrollbar-width:none; }
+ .simple-nav::before { display:none; }
+ .simple-nav button { width:auto; flex:none; min-height:44px; border-radius:9px 9px 0 0; padding:8px 12px; }
+ .simple-nav button .nav-icon { width:17px; height:17px; margin-right:2px; }
+ .simple-nav button .nav-ar { display:none; }
+ .path-main { padding:28px 18px 55px; }
+}
+@media(max-width:700px) {
+ .today-hub.hub-setup { display:flex; flex-direction:column; gap:20px; }
+ .setup-intro { min-height:0; padding:25px; width:100%; }
+ .setup-guide { margin-top:30px; }
+ .setup-intro::after { font-size:220px; bottom:-80px; }
+ .setup-options { width:100%; }
+ .hub-dashboard { display:flex; flex-direction:column; }
+ .hub-dashboard > * { width:100%; }
+ .hub-feature { padding:26px; }
+ .hub-feature .hub-title { font-size:2.3rem; }
+}
+.logo .logo-text { color:#fff; }
+.logo .logo-text b { color:#bde5d0; }
+@media (prefers-reduced-motion: reduce) { .hz-bank { transition:none; } }

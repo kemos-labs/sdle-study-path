@@ -1774,15 +1774,21 @@
     if (!nav) return;
     applyChromeMode();
     if (isSimpleMode()) {
-      nav.innerHTML = `
-        <button type="button" data-view="today" title="Today's lesson · درس اليوم">🏠 <span class="nav-ar" dir="rtl">اليوم</span> <span class="nav-en">Today</span></button>
-        <button type="button" data-view="topics" title="Micro-lessons by topic · الدروس">📖 <span class="nav-ar" dir="rtl">الدروس</span> <span class="nav-en">Learn</span></button>
-        <button type="button" data-view="practice" title="MCQs · Flashcards · Mock · تدرب">🎯 <span class="nav-ar" dir="rtl">تدرب</span> <span class="nav-en">Practice</span></button>
-        <button type="button" data-view="recentqa" title="Recent textbook-verified Q&A · سؤال وجواب">💬 <span class="nav-ar" dir="rtl">سؤال وجواب</span> <span class="nav-en">Q&amp;A</span></button>
-        <button type="button" data-view="marjune" title="Flash Notes — جميع المواد">🃏 <span class="nav-ar" dir="rtl">فلاش</span> <span class="nav-en">Flash</span></button>
-        <button type="button" data-view="notes" title="Review all notes · الملاحظات">📝 <span class="nav-ar" dir="rtl">ملاحظات</span> <span class="nav-en">Notes</span></button>
-        <button type="button" data-view="progress" title="Scores & settings · تقدمي">📈 <span class="nav-ar" dir="rtl">تقدمي</span> <span class="nav-en">Progress</span></button>
-        <button type="button" data-view="feedback" title="Send feedback · اقتراحات">💬 <span class="nav-ar" dir="rtl">رأيك</span> <span class="nav-en">Feedback</span></button>`;
+      const navItems = [
+        ["today", "Overview", "اليوم", "M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"],
+        ["topics", "Learn", "الدروس", "M4 5a3 3 0 0 1 3-3h13v17H7a3 3 0 0 0-3 3zm0 0v14a3 3 0 0 1 3-3h13"],
+        ["practice", "Practice", "تدرب", "M9 12l2 2 4-4M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"],
+        ["recentqa", "Q&A", "سؤال وجواب", "M4 5h16v11H8l-4 4zm4 4h8M8 12h5"],
+        ["marjune", "Flash notes", "فلاش", "M13 2 5 13h6l-1 9 9-12h-6z"],
+        ["notes", "Notes", "ملاحظات", "M5 3h14v18H5zm3 5h8M8 12h8M8 16h5"],
+        ["progress", "Progress", "تقدمي", "M4 20V10m6 10V4m6 16v-7m5 7H2"],
+        ["feedback", "Feedback", "رأيك", "M4 5h16v11H8l-4 4zm4 5h8"]
+      ];
+      nav.innerHTML = navItems.map(([view, en, ar, path]) => `
+        <button type="button" data-view="${view}" title="${en} · ${ar}">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${path}"/></svg>
+          <span class="nav-en">${en}</span><span class="nav-ar" dir="rtl">${ar}</span>
+        </button>`).join("");
     } else {
       nav.innerHTML = `
         <button type="button" data-view="today" title="Today">Today</button>
@@ -2689,18 +2695,24 @@
 
       app.innerHTML = `
         <div class="today-hub hub-setup" dir="rtl" lang="ar">
+          <div class="setup-intro">
           <p class="hub-kicker">مسار SDLE · خطة المذاكرة</p>
           <h1 class="hub-title">${repick ? "تغيير مدة التحضير" : "كم مدة تحضيرك للامتحان؟"}</h1>
           <p class="hub-sub">
             اختر الوقت المتبقي قبل الامتحان — نضبط لك <b>خطة الأيام</b> وساعات اليوم وهدف الأسئلة.
             <br /><span class="muted" dir="ltr" lang="en">Same 14 topics · only pace &amp; daily hours change.</span>
           </p>
+          <div class="setup-guide" dir="ltr" lang="en"><span>01 / YOUR STUDY PLAN</span><p>A clear path to exam day.</p><small>Choose a pace that fits your time. Your progress stays on this device.</small></div>
+          </div>
+          <div class="setup-options">
+          <div class="setup-options-heading"><span>YOUR PACE</span><strong>اختر خطة المذاكرة</strong></div>
           <div class="hub-plan-picks" role="group" aria-label="مدة التحضير للامتحان">${row}</div>
           ${
             repick
               ? `<button type="button" class="btn ghost" id="hub-pace-cancel">إلغاء · Cancel</button>`
               : `<p class="hub-setup-foot muted">اضغط خيارًا واحدًا للمتابعة · Tap one option to continue</p>`
           }
+          </div>
         </div>`;
 
       app.querySelectorAll("[data-pick-plan]").forEach((b) => {
@@ -4888,7 +4900,7 @@
     };
     const fnSizeChips = (scope, n) => {
       if (n < 1) return '<span class="muted">Empty bank</span>';
-      const sizes = [50, 100, 200].filter(k => k <= n);
+      const sizes = [10, 20, 50, 100, 200].filter(k => k <= n);
       const parts = sizes.map(k => `<button type="button" class="btn ghost simple-sz" data-fn-qz="${escapeHtml(scope)}" data-n="${k}">${k}</button>`);
       parts.push(`<button type="button" class="btn success simple-sz" data-fn-qz="${escapeHtml(scope)}" data-n="${QUIZ_ALL}">All ${n}</button>`);
       return parts.join("");
@@ -5648,7 +5660,7 @@
     function sizeChips(pool, n, mode) {
       if (n < 1) return `<span class="muted">Empty bank</span>`;
       const isExam = mode === "exam";
-      const sizes = [50, 100, 200].filter((k) => k <= n);
+      const sizes = [10, 20, 50, 100, 200].filter((k) => k <= n);
       const parts = sizes.map(
         (k) =>
           `<button type="button" class="btn ghost simple-sz" data-qz="${escapeHtml(pool)}" data-n="${k}" data-mode="${isExam ? "exam" : "learn"}">${k}</button>`
@@ -5795,10 +5807,11 @@
       /* Default: department first — no extra Today row (today’s subject is starred) */
       return (
         bankSection("By department", "حسب التخصص", bankDepts) +
+        bankSection("Review", "مراجعة", bankReview) +
+        `<details class="bank-more" ${bankDeptAbtal.concat(bankDeptRafi, bankProviders).some((b) => b.pool === selectedPool) ? "open" : ""}><summary>Explore all question sources <span>عرض المصادر</span></summary>` +
         bankSection("Department · أبطال", "تخصص × أبطال", bankDeptAbtal) +
         bankSection("Department · رفيع", "تخصص × رفيع", bankDeptRafi) +
-        bankSection("Exam providers", "مصادر الامتحان", bankProviders) +
-        bankSection("Review", "مراجعة", bankReview)
+        bankSection("Exam providers", "مصادر الامتحان", bankProviders) + `</details>`
       );
     }
 
@@ -6014,7 +6027,9 @@
       <div class="simple-hub tadarrub-hub">
         <div class="tad-head">
           <div>
-            <h1>تدرب</h1>
+            <p class="workspace-eyebrow">QUESTION BANK · بنك الأسئلة</p>
+            <h1>Practice with purpose.</h1>
+            <p class="workspace-description">Choose a subject, build a session, and learn from every answer.</p>
             <p class="simple-day-sync muted">Today · ${escapeHtml(subjectTitle)} · D${state.day}/${maxDay()}</p>
           </div>
         </div>
