@@ -1951,6 +1951,7 @@
           saveViewStack();
         }
         navigateTo(next, { push: true });
+        window.scrollTo({ top: 0, behavior: "instant" });
       };
     });
   }
@@ -2169,41 +2170,31 @@
     const fnCount = d => (FN.byDept[d] || []).length;
     const verifiedCount = d => { try { const dm = DEPT_META.find(x => x.id === d) || {}; return pool(dm.quizPool || d).filter(q => evidenceTier(q) === "textbook").length; } catch (e) { return 0; } };
     const topicCount = d => (BY_DEPT[d] || []).length;
-    const open = state.topicDept || (DEPT_META.find(d => (BY_DEPT[d.id]||[]).length) || {}).id || null;
+    const open = state.topicDept || null;
 
     const cards = DEPT_META.map(dm => {
       const tN = topicCount(dm.id), vN = verifiedCount(dm.id), fN = fnCount(dm.id);
       const w = dm.weight ? `<span class="badge yellow" style="font-size:0.62rem">~${dm.weight}% exam</span>` : '';
-      return `<details class="dept-card" data-dept="${dm.id}" ${open===dm.id?'open':''} style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);margin:6px 0;padding:0">
-        <summary style="cursor:pointer;padding:10px 12px;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
-          <span>${escapeHtml(dm.label)} <span class="muted" style="font-size:0.74rem;font-weight:400">· ${escapeHtml(dm.ar)} · ${escapeHtml(dm.book)}</span></span>
-          <span style="display:flex;gap:4px;align-items:center">
-            ${w}
-            <span class="badge green" style="font-size:0.62rem" title="Lessons">📘 ${tN}</span>
-            <span class="badge blue" style="font-size:0.62rem" title="MCQs citing a named textbook passage">📖 ${vN}</span>
-            <span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--accent2)" title="Recall flash notes">🗒️ ${fN}</span>
-          </span>
+      return `<details class="dept-card learning-dept" data-dept="${dm.id}" ${open===dm.id?'open':''}>
+        <summary class="learning-dept-head">
+          <span class="learning-dept-icon" aria-hidden="true">${escapeHtml(dm.label.charAt(0))}</span>
+          <span class="learning-dept-title"><strong>${escapeHtml(dm.label)}</strong><small>${escapeHtml(dm.ar)} · ${escapeHtml(dm.book)}</small></span>
+          <span class="learning-dept-count">${tN} lessons ${w}</span><span class="learning-dept-arrow" aria-hidden="true">↗</span>
         </summary>
-        <div style="padding:6px 12px 12px;border-top:1px solid var(--border)">
-          ${(BY_DEPT[dm.id]||[]).map(t => `<button type="button" class="btn sm ghost" data-topic-id="${escapeHtml(t.id)}" style="display:block;width:100%;text-align:left;margin:3px 0;font-size:0.85rem">📘 ${escapeHtml(t.title)} <span class="muted" style="font-size:0.7rem">· ~${t.estMinutes||20}min · 📖 ${t.verifiedCount||0}</span></button>`).join("") || '<p class="muted" style="font-size:0.8rem">No lessons yet for this department (Phase 2 authoring pending).</p>'}
-          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px">
-            <button type="button" class="btn sm" data-drill="${dm.id}">▶ Drill ${vN} verified MCQs</button>
-            <button type="button" class="btn sm ghost" data-cards="${dm.id}">🃏 Cards</button>
-            <button type="button" class="btn sm ghost" data-fn-go="${dm.id}">🗒️ Flash Notes</button>
-          </div>
+        <div class="learning-dept-body">
+          <div class="learning-dept-meta"><span>${vN} questions cite a named textbook</span><span>${fN} recall notes</span></div>
+          <div class="lesson-list">${(BY_DEPT[dm.id]||[]).map((t, i) => `<button type="button" class="lesson-row" data-topic-id="${escapeHtml(t.id)}"><span class="lesson-number">${String(i+1).padStart(2,'0')}</span><span class="lesson-name">${escapeHtml(t.title)}</span><span class="lesson-time">~${t.estMinutes||20} min</span><span aria-hidden="true">→</span></button>`).join("") || '<p class="muted">No lessons available for this department yet.</p>'}</div>
+          <div class="learning-dept-actions"><button type="button" class="btn sm" data-drill="${dm.id}">Practice questions</button><button type="button" class="btn sm ghost" data-cards="${dm.id}">Cards</button><button type="button" class="btn sm ghost" data-fn-go="${dm.id}">Flash notes</button></div>
         </div>
       </details>`;
     }).join("");
 
     app.innerHTML = `
-      <div class="simple-hub">
-        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
-          <h1 style="margin:0;font-size:1.3rem">📘 Lessons by Department</h1>
-          <span class="muted" style="font-size:0.78rem">${TOPICS.length} lessons · blueprint-weighted</span>
-        </div>
-        <p class="muted" style="font-size:0.8rem;margin:6px 0 10px">Each department shows its lessons, textbook-verified MCQ count, and recall flash notes. Weights ≈ published SDLE applicant guide (restorative ≈ 40%, perio 18%, endo 17%, oms 15%, ortho/pedo 10%). Tap a lesson to read it — or use the 🔊 auto-reader.</p>
-        ${tts.supported ? '<p class="muted" style="font-size:0.74rem">💡 Tip: open any lesson and press 🔊 Listen to hear it read aloud.</p>' : ''}
-        <details open style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);margin:6px 0 10px;padding:8px 12px">
+      <div class="learning-library">
+        <header class="interior-header"><div><p class="interior-eyebrow">STUDY LIBRARY · مكتبة الدراسة</p><h1>Learn by subject.</h1><p>Build understanding one topic at a time. Choose a department to explore its lessons and practice.</p></div><div class="library-stat"><strong>${TOPICS.length}</strong><span>lessons<br>across subjects</span></div></header>
+        <div class="library-heading"><div><span class="interior-eyebrow">YOUR SUBJECTS</span><h2>Explore the curriculum</h2></div><span class="muted">Select a subject to open its lessons</span></div>
+        <div class="learning-grid">${cards}</div>
+        <details class="blueprint-details" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);margin:6px 0 10px;padding:8px 12px">
           <summary style="cursor:pointer;font-weight:600">🎯 Blueprint study allocation (≈ exam weights)</summary>
           <p class="muted" style="font-size:0.76rem;margin:6px 0 4px">Split your study time roughly by exam weight. Restorative dominates (~40%) — never under-prepare it. Use verified MCQ counts to balance recall drills.</p>
           <table class="simple-table" style="width:100%;font-size:0.78rem">
@@ -2216,7 +2207,6 @@
             </tbody>
           </table>
         </details>
-        ${cards}
       </div>`;
 
     app.querySelectorAll("[data-topic-id]").forEach(b => b.onclick = () => { state.topicId = b.dataset.topicId; state.view = "micro-lesson"; render(); });
@@ -2245,7 +2235,7 @@
     const readText = `${T.title}. ${T.summary || ""} ${(T.keyPoints||[]).map((k,i)=>"Key point "+(i+1)+": "+k).join(". ")}`;
 
     app.innerHTML = `
-      <div class="simple-hub">
+      <div class="simple-hub lesson-reader">
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:4px">
           <button type="button" class="btn sm ghost" id="ml-back">← Departments</button>
           <span class="muted" style="font-size:0.76rem">${escapeHtml(dm.label||T.dept)}${dm.weight?' · ~'+dm.weight+'% exam':''}</span>
@@ -4233,9 +4223,8 @@
     };
 
     app.innerHTML = `
-      <div class="simple-hub">
-        <h1>Notes</h1>
-        <p class="simple-lead">Full notes · stem + answer. Today: <b>${escapeHtml(humanLessonTitle(L))}</b></p>
+      <div class="simple-hub notes-workspace">
+        <header class="interior-header"><div><p class="interior-eyebrow">YOUR REFERENCE · الملاحظات</p><h1>Study notes.</h1><p>Find notes by subject or search for a topic. Today: ${escapeHtml(humanLessonTitle(L))}.</p></div><div class="library-stat"><strong>${all.length}</strong><span>notes in<br>the collection</span></div></header>
         <p class="simple-day-sync muted">Day ${state.day}/${maxDay()} · ${all.length} notes in bank</p>
         <div class="simple-dept-row">
           ${SIMPLE_NOTE_DEPTS.map((d) => {
@@ -4545,12 +4534,9 @@
     }
 
     app.innerHTML = `
-      <div class="simple-hub">
-        <p style="font-size:0.72rem;color:var(--muted);margin:0 0 8px">💡 <b>Book links:</b> move your mouse over any <b>📖 book link</b> — a popup shows the book page with the answer highlighted. On a phone, <b>tap</b> it instead.</p>
-        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
-          <h1 style="margin:0;font-size:1.4rem">📖 Recent Q&A <span style="font-size:0.8rem;color:var(--muted);font-weight:400">أسئلة وأجوبة جديدة</span></h1>
-          <span style="color:var(--accent2);font-weight:600">${items.length} items</span>
-        </div>
+      <div class="simple-hub qa-workspace">
+        <header class="interior-header"><div><p class="interior-eyebrow">QUESTIONS & ANSWERS · أسئلة وأجوبة</p><h1>Understand the why.</h1><p>Explore questions by subject and review the supporting references where available.</p></div><div class="library-stat"><strong>${items.length}</strong><span>questions<br>and recalls</span></div></header>
+        <p class="qa-reference-hint">Open a book link to inspect its cited passage.</p>
         <p class="simple-lead" style="font-size:0.85rem"><b>${items.filter(x => x._verified !== "recall").length} book-grounded</b> Q&A · <b>${items.filter(x => x._page).length} passage-linked</b> · <b>${items.filter(x => x._verified === "recall").length} recall items awaiting a verbatim passage.</b></p>
         <div style="padding:8px 12px;background:rgba(27,122,61,.1);border:1px solid rgba(27,122,61,.3);border-radius:var(--radius);font-size:0.78rem;margin-bottom:12px">
           📖 Evidence comes from: Contemporary Fixed Prosthodontics · Sturdevant's Operative Dentistry · Cohen's Pathways of the Pulp · Contemporary OMS · McDonald & Avery Pediatric Dentistry · Carranza's Periodontology · Dental Materials & Their Selection. Recall-only items remain visibly labelled.
@@ -4930,13 +4916,10 @@
       <button type="button" class="btn sm ${sortMode === "source" ? "success" : "ghost"}" data-fn-sort="source">By source · حسب المصدر</button>
       <button type="button" class="btn sm ${sortMode === "dept" ? "success" : "ghost"}" data-fn-sort="dept">By department · حسب التخصص</button>
     </div>`;
-    const mcqsSections = sortMode === "dept"
-      ? fnBankSection("Departments", "حسب التخصص", DEPT_BANKS) +
-        fnBankSection("Sources", "حسب المصدر", SOURCE_BANKS) +
-        fnBankSection("Review", "مراجعة", REVIEW_BANKS)
-      : fnBankSection("Sources", "حسب المصدر", SOURCE_BANKS) +
-        fnBankSection("Departments", "حسب التخصص", DEPT_BANKS) +
-        fnBankSection("Review", "مراجعة", REVIEW_BANKS);
+    const mcqsSections = (sortMode === "dept"
+      ? fnBankSection("Departments", "حسب التخصص", DEPT_BANKS)
+      : fnBankSection("Sources", "حسب المصدر", SOURCE_BANKS)) +
+      fnBankSection("Review", "مراجعة", REVIEW_BANKS);
 
     // ------------------------------------------------------------------
     // 6) SEARCH (practice-style top search)
@@ -5059,14 +5042,9 @@
     // 9) PAGE
     // ------------------------------------------------------------------
     app.innerHTML = `
-      <div class="simple-hub">
-        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
-          <h1 style="margin:0;font-size:1.4rem">📚 Flash Notes <span style="font-size:0.8rem;color:var(--muted);font-weight:400">النوطات السريعة</span></h1>
-          <div style="display:flex;align-items:center;gap:12px">
-            <span style="color:var(--accent2);font-weight:600">${deckEligible.length} studyable</span>
-            <span class="muted">${mcqAll} MCQ · ${cardAll} cards · ${fnAllItems.length} in inventory (incl. archive)</span>
-          </div>
-        </div>
+      <div class="simple-hub flash-workspace">
+        <header class="interior-header"><div><p class="interior-eyebrow">QUICK REVIEW · مراجعة سريعة</p><h1>Flash notes.</h1><p>Choose a deck, test your recall, and review the evidence behind each item.</p></div><div class="library-stat"><strong>${deckEligible.length}</strong><span>studyable items<br>${mcqAll} MCQ · ${cardAll} cards</span></div></header>
+        <p class="flash-inventory muted">${fnAllItems.length} inventory items, including archive</p>
         ${searchTop}
         <div class="tadarrub-tabs" role="tablist">
           <button type="button" class="tad-tab${pane === "mcqs" ? " active" : ""}" data-fn-pane="mcqs">🎯 MCQs</button>
@@ -6681,8 +6659,8 @@
       .join("");
 
     app.innerHTML = `
-      <div class="progress-clean">
-        <h1>Progress</h1>
+      <div class="progress-clean progress-workspace">
+        <header class="interior-header"><div><p class="interior-eyebrow">YOUR STUDY JOURNEY · تقدمك</p><h1>Every session counts.</h1><p>Follow your practice and find the topics that need more attention.</p></div></header>
         <div class="stat-row">
           <div class="stat-box"><div class="num">${s.answered || 0}</div><div class="lbl">Answered</div></div>
           <div class="stat-box"><div class="num" style="color:${pct >= 80 ? "var(--accent2)" : "var(--warn)"}">${pct}%</div><div class="lbl">Accuracy</div></div>
@@ -6691,8 +6669,8 @@
         </div>
         <p class="muted progress-meta">Today ${state.sessionAnswered} Q · ${state.planLength}-day plan · aim ≥80%</p>
 
-        <section class="simple-panel">
-          <h3 class="section-label">Bank health</h3>
+        <div class="progress-panels"><section class="simple-panel progress-evidence">
+          <h3 class="section-label">Bank evidence</h3>
           <p class="muted">${window.QUESTION_BANK ? bankEvidenceCounts().textbook + "/" + bankEvidenceCounts().total + " usable questions cite a named textbook passage" : "Loading…"} · ${window.QUESTION_BANK ? bankEvidenceCounts().secondary + " evidence from factpack/secondary notes" : ""} · ${window.QUESTION_BANK ? bankEvidenceCounts().page + " passage-linked" : ""} · ${window.QUESTION_BANK ? window.QUESTION_BANK.filter(q => q.usable === false).length + " quarantined" : ""}</p>
         </section>
 
@@ -6710,7 +6688,7 @@
           ${histRows}
         </section>
 
-        <p class="hub-foot-links">
+        </div><p class="hub-foot-links">
           <button type="button" class="btn-link" id="reset">Reset all progress…</button>
         </p>
       </div>`;
@@ -7811,6 +7789,8 @@
           <span class="badge blue">${escapeHtml(item.topic)}</span>
           ${qz.seconds != null ? `<span class="timer" id="quiz-timer">${formatTime(qz.seconds)}</span>` : ""}
         </div>
+        <div class="question-progress" role="progressbar" aria-label="Question progress" aria-valuemin="1" aria-valuemax="${qz.items.length}" aria-valuenow="${qz.i + 1}"><span style="width:${Math.round(((qz.i + 1) / qz.items.length) * 100)}%"></span></div>
+        <div class="question-prompt-label">QUESTION ${qz.i + 1} <span>Choose the best answer</span></div>
         <h2 class="q-stem">${escapeHtml(item.q)}</h2>
         <div class="q-layout">
           <div id="opts" class="q-opts">
