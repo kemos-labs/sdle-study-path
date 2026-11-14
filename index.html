@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#141820" />
+    <meta name="theme-color" content="#f3f6f5" />
     <meta name="description" content="Free KSA SDLE study path — readings, MCQs, plans. Open source." />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -22,7 +22,7 @@
       rel="stylesheet"
     />
     <!-- ?v= busts CDN/browser cache (warm paper theme 2026-08-05) -->
-    <link rel="stylesheet" href="css/app.css?v=20260806ui4" />
+    <link rel="stylesheet" href="css/app.css?v=20261114ui3" />
     <link rel="stylesheet" href="css/print.css?v=20260730fn13" media="print" />
   </head>
   <body class="path-app simple-ui">
@@ -66,10 +66,10 @@
     <script src="data/exam_packs.js?v=20260730fn12"></script>
     <script src="data/notes_bank.js?v=20260730fn12"></script>
     <script src="data/lessons.js?v=20260804e1"></script>
-    <script src="data/questions.js?v=20260822v14"></script>
+    <script src="data/questions.js?v=20261114v1"></script>
     <script src="data/feedback_config.js?v=20260730fn12"></script>
     <script src="data/topics.js?v=20260730fn12"></script>
-    <script src="data/flash_notes.js?v=20260822fn17"></script>
+    <script src="data/flash_notes.js?v=20261114fn1"></script>
     <script src="data/flash_notes_verdicts.js?v=20260807fn8"></script>
     <script src="data/recent_qa.js?v=20260806rq11"></script>
     <script src="data/book_refs.js?v=20260730fn12"></script>
@@ -78,17 +78,17 @@
     (function () {
       try {
         var Q = (window.QUESTION_BANK || []).filter(function (q) { return q.usable !== false; });
-        var pageLinked = Q.filter(function (q) { return q.book_verified === true && q._page; }).length;
+        var pageLinked = Q.filter(function (q) { return q._page; }).length;
         var F = window.FLASH_NOTES || {};
         var fnStudy = 0;
         Object.keys(F.byDept || {}).forEach(function (d) {
           (F.byDept[d] || []).forEach(function (it) { if (!it._merged_into) fnStudy++; });
         });
         var el = document.getElementById('foot-stats');
-        if (el) el.textContent = Q.length + ' textbook-reviewed MCQs · ' + pageLinked + ' passage-linked · Flash Notes ' + fnStudy + ' studyable items · free forever';
+        if (el) el.textContent = Q.length + ' usable MCQs · ' + pageLinked + ' with a located book page · Flash Notes ' + fnStudy + ' inventory items (includes archive) · free forever';
       } catch (e) { /* footer stats are non-critical */ }
     })();
     </script>
-    <script src="js/app.js?v=20260822v1"></script>
+    <script src="js/app.js?v=20261114v4"></script>
   </body>
 </html>

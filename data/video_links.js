@@ -1,7 +1,7 @@
 /**
  * Google Drive online paths for كورس 46 prometric videos.
  * Scraped from public folder 1_2pMWMnyvAnmGpcAMMO_9TfVvf58cLJb (embeddedfolderview, 2026-07-18).
- * Local disk mirror: /data/prometric/prometric/
+ * Local disk mirror: local-reference/prometric/
  * openUrl = watch online; folderUrl = parent lecture/subject folder.
  */
 (function (w) {
@@ -99,5 +99,5 @@
   };
   w.videoDriveLink = videoDriveLink;
   w.videoDriveHtml = videoDriveHtml;
-  w.VIDEO_ROOT = w.VIDEO_ROOT || "/data/prometric/prometric/";
+  w.VIDEO_ROOT = w.VIDEO_ROOT || "local-reference/prometric/";
 })(typeof window !== "undefined" ? window : globalThis);

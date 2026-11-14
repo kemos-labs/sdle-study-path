@@ -60,15 +60,65 @@
       .filter((id) => id != null && (typeof id === "string" || typeof id === "number"))
       .slice(-500);
   }
+  /** Session log entries as written by logSession(); anything else is dropped, never rendered. */
+  function normalizeHistory(v) {
+    if (!Array.isArray(v)) return [];
+    return v
+      .filter((h) => isPlainObject(h))
+      .map((h) => ({
+        ts: typeof h.ts === "number" && Number.isFinite(h.ts) ? h.ts : null,
+        label: typeof h.label === "string" ? h.label : (typeof h.topic === "string" ? h.topic : ""),
+        topic: typeof h.topic === "string" ? h.topic : "",
+        mode: typeof h.mode === "string" ? h.mode : "",
+        total: typeof h.total === "number" && Number.isFinite(h.total) ? h.total : null,
+        correct: typeof h.correct === "number" && Number.isFinite(h.correct) ? h.correct : null,
+        pct: typeof h.pct === "number" && Number.isFinite(h.pct) ? h.pct : null,
+        sec: typeof h.sec === "number" && Number.isFinite(h.sec) ? h.sec : null,
+      }))
+      .slice(0, 80);
+  }
   function normalizeStats(v) {
     const s = asObject(v, null);
     if (!s) return { answered: 0, correct: 0, byTopic: {}, bySubtopic: {} };
+    const count = (n) => typeof n === "number" && Number.isFinite(n) ? Math.max(0, Math.floor(n)) : 0;
+    const counters = (value) => Object.fromEntries(Object.entries(asObject(value, {})).map(([key, row]) => {
+      const a = count(row && row.a);
+      return [key, { a, c: Math.min(a, count(row && row.c)) }];
+    }));
+    const answered = count(s.answered);
     return {
-      answered: Number.isFinite(+s.answered) ? +s.answered : 0,
-      correct: Number.isFinite(+s.correct) ? +s.correct : 0,
-      byTopic: asObject(s.byTopic, {}),
-      bySubtopic: asObject(s.bySubtopic, {}),
+      answered,
+      correct: Math.min(answered, count(s.correct)),
+      byTopic: counters(s.byTopic),
+      bySubtopic: counters(s.bySubtopic),
     };
+  }
+
+  /**
+   * Honest evidence tier for a bank item. The citation label decides what may be
+   * claimed: a named textbook in the bracket is "textbook", a factpack/Appendix C/
+   * community/derived label is only "secondary" — never shown as textbook review.
+   */
+  const TEXTBOOK_LABEL = /(sturdevant|cohen|hargreaves|carranza|lindhe|newman|hupp|neville|white\s*(?:&|and)\s*pharoah|pharoah|mccracken|shillingburg|rosenstiel|proffit|mcdonald|malamed|littlewood|complete dentures|periodontics|oral radiology|operative dentistry|endodontics principles)/i;
+  const SECONDARY_LABEL = /(factpack|appendix c|community|rafi|abtal|golden|talkhees|saud|dept |sdle textbook corpus|book\/factpack|textbook\/clinical|clinical principle\/|prosthodontics clinical|standard (?:oms|perio|ortho))\b/i;
+  function evidenceTier(q) {
+    const exp = (q && q.explanation) || "";
+    const m = /\[Book:\s*(.*?)\]/s.exec(exp);
+    if (!m) return exp.trim().startsWith("\ud83d\udcce Clinical hinge:") ? "hinge" : "none";
+    const label = m[1].split(/[:\u2014]/)[0].trim();
+    if (SECONDARY_LABEL.test(label)) return "secondary";
+    if (TEXTBOOK_LABEL.test(label)) return "textbook";
+    return "secondary";
+  }
+  function bankEvidenceCounts() {
+    const usable = (window.QUESTION_BANK || []).filter((q) => q.usable !== false);
+    const c = { total: usable.length, textbook: 0, secondary: 0, hinge: 0, none: 0, page: 0 };
+    usable.forEach((q) => {
+      const t = evidenceTier(q);
+      c[t] = (c[t] || 0) + 1;
+      if (t === "textbook" && q._page) c.page++;
+    });
+    return c;
   }
 
   /** Approximate SDLE domain weights for practice balance (not an official SCFHS score). */
@@ -99,6 +149,8 @@
     "examQa",
     "history",
     "planChosen",
+    "planPickedExplicit",
+    "fnDisputeReview",
     "simpleMode",
     "viewStack",
     "pomoMode",
@@ -183,7 +235,7 @@
     /** In-lesson Exam Q&A picks: { [data-id]: { choice: 0-3, ok: bool } } */
     examQa: asObject(store.get("examQa", {}), {}),
     /** Recent quiz sessions: { ts, mode, label, topic, total, correct, pct, sec } */
-    history: asArray(store.get("history", []), []),
+    history: normalizeHistory(store.get("history", [])),
   };
 
   /** Roll "Today Q" when the local calendar day changes. */
@@ -1286,7 +1338,7 @@
     if (compact) {
       return `
       <section class="plan-chooser plan-chooser-compact" aria-label="Study plan">
-        <p class="plan-model-line"><b>Same 14 lessons</b> · plan only changes calendar speed, hours, and Q goal. 📖 ${(window.QUESTION_BANK || []).filter(q => q.usable !== false && q.book_verified === true).length} MCQs completed textbook review</p>
+        <p class="plan-model-line"><b>Same 14 lessons</b> · plan only changes calendar speed, hours, and Q goal. 📖 ${bankEvidenceCounts().textbook} MCQs cite a named textbook passage</p>
         <div class="plan-compact-row">
           <span class="muted">Plan:</span>
           ${opts
@@ -1304,7 +1356,7 @@
         <p class="lead plan-chooser-lead">
           Same 14 lessons — <b>hours, focus timer, MCQ goal, and step order</b> change with plan length.
         </p>
-        <p class="muted" style="margin:4px 0 12px">📖 <strong>${(window.QUESTION_BANK || []).filter(q => q.usable !== false && q.book_verified === true).length}/${(window.QUESTION_BANK || []).filter(q => q.usable !== false).length}</strong> usable MCQs completed textbook review · <strong>${(window.QUESTION_BANK || []).filter(q => q.usable !== false && q.book_verified === true && q._page).length}</strong> include a located book page</p>
+        <p class="muted" style="margin:4px 0 12px">📖 <strong>${bankEvidenceCounts().textbook}/${bankEvidenceCounts().total}</strong> usable MCQs cite a named textbook passage · <strong>${bankEvidenceCounts().secondary}</strong> rest on factpack/secondary notes · <strong>${bankEvidenceCounts().page}</strong> include a located book page</p>
         <div class="plan-template-grid plan-chooser-grid">
           ${opts
             .map(
@@ -1375,10 +1427,10 @@
         ? window.bookRefsHtml({ topic: bookTopic, q: L.title || "", explanation: focus }, { limit: 2 })
         : "";
     // Verified question count for this focus topic (usable + verified only — never exceeds total)
-    const focusVerified = (window.QUESTION_BANK || []).filter(q => q.topic === focus && q.usable !== false && q.book_verified === true).length;
+    const focusVerified = (window.QUESTION_BANK || []).filter(q => q.topic === focus && q.usable !== false && evidenceTier(q) === "textbook").length;
     const focusTotal = (window.QUESTION_BANK || []).filter(q => q.topic === focus && q.usable !== false).length;
     const verifiedBar = focusTotal > 0
-      ? `<div class="verified-bar muted" style="margin:8px 0;font-size:0.85rem">📖 <strong>${focusVerified}/${focusTotal}</strong> textbook-verified MCQs available for this topic · Practice tab → topic quizzes</div>`
+      ? `<div class="verified-bar muted" style="margin:8px 0;font-size:0.85rem">📖 <strong>${focusVerified}/${focusTotal}</strong> MCQs cite a named textbook passage for this topic · Practice tab → topic quizzes</div>`
       : "";
 
     // Simple path: lesson text only. Coach gets calendar banner + notebook callouts.
@@ -2109,7 +2161,7 @@
     const FN = (window.FLASH_NOTES) || { byDept: {} };
     const QB = (window.QUESTION_BANK || []);
     const fnCount = d => (FN.byDept[d] || []).length;
-    const verifiedCount = d => { try { const dm = DEPT_META.find(x => x.id === d) || {}; return pool(dm.quizPool || d).filter(q => q.book_verified === true).length; } catch (e) { return 0; } };
+    const verifiedCount = d => { try { const dm = DEPT_META.find(x => x.id === d) || {}; return pool(dm.quizPool || d).filter(q => evidenceTier(q) === "textbook").length; } catch (e) { return 0; } };
     const topicCount = d => (BY_DEPT[d] || []).length;
     const open = state.topicDept || (DEPT_META.find(d => (BY_DEPT[d.id]||[]).length) || {}).id || null;
 
@@ -2122,7 +2174,7 @@
           <span style="display:flex;gap:4px;align-items:center">
             ${w}
             <span class="badge green" style="font-size:0.62rem" title="Lessons">📘 ${tN}</span>
-            <span class="badge blue" style="font-size:0.62rem" title="Textbook-verified MCQs">📖 ${vN}</span>
+            <span class="badge blue" style="font-size:0.62rem" title="MCQs citing a named textbook passage">📖 ${vN}</span>
             <span class="badge" style="font-size:0.62rem;background:var(--bg3);color:var(--accent2)" title="Recall flash notes">🗒️ ${fN}</span>
           </span>
         </summary>
@@ -2684,7 +2736,7 @@
         : "";
 
     app.innerHTML = `
-      <div class="today-hub">
+      <div class="today-hub hub-dashboard">
         ${!store.get("sdle3_welcome_done", false) ? `
         <div class="hub-welcome" dir="rtl" lang="ar">
           <button type="button" class="hub-welcome-x" id="hub-welcome-x" aria-label="إغلاق · Close">✕</button>
@@ -2700,8 +2752,9 @@
           <span class="eb-w">Weights: <b>Resto 40%</b> · <b>Perio 18%</b> · <b>Endo 17%</b> · OMS 15% · Ortho/Pedo 10%</span>
           <span class="eb-note">This plan gives Endo + Perio + Prostho + Resto <b>≈74% of study hours</b> — matching the exam.</span>
         </div>
+        <section class="hub-feature" aria-labelledby="hub-topic-title">
         <p class="hub-kicker">Today’s topic</p>
-        <h1 class="hub-title">${escapeHtml(subject)}</h1>
+        <h1 class="hub-title" id="hub-topic-title">${escapeHtml(subject)}</h1>
         <p class="hub-sub">${escapeHtml(goalLine)}${qLine}</p>
 
         <div class="hub-actions" role="group" aria-label="Start studying">
@@ -2713,6 +2766,7 @@
           <button type="button" class="btn ghost hub-secondary" id="hub-always">اسئلة مكررة</button>
         </div>
 
+        </section>
         <div class="hub-progress">
           <div class="step-progress" aria-label="Day progress">
             <div class="step-progress-bar" style="width:${Math.round((100 * doneCount) / Math.max(1, order.length))}%"></div>
@@ -2773,7 +2827,7 @@
 
   function renderToday() {
     const L = lesson();
-    const root = window.VIDEO_ROOT || "/data/prometric/prometric/";
+    const root = window.VIDEO_ROOT || "./local-videos/";
     const order = stepOrder(L);
     const doneCount = order.filter((k) => isDone(k)).length;
     const simple = isSimpleMode();
@@ -4447,7 +4501,7 @@
     const withoutOptions = filtered.filter(i => !i.options || !i.options.length || !i.options[0]);
 
     function renderQaItem(item) {
-      const isMcq = item.options && item.options.length && item.options[0];
+      const isMcq = Array.isArray(item.options) && item.options.filter(Boolean).length >= 2;
       if (isMcq) {
         const optHtml = item.options.filter(o => o).map((o, idx) => {
           const isCorrect = idx === item.answer;
@@ -4588,7 +4642,11 @@
     const isFlashCard = (it) => it._kind === 'flashcard';
     const fnCleanStem = (s) => (s || "").replace(/[✅🟢🟡✳🔵🔁●]/g, "").replace(/^[\s\u2022\u25CF\u2023\u25AA\u25A0#*>-]+/, "").replace(/[\s\u2022\u25CF\u2023\u25AA\u25A0]+$/, "").trim();
     const isGarbageStemFn = (s) => { const t = fnCleanStem(s); if (t.length < 3) return true; if (/^[-•*●#>\s]+$/.test(t)) return true; if (!/[a-zA-Z\u0621-\u064A0-9]/.test(t)) return true; return false; };
-    const isDeckBroken = (it) => !!(it._data_quality === "merged_options_review" || it._data_quality === "garbage" || it._is_option || isGarbageStemFn(it.stem));
+    // Study deck = book-supported items only (student decision 2026-11-14).
+    // Any needs_review verdict (with or without a demotion note) stays in the
+    // ⚠ Review walker, where it is honestly labelled, and never in the deck.
+    const isNeedsReviewItem = (it) => it._verification_verdict === "needs_review";
+    const isDeckBroken = (it) => !!(it._data_quality === "merged_options_review" || it._data_quality === "garbage" || it._is_option || isGarbageStemFn(it.stem) || isNeedsReviewItem(it));
     const deckEligible = fnAllItems.filter((it) => !isDeckBroken(it));
     const mcqAll = deckEligible.filter(isMcqItem).length;
     const cardAll = deckEligible.length - mcqAll;
@@ -4709,7 +4767,7 @@
         ansText = String(it.answer).slice(0, 200);
       } else if (!ansLetter) { ansText = fnInlineAns(it); }
       const optsArr = it.options || [];
-      const hasOpts = optsArr.length > 0 && optsArr.length <= 6 && (it.answerIdx != null || it.answerLetter);
+      const hasOpts = optsArr.length >= 2 && optsArr.length <= 6 && (it.answerIdx != null || it.answerLetter);
       const picked = state.fnPicked;
       const revealed = !!state.fnRevealed;
       const correctIdx = it.answerIdx != null ? it.answerIdx : (ansLetter ? String(ansLetter).toUpperCase().charCodeAt(0) - 65 : -1);
@@ -4993,8 +5051,8 @@
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
           <h1 style="margin:0;font-size:1.4rem">📚 Flash Notes <span style="font-size:0.8rem;color:var(--muted);font-weight:400">النوطات السريعة</span></h1>
           <div style="display:flex;align-items:center;gap:12px">
-            <span style="color:var(--accent2);font-weight:600">${deckEligible.length} items</span>
-            <span class="muted">${mcqAll} MCQ · ${cardAll} cards</span>
+            <span style="color:var(--accent2);font-weight:600">${deckEligible.length} studyable</span>
+            <span class="muted">${mcqAll} MCQ · ${cardAll} cards · ${fnAllItems.length} in inventory (incl. archive)</span>
           </div>
         </div>
         ${searchTop}
@@ -6130,13 +6188,46 @@
     if (!data || typeof data !== "object") throw new Error("Invalid backup file");
     const keys = data.keys && typeof data.keys === "object" ? data.keys : data;
     if (!keys || typeof keys !== "object") throw new Error("No progress keys in file");
-    let wrote = 0;
+    // Validate + normalize EVERY key before writing anything, so a poisoned
+    // backup cannot half-overwrite progress or crash a later view.
+    const NORMALIZERS = {
+      stats: normalizeStats,
+      history: normalizeHistory,
+      wrongBook: normalizeWrongBook,
+      seenIds: (v) => asObject(v, {}),
+      cardKnown: (v) => asObject(v, {}),
+      stepsDone: (v) => asObject(v, {}),
+      dayDone: (v) => asObject(v, {}),
+      examQa: (v) => asObject(v, {}),
+      planPickedExplicit: (v) => v === true,
+      fnDisputeReview: (v) => asObject(v, {}),
+      simpleMode: (v) => v !== false,
+      viewStack: (v) => (Array.isArray(v) ? v.filter((x) => typeof x === "string").slice(0, 40) : []),
+      day: (v) => { const n = +v; return Number.isFinite(n) && n >= 1 ? Math.min(400, Math.floor(n)) : 1; },
+      planLength: (v) => { const n = +v; return [14, 30, 45, 60, 90].indexOf(n) >= 0 ? n : 30; },
+      sessionAnswered: (v) => Math.max(0, Math.floor(+v || 0)),
+      planDayAnswered: (v) => Math.max(0, Math.floor(+v || 0)),
+      dailyGoal: (v) => { const n = +v; return Number.isFinite(n) && n > 0 ? Math.min(1000, Math.floor(n)) : 150; },
+      dailyGoalUserOverride: (v) => v === true,
+      pomoMode: (v) => (v === "break" ? "break" : "work"),
+      pomoRemaining: (v) => { const n = +v; return Number.isFinite(n) && n > 0 ? Math.floor(n) : null; },
+      focusMode: (v) => v === true,
+      planChosen: (v) => v === true,
+      planDayVolumeKey: (v) => (typeof v === "string" ? v.slice(0, 40) : ""),
+      sessionDate: (v) => (typeof v === "string" ? v.slice(0, 20) : ""),
+    };
+    if (JSON.stringify(keys).length > 800000) throw new Error("Backup too large (800 KB limit)");
+    const staged = [];
     PERSISTED_KEYS.forEach((k) => {
-      if (Object.prototype.hasOwnProperty.call(keys, k) && keys[k] != null) {
-        if (store.set(k, keys[k])) wrote++;
-      }
+      if (!Object.prototype.hasOwnProperty.call(keys, k) || keys[k] == null) return;
+      const norm = NORMALIZERS[k];
+      staged.push([k, norm ? norm(keys[k]) : keys[k]]);
     });
-    if (!wrote) throw new Error("Nothing imported (empty or unreadable keys)");
+    if (!staged.length) throw new Error("Nothing imported (empty or unreadable keys)");
+    const wrote = staged
+      .map(([k, v]) => store.set(k, v))
+      .filter(Boolean).length;
+    if (!wrote) throw new Error("Import failed: nothing could be saved (storage full or private mode)");
     return wrote;
   }
 
@@ -6260,7 +6351,7 @@
   function feedbackConfig() {
     const c = window.SDLE_FEEDBACK || {};
     return {
-      ntfyTopic: (c.ntfyTopic || "sdle-study-path-feedback-xxxova2-k7m9").replace(/[^\w.-]/g, ""),
+      ntfyTopic: String(c.ntfyTopic || "").replace(/[^\w.-]/g, ""),
       email: String(c.email || "").trim(),
       ownerReadHint: c.ownerReadHint || "",
     };
@@ -6422,7 +6513,7 @@
 
       <section class="simple-panel" style="margin-top:16px">
         <h3 class="section-label">Privacy</h3>
-        <p class="lead">No account is required. Feedback is sent to the maintainer; your optional name and message are the only details included.</p>
+        <p class="lead">No account is required. Your message, optional name, the app URL, the time, and a short device description (browser/OS) are sent to the maintainer through a public notification topic and an email relay. Nothing else is collected, and no medical details are needed.</p>
         <div class="volume-grid">
           <a class="btn ghost" href="${REPO_URL}" target="_blank" rel="noopener">Source code</a>
           <a class="btn ghost" href="${REPO_URL}/blob/main/INTRO.md" target="_blank" rel="noopener">Intro letter</a>
@@ -6538,12 +6629,13 @@
       return state.dayDone[k] && d >= 1 && d <= m;
     }).length;
 
-    const histRows = !(state.history || []).length
+    const histSafe = normalizeHistory(state.history);
+    const histRows = !histSafe.length
       ? `<p class="muted">No sessions yet.</p>`
       : `<table class="hist-table inv-table">
         <thead><tr><th>When</th><th>Pool</th><th>Score</th></tr></thead>
         <tbody>
-          ${(state.history || [])
+          ${histSafe
             .slice(0, 20)
             .map((h) => {
               const score =
@@ -6586,7 +6678,7 @@
 
         <section class="simple-panel">
           <h3 class="section-label">Bank health</h3>
-          <p class="muted">${window.QUESTION_BANK ? window.QUESTION_BANK.filter(q => q.usable !== false && q.book_verified === true).length + "/" + window.QUESTION_BANK.filter(q => q.usable !== false).length + " usable questions completed textbook review" : "Loading…"} · ${window.QUESTION_BANK ? window.QUESTION_BANK.filter(q => q.usable !== false && q.book_verified === true && q._page).length + " passage-linked" : ""} · ${window.QUESTION_BANK ? window.QUESTION_BANK.filter(q => q.usable === false).length + " quarantined" : ""}</p>
+          <p class="muted">${window.QUESTION_BANK ? bankEvidenceCounts().textbook + "/" + bankEvidenceCounts().total + " usable questions cite a named textbook passage" : "Loading…"} · ${window.QUESTION_BANK ? bankEvidenceCounts().secondary + " evidence from factpack/secondary notes" : ""} · ${window.QUESTION_BANK ? bankEvidenceCounts().page + " passage-linked" : ""} · ${window.QUESTION_BANK ? window.QUESTION_BANK.filter(q => q.usable === false).length + " quarantined" : ""}</p>
         </section>
 
         <section class="simple-panel">
@@ -7508,6 +7600,7 @@
       const stem = cleanStem(it.stem);
       if (isGarbageStem(stem)) return null; // drop garbage stems from quiz (kept in data, flagged)
       if (it._data_quality === "merged_options_review" || it._data_quality === "garbage") return null; // merged messes / junk — split & repair in data phase, not quizzed as broken MCQs
+      if (it._verification_verdict === "needs_review" && it._verification_reason) return null; // demoted evidence — no key, never quizzed
       if (it._is_option) return null; // orphan option fragments — merged back to parents in data phase
       // _book_explanation may be an object {book, chapter, passage} or a string
       const bookExp = it._book_explanation;

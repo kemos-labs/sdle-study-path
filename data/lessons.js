@@ -7101,7 +7101,7 @@ If any blank, bold re‑pass A–D before Block B.</p>
   }
 ];
 
-window.VIDEO_ROOT = "/data/prometric/prometric/";
+window.VIDEO_ROOT = "local-reference/prometric/";
 
 window.ALWAYS_COMES_READ = [
   ["1. Instrument order", "Cleaning → Disinfection → Sterilization"],

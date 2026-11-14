@@ -285,7 +285,7 @@ window.HIGH_YIELD = {
 
   materials: {
     videos: {
-      root: "/data/prometric/prometric/",
+      root: "local-reference/prometric/",
       map: [
         { id: "endo", path: "endo/", lectures: "lec.1–4", topic: "endo" },
         { id: "perio", path: "perio/", lectures: "lec.5–8", topic: "perio" },
@@ -300,28 +300,28 @@ window.HIGH_YIELD = {
     pdfs: [
       {
         name: "Sep 2025 أبطال الديجيتال",
-        path: "/data/prometric/Sep 2025 Questions  أبطال الدجيتال .pdf",
+        path: "local-reference/Sep 2025 Questions  أبطال الدجيتال .pdf",
         pages: 109,
         priority: 2,
         note: "Biopsy logic, bioceramic pulp cap, implants spacing, Class II pics, path pics",
       },
       {
         name: "Oct 2025 أبطال الديجيتال",
-        path: "/data/prometric/Oct - 2025 Questions  أبطال الدجيتال.pdf",
+        path: "local-reference/Oct - 2025 Questions  أبطال الدجيتال.pdf",
         pages: 115,
         priority: 2,
         note: "Endo heavy: file fracture, trauma, MTA, accessory canals, vitality",
       },
       {
         name: "Dec 2025 – Feb 2026 أبطال",
-        path: "/data/prometric/DEC 2025 -FEB 2026 Questions  أبطال الدجيتال .pdf",
+        path: "local-reference/DEC 2025 -FEB 2026 Questions  أبطال الدجيتال .pdf",
         pages: 274,
         priority: 1,
         note: "Largest recent bank — infection control, transplant, surgery, ortho appliances, crowns",
       },
       {
         name: "Mar – June 2026 أبطال",
-        path: "/data/prometric/Mar-June 2026 Questions  أبطال الدجيتال .pdf",
+        path: "local-reference/Mar-June 2026 Questions  أبطال الدجيتال .pdf",
         pages: 142,
         priority: 1,
         note: "Newest window — diabetes prostho choices, path (Paget), medical (asthma, thyroid)",
